@@ -1,0 +1,174 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { GuidePage } from "@/components/GuidePage";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+
+const PATH = "/withdrawal-guide";
+const TITLE = "JeetBuzz Withdrawal Guide — Cash Out to bKash, Nagad, Rocket";
+const DESC =
+  "How withdrawals work on JeetBuzz for Bangladesh players — KYC, processing times, limits and what to do if a withdrawal is delayed.";
+
+export const Route = createFileRoute("/withdrawal-guide")({
+  head: () => ({
+    meta: [
+      { title: TITLE + " | GetJeetBuzz" },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "article" },
+      ogUrl(PATH),
+    ],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
+  }),
+  component: () => (
+    <GuidePage
+      eyebrow="Payments"
+      title={<>JeetBuzz <span className="gold-text">Withdrawal Guide</span></>}
+      subtitle="Everything Bangladesh players need to know about cashing out from JeetBuzz — KYC, limits, processing times and troubleshooting."
+      breadcrumbs={[{ name: "Payments", path: "/payment-methods" }, { name: "Withdrawal Guide", path: PATH }]}
+      articlePath={PATH}
+      articleHeadline={TITLE}
+      articleDescription={DESC}
+      body={[
+        "## Quick summary",
+        "Withdrawals on JeetBuzz are usually processed within a few hours once KYC is complete. The fastest route for Bangladesh is bKash, Nagad or Rocket — the same wallet you used to deposit.",
+        "## KYC first",
+        "Before your first cash-out, complete KYC: NID front and back, a selfie holding the NID, and proof of the registered phone number. Approval typically takes 1–24 hours.",
+        "## How to withdraw (bKash example)",
+        "1. Open Cashier > Withdrawal.",
+        "2. Pick bKash and enter the amount.",
+        "3. Confirm the receiving wallet is yours.",
+        "4. Submit and wait for the SMS confirmation.",
+        "## Processing times",
+        "- bKash / Nagad / Rocket: minutes to a few hours",
+        "- UPI: same business day",
+        "- USDT: depends on network congestion",
+        "## Withdrawal limits",
+        "Daily and monthly limits apply, scaling with VIP level. Higher VIP tiers usually unlock larger single-cash-out caps and faster manual approvals.",
+        "## Why withdrawals get delayed",
+        "- KYC not yet approved",
+        "- Bonus wagering not yet completed (withdrawing forfeits the bonus)",
+        "- Wallet name does not match account name",
+        "- Suspicious betting patterns triggering manual review",
+        "## Tips",
+        "- Withdraw to the same wallet you deposited from",
+        "- Don't request multiple small withdrawals — one larger withdrawal clears faster",
+        "- If a withdrawal is stuck, open live chat with the transaction ID rather than re-submitting",
+      ]}
+      subtitleByLocale={{
+        bn: "JeetBuzz থেকে ক্যাশ-আউট সম্পর্কে বাংলাদেশি প্লেয়ারদের পূর্ণ গাইড — KYC, লিমিট, সময়।",
+        ur: "JeetBuzz سے کیش آؤٹ کے بارے میں پاکستانی کھلاڑیوں کے لیے مکمل گائیڈ۔",
+        hi: "JeetBuzz से कैश-आउट के बारे में भारतीय खिलाड़ियों के लिए पूरा गाइड।",
+      }}
+      bodyByLocale={{
+        bn: [
+          "## সংক্ষেপে",
+          "KYC সম্পন্ন হলে উইথড্রয়াল সাধারণত কয়েক ঘণ্টায় প্রসেস। বাংলাদেশের জন্য bKash, Nagad, Rocket দ্রুততম।",
+          "## আগে KYC",
+          "NID সামনে-পিছনে, NID হাতে সেলফি, ফোন প্রমাণ। ১–২৪ ঘণ্টা।",
+          "## bKash উদাহরণ",
+          "১. Cashier > Withdrawal।",
+          "২. bKash বাছাই, অ্যামাউন্ট দিন।",
+          "৩. ওয়ালেট নিজের তা নিশ্চিত।",
+          "৪. সাবমিট, SMS-এর অপেক্ষা।",
+          "## প্রসেসিং সময়",
+          "- bKash/Nagad/Rocket: মিনিট থেকে ঘণ্টা",
+          "- USDT: নেটওয়ার্কের উপর",
+          "## লিমিট",
+          "দৈনিক/মাসিক লিমিট VIP-অনুযায়ী।",
+          "## বিলম্বের কারণ",
+          "- KYC অসম্পূর্ণ",
+          "- বোনাস ওয়েজারিং বাকি",
+          "- ওয়ালেট নাম মিসম্যাচ",
+          "- সন্দেহজনক প্যাটার্ন",
+          "## টিপস",
+          "- একই ওয়ালেটে উইথড্র",
+          "- বড় একটাই উইথড্রয়াল",
+          "- আটকে গেলে লাইভ চ্যাটে TrxID",
+        ],
+        ur: [
+          "## مختصراً",
+          "KYC مکمل ہو تو ودڈرا چند گھنٹوں میں۔ پاکستان کے لیے EasyPaisa اور JazzCash تیز ترین۔",
+          "## پہلے KYC",
+          "شناختی کارڈ، سیلفی، فون نمبر کا ثبوت۔ 1–24 گھنٹے۔",
+          "## EasyPaisa مثال",
+          "1. Cashier > Withdrawal۔",
+          "2. EasyPaisa منتخب کریں، رقم درج کریں۔",
+          "3. اپنا والیٹ تصدیق کریں۔",
+          "4. جمع کرائیں، SMS کا انتظار۔",
+          "## پروسیسنگ ٹائم",
+          "- EasyPaisa/JazzCash: منٹوں سے گھنٹے",
+          "- USDT: نیٹ ورک پر منحصر",
+          "## حدود",
+          "روزانہ/ماہانہ حدود VIP کے مطابق۔",
+          "## تاخیر کی وجوہات",
+          "- KYC نامکمل",
+          "- بونس ویجرنگ باقی",
+          "- والیٹ نام مماثل نہیں",
+          "- مشکوک پیٹرن",
+          "## نکات",
+          "- وہی والیٹ استعمال کریں",
+          "- ایک بڑا ودڈرا",
+          "- پھنس جائے تو لائیو چیٹ پر TRX ID",
+        ],
+        hi: [
+          "## संक्षेप में",
+          "KYC पूरा हो तो विदड्रॉल कुछ घंटों में। भारत के लिए UPI सबसे तेज़।",
+          "## पहले KYC",
+          "आधार/PAN, सेल्फी, फोन प्रमाण। 1–24 घंटे।",
+          "## UPI उदाहरण",
+          "1. Cashier > Withdrawal।",
+          "2. UPI चुनें, राशि डालें।",
+          "3. अपनी UPI ID पुष्टि करें।",
+          "4. सबमिट, SMS का इंतज़ार।",
+          "## प्रोसेसिंग टाइम",
+          "- UPI: मिनटों से कुछ घंटे",
+          "- USDT: नेटवर्क पर निर्भर",
+          "## लिमिट",
+          "दैनिक/मासिक लिमिट VIP के अनुसार।",
+          "## देरी के कारण",
+          "- KYC अधूरा",
+          "- बोनस वेजरिंग बाकी",
+          "- वॉलेट नाम मेल नहीं",
+          "- संदिग्ध पैटर्न",
+          "## टिप्स",
+          "- वही वॉलेट इस्तेमाल करें",
+          "- एक बड़ा विदड्रॉल",
+          "- अटक जाए तो लाइव चैट पर TrxID",
+        ],
+      }}
+      faqsByLocale={{
+        bn: [
+          { q: "উইথড্রয়াল পেন্ডিং কেন?", a: "KYC অসম্পূর্ণ, সক্রিয় বোনাস, বা ওয়ালেট নাম মিসম্যাচ।" },
+          { q: "উইথড্রয়াল ফি?", a: "স্ট্যান্ডার্ড লিমিটে JeetBuzz ফি নেয় না।" },
+          { q: "প্রথম উইথড্রয়াল কতক্ষণ?", a: "KYC অনুমোদনের পর কয়েক ঘণ্টা।" },
+          { q: "ভিন্ন ওয়ালেটে?", a: "সাধারণত না — ডিপোজিট ওয়ালেট মিলতে হয়।" },
+        ],
+        ur: [
+          { q: "ودڈرا پینڈنگ کیوں؟", a: "KYC نامکمل، فعال بونس، یا والیٹ نام مماثل نہیں۔" },
+          { q: "ودڈرا فیس؟", a: "معیاری حدود میں JeetBuzz فیس نہیں لیتا۔" },
+          { q: "پہلی ودڈرا میں وقت؟", a: "KYC منظوری کے بعد چند گھنٹے۔" },
+          { q: "مختلف والیٹ؟", a: "عموماً نہیں۔" },
+        ],
+        hi: [
+          { q: "विदड्रॉल पेंडिंग क्यों?", a: "KYC अधूरा, सक्रिय बोनस, या वॉलेट नाम मेल नहीं।" },
+          { q: "विदड्रॉल फीस?", a: "मानक सीमा में JeetBuzz फीस नहीं लेता।" },
+          { q: "पहले विदड्रॉल में समय?", a: "KYC अप्रूवल के बाद कुछ घंटे।" },
+          { q: "अलग वॉलेट?", a: "आमतौर पर नहीं।" },
+        ],
+      }}
+      faqs={[
+        { q: "Why is my withdrawal pending?", a: "Usually KYC is incomplete, you have an active bonus, or the receiving wallet name doesn't match. Open live chat with your transaction ID." },
+        { q: "Is there a withdrawal fee?", a: "No fee from JeetBuzz on standard wallets within normal limits. Your wallet provider may apply standard cash-out fees." },
+        { q: "How long does the first withdrawal take?", a: "Typically a few hours after KYC approval. Subsequent withdrawals are faster." },
+        { q: "Can I withdraw to a different wallet than my deposit?", a: "Generally no — JeetBuzz requires the withdrawal wallet to match the deposit wallet and account name." },
+      ]}
+      related={[
+        { to: "/deposit-guide", title: "JeetBuzz Deposit Guide" },
+        { to: "/payment-methods", title: "All Payment Methods" },
+        { to: "/security-guide", title: "JeetBuzz Security Guide" },
+        { to: "/vip-program", title: "JeetBuzz VIP Program" },
+      ]}
+    />
+  ),
+});

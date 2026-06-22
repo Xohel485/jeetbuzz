@@ -1,0 +1,61 @@
+# GetJeetBuzz
+
+> Independent JeetBuzz partner guide for players in Bangladesh, Pakistan and India — signup, login, bonuses, app, payments and live cricket.
+
+GetJeetBuzz is an editorial affiliate site covering the JeetBuzz brand. We do not host any APK, game, or wallet — every action links out to the official JeetBuzz site. Content is in English with Bengali, Hindi and Urdu support.
+
+## Pages
+
+- [Home](/): Overview of JeetBuzz for Bangladesh, Pakistan and India.
+- [JeetBuzz Review](/jeetbuzz-review): Independent 2026 review — odds, bonuses, app, safety.
+- [Registration Guide](/registration-guide): Step-by-step JeetBuzz signup from Bangladesh.
+- [Login Guide](/login-guide): Safe JeetBuzz login and account recovery.
+- [APK Download Guide](/apk-download-guide): Install the JeetBuzz Android app safely.
+- [Mobile App Guide](/mobile-app-guide): Android and iOS install walkthrough.
+- [Bonuses & Promotions](/bonus-and-promotions): Welcome, reload and cashback offers.
+- [Live Cricket Betting](/live-cricket-betting): Cricket markets, in-play and BPL/IPL coverage.
+- [Sports Betting](/sports-betting): Sportsbook overview and market list.
+- [Casino Guide](/casino-guide): Live casino and slots overview.
+- [VIP Program](/vip-program): JeetBuzz VIP tiers and benefits.
+- [Security Guide](/security-guide): 2FA, phishing red flags and account safety.
+- [Affiliate Program](/affiliate-program): How JeetBuzz affiliate works.
+
+## Payments
+
+- [Payment Methods](/payment-methods): All deposit and withdrawal channels.
+- [Deposit Guide](/deposit-guide): How to deposit on JeetBuzz.
+- [Withdrawal Guide](/withdrawal-guide): How to withdraw from JeetBuzz.
+- [bKash Guide](/bkash-guide): bKash deposits and withdrawals.
+- [Nagad Guide](/nagad-guide): Nagad deposits and withdrawals.
+- [Rocket Guide](/rocket-guide): Rocket deposits and withdrawals.
+
+## Blog
+
+- [Blog index](/blog): All JeetBuzz guides and tips.
+- [Registration guide](/blog/jeetbuzz-registration-guide-bangladesh)
+- [Login guide](/blog/jeetbuzz-login-guide)
+- [Safe APK download](/blog/jeetbuzz-apk-download-safe-guide)
+- [Bonus terms explained](/blog/jeetbuzz-bonus-terms-explained)
+- [bKash and Nagad deposit guide](/blog/jeetbuzz-bkash-nagad-deposit-guide)
+- [Live cricket betting guide](/blog/jeetbuzz-live-cricket-betting-guide)
+- [Is JeetBuzz safe?](/blog/is-jeetbuzz-safe-bangladesh)
+- [Affiliate program explained](/blog/jeetbuzz-affiliate-program-explained)
+
+## Policies
+
+- [About](/about): About GetJeetBuzz.
+- [Contact](/contact): Reach the editorial team.
+- [FAQ](/faq): Frequently asked questions.
+- [Affiliate Disclosure](/affiliate-disclosure)
+- [Editorial Policy](/editorial-policy)
+- [Review Policy](/review-policy)
+- [Content Policy](/content-policy)
+- [Fact-Checking](/fact-checking)
+- [Update Policy](/update-policy)
+- [Privacy Policy](/privacy-policy)
+- [Terms](/terms)
+- [Responsible Gaming](/responsible-gaming)
+
+## Optional
+
+- [Sitemap](/sitemap.xml)
