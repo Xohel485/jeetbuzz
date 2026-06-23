@@ -1,4 +1,5 @@
 import type { Country, Locale } from "@/lib/i18n";
+import { JsonLd } from "@/components/JsonLd";
 
 type Block = {
   eyebrow: string;
@@ -155,8 +156,20 @@ export function CountryLocalContent({
   const block = CONTENT[country]?.[lang];
   if (!block) return null;
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: lang,
+    mainEntity: block.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <section className="container-pro mt-16 md:mt-24">
+      <JsonLd data={faqSchema} />
       <div className="mx-auto max-w-4xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
           {block.eyebrow}
