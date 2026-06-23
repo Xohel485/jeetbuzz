@@ -37,13 +37,13 @@ export const Route = createFileRoute("/$country/$lang/$")({
   beforeLoad: ({ params }) => {
     if (!isValidCountryLang(params.country, params.lang)) throw notFound();
     const slug = params._splat ?? "";
-    if (!findLocalizedRoute(slug)) throw notFound();
+    if (!findLocalizedRoute(slug, params.country as Country)) throw notFound();
   },
   head: ({ params }) => {
     const country = params.country as Country;
     const lang = params.lang as Locale;
     const slug = params._splat ?? "";
-    const reg = findLocalizedRoute(slug);
+    const reg = findLocalizedRoute(slug, country);
     if (!reg) return { meta: [], links: [] };
     const m = reg.meta[lang] ?? reg.meta.en;
     const localeMeta = LOCALE_META[lang];
@@ -68,9 +68,9 @@ export const Route = createFileRoute("/$country/$lang/$")({
 });
 
 function LocalizedSplat() {
-  const { lang, _splat } = Route.useParams();
+  const { country, lang, _splat } = Route.useParams();
   const slug = (_splat ?? "") as string;
-  const reg = findLocalizedRoute(slug)!;
+  const reg = findLocalizedRoute(slug, country as Country)!;
   const { setLocale } = useI18n();
   useEffect(() => {
     setLocale(lang as Locale);

@@ -259,19 +259,49 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     bn: { title: "জিতবাজ bKash ডিপোজিট গাইড" + BRAND_BN, description: "bKash দিয়ে জিতবাজে ডিপোজিট — মিনিমাম, সাধারণ এরর ও সমাধান।" },
     ur: { title: "JeetBuzz bKash ڈپازٹ گائیڈ" + BRAND_UR, description: "bKash کے ذریعے JeetBuzz پر ڈپازٹ — کم از کم، عام مسائل اور حل۔" },
     hi: { title: "JeetBuzz bKash डिपॉज़िट गाइड" + BRAND_HI, description: "bKash से JeetBuzz पर डिपॉज़िट — मिनिमम, सामान्य त्रुटियाँ और समाधान।" },
-  }),
+  }, ["bd"]),
   entry("nagad-guide", NagadGuideRoute, {
     en: { title: "JeetBuzz Nagad Deposit Guide" + BRAND_EN, description: "Deposit to JeetBuzz with Nagad — limits, fees and troubleshooting." },
     bn: { title: "জিতবাজ Nagad ডিপোজিট গাইড" + BRAND_BN, description: "Nagad দিয়ে জিতবাজে ডিপোজিট — সীমা, ফি ও সমস্যা সমাধান।" },
     ur: { title: "JeetBuzz Nagad ڈپازٹ گائیڈ" + BRAND_UR, description: "Nagad کے ذریعے JeetBuzz پر ڈپازٹ — حدود، فیس اور حل۔" },
     hi: { title: "JeetBuzz Nagad डिपॉज़िट गाइड" + BRAND_HI, description: "Nagad से JeetBuzz पर डिपॉज़िट — सीमा, फ़ीस और समाधान।" },
-  }),
+  }, ["bd"]),
   entry("rocket-guide", RocketGuideRoute, {
     en: { title: "JeetBuzz Rocket Deposit Guide" + BRAND_EN, description: "Deposit to JeetBuzz with Rocket — limits, fees and fixes." },
     bn: { title: "জিতবাজ Rocket ডিপোজিট গাইড" + BRAND_BN, description: "Rocket দিয়ে জিতবাজে ডিপোজিট — সীমা, ফি ও সমাধান।" },
     ur: { title: "JeetBuzz Rocket ڈپازٹ گائیڈ" + BRAND_UR, description: "Rocket کے ذریعے JeetBuzz پر ڈپازٹ — حدود، فیس اور حل۔" },
     hi: { title: "JeetBuzz Rocket डिपॉज़िट गाइड" + BRAND_HI, description: "Rocket से JeetBuzz पर डिपॉज़िट — सीमा, फ़ीस और समाधान।" },
-  }),
+  }, ["bd"]),
+  entry("easypaisa-guide", EasypaisaGuideRoute, {
+    en: { title: "JeetBuzz EasyPaisa Deposit Guide" + BRAND_EN, description: "Deposit and withdraw on JeetBuzz with EasyPaisa from Pakistan — Mobile Account flow and common fixes." },
+    bn: { title: "JeetBuzz EasyPaisa Deposit Guide" + BRAND_BN, description: "Pakistan-only payment method on JeetBuzz." },
+    ur: { title: "JeetBuzz EasyPaisa ڈپازٹ گائیڈ" + BRAND_UR, description: "پاکستان سے JeetBuzz پر EasyPaisa کے ذریعے ڈپازٹ اور ودڈرا — Mobile Account flow اور عام مسائل کے حل۔" },
+    hi: { title: "JeetBuzz EasyPaisa Deposit Guide" + BRAND_HI, description: "Pakistan-only payment method on JeetBuzz." },
+  }, ["pk"]),
+  entry("jazzcash-guide", JazzcashGuideRoute, {
+    en: { title: "JeetBuzz JazzCash Deposit Guide" + BRAND_EN, description: "Deposit and withdraw on JeetBuzz with JazzCash from Pakistan — Mobile Account flow, MPIN check and how it differs from EasyPaisa." },
+    bn: { title: "JeetBuzz JazzCash Deposit Guide" + BRAND_BN, description: "Pakistan-only payment method on JeetBuzz." },
+    ur: { title: "JeetBuzz JazzCash ڈپازٹ گائیڈ" + BRAND_UR, description: "پاکستان سے JeetBuzz پر JazzCash کے ذریعے ڈپازٹ — Mobile Account flow اور EasyPaisa سے فرق۔" },
+    hi: { title: "JeetBuzz JazzCash Deposit Guide" + BRAND_HI, description: "Pakistan-only payment method on JeetBuzz." },
+  }, ["pk"]),
+  entry("upi-guide", UpiGuideRoute, {
+    en: { title: "JeetBuzz UPI Deposit Guide" + BRAND_EN, description: "Fund JeetBuzz from India over UPI — NPCI bank-to-bank rail, VPA flow, UTR submission and reconciliation tips." },
+    bn: { title: "JeetBuzz UPI Deposit Guide" + BRAND_BN, description: "India-only payment method on JeetBuzz." },
+    ur: { title: "JeetBuzz UPI Deposit Guide" + BRAND_UR, description: "India-only payment method on JeetBuzz." },
+    hi: { title: "JeetBuzz UPI डिपॉज़िट गाइड" + BRAND_HI, description: "भारत से JeetBuzz पर UPI के ज़रिए फंडिंग — NPCI बैंक-टू-बैंक रेल, VPA flow, UTR submission और रिकंसिलिएशन।" },
+  }, ["in"]),
+  entry("phonepe-guide", PhonepeGuideRoute, {
+    en: { title: "JeetBuzz PhonePe Deposit Guide" + BRAND_EN, description: "Use PhonePe to deposit on JeetBuzz from India — UPI VPA path, success-vs-pending troubleshooting." },
+    bn: { title: "JeetBuzz PhonePe Deposit Guide" + BRAND_BN, description: "India-only payment method on JeetBuzz." },
+    ur: { title: "JeetBuzz PhonePe Deposit Guide" + BRAND_UR, description: "India-only payment method on JeetBuzz." },
+    hi: { title: "JeetBuzz PhonePe डिपॉज़िट गाइड" + BRAND_HI, description: "भारत से JeetBuzz पर PhonePe (UPI) के ज़रिए डिपॉज़िट — VPA path और success-vs-pending की दिक़्क़तें।" },
+  }, ["in"]),
+  entry("paytm-guide", PaytmGuideRoute, {
+    en: { title: "JeetBuzz Paytm Deposit Guide" + BRAND_EN, description: "Use Paytm to deposit on JeetBuzz from India — post-Payments-Bank UPI flow and how Paytm compares with PhonePe." },
+    bn: { title: "JeetBuzz Paytm Deposit Guide" + BRAND_BN, description: "India-only payment method on JeetBuzz." },
+    ur: { title: "JeetBuzz Paytm Deposit Guide" + BRAND_UR, description: "India-only payment method on JeetBuzz." },
+    hi: { title: "JeetBuzz Paytm डिपॉज़िट गाइड" + BRAND_HI, description: "भारत से JeetBuzz पर Paytm (UPI) के ज़रिए डिपॉज़िट — Payments Bank के बाद का flow और PhonePe से तुलना।" },
+  }, ["in"]),
   entry("affiliate-program", AffiliateProgramRoute, {
     en: { title: "JeetBuzz Affiliate Program" + BRAND_EN, description: "Earn with the JeetBuzz Affiliate Program — commission tiers, payouts and how to apply." },
     bn: { title: "জিতবাজ অ্যাফিলিয়েট প্রোগ্রাম" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট দিয়ে আয় করুন — কমিশন টিয়ার, পেআউট এবং আবেদন।" },
@@ -364,8 +394,14 @@ export const LOCALIZED_ROUTE_BY_SLUG: Record<string, LocalizedRoute> = Object.fr
 );
 
 /** Find a registered route by its English slug (empty string = home). */
-export function findLocalizedRoute(slug: string): LocalizedRoute | null {
-  return LOCALIZED_ROUTE_BY_SLUG[slug] ?? null;
+export function findLocalizedRoute(
+  slug: string,
+  country?: Country,
+): LocalizedRoute | null {
+  const reg = LOCALIZED_ROUTE_BY_SLUG[slug];
+  if (!reg) return null;
+  if (country && reg.countries && !reg.countries.includes(country)) return null;
+  return reg;
 }
 
 /** All public English slugs (used to extend the sitemap with locale variants). */
