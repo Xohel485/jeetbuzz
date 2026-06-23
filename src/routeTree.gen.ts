@@ -36,6 +36,7 @@ import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
+import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FactCheckingRouteImport } from './routes/fact-checking'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
@@ -199,6 +200,11 @@ const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
 const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
   id: '/jazzcash-guide',
   path: '/jazzcash-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IosAppGuideRoute = IosAppGuideRouteImport.update({
+  id: '/ios-app-guide',
+  path: '/ios-app-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -370,6 +376,7 @@ export interface FileRoutesByFullPath {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/ios-app-guide': typeof IosAppGuideRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -427,6 +434,7 @@ export interface FileRoutesByTo {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/ios-app-guide': typeof IosAppGuideRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -486,6 +494,7 @@ export interface FileRoutesById {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/ios-app-guide': typeof IosAppGuideRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -546,6 +555,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/ios-app-guide'
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
@@ -603,6 +613,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/ios-app-guide'
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
@@ -661,6 +672,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/ios-app-guide'
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
@@ -720,6 +732,7 @@ export interface RootRouteChildren {
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FactCheckingRoute: typeof FactCheckingRoute
   FaqRoute: typeof FaqRoute
+  IosAppGuideRoute: typeof IosAppGuideRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
@@ -943,6 +956,13 @@ declare module '@tanstack/react-router' {
       path: '/jazzcash-guide'
       fullPath: '/jazzcash-guide'
       preLoaderRoute: typeof JazzcashGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ios-app-guide': {
+      id: '/ios-app-guide'
+      path: '/ios-app-guide'
+      fullPath: '/ios-app-guide'
+      preLoaderRoute: typeof IosAppGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -1186,6 +1206,7 @@ const rootRouteChildren: RootRouteChildren = {
   EditorialPolicyRoute: EditorialPolicyRoute,
   FactCheckingRoute: FactCheckingRoute,
   FaqRoute: FaqRoute,
+  IosAppGuideRoute: IosAppGuideRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
