@@ -1,11 +1,11 @@
 import { SectionHeader } from "./SectionHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { AFFILIATE, GO, REL } from "@/lib/affiliate";
-import wildBounty from "@/assets/popular-games/wild-bounty-showdown.png.asset.json";
-import aviator from "@/assets/popular-games/aviator.png.asset.json";
-import moneyComing from "@/assets/popular-games/money-coming.png.asset.json";
-import boxingKing from "@/assets/popular-games/boxing-king.png.asset.json";
-import crazyTime from "@/assets/popular-games/crazy-time.jpg.asset.json";
+import wildBounty from "@/assets/popular-games/wild-bounty-showdown.webp.asset.json";
+import aviator from "@/assets/popular-games/aviator.webp.asset.json";
+import moneyComing from "@/assets/popular-games/money-coming.webp.asset.json";
+import boxingKing from "@/assets/popular-games/boxing-king.webp.asset.json";
+import crazyTime from "@/assets/popular-games/crazy-time.webp.asset.json";
 
 type Game = {
   name: string;
