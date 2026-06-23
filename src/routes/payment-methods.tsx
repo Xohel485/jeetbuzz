@@ -143,6 +143,10 @@ export const Route = createFileRoute("/payment-methods")({
         { q: "Does JeetBuzz charge any deposit fee?", a: "No — JeetBuzz does not typically charge deposit fees. Wallets may charge their own send-money fee." },
         { q: "Can I mix methods?", a: "You can deposit with one and withdraw with another only if both wallets are in your name and JeetBuzz allows it. Same-method withdrawals are smoothest." },
         { q: "Is USDT safe?", a: "Yes if you use a trusted exchange. Always double-check the network (TRC20 vs BEP20) before sending." },
+        { q: "What if my wallet is under maintenance?", a: "Switch to a backup rail from the same country tier — Nagad for bKash, EasyPaisa for JazzCash, Google Pay for PhonePe. Maintenance windows rarely overlap." },
+        { q: "Are there any extra fees for foreign currency?", a: "No. JeetBuzz quotes BDT, PKR and INR natively, so there is no FX markup when you deposit in local currency." },
+        { q: "How are withdrawal limits set?", a: "Limits scale with your VIP tier. New players start on Bronze (lowest cap) and unlock larger single-cash-out limits as deposit volume increases." },
+        { q: "Can I save a payment method for next time?", a: "Yes. After the first successful deposit, JeetBuzz remembers the wallet number tied to your account so subsequent deposits are one-tap." },
       ]}
       faqsByLocale={{
         bn: [
