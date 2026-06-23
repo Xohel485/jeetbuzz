@@ -125,7 +125,7 @@ function AuthButtons({ stacked = false }: { stacked?: boolean }) {
           track("login_click", { destination: "login", button_position: "header" });
           track("affiliate_click", { intent: "login", destination: "login", button_position: "header" });
         }}
-        className={`${base} ${stacked ? "w-full h-12" : ""} bg-primary text-primary-foreground shadow-[0_10px_28px_-12px_var(--primary)] hover:brightness-110`}
+        className={`${base} ${stacked ? "w-full h-12" : ""} bg-[#1a7a30] text-white shadow-[0_10px_28px_-12px_#1a7a30] hover:bg-[#1f8e39]`}
       >
         {t("header.login")}
       </a>
@@ -161,7 +161,7 @@ function CompactAuthButtons() {
           track("login_click", { destination: "login", button_position: "header" });
           track("affiliate_click", { intent: "login", destination: "login", button_position: "header" });
         }}
-        className={`${base} bg-primary text-primary-foreground shadow-[0_6px_18px_-10px_var(--primary)] hover:brightness-110`}
+        className={`${base} bg-[#1a7a30] text-white shadow-[0_6px_18px_-10px_#1a7a30] hover:bg-[#1f8e39]`}
       >
         {t("header.login")}
       </a>
