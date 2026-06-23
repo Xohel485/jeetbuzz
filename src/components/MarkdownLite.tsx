@@ -24,7 +24,7 @@ function renderInline(text: string): ReactNode[] {
         );
       } else {
         nodes.push(
-          <Link key={`l${key++}`} to={href} className="text-primary underline-offset-4 hover:underline">
+          <Link key={`l${key++}`} to={href as never} className="text-primary underline-offset-4 hover:underline">
             {label}
           </Link>,
         );
