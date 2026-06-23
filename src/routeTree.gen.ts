@@ -48,6 +48,7 @@ import { Route as CasinoGuideRouteImport } from './routes/casino-guide'
 import { Route as BonusAndPromotionsRouteImport } from './routes/bonus-and-promotions'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BkashGuideRouteImport } from './routes/bkash-guide'
+import { Route as AviatorGuideRouteImport } from './routes/aviator-guide'
 import { Route as AuthorRouteImport } from './routes/author'
 import { Route as ApkDownloadGuideRouteImport } from './routes/apk-download-guide'
 import { Route as AffiliateProgramRouteImport } from './routes/affiliate-program'
@@ -258,6 +259,11 @@ const BkashGuideRoute = BkashGuideRouteImport.update({
   path: '/bkash-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AviatorGuideRoute = AviatorGuideRouteImport.update({
+  id: '/aviator-guide',
+  path: '/aviator-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthorRoute = AuthorRouteImport.update({
   id: '/author',
   path: '/author',
@@ -337,6 +343,7 @@ export interface FileRoutesByFullPath {
   '/affiliate-program': typeof AffiliateProgramRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
+  '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/blog': typeof BlogRouteWithChildren
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
@@ -392,6 +399,7 @@ export interface FileRoutesByTo {
   '/affiliate-program': typeof AffiliateProgramRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
+  '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
   '/casino-guide': typeof CasinoGuideRoute
@@ -447,6 +455,7 @@ export interface FileRoutesById {
   '/affiliate-program': typeof AffiliateProgramRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
+  '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/blog': typeof BlogRouteWithChildren
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
@@ -504,6 +513,7 @@ export interface FileRouteTypes {
     | '/affiliate-program'
     | '/apk-download-guide'
     | '/author'
+    | '/aviator-guide'
     | '/bkash-guide'
     | '/blog'
     | '/bonus-and-promotions'
@@ -559,6 +569,7 @@ export interface FileRouteTypes {
     | '/affiliate-program'
     | '/apk-download-guide'
     | '/author'
+    | '/aviator-guide'
     | '/bkash-guide'
     | '/bonus-and-promotions'
     | '/casino-guide'
@@ -613,6 +624,7 @@ export interface FileRouteTypes {
     | '/affiliate-program'
     | '/apk-download-guide'
     | '/author'
+    | '/aviator-guide'
     | '/bkash-guide'
     | '/blog'
     | '/bonus-and-promotions'
@@ -669,6 +681,7 @@ export interface RootRouteChildren {
   AffiliateProgramRoute: typeof AffiliateProgramRoute
   ApkDownloadGuideRoute: typeof ApkDownloadGuideRoute
   AuthorRoute: typeof AuthorRoute
+  AviatorGuideRoute: typeof AviatorGuideRoute
   BkashGuideRoute: typeof BkashGuideRoute
   BlogRoute: typeof BlogRouteWithChildren
   BonusAndPromotionsRoute: typeof BonusAndPromotionsRoute
@@ -990,6 +1003,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BkashGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aviator-guide': {
+      id: '/aviator-guide'
+      path: '/aviator-guide'
+      fullPath: '/aviator-guide'
+      preLoaderRoute: typeof AviatorGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/author': {
       id: '/author'
       path: '/author'
@@ -1111,6 +1131,7 @@ const rootRouteChildren: RootRouteChildren = {
   AffiliateProgramRoute: AffiliateProgramRoute,
   ApkDownloadGuideRoute: ApkDownloadGuideRoute,
   AuthorRoute: AuthorRoute,
+  AviatorGuideRoute: AviatorGuideRoute,
   BkashGuideRoute: BkashGuideRoute,
   BlogRoute: BlogRouteWithChildren,
   BonusAndPromotionsRoute: BonusAndPromotionsRoute,
@@ -1159,13 +1180,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
