@@ -98,6 +98,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "robots", content: "index,follow" },
       { name: "theme-color", content: "#0c1a13" },
       { name: "msapplication-TileColor", content: "#1f9d3e" },
+      { property: "og:title", content: "GetJeetBuzz — JeetBuzz Guide for Bangladesh, Pakistan & India" },
+      { name: "twitter:title", content: "GetJeetBuzz — JeetBuzz Guide for Bangladesh, Pakistan & India" },
+      { property: "og:description", content: "GetJeetBuzz is the partner guide to JeetBuzz for Bangladesh, Pakistan and India — login, signup, bonuses, app, payments and live cricket." },
+      { name: "twitter:description", content: "GetJeetBuzz is the partner guide to JeetBuzz for Bangladesh, Pakistan and India — login, signup, bonuses, app, payments and live cricket." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fcdef741-2981-486b-8aba-2147fee76917" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fcdef741-2981-486b-8aba-2147fee76917" },
     ],
     links: [
       {
