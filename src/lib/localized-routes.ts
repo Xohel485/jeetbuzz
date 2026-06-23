@@ -20,7 +20,7 @@
  */
 
 import type { ComponentType } from "react";
-import type { Locale } from "./i18n";
+import type { Country, Locale } from "./i18n";
 
 // Static imports of every public route module. Importing a route file
 // only references its Route export; TanStack Router's plugin handles
@@ -53,6 +53,11 @@ import { Route as PaymentMethodsRoute } from "@/routes/payment-methods";
 import { Route as BkashGuideRoute } from "@/routes/bkash-guide";
 import { Route as NagadGuideRoute } from "@/routes/nagad-guide";
 import { Route as RocketGuideRoute } from "@/routes/rocket-guide";
+import { Route as EasypaisaGuideRoute } from "@/routes/easypaisa-guide";
+import { Route as JazzcashGuideRoute } from "@/routes/jazzcash-guide";
+import { Route as UpiGuideRoute } from "@/routes/upi-guide";
+import { Route as PhonepeGuideRoute } from "@/routes/phonepe-guide";
+import { Route as PaytmGuideRoute } from "@/routes/paytm-guide";
 import { Route as AffiliateProgramRoute } from "@/routes/affiliate-program";
 import { Route as AffiliateLoginRoute } from "@/routes/affiliate-login";
 import { Route as AffiliateDisclosureRoute } from "@/routes/affiliate-disclosure";
@@ -74,6 +79,14 @@ export type LocalizedRoute = {
   component: ComponentType;
   /** Per-locale SEO. English is the source of truth and the fallback. */
   meta: Record<Locale, LocaleMeta>;
+  /**
+   * Optional country gate for the localized splat route. When set, the
+   * registry will only resolve this slug under `/{country}/{lang}/...`
+   * for the listed countries. Bare English URLs (`/easypaisa-guide`)
+   * remain reachable regardless — gating only applies to the localized
+   * splat to prevent country-leaks like `/in/hi/easypaisa-guide`.
+   */
+  countries?: Country[];
 };
 
 /** Helper to build a registry entry. */
@@ -82,11 +95,13 @@ function entry(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RouteRef: { options: { component?: any } },
   meta: Record<Locale, LocaleMeta>,
+  countries?: Country[],
 ): LocalizedRoute {
   return {
     slug,
     component: (RouteRef.options.component as ComponentType) ?? (() => null),
     meta,
+    countries,
   };
 }
 

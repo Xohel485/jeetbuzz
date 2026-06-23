@@ -13,6 +13,7 @@ import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
 import { Route as WelcomeBonusRouteImport } from './routes/welcome-bonus'
 import { Route as VipProgramRouteImport } from './routes/vip-program'
 import { Route as VerificationRouteImport } from './routes/verification'
+import { Route as UpiGuideRouteImport } from './routes/upi-guide'
 import { Route as UpdatePolicyRouteImport } from './routes/update-policy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SportsBettingRouteImport } from './routes/sports-betting'
@@ -23,6 +24,8 @@ import { Route as ReviewPolicyRouteImport } from './routes/review-policy'
 import { Route as ResponsibleGamingRouteImport } from './routes/responsible-gaming'
 import { Route as RegistrationGuideRouteImport } from './routes/registration-guide'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PhonepeGuideRouteImport } from './routes/phonepe-guide'
+import { Route as PaytmGuideRouteImport } from './routes/paytm-guide'
 import { Route as PaymentMethodsRouteImport } from './routes/payment-methods'
 import { Route as PasswordResetRouteImport } from './routes/password-reset'
 import { Route as NagadGuideRouteImport } from './routes/nagad-guide'
@@ -32,9 +35,11 @@ import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
+import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FactCheckingRouteImport } from './routes/fact-checking'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
+import { Route as EasypaisaGuideRouteImport } from './routes/easypaisa-guide'
 import { Route as DepositWithdrawalGuideRouteImport } from './routes/deposit-withdrawal-guide'
 import { Route as DepositGuideRouteImport } from './routes/deposit-guide'
 import { Route as ContentPolicyRouteImport } from './routes/content-policy'
@@ -76,6 +81,11 @@ const VipProgramRoute = VipProgramRouteImport.update({
 const VerificationRoute = VerificationRouteImport.update({
   id: '/verification',
   path: '/verification',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UpiGuideRoute = UpiGuideRouteImport.update({
+  id: '/upi-guide',
+  path: '/upi-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const UpdatePolicyRoute = UpdatePolicyRouteImport.update({
@@ -128,6 +138,16 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PhonepeGuideRoute = PhonepeGuideRouteImport.update({
+  id: '/phonepe-guide',
+  path: '/phonepe-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaytmGuideRoute = PaytmGuideRouteImport.update({
+  id: '/paytm-guide',
+  path: '/paytm-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PaymentMethodsRoute = PaymentMethodsRouteImport.update({
   id: '/payment-methods',
   path: '/payment-methods',
@@ -173,6 +193,11 @@ const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
   path: '/jeetbuzz-review',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
+  id: '/jazzcash-guide',
+  path: '/jazzcash-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -186,6 +211,11 @@ const FactCheckingRoute = FactCheckingRouteImport.update({
 const EditorialPolicyRoute = EditorialPolicyRouteImport.update({
   id: '/editorial-policy',
   path: '/editorial-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EasypaisaGuideRoute = EasypaisaGuideRouteImport.update({
+  id: '/easypaisa-guide',
+  path: '/easypaisa-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DepositWithdrawalGuideRoute = DepositWithdrawalGuideRouteImport.update({
@@ -315,9 +345,11 @@ export interface FileRoutesByFullPath {
   '/content-policy': typeof ContentPolicyRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
+  '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login-guide': typeof LoginGuideRoute
@@ -327,6 +359,8 @@ export interface FileRoutesByFullPath {
   '/nagad-guide': typeof NagadGuideRoute
   '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
+  '/paytm-guide': typeof PaytmGuideRoute
+  '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registration-guide': typeof RegistrationGuideRoute
   '/responsible-gaming': typeof ResponsibleGamingRoute
@@ -337,6 +371,7 @@ export interface FileRoutesByFullPath {
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
   '/update-policy': typeof UpdatePolicyRoute
+  '/upi-guide': typeof UpiGuideRoute
   '/verification': typeof VerificationRoute
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
@@ -364,9 +399,11 @@ export interface FileRoutesByTo {
   '/content-policy': typeof ContentPolicyRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
+  '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login-guide': typeof LoginGuideRoute
@@ -376,6 +413,8 @@ export interface FileRoutesByTo {
   '/nagad-guide': typeof NagadGuideRoute
   '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
+  '/paytm-guide': typeof PaytmGuideRoute
+  '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registration-guide': typeof RegistrationGuideRoute
   '/responsible-gaming': typeof ResponsibleGamingRoute
@@ -386,6 +425,7 @@ export interface FileRoutesByTo {
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
   '/update-policy': typeof UpdatePolicyRoute
+  '/upi-guide': typeof UpiGuideRoute
   '/verification': typeof VerificationRoute
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
@@ -415,9 +455,11 @@ export interface FileRoutesById {
   '/content-policy': typeof ContentPolicyRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
+  '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login-guide': typeof LoginGuideRoute
@@ -427,6 +469,8 @@ export interface FileRoutesById {
   '/nagad-guide': typeof NagadGuideRoute
   '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
+  '/paytm-guide': typeof PaytmGuideRoute
+  '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registration-guide': typeof RegistrationGuideRoute
   '/responsible-gaming': typeof ResponsibleGamingRoute
@@ -437,6 +481,7 @@ export interface FileRoutesById {
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
   '/update-policy': typeof UpdatePolicyRoute
+  '/upi-guide': typeof UpiGuideRoute
   '/verification': typeof VerificationRoute
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
@@ -467,9 +512,11 @@ export interface FileRouteTypes {
     | '/content-policy'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
+    | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login-guide'
@@ -479,6 +526,8 @@ export interface FileRouteTypes {
     | '/nagad-guide'
     | '/password-reset'
     | '/payment-methods'
+    | '/paytm-guide'
+    | '/phonepe-guide'
     | '/privacy-policy'
     | '/registration-guide'
     | '/responsible-gaming'
@@ -489,6 +538,7 @@ export interface FileRouteTypes {
     | '/sports-betting'
     | '/terms'
     | '/update-policy'
+    | '/upi-guide'
     | '/verification'
     | '/vip-program'
     | '/welcome-bonus'
@@ -516,9 +566,11 @@ export interface FileRouteTypes {
     | '/content-policy'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
+    | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login-guide'
@@ -528,6 +580,8 @@ export interface FileRouteTypes {
     | '/nagad-guide'
     | '/password-reset'
     | '/payment-methods'
+    | '/paytm-guide'
+    | '/phonepe-guide'
     | '/privacy-policy'
     | '/registration-guide'
     | '/responsible-gaming'
@@ -538,6 +592,7 @@ export interface FileRouteTypes {
     | '/sports-betting'
     | '/terms'
     | '/update-policy'
+    | '/upi-guide'
     | '/verification'
     | '/vip-program'
     | '/welcome-bonus'
@@ -566,9 +621,11 @@ export interface FileRouteTypes {
     | '/content-policy'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
+    | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login-guide'
@@ -578,6 +635,8 @@ export interface FileRouteTypes {
     | '/nagad-guide'
     | '/password-reset'
     | '/payment-methods'
+    | '/paytm-guide'
+    | '/phonepe-guide'
     | '/privacy-policy'
     | '/registration-guide'
     | '/responsible-gaming'
@@ -588,6 +647,7 @@ export interface FileRouteTypes {
     | '/sports-betting'
     | '/terms'
     | '/update-policy'
+    | '/upi-guide'
     | '/verification'
     | '/vip-program'
     | '/welcome-bonus'
@@ -617,9 +677,11 @@ export interface RootRouteChildren {
   ContentPolicyRoute: typeof ContentPolicyRoute
   DepositGuideRoute: typeof DepositGuideRoute
   DepositWithdrawalGuideRoute: typeof DepositWithdrawalGuideRoute
+  EasypaisaGuideRoute: typeof EasypaisaGuideRoute
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FactCheckingRoute: typeof FactCheckingRoute
   FaqRoute: typeof FaqRoute
+  JazzcashGuideRoute: typeof JazzcashGuideRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginGuideRoute: typeof LoginGuideRoute
@@ -629,6 +691,8 @@ export interface RootRouteChildren {
   NagadGuideRoute: typeof NagadGuideRoute
   PasswordResetRoute: typeof PasswordResetRoute
   PaymentMethodsRoute: typeof PaymentMethodsRoute
+  PaytmGuideRoute: typeof PaytmGuideRoute
+  PhonepeGuideRoute: typeof PhonepeGuideRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RegistrationGuideRoute: typeof RegistrationGuideRoute
   ResponsibleGamingRoute: typeof ResponsibleGamingRoute
@@ -639,6 +703,7 @@ export interface RootRouteChildren {
   SportsBettingRoute: typeof SportsBettingRoute
   TermsRoute: typeof TermsRoute
   UpdatePolicyRoute: typeof UpdatePolicyRoute
+  UpiGuideRoute: typeof UpiGuideRoute
   VerificationRoute: typeof VerificationRoute
   VipProgramRoute: typeof VipProgramRoute
   WelcomeBonusRoute: typeof WelcomeBonusRoute
@@ -678,6 +743,13 @@ declare module '@tanstack/react-router' {
       path: '/verification'
       fullPath: '/verification'
       preLoaderRoute: typeof VerificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upi-guide': {
+      id: '/upi-guide'
+      path: '/upi-guide'
+      fullPath: '/upi-guide'
+      preLoaderRoute: typeof UpiGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/update-policy': {
@@ -750,6 +822,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/phonepe-guide': {
+      id: '/phonepe-guide'
+      path: '/phonepe-guide'
+      fullPath: '/phonepe-guide'
+      preLoaderRoute: typeof PhonepeGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paytm-guide': {
+      id: '/paytm-guide'
+      path: '/paytm-guide'
+      fullPath: '/paytm-guide'
+      preLoaderRoute: typeof PaytmGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/payment-methods': {
       id: '/payment-methods'
       path: '/payment-methods'
@@ -813,6 +899,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jazzcash-guide': {
+      id: '/jazzcash-guide'
+      path: '/jazzcash-guide'
+      fullPath: '/jazzcash-guide'
+      preLoaderRoute: typeof JazzcashGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -832,6 +925,13 @@ declare module '@tanstack/react-router' {
       path: '/editorial-policy'
       fullPath: '/editorial-policy'
       preLoaderRoute: typeof EditorialPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/easypaisa-guide': {
+      id: '/easypaisa-guide'
+      path: '/easypaisa-guide'
+      fullPath: '/easypaisa-guide'
+      preLoaderRoute: typeof EasypaisaGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/deposit-withdrawal-guide': {
@@ -1019,9 +1119,11 @@ const rootRouteChildren: RootRouteChildren = {
   ContentPolicyRoute: ContentPolicyRoute,
   DepositGuideRoute: DepositGuideRoute,
   DepositWithdrawalGuideRoute: DepositWithdrawalGuideRoute,
+  EasypaisaGuideRoute: EasypaisaGuideRoute,
   EditorialPolicyRoute: EditorialPolicyRoute,
   FactCheckingRoute: FactCheckingRoute,
   FaqRoute: FaqRoute,
+  JazzcashGuideRoute: JazzcashGuideRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginGuideRoute: LoginGuideRoute,
@@ -1031,6 +1133,8 @@ const rootRouteChildren: RootRouteChildren = {
   NagadGuideRoute: NagadGuideRoute,
   PasswordResetRoute: PasswordResetRoute,
   PaymentMethodsRoute: PaymentMethodsRoute,
+  PaytmGuideRoute: PaytmGuideRoute,
+  PhonepeGuideRoute: PhonepeGuideRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RegistrationGuideRoute: RegistrationGuideRoute,
   ResponsibleGamingRoute: ResponsibleGamingRoute,
@@ -1041,6 +1145,7 @@ const rootRouteChildren: RootRouteChildren = {
   SportsBettingRoute: SportsBettingRoute,
   TermsRoute: TermsRoute,
   UpdatePolicyRoute: UpdatePolicyRoute,
+  UpiGuideRoute: UpiGuideRoute,
   VerificationRoute: VerificationRoute,
   VipProgramRoute: VipProgramRoute,
   WelcomeBonusRoute: WelcomeBonusRoute,
