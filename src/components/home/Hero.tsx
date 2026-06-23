@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Languages, ShieldCheck } from "lucide-react";
+import { ArrowRight, BookOpen, Languages, ShieldCheck, Headphones, Trophy, ShieldCheck as ShieldIcon } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { IMAGES, imageUrl } from "@/lib/images";
@@ -96,18 +96,29 @@ export function Hero() {
         </div>
       </section>
 
-      <section className="container-pro -mt-10 md:-mt-14">
-        <div className="glass grid grid-cols-2 gap-px overflow-hidden bg-white/[0.04] md:grid-cols-4">
-          {JEETBUZZ_STATS.map((s) => (
-            <div key={s.label} className="flex flex-col items-center justify-center bg-background/80 p-6 text-center md:items-start md:p-7 md:text-left">
-              <p className="text-2xl font-bold gold-text md:text-4xl">
-                {s.value}
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground md:text-sm">
-                {s.label}
-              </p>
-            </div>
-          ))}
+      <section className="container-pro -mt-10 md:-mt-16">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-6">
+          {JEETBUZZ_STATS.map((s, i) => {
+            const Icon = [ShieldIcon, Languages, Headphones, Trophy][i] ?? ShieldIcon;
+            return (
+              <div
+                key={s.label}
+                className="glass group relative flex flex-col items-start gap-5 rounded-2xl border border-white/8 bg-background/70 p-7 md:p-8 transition-colors hover:border-primary/30"
+              >
+                <span className="inline-flex size-11 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
+                  <Icon className="size-5 text-primary" strokeWidth={1.75} />
+                </span>
+                <div className="space-y-2">
+                  <p className="gold-text text-2xl font-semibold leading-tight tracking-tight md:text-[1.75rem]">
+                    {s.value}
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {s.label}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
