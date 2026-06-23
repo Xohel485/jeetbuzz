@@ -20,7 +20,7 @@ export const Route = createFileRoute("/registration-guide")({
       jsonLdScript(
         articleSchema({
           headline: "JeetBuzz Registration Guide for Bangladesh",
-          desc: "Step-by-step JeetBuzz signup from Bangladesh.",
+          description: "Step-by-step JeetBuzz signup from Bangladesh.",
           path: "/registration-guide",
           image: imageAbsoluteUrl("registration"),
         }),
