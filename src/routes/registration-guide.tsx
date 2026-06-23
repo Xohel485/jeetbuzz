@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { imageAbsoluteUrl } from "@/lib/images";
 import { articleSchema, jsonLdScript, canonicalLink } from "@/lib/schema";
+import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 
 export const Route = createFileRoute("/registration-guide")({
   head: () => ({
@@ -120,12 +121,56 @@ export const Route = createFileRoute("/registration-guide")({
       articleHeadline="JeetBuzz Registration Guide"
       articleDescription="Step-by-step JeetBuzz signup from Bangladesh, Pakistan and India."
       articlePath="/registration-guide"
-      related={[
-        { to: "/login-guide", title: "Login Guide", desc: "Safe access to your JeetBuzz account." },
-        { to: "/deposit-guide", title: "Deposit Guide", desc: "Fund your account via bKash, Nagad, JazzCash, UPI and more." },
-        { to: "/bonus-and-promotions", title: "Welcome Bonus", desc: "Understand the welcome offer before depositing." },
-        { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator." },
+      breadcrumbs={[
+        { name: "Home", path: "/" },
+        { name: "Signup", path: "/registration-guide" },
       ]}
+      faqs={[
+        { q: "How long does JeetBuzz signup take?", a: "Under 3 minutes for phone signup if your OTP arrives on time. KYC, when required, is a separate step." },
+        { q: "Do I need an email to register?", a: "Phone is enough to start. Add email later from account settings — it enables email-based password recovery if you lose your SIM." },
+        { q: "Can I change my username later?", a: "Usually no. Pick a username you're happy with. Display name (the public one) can sometimes be edited." },
+        { q: "Is there a registration fee?", a: "No. JeetBuzz signup is free. You only pay your first deposit, which becomes your starting balance." },
+        { q: "Can one person open multiple accounts?", a: "No. One person = one account, verified via NID/CNIC/Aadhaar at KYC. Duplicate accounts are closed and balances frozen." },
+        { q: "I'm 17 — can I still sign up?", a: "No. JeetBuzz is strictly 18+. Underage accounts fail KYC and deposits may not be refunded." },
+        { q: "What if OTP doesn't arrive?", a: "Wait 60 seconds, then tap Resend. If it still doesn't arrive, switch from Wi-Fi to mobile data, or try another operator." },
+        { q: "Should I claim the welcome bonus at signup?", a: "Only if you understand the wagering and max-bet rules. See our [Welcome Bonus](/welcome-bonus) page first." },
+      ]}
+      faqsByLocale={{
+        bn: [
+          { q: "জিতবাজ সাইনআপ কত সময় লাগে?", a: "ফোন সাইনআপে ৩ মিনিটের কম, যদি OTP দ্রুত আসে। KYC প্রয়োজন হলে আলাদা ধাপ।" },
+          { q: "ইমেইল ছাড়া কি রেজিস্টার করা যায়?", a: "হ্যাঁ, ফোন নম্বরই যথেষ্ট। পরে অ্যাকাউন্ট সেটিংস থেকে ইমেইল যোগ করুন — SIM হারালে রিকভারি সহজ হয়।" },
+          { q: "ইউজারনেম কি পরে পরিবর্তন করা যায়?", a: "সাধারণত না। চিন্তা করে বেছে নিন। শুধু Display Name বদলানো যেতে পারে।" },
+          { q: "রেজিস্ট্রেশন ফি কি আছে?", a: "না। সাইনআপ ফ্রি। শুধু প্রথম ডিপোজিট লাগে যা আপনার ব্যালান্স হবে।" },
+          { q: "একজন ব্যক্তি কি একাধিক অ্যাকাউন্ট খুলতে পারবে?", a: "না। এক NID = এক অ্যাকাউন্ট। ডুপ্লিকেট ধরা পড়লে সব অ্যাকাউন্ট বন্ধ।" },
+          { q: "১৭ বছর বয়সে সাইনআপ করলে?", a: "JeetBuzz শুধুমাত্র ১৮+। KYC ফেইল হবে, ডিপোজিট ফেরত নাও আসতে পারে।" },
+          { q: "Grameenphone/Robi-তে OTP আসছে না — কী করব?", a: "৬০ সেকেন্ড অপেক্ষা করে Resend দিন। Wi-Fi থেকে মোবাইল ডেটায় স্যুইচ করুন বা অন্য অপারেটর চেষ্টা করুন।" },
+          { q: "সাইনআপের সময়েই কি বোনাস নেব?", a: "শর্ত বুঝে নিন। আগে [Welcome Bonus](/welcome-bonus) পেজ পড়ুন — max bet ও wagering নিয়ম গুরুত্বপূর্ণ।" },
+          { q: "bKash অ্যাকাউন্টের নাম আর JeetBuzz নাম আলাদা হলে?", a: "ডিপোজিট/উইথড্রয়াল আটকাতে পারে। দুটোই NID-র সাথে মিলিয়ে রাখুন।" },
+        ],
+        ur: [
+          { q: "JeetBuzz سائن اپ کتنا وقت لیتا ہے؟", a: "فون سائن اپ میں 3 منٹ سے کم، اگر OTP وقت پر آجائے۔ KYC کی ضرورت پر الگ مرحلہ۔" },
+          { q: "بغیر ای میل کے رجسٹر ہو سکتا ہوں؟", a: "ہاں، فون نمبر کافی ہے۔ بعد میں اکاؤنٹ سیٹنگز سے ای میل شامل کریں — SIM گم ہونے پر ریکوری آسان۔" },
+          { q: "یوزرنیم بعد میں تبدیل ہو سکتا ہے؟", a: "عموماً نہیں۔ سوچ سمجھ کر منتخب کریں۔ صرف Display Name تبدیل ہو سکتا ہے۔" },
+          { q: "رجسٹریشن فیس ہے؟", a: "نہیں۔ سائن اپ مفت۔ صرف پہلی ڈپازٹ آپ کا بیلنس بنتی ہے۔" },
+          { q: "ایک شخص متعدد اکاؤنٹس کھول سکتا ہے؟", a: "نہیں۔ ایک CNIC = ایک اکاؤنٹ۔ ڈپلیکیٹ پکڑے جانے پر سب بند۔" },
+          { q: "17 سال کی عمر میں سائن اپ کرنے پر؟", a: "JeetBuzz صرف 18+۔ KYC ناکام، ڈپازٹ واپس نہ ملنے کا خطرہ۔" },
+          { q: "Jazz/Zong پر OTP نہیں آرہا — کیا کروں؟", a: "60 سیکنڈ انتظار کر کے Resend دبائیں۔ Wi-Fi چھوڑ کر موبائل ڈیٹا یا دوسرا نیٹ ورک آزمائیں۔" },
+          { q: "سائن اپ پر ہی بونس لیں؟", a: "شرائط سمجھ کر۔ پہلے [ویلکم بونس](/welcome-bonus) صفحہ پڑھیں — max bet اور wagering اصول اہم۔" },
+          { q: "EasyPaisa اور JeetBuzz نام مختلف ہوں تو؟", a: "ڈپازٹ/ودڈرا رک سکتی ہے۔ دونوں کو CNIC کے مطابق ایک جیسا رکھیں۔" },
+        ],
+        hi: [
+          { q: "JeetBuzz साइनअप कितना समय लेता है?", a: "फ़ोन साइनअप में 3 मिनट से कम, अगर OTP समय पर आए। KYC ज़रूरी हो तो अलग चरण।" },
+          { q: "बिना ईमेल के रजिस्टर हो सकता हूँ?", a: "हाँ, फ़ोन नंबर काफ़ी है। बाद में अकाउंट सेटिंग्स से ईमेल जोड़ें — SIM गुम होने पर रिकवरी आसान।" },
+          { q: "यूज़रनेम बाद में बदल सकते हैं?", a: "आम तौर पर नहीं। सोच-समझकर चुनें। केवल Display Name बदल सकता है।" },
+          { q: "रजिस्ट्रेशन फ़ीस है?", a: "नहीं। साइनअप मुफ़्त। केवल पहली डिपॉज़िट आपका बैलेंस बनती है।" },
+          { q: "एक व्यक्ति कई अकाउंट खोल सकता है?", a: "नहीं। एक Aadhaar = एक अकाउंट। डुप्लिकेट पकड़े जाने पर सब बंद।" },
+          { q: "17 साल की उम्र में साइनअप करने पर?", a: "JeetBuzz केवल 18+। KYC फ़ेल, डिपॉज़िट वापस न आने का जोखिम।" },
+          { q: "Jio/Airtel पर OTP नहीं आ रहा — क्या करूँ?", a: "60 सेकंड रुककर Resend दबाएँ। Wi-Fi छोड़कर मोबाइल डेटा या दूसरा ऑपरेटर आज़माएँ।" },
+          { q: "साइनअप पर ही बोनस लें?", a: "शर्तें समझकर। पहले [वेलकम बोनस](/welcome-bonus) पेज पढ़ें — max bet और wagering नियम अहम।" },
+          { q: "PhonePe/UPI और JeetBuzz नाम अलग हों तो?", a: "डिपॉज़िट/निकासी रुक सकती है। दोनों को Aadhaar के अनुसार एक जैसा रखें।" },
+        ],
+      }}
+      related={siblings(SIGNUP_CLUSTER, "/registration-guide")}
     />
   ),
 });
