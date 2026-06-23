@@ -30,7 +30,7 @@ export const IMAGES = {
   },
   loginInterface: {
     name: "jeetbuzz-login-interface",
-    widths: [480, 768, 1200, 1600],
+    widths: [480, 768, 1200],
     w: 3264,
     h: 1268,
     alt: "JeetBuzz login interface for Bangladesh players",
@@ -60,7 +60,7 @@ export const IMAGES = {
   },
   androidApp: {
     name: "jeetbuzz-android-app",
-    widths: [480, 768, 1200, 1600],
+    widths: [480, 768, 1200],
     w: 1920,
     h: 1440,
     alt: "JeetBuzz Android app — APK download and install guide",
