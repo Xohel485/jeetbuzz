@@ -20,9 +20,10 @@ import { AnalyticsRouterBridge } from "../components/AnalyticsRouterBridge";
 // are configured inside GTM and adding direct scripts here causes
 // duplicate hits in GA4 and double-session inflation in Clarity.
 const GTM_ID = "GTM-N7ZXWM9M";
-// Defer GTM injection until the browser is idle (or after 3.5s fallback) so it
-// doesn't compete with the LCP image / hero render on slow networks.
-const GTM_INLINE = `window.dataLayer=window.dataLayer||[];function __loadGTM(){if(window.__gtmLoaded)return;window.__gtmLoaded=true;window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=document.getElementsByTagName('script')[0],j=document.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';f.parentNode.insertBefore(j,f);}if('requestIdleCallback' in window){requestIdleCallback(__loadGTM,{timeout:3500});}else{setTimeout(__loadGTM,2500);}window.addEventListener('load',function(){setTimeout(__loadGTM,1500);});`;
+// Defer GTM injection until the browser is idle AND at least ~3s after
+// first user interaction window — keeps GTM off the LCP / TBT critical path
+// on slow mobile networks. No early load-event fallback.
+const GTM_INLINE = `window.dataLayer=window.dataLayer||[];function __loadGTM(){if(window.__gtmLoaded)return;window.__gtmLoaded=true;window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=document.getElementsByTagName('script')[0],j=document.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';f.parentNode.insertBefore(j,f);}function __scheduleGTM(){if('requestIdleCallback' in window){requestIdleCallback(__loadGTM,{timeout:6000});}else{setTimeout(__loadGTM,3000);}}if(document.readyState==='complete'){setTimeout(__scheduleGTM,3000);}else{window.addEventListener('load',function(){setTimeout(__scheduleGTM,3000);},{once:true});}var __earlyUX=function(){__loadGTM();};['pointerdown','keydown','touchstart','scroll'].forEach(function(e){window.addEventListener(e,__earlyUX,{once:true,passive:true});});`;
 
 function NotFoundComponent() {
   return (
