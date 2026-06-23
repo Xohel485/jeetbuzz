@@ -111,7 +111,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+        fetchPriority: "high",
       },
+      // Preload the stylesheet with high priority so the browser starts the
+      // CSS request as early as possible in the HTML head parse (helps LCP
+      // on slow networks where critical-path latency is the dominant cost).
+      { rel: "preload", as: "style", href: appCss, fetchPriority: "high" },
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16.png" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
