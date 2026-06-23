@@ -71,5 +71,5 @@ function LocalizedHome() {
     setLocale(lang as Locale);
   }, [lang, setLocale]);
   // Reuse the canonical homepage component so layout/sections stay identical.
-  return <Index />;
+  return <HomePage />;
 }
