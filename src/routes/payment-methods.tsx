@@ -41,6 +41,7 @@ export const Route = createFileRoute("/payment-methods")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
+        "> **Quick summary:** JeetBuzz Bangladesh players use bKash, Nagad or Rocket (instant, 200 BDT min, 0% fee). Pakistan = JazzCash or EasyPaisa. India = UPI via PhonePe / Google Pay / Paytm. USDT TRC20 is the fastest rail for large cash-outs. Same wallet for deposit and withdrawal clears fastest.",
         "## Quick comparison",
         "JeetBuzz supports the dominant local rails in each market — mobile wallets in Bangladesh, UPI in India, JazzCash and EasyPaisa in Pakistan, plus crypto (USDT) for power users. The table below gives you a one-glance comparison before you pick a method.",
         "| Method | Country | Min Deposit | Deposit Time | Withdrawal Time | Fee |",
