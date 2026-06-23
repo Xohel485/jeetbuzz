@@ -32,6 +32,7 @@ export const Route = createFileRoute("/deposit-guide")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
+        "> **Quick summary:** Log in, open Cashier > Deposit, pick your country's rail (bKash/Nagad/Rocket in BD, JazzCash/EasyPaisa in PK, UPI in IN, USDT globally), send the exact amount with the JeetBuzz reference via Send Money, paste the TrxID/UTR and submit. Local wallets credit in under 60 seconds. Activate the welcome bonus first — bonuses are not applied retroactively.",
         "## Overview",
         "This jeetbuzz deposit guide covers every supported rail across Bangladesh, Pakistan and India for 2026, with minimums, processing times, fees, and the exact flow for each payment method. Deposits on JeetBuzz are usually instant when you follow the correct Send Money flow.",
         "## Universal step-by-step",
