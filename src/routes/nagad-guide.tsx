@@ -70,6 +70,23 @@ export const Route = createFileRoute("/nagad-guide")({
         "- Wrong reference code — include the unique JeetBuzz code exactly",
         "- Do **not** use Nagad Cash Out — that menu is for cash-pickup at agents, not merchant deposits",
         "- KYC must be complete (Nagad NID verification) before your first jeetbuzz withdrawal bangladesh",
+        "## bKash vs Nagad on JeetBuzz",
+        "| Factor | bKash | Nagad |",
+        "|---|---|---|",
+        "| Deposit min | 200 BDT | 200 BDT |",
+        "| Daily deposit cap | 50,000 BDT | 75,000 BDT |",
+        "| Send Money fee | ~5 BDT / 1,000 | ~4 BDT / 1,000 |",
+        "| Withdrawal time | 5–30 min | 5–30 min |",
+        "| App reliability | Highest | Very high |",
+        "| Best for | Daily play | Mid-stake regulars |",
+        "## Country context",
+        "- **Bangladesh (primary):** Nagad is the #2 wallet, ideal when bKash is under maintenance or you have hit your bKash daily cap.",
+        "- **Pakistan / India:** Not available — use [JazzCash](/jazzcash-guide), [EasyPaisa](/easypaisa-guide) or [UPI](/upi-guide) instead.",
+        "## Extended FAQ",
+        "- **Can I use Nagad Islamic for deposits?** Yes — both Regular and Islamic Nagad wallets work, as long as the registered name matches your JeetBuzz account.",
+        "- **What if my Nagad app shows \"Transaction Pending\"?** Wait 5 minutes — Nagad sometimes batches confirmations. If the SMS does not arrive in 10 minutes, contact Nagad support before re-trying.",
+        "## Ready to deposit with Nagad?",
+        "Follow the 8-step flow, keep the reference code in front of you, and never use Cash Out. New players should activate the [Welcome Bonus](/welcome-bonus) before the first send and complete the [Registration Guide](/registration-guide).",
         "## Related guides",
         "Pair this with the [Deposit Guide](/deposit-guide), [Withdrawal Guide](/withdrawal-guide), [bKash Guide](/bkash-guide), [Rocket Guide](/rocket-guide), [APK Download](/apk-download-guide) and [Welcome Bonus](/welcome-bonus).",
       ]}
@@ -100,6 +117,9 @@ export const Route = createFileRoute("/nagad-guide")({
         { q: "Can I deposit with Nagad and withdraw to bKash?", a: "Usually no — JeetBuzz prefers the same wallet for deposit and withdrawal." },
         { q: "What if I send the wrong amount?", a: "Open live chat with the TrxID; many cases can still be credited." },
         { q: "Is there a minimum?", a: "Typically 200–500 BDT — confirm in the cashier." },
+        { q: "Does Nagad work 24/7 on JeetBuzz?", a: "Yes. Deposits clear around the clock; withdrawals may slow briefly during overnight banking windows." },
+        { q: "Why was my Nagad deposit reversed?", a: "Usually a name mismatch between the Nagad wallet and the JeetBuzz profile, or money sent via Cash Out instead of Send Money." },
+        { q: "Is Nagad KYC required for deposits?", a: "No — only for withdrawals. You can deposit with a basic Nagad wallet but must complete NID verification before your first cash-out." },
       ]}
       faqsByLocale={{
         bn: [
