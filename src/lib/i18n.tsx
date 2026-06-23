@@ -91,10 +91,10 @@ const en: Dict = {
 
   // Hero
   "hero.eyebrow": "JeetBuzz · Bangladesh · Pakistan · India",
-  "hero.title.lead": "The Honest JeetBuzz Handbook for",
+  "hero.title.lead": "JeetBuzz Login, Signup & Bonus Guide —",
   "hero.title.highlight": "Bangladesh, Pakistan & India",
   "hero.subtitle":
-    "Open an account in 3 minutes, deposit from 200 BDT via bKash, Nagad or UPI, and bet live on BPL, IPL and PSL — with step-by-step jeetbuzz login, jeetbuzz apk and withdrawal guides written by South-Asian punters. Curaçao-licensed, 24/7 Bengali support.",
+    "JeetBuzz makes it simple — open a JeetBuzz account in 3 minutes, deposit from 200 BDT via bKash, Nagad or UPI, and bet live on BPL, IPL and PSL. Step-by-step JeetBuzz login, JeetBuzz APK and JeetBuzz withdrawal guides written by South-Asian punters. Curaçao-licensed JeetBuzz partner with 24/7 Bengali support.",
   "hero.cta.join": "Join JeetBuzz Now",
   "hero.cta.login": "JeetBuzz Login",
   "hero.markets.label": "Available in:",
@@ -119,10 +119,10 @@ const bn: Dict = {
   "header.lang.aria": "ভাষা পরিবর্তন",
 
   "hero.eyebrow": "JeetBuzz · বাংলাদেশ · পাকিস্তান · ভারত",
-  "hero.title.lead": "জিতবাজের সৎ ও পূর্ণাঙ্গ গাইড —",
+  "hero.title.lead": "জিতবাজ লগইন, সাইন আপ ও বোনাস গাইড —",
   "hero.title.highlight": "বাংলাদেশ · পাকিস্তান · ভারত",
   "hero.subtitle":
-    "৩ মিনিটে অ্যাকাউন্ট, ২০০ টাকা থেকে bKash/Nagad/Rocket ডিপোজিট, এবং BPL, IPL ও PSL-এ লাইভ বেট — জিতবাজ লগইন, জিতবাজ APK ও উইথড্রয়াল গাইডসহ। Curaçao লাইসেন্স, ২৪/৭ বাংলা সাপোর্ট।",
+    "জিতবাজে ৩ মিনিটে অ্যাকাউন্ট খুলুন, ২০০ টাকা থেকে bKash/Nagad/Rocket-এ জিতবাজ ডিপোজিট করুন এবং BPL, IPL ও PSL-এ লাইভ বেট করুন। ধাপে ধাপে জিতবাজ লগইন, জিতবাজ APK ও জিতবাজ উইথড্রয়াল গাইড — Curaçao লাইসেন্সপ্রাপ্ত জিতবাজ পার্টনার, ২৪/৭ বাংলা সাপোর্ট।",
   "hero.cta.join": "জিতবাজে যোগ দিন",
   "hero.cta.login": "জিতবাজ লগইন",
   "hero.markets.label": "উপলব্ধ:",
