@@ -1,36 +1,79 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 
 // Tiny renderer for the BlogPost.body line array.
 // Supports: "## heading", "- list item", "> quote", "1. ordered", paragraph.
+// Inline: [text](href), **bold**.
+function renderInline(text: string): ReactNode[] {
+  // Tokenize on [text](href) and **bold**.
+  const nodes: ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let key = 0;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > last) nodes.push(text.slice(last, m.index));
+    if (m[1] && m[2]) {
+      const href = m[2];
+      const label = m[1];
+      if (/^https?:\/\//i.test(href)) {
+        nodes.push(
+          <a key={`l${key++}`} href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 hover:underline">
+            {label}
+          </a>,
+        );
+      } else {
+        nodes.push(
+          <Link key={`l${key++}`} to={href} className="text-primary underline-offset-4 hover:underline">
+            {label}
+          </Link>,
+        );
+      }
+    } else if (m[3]) {
+      nodes.push(
+        <strong key={`b${key++}`} className="font-semibold text-foreground">
+          {m[3]}
+        </strong>,
+      );
+    }
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
+
 export function MarkdownLite({ lines }: { lines: string[] }) {
   const out: ReactNode[] = [];
   let list: { type: "ul" | "ol"; items: string[] } | null = null;
+  let k = 0;
+  const nextKey = (prefix: string) => `${prefix}-${k++}`;
 
   const flush = () => {
     if (!list) return;
+    const items = list.items;
     if (list.type === "ul") {
       out.push(
-        <ul key={out.length} className="list-disc space-y-1 pl-6 text-muted-foreground">
-          {list.items.map((t, i) => <li key={i}>{t}</li>)}
+        <ul key={nextKey("ul")} className="list-disc space-y-1 pl-6 text-muted-foreground">
+          {items.map((t, i) => <li key={i}>{renderInline(t)}</li>)}
         </ul>,
       );
     } else {
       out.push(
-        <ol key={out.length} className="list-decimal space-y-1 pl-6 text-muted-foreground">
-          {list.items.map((t, i) => <li key={i}>{t}</li>)}
+        <ol key={nextKey("ol")} className="list-decimal space-y-1 pl-6 text-muted-foreground">
+          {items.map((t, i) => <li key={i}>{renderInline(t)}</li>)}
         </ol>,
       );
     }
     list = null;
   };
 
-  lines.forEach((raw, idx) => {
+  lines.forEach((raw) => {
     const line = raw.trim();
     if (line.startsWith("## ")) {
       flush();
       out.push(
-        <h2 key={idx} className="mt-8 text-xl font-semibold text-foreground md:text-2xl">
-          {line.slice(3)}
+        <h2 key={nextKey("h")} className="mt-8 text-xl font-semibold text-foreground md:text-2xl">
+          {renderInline(line.slice(3))}
         </h2>,
       );
     } else if (line.startsWith("- ")) {
@@ -42,13 +85,13 @@ export function MarkdownLite({ lines }: { lines: string[] }) {
     } else if (line.startsWith("> ")) {
       flush();
       out.push(
-        <blockquote key={idx} className="border-l-2 border-primary/60 bg-white/[0.03] px-4 py-3 text-sm text-muted-foreground">
-          {line.slice(2)}
+        <blockquote key={nextKey("q")} className="border-l-2 border-primary/60 bg-white/[0.03] px-4 py-3 text-sm text-muted-foreground">
+          {renderInline(line.slice(2))}
         </blockquote>,
       );
     } else if (line.length) {
       flush();
-      out.push(<p key={idx} className="text-muted-foreground">{line}</p>);
+      out.push(<p key={nextKey("p")} className="text-muted-foreground">{renderInline(line)}</p>);
     }
   });
   flush();
