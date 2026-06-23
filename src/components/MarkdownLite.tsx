@@ -45,10 +45,36 @@ function renderInline(text: string): ReactNode[] {
 export function MarkdownLite({ lines }: { lines: string[] }) {
   const out: ReactNode[] = [];
   let list: { type: "ul" | "ol"; items: string[] } | null = null;
+  let table: { headers: string[]; rows: string[][] } | null = null;
   let k = 0;
   const nextKey = (prefix: string) => `${prefix}-${k++}`;
 
   const flush = () => {
+    if (table) {
+      out.push(
+        <div key={nextKey("tw")} className="my-4 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-white/10 text-left text-foreground">
+                {table.headers.map((h, i) => (
+                  <th key={i} className="px-3 py-2 font-semibold">{renderInline(h)}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {table.rows.map((r, i) => (
+                <tr key={i} className="border-b border-white/5 text-muted-foreground">
+                  {r.map((c, j) => (
+                    <td key={j} className="px-3 py-2 align-top">{renderInline(c)}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>,
+      );
+      table = null;
+    }
     if (!list) return;
     const items = list.items;
     if (list.type === "ul") {
@@ -69,6 +95,18 @@ export function MarkdownLite({ lines }: { lines: string[] }) {
 
   lines.forEach((raw) => {
     const line = raw.trim();
+    if (line.startsWith("|") && line.endsWith("|")) {
+      const cells = line.slice(1, -1).split("|").map((s) => s.trim());
+      // Separator row like |---|---|
+      if (cells.every((c) => /^:?-{3,}:?$/.test(c))) return;
+      if (!table) {
+        flush();
+        table = { headers: cells, rows: [] };
+      } else {
+        table.rows.push(cells);
+      }
+      return;
+    }
     if (line.startsWith("## ")) {
       flush();
       out.push(
