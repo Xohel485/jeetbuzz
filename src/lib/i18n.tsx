@@ -95,7 +95,7 @@ const en: Dict = {
   "hero.title.highlight": "South Asia",
   "hero.subtitle":
     "The practical JeetBuzz handbook for players in Bangladesh, Pakistan and India — signup, bonuses, app, bKash / Nagad / UPI deposits and live cricket markets. Curaçao-licensed, 24/7 Bengali support, deep BPL & IPL market coverage.",
-  "hero.cta.join": "Join JeetBuzz",
+  "hero.cta.join": "Join JeetBuzz Now",
   "hero.cta.login": "JeetBuzz Login",
   "hero.markets.label": "Available in:",
 

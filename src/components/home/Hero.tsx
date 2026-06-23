@@ -62,8 +62,19 @@ export function Hero() {
             {t("hero.subtitle")}
           </p>
           <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <AffiliateCTA size="xl" variant="hero" label={t("hero.cta.join")} />
-            <Button asChild size="xl" variant="glass">
+            <AffiliateCTA
+              size="xl"
+              variant="hero"
+              label={t("hero.cta.join")}
+              position="hero"
+              className="min-h-[60px] px-10 text-base md:min-h-[68px] md:px-12 md:text-lg"
+            />
+            <Button
+              asChild
+              size="xl"
+              variant="glass"
+              className="min-h-[60px] px-10 text-base md:min-h-[68px] md:px-12 md:text-lg"
+            >
               <Link to="/login-guide">
                 {t("hero.cta.login")} <ArrowRight className="size-4" />
               </Link>
