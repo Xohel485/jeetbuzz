@@ -25,7 +25,7 @@ const FAQ = [
 export default function FAQSection() {
   return (
     <>
-      <section className="container-pro mt-20 md:mt-28">
+      <section className="container-pro mt-24 md:mt-32">
         <SectionHeader eyebrow="FAQ" title="Frequently asked questions" />
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {FAQ.map((f) => (

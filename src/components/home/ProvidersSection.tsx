@@ -95,7 +95,7 @@ const PROVIDERS: Provider[] = [
 
 export default function ProvidersSection() {
   return (
-    <section className="container-pro mt-20 md:mt-28">
+    <section className="container-pro mt-14 md:mt-20">
       <SectionHeader
         eyebrow="Game providers"
         title="40+ studios powering JeetBuzz"

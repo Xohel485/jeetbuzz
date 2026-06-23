@@ -467,11 +467,7 @@ function AffiliateProgramPage() {
 
       {/* Final CTA */}
       <section className="container-pro pb-20">
-        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[color-mix(in_oklab,var(--primary)_22%,transparent)] via-transparent to-[color-mix(in_oklab,var(--orange)_18%,transparent)] px-6 py-10 text-center md:px-12 md:py-14">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_80%_at_50%_0%,rgba(255,255,255,0.06),transparent_70%)]"
-          />
+        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 border-t-2 border-t-primary/60 bg-white/[0.03] px-6 py-10 text-center md:px-12 md:py-14">
           <h2 className="text-2xl font-bold md:text-4xl">
             আজই <span className="gold-text">JeetBuzz Affiliate</span> হয়ে আয় শুরু করুন
           </h2>
