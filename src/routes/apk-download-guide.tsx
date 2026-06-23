@@ -52,6 +52,7 @@ export const Route = createFileRoute("/apk-download-guide")({
       heroImage="androidApp"
       inlineImage="iosSlots"
       body={[
+        "> **Quick summary:** jeetbuzz apk is only safe from the official JeetBuzz site — never from Telegram links, Google ads or mirror APKs. Tap the official Android button, allow Install from Unknown Sources for your browser, open the .apk and Install. iOS users use the mobile web (no native iOS app). Log in with your existing JeetBuzz account and enable biometric unlock.",
         "## Why we don't host APKs",
         "Re-hosted APKs are a common phishing/malware vector. The only safe source is the official JeetBuzz site.",
         "## Install steps (Android)",
