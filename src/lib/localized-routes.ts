@@ -33,6 +33,11 @@ import { Route as FaqRoute } from "@/routes/faq";
 import { Route as JeetbuzzReviewRoute } from "@/routes/jeetbuzz-review";
 import { Route as RegistrationGuideRoute } from "@/routes/registration-guide";
 import { Route as LoginGuideRoute } from "@/routes/login-guide";
+import { Route as LoginProblemsRoute } from "@/routes/login-problems";
+import { Route as PasswordResetRoute } from "@/routes/password-reset";
+import { Route as LoginSecurityRoute } from "@/routes/login-security";
+import { Route as VerificationRoute } from "@/routes/verification";
+import { Route as WelcomeBonusRoute } from "@/routes/welcome-bonus";
 import { Route as ApkDownloadGuideRoute } from "@/routes/apk-download-guide";
 import { Route as MobileAppGuideRoute } from "@/routes/mobile-app-guide";
 import { Route as SecurityGuideRoute } from "@/routes/security-guide";
@@ -131,6 +136,36 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     bn: { title: "জিতবাজ লগইন গাইড — নিরাপদ অ্যাক্সেস" + BRAND_BN, description: "ধাপে ধাপে জিতবাজ লগইন, পাসওয়ার্ড পুনরুদ্ধার এবং ফেক মিরর সাইট চেনার উপায়।" },
     ur: { title: "JeetBuzz لاگ ان گائیڈ — محفوظ رسائی" + BRAND_UR, description: "JeetBuzz پر مرحلہ وار لاگ ان، پاس ورڈ ریکوری اور جعلی مرر سائٹس کی شناخت۔" },
     hi: { title: "JeetBuzz लॉगिन गाइड — सुरक्षित एक्सेस" + BRAND_HI, description: "JeetBuzz पर चरण-दर-चरण लॉगिन, पासवर्ड रिकवरी और नकली मिरर साइट्स की पहचान।" },
+  }),
+  entry("login-problems", LoginProblemsRoute, {
+    en: { title: "JeetBuzz Login Problems — Fixes" + BRAND_EN, description: "Site not opening, OTP not arriving, login greyed out — diagnose and fix common JeetBuzz login problems." },
+    bn: { title: "জিতবাজ লগইন সমস্যা — সমাধান" + BRAND_BN, description: "সাইট খুলছে না, OTP আসছে না, লগইন বাটন কাজ করছে না — সাধারণ জিতবাজ লগইন সমস্যার সমাধান।" },
+    ur: { title: "JeetBuzz لاگ ان مسائل — حل" + BRAND_UR, description: "سائٹ نہیں کھل رہی، OTP نہیں آرہا، لاگ ان بٹن کام نہیں کر رہا — عام JeetBuzz لاگ ان مسائل کے حل۔" },
+    hi: { title: "JeetBuzz लॉगिन समस्याएँ — समाधान" + BRAND_HI, description: "साइट नहीं खुल रही, OTP नहीं आ रहा, लॉगिन बटन काम नहीं कर रहा — आम JeetBuzz लॉगिन समस्याओं के समाधान।" },
+  }),
+  entry("password-reset", PasswordResetRoute, {
+    en: { title: "JeetBuzz Password Reset — Step by Step" + BRAND_EN, description: "Reset your JeetBuzz password via phone OTP or email link, plus what to do if recovery fails." },
+    bn: { title: "জিতবাজ পাসওয়ার্ড রিসেট — ধাপে ধাপে" + BRAND_BN, description: "ফোন OTP বা ইমেইল লিংক দিয়ে জিতবাজ পাসওয়ার্ড রিসেট, এবং রিকভারি ব্যর্থ হলে কী করবেন।" },
+    ur: { title: "JeetBuzz پاس ورڈ ری سیٹ — مرحلہ وار" + BRAND_UR, description: "فون OTP یا ای میل لنک سے JeetBuzz پاس ورڈ ری سیٹ کریں، اور ریکوری ناکام ہونے پر کیا کریں۔" },
+    hi: { title: "JeetBuzz पासवर्ड रीसेट — चरण-दर-चरण" + BRAND_HI, description: "फ़ोन OTP या ईमेल लिंक से JeetBuzz पासवर्ड रीसेट करें, और रिकवरी फ़ेल होने पर क्या करें।" },
+  }),
+  entry("login-security", LoginSecurityRoute, {
+    en: { title: "JeetBuzz Login Security — 2FA & Anti-Phishing" + BRAND_EN, description: "Enable 2FA, recognise fake mirrors and lock down your JeetBuzz login." },
+    bn: { title: "জিতবাজ লগইন সিকিউরিটি — 2FA ও ফিশিং প্রতিরোধ" + BRAND_BN, description: "2FA চালু করুন, ফেক মিরর চিনুন এবং জিতবাজ লগইন সুরক্ষিত করুন।" },
+    ur: { title: "JeetBuzz لاگ ان سیکیورٹی — 2FA اور فشنگ سے بچاؤ" + BRAND_UR, description: "2FA فعال کریں، جعلی مرر پہچانیں اور اپنا JeetBuzz لاگ ان محفوظ بنائیں۔" },
+    hi: { title: "JeetBuzz लॉगिन सिक्योरिटी — 2FA और फ़िशिंग से बचाव" + BRAND_HI, description: "2FA चालू करें, नकली मिरर पहचानें और अपना JeetBuzz लॉगिन सुरक्षित करें।" },
+  }),
+  entry("verification", VerificationRoute, {
+    en: { title: "JeetBuzz Account Verification — Phone, Email & KYC" + BRAND_EN, description: "Phone OTP, email confirmation and KYC walkthrough for JeetBuzz." },
+    bn: { title: "জিতবাজ অ্যাকাউন্ট ভেরিফিকেশন — ফোন, ইমেইল ও KYC" + BRAND_BN, description: "জিতবাজে ফোন OTP, ইমেইল কনফার্মেশন ও KYC সম্পূর্ণ গাইড।" },
+    ur: { title: "JeetBuzz اکاؤنٹ تصدیق — فون، ای میل اور KYC" + BRAND_UR, description: "JeetBuzz پر فون OTP، ای میل تصدیق اور KYC کا مکمل گائیڈ۔" },
+    hi: { title: "JeetBuzz अकाउंट वेरिफिकेशन — फ़ोन, ईमेल और KYC" + BRAND_HI, description: "JeetBuzz पर फ़ोन OTP, ईमेल कन्फ़र्मेशन और KYC का पूरा गाइड।" },
+  }),
+  entry("welcome-bonus", WelcomeBonusRoute, {
+    en: { title: "JeetBuzz Welcome Bonus — How to Claim Safely" + BRAND_EN, description: "Wagering, max-bet and game contribution explained for the JeetBuzz welcome bonus." },
+    bn: { title: "জিতবাজ ওয়েলকাম বোনাস — সঠিকভাবে দাবি করুন" + BRAND_BN, description: "জিতবাজ ওয়েলকাম বোনাসের wagering, max-bet ও গেম কন্ট্রিবিউশন সহজ ব্যাখ্যা।" },
+    ur: { title: "JeetBuzz ویلکم بونس — صحیح طریقے سے کلیم کریں" + BRAND_UR, description: "JeetBuzz ویلکم بونس کی wagering، max-bet اور گیم کنٹریبیوشن کی واضح وضاحت۔" },
+    hi: { title: "JeetBuzz वेलकम बोनस — सही तरीक़े से क्लेम करें" + BRAND_HI, description: "JeetBuzz वेलकम बोनस की wagering, max-bet और गेम कंट्रिब्यूशन की साफ़ व्याख्या।" },
   }),
   entry("apk-download-guide", ApkDownloadGuideRoute, {
     en: { title: "JeetBuzz APK Download Guide" + BRAND_EN, description: "Safe JeetBuzz Android APK download and install steps, with permissions and update checks." },
