@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { GO, REL } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
-import logoAsset from "@/assets/getjeetbuzz-logo.webp.asset.json";
-import bdFlag from "@/assets/flags/bd.png.asset.json";
-import pkFlag from "@/assets/flags/pk.png.asset.json";
-import inFlag from "@/assets/flags/in.png.asset.json";
+import logoAsset from "@/assets/getjeetbuzz-logo.webp";
+import bdFlag from "@/assets/flags/bd.png";
+import pkFlag from "@/assets/flags/pk.png";
+import inFlag from "@/assets/flags/in.png";
 import { useI18n, LOCALE_META, LOCALES, COUNTRIES, type Locale, type Country } from "@/lib/i18n";
 import { findLocalizedRoute } from "@/lib/localized-routes";
 
@@ -21,10 +21,10 @@ const NAV = [
 ] as const;
 
 const LANGS: Array<{ code: Locale; label: string; country: string; flag: string }> = [
-  { code: "bn", label: "বাংলা", country: "Bangladesh", flag: bdFlag.url },
-  { code: "ur", label: "اردو", country: "Pakistan", flag: pkFlag.url },
-  { code: "hi", label: "हिन्दी", country: "India", flag: inFlag.url },
-  { code: "en", label: "English", country: "International", flag: bdFlag.url },
+  { code: "bn", label: "বাংলা", country: "Bangladesh", flag: bdFlag },
+  { code: "ur", label: "اردو", country: "Pakistan", flag: pkFlag },
+  { code: "hi", label: "हिन्दी", country: "India", flag: inFlag },
+  { code: "en", label: "English", country: "International", flag: bdFlag },
 ];
 
 function LanguageSwitcher() {
@@ -186,7 +186,7 @@ export function SiteHeader() {
       <div className="container-pro flex h-16 items-center justify-between gap-2 md:h-20 md:gap-4">
         <Link to="/" className="flex min-w-0 shrink items-center" aria-label="GetJeetBuzz — Home">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="JeetBuzz — GetJeetBuzz.com verified affiliate partner logo"
             width={160}
             height={48}

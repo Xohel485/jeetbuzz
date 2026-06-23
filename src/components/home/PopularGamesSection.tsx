@@ -1,11 +1,11 @@
 import { SectionHeader } from "./SectionHeader";
 import { JsonLd } from "@/components/JsonLd";
 import { AFFILIATE, GO, REL } from "@/lib/affiliate";
-import wildBounty from "@/assets/popular-games/wild-bounty-showdown.webp.asset.json";
-import aviator from "@/assets/popular-games/aviator.webp.asset.json";
-import moneyComing from "@/assets/popular-games/money-coming.webp.asset.json";
-import boxingKing from "@/assets/popular-games/boxing-king.webp.asset.json";
-import crazyTime from "@/assets/popular-games/crazy-time.webp.asset.json";
+import wildBounty from "@/assets/popular-games/wild-bounty-showdown.webp";
+import aviator from "@/assets/popular-games/aviator.webp";
+import moneyComing from "@/assets/popular-games/money-coming.webp";
+import boxingKing from "@/assets/popular-games/boxing-king.webp";
+import crazyTime from "@/assets/popular-games/crazy-time.webp";
 
 type Game = {
   name: string;
@@ -20,35 +20,35 @@ const GAMES: Game[] = [
     name: "Aviator",
     studio: "Spribe",
     category: "Crash game",
-    image: aviator.url,
+    image: aviator,
     alt: "Aviator by Spribe — popular crash game on JeetBuzz",
   },
   {
     name: "Crazy Time",
     studio: "Evolution",
     category: "Live game show",
-    image: crazyTime.url,
+    image: crazyTime,
     alt: "Crazy Time by Evolution — live game show on JeetBuzz",
   },
   {
     name: "Wild Bounty Showdown",
     studio: "PG Soft",
     category: "Video slot",
-    image: wildBounty.url,
+    image: wildBounty,
     alt: "Wild Bounty Showdown by PG Soft — popular slot on JeetBuzz",
   },
   {
     name: "Money Coming",
     studio: "JILI",
     category: "Video slot",
-    image: moneyComing.url,
+    image: moneyComing,
     alt: "Money Coming by JILI — popular slot on JeetBuzz",
   },
   {
     name: "Boxing King",
     studio: "JILI",
     category: "Video slot",
-    image: boxingKing.url,
+    image: boxingKing,
     alt: "Boxing King by JILI — popular slot on JeetBuzz",
   },
 ];

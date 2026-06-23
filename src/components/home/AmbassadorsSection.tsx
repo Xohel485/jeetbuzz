@@ -1,7 +1,7 @@
 import { SectionHeader } from "./SectionHeader";
 import { JsonLd } from "@/components/JsonLd";
-import andre from "@/assets/ambassadors/andre-russell.webp.asset.json";
-import glenn from "@/assets/ambassadors/glenn-mcgrath.webp.asset.json";
+import andre from "@/assets/ambassadors/andre-russell.webp";
+import glenn from "@/assets/ambassadors/glenn-mcgrath.webp";
 
 type Ambassador = {
   name: string;
@@ -19,7 +19,7 @@ const AMBASSADORS: Ambassador[] = [
     country: "West Indies all-rounder",
     blurb:
       "T20 power-hitter Andre Russell fronts JeetBuzz across Bangladesh, signalling the platform's commitment to cricket-first entertainment.",
-    image: andre.url,
+    image: andre,
     alt: "Andre Russell — JeetBuzz brand ambassador holding a smartphone next to a slot machine",
   },
   {
@@ -28,7 +28,7 @@ const AMBASSADORS: Ambassador[] = [
     country: "Australian fast-bowling legend",
     blurb:
       "Glenn McGrath represents JeetBuzz as a trusted face for cricket fans across South Asia, anchoring the brand's IPL and BPL campaigns.",
-    image: glenn.url,
+    image: glenn,
     alt: "Glenn McGrath — JeetBuzz brand ambassador in a JeetBuzz jersey beside a mobile app preview",
   },
 ];
