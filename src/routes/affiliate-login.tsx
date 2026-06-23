@@ -56,7 +56,7 @@ export const Route = createFileRoute("/affiliate-login")({
         "Update your payout wallet inside Finance > Settings. Most changes require email confirmation.",
       ]}
       faqs={[
-        { q: "Is this the official affiliate login page?", a: "No. GetJeetBuzz is a verified official affiliate partner of JeetBuzz, but this site is not the affiliate portal. The button above opens the official JeetBuzz affiliate portal where login happens." },
+        { q: "Is this the official affiliate login page?", a: "No. GetJeetBuzz is a verified affiliate partner of JeetBuzz, but this site is not the affiliate portal. The button above opens the official JeetBuzz affiliate portal where login happens." },
         { q: "I forgot my affiliate email — what now?", a: "Contact your affiliate manager with your partner ID or campaign URLs so they can locate the account." },
         { q: "Can I have more than one affiliate account?", a: "No. JeetBuzz allows one affiliate account per partner. Use sub-IDs to split traffic instead." },
         { q: "When are commissions paid?", a: "Monthly, typically in the first week, once your balance clears the minimum payout threshold and KYC is approved." },

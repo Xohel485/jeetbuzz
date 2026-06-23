@@ -176,7 +176,7 @@ const COPY: Record<Locale, Copy> = {
     reverifyH: "How often we re-verify",
     reverifyP: "Every guide carries a \"Last verified\" date. Core pages (Registration, Login, Deposit, Withdrawal, Bonus, Security) are re-verified at least quarterly and whenever the operator changes wallet limits, KYC steps or promo terms.",
     indepH: "Editorial independence from JeetBuzz",
-    indepP1: "GetJeetBuzz is a verified official affiliate partner of JeetBuzz on a revenue-share commission basis. We disclose this on every page. The commercial relationship does not change our review scores: JeetBuzz has no editorial veto. See our",
+    indepP1: "GetJeetBuzz is a verified affiliate partner of JeetBuzz on a revenue-share commission basis. We disclose this on every page. The commercial relationship does not change our review scores: JeetBuzz has no editorial veto. See our",
     indepP2: "for the full firewall.",
     reviewPolicy: "Review Policy", editorialPolicy: "Editorial Policy", and: "and",
     notH: "What we are not",

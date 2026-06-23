@@ -85,7 +85,7 @@ const COLS = [
       { to: "/bkash-guide", label: "bKash Guide" },
       { to: "/nagad-guide", label: "Nagad Guide" },
       { to: "/rocket-guide", label: "Rocket Guide" },
-      { to: "/deposit-withdrawal-guide", label: "Deposit & Withdrawal (legacy)" },
+      { to: "/deposit-withdrawal-guide", label: "Deposit & Withdrawal Overview" },
     ],
   },
   {
@@ -123,7 +123,7 @@ export function SiteFooter() {
           <Link to="/" aria-label="GetJeetBuzz — Home">
             <img
               src={logoAsset.url}
-              alt="JeetBuzz — GetJeetBuzz.com official partner logo"
+              alt="JeetBuzz — GetJeetBuzz.com verified affiliate partner logo"
               width={220}
               height={66}
               className="h-14 w-auto md:h-16"
