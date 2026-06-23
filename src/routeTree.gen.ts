@@ -44,6 +44,7 @@ import { Route as AffiliateProgramRouteImport } from './routes/affiliate-program
 import { Route as AffiliateLoginRouteImport } from './routes/affiliate-login'
 import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as GoSignupRouteImport } from './routes/go.signup'
 import { Route as GoLoginRouteImport } from './routes/go.login'
@@ -227,6 +228,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -264,6 +270,7 @@ const CountryLangSplatRoute = CountryLangSplatRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
@@ -308,6 +315,7 @@ export interface FileRoutesByFullPath {
   '/$country/$lang/': typeof CountryLangIndexRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
@@ -352,6 +360,7 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
@@ -398,6 +407,7 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/'
     | '/about'
     | '/affiliate-disclosure'
     | '/affiliate-login'
@@ -442,6 +452,7 @@ export interface FileRouteTypes {
     | '/$country/$lang/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/'
     | '/about'
     | '/affiliate-disclosure'
     | '/affiliate-login'
@@ -485,6 +496,7 @@ export interface FileRouteTypes {
     | '/$country/$lang'
   id:
     | '__root__'
+    | '/'
     | '/about'
     | '/affiliate-disclosure'
     | '/affiliate-login'
@@ -530,6 +542,7 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AffiliateDisclosureRoute: typeof AffiliateDisclosureRoute
   AffiliateLoginRoute: typeof AffiliateLoginRoute
@@ -819,6 +832,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
@@ -884,6 +904,7 @@ const BlogRouteChildren: BlogRouteChildren = {
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AffiliateDisclosureRoute: AffiliateDisclosureRoute,
   AffiliateLoginRoute: AffiliateLoginRoute,
