@@ -113,15 +113,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16.png" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "64x64", href: "/favicon-64.png" },
       { rel: "icon", type: "image/png", sizes: "128x128", href: "/favicon-128.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap",
-      },
+      // Self-hosted Hind Siliguri (400/700) — declared via @font-face in styles.css.
+      // Preload the Latin subsets so above-the-fold text never blocks on a network roundtrip.
+      { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-400-latin.woff2", crossOrigin: "anonymous" },
+      { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-700-latin.woff2", crossOrigin: "anonymous" },
     ],
     scripts: [
       { children: GTM_INLINE },
