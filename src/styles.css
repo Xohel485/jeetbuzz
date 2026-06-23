@@ -76,7 +76,8 @@
   --secondary: oklch(0.28 0.04 160);
   --secondary-foreground: oklch(0.97 0.01 150);
   --muted: oklch(0.24 0.025 160);
-  --muted-foreground: oklch(0.72 0.02 155);
+  /* Bumped from 0.72 → 0.80 for WCAG AA contrast on the dark background */
+  --muted-foreground: oklch(0.80 0.02 155);
   /* Brand orange from logo ≈ #e07818 */
   --accent: oklch(0.70 0.18 48);
   --accent-foreground: oklch(0.16 0.04 48);
