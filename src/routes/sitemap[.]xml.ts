@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { POSTS } from "@/lib/blog-posts";
 import { IMAGES, type ImageKey } from "@/lib/images";
-import { ALL_LOCALIZED_SLUGS } from "@/lib/localized-routes";
+import { LOCALIZED_ROUTES } from "@/lib/localized-routes";
 import { COUNTRY_META, type Country, type Locale } from "@/lib/i18n";
 
 const BASE_URL = "https://getjeetbuzz.com";
@@ -47,6 +47,11 @@ const STATIC_PATHS = [
   "/bkash-guide",
   "/nagad-guide",
   "/rocket-guide",
+  "/easypaisa-guide",
+  "/jazzcash-guide",
+  "/upi-guide",
+  "/phonepe-guide",
+  "/paytm-guide",
   "/payment-methods",
   "/mobile-app-guide",
   "/security-guide",
@@ -101,7 +106,9 @@ export const Route = createFileRoute("/sitemap.xml")({
 
         const localizedPaths: string[] = [];
         for (const { country, locale } of COUNTRY_LOCALE_PAIRS) {
-          for (const slug of ALL_LOCALIZED_SLUGS) {
+          for (const reg of LOCALIZED_ROUTES) {
+            if (reg.countries && !reg.countries.includes(country)) continue;
+            const slug = reg.slug;
             localizedPaths.push(slug ? `/${country}/${locale}/${slug}` : `/${country}/${locale}`);
           }
         }
