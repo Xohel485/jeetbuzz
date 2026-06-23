@@ -74,6 +74,7 @@ import { Route as CricketExchangeGuideRoute } from "@/routes/cricket-exchange-gu
 import { Route as AgentEarningGuideRoute } from "@/routes/agent-earning-guide";
 import { Route as IosAppGuideRoute } from "@/routes/ios-app-guide";
 import { Route as AndroidWebAppGuideRoute } from "@/routes/android-web-app-guide";
+import { Route as IsJeetbuzzSafeRoute } from "@/routes/is-jeetbuzz-safe";
 
 export type LocaleMeta = { title: string; description: string };
 
@@ -420,6 +421,12 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     bn: { title: "JeetBuzz অ্যান্ড্রয়েড ওয়েব অ্যাপ গাইড ২০২৬" + BRAND_BN, description: "APK ছাড়াই Chrome PWA হিসেবে জিতবাজ ইনস্টল — অটো-আপডেট ও পুশ নোটিফিকেশন।" },
     ur: { title: "JeetBuzz اینڈرائیڈ ویب ایپ گائیڈ 2026" + BRAND_UR, description: "APK کے بغیر Chrome PWA کے طور پر JeetBuzz انسٹال کریں — آٹو اپڈیٹس اور پش نوٹیفکیشنز۔" },
     hi: { title: "JeetBuzz Android वेब ऐप गाइड 2026" + BRAND_HI, description: "APK के बिना Chrome PWA के रूप में JeetBuzz इंस्टॉल करें — ऑटो-अपडेट और पुश नोटिफ़िकेशन।" },
+  }),
+  entry("is-jeetbuzz-safe", IsJeetbuzzSafeRoute, {
+    en: { title: "Is JeetBuzz Safe & Legit 2026?" + BRAND_EN, description: "Independent 2026 trust review of JeetBuzz — Curacao licence, payout record, KYC, complaints and red flags for BD/PK/IN players." },
+    bn: { title: "JeetBuzz কি নিরাপদ ও বিশ্বস্ত ২০২৬?" + BRAND_BN, description: "JeetBuzz এর স্বাধীন ২০২৬ ট্রাস্ট রিভিউ — লাইসেন্স, পেআউট, KYC, অভিযোগ ও সতর্কতা।" },
+    ur: { title: "کیا JeetBuzz 2026 میں محفوظ ہے؟" + BRAND_UR, description: "JeetBuzz کا 2026 آزاد جائزہ — لائسنس، ادائیگیاں، KYC، شکایات اور خطرے کے نشانات۔" },
+    hi: { title: "क्या JeetBuzz 2026 में सुरक्षित है?" + BRAND_HI, description: "JeetBuzz की 2026 स्वतंत्र समीक्षा — लाइसेंस, पेआउट, KYC, शिकायतें और रेड फ़्लैग्स।" },
   }),
 ];
 

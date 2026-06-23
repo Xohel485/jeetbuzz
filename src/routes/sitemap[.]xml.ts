@@ -61,6 +61,7 @@ const STATIC_PATHS = [
   "/agent-earning-guide",
   "/ios-app-guide",
   "/android-web-app-guide",
+  "/is-jeetbuzz-safe",
   "/blog",
   "/faq",
   "/contact",
