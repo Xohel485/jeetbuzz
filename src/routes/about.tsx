@@ -5,7 +5,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About GetJeetBuzz — Independent JeetBuzz Bangladesh Guide" },
-      { name: "description", content: "Who we are: a verified official affiliate partner of JeetBuzz, writing hands-on guides from Bangladesh. Not the JeetBuzz platform itself — signup and money flows happen on JeetBuzz." },
+      { name: "description", content: "Verified official JeetBuzz affiliate partner. Independent, hands-on JeetBuzz guides from Bangladesh — we don't run signup or payments." },
       { property: "og:title", content: "About GetJeetBuzz — Verified Official JeetBuzz Affiliate Partner" },
       { property: "og:description", content: "A verified official JeetBuzz affiliate partner. Independent editorial, real Bangladesh testing." },
       { property: "og:type", content: "website" },

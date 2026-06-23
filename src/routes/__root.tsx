@@ -20,7 +20,9 @@ import { AnalyticsRouterBridge } from "../components/AnalyticsRouterBridge";
 // are configured inside GTM and adding direct scripts here causes
 // duplicate hits in GA4 and double-session inflation in Clarity.
 const GTM_ID = "GTM-N7ZXWM9M";
-const GTM_INLINE = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`;
+// Defer GTM injection until the browser is idle (or after 3.5s fallback) so it
+// doesn't compete with the LCP image / hero render on slow networks.
+const GTM_INLINE = `window.dataLayer=window.dataLayer||[];function __loadGTM(){if(window.__gtmLoaded)return;window.__gtmLoaded=true;window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=document.getElementsByTagName('script')[0],j=document.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=${GTM_ID}';f.parentNode.insertBefore(j,f);}if('requestIdleCallback' in window){requestIdleCallback(__loadGTM,{timeout:3500});}else{setTimeout(__loadGTM,2500);}window.addEventListener('load',function(){setTimeout(__loadGTM,1500);});`;
 
 function NotFoundComponent() {
   return (
@@ -87,8 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "GetJeetBuzz — JeetBuzz Guide for Bangladesh, Pakistan & India" },
-      { name: "description", content: "GetJeetBuzz is the partner guide to JeetBuzz for Bangladesh, Pakistan and India — login, signup, bonuses, app, payments and live cricket." },
+      { title: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
+      { name: "description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
       { name: "author", content: "GetJeetBuzz" },
       { property: "og:site_name", content: "GetJeetBuzz" },
       { property: "og:locale", content: "bn_BD" },
@@ -98,10 +100,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "robots", content: "index,follow" },
       { name: "theme-color", content: "#0c1a13" },
       { name: "msapplication-TileColor", content: "#1f9d3e" },
-      { property: "og:title", content: "GetJeetBuzz — JeetBuzz Guide for Bangladesh, Pakistan & India" },
-      { name: "twitter:title", content: "GetJeetBuzz — JeetBuzz Guide for Bangladesh, Pakistan & India" },
-      { property: "og:description", content: "GetJeetBuzz is the partner guide to JeetBuzz for Bangladesh, Pakistan and India — login, signup, bonuses, app, payments and live cricket." },
-      { name: "twitter:description", content: "GetJeetBuzz is the partner guide to JeetBuzz for Bangladesh, Pakistan and India — login, signup, bonuses, app, payments and live cricket." },
+      { property: "og:title", content: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
+      { name: "twitter:title", content: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
+      { property: "og:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
+      { name: "twitter:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fcdef741-2981-486b-8aba-2147fee76917" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fcdef741-2981-486b-8aba-2147fee76917" },
     ],
