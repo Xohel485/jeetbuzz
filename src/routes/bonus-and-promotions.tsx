@@ -31,6 +31,7 @@ export const Route = createFileRoute("/bonus-and-promotions")({
       }}
       heroImage="bonus"
       body={[
+        "> **Quick summary:** JeetBuzz runs a deposit-match welcome (Sports OR Casino, not both), weekly reloads, cashback up to 10%, free bets and a referral bonus. Wagering is typically 15x for sports/slots and 25x for casino, with a 200–500 BDT max-bet rule while a bonus is active. Always opt in **before** depositing — bonuses are never added retroactively.",
         "## Welcome bonus",
         "JeetBuzz typically runs a deposit-match welcome bonus for sportsbook and a separate one for casino. Read the fine print — you usually pick one.",
         "## Promotions at a glance (2026)",
