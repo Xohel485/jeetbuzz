@@ -84,7 +84,7 @@ const CATEGORIES: Category[] = [
   },
 ];
 
-export function GameCategories() {
+export default function GameCategoriesImpl() {
   return (
     <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
       {CATEGORIES.map((c) => (

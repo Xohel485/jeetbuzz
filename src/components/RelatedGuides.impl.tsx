@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export type RelatedItem = { to: string; title: string; desc?: string };
 
-export function RelatedGuides({
+export default function RelatedGuidesImpl({
   items,
   heading = "Related JeetBuzz guides",
 }: {

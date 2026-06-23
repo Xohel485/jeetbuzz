@@ -10,7 +10,7 @@ import { track } from "@/lib/analytics";
 
 export type FAQItem = { q: string; a: string };
 
-export function FAQAccordion({
+export default function FAQAccordionImpl({
   faqs,
   heading = "Frequently asked questions",
 }: {

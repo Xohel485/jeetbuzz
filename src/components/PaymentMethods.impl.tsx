@@ -154,7 +154,7 @@ function Tile({ m, dark }: { m: Method; dark?: boolean }) {
   );
 }
 
-export function PaymentMethods() {
+export default function PaymentMethodsImpl() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const country = countryFromPathname(pathname);
   const groups = GROUPS.filter((g) => {
