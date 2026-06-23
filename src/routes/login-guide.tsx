@@ -39,6 +39,10 @@ export const Route = createFileRoute("/login-guide")({
       }}
       heroImage="loginInterface"
       inlineImage="security"
+      breadcrumbs={[
+        { name: "Home", path: "/" },
+        { name: "Login Guide", path: "/login-guide" },
+      ]}
       body={[
         "## We are not the login page",
         "GetJeetBuzz never collects JeetBuzz credentials. The button above takes you to the official JeetBuzz login.",
@@ -173,6 +177,38 @@ export const Route = createFileRoute("/login-guide")({
           a: "The real page is HTTPS with no certificate warning, matches the official logo and Bengali copy, and never asks for your bKash, Nagad or UPI PIN at login — only your JeetBuzz password. If anything looks off, close the tab and re-open from the verified button above.",
         },
       ]}
+      faqsByLocale={{
+        bn: [
+          { q: "Grameenphone/Robi-তে জিতবাজ পেইজ খুলছে না — কী করব?", a: "ISP-লেভেল ব্লক। Wi-Fi থেকে মোবাইল ডেটায় স্যুইচ করুন বা DNS ১.১.১.১/৮.৮.৮.৮-এ পরিবর্তন করুন। বিস্তারিত [Login Problems](/login-problems) পেইজে।" },
+          { q: "জিতবাজ লগইনে bKash বা Nagad PIN চাইলে কী করব?", a: "তখনই ট্যাব বন্ধ করুন — সেটি ফেক মিরর। আসল জিতবাজ লগইনে শুধু পাসওয়ার্ড লাগে।" },
+          { q: "Teletalk নম্বরে OTP দেরিতে আসছে?", a: "Teletalk-এর আন্তর্জাতিক SMS রুট ধীর। ৯০ সেকেন্ড অপেক্ষা করুন; না এলে Resend।" },
+          { q: "একাধিক ডিভাইস থেকে লগইন করতে পারব?", a: "হ্যাঁ, কিন্তু প্রতি নতুন ডিভাইসে 2FA কোড চাইবে। Active sessions দেখুন অ্যাকাউন্ট সেটিংসে।" },
+          { q: "পাসওয়ার্ড ভুলে গেলে কতবার রিসেট করা যায়?", a: "১২ ঘণ্টায় ৩ বার। বিস্তারিত [Password Reset](/password-reset)-এ।" },
+          { q: "2FA চালু করব কীভাবে?", a: "অ্যাকাউন্ট সেটিংস → Security → 2FA। আরও সুরক্ষা টিপস [Login Security](/login-security) পেইজে।" },
+          { q: "জিতবাজ APK দিয়ে লগইন কি বেশি নিরাপদ?", a: "ব্রাউজার ও APK একই অ্যাকাউন্টে যায়। APK-এ DNS ব্লক বাইপাস সহজ। [APK গাইড](/apk-download-guide) দেখুন।" },
+          { q: "প্রথমবার লগইনের পর কী করব?", a: "2FA চালু করুন, ইমেইল ভেরিফাই করুন এবং [Registration Guide](/registration-guide)-এর KYC ধাপ শেষ করুন।" },
+        ],
+        ur: [
+          { q: "Jazz/Zong پر JeetBuzz صفحہ نہیں کھل رہا — کیا کروں؟", a: "ISP بلاک ہے۔ Wi-Fi سے موبائل ڈیٹا پر سوئچ کریں یا DNS 1.1.1.1/8.8.8.8 پر سیٹ کریں۔ تفصیل [Login Problems](/login-problems) صفحے پر۔" },
+          { q: "اگر JeetBuzz لاگ ان پر JazzCash یا EasyPaisa PIN مانگے؟", a: "فوراً ٹیب بند کریں — وہ جعلی مرر ہے۔ اصلی JeetBuzz صرف پاس ورڈ مانگتا ہے۔" },
+          { q: "Telenor نمبر پر OTP میں دیر ہو رہی ہے؟", a: "Telenor کا بین الاقوامی SMS رُوٹ سست ہے۔ 90 سیکنڈ انتظار کریں؛ پھر Resend دبائیں۔" },
+          { q: "کیا متعدد ڈیوائسز سے لاگ ان ممکن ہے؟", a: "ہاں، مگر ہر نئی ڈیوائس پر 2FA کوڈ پوچھے گا۔ Active sessions اکاؤنٹ سیٹنگز میں دیکھیں۔" },
+          { q: "پاس ورڈ بھول جانے پر کتنی بار ری سیٹ کر سکتے ہیں؟", a: "12 گھنٹے میں 3 بار۔ تفصیل [Password Reset](/password-reset) صفحے پر۔" },
+          { q: "2FA کیسے فعال کروں؟", a: "اکاؤنٹ سیٹنگز → Security → 2FA۔ مزید سیکیورٹی تجاویز [Login Security](/login-security) صفحے پر۔" },
+          { q: "کیا JeetBuzz APK سے لاگ ان زیادہ محفوظ ہے؟", a: "براؤزر اور APK ایک ہی اکاؤنٹ پر جاتے ہیں۔ APK پر DNS بلاک بائی پاس آسان ہے۔ [APK گائیڈ](/apk-download-guide) دیکھیں۔" },
+          { q: "پہلی بار لاگ ان کے بعد کیا کروں؟", a: "2FA آن کریں، ای میل تصدیق کریں اور [Registration Guide](/registration-guide) کے KYC اقدامات مکمل کریں۔" },
+        ],
+        hi: [
+          { q: "Jio/Airtel पर JeetBuzz पेज नहीं खुल रहा — क्या करूँ?", a: "ISP ब्लॉक है। Wi-Fi से मोबाइल डेटा पर स्विच करें या DNS 1.1.1.1/8.8.8.8 पर सेट करें। विस्तार [Login Problems](/login-problems) पेज पर।" },
+          { q: "अगर JeetBuzz लॉगिन पर UPI या PhonePe PIN माँगे?", a: "तुरंत टैब बंद करें — वो नक़ली मिरर है। असली JeetBuzz सिर्फ़ पासवर्ड माँगता है।" },
+          { q: "BSNL नंबर पर OTP देर से आ रहा है?", a: "BSNL का इंटरनेशनल SMS रूट धीमा है। 90 सेकंड इंतज़ार करें; फिर Resend दबाएँ।" },
+          { q: "क्या एक से ज़्यादा डिवाइस से लॉगिन कर सकते हैं?", a: "हाँ, पर हर नई डिवाइस पर 2FA कोड माँगेगा। Active sessions अकाउंट सेटिंग्स में देखें।" },
+          { q: "पासवर्ड भूल जाने पर कितनी बार रीसेट कर सकते हैं?", a: "12 घंटे में 3 बार। विस्तार [Password Reset](/password-reset) पेज पर।" },
+          { q: "2FA कैसे चालू करूँ?", a: "अकाउंट सेटिंग्स → Security → 2FA। और सिक्योरिटी टिप्स [Login Security](/login-security) पेज पर।" },
+          { q: "क्या JeetBuzz APK से लॉगिन ज़्यादा सुरक्षित है?", a: "ब्राउज़र और APK एक ही अकाउंट पर जाते हैं। APK पर DNS ब्लॉक बायपास आसान है। [APK गाइड](/apk-download-guide) देखें।" },
+          { q: "पहली बार लॉगिन के बाद क्या करूँ?", a: "2FA चालू करें, ईमेल वेरिफ़ाई करें और [Registration Guide](/registration-guide) के KYC स्टेप पूरे करें।" },
+        ],
+      }}
       articleHeadline="JeetBuzz Login — Working Links & Access Help"
       articleDescription="How to log in to JeetBuzz from Bangladesh, Pakistan and India, find a working alternative link, fix blocked access and avoid fake mirrors."
       articlePath="/login-guide"
