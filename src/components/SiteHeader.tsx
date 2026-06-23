@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { GO, REL } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
-import logoAsset from "@/assets/getjeetbuzz-logo.png.asset.json";
+import logoAsset from "@/assets/getjeetbuzz-logo.webp.asset.json";
 import bdFlag from "@/assets/flags/bd.png.asset.json";
 import pkFlag from "@/assets/flags/pk.png.asset.json";
 import inFlag from "@/assets/flags/in.png.asset.json";
