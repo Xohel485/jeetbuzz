@@ -74,6 +74,21 @@ export const Route = createFileRoute("/bkash-guide")({
         "- Amount rounded differently — 500.50 vs 500 will fail",
         "## Pro tip",
         "Screenshot the cashier merchant page **before** leaving JeetBuzz and the bKash SMS **after** sending. Both make support tickets resolve in minutes instead of hours.",
+        "## Country context — where bKash fits",
+        "- **Bangladesh (primary):** bKash is the default for ~60% of JeetBuzz Bangladesh players. Use it for daily play under 50,000 BDT.",
+        "- **Pakistan:** bKash is not available. Pakistani players should use the [JazzCash guide](/jazzcash-guide) or [EasyPaisa guide](/easypaisa-guide) instead.",
+        "- **India:** bKash is not available. Indian players should default to the [UPI guide](/upi-guide).",
+        "## Deposit vs withdrawal at a glance",
+        "| Action | Time | Success Rate | Fee (JeetBuzz) | Fee (bKash) |",
+        "|---|---|---|---|---|",
+        "| Deposit | Instant | ~97% | 0% | 0% on merchant |",
+        "| Withdrawal | 5–30 min | ~95% | 0% | Standard cash-out applies |",
+        "## Extended FAQ",
+        "- **Can I use my wife's / husband's bKash?** No — the wallet name must match the JeetBuzz profile name. Use a wallet registered to you.",
+        "- **What if I forget the reference code?** Open live chat with the TrxID and the deposit screenshot — support manually credits within ~15 minutes.",
+        "- **bKash app not opening?** Update from the Play Store, clear cache, and confirm your device language is not blocking the keyboard.",
+        "## Ready to deposit with bKash?",
+        "Open the JeetBuzz cashier, follow the 9 steps above, and keep this page open for the limits table. First-time deposit? Claim the [Welcome Bonus](/welcome-bonus) and verify your account via the [Registration Guide](/registration-guide) before sending money.",
         "## Related guides",
         "Read the full [Deposit Guide](/deposit-guide), [Withdrawal Guide](/withdrawal-guide), [Registration Guide](/registration-guide), [APK Download Guide](/apk-download-guide) and [Welcome Bonus](/welcome-bonus) before your first jeetbuzz bkash deposit bangladesh.",
       ]}
@@ -106,6 +121,10 @@ export const Route = createFileRoute("/bkash-guide")({
         { q: "Can I use Personal bKash for JeetBuzz?", a: "Yes. JeetBuzz accepts personal bKash wallets — Agent and Merchant accounts may have restrictions." },
         { q: "Are bKash deposits instant?", a: "Almost always — usually within seconds of the TrxID being verified." },
         { q: "What's the bKash withdrawal limit?", a: "Daily and monthly limits depend on your JeetBuzz VIP level." },
+        { q: "Does bKash charge a fee on JeetBuzz deposits?", a: "Merchant deposits are usually fee-free on bKash's side. Personal-to-personal Send Money charges ~5 BDT per 1,000 BDT." },
+        { q: "What if my bKash deposit times out?", a: "The reference code expires after 15 minutes. Restart the cashier flow with a fresh code — never reuse an expired one." },
+        { q: "Can I deposit at midnight?", a: "Yes. bKash deposits clear 24/7. Withdrawals can take slightly longer between 1 AM and 6 AM BST due to lower staffing." },
+        { q: "Is bKash deposit safe?", a: "Yes — JeetBuzz uses unique merchant references per deposit so funds always tie to your account. Never share your bKash PIN or OTP." },
       ]}
       faqsByLocale={{
         bn: [

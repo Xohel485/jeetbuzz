@@ -33,6 +33,15 @@ export const Route = createFileRoute("/bonus-and-promotions")({
       body={[
         "## Welcome bonus",
         "JeetBuzz typically runs a deposit-match welcome bonus for sportsbook and a separate one for casino. Read the fine print — you usually pick one.",
+        "## Promotions at a glance (2026)",
+        "| Promotion | Typical Match | Wagering | Max Bet | Eligible Games |",
+        "|---|---|---|---|---|",
+        "| Sports Welcome | 100% up to 10,000 BDT | ~15x | 500 BDT | Sports @ odds ≥ 1.50 |",
+        "| Casino Welcome | 150% up to 15,000 BDT | ~25x | 200 BDT | Slots 100%, Live 10% |",
+        "| Weekly Reload | 25–50% | ~10x | 500 BDT | Sports & Slots |",
+        "| Cashback | Up to 10% | None | n/a | Net losses, weekly |",
+        "| Free Bet | 100–500 BDT | 1x (stake not returned) | n/a | Sports |",
+        "| Referral | 500 BDT per friend | Friend must deposit + wager | n/a | All |",
         "## Wagering requirements",
         "Most bonuses carry ~15x wagering. A 1,000 BDT bonus needs around 15,000 BDT in qualifying bets before it (and any winnings) can be withdrawn.",
         "## Max bet rule",
@@ -41,9 +50,28 @@ export const Route = createFileRoute("/bonus-and-promotions")({
         "Sports and slots usually count fully. Live casino often contributes 10% or less.",
         "## Time limits",
         "Bonuses commonly expire in 7–30 days after activation.",
+        "## Country-specific notes",
+        "- **Bangladesh:** Welcome bonus is most rewarding for cricket bettors who play through IPL/BPL — sports wagering at odds ≥ 1.50 clears fastest. Fund through the [bKash guide](/bkash-guide) or [Nagad guide](/nagad-guide).",
+        "- **Pakistan:** PSL season unlocks higher-cap reloads. Deposit via the [JazzCash guide](/jazzcash-guide) or [EasyPaisa guide](/easypaisa-guide).",
+        "- **India:** IPL-season promotions stack on top of the standard welcome offer. Deposit through the [UPI guide](/upi-guide) or [PhonePe guide](/phonepe-guide).",
+        "## How to claim — step by step",
+        "1. Register a JeetBuzz account using the [Registration Guide](/registration-guide).",
+        "2. Open **Promotions** from the top menu.",
+        "3. Choose Sports or Casino welcome (you cannot stack both).",
+        "4. Tap **Opt In** — the bonus must be active *before* you deposit.",
+        "5. Make your qualifying deposit via the [Deposit Guide](/deposit-guide).",
+        "6. The bonus credit appears in the Promotions wallet within 60 seconds.",
+        "7. Wager through the requirement at qualifying odds; track progress in the Promotions widget.",
+        "8. Once cleared, the funds move to your main balance and can be withdrawn via the [Withdrawal Guide](/withdrawal-guide).",
+        "## Wagering math — worked examples",
+        "- **1,000 BDT bonus @ 15x:** you must place 15,000 BDT in qualifying bets (odds ≥ 1.50) before withdrawing.",
+        "- **10,000 BDT welcome @ 15x:** 150,000 BDT in qualifying turnover — realistic for daily cricket bettors over 14–21 days.",
+        "- **5,000 BDT casino @ 25x:** 125,000 BDT in slot turnover. Live casino at 10% means you would need 1,250,000 BDT of live turnover instead — almost always not worth it.",
         "## Our take",
         "Take the bonus if you'd be betting anyway. Skip if the wagering doesn't suit your style.",
         "> Promotions change frequently — always confirm the current offer on the official site before depositing.",
+        "## Ready to claim your bonus?",
+        "Opt in first, then deposit. Use the [Deposit Guide](/deposit-guide) for the exact flow and the [Welcome Bonus](/welcome-bonus) page for the current match percentage.",
       ]}
       bodyByLocale={{
         bn: [
@@ -95,6 +123,37 @@ export const Route = createFileRoute("/bonus-and-promotions")({
       articleHeadline="JeetBuzz Bonus & Promotions"
       articleDescription="Welcome bonus, reloads and wagering terms explained for BD, PK and IN players."
       articlePath="/bonus-and-promotions"
+      faqs={[
+        { q: "Can I claim more than one welcome bonus?", a: "No — you choose Sports OR Casino. After clearing the first, you become eligible for ongoing reloads and cashback." },
+        { q: "Does live casino count toward wagering?", a: "Usually only 10% — meaning 1 BDT bet at live blackjack counts as 0.10 BDT toward the requirement. Slots and pre-match sports clear bonuses fastest." },
+        { q: "What happens if I withdraw with an active bonus?", a: "The bonus and any unspent bonus-derived winnings are forfeited. Always finish wagering before cashing out." },
+        { q: "Are bonuses available in Pakistan and India?", a: "Yes — JeetBuzz runs localized promotions in PKR and INR. Some offers are region-specific around PSL and IPL." },
+        { q: "What is the max bet while a bonus is active?", a: "Typically 200–500 BDT per single bet. Exceeding the cap can void the entire bonus, including winnings." },
+        { q: "Do free bets refund the stake?", a: "No. Free bets pay out winnings only — the stake amount is not returned." },
+      ]}
+      faqsByLocale={{
+        bn: [
+          { q: "একাধিক ওয়েলকাম বোনাস নেওয়া যাবে?", a: "না — Sports বা Casino একটি বেছে নিতে হবে। প্রথমটি ক্লিয়ার করার পর রিলোড ও ক্যাশব্যাক চালু হয়।" },
+          { q: "Live casino কি wagering-এ গণনা হয়?", a: "সাধারণত মাত্র 10% — স্লট ও প্রি-ম্যাচ স্পোর্টস বোনাস দ্রুত ক্লিয়ার করে।" },
+          { q: "অ্যাক্টিভ বোনাসে উইথড্র করলে কী হবে?", a: "বোনাস ও বোনাস থেকে আসা winnings বাতিল হবে। উইথড্রর আগে wagering শেষ করুন।" },
+          { q: "Max bet সীমা কত?", a: "সাধারণত প্রতি বাজি 200–500 টাকা। সীমা ভাঙলে পুরো বোনাস বাতিল হতে পারে।" },
+          { q: "Free bet stake ফেরত আসে?", a: "না — কেবল winnings জমা হয়, stake ফেরত নয়।" },
+        ],
+        ur: [
+          { q: "کیا میں ایک سے زیادہ ویلکم بونس لے سکتا ہوں؟", a: "نہیں — Sports یا Casino میں سے ایک منتخب کریں۔" },
+          { q: "کیا لائیو کیسینو ویجرنگ میں شمار ہوتا ہے؟", a: "عام طور پر صرف 10%۔ سلاٹس اور پری میچ اسپورٹس بونس کو سب سے تیز کلیئر کرتے ہیں۔" },
+          { q: "فعال بونس کے ساتھ ودڈرا کرنے سے کیا ہوگا؟", a: "بونس اور بونس سے بنی جیت ضبط ہو جائے گی۔" },
+          { q: "میکس بیٹ کی حد کیا ہے؟", a: "عام طور پر فی بیٹ 200–500 PKR۔ حد سے زیادہ بیٹ پورا بونس کالعدم کر سکتی ہے۔" },
+          { q: "کیا فری بیٹ سٹیک واپس کرتا ہے؟", a: "نہیں — صرف جیت کی رقم ادا ہوتی ہے۔" },
+        ],
+        hi: [
+          { q: "क्या मैं एक से ज़्यादा वेलकम बोनस ले सकता हूँ?", a: "नहीं — Sports या Casino में से एक चुनें।" },
+          { q: "क्या लाइव कसीनो वेजरिंग में गिना जाता है?", a: "आम तौर पर सिर्फ़ 10%। स्लॉट्स और प्री-मैच स्पोर्ट्स बोनस सबसे तेज़ क्लियर करते हैं।" },
+          { q: "सक्रिय बोनस के साथ विदड्रॉल करने पर क्या होगा?", a: "बोनस और बोनस से बनी जीत ज़ब्त हो जाएगी।" },
+          { q: "मैक्स बेट सीमा क्या है?", a: "आम तौर पर प्रति बेट ₹200–500। सीमा से ऊपर बेट पूरा बोनस रद्द कर सकती है।" },
+          { q: "क्या फ्री बेट स्टेक वापस करता है?", a: "नहीं — केवल जीत की राशि दी जाती है।" },
+        ],
+      }}
       related={[
         { to: "/registration-guide", title: "Registration Guide", desc: "Open an account to claim the welcome bonus." },
         { to: "/deposit-guide", title: "Deposit Guide", desc: "Fund your account before opting in." },
