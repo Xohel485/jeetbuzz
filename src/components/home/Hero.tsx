@@ -38,6 +38,8 @@ export function Hero() {
             width={IMAGES.hero.w}
             height={IMAGES.hero.h}
             fetchPriority="high"
+            loading="eager"
+            sizes="100vw"
             decoding="async"
             className="h-full w-full object-cover opacity-40"
           />
