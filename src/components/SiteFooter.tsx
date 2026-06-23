@@ -147,7 +147,7 @@ export function SiteFooter() {
                     title={b.label}
                     className={
                       g.tileLight
-                        ? "flex items-center justify-center rounded-xl border border-white/15 bg-white/90 p-2.5 shadow-[0_1px_0_rgba(0,0,0,0.04)]"
+                        ? "flex items-center justify-center rounded-xl border border-amber-300/40 bg-amber-100/95 p-2.5 shadow-[0_1px_0_rgba(0,0,0,0.04)]"
                         : "flex items-center"
                     }
                   >
