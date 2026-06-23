@@ -5,9 +5,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About GetJeetBuzz — Independent JeetBuzz Bangladesh Guide" },
-      { name: "description", content: "Verified official JeetBuzz affiliate partner. Independent, hands-on JeetBuzz guides from Bangladesh — we don't run signup or payments." },
-      { property: "og:title", content: "About GetJeetBuzz — Verified Official JeetBuzz Affiliate Partner" },
-      { property: "og:description", content: "A verified official JeetBuzz affiliate partner. Independent editorial, real Bangladesh testing." },
+      { name: "description", content: "Verified JeetBuzz affiliate partner. Independent, hands-on JeetBuzz guides from Bangladesh — we don't run signup or payments." },
+      { property: "og:title", content: "About GetJeetBuzz — Verified JeetBuzz Affiliate Partner" },
+      { property: "og:description", content: "A verified JeetBuzz affiliate partner. Independent editorial, real Bangladesh testing." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/about")({
     <GuidePage
       eyebrow="About us"
       title={<>A <span className="gold-text">verified official</span> JeetBuzz affiliate partner guide</>}
-      subtitle="GetJeetBuzz is a small team of Bangladeshi bettors. We are a verified official affiliate partner of JeetBuzz — not the platform itself."
+      subtitle="GetJeetBuzz is a small team of Bangladeshi bettors. We are a verified affiliate partner of JeetBuzz — not the platform itself."
       subtitleByLocale={{
         bn: "GetJeetBuzz হলো বাংলাদেশি বেটরদের একটি ছোট দল। আমরা JeetBuzz-এর ভেরিফায়েড অফিসিয়াল অ্যাফিলিয়েট পার্টনার — প্ল্যাটফর্ম নিজে নই।",
         ur: "GetJeetBuzz پاکستانی اور بنگلہ دیشی کھلاڑیوں کی ایک چھوٹی ٹیم ہے۔ ہم JeetBuzz کے تصدیق شدہ آفیشل ایفیلیٹ پارٹنر ہیں — خود پلیٹ فارم نہیں۔",
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/about")({
       }}
       body={[
         "## What we are",
-        "A verified official affiliate partner of JeetBuzz. We have a real commission agreement with the operator (revenue-share on net player loss) and earn when readers sign up via our outbound links — at no extra cost to you.",
+        "A verified affiliate partner of JeetBuzz. We have a real commission agreement with the operator (revenue-share on net player loss) and earn when readers sign up via our outbound links — at no extra cost to you.",
         "## What we are not",
         "GetJeetBuzz.com is not the JeetBuzz platform itself. Account signup, login, deposits and withdrawals all happen on JeetBuzz's own site — never here. We are also not a login portal, not an APK host and not a customer support channel.",
         "## How we research",

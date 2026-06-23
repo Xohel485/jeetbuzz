@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, faqSchema } from "@/
 import type { FAQItem } from "@/components/FAQAccordion";
 
 const FAQS = [
-  { q: "Is GetJeetBuzz the official JeetBuzz website?", a: "No — GetJeetBuzz.com is not the JeetBuzz platform itself. We are a verified official affiliate partner of JeetBuzz, meaning we have a real commission agreement with them, but account signup, login, deposits and withdrawals all happen on JeetBuzz's own platform, not here." },
+  { q: "Is GetJeetBuzz the official JeetBuzz website?", a: "No — GetJeetBuzz.com is not the JeetBuzz platform itself. We are a verified affiliate partner of JeetBuzz, meaning we have a real commission agreement with them, but account signup, login, deposits and withdrawals all happen on JeetBuzz's own platform, not here." },
   { q: "Is JeetBuzz legal in Bangladesh?", a: "Online betting sits in a gray area in Bangladesh. JeetBuzz operates under an offshore license. Always check local laws and bet responsibly." },
   { q: "How do I sign up for JeetBuzz?", a: "Follow our Registration Guide. You need a phone number, an email and a payment method like bKash, Nagad or Rocket." },
   { q: "What payment methods are supported?", a: "bKash, Nagad, Rocket, UPI, JazzCash and USDT. Local mobile wallets are the most popular for Bangladesh." },

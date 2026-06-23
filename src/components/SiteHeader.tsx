@@ -178,7 +178,7 @@ export function SiteHeader() {
         <Link to="/" className="flex min-w-0 shrink items-center" aria-label="GetJeetBuzz — Home">
           <img
             src={logoAsset.url}
-            alt="JeetBuzz — GetJeetBuzz.com official partner logo"
+            alt="JeetBuzz — GetJeetBuzz.com verified affiliate partner logo"
             width={160}
             height={48}
             className="h-8 w-auto max-w-[140px] md:h-12 md:max-w-none object-contain select-none pointer-events-none"

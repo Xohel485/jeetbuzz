@@ -18,8 +18,8 @@ export const Route = createFileRoute("/affiliate-disclosure")({
       showDisclosure={false}
       body={[
         "## How we make money",
-        "GetJeetBuzz is a verified official affiliate partner of JeetBuzz — we have a real, signed commission agreement with the operator on a revenue-share basis (a share of net player loss). When you click an outbound link and register or deposit at JeetBuzz, we may receive a commission.",
-        "Being a verified official affiliate partner is a commercial relationship, not a claim that GetJeetBuzz.com is the JeetBuzz platform. Account signup, login, deposits and withdrawals all happen on JeetBuzz's own platform — never on this site.",
+        "GetJeetBuzz is a verified affiliate partner of JeetBuzz — we have a real, signed commission agreement with the operator on a revenue-share basis (a share of net player loss). When you click an outbound link and register or deposit at JeetBuzz, we may receive a commission.",
+        "Being a verified affiliate partner is a commercial relationship, not a claim that GetJeetBuzz.com is the JeetBuzz platform. Account signup, login, deposits and withdrawals all happen on JeetBuzz's own platform — never on this site.",
         "## What it doesn't change",
         "You don't pay more. Bonuses and odds are identical to going to JeetBuzz directly. Our editorial coverage remains independent of the commercial relationship — we publish negative observations when we find them. See the [Review Policy](/review-policy) for the editorial firewall.",
         "## Our promise",

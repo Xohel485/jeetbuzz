@@ -5,7 +5,7 @@ export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms of Use | GetJeetBuzz" },
-      { name: "description", content: "Terms of use for GetJeetBuzz, a verified official affiliate partner site of JeetBuzz." },
+      { name: "description", content: "Terms of use for GetJeetBuzz, a verified affiliate partner site of JeetBuzz." },
       { property: "og:title", content: "Terms of Use | GetJeetBuzz" },
       { property: "og:description", content: "Terms of use for GetJeetBuzz." },
       { property: "og:type", content: "article" },

@@ -6,7 +6,7 @@ import { SectionHeader } from "./SectionHeader";
 const FAQ = [
   {
     q: "Is this the official JeetBuzz website?",
-    a: "No — GetJeetBuzz.com is not the JeetBuzz platform itself. We are a verified official affiliate partner of JeetBuzz, meaning we have a real commission agreement with them, but account signup, login, deposits and withdrawals all happen on JeetBuzz's own platform, not here.",
+    a: "No — GetJeetBuzz.com is not the JeetBuzz platform itself. We are a verified affiliate partner of JeetBuzz, meaning we have a real commission agreement with them, but account signup, login, deposits and withdrawals all happen on JeetBuzz's own platform, not here.",
   },
   {
     q: "Is JeetBuzz legal in Bangladesh?",
@@ -60,7 +60,7 @@ export default function FAQSection() {
               মূল আকর্ষণ।
             </p>
             <p>
-              GetJeetBuzz হল JeetBuzz এর একটি verified official affiliate partner —
+              GetJeetBuzz হল JeetBuzz এর একটি verified affiliate partner —
               অর্থাৎ JeetBuzz এর সাথে আমাদের সরাসরি কমিশন এগ্রিমেন্ট আছে, কিন্তু
               আমরা JeetBuzz প্ল্যাটফর্ম নই। আমরা সরাসরি বাংলাদেশ থেকে অ্যাকাউন্ট
               খুলি, bKash দিয়ে ডিপোজিট করি, BPL ও IPL ম্যাচে লাইভ বেট করি, নিজেই
@@ -89,7 +89,7 @@ export default function FAQSection() {
               spend their time inside the Android APK or the iOS web app.
             </p>
             <p>
-              GetJeetBuzz is a verified official affiliate partner of JeetBuzz —
+              GetJeetBuzz is a verified affiliate partner of JeetBuzz —
               we earn commission on a revenue-share basis when readers sign up
               through our outbound links. That said, GetJeetBuzz.com is not the
               JeetBuzz platform itself: account signup, deposits and withdrawals
