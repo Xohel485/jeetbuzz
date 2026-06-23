@@ -132,8 +132,22 @@ export const Route = createFileRoute("/login-guide")({
           "4. 2FA कोड पूरा करें — आप अंदर हैं।",
           "## पासवर्ड भूल गए?",
           "ऑफिशियल साइट पर ‘Forgot password’ इस्तेमाल करें। रीसेट लिंक आपके फ़ोन/ईमेल पर भेजा जाएगा।",
-          "## साइट नहीं खुल रही?",
-          "कुछ भारतीय ISP बेटिंग डोमेन ब्लॉक करते हैं। दूसरा नेटवर्क आज़माएँ या ऑफिशियल सपोर्ट से बात करें — किसी ‘मिरर’ साइट पर पासवर्ड कभी न डालें।",
+          "## JeetBuzz लॉगिन नहीं चल रहा? वैकल्पिक वर्किंग लिंक",
+          "अगर मुख्य JeetBuzz लॉगिन पेज नहीं खुल रहा, तो ऊपर का वेरीफाइड बटन इस्तेमाल करें — यह हमेशा JeetBuzz के मौजूदा लाइव डोमेन पर रीडायरेक्ट करता है।",
+          "- ऊपर का ‘JeetBuzz लॉगिन पर जाएँ’ बटन इस्तेमाल करें।",
+          "- जिस पेज पर पहुँचें, उसे बुकमार्क कर लें।",
+          "- डोमेन बंद हो तो वापस GetJeetBuzz आएँ — हम लिंक अपडेट रखते हैं।",
+          "## ‘JeetBuzz साइट नहीं खुल रही’ — 2 मिनट में हल",
+          "1. नेटवर्क बदलें — Wi-Fi से मोबाइल डेटा या उल्टा।",
+          "2. DNS बदलें: 1.1.1.1 (Cloudflare) या 8.8.8.8 (Google)।",
+          "3. ब्राउज़र कैश क्लियर करें और फिर से कोशिश करें।",
+          "4. JeetBuzz Android APK आज़माएँ — [App Download Guide](/apk-download-guide) देखें।",
+          "5. अभी भी समस्या हो तो ऑफिशियल 24/7 लाइव चैट से मौजूदा वर्किंग URL पूछें। WhatsApp/Telegram पर अजनबी का भेजा लिंक न खोलें।",
+          "## फ़र्ज़ी JeetBuzz लॉगिन मिरर कैसे पहचानें",
+          "- असली साइट HTTPS है, ब्राउज़र चेतावनी नहीं देता।",
+          "- लोगो, रंग और हिंदी कॉपी ऑफिशियल साइट जैसी ही हैं।",
+          "- लॉगिन पर कभी भी UPI/PhonePe PIN या OTP नहीं माँगता — सिर्फ़ JeetBuzz पासवर्ड।",
+          "- संदेह हो तो टैब बंद करें और ऊपर के बटन से फिर खोलें।",
           "## सुरक्षा चेकलिस्ट",
           "- अनोखा, लंबा पासवर्ड इस्तेमाल करें",
           "- अकाउंट सेटिंग्स में 2FA चालू करें",
@@ -141,6 +155,27 @@ export const Route = createFileRoute("/login-guide")({
           "> आख़िरी सत्यापन: " + LAST_VERIFIED + "।",
         ],
       }}
+      faqs={[
+        {
+          q: "Why is the JeetBuzz login page not opening for me?",
+          a: "Most of the time it's an ISP-level block on betting domains in Bangladesh, Pakistan or India. Switch from Wi-Fi to mobile data, change your DNS to 1.1.1.1 or 8.8.8.8, or use the JeetBuzz Android APK — it bypasses most DNS blocks.",
+        },
+        {
+          q: "Is there a working alternative JeetBuzz login link?",
+          a: "Yes — JeetBuzz rotates its public domain when one is blocked. The 'Go to JeetBuzz Login' button at the top of this page always points at the current live URL. If it ever stops working, refresh this page and we'll have updated the redirect.",
+        },
+        {
+          q: "I forgot my JeetBuzz password — how do I recover my account?",
+          a: "On the official JeetBuzz login screen tap 'Forgot password'. A reset link is sent to the phone number or email you used to sign up. If neither still works, open 24/7 live chat from inside the JeetBuzz site to verify your identity.",
+        },
+        {
+          q: "How do I know I'm on the real JeetBuzz login and not a fake mirror?",
+          a: "The real page is HTTPS with no certificate warning, matches the official logo and Bengali copy, and never asks for your bKash, Nagad or UPI PIN at login — only your JeetBuzz password. If anything looks off, close the tab and re-open from the verified button above.",
+        },
+      ]}
+      articleHeadline="JeetBuzz Login — Working Links & Access Help"
+      articleDescription="How to log in to JeetBuzz from Bangladesh, Pakistan and India, find a working alternative link, fix blocked access and avoid fake mirrors."
+      articlePath="/login-guide"
     />
   ),
 });
