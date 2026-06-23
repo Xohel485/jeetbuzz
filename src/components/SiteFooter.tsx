@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { SITE_NAME, MARKETS } from "@/lib/affiliate";
-import { POSTS } from "@/lib/blog-posts";
 import { useI18n } from "@/lib/i18n";
 import logoAsset from "@/assets/getjeetbuzz-logo.png.asset.json";
 import cazvip from "@/assets/badges/cazvip-alliance.webp.asset.json";
@@ -11,6 +10,15 @@ import gamingLicense from "@/assets/badges/gaming-license.png.asset.json";
 import rgAge from "@/assets/badges/responsible-gaming-18.webp.asset.json";
 import rgMain from "@/assets/badges/responsible-gambling.webp.asset.json";
 import gamcare from "@/assets/badges/gamcare.webp.asset.json";
+
+const FOOTER_POSTS: { slug: string; title: string }[] = [
+  { slug: "jeetbuzz-registration-guide-bangladesh", title: "JeetBuzz Registration Guide for Bangladesh (2026)" },
+  { slug: "jeetbuzz-login-guide", title: "JeetBuzz Login Guide — Safe Access from Bangladesh" },
+  { slug: "jeetbuzz-apk-download-safe-guide", title: "JeetBuzz APK Download — Safe Install Guide" },
+  { slug: "jeetbuzz-bonus-terms-explained", title: "JeetBuzz Bonus Terms — What the Fine Print Actually Means" },
+  { slug: "jeetbuzz-bkash-nagad-deposit-guide", title: "JeetBuzz Deposits with bKash, Nagad & Rocket" },
+  { slug: "jeetbuzz-live-cricket-betting-guide", title: "JeetBuzz Live Cricket Betting — A Practical Guide" },
+];
 
 type Badge = { src: string; alt: string; label: string };
 
@@ -106,7 +114,7 @@ const COLS = [
 ] as const;
 
 export function SiteFooter() {
-  const latestPosts = POSTS.slice(0, 6);
+  const latestPosts = FOOTER_POSTS;
   const { t } = useI18n();
   return (
     <footer className="mt-28 border-t border-white/5 bg-black/40">

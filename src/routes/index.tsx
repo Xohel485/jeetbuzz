@@ -53,7 +53,15 @@ export const Route = createFileRoute("/")({
       ogUrl("/"),
     ],
     links: [
-      { rel: "preload", as: "image", href: imageUrl("hero", 1125, "avif"), type: "image/avif" },
+      {
+        rel: "preload",
+        as: "image",
+        href: imageUrl("hero", 768, "avif"),
+        type: "image/avif",
+        imagesrcset: `${imageUrl("hero", 480, "avif")} 480w, ${imageUrl("hero", 768, "avif")} 768w, ${imageUrl("hero", 1125, "avif")} 1125w`,
+        imagesizes: "(min-width: 1024px) 800px, 100vw",
+        fetchpriority: "high",
+      },
       canonicalLink("/"),
       ...hreflangLinks("/"),
       { rel: "alternate", hrefLang: "bn-BD", href: "https://getjeetbuzzv1.lovable.app/bd/bn" },
