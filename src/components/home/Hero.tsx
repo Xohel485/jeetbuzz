@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Calendar, Languages, ShieldCheck } from "lucide-react";
+import { ArrowRight, BookOpen, Languages, ShieldCheck } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { IMAGES, imageUrl } from "@/lib/images";
