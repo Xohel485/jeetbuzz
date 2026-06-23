@@ -10,7 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
+import { Route as WelcomeBonusRouteImport } from './routes/welcome-bonus'
 import { Route as VipProgramRouteImport } from './routes/vip-program'
+import { Route as VerificationRouteImport } from './routes/verification'
 import { Route as UpdatePolicyRouteImport } from './routes/update-policy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SportsBettingRouteImport } from './routes/sports-betting'
@@ -22,8 +24,11 @@ import { Route as ResponsibleGamingRouteImport } from './routes/responsible-gami
 import { Route as RegistrationGuideRouteImport } from './routes/registration-guide'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PaymentMethodsRouteImport } from './routes/payment-methods'
+import { Route as PasswordResetRouteImport } from './routes/password-reset'
 import { Route as NagadGuideRouteImport } from './routes/nagad-guide'
 import { Route as MobileAppGuideRouteImport } from './routes/mobile-app-guide'
+import { Route as LoginSecurityRouteImport } from './routes/login-security'
+import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
@@ -58,9 +63,19 @@ const WithdrawalGuideRoute = WithdrawalGuideRouteImport.update({
   path: '/withdrawal-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WelcomeBonusRoute = WelcomeBonusRouteImport.update({
+  id: '/welcome-bonus',
+  path: '/welcome-bonus',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VipProgramRoute = VipProgramRouteImport.update({
   id: '/vip-program',
   path: '/vip-program',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerificationRoute = VerificationRouteImport.update({
+  id: '/verification',
+  path: '/verification',
   getParentRoute: () => rootRouteImport,
 } as any)
 const UpdatePolicyRoute = UpdatePolicyRouteImport.update({
@@ -118,6 +133,11 @@ const PaymentMethodsRoute = PaymentMethodsRouteImport.update({
   path: '/payment-methods',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PasswordResetRoute = PasswordResetRouteImport.update({
+  id: '/password-reset',
+  path: '/password-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NagadGuideRoute = NagadGuideRouteImport.update({
   id: '/nagad-guide',
   path: '/nagad-guide',
@@ -126,6 +146,16 @@ const NagadGuideRoute = NagadGuideRouteImport.update({
 const MobileAppGuideRoute = MobileAppGuideRouteImport.update({
   id: '/mobile-app-guide',
   path: '/mobile-app-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginSecurityRoute = LoginSecurityRouteImport.update({
+  id: '/login-security',
+  path: '/login-security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginProblemsRoute = LoginProblemsRouteImport.update({
+  id: '/login-problems',
+  path: '/login-problems',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginGuideRoute = LoginGuideRouteImport.update({
@@ -291,8 +321,11 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login-guide': typeof LoginGuideRoute
+  '/login-problems': typeof LoginProblemsRoute
+  '/login-security': typeof LoginSecurityRoute
   '/mobile-app-guide': typeof MobileAppGuideRoute
   '/nagad-guide': typeof NagadGuideRoute
+  '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registration-guide': typeof RegistrationGuideRoute
@@ -304,7 +337,9 @@ export interface FileRoutesByFullPath {
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
   '/update-policy': typeof UpdatePolicyRoute
+  '/verification': typeof VerificationRoute
   '/vip-program': typeof VipProgramRoute
+  '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -335,8 +370,11 @@ export interface FileRoutesByTo {
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login-guide': typeof LoginGuideRoute
+  '/login-problems': typeof LoginProblemsRoute
+  '/login-security': typeof LoginSecurityRoute
   '/mobile-app-guide': typeof MobileAppGuideRoute
   '/nagad-guide': typeof NagadGuideRoute
+  '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registration-guide': typeof RegistrationGuideRoute
@@ -348,7 +386,9 @@ export interface FileRoutesByTo {
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
   '/update-policy': typeof UpdatePolicyRoute
+  '/verification': typeof VerificationRoute
   '/vip-program': typeof VipProgramRoute
+  '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -381,8 +421,11 @@ export interface FileRoutesById {
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login-guide': typeof LoginGuideRoute
+  '/login-problems': typeof LoginProblemsRoute
+  '/login-security': typeof LoginSecurityRoute
   '/mobile-app-guide': typeof MobileAppGuideRoute
   '/nagad-guide': typeof NagadGuideRoute
+  '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registration-guide': typeof RegistrationGuideRoute
@@ -394,7 +437,9 @@ export interface FileRoutesById {
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
   '/update-policy': typeof UpdatePolicyRoute
+  '/verification': typeof VerificationRoute
   '/vip-program': typeof VipProgramRoute
+  '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -428,8 +473,11 @@ export interface FileRouteTypes {
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login-guide'
+    | '/login-problems'
+    | '/login-security'
     | '/mobile-app-guide'
     | '/nagad-guide'
+    | '/password-reset'
     | '/payment-methods'
     | '/privacy-policy'
     | '/registration-guide'
@@ -441,7 +489,9 @@ export interface FileRouteTypes {
     | '/sports-betting'
     | '/terms'
     | '/update-policy'
+    | '/verification'
     | '/vip-program'
+    | '/welcome-bonus'
     | '/withdrawal-guide'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -472,8 +522,11 @@ export interface FileRouteTypes {
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login-guide'
+    | '/login-problems'
+    | '/login-security'
     | '/mobile-app-guide'
     | '/nagad-guide'
+    | '/password-reset'
     | '/payment-methods'
     | '/privacy-policy'
     | '/registration-guide'
@@ -485,7 +538,9 @@ export interface FileRouteTypes {
     | '/sports-betting'
     | '/terms'
     | '/update-policy'
+    | '/verification'
     | '/vip-program'
+    | '/welcome-bonus'
     | '/withdrawal-guide'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -517,8 +572,11 @@ export interface FileRouteTypes {
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login-guide'
+    | '/login-problems'
+    | '/login-security'
     | '/mobile-app-guide'
     | '/nagad-guide'
+    | '/password-reset'
     | '/payment-methods'
     | '/privacy-policy'
     | '/registration-guide'
@@ -530,7 +588,9 @@ export interface FileRouteTypes {
     | '/sports-betting'
     | '/terms'
     | '/update-policy'
+    | '/verification'
     | '/vip-program'
+    | '/welcome-bonus'
     | '/withdrawal-guide'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -563,8 +623,11 @@ export interface RootRouteChildren {
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginGuideRoute: typeof LoginGuideRoute
+  LoginProblemsRoute: typeof LoginProblemsRoute
+  LoginSecurityRoute: typeof LoginSecurityRoute
   MobileAppGuideRoute: typeof MobileAppGuideRoute
   NagadGuideRoute: typeof NagadGuideRoute
+  PasswordResetRoute: typeof PasswordResetRoute
   PaymentMethodsRoute: typeof PaymentMethodsRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RegistrationGuideRoute: typeof RegistrationGuideRoute
@@ -576,7 +639,9 @@ export interface RootRouteChildren {
   SportsBettingRoute: typeof SportsBettingRoute
   TermsRoute: typeof TermsRoute
   UpdatePolicyRoute: typeof UpdatePolicyRoute
+  VerificationRoute: typeof VerificationRoute
   VipProgramRoute: typeof VipProgramRoute
+  WelcomeBonusRoute: typeof WelcomeBonusRoute
   WithdrawalGuideRoute: typeof WithdrawalGuideRoute
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
@@ -594,11 +659,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WithdrawalGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/welcome-bonus': {
+      id: '/welcome-bonus'
+      path: '/welcome-bonus'
+      fullPath: '/welcome-bonus'
+      preLoaderRoute: typeof WelcomeBonusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vip-program': {
       id: '/vip-program'
       path: '/vip-program'
       fullPath: '/vip-program'
       preLoaderRoute: typeof VipProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verification': {
+      id: '/verification'
+      path: '/verification'
+      fullPath: '/verification'
+      preLoaderRoute: typeof VerificationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/update-policy': {
@@ -678,6 +757,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PaymentMethodsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/password-reset': {
+      id: '/password-reset'
+      path: '/password-reset'
+      fullPath: '/password-reset'
+      preLoaderRoute: typeof PasswordResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nagad-guide': {
       id: '/nagad-guide'
       path: '/nagad-guide'
@@ -690,6 +776,20 @@ declare module '@tanstack/react-router' {
       path: '/mobile-app-guide'
       fullPath: '/mobile-app-guide'
       preLoaderRoute: typeof MobileAppGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login-security': {
+      id: '/login-security'
+      path: '/login-security'
+      fullPath: '/login-security'
+      preLoaderRoute: typeof LoginSecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login-problems': {
+      id: '/login-problems'
+      path: '/login-problems'
+      fullPath: '/login-problems'
+      preLoaderRoute: typeof LoginProblemsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/login-guide': {
@@ -925,8 +1025,11 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginGuideRoute: LoginGuideRoute,
+  LoginProblemsRoute: LoginProblemsRoute,
+  LoginSecurityRoute: LoginSecurityRoute,
   MobileAppGuideRoute: MobileAppGuideRoute,
   NagadGuideRoute: NagadGuideRoute,
+  PasswordResetRoute: PasswordResetRoute,
   PaymentMethodsRoute: PaymentMethodsRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RegistrationGuideRoute: RegistrationGuideRoute,
@@ -938,7 +1041,9 @@ const rootRouteChildren: RootRouteChildren = {
   SportsBettingRoute: SportsBettingRoute,
   TermsRoute: TermsRoute,
   UpdatePolicyRoute: UpdatePolicyRoute,
+  VerificationRoute: VerificationRoute,
   VipProgramRoute: VipProgramRoute,
+  WelcomeBonusRoute: WelcomeBonusRoute,
   WithdrawalGuideRoute: WithdrawalGuideRoute,
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,
