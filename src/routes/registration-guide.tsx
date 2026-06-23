@@ -50,6 +50,7 @@ export const Route = createFileRoute("/registration-guide")({
       }}
       heroImage="registration"
       body={[
+        "> **Quick summary:** jeetbuzz registration takes under 3 minutes — phone signup, OTP, set BDT/PKR/INR currency, deposit from a wallet in your own name (bKash/Nagad/Rocket, EasyPaisa/JazzCash, UPI/PhonePe). Complete KYC (NID/CNIC/Aadhaar + selfie) before requesting your first large withdrawal to avoid delays. Opt into the welcome bonus only if its wagering fits your style.",
         "## What you'll need",
         "A valid mobile number, an email, and a local payment method like bKash, Nagad, Rocket (BD), EasyPaisa/JazzCash (PK) or UPI/PhonePe (IN).",
         "## Step 1 — Open the official site",

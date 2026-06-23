@@ -37,6 +37,7 @@ export const Route = createFileRoute("/bkash-guide")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
+        "> **Quick summary:** jeetbuzz bkash deposit clears in seconds — open Cashier > Deposit > bKash, copy the merchant number and JeetBuzz reference, then Send Money (not Mobile Recharge) and paste the TrxID back. Minimum 200 BDT, withdrawals 500 BDT+ to the same wallet, 0% fee from JeetBuzz.",
         "## Why bKash is the #1 choice on JeetBuzz Bangladesh",
         "bKash is the most widely used mobile financial service in Bangladesh with 70M+ verified wallets, so jeetbuzz bkash deposit is the default for most Bangladeshi players. Deposits credit instantly in 95% of cases, and bkash withdrawal from jeetbuzz typically completes within 5–30 minutes during peak hours.",
         "## jeetbuzz bkash deposit — full step-by-step",

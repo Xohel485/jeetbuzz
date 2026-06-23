@@ -31,8 +31,9 @@ export const Route = createFileRoute("/withdrawal-guide")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
-        "## Quick summary",
-        "Withdrawals on JeetBuzz are usually processed within a few hours once KYC is complete. The fastest route for Bangladesh is bKash, Nagad or Rocket — the same wallet you used to deposit.",
+        "> **Quick summary:** Finish KYC, clear any bonus wagering, then Cashier > Withdrawal > same wallet you deposited from. bKash/Nagad/Rocket and UPI clear in 5–30 minutes, USDT TRC20 in 10–20 minutes. Minimum 500 BDT / 1,000 PKR / ₹500 / ~$20. Wallet name must match your JeetBuzz profile or the withdrawal is reversed.",
+        "## How JeetBuzz withdrawals work",
+        "Withdrawals on JeetBuzz are usually processed within minutes to a few hours once KYC is complete. The fastest route for Bangladesh is bKash, Nagad or Rocket — the same wallet you used to deposit. India players cash out fastest via UPI; Pakistan via JazzCash or EasyPaisa.",
         "## KYC first",
         "Before your first cash-out, complete KYC: NID front and back, a selfie holding the NID, and proof of the registered phone number. Approval typically takes 1–24 hours.",
         "## How to withdraw — universal step-by-step",

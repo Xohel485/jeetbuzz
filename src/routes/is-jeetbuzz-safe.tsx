@@ -50,8 +50,9 @@ export const Route = createFileRoute("/is-jeetbuzz-safe")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
+        "> **Quick summary:** JeetBuzz is licensed offshore by Curaçao (Antillephone N.V.) and has a multi-year payout record across BD, PK and IN. It is **not** licensed by the BTRC, PTA or any Indian state — legal responsibility sits with you under local law. Most 'withdrawal stuck' complaints trace back to KYC, unfinished bonus wagering or wallet-name mismatch — not unprovoked seizures. Use the official APK and avoid Telegram 'agents'.",
         "## Short answer",
-        "Yes — JeetBuzz operates under a Curacao eGaming licence and has a multi-year payout track record across Bangladesh, Pakistan and India. It is not licensed by the BTRC, PTA or any Indian state regulator, so the legal responsibility sits with you under your local laws. Treat it as an offshore-licensed sportsbook, not a domestically regulated one.",
+        "Yes — JeetBuzz operates under a Curaçao eGaming licence and has a multi-year payout track record across Bangladesh, Pakistan and India. Treat it as an offshore-licensed sportsbook, not a domestically regulated one.",
         "## Licensing",
         "JeetBuzz is licensed by the Government of Curacao (Antillephone N.V. / Curacao Gaming Control Board). This is a standard offshore licence used by most operators serving South Asia. It is not a domestic licence in Bangladesh, Pakistan or India — none of those countries currently issue real-money online casino licences to foreign operators.",
         "## Payout track record",
