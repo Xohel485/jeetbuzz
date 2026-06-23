@@ -53,6 +53,7 @@ import { Route as BkashGuideRouteImport } from './routes/bkash-guide'
 import { Route as AviatorGuideRouteImport } from './routes/aviator-guide'
 import { Route as AuthorRouteImport } from './routes/author'
 import { Route as ApkDownloadGuideRouteImport } from './routes/apk-download-guide'
+import { Route as AndroidWebAppGuideRouteImport } from './routes/android-web-app-guide'
 import { Route as AgentEarningGuideRouteImport } from './routes/agent-earning-guide'
 import { Route as AffiliateProgramRouteImport } from './routes/affiliate-program'
 import { Route as AffiliateLoginRouteImport } from './routes/affiliate-login'
@@ -287,6 +288,11 @@ const ApkDownloadGuideRoute = ApkDownloadGuideRouteImport.update({
   path: '/apk-download-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AndroidWebAppGuideRoute = AndroidWebAppGuideRouteImport.update({
+  id: '/android-web-app-guide',
+  path: '/android-web-app-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AgentEarningGuideRoute = AgentEarningGuideRouteImport.update({
   id: '/agent-earning-guide',
   path: '/agent-earning-guide',
@@ -360,6 +366,7 @@ export interface FileRoutesByFullPath {
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
   '/agent-earning-guide': typeof AgentEarningGuideRoute
+  '/android-web-app-guide': typeof AndroidWebAppGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
   '/aviator-guide': typeof AviatorGuideRoute
@@ -419,6 +426,7 @@ export interface FileRoutesByTo {
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
   '/agent-earning-guide': typeof AgentEarningGuideRoute
+  '/android-web-app-guide': typeof AndroidWebAppGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
   '/aviator-guide': typeof AviatorGuideRoute
@@ -478,6 +486,7 @@ export interface FileRoutesById {
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
   '/agent-earning-guide': typeof AgentEarningGuideRoute
+  '/android-web-app-guide': typeof AndroidWebAppGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
   '/aviator-guide': typeof AviatorGuideRoute
@@ -539,6 +548,7 @@ export interface FileRouteTypes {
     | '/affiliate-login'
     | '/affiliate-program'
     | '/agent-earning-guide'
+    | '/android-web-app-guide'
     | '/apk-download-guide'
     | '/author'
     | '/aviator-guide'
@@ -598,6 +608,7 @@ export interface FileRouteTypes {
     | '/affiliate-login'
     | '/affiliate-program'
     | '/agent-earning-guide'
+    | '/android-web-app-guide'
     | '/apk-download-guide'
     | '/author'
     | '/aviator-guide'
@@ -656,6 +667,7 @@ export interface FileRouteTypes {
     | '/affiliate-login'
     | '/affiliate-program'
     | '/agent-earning-guide'
+    | '/android-web-app-guide'
     | '/apk-download-guide'
     | '/author'
     | '/aviator-guide'
@@ -716,6 +728,7 @@ export interface RootRouteChildren {
   AffiliateLoginRoute: typeof AffiliateLoginRoute
   AffiliateProgramRoute: typeof AffiliateProgramRoute
   AgentEarningGuideRoute: typeof AgentEarningGuideRoute
+  AndroidWebAppGuideRoute: typeof AndroidWebAppGuideRoute
   ApkDownloadGuideRoute: typeof ApkDownloadGuideRoute
   AuthorRoute: typeof AuthorRoute
   AviatorGuideRoute: typeof AviatorGuideRoute
@@ -1077,6 +1090,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApkDownloadGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/android-web-app-guide': {
+      id: '/android-web-app-guide'
+      path: '/android-web-app-guide'
+      fullPath: '/android-web-app-guide'
+      preLoaderRoute: typeof AndroidWebAppGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/agent-earning-guide': {
       id: '/agent-earning-guide'
       path: '/agent-earning-guide'
@@ -1190,6 +1210,7 @@ const rootRouteChildren: RootRouteChildren = {
   AffiliateLoginRoute: AffiliateLoginRoute,
   AffiliateProgramRoute: AffiliateProgramRoute,
   AgentEarningGuideRoute: AgentEarningGuideRoute,
+  AndroidWebAppGuideRoute: AndroidWebAppGuideRoute,
   ApkDownloadGuideRoute: ApkDownloadGuideRoute,
   AuthorRoute: AuthorRoute,
   AviatorGuideRoute: AviatorGuideRoute,
