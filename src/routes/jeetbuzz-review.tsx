@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
+import { AuthorByline } from "@/components/AuthorByline";
+import { RelatedGuides } from "@/components/RelatedGuides";
 import { MarkdownLite } from "@/components/MarkdownLite";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 import { SmartImage } from "@/components/SmartImage";
@@ -103,6 +105,9 @@ function Page() {
       <section className="container-pro mt-10">
         <div className="mx-auto max-w-3xl">
           <AffiliateDisclosure variant="inline" />
+          <div className="mt-3">
+            <AuthorByline />
+          </div>
           <SmartImage
             imgKey="liveCricket"
             caption
@@ -123,6 +128,14 @@ function Page() {
           <div className="mt-10">
             <AffiliateCTA size="lg" variant="hero" />
           </div>
+          <RelatedGuides
+            items={[
+              { to: "/registration-guide", title: "Registration Guide", desc: "Open an account before claiming any offer." },
+              { to: "/login-guide", title: "Login Guide", desc: "Safe access and password recovery." },
+              { to: "/payment-methods", title: "Payment Methods", desc: "All deposit and withdrawal options." },
+              { to: "/security-guide", title: "Security Guide", desc: "Protect your account with 2FA and best practices." },
+            ]}
+          />
         </div>
       </section>
     </PageShell>

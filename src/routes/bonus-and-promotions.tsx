@@ -92,6 +92,15 @@ export const Route = createFileRoute("/bonus-and-promotions")({
           "> प्रोमोशन अक्सर बदलते हैं — डिपॉज़िट से पहले ऑफ़िशियल साइट पर मौजूदा ऑफ़र की पुष्टि करें।",
         ],
       }}
+      articleHeadline="JeetBuzz Bonus & Promotions"
+      articleDescription="Welcome bonus, reloads and wagering terms explained for BD, PK and IN players."
+      articlePath="/bonus-and-promotions"
+      related={[
+        { to: "/registration-guide", title: "Registration Guide", desc: "Open an account to claim the welcome bonus." },
+        { to: "/deposit-guide", title: "Deposit Guide", desc: "Fund your account before opting in." },
+        { to: "/vip-program", title: "VIP Program", desc: "Long-term reward tiers beyond the welcome bonus." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator." },
+      ]}
     />
   ),
 });

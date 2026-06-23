@@ -18,6 +18,8 @@ import { PageShell } from "@/components/PageShell";
 import { Button } from "@/components/ui/button";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
+import { AuthorByline } from "@/components/AuthorByline";
+import { RelatedGuides } from "@/components/RelatedGuides";
 import { JsonLd } from "@/components/JsonLd";
 import { AFFILIATE, REL, LAST_VERIFIED } from "@/lib/affiliate";
 import {
@@ -251,6 +253,9 @@ function AffiliateProgramPage() {
           </div>
           <div className="mx-auto mt-6 max-w-2xl">
             <AffiliateDisclosure variant="inline" />
+            <div className="mt-3">
+              <AuthorByline />
+            </div>
           </div>
         </div>
       </section>
@@ -498,6 +503,18 @@ function AffiliateProgramPage() {
           ],
         }}
       />
+      <section className="container-pro pb-16">
+        <div className="mx-auto max-w-3xl">
+          <RelatedGuides
+            items={[
+              { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator you'll be promoting." },
+              { to: "/registration-guide", title: "Registration Guide", desc: "How players sign up — useful for affiliate funnels." },
+              { to: "/payment-methods", title: "Payment Methods", desc: "Deposit options players will use after your referral." },
+              { to: "/affiliate-disclosure", title: "Affiliate Disclosure", desc: "How GetJeetBuzz handles its own affiliate relationship." },
+            ]}
+          />
+        </div>
+      </section>
     </PageShell>
   );
 }
