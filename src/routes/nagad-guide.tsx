@@ -37,6 +37,7 @@ export const Route = createFileRoute("/nagad-guide")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
+        "> **Quick summary:** jeetbuzz Nagad deposit is the best bKash backup — Cashier > Deposit > Nagad, use Send Money (never Cash Out), paste the JeetBuzz reference, then submit the Nagad TrxID. 200 BDT minimum, 75,000 BDT daily cap, withdrawals in 5–30 minutes to the same Nagad wallet after KYC.",
         "## Why Nagad is a top-tier JeetBuzz Bangladesh option",
         "Nagad is the state-owned mobile financial service operated under Bangladesh Post Office. It runs a parallel rail to bKash with similar speed, similar fees, and slightly higher daily wallet caps, which makes jeetbuzz nagad deposit popular among regular punters who hit bKash's daily limit.",
         "## jeetbuzz Nagad deposit — full step-by-step",
