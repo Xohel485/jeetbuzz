@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { SITE_NAME, MARKETS } from "@/lib/affiliate";
 import { useI18n } from "@/lib/i18n";
-import logoAsset from "@/assets/getjeetbuzz-logo.png.asset.json";
+import logoAsset from "@/assets/getjeetbuzz-logo.webp.asset.json";
 import cazvip from "@/assets/badges/cazvip-alliance.webp.asset.json";
 import curacao from "@/assets/badges/curacao-license.webp.asset.json";
 import montenegro from "@/assets/badges/montenegro-license.png.asset.json";

@@ -122,6 +122,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       // Preload the Latin subsets so above-the-fold text never blocks on a network roundtrip.
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-400-latin.woff2", crossOrigin: "anonymous" },
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-700-latin.woff2", crossOrigin: "anonymous" },
+      { rel: "preconnect", href: "https://www.googletagmanager.com", crossOrigin: "anonymous" },
+      { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
     ],
     scripts: [
       { children: GTM_INLINE },
