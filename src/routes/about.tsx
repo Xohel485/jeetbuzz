@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
   component: () => (
     <GuidePage
       eyebrow="About us"
-      title={<>A <span className="gold-text">verified official</span> JeetBuzz affiliate partner guide</>}
+      title={<>A <span className="gold-text">verified</span> JeetBuzz affiliate partner guide</>}
       subtitle="GetJeetBuzz is a small team of Bangladeshi bettors. We are a verified affiliate partner of JeetBuzz — not the platform itself."
       subtitleByLocale={{
         bn: "GetJeetBuzz হলো বাংলাদেশি বেটরদের একটি ছোট দল। আমরা JeetBuzz-এর ভেরিফায়েড অফিসিয়াল অ্যাফিলিয়েট পার্টনার — প্ল্যাটফর্ম নিজে নই।",
