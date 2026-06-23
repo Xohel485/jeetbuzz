@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/jazzcash-guide";
-const TITLE = "JeetBuzz JazzCash Guide — Deposits & Withdrawals from Pakistan";
+const TITLE =
+  "JeetBuzz JazzCash Deposit & Withdrawal Guide Pakistan 2026 - Step by Step";
 const DESC =
-  "How to deposit and withdraw on JeetBuzz with JazzCash from Pakistan — Mobile Account flow, MPIN tips, and what to do when a transfer goes to processing.";
+  "Step-by-step JeetBuzz JazzCash deposit and withdrawal guide for Pakistan 2026 — Mobile Account flow, MPIN tips, daily limits and fixes when a transfer stays processing.";
 
 export const Route = createFileRoute("/jazzcash-guide")({
   head: () => ({

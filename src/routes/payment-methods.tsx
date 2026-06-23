@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/payment-methods";
-const TITLE = "JeetBuzz Payment Methods — Wallets, UPI & Crypto for South Asia";
+const TITLE =
+  "JeetBuzz Payment Methods Bangladesh Pakistan India - bKash, Nagad, JazzCash, UPI 2026";
 const DESC =
-  "All JeetBuzz payment methods for Bangladesh, India and Pakistan — bKash, Nagad, Rocket, UPI, JazzCash and USDT, with minimums and processing times.";
+  "Every JeetBuzz payment method for Bangladesh, Pakistan and India in 2026 — bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
 
 export const Route = createFileRoute("/payment-methods")({
   head: () => ({

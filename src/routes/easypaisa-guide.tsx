@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/easypaisa-guide";
-const TITLE = "JeetBuzz EasyPaisa Guide — Deposits & Withdrawals from Pakistan";
+const TITLE =
+  "JeetBuzz EasyPaisa Deposit & Withdrawal Guide Pakistan 2026 - Step by Step";
 const DESC =
-  "How to deposit and withdraw on JeetBuzz with EasyPaisa from Pakistan — step-by-step flow, what to send (Mobile Account, not Retailer), and fixes for failed transactions.";
+  "Step-by-step JeetBuzz EasyPaisa deposit and withdrawal guide for Pakistan 2026 — Mobile Account flow (not Retailer), MPIN tips, limits and fixes for failed transfers.";
 
 export const Route = createFileRoute("/easypaisa-guide")({
   head: () => ({

@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/upi-guide";
-const TITLE = "JeetBuzz UPI Guide — Deposits & Withdrawals from India";
+const TITLE =
+  "JeetBuzz UPI Deposit & Withdrawal Guide India 2026 - VPA, UTR, Step by Step";
 const DESC =
-  "How UPI deposits actually work on JeetBuzz from India — VPA flow, UTR submission, why a UPI 'success' can still show pending on the cashier, and how it differs from a wallet rail.";
+  "Step-by-step JeetBuzz UPI deposit and withdrawal guide for India 2026 — VPA flow, UTR submission, NPCI limits and why UPI success can still show pending on the cashier.";
 
 export const Route = createFileRoute("/upi-guide")({
   head: () => ({
