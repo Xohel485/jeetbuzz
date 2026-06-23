@@ -69,6 +69,11 @@ import { Route as ReviewPolicyRoute } from "@/routes/review-policy";
 import { Route as ContentPolicyRoute } from "@/routes/content-policy";
 import { Route as FactCheckingRoute } from "@/routes/fact-checking";
 import { Route as UpdatePolicyRoute } from "@/routes/update-policy";
+import { Route as AviatorGuideRoute } from "@/routes/aviator-guide";
+import { Route as CricketExchangeGuideRoute } from "@/routes/cricket-exchange-guide";
+import { Route as AgentEarningGuideRoute } from "@/routes/agent-earning-guide";
+import { Route as IosAppGuideRoute } from "@/routes/ios-app-guide";
+import { Route as AndroidWebAppGuideRoute } from "@/routes/android-web-app-guide";
 
 export type LocaleMeta = { title: string; description: string };
 
@@ -385,6 +390,36 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     bn: { title: "আপডেট পলিসি" + BRAND_BN, description: "GetJeetBuzz কত ঘন কন্টেন্ট রিভিউ ও আপডেট করে।" },
     ur: { title: "اپڈیٹ پالیسی" + BRAND_UR, description: "GetJeetBuzz کتنی بار مواد کا جائزہ اور اپڈیٹ کرتا ہے۔" },
     hi: { title: "अपडेट नीति" + BRAND_HI, description: "GetJeetBuzz कितनी बार कंटेंट की समीक्षा और अपडेट करता है।" },
+  }),
+  entry("aviator-guide", AviatorGuideRoute, {
+    en: { title: "JeetBuzz Aviator & Crash Games Guide 2026" + BRAND_EN, description: "How Aviator works on JeetBuzz — auto cash-out, bankroll sizing, RTP and provable fairness explained for BD/PK/IN players." },
+    bn: { title: "JeetBuzz Aviator ও ক্র্যাশ গেম গাইড ২০২৬" + BRAND_BN, description: "জিতবাজে Aviator কীভাবে কাজ করে — অটো ক্যাশ-আউট, ব্যাঙ্করোল, RTP ও প্রভেবলি ফেয়ার ব্যাখ্যা।" },
+    ur: { title: "JeetBuzz Aviator اور کریش گیمز گائیڈ 2026" + BRAND_UR, description: "JeetBuzz پر Aviator کیسے کام کرتا ہے — آٹو کیش آؤٹ، بینک رول، RTP اور provably fair کی وضاحت۔" },
+    hi: { title: "JeetBuzz Aviator और क्रैश गेम्स गाइड 2026" + BRAND_HI, description: "JeetBuzz पर Aviator कैसे काम करता है — ऑटो कैश-आउट, बैंकरोल, RTP और प्रोवेबली फ़ेयर समझाया गया।" },
+  }),
+  entry("cricket-exchange-guide", CricketExchangeGuideRoute, {
+    en: { title: "JeetBuzz Cricket Exchange Guide 2026" + BRAND_EN, description: "Back, lay, commission and liability on the JeetBuzz exchange — IPL/BPL/PSL framing for BD/IN/PK bettors." },
+    bn: { title: "JeetBuzz ক্রিকেট এক্সচেঞ্জ গাইড ২০২৬" + BRAND_BN, description: "Back, Lay, কমিশন ও লায়াবিলিটি — IPL/BPL/PSL এর জন্য জিতবাজ এক্সচেঞ্জ ব্যাখ্যা।" },
+    ur: { title: "JeetBuzz کرکٹ ایکسچینج گائیڈ 2026" + BRAND_UR, description: "Back، Lay، کمیشن اور liability — IPL/BPL/PSL کے لیے JeetBuzz ایکسچینج کی وضاحت۔" },
+    hi: { title: "JeetBuzz क्रिकेट एक्सचेंज गाइड 2026" + BRAND_HI, description: "बैक, ले, कमीशन और liability — IPL/BPL/PSL के लिए JeetBuzz एक्सचेंज समझाया गया।" },
+  }),
+  entry("agent-earning-guide", AgentEarningGuideRoute, {
+    en: { title: "JeetBuzz Agent & Affiliate Earning Guide 2026" + BRAND_EN, description: "Commission models, payout rails for BD/PK/IN, marketing rules and what gets a JeetBuzz partner account suspended." },
+    bn: { title: "JeetBuzz এজেন্ট ও অ্যাফিলিয়েট আর্নিং গাইড ২০২৬" + BRAND_BN, description: "কমিশন মডেল, BD পেআউট রেইল, মার্কেটিং নিয়ম এবং কী কারণে পার্টনার অ্যাকাউন্ট সাসপেন্ড হয়।" },
+    ur: { title: "JeetBuzz ایجنٹ اور ایفیلیئٹ کمائی گائیڈ 2026" + BRAND_UR, description: "کمیشن ماڈلز، PK پے آؤٹ ریلز، مارکیٹنگ اصول اور پارٹنر اکاؤنٹ معطل ہونے کی وجوہات۔" },
+    hi: { title: "JeetBuzz एजेंट और एफिलिएट कमाई गाइड 2026" + BRAND_HI, description: "कमीशन मॉडल, IN पेआउट रेल, मार्केटिंग नियम और पार्टनर अकाउंट सस्पेंड होने की वजहें।" },
+  }),
+  entry("ios-app-guide", IosAppGuideRoute, {
+    en: { title: "JeetBuzz iOS App Guide 2026" + BRAND_EN, description: "Safari Add to Home Screen install for iPhone and iPad — the only official iOS route. Avoid IPA/sideload offers." },
+    bn: { title: "JeetBuzz iOS অ্যাপ গাইড ২০২৬" + BRAND_BN, description: "iPhone ও iPad এর জন্য Safari এর Add to Home Screen ইনস্টল — একমাত্র অফিসিয়াল iOS পথ।" },
+    ur: { title: "JeetBuzz iOS ایپ گائیڈ 2026" + BRAND_UR, description: "iPhone/iPad کے لیے Safari سے Add to Home Screen — واحد سرکاری iOS طریقہ۔" },
+    hi: { title: "JeetBuzz iOS ऐप गाइड 2026" + BRAND_HI, description: "iPhone और iPad के लिए Safari से Add to Home Screen — एकमात्र आधिकारिक iOS रास्ता।" },
+  }),
+  entry("android-web-app-guide", AndroidWebAppGuideRoute, {
+    en: { title: "JeetBuzz Android Web App Guide 2026" + BRAND_EN, description: "Install JeetBuzz as a Chrome PWA on Android — no APK, auto-updates, push notifications and full cashier support." },
+    bn: { title: "JeetBuzz অ্যান্ড্রয়েড ওয়েব অ্যাপ গাইড ২০২৬" + BRAND_BN, description: "APK ছাড়াই Chrome PWA হিসেবে জিতবাজ ইনস্টল — অটো-আপডেট ও পুশ নোটিফিকেশন।" },
+    ur: { title: "JeetBuzz اینڈرائیڈ ویب ایپ گائیڈ 2026" + BRAND_UR, description: "APK کے بغیر Chrome PWA کے طور پر JeetBuzz انسٹال کریں — آٹو اپڈیٹس اور پش نوٹیفکیشنز۔" },
+    hi: { title: "JeetBuzz Android वेब ऐप गाइड 2026" + BRAND_HI, description: "APK के बिना Chrome PWA के रूप में JeetBuzz इंस्टॉल करें — ऑटो-अपडेट और पुश नोटिफ़िकेशन।" },
   }),
 ];
 

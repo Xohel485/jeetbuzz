@@ -36,20 +36,25 @@ import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
+import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FactCheckingRouteImport } from './routes/fact-checking'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
 import { Route as EasypaisaGuideRouteImport } from './routes/easypaisa-guide'
 import { Route as DepositWithdrawalGuideRouteImport } from './routes/deposit-withdrawal-guide'
 import { Route as DepositGuideRouteImport } from './routes/deposit-guide'
+import { Route as CricketExchangeGuideRouteImport } from './routes/cricket-exchange-guide'
 import { Route as ContentPolicyRouteImport } from './routes/content-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CasinoGuideRouteImport } from './routes/casino-guide'
 import { Route as BonusAndPromotionsRouteImport } from './routes/bonus-and-promotions'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BkashGuideRouteImport } from './routes/bkash-guide'
+import { Route as AviatorGuideRouteImport } from './routes/aviator-guide'
 import { Route as AuthorRouteImport } from './routes/author'
 import { Route as ApkDownloadGuideRouteImport } from './routes/apk-download-guide'
+import { Route as AndroidWebAppGuideRouteImport } from './routes/android-web-app-guide'
+import { Route as AgentEarningGuideRouteImport } from './routes/agent-earning-guide'
 import { Route as AffiliateProgramRouteImport } from './routes/affiliate-program'
 import { Route as AffiliateLoginRouteImport } from './routes/affiliate-login'
 import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
@@ -198,6 +203,11 @@ const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
   path: '/jazzcash-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IosAppGuideRoute = IosAppGuideRouteImport.update({
+  id: '/ios-app-guide',
+  path: '/ios-app-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -226,6 +236,11 @@ const DepositWithdrawalGuideRoute = DepositWithdrawalGuideRouteImport.update({
 const DepositGuideRoute = DepositGuideRouteImport.update({
   id: '/deposit-guide',
   path: '/deposit-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CricketExchangeGuideRoute = CricketExchangeGuideRouteImport.update({
+  id: '/cricket-exchange-guide',
+  path: '/cricket-exchange-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContentPolicyRoute = ContentPolicyRouteImport.update({
@@ -258,6 +273,11 @@ const BkashGuideRoute = BkashGuideRouteImport.update({
   path: '/bkash-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AviatorGuideRoute = AviatorGuideRouteImport.update({
+  id: '/aviator-guide',
+  path: '/aviator-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthorRoute = AuthorRouteImport.update({
   id: '/author',
   path: '/author',
@@ -266,6 +286,16 @@ const AuthorRoute = AuthorRouteImport.update({
 const ApkDownloadGuideRoute = ApkDownloadGuideRouteImport.update({
   id: '/apk-download-guide',
   path: '/apk-download-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AndroidWebAppGuideRoute = AndroidWebAppGuideRouteImport.update({
+  id: '/android-web-app-guide',
+  path: '/android-web-app-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgentEarningGuideRoute = AgentEarningGuideRouteImport.update({
+  id: '/agent-earning-guide',
+  path: '/agent-earning-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AffiliateProgramRoute = AffiliateProgramRouteImport.update({
@@ -335,20 +365,25 @@ export interface FileRoutesByFullPath {
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
+  '/agent-earning-guide': typeof AgentEarningGuideRoute
+  '/android-web-app-guide': typeof AndroidWebAppGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
+  '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/blog': typeof BlogRouteWithChildren
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
+  '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/ios-app-guide': typeof IosAppGuideRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -390,19 +425,24 @@ export interface FileRoutesByTo {
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
+  '/agent-earning-guide': typeof AgentEarningGuideRoute
+  '/android-web-app-guide': typeof AndroidWebAppGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
+  '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
+  '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/ios-app-guide': typeof IosAppGuideRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -445,20 +485,25 @@ export interface FileRoutesById {
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
+  '/agent-earning-guide': typeof AgentEarningGuideRoute
+  '/android-web-app-guide': typeof AndroidWebAppGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
+  '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/blog': typeof BlogRouteWithChildren
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
+  '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/ios-app-guide': typeof IosAppGuideRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -502,20 +547,25 @@ export interface FileRouteTypes {
     | '/affiliate-disclosure'
     | '/affiliate-login'
     | '/affiliate-program'
+    | '/agent-earning-guide'
+    | '/android-web-app-guide'
     | '/apk-download-guide'
     | '/author'
+    | '/aviator-guide'
     | '/bkash-guide'
     | '/blog'
     | '/bonus-and-promotions'
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
+    | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
     | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/ios-app-guide'
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
@@ -557,19 +607,24 @@ export interface FileRouteTypes {
     | '/affiliate-disclosure'
     | '/affiliate-login'
     | '/affiliate-program'
+    | '/agent-earning-guide'
+    | '/android-web-app-guide'
     | '/apk-download-guide'
     | '/author'
+    | '/aviator-guide'
     | '/bkash-guide'
     | '/bonus-and-promotions'
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
+    | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
     | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/ios-app-guide'
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
@@ -611,20 +666,25 @@ export interface FileRouteTypes {
     | '/affiliate-disclosure'
     | '/affiliate-login'
     | '/affiliate-program'
+    | '/agent-earning-guide'
+    | '/android-web-app-guide'
     | '/apk-download-guide'
     | '/author'
+    | '/aviator-guide'
     | '/bkash-guide'
     | '/blog'
     | '/bonus-and-promotions'
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
+    | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
     | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/ios-app-guide'
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
@@ -667,20 +727,25 @@ export interface RootRouteChildren {
   AffiliateDisclosureRoute: typeof AffiliateDisclosureRoute
   AffiliateLoginRoute: typeof AffiliateLoginRoute
   AffiliateProgramRoute: typeof AffiliateProgramRoute
+  AgentEarningGuideRoute: typeof AgentEarningGuideRoute
+  AndroidWebAppGuideRoute: typeof AndroidWebAppGuideRoute
   ApkDownloadGuideRoute: typeof ApkDownloadGuideRoute
   AuthorRoute: typeof AuthorRoute
+  AviatorGuideRoute: typeof AviatorGuideRoute
   BkashGuideRoute: typeof BkashGuideRoute
   BlogRoute: typeof BlogRouteWithChildren
   BonusAndPromotionsRoute: typeof BonusAndPromotionsRoute
   CasinoGuideRoute: typeof CasinoGuideRoute
   ContactRoute: typeof ContactRoute
   ContentPolicyRoute: typeof ContentPolicyRoute
+  CricketExchangeGuideRoute: typeof CricketExchangeGuideRoute
   DepositGuideRoute: typeof DepositGuideRoute
   DepositWithdrawalGuideRoute: typeof DepositWithdrawalGuideRoute
   EasypaisaGuideRoute: typeof EasypaisaGuideRoute
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FactCheckingRoute: typeof FactCheckingRoute
   FaqRoute: typeof FaqRoute
+  IosAppGuideRoute: typeof IosAppGuideRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
@@ -906,6 +971,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JazzcashGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ios-app-guide': {
+      id: '/ios-app-guide'
+      path: '/ios-app-guide'
+      fullPath: '/ios-app-guide'
+      preLoaderRoute: typeof IosAppGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -946,6 +1018,13 @@ declare module '@tanstack/react-router' {
       path: '/deposit-guide'
       fullPath: '/deposit-guide'
       preLoaderRoute: typeof DepositGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cricket-exchange-guide': {
+      id: '/cricket-exchange-guide'
+      path: '/cricket-exchange-guide'
+      fullPath: '/cricket-exchange-guide'
+      preLoaderRoute: typeof CricketExchangeGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/content-policy': {
@@ -990,6 +1069,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BkashGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aviator-guide': {
+      id: '/aviator-guide'
+      path: '/aviator-guide'
+      fullPath: '/aviator-guide'
+      preLoaderRoute: typeof AviatorGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/author': {
       id: '/author'
       path: '/author'
@@ -1002,6 +1088,20 @@ declare module '@tanstack/react-router' {
       path: '/apk-download-guide'
       fullPath: '/apk-download-guide'
       preLoaderRoute: typeof ApkDownloadGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/android-web-app-guide': {
+      id: '/android-web-app-guide'
+      path: '/android-web-app-guide'
+      fullPath: '/android-web-app-guide'
+      preLoaderRoute: typeof AndroidWebAppGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agent-earning-guide': {
+      id: '/agent-earning-guide'
+      path: '/agent-earning-guide'
+      fullPath: '/agent-earning-guide'
+      preLoaderRoute: typeof AgentEarningGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/affiliate-program': {
@@ -1109,20 +1209,25 @@ const rootRouteChildren: RootRouteChildren = {
   AffiliateDisclosureRoute: AffiliateDisclosureRoute,
   AffiliateLoginRoute: AffiliateLoginRoute,
   AffiliateProgramRoute: AffiliateProgramRoute,
+  AgentEarningGuideRoute: AgentEarningGuideRoute,
+  AndroidWebAppGuideRoute: AndroidWebAppGuideRoute,
   ApkDownloadGuideRoute: ApkDownloadGuideRoute,
   AuthorRoute: AuthorRoute,
+  AviatorGuideRoute: AviatorGuideRoute,
   BkashGuideRoute: BkashGuideRoute,
   BlogRoute: BlogRouteWithChildren,
   BonusAndPromotionsRoute: BonusAndPromotionsRoute,
   CasinoGuideRoute: CasinoGuideRoute,
   ContactRoute: ContactRoute,
   ContentPolicyRoute: ContentPolicyRoute,
+  CricketExchangeGuideRoute: CricketExchangeGuideRoute,
   DepositGuideRoute: DepositGuideRoute,
   DepositWithdrawalGuideRoute: DepositWithdrawalGuideRoute,
   EasypaisaGuideRoute: EasypaisaGuideRoute,
   EditorialPolicyRoute: EditorialPolicyRoute,
   FactCheckingRoute: FactCheckingRoute,
   FaqRoute: FaqRoute,
+  IosAppGuideRoute: IosAppGuideRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
@@ -1159,13 +1264,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
