@@ -90,7 +90,7 @@ const en: Dict = {
   "header.lang.aria": "Change language",
 
   // Hero
-  "hero.eyebrow": "JeetBuzz · Bangladesh · Pakistan · India · Updated {date}",
+  "hero.eyebrow": "JeetBuzz · Bangladesh · Pakistan · India",
   "hero.title.lead": "JeetBuzz Login, Signup & Bonus Guide for",
   "hero.title.highlight": "South Asia",
   "hero.subtitle":
@@ -118,7 +118,7 @@ const bn: Dict = {
   "header.login": "লগইন",
   "header.lang.aria": "ভাষা পরিবর্তন",
 
-  "hero.eyebrow": "JeetBuzz · বাংলাদেশ · পাকিস্তান · ভারত · আপডেট {date}",
+  "hero.eyebrow": "JeetBuzz · বাংলাদেশ · পাকিস্তান · ভারত",
   "hero.title.lead": "জিতবাজ লগইন, সাইনআপ ও বোনাস গাইড —",
   "hero.title.highlight": "দক্ষিণ এশিয়া",
   "hero.subtitle":
@@ -145,7 +145,7 @@ const ur: Dict = {
   "header.login": "لاگ ان",
   "header.lang.aria": "زبان تبدیل کریں",
 
-  "hero.eyebrow": "JeetBuzz · بنگلہ دیش · پاکستان · بھارت · اپڈیٹ {date}",
+  "hero.eyebrow": "JeetBuzz · بنگلہ دیش · پاکستان · بھارت",
   "hero.title.lead": "JeetBuzz لاگ ان، سائن اپ اور بونس گائیڈ —",
   "hero.title.highlight": "جنوبی ایشیا",
   "hero.subtitle":
@@ -172,7 +172,7 @@ const hi: Dict = {
   "header.login": "लॉगिन",
   "header.lang.aria": "भाषा बदलें",
 
-  "hero.eyebrow": "JeetBuzz · बांग्लादेश · पाकिस्तान · भारत · अपडेट {date}",
+  "hero.eyebrow": "JeetBuzz · बांग्लादेश · पाकिस्तान · भारत",
   "hero.title.lead": "JeetBuzz लॉगिन, साइनअप और बोनस गाइड —",
   "hero.title.highlight": "दक्षिण एशिया",
   "hero.subtitle":
