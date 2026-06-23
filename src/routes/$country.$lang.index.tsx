@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { HomePage } from "@/components/home/HomePage";
+import { CountryLocalContent } from "@/components/home/CountryLocalContent";
 import {
   COUNTRIES,
   COUNTRY_META,
@@ -65,11 +66,17 @@ export const Route = createFileRoute("/$country/$lang/")({
 });
 
 function LocalizedHome() {
-  const { lang } = Route.useParams();
+  const { country, lang } = Route.useParams();
   const { setLocale } = useI18n();
   useEffect(() => {
     setLocale(lang as Locale);
   }, [lang, setLocale]);
-  // Reuse the canonical homepage component so layout/sections stay identical.
-  return <HomePage />;
+  // Country/locale unique content above the shared homepage to lift uniqueness
+  // for /bd/bn, /pk/ur, /in/hi — local payments, leagues, FAQ in local script.
+  return (
+    <>
+      <CountryLocalContent country={country as Country} lang={lang as Locale} />
+      <HomePage />
+    </>
+  );
 }
