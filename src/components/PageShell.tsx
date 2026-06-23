@@ -1,7 +1,10 @@
-import type { ReactNode } from "react";
+import { lazy, Suspense, type ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { FloatingSupportButton } from "@/components/FloatingSupportButton";
+
+const FloatingSupportButton = lazy(() =>
+  import("@/components/FloatingSupportButton").then((m) => ({ default: m.FloatingSupportButton })),
+);
 
 export function PageShell({ children }: { children: ReactNode }) {
   return (
@@ -9,7 +12,9 @@ export function PageShell({ children }: { children: ReactNode }) {
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />
-      <FloatingSupportButton />
+      <Suspense fallback={null}>
+        <FloatingSupportButton />
+      </Suspense>
     </div>
   );
 }
