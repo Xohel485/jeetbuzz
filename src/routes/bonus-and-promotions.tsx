@@ -96,10 +96,10 @@ export const Route = createFileRoute("/bonus-and-promotions")({
       articleDescription="Welcome bonus, reloads and wagering terms explained for BD, PK and IN players."
       articlePath="/bonus-and-promotions"
       related={[
-        { to: "/registration-guide", title: "Registration Guide", description: "Open an account to claim the welcome bonus." },
-        { to: "/deposit-guide", title: "Deposit Guide", description: "Fund your account before opting in." },
-        { to: "/vip-program", title: "VIP Program", description: "Long-term reward tiers beyond the welcome bonus." },
-        { to: "/jeetbuzz-review", title: "JeetBuzz Review", description: "Pillar review of the operator." },
+        { to: "/registration-guide", title: "Registration Guide", desc: "Open an account to claim the welcome bonus." },
+        { to: "/deposit-guide", title: "Deposit Guide", desc: "Fund your account before opting in." },
+        { to: "/vip-program", title: "VIP Program", desc: "Long-term reward tiers beyond the welcome bonus." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator." },
       ]}
     />
   ),

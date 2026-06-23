@@ -121,10 +121,10 @@ export const Route = createFileRoute("/apk-download-guide")({
       articleDescription="Install the JeetBuzz Android app safely from the official site."
       articlePath="/apk-download-guide"
       related={[
-        { to: "/mobile-app-guide", title: "Mobile App Guide", description: "Tour the JeetBuzz mobile experience." },
-        { to: "/security-guide", title: "Security Guide", description: "Lock down your account and device." },
-        { to: "/login-guide", title: "Login Guide", description: "Sign in safely from your phone." },
-        { to: "/jeetbuzz-review", title: "JeetBuzz Review", description: "Pillar review of the operator." },
+        { to: "/mobile-app-guide", title: "Mobile App Guide", desc: "Tour the JeetBuzz mobile experience." },
+        { to: "/security-guide", title: "Security Guide", desc: "Lock down your account and device." },
+        { to: "/login-guide", title: "Login Guide", desc: "Sign in safely from your phone." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator." },
       ]}
     />
   ),

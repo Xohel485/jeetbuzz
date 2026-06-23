@@ -20,7 +20,7 @@ export const Route = createFileRoute("/registration-guide")({
       jsonLdScript(
         articleSchema({
           headline: "JeetBuzz Registration Guide for Bangladesh",
-          description: "Step-by-step JeetBuzz signup from Bangladesh.",
+          desc: "Step-by-step JeetBuzz signup from Bangladesh.",
           path: "/registration-guide",
           image: imageAbsoluteUrl("registration"),
         }),
@@ -121,10 +121,10 @@ export const Route = createFileRoute("/registration-guide")({
       articleDescription="Step-by-step JeetBuzz signup from Bangladesh, Pakistan and India."
       articlePath="/registration-guide"
       related={[
-        { to: "/login-guide", title: "Login Guide", description: "Safe access to your JeetBuzz account." },
-        { to: "/deposit-guide", title: "Deposit Guide", description: "Fund your account via bKash, Nagad, JazzCash, UPI and more." },
-        { to: "/bonus-and-promotions", title: "Welcome Bonus", description: "Understand the welcome offer before depositing." },
-        { to: "/jeetbuzz-review", title: "JeetBuzz Review", description: "Pillar review of the operator." },
+        { to: "/login-guide", title: "Login Guide", desc: "Safe access to your JeetBuzz account." },
+        { to: "/deposit-guide", title: "Deposit Guide", desc: "Fund your account via bKash, Nagad, JazzCash, UPI and more." },
+        { to: "/bonus-and-promotions", title: "Welcome Bonus", desc: "Understand the welcome offer before depositing." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator." },
       ]}
     />
   ),
