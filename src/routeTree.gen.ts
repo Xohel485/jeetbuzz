@@ -42,6 +42,7 @@ import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
 import { Route as EasypaisaGuideRouteImport } from './routes/easypaisa-guide'
 import { Route as DepositWithdrawalGuideRouteImport } from './routes/deposit-withdrawal-guide'
 import { Route as DepositGuideRouteImport } from './routes/deposit-guide'
+import { Route as CricketExchangeGuideRouteImport } from './routes/cricket-exchange-guide'
 import { Route as ContentPolicyRouteImport } from './routes/content-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CasinoGuideRouteImport } from './routes/casino-guide'
@@ -229,6 +230,11 @@ const DepositGuideRoute = DepositGuideRouteImport.update({
   path: '/deposit-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CricketExchangeGuideRoute = CricketExchangeGuideRouteImport.update({
+  id: '/cricket-exchange-guide',
+  path: '/cricket-exchange-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContentPolicyRoute = ContentPolicyRouteImport.update({
   id: '/content-policy',
   path: '/content-policy',
@@ -350,6 +356,7 @@ export interface FileRoutesByFullPath {
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
+  '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
@@ -405,6 +412,7 @@ export interface FileRoutesByTo {
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
+  '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
@@ -462,6 +470,7 @@ export interface FileRoutesById {
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
+  '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
@@ -520,6 +529,7 @@ export interface FileRouteTypes {
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
+    | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
     | '/easypaisa-guide'
@@ -575,6 +585,7 @@ export interface FileRouteTypes {
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
+    | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
     | '/easypaisa-guide'
@@ -631,6 +642,7 @@ export interface FileRouteTypes {
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
+    | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
     | '/easypaisa-guide'
@@ -688,6 +700,7 @@ export interface RootRouteChildren {
   CasinoGuideRoute: typeof CasinoGuideRoute
   ContactRoute: typeof ContactRoute
   ContentPolicyRoute: typeof ContentPolicyRoute
+  CricketExchangeGuideRoute: typeof CricketExchangeGuideRoute
   DepositGuideRoute: typeof DepositGuideRoute
   DepositWithdrawalGuideRoute: typeof DepositWithdrawalGuideRoute
   EasypaisaGuideRoute: typeof EasypaisaGuideRoute
@@ -961,6 +974,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DepositGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cricket-exchange-guide': {
+      id: '/cricket-exchange-guide'
+      path: '/cricket-exchange-guide'
+      fullPath: '/cricket-exchange-guide'
+      preLoaderRoute: typeof CricketExchangeGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/content-policy': {
       id: '/content-policy'
       path: '/content-policy'
@@ -1138,6 +1158,7 @@ const rootRouteChildren: RootRouteChildren = {
   CasinoGuideRoute: CasinoGuideRoute,
   ContactRoute: ContactRoute,
   ContentPolicyRoute: ContentPolicyRoute,
+  CricketExchangeGuideRoute: CricketExchangeGuideRoute,
   DepositGuideRoute: DepositGuideRoute,
   DepositWithdrawalGuideRoute: DepositWithdrawalGuideRoute,
   EasypaisaGuideRoute: EasypaisaGuideRoute,
