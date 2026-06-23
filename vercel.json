@@ -9,6 +9,12 @@
       "NITRO_PRESET": "vercel"
     }
   },
+  "rewrites": [
+    {
+      "source": "/__l5e/:path*",
+      "destination": "https://cdn.lovable.dev/__l5e/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/fonts/(.*)",
