@@ -45,7 +45,7 @@ export default function PaymentSection() {
         </div>
       </section>
 
-      <section className="container-pro mt-20 md:mt-28">
+      <section className="container-pro mt-14 md:mt-20">
         <SectionHeader
           eyebrow="JeetBuzz at a glance"
           title="The numbers behind JeetBuzz"
@@ -68,7 +68,7 @@ export default function PaymentSection() {
         </div>
       </section>
 
-      <section className="container-pro mt-20 md:mt-28">
+      <section className="container-pro mt-14 md:mt-20">
         <SectionHeader
           eyebrow="Mobile payments"
           title="bKash · Nagad · Rocket — the Bangladesh trio"

@@ -58,24 +58,49 @@ export default function GuideCards() {
         desc="Step-by-step JeetBuzz guides written for players in Bangladesh, Pakistan and India — updated whenever JeetBuzz changes its terms."
       />
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {GUIDE_CARDS.map((c) => (
-          <Link
-            key={c.to}
-            to={c.to}
-            className="glass group flex h-full flex-col p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white/[0.06]"
-          >
-            <div className="flex items-center gap-3.5">
-              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/20">
-                <c.icon className="size-5" />
+        {GUIDE_CARDS.map((c, i) => {
+          const featured = i === 0;
+          return (
+            <Link
+              key={c.to}
+              to={c.to}
+              className={
+                "glass group flex h-full flex-col p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white/[0.06] " +
+                (featured ? "lg:col-span-2 lg:p-8 lg:row-span-1" : "")
+              }
+            >
+              <div className="flex items-center gap-3.5">
+                <span
+                  className={
+                    "grid shrink-0 place-items-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/20 " +
+                    (featured ? "size-12" : "size-11")
+                  }
+                >
+                  <c.icon className={featured ? "size-6" : "size-5"} />
+                </span>
+                <h3
+                  className={
+                    "font-semibold leading-snug " +
+                    (featured ? "text-lg md:text-2xl" : "text-base md:text-lg")
+                  }
+                >
+                  {c.title}
+                </h3>
+              </div>
+              <p
+                className={
+                  "mt-4 flex-1 leading-relaxed text-muted-foreground " +
+                  (featured ? "text-sm md:text-base" : "text-sm")
+                }
+              >
+                {c.desc}
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                Read guide <ArrowRight className="size-4 transition group-hover:translate-x-1" />
               </span>
-              <h3 className="text-base font-semibold leading-snug md:text-lg">{c.title}</h3>
-            </div>
-            <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
-            <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
-              Read guide <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-            </span>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

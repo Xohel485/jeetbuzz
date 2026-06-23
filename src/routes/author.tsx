@@ -66,7 +66,7 @@ function AuthorPage() {
           <div className="flex items-start gap-4">
             <div
               aria-hidden
-              className="flex size-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/30 to-primary/10 text-lg font-bold text-foreground ring-1 ring-white/10"
+              className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-lg font-bold text-primary ring-1 ring-primary/20"
             >
               GJB
             </div>
