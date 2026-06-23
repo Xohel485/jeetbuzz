@@ -121,6 +121,10 @@ export const Route = createFileRoute("/bkash-guide")({
         { q: "Can I use Personal bKash for JeetBuzz?", a: "Yes. JeetBuzz accepts personal bKash wallets — Agent and Merchant accounts may have restrictions." },
         { q: "Are bKash deposits instant?", a: "Almost always — usually within seconds of the TrxID being verified." },
         { q: "What's the bKash withdrawal limit?", a: "Daily and monthly limits depend on your JeetBuzz VIP level." },
+        { q: "Does bKash charge a fee on JeetBuzz deposits?", a: "Merchant deposits are usually fee-free on bKash's side. Personal-to-personal Send Money charges ~5 BDT per 1,000 BDT." },
+        { q: "What if my bKash deposit times out?", a: "The reference code expires after 15 minutes. Restart the cashier flow with a fresh code — never reuse an expired one." },
+        { q: "Can I deposit at midnight?", a: "Yes. bKash deposits clear 24/7. Withdrawals can take slightly longer between 1 AM and 6 AM BST due to lower staffing." },
+        { q: "Is bKash deposit safe?", a: "Yes — JeetBuzz uses unique merchant references per deposit so funds always tie to your account. Never share your bKash PIN or OTP." },
       ]}
       faqsByLocale={{
         bn: [
