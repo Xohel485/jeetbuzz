@@ -101,7 +101,6 @@ export function Hero() {
       <section className="container-pro mt-12 md:mt-16">
         <div className="glass grid grid-cols-2 gap-4 px-5 py-5 text-xs text-muted-foreground md:grid-cols-4 md:gap-6 md:px-7 md:py-6 md:text-sm">
           <Trust icon={ShieldCheck} label="Verified JeetBuzz links" />
-          <Trust icon={Calendar} label={`Updated ${LAST_VERIFIED}`} />
           <Trust icon={BookOpen} label="Transparent affiliate disclosure" />
           <Trust icon={Languages} label="Bengali · English · Hindi · Urdu" />
         </div>
