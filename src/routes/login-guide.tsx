@@ -176,6 +176,12 @@ export const Route = createFileRoute("/login-guide")({
       articleHeadline="JeetBuzz Login — Working Links & Access Help"
       articleDescription="How to log in to JeetBuzz from Bangladesh, Pakistan and India, find a working alternative link, fix blocked access and avoid fake mirrors."
       articlePath="/login-guide"
+      related={[
+        { to: "/registration-guide", title: "Registration Guide", description: "Open a JeetBuzz account in under 3 minutes." },
+        { to: "/security-guide", title: "Account Security", description: "2FA, password hygiene and avoiding fake mirrors." },
+        { to: "/apk-download-guide", title: "APK Download Guide", description: "Install the JeetBuzz Android app safely." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", description: "Our full pillar review of JeetBuzz." },
+      ]}
     />
   ),
 });

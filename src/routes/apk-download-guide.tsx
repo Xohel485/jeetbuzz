@@ -117,6 +117,15 @@ export const Route = createFileRoute("/apk-download-guide")({
           "- ऐप कनेक्ट न हो तो कोई भी थर्ड-पार्टी VPN बंद करें।",
         ],
       }}
+      articleHeadline="JeetBuzz APK Download Guide"
+      articleDescription="Install the JeetBuzz Android app safely from the official site."
+      articlePath="/apk-download-guide"
+      related={[
+        { to: "/mobile-app-guide", title: "Mobile App Guide", description: "Tour the JeetBuzz mobile experience." },
+        { to: "/security-guide", title: "Security Guide", description: "Lock down your account and device." },
+        { to: "/login-guide", title: "Login Guide", description: "Sign in safely from your phone." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", description: "Pillar review of the operator." },
+      ]}
     />
   ),
 });

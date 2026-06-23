@@ -117,6 +117,15 @@ export const Route = createFileRoute("/registration-guide")({
           "> आख़िरी सत्यापन: जून 2026। केवल 18+, ज़िम्मेदारी से खेलें।",
         ],
       }}
+      articleHeadline="JeetBuzz Registration Guide"
+      articleDescription="Step-by-step JeetBuzz signup from Bangladesh, Pakistan and India."
+      articlePath="/registration-guide"
+      related={[
+        { to: "/login-guide", title: "Login Guide", description: "Safe access to your JeetBuzz account." },
+        { to: "/deposit-guide", title: "Deposit Guide", description: "Fund your account via bKash, Nagad, JazzCash, UPI and more." },
+        { to: "/bonus-and-promotions", title: "Welcome Bonus", description: "Understand the welcome offer before depositing." },
+        { to: "/jeetbuzz-review", title: "JeetBuzz Review", description: "Pillar review of the operator." },
+      ]}
     />
   ),
 });
