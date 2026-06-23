@@ -1,96 +1,96 @@
 import { SectionHeader } from "./SectionHeader";
-import awcmdg from "@/assets/providers/awcmdg.png.asset.json";
-import awcme1sport from "@/assets/providers/awcme1sport.png.asset.json";
-import awcmfastspin from "@/assets/providers/awcmfastspin.png.asset.json";
-import awcmfc from "@/assets/providers/awcmfc.png.asset.json";
-import awcmhorsebook from "@/assets/providers/awcmhorsebook.png.asset.json";
-import awcmhotroad from "@/assets/providers/awcmhotroad.png.asset.json";
-import awcmjili from "@/assets/providers/awcmjili.png.asset.json";
-import awcmkm from "@/assets/providers/awcmkm.png.asset.json";
-import awcmladyluck from "@/assets/providers/awcmladyluck.png.asset.json";
-import awcmpinnacle from "@/assets/providers/awcmpinnacle.png.asset.json";
-import awcmpt from "@/assets/providers/awcmpt.png.asset.json";
-import awcmsexy from "@/assets/providers/awcmsexy.png.asset.json";
-import awcmsg from "@/assets/providers/awcmsg.png.asset.json";
-import awcmvia from "@/assets/providers/awcmvia.png.asset.json";
-import awcmyesbingo from "@/assets/providers/awcmyesbingo.png.asset.json";
-import awcmyl from "@/assets/providers/awcmyl.png.asset.json";
-import awcv2combo from "@/assets/providers/awcv2-combo.png.asset.json";
-import bg from "@/assets/providers/bg.png.asset.json";
-import btg from "@/assets/providers/btg.png.asset.json";
-import cg from "@/assets/providers/cg.png.asset.json";
-import cmd from "@/assets/providers/cmd.png.asset.json";
-import cq9 from "@/assets/providers/cq9.png.asset.json";
-import cricketExchange from "@/assets/providers/cricket-exchange.png.asset.json";
-import dragoonsoft from "@/assets/providers/dragoonsoft.png.asset.json";
-import evo from "@/assets/providers/evo.png.asset.json";
-import exchange from "@/assets/providers/exchange.png.asset.json";
-import fiveg from "@/assets/providers/fiveg.png.asset.json";
-import jdb from "@/assets/providers/jdb.png.asset.json";
-import jdbaspribe from "@/assets/providers/jdbaspribe.png.asset.json";
-import joker from "@/assets/providers/joker.png.asset.json";
-import lucky365 from "@/assets/providers/lucky365.png.asset.json";
-import ludo from "@/assets/providers/ludo.png.asset.json";
-import netent from "@/assets/providers/netent.png.asset.json";
-import nextspin from "@/assets/providers/nextspin.png.asset.json";
-import nst from "@/assets/providers/nst.png.asset.json";
-import pg from "@/assets/providers/pg.png.asset.json";
-import rich88 from "@/assets/providers/rich88.png.asset.json";
-import rwb from "@/assets/providers/rwb.png.asset.json";
-import saba from "@/assets/providers/saba.png.asset.json";
-import sbov2 from "@/assets/providers/sbov2.png.asset.json";
-import sbtech from "@/assets/providers/sbtech.png.asset.json";
-import ugv3 from "@/assets/providers/ugv3.png.asset.json";
-import winfinity from "@/assets/providers/winfinity.png.asset.json";
-import worldmatch from "@/assets/providers/worldmatch.png.asset.json";
+import awcmdg from "@/assets/providers/awcmdg.png";
+import awcme1sport from "@/assets/providers/awcme1sport.png";
+import awcmfastspin from "@/assets/providers/awcmfastspin.png";
+import awcmfc from "@/assets/providers/awcmfc.png";
+import awcmhorsebook from "@/assets/providers/awcmhorsebook.png";
+import awcmhotroad from "@/assets/providers/awcmhotroad.png";
+import awcmjili from "@/assets/providers/awcmjili.png";
+import awcmkm from "@/assets/providers/awcmkm.png";
+import awcmladyluck from "@/assets/providers/awcmladyluck.png";
+import awcmpinnacle from "@/assets/providers/awcmpinnacle.png";
+import awcmpt from "@/assets/providers/awcmpt.png";
+import awcmsexy from "@/assets/providers/awcmsexy.png";
+import awcmsg from "@/assets/providers/awcmsg.png";
+import awcmvia from "@/assets/providers/awcmvia.png";
+import awcmyesbingo from "@/assets/providers/awcmyesbingo.png";
+import awcmyl from "@/assets/providers/awcmyl.png";
+import awcv2combo from "@/assets/providers/awcv2-combo.png";
+import bg from "@/assets/providers/bg.png";
+import btg from "@/assets/providers/btg.png";
+import cg from "@/assets/providers/cg.png";
+import cmd from "@/assets/providers/cmd.png";
+import cq9 from "@/assets/providers/cq9.png";
+import cricketExchange from "@/assets/providers/cricket-exchange.png";
+import dragoonsoft from "@/assets/providers/dragoonsoft.png";
+import evo from "@/assets/providers/evo.png";
+import exchange from "@/assets/providers/exchange.png";
+import fiveg from "@/assets/providers/fiveg.png";
+import jdb from "@/assets/providers/jdb.png";
+import jdbaspribe from "@/assets/providers/jdbaspribe.png";
+import joker from "@/assets/providers/joker.png";
+import lucky365 from "@/assets/providers/lucky365.png";
+import ludo from "@/assets/providers/ludo.png";
+import netent from "@/assets/providers/netent.png";
+import nextspin from "@/assets/providers/nextspin.png";
+import nst from "@/assets/providers/nst.png";
+import pg from "@/assets/providers/pg.png";
+import rich88 from "@/assets/providers/rich88.png";
+import rwb from "@/assets/providers/rwb.png";
+import saba from "@/assets/providers/saba.png";
+import sbov2 from "@/assets/providers/sbov2.png";
+import sbtech from "@/assets/providers/sbtech.png";
+import ugv3 from "@/assets/providers/ugv3.png";
+import winfinity from "@/assets/providers/winfinity.png";
+import worldmatch from "@/assets/providers/worldmatch.png";
 
 type Provider = { name: string; url: string };
 
 const PROVIDERS: Provider[] = [
-  { name: "Cricket Exchange", url: cricketExchange.url },
-  { name: "Exchange", url: exchange.url },
-  { name: "SBOBET", url: sbov2.url },
-  { name: "SABA Sports", url: saba.url },
-  { name: "SBTech", url: sbtech.url },
-  { name: "Pinnacle", url: awcmpinnacle.url },
-  { name: "E1 Sport", url: awcme1sport.url },
-  { name: "Horsebook", url: awcmhorsebook.url },
-  { name: "CMD368", url: cmd.url },
-  { name: "UG Sport", url: ugv3.url },
-  { name: "Evolution", url: evo.url },
-  { name: "Pragmatic Play", url: awcmpt.url },
-  { name: "Sexy Gaming", url: awcmsexy.url },
-  { name: "Dream Gaming", url: awcmdg.url },
-  { name: "Lady Luck", url: awcmladyluck.url },
-  { name: "Via Gaming", url: awcmvia.url },
-  { name: "PG Soft", url: pg.url },
-  { name: "JILI", url: awcmjili.url },
-  { name: "JDB", url: jdb.url },
-  { name: "JDB AsprIbe", url: jdbaspribe.url },
-  { name: "CQ9", url: cq9.url },
-  { name: "Joker", url: joker.url },
-  { name: "Rich88", url: rich88.url },
-  { name: "KM Gaming", url: awcmkm.url },
-  { name: "YL Gaming", url: awcmyl.url },
-  { name: "Spadegaming", url: awcmsg.url },
-  { name: "FastSpin", url: awcmfastspin.url },
-  { name: "FC Gaming", url: awcmfc.url },
-  { name: "Hotroad", url: awcmhotroad.url },
-  { name: "Yes Bingo", url: awcmyesbingo.url },
-  { name: "Big Gaming", url: bg.url },
-  { name: "BTG", url: btg.url },
-  { name: "CG Gaming", url: cg.url },
-  { name: "NetEnt", url: netent.url },
-  { name: "WorldMatch", url: worldmatch.url },
-  { name: "Lucky365", url: lucky365.url },
-  { name: "5G Gaming", url: fiveg.url },
-  { name: "Dragoon Soft", url: dragoonsoft.url },
-  { name: "NextSpin", url: nextspin.url },
-  { name: "Winfinity", url: winfinity.url },
-  { name: "RWB", url: rwb.url },
-  { name: "NST", url: nst.url },
-  { name: "Ludo", url: ludo.url },
-  { name: "AWC Combo", url: awcv2combo.url },
+  { name: "Cricket Exchange", url: cricketExchange },
+  { name: "Exchange", url: exchange },
+  { name: "SBOBET", url: sbov2 },
+  { name: "SABA Sports", url: saba },
+  { name: "SBTech", url: sbtech },
+  { name: "Pinnacle", url: awcmpinnacle },
+  { name: "E1 Sport", url: awcme1sport },
+  { name: "Horsebook", url: awcmhorsebook },
+  { name: "CMD368", url: cmd },
+  { name: "UG Sport", url: ugv3 },
+  { name: "Evolution", url: evo },
+  { name: "Pragmatic Play", url: awcmpt },
+  { name: "Sexy Gaming", url: awcmsexy },
+  { name: "Dream Gaming", url: awcmdg },
+  { name: "Lady Luck", url: awcmladyluck },
+  { name: "Via Gaming", url: awcmvia },
+  { name: "PG Soft", url: pg },
+  { name: "JILI", url: awcmjili },
+  { name: "JDB", url: jdb },
+  { name: "JDB AsprIbe", url: jdbaspribe },
+  { name: "CQ9", url: cq9 },
+  { name: "Joker", url: joker },
+  { name: "Rich88", url: rich88 },
+  { name: "KM Gaming", url: awcmkm },
+  { name: "YL Gaming", url: awcmyl },
+  { name: "Spadegaming", url: awcmsg },
+  { name: "FastSpin", url: awcmfastspin },
+  { name: "FC Gaming", url: awcmfc },
+  { name: "Hotroad", url: awcmhotroad },
+  { name: "Yes Bingo", url: awcmyesbingo },
+  { name: "Big Gaming", url: bg },
+  { name: "BTG", url: btg },
+  { name: "CG Gaming", url: cg },
+  { name: "NetEnt", url: netent },
+  { name: "WorldMatch", url: worldmatch },
+  { name: "Lucky365", url: lucky365 },
+  { name: "5G Gaming", url: fiveg },
+  { name: "Dragoon Soft", url: dragoonsoft },
+  { name: "NextSpin", url: nextspin },
+  { name: "Winfinity", url: winfinity },
+  { name: "RWB", url: rwb },
+  { name: "NST", url: nst },
+  { name: "Ludo", url: ludo },
+  { name: "AWC Combo", url: awcv2combo },
 ];
 
 export default function ProvidersSection() {

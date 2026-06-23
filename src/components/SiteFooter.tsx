@@ -2,14 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { SITE_NAME, MARKETS } from "@/lib/affiliate";
 import { useI18n } from "@/lib/i18n";
-import logoAsset from "@/assets/getjeetbuzz-logo.webp.asset.json";
-import cazvip from "@/assets/badges/cazvip-alliance.webp.asset.json";
-import curacao from "@/assets/badges/curacao-license.webp.asset.json";
-import montenegro from "@/assets/badges/montenegro-license.png.asset.json";
-import gamingLicense from "@/assets/badges/gaming-license.png.asset.json";
-import rgAge from "@/assets/badges/responsible-gaming-18.webp.asset.json";
-import rgMain from "@/assets/badges/responsible-gambling.webp.asset.json";
-import gamcare from "@/assets/badges/gamcare.webp.asset.json";
+import logoAsset from "@/assets/getjeetbuzz-logo.webp";
+import cazvip from "@/assets/badges/cazvip-alliance.webp";
+import curacao from "@/assets/badges/curacao-license.webp";
+import montenegro from "@/assets/badges/montenegro-license.png";
+import gamingLicense from "@/assets/badges/gaming-license.png";
+import rgAge from "@/assets/badges/responsible-gaming-18.webp";
+import rgMain from "@/assets/badges/responsible-gambling.webp";
+import gamcare from "@/assets/badges/gamcare.webp";
 
 const FOOTER_POSTS: { slug: string; title: string }[] = [
   { slug: "jeetbuzz-registration-guide-bangladesh", title: "JeetBuzz Registration Guide for Bangladesh (2026)" },
@@ -27,16 +27,16 @@ const TRUST_GROUPS: { title: string; desc: string; tileLight?: boolean; badges: 
     title: "Gaming alliance",
     desc: "Official partnerships and operator alliances.",
     badges: [
-      { src: cazvip.url, alt: "CazVIP Gaming Alliance — JeetBuzz partner", label: "CazVIP Alliance" },
+      { src: cazvip, alt: "CazVIP Gaming Alliance — JeetBuzz partner", label: "CazVIP Alliance" },
     ],
   },
   {
     title: "Gaming license",
     desc: "Regulators and licences covering the operator.",
     badges: [
-      { src: curacao.url, alt: "Gaming Curaçao licensing authority", label: "Gaming Curaçao" },
-      { src: montenegro.url, alt: "Montenegro E-Gambling licence", label: "Montenegro Licence" },
-      { src: gamingLicense.url, alt: "Licensed online gaming operator", label: "Licensed Operator" },
+      { src: curacao, alt: "Gaming Curaçao licensing authority", label: "Gaming Curaçao" },
+      { src: montenegro, alt: "Montenegro E-Gambling licence", label: "Montenegro Licence" },
+      { src: gamingLicense, alt: "Licensed online gaming operator", label: "Licensed Operator" },
     ],
   },
   {
@@ -44,9 +44,9 @@ const TRUST_GROUPS: { title: string; desc: string; tileLight?: boolean; badges: 
     desc: "Player-protection bodies and age-gating standards we follow.",
     tileLight: true,
     badges: [
-      { src: rgAge.url, alt: "18+ only — responsible gaming", label: "18+ Only" },
-      { src: rgMain.url, alt: "Responsible gambling support", label: "Responsible Gambling" },
-      { src: gamcare.url, alt: "GamCare — responsible gaming support", label: "GamCare" },
+      { src: rgAge, alt: "18+ only — responsible gaming", label: "18+ Only" },
+      { src: rgMain, alt: "Responsible gambling support", label: "Responsible Gambling" },
+      { src: gamcare, alt: "GamCare — responsible gaming support", label: "GamCare" },
     ],
   },
 ];
@@ -122,7 +122,7 @@ export function SiteFooter() {
         <div className="mb-10 flex items-center justify-center md:justify-start">
           <Link to="/" aria-label="GetJeetBuzz — Home">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="JeetBuzz — GetJeetBuzz.com verified affiliate partner logo"
               width={220}
               height={66}

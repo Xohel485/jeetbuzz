@@ -1,12 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import sport from "@/assets/games/sport.png.asset.json";
-import casino from "@/assets/games/casino.png.asset.json";
-import slot from "@/assets/games/slot.png.asset.json";
-import crash from "@/assets/games/crash.png.asset.json";
-import table from "@/assets/games/table.png.asset.json";
-import fishing from "@/assets/games/fishing.png.asset.json";
-import lottery from "@/assets/games/lottery.png.asset.json";
-import arcade from "@/assets/games/arcade.png.asset.json";
+import sport from "@/assets/games/sport.png";
+import casino from "@/assets/games/casino.png";
+import slot from "@/assets/games/slot.png";
+import crash from "@/assets/games/crash.png";
+import table from "@/assets/games/table.png";
+import fishing from "@/assets/games/fishing.png";
+import lottery from "@/assets/games/lottery.png";
+import arcade from "@/assets/games/arcade.png";
 
 type Category = {
   key: string;
@@ -23,7 +23,7 @@ const CATEGORIES: Category[] = [
     name: "Sports",
     tagline: "Cricket, football & more",
     to: "/sports-betting",
-    img: sport.url,
+    img: sport,
     alt: "JeetBuzz sports betting category — cricket and football markets",
   },
   {
@@ -31,7 +31,7 @@ const CATEGORIES: Category[] = [
     name: "Live Casino",
     tagline: "Bengali-speaking dealers",
     to: "/casino-guide",
-    img: casino.url,
+    img: casino,
     alt: "JeetBuzz live casino category — roulette, baccarat and blackjack",
   },
   {
@@ -39,7 +39,7 @@ const CATEGORIES: Category[] = [
     name: "Slots",
     tagline: "Pragmatic, PG, JILI",
     to: "/casino-guide",
-    img: slot.url,
+    img: slot,
     alt: "JeetBuzz slots category — Pragmatic Play, PG Soft and JILI titles",
   },
   {
@@ -47,7 +47,7 @@ const CATEGORIES: Category[] = [
     name: "Crash Games",
     tagline: "Aviator, Spaceman & co.",
     to: "/casino-guide",
-    img: crash.url,
+    img: crash,
     alt: "JeetBuzz crash games category — Aviator and Spaceman style titles",
   },
   {
@@ -55,7 +55,7 @@ const CATEGORIES: Category[] = [
     name: "Table Games",
     tagline: "Poker, Andar Bahar, Teen Patti",
     to: "/casino-guide",
-    img: table.url,
+    img: table,
     alt: "JeetBuzz table games category — poker, Andar Bahar and Teen Patti",
   },
   {
@@ -63,7 +63,7 @@ const CATEGORIES: Category[] = [
     name: "Fishing",
     tagline: "Skill-based arcade shooters",
     to: "/casino-guide",
-    img: fishing.url,
+    img: fishing,
     alt: "JeetBuzz fishing games category — skill-based arcade shooters",
   },
   {
@@ -71,7 +71,7 @@ const CATEGORIES: Category[] = [
     name: "Lottery",
     tagline: "Daily draws & keno",
     to: "/casino-guide",
-    img: lottery.url,
+    img: lottery,
     alt: "JeetBuzz lottery category — daily number draws and keno",
   },
   {
@@ -79,7 +79,7 @@ const CATEGORIES: Category[] = [
     name: "Arcade",
     tagline: "Mini games & quick wins",
     to: "/casino-guide",
-    img: arcade.url,
+    img: arcade,
     alt: "JeetBuzz arcade category — mini games and quick-win titles",
   },
 ];

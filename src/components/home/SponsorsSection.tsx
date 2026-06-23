@@ -1,9 +1,9 @@
 import { SectionHeader } from "./SectionHeader";
 import { JsonLd } from "@/components/JsonLd";
-import tigersAvif from "@/assets/sponsors/montreal-royal-tigers.avif.asset.json";
-import tigersWebp from "@/assets/sponsors/montreal-royal-tigers.webp.asset.json";
-import bullsAvif from "@/assets/sponsors/delhi-bulls.avif.asset.json";
-import bullsWebp from "@/assets/sponsors/delhi-bulls-opt.webp.asset.json";
+import tigersAvif from "@/assets/sponsors/montreal-royal-tigers.avif";
+import tigersWebp from "@/assets/sponsors/montreal-royal-tigers.webp";
+import bullsAvif from "@/assets/sponsors/delhi-bulls.avif";
+import bullsWebp from "@/assets/sponsors/delhi-bulls-opt.webp";
 
 type Sponsor = {
   team: string;
@@ -24,8 +24,8 @@ const SPONSORS: Sponsor[] = [
     badge: "Principal Sponsor",
     league: "Canada Super 60 (CS60)",
     year: "2025 Season",
-    avif: tigersAvif.url,
-    webp: tigersWebp.url,
+    avif: tigersAvif,
+    webp: tigersWebp,
     width: 1280,
     height: 636,
     alt: "Montreal Royal Tigers squad in red and gold jerseys with JeetBuzz branding — 2025 Canada Super 60 principal sponsor",
@@ -41,8 +41,8 @@ const SPONSORS: Sponsor[] = [
     badge: "Principal Sponsor",
     league: "Abu Dhabi T10 League",
     year: "2023 Season",
-    avif: bullsAvif.url,
-    webp: bullsWebp.url,
+    avif: bullsAvif,
+    webp: bullsWebp,
     width: 1280,
     height: 579,
     alt: "Delhi Bulls team crest with fire effect — JeetBuzz principal sponsor of Abu Dhabi T10 2023",

@@ -2,28 +2,28 @@ import { Link } from "@tanstack/react-router";
 import { useRouterState } from "@tanstack/react-router";
 import { track } from "@/lib/analytics";
 import { countryFromPathname } from "@/lib/i18n";
-import pubali from "@/assets/payments/pubali-bank.webp.asset.json";
-import dbbl from "@/assets/payments/dutch-bangla-bank.webp.asset.json";
-import islami from "@/assets/payments/islami-bank.webp.asset.json";
-import city from "@/assets/payments/city-bank.webp.asset.json";
-import litecoin from "@/assets/payments/litecoin.webp.asset.json";
-import usdt from "@/assets/payments/usdt.webp.asset.json";
-import payoneer from "@/assets/payments/payoneer.webp.asset.json";
-import gpay from "@/assets/payments/google-pay.webp.asset.json";
-import bitcoin from "@/assets/payments/bitcoin.webp.asset.json";
-import binance from "@/assets/payments/binance.webp.asset.json";
-import bkash from "@/assets/payments/bkash.webp.asset.json";
-import rocket from "@/assets/payments/rocket.webp.asset.json";
-import upay from "@/assets/payments/upay.webp.asset.json";
-import tap from "@/assets/payments/tap.webp.asset.json";
-import surecash from "@/assets/payments/surecash.webp.asset.json";
-import ipay from "@/assets/payments/ipay.webp.asset.json";
-import okwallet from "@/assets/payments/okwallet.webp.asset.json";
-import bankDeposit from "@/assets/payments/bank-deposit.webp.asset.json";
-import easypaisa from "@/assets/payments/easypaisa.webp.asset.json";
-import jazzcash from "@/assets/payments/jazz-cash.webp.asset.json";
-import phonepe from "@/assets/payments/phonepe.webp.asset.json";
-import upi from "@/assets/payments/upi.webp.asset.json";
+import pubali from "@/assets/payments/pubali-bank.webp";
+import dbbl from "@/assets/payments/dutch-bangla-bank.webp";
+import islami from "@/assets/payments/islami-bank.webp";
+import city from "@/assets/payments/city-bank.webp";
+import litecoin from "@/assets/payments/litecoin.webp";
+import usdt from "@/assets/payments/usdt.webp";
+import payoneer from "@/assets/payments/payoneer.webp";
+import gpay from "@/assets/payments/google-pay.webp";
+import bitcoin from "@/assets/payments/bitcoin.webp";
+import binance from "@/assets/payments/binance.webp";
+import bkash from "@/assets/payments/bkash.webp";
+import rocket from "@/assets/payments/rocket.webp";
+import upay from "@/assets/payments/upay.webp";
+import tap from "@/assets/payments/tap.webp";
+import surecash from "@/assets/payments/surecash.webp";
+import ipay from "@/assets/payments/ipay.webp";
+import okwallet from "@/assets/payments/okwallet.webp";
+import bankDeposit from "@/assets/payments/bank-deposit.webp";
+import easypaisa from "@/assets/payments/easypaisa.webp";
+import jazzcash from "@/assets/payments/jazz-cash.webp";
+import phonepe from "@/assets/payments/phonepe.webp";
+import upi from "@/assets/payments/upi.webp";
 
 type Method = {
   key: string;
@@ -48,13 +48,13 @@ const GROUPS: Group[] = [
     to: "/deposit-guide",
     dark: true,
     methods: [
-      { key: "bkash", name: "bKash", img: bkash.url, alt: "bKash — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/bkash-guide" },
-      { key: "rocket", name: "Rocket", img: rocket.url, alt: "Rocket DBBL — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/rocket-guide" },
-      { key: "upay", name: "Upay", img: upay.url, alt: "Upay — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "tap", name: "Tap", img: tap.url, alt: "Tap — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "surecash", name: "SureCash", img: surecash.url, alt: "SureCash — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "ipay", name: "iPay", img: ipay.url, alt: "iPay — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "okwallet", name: "OK Wallet", img: okwallet.url, alt: "OK Wallet by ONE Bank — JeetBuzz deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "bkash", name: "bKash", img: bkash, alt: "bKash — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/bkash-guide" },
+      { key: "rocket", name: "Rocket", img: rocket, alt: "Rocket DBBL — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/rocket-guide" },
+      { key: "upay", name: "Upay", img: upay, alt: "Upay — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "tap", name: "Tap", img: tap, alt: "Tap — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "surecash", name: "SureCash", img: surecash, alt: "SureCash — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "ipay", name: "iPay", img: ipay, alt: "iPay — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "okwallet", name: "OK Wallet", img: okwallet, alt: "OK Wallet by ONE Bank — JeetBuzz deposit (Bangladesh)", to: "/deposit-guide" },
     ],
   },
   {
@@ -62,11 +62,11 @@ const GROUPS: Group[] = [
     desc: "Direct deposit & NEFT from major Bangladeshi banks.",
     to: "/deposit-guide",
     methods: [
-      { key: "pubali", name: "Pubali Bank", img: pubali.url, alt: "Pubali Bank PLC — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "dbbl", name: "Dutch-Bangla Bank", img: dbbl.url, alt: "Dutch-Bangla Bank — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "islami", name: "Islami Bank", img: islami.url, alt: "Islami Bank Bangladesh PLC — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "city", name: "City Bank", img: city.url, alt: "City Bank — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "bank-deposit", name: "Bank Deposit", img: bankDeposit.url, alt: "Branch bank deposit — JeetBuzz funding option", to: "/deposit-guide" },
+      { key: "pubali", name: "Pubali Bank", img: pubali, alt: "Pubali Bank PLC — JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "dbbl", name: "Dutch-Bangla Bank", img: dbbl, alt: "Dutch-Bangla Bank — JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "islami", name: "Islami Bank", img: islami, alt: "Islami Bank Bangladesh PLC — JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "city", name: "City Bank", img: city, alt: "City Bank — JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "bank-deposit", name: "Bank Deposit", img: bankDeposit, alt: "Branch bank deposit — JeetBuzz funding option", to: "/deposit-guide" },
     ],
   },
   {
@@ -75,8 +75,8 @@ const GROUPS: Group[] = [
     to: "/deposit-guide",
     dark: true,
     methods: [
-      { key: "easypaisa", name: "Easypaisa", img: easypaisa.url, alt: "Easypaisa — JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
-      { key: "jazzcash", name: "JazzCash", img: jazzcash.url, alt: "JazzCash — JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
+      { key: "easypaisa", name: "Easypaisa", img: easypaisa, alt: "Easypaisa — JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
+      { key: "jazzcash", name: "JazzCash", img: jazzcash, alt: "JazzCash — JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
     ],
   },
   {
@@ -85,8 +85,8 @@ const GROUPS: Group[] = [
     to: "/payment-methods",
     dark: true,
     methods: [
-      { key: "upi", name: "UPI", img: upi.url, alt: "UPI — JeetBuzz instant INR deposit (India)", to: "/payment-methods" },
-      { key: "phonepe", name: "PhonePe", img: phonepe.url, alt: "PhonePe — JeetBuzz UPI wallet deposit (India)", to: "/payment-methods" },
+      { key: "upi", name: "UPI", img: upi, alt: "UPI — JeetBuzz instant INR deposit (India)", to: "/payment-methods" },
+      { key: "phonepe", name: "PhonePe", img: phonepe, alt: "PhonePe — JeetBuzz UPI wallet deposit (India)", to: "/payment-methods" },
     ],
   },
   {
@@ -94,8 +94,8 @@ const GROUPS: Group[] = [
     desc: "Cross-border wallets and Google Pay for fast settlement.",
     to: "/payment-methods",
     methods: [
-      { key: "payoneer", name: "Payoneer", img: payoneer.url, alt: "Payoneer — international wallet for JeetBuzz", to: "/payment-methods" },
-      { key: "gpay", name: "Google Pay", img: gpay.url, alt: "Google Pay — wallet payment for JeetBuzz", to: "/payment-methods" },
+      { key: "payoneer", name: "Payoneer", img: payoneer, alt: "Payoneer — international wallet for JeetBuzz", to: "/payment-methods" },
+      { key: "gpay", name: "Google Pay", img: gpay, alt: "Google Pay — wallet payment for JeetBuzz", to: "/payment-methods" },
     ],
   },
   {
@@ -103,10 +103,10 @@ const GROUPS: Group[] = [
     desc: "Stablecoin and on-chain deposits with low fees.",
     to: "/payment-methods",
     methods: [
-      { key: "usdt", name: "USDT", img: usdt.url, alt: "Tether USDT — crypto deposit on JeetBuzz", to: "/payment-methods" },
-      { key: "btc", name: "Bitcoin", img: bitcoin.url, alt: "Bitcoin — crypto deposit on JeetBuzz", to: "/payment-methods" },
-      { key: "ltc", name: "Litecoin", img: litecoin.url, alt: "Litecoin — crypto deposit on JeetBuzz", to: "/payment-methods" },
-      { key: "binance", name: "Binance Pay", img: binance.url, alt: "Binance Pay — crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "usdt", name: "USDT", img: usdt, alt: "Tether USDT — crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "btc", name: "Bitcoin", img: bitcoin, alt: "Bitcoin — crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "ltc", name: "Litecoin", img: litecoin, alt: "Litecoin — crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "binance", name: "Binance Pay", img: binance, alt: "Binance Pay — crypto deposit on JeetBuzz", to: "/payment-methods" },
     ],
   },
 ];
