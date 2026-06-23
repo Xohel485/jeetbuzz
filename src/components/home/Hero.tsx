@@ -66,7 +66,7 @@ export function Hero() {
           <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <AffiliateCTA
               size="xl"
-              variant="hero"
+              variant="emerald"
               label={t("hero.cta.join")}
               position="hero"
               className="min-h-[60px] px-10 text-base md:min-h-[68px] md:px-12 md:text-lg"
@@ -74,7 +74,7 @@ export function Hero() {
             <Button
               asChild
               size="xl"
-              variant="glass"
+              variant="hero"
               className="min-h-[60px] px-10 text-base md:min-h-[68px] md:px-12 md:text-lg"
             >
               <Link to="/login-guide">
