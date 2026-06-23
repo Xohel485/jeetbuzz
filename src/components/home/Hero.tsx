@@ -24,12 +24,12 @@ export function Hero() {
           <source
             type="image/avif"
             srcSet={IMAGES.hero.widths.map((w) => `${imageUrl("hero", w, "avif")} ${w}w`).join(", ")}
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <source
             type="image/webp"
             srcSet={IMAGES.hero.widths.map((w) => `${imageUrl("hero", w, "webp")} ${w}w`).join(", ")}
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
           <img
             src={imageUrl("hero", 1125, "webp")}
@@ -39,7 +39,7 @@ export function Hero() {
             height={IMAGES.hero.h}
             fetchPriority="high"
             loading="eager"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 1200px"
             decoding="async"
             className="h-full w-full object-cover opacity-40"
           />
