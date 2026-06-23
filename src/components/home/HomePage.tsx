@@ -11,6 +11,8 @@ export function HomePage() {
       {/* Everything below is split into separate JS chunks and is only fetched
           when its placeholder scrolls into (or near) the viewport. */}
       <LazyOnVisible load={() => import("./GuideCards")} minHeight={520} />
+      <LazyOnVisible load={() => import("./PopularGamesSection")} minHeight={520} />
+      <LazyOnVisible load={() => import("./AmbassadorsSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./PaymentSection")} minHeight={1200} />
       <LazyOnVisible load={() => import("./ProvidersSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./BlogSection")} minHeight={700} />
