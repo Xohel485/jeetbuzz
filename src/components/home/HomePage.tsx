@@ -13,6 +13,7 @@ export function HomePage() {
       <LazyOnVisible load={() => import("./GuideCards")} minHeight={520} />
       <LazyOnVisible load={() => import("./PopularGamesSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./AmbassadorsSection")} minHeight={520} />
+      <LazyOnVisible load={() => import("./SponsorsSection")} minHeight={620} />
       <LazyOnVisible load={() => import("./PaymentSection")} minHeight={1200} />
       <LazyOnVisible load={() => import("./ProvidersSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./BlogSection")} minHeight={700} />
