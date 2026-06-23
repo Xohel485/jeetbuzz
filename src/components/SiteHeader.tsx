@@ -8,6 +8,7 @@ import bdFlag from "@/assets/flags/bd.png.asset.json";
 import pkFlag from "@/assets/flags/pk.png.asset.json";
 import inFlag from "@/assets/flags/in.png.asset.json";
 import { useI18n, LOCALE_META, LOCALES, COUNTRIES, type Locale, type Country } from "@/lib/i18n";
+import { findLocalizedRoute } from "@/lib/localized-routes";
 
 const NAV = [
   { to: "/jeetbuzz-review", key: "nav.review" },
@@ -49,7 +50,15 @@ function LanguageSwitcher() {
     const clean = tail === "/" ? "" : tail;
     if (next === "en") return clean || "/";
     const country = LOCALE_META[next].country as Country;
-    return clean ? `/${country}/${next}${clean}` : `/${country}/${next}`;
+    // Strip leading slash to extract the slug, then verify it exists for
+    // the target country. Pages that are not registered for that country
+    // (e.g. /upi-guide under /bd/bn, /blog, /author) would otherwise 404
+    // under the localized splat — fall back to the localized homepage.
+    const slug = clean.replace(/^\//, "");
+    if (!slug) return `/${country}/${next}`;
+    const reg = findLocalizedRoute(slug, country);
+    if (!reg) return `/${country}/${next}`;
+    return `/${country}/${next}/${slug}`;
   }
 
   return (
