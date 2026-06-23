@@ -42,7 +42,8 @@ export default {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const normalized = await normalizeCatastrophicSsrResponse(response);
+      return applyStaticCacheHeaders(request, normalized);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
@@ -52,3 +53,26 @@ export default {
     }
   },
 };
+
+// Cloudflare hosting (Lovable) does not honor vercel.json. Apply long-lived
+// immutable cache headers to fingerprinted/static asset paths here so PSI
+// stops flagging /img/, /fonts/, and favicons with "Cache TTL: None".
+const IMMUTABLE_PATH_RE = /^\/(?:img|fonts|assets)\/|^\/favicon-|^\/apple-touch-icon\.png$|^\/favicon\.ico$/i;
+
+function applyStaticCacheHeaders(request: Request, response: Response): Response {
+  try {
+    const url = new URL(request.url);
+    if (!IMMUTABLE_PATH_RE.test(url.pathname)) return response;
+    if (response.status >= 300) return response;
+    if (response.headers.get("cache-control")?.includes("immutable")) return response;
+    const headers = new Headers(response.headers);
+    headers.set("cache-control", "public, max-age=31536000, immutable");
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
+  } catch {
+    return response;
+  }
+}
