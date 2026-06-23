@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageShell } from "@/components/PageShell";
-import { Hero } from "@/components/home/Hero";
-import { LazyOnVisible } from "@/components/LazyOnVisible";
+import { HomePage } from "@/components/home/HomePage";
 import { IMAGES, imageUrl, imageAbsoluteUrl, imageObjectSchema } from "@/lib/images";
 import { faqSchema, articleSchema, hreflangLinks, canonicalLink, ogUrl } from "@/lib/schema";
 
@@ -84,18 +82,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return (
-    <PageShell>
-      {/* Hero is the only home-page chunk in the initial bundle. */}
-      <Hero />
-
-      {/* Everything below is split into separate JS chunks and is only fetched
-          when its placeholder scrolls into (or near) the viewport. */}
-      <LazyOnVisible load={() => import("@/components/home/GuideCards")} minHeight={520} />
-      <LazyOnVisible load={() => import("@/components/home/PaymentSection")} minHeight={1200} />
-      <LazyOnVisible load={() => import("@/components/home/BlogSection")} minHeight={700} />
-      <LazyOnVisible load={() => import("@/components/home/FAQSection")} minHeight={900} />
-      <LazyOnVisible load={() => import("@/components/home/FooterSection")} minHeight={800} />
-    </PageShell>
-  );
+  return <HomePage />;
 }

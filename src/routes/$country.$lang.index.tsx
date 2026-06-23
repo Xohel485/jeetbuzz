@@ -1,6 +1,6 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { Index } from "./index";
+import { HomePage } from "@/components/home/HomePage";
 import {
   COUNTRIES,
   COUNTRY_META,
