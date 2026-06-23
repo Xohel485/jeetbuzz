@@ -103,6 +103,19 @@ export const Route = createFileRoute("/live-cricket-betting")({
           "खाते में डिपॉज़िट और लॉस लिमिट सेट करें। मज़ा आना बंद हो तो ब्रेक लें।",
         ],
       }}
+      faqs={[
+        { q: "What is the minimum stake on JeetBuzz live cricket?", a: "Most cricket markets accept a 10 BDT / 50 PKR / ₹20 minimum stake. Higher-liquidity markets like IPL and BPL match-winner go up to 100,000 BDT per single bet." },
+        { q: "Can I cash out a live cricket bet?", a: "Yes. Cash-out appears in your bet slip during in-play markets when liquidity allows. The offered value updates every few seconds with the live odds." },
+        { q: "Does JeetBuzz cover BPL, IPL and PSL?", a: "Yes — all three are covered with pre-match and in-play markets. Coverage extends to T20 World Cup, Champions Trophy, Test and ODI internationals." },
+        { q: "Which payment method is best for cricket betting?", a: "Bangladesh players default to bKash or Nagad, Pakistan players use JazzCash or EasyPaisa, India players use UPI. See the payment-method guides for full step-by-step flows." },
+      ]}
+      related={[
+        { to: "/sports-betting", title: "JeetBuzz Sports Betting" },
+        { to: "/cricket-exchange-guide", title: "Cricket Exchange Guide" },
+        { to: "/aviator-guide", title: "Aviator & Crash Games" },
+        { to: "/welcome-bonus", title: "Welcome Bonus" },
+        { to: "/deposit-guide", title: "Deposit Guide" },
+      ]}
     />
   ),
 });
