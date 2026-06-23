@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/deposit-guide";
 const TITLE = "JeetBuzz Deposit Guide — bKash, Nagad, Rocket & UPI";
@@ -172,6 +173,7 @@ export const Route = createFileRoute("/deposit-guide")({
         { to: "/nagad-guide", title: "Nagad on JeetBuzz" },
         { to: "/rocket-guide", title: "Rocket on JeetBuzz" },
         { to: "/payment-methods", title: "All Payment Methods" },
+        ...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
       ]}
     />
   ),
