@@ -112,7 +112,7 @@ function AuthButtons({ stacked = false }: { stacked?: boolean }) {
           track("signup_click", { destination: "signup", button_position: pos });
           track("affiliate_click", { intent: "signup", destination: "signup", button_position: pos });
         }}
-        className={`${base} ${stacked ? "w-full h-12" : ""} bg-gradient-to-r from-[#f8a04a] to-[#f47b20] text-white shadow-[0_10px_28px_-12px_#f47b20] hover:brightness-110 hover:shadow-[0_14px_34px_-12px_#f47b20]`}
+        className={`${base} ${stacked ? "w-full h-12" : ""} bg-gradient-to-r from-[#f49a3a] to-[#e07818] text-white shadow-[0_10px_28px_-12px_#e07818] hover:brightness-110 hover:shadow-[0_14px_34px_-12px_#e07818]`}
       >
         {t("header.signup")}
       </a>
@@ -148,7 +148,7 @@ function CompactAuthButtons() {
           track("signup_click", { destination: "signup", button_position: "header" });
           track("affiliate_click", { intent: "signup", destination: "signup", button_position: "header" });
         }}
-        className={`${base} bg-gradient-to-r from-[#f8a04a] to-[#f47b20] text-white shadow-[0_6px_18px_-10px_#f47b20] hover:brightness-110`}
+        className={`${base} bg-gradient-to-r from-[#f49a3a] to-[#e07818] text-white shadow-[0_6px_18px_-10px_#e07818] hover:brightness-110`}
       >
         {t("header.signup")}
       </a>
