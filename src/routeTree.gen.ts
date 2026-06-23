@@ -52,6 +52,7 @@ import { Route as BkashGuideRouteImport } from './routes/bkash-guide'
 import { Route as AviatorGuideRouteImport } from './routes/aviator-guide'
 import { Route as AuthorRouteImport } from './routes/author'
 import { Route as ApkDownloadGuideRouteImport } from './routes/apk-download-guide'
+import { Route as AgentEarningGuideRouteImport } from './routes/agent-earning-guide'
 import { Route as AffiliateProgramRouteImport } from './routes/affiliate-program'
 import { Route as AffiliateLoginRouteImport } from './routes/affiliate-login'
 import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
@@ -280,6 +281,11 @@ const ApkDownloadGuideRoute = ApkDownloadGuideRouteImport.update({
   path: '/apk-download-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AgentEarningGuideRoute = AgentEarningGuideRouteImport.update({
+  id: '/agent-earning-guide',
+  path: '/agent-earning-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AffiliateProgramRoute = AffiliateProgramRouteImport.update({
   id: '/affiliate-program',
   path: '/affiliate-program',
@@ -347,6 +353,7 @@ export interface FileRoutesByFullPath {
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
+  '/agent-earning-guide': typeof AgentEarningGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
   '/aviator-guide': typeof AviatorGuideRoute
@@ -404,6 +411,7 @@ export interface FileRoutesByTo {
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
+  '/agent-earning-guide': typeof AgentEarningGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
   '/aviator-guide': typeof AviatorGuideRoute
@@ -461,6 +469,7 @@ export interface FileRoutesById {
   '/affiliate-disclosure': typeof AffiliateDisclosureRoute
   '/affiliate-login': typeof AffiliateLoginRoute
   '/affiliate-program': typeof AffiliateProgramRoute
+  '/agent-earning-guide': typeof AgentEarningGuideRoute
   '/apk-download-guide': typeof ApkDownloadGuideRoute
   '/author': typeof AuthorRoute
   '/aviator-guide': typeof AviatorGuideRoute
@@ -520,6 +529,7 @@ export interface FileRouteTypes {
     | '/affiliate-disclosure'
     | '/affiliate-login'
     | '/affiliate-program'
+    | '/agent-earning-guide'
     | '/apk-download-guide'
     | '/author'
     | '/aviator-guide'
@@ -577,6 +587,7 @@ export interface FileRouteTypes {
     | '/affiliate-disclosure'
     | '/affiliate-login'
     | '/affiliate-program'
+    | '/agent-earning-guide'
     | '/apk-download-guide'
     | '/author'
     | '/aviator-guide'
@@ -633,6 +644,7 @@ export interface FileRouteTypes {
     | '/affiliate-disclosure'
     | '/affiliate-login'
     | '/affiliate-program'
+    | '/agent-earning-guide'
     | '/apk-download-guide'
     | '/author'
     | '/aviator-guide'
@@ -691,6 +703,7 @@ export interface RootRouteChildren {
   AffiliateDisclosureRoute: typeof AffiliateDisclosureRoute
   AffiliateLoginRoute: typeof AffiliateLoginRoute
   AffiliateProgramRoute: typeof AffiliateProgramRoute
+  AgentEarningGuideRoute: typeof AgentEarningGuideRoute
   ApkDownloadGuideRoute: typeof ApkDownloadGuideRoute
   AuthorRoute: typeof AuthorRoute
   AviatorGuideRoute: typeof AviatorGuideRoute
@@ -1044,6 +1057,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApkDownloadGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/agent-earning-guide': {
+      id: '/agent-earning-guide'
+      path: '/agent-earning-guide'
+      fullPath: '/agent-earning-guide'
+      preLoaderRoute: typeof AgentEarningGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/affiliate-program': {
       id: '/affiliate-program'
       path: '/affiliate-program'
@@ -1149,6 +1169,7 @@ const rootRouteChildren: RootRouteChildren = {
   AffiliateDisclosureRoute: AffiliateDisclosureRoute,
   AffiliateLoginRoute: AffiliateLoginRoute,
   AffiliateProgramRoute: AffiliateProgramRoute,
+  AgentEarningGuideRoute: AgentEarningGuideRoute,
   ApkDownloadGuideRoute: ApkDownloadGuideRoute,
   AuthorRoute: AuthorRoute,
   AviatorGuideRoute: AviatorGuideRoute,
