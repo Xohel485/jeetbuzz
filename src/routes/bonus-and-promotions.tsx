@@ -5,8 +5,8 @@ import { imageAbsoluteUrl } from "@/lib/images";
 export const Route = createFileRoute("/bonus-and-promotions")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Bonus & Promotions — Terms Explained | GetJeetBuzz" },
-      { name: "description", content: "JeetBuzz welcome bonus, reloads, free bets and cashback — what the wagering terms actually mean for Bangladeshi players." },
+      { title: "JeetBuzz Bonus & Promotions 2026 - Reloads, Cashback & Free Bets Explained" },
+      { name: "description", content: "JeetBuzz bonus and promotions 2026 — welcome bonus, reloads, free bets and cashback rates explained, with the wagering and max-bet rules Bangladesh players must know." },
       { property: "og:title", content: "JeetBuzz Bonus & Promotions — Terms Explained" },
       { property: "og:description", content: "What JeetBuzz bonus terms really mean — wagering, max bet, eligible games." },
       { property: "og:type", content: "article" },

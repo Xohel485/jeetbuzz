@@ -6,8 +6,8 @@ import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/welcome-bonus")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Welcome Bonus — How to Claim Safely (2026) | GetJeetBuzz" },
-      { name: "description", content: "JeetBuzz welcome bonus — current offer, wagering requirements, max-bet rule, eligible games and the right way to claim from BD, PK and IN." },
+      { title: "JeetBuzz Welcome Bonus 2026 - How to Claim, Wagering & Max Bet (BD/PK/IN)" },
+      { name: "description", content: "JeetBuzz welcome bonus 2026 — current sports and casino offers, wagering requirements, max-bet rule, eligible games and the safe way to claim from BD, PK and IN." },
       { property: "og:title", content: "JeetBuzz Welcome Bonus — How to Claim Safely" },
       { property: "og:description", content: "How to claim and clear the JeetBuzz welcome bonus without voiding it." },
       { property: "og:type", content: "article" },
