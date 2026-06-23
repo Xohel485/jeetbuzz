@@ -1,14 +1,19 @@
 import { SectionHeader } from "./SectionHeader";
 import { JsonLd } from "@/components/JsonLd";
-import tigers from "@/assets/sponsors/montreal-royal-tigers.png.asset.json";
-import bulls from "@/assets/sponsors/delhi-bulls.webp.asset.json";
+import tigersAvif from "@/assets/sponsors/montreal-royal-tigers.avif.asset.json";
+import tigersWebp from "@/assets/sponsors/montreal-royal-tigers.webp.asset.json";
+import bullsAvif from "@/assets/sponsors/delhi-bulls.avif.asset.json";
+import bullsWebp from "@/assets/sponsors/delhi-bulls-opt.webp.asset.json";
 
 type Sponsor = {
   team: string;
   badge: string;
   league: string;
   year: string;
-  image: string;
+  avif: string;
+  webp: string;
+  width: number;
+  height: number;
   alt: string;
   paragraphs: string[];
 };
@@ -19,7 +24,10 @@ const SPONSORS: Sponsor[] = [
     badge: "Principal Sponsor",
     league: "Canada Super 60 (CS60)",
     year: "2025 Season",
-    image: tigers.url,
+    avif: tigersAvif.url,
+    webp: tigersWebp.url,
+    width: 1280,
+    height: 636,
     alt: "Montreal Royal Tigers squad in red and gold jerseys with JeetBuzz branding — 2025 Canada Super 60 principal sponsor",
     paragraphs: [
       "We are honored to serve as the Principal Sponsor of the Montreal Royal Tigers for the 2025 Canada Super 60 (CS60) season — a partnership that celebrates ambition, teamwork and the growing legacy of cricket in North America.",
@@ -33,7 +41,10 @@ const SPONSORS: Sponsor[] = [
     badge: "Principal Sponsor",
     league: "Abu Dhabi T10 League",
     year: "2023 Season",
-    image: bulls.url,
+    avif: bullsAvif.url,
+    webp: bullsWebp.url,
+    width: 1280,
+    height: 579,
     alt: "Delhi Bulls team crest with fire effect — JeetBuzz principal sponsor of Abu Dhabi T10 2023",
     paragraphs: [
       "We are absolutely delighted to have partnered with the powerhouse team Delhi Bulls as their principal sponsor for the Abu Dhabi T10 2023. Renowned for their dedication and trailblazing spirit, Delhi Bulls perfectly embody the boldness and unwavering determination that defines the JeetBuzz brand.",
@@ -68,16 +79,21 @@ export default function SponsorsSection() {
             itemType="https://schema.org/SportsTeam"
           >
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-black/40 ring-1 ring-white/5">
-              <img
-                src={s.image}
-                alt={s.alt}
-                loading="lazy"
-                decoding="async"
-                width={1920}
-                height={1080}
-                className="h-full w-full object-cover"
-                itemProp="image"
-              />
+              <picture>
+                <source type="image/avif" srcSet={s.avif} />
+                <source type="image/webp" srcSet={s.webp} />
+                <img
+                  src={s.webp}
+                  alt={s.alt}
+                  loading="lazy"
+                  decoding="async"
+                  width={s.width}
+                  height={s.height}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="h-full w-full object-cover"
+                  itemProp="image"
+                />
+              </picture>
               <span className="absolute left-3 top-3 rounded-full bg-primary/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-lg">
                 {s.badge}
               </span>
@@ -113,7 +129,7 @@ export default function SponsorsSection() {
               name: s.team,
               sport: "Cricket",
               memberOf: s.league,
-              image: s.image,
+              image: s.webp,
               description: s.paragraphs[0],
             },
           })),
