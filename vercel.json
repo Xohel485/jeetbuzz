@@ -12,7 +12,7 @@
   "rewrites": [
     {
       "source": "/__l5e/:path*",
-      "destination": "https://cdn.lovable.dev/__l5e/:path*"
+      "destination": "https://project--b6a57b46-03f8-4ad7-95af-1c2e88e2b85f.lovable.app/__l5e/:path*"
     }
   ],
   "headers": [
