@@ -12,6 +12,7 @@ export function HomePage() {
           when its placeholder scrolls into (or near) the viewport. */}
       <LazyOnVisible load={() => import("./GuideCards")} minHeight={520} />
       <LazyOnVisible load={() => import("./PaymentSection")} minHeight={1200} />
+      <LazyOnVisible load={() => import("./ProvidersSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./BlogSection")} minHeight={700} />
       <LazyOnVisible load={() => import("./FAQSection")} minHeight={900} />
       <LazyOnVisible load={() => import("./FooterSection")} minHeight={800} />
