@@ -29,7 +29,7 @@ export function LocalizedIntro({
           {block.heading}
         </h2>
         <div className="mt-5 space-y-4">
-          {block.paragraphs.map((p, i) => (
+          {block.paragraphs.map((p: string, i: number) => (
             <p key={i} className="text-pretty text-sm leading-relaxed text-foreground/85 md:text-base">
               {p}
             </p>
@@ -37,7 +37,7 @@ export function LocalizedIntro({
         </div>
         {block.bullets && block.bullets.length > 0 && (
           <ul className="mt-5 space-y-2.5">
-            {block.bullets.map((b, i) => (
+            {block.bullets.map((b: string, i: number) => (
               <li
                 key={i}
                 className="border-l-2 border-primary/40 pl-4 text-sm leading-relaxed text-muted-foreground"
