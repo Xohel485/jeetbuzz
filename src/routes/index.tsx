@@ -8,21 +8,21 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "JeetBuzz Guide — Login, Signup & Review (BD/PK/IN)",
+          "JeetBuzz Bangladesh Pakistan India 2026 - Login, Signup, Bonus & APK Guide",
       },
       {
         name: "description",
         content:
-          "JeetBuzz guide for Bangladesh, Pakistan & India — signup, login, bonuses, APK, bKash/Nagad/UPI deposits and live cricket betting on JeetBuzz.",
+          "JeetBuzz 2026 guide for Bangladesh, Pakistan and India — login links, signup, welcome bonus, APK install, bKash/Nagad/UPI deposits and live cricket markets.",
       },
       {
         property: "og:title",
-        content: "JeetBuzz Login, Signup & Bonus Guide — Bangladesh · Pakistan · India",
+        content: "JeetBuzz Bangladesh Pakistan India 2026 - Login, Signup, Bonus & APK Guide",
       },
       {
         property: "og:description",
         content:
-          "Everything players in Bangladesh, Pakistan and India need to know about JeetBuzz — signup, bonuses, payments, app.",
+          "JeetBuzz 2026 guide for Bangladesh, Pakistan and India — login, signup, welcome bonus, APK download, bKash/Nagad/UPI deposits and BPL/IPL cricket markets.",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: imageAbsoluteUrl("hero") },

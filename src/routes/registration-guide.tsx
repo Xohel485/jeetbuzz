@@ -7,8 +7,8 @@ import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/registration-guide")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Registration Guide for Bangladesh | GetJeetBuzz" },
-      { name: "description", content: "How to register a JeetBuzz account from Bangladesh — phone signup, KYC, first deposit. Bengali & English." },
+      { title: "JeetBuzz Registration Guide Bangladesh 2026 - Signup, KYC, First Deposit" },
+      { name: "description", content: "Step-by-step JeetBuzz registration guide for Bangladesh 2026 — phone signup, OTP, KYC documents, first bKash/Nagad deposit and welcome bonus activation in Bengali or English." },
       { property: "og:title", content: "JeetBuzz Registration Guide for Bangladesh" },
       { property: "og:description", content: "Step-by-step JeetBuzz signup from Bangladesh." },
       { property: "og:type", content: "article" },

@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/phonepe-guide";
-const TITLE = "JeetBuzz PhonePe Guide — Deposits via UPI from India";
+const TITLE =
+  "JeetBuzz PhonePe Deposit Guide India 2026 - UPI VPA, Step by Step";
 const DESC =
-  "Using PhonePe to fund JeetBuzz from India — what PhonePe actually does, the UPI VPA flow, and how to avoid common 'success but pending' situations.";
+  "Step-by-step JeetBuzz PhonePe deposit guide for India 2026 — UPI VPA flow, what PhonePe actually does, transaction limits and how to avoid success-but-pending cashier states.";
 
 export const Route = createFileRoute("/phonepe-guide")({
   head: () => ({

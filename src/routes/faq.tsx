@@ -138,8 +138,8 @@ const FAQS_HI: FAQItem[] = [
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz FAQ — Bangladesh | GetJeetBuzz" },
-      { name: "description", content: "Common questions about JeetBuzz in Bangladesh — legality, signup, bonuses, payments, support." },
+      { title: "JeetBuzz FAQ 2026 - Signup, Bonus, bKash, Nagad & Safety (BD/PK/IN)" },
+      { name: "description", content: "JeetBuzz FAQ for 2026 — answers on signup, KYC, welcome bonus, wagering, bKash and Nagad deposits, withdrawals, APK safety and 2FA for BD, PK and IN players." },
       { property: "og:title", content: "JeetBuzz FAQ — Bangladesh" },
       { property: "og:description", content: "Common questions about JeetBuzz in Bangladesh." },
       { property: "og:type", content: "article" },

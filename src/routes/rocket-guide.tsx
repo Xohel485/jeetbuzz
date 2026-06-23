@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/rocket-guide";
-const TITLE = "JeetBuzz Rocket Guide — Dutch-Bangla Mobile Banking";
+const TITLE =
+  "JeetBuzz Rocket Deposit & Withdrawal Guide Bangladesh 2026 - DBBL Mobile Banking";
 const DESC =
-  "How to deposit and withdraw on JeetBuzz with Rocket (DBBL Mobile Banking) — minimums, processing times and tips for Bangladesh users.";
+  "Step-by-step JeetBuzz Rocket (DBBL Mobile Banking) deposit and withdrawal guide for Bangladesh 2026 — biller ID, PIN tips, minimums, processing times and error fixes.";
 
 export const Route = createFileRoute("/rocket-guide")({
   head: () => ({

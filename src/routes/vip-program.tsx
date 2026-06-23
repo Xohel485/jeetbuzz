@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/vip-program";
-const TITLE = "JeetBuzz VIP Program — Tiers, Perks & How to Climb Faster";
+const TITLE =
+  "JeetBuzz VIP Program 2026 - Tiers, Cashback, Faster Withdrawals (BD/PK/IN)";
 const DESC =
-  "How the JeetBuzz VIP program works — tier requirements, cashback, faster withdrawals, dedicated managers and how Bangladesh high rollers progress.";
+  "JeetBuzz VIP program 2026 — tier requirements, cashback rates, faster withdrawal limits and dedicated managers for Bangladesh, Pakistan and India high rollers.";
 
 export const Route = createFileRoute("/vip-program")({
   head: () => ({

@@ -4,9 +4,10 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/deposit-guide";
-const TITLE = "JeetBuzz Deposit Guide — bKash, Nagad, Rocket & UPI";
+const TITLE =
+  "JeetBuzz Deposit Guide Bangladesh Pakistan India 2026 - bKash, Nagad, UPI";
 const DESC =
-  "How to deposit on JeetBuzz from Bangladesh — bKash, Nagad, Rocket, UPI, USDT — with minimums, processing times and fixes for failed deposits.";
+  "How to deposit on JeetBuzz in 2026 from Bangladesh, Pakistan and India — bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
 
 export const Route = createFileRoute("/deposit-guide")({
   head: () => ({

@@ -4,8 +4,8 @@ import { GuidePage } from "@/components/GuidePage";
 export const Route = createFileRoute("/deposit-withdrawal-guide")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Deposit & Withdrawal Guide (bKash · Nagad · Rocket) | GetJeetBuzz" },
-      { name: "description", content: "Minimums, fees, processing times and common errors for JeetBuzz payments via bKash, Nagad and Rocket." },
+      { title: "JeetBuzz Deposit & Withdrawal Guide Bangladesh 2026 - bKash, Nagad, Rocket" },
+      { name: "description", content: "Complete JeetBuzz deposit and withdrawal guide for Bangladesh 2026 — bKash, Nagad and Rocket minimums, fees, processing times and fixes for common errors." },
       { property: "og:title", content: "JeetBuzz Deposit & Withdrawal Guide" },
       { property: "og:description", content: "bKash, Nagad and Rocket on JeetBuzz — minimums, fees and processing times." },
       { property: "og:type", content: "article" },

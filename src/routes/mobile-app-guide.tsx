@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, softwareApplicationSchema } from "@/lib/schema";
 
 const PATH = "/mobile-app-guide";
-const TITLE = "JeetBuzz Mobile App Guide — Android & iOS for Bangladesh";
+const TITLE =
+  "JeetBuzz Mobile App Guide Bangladesh 2026 - Android & iOS Install, Login";
 const DESC =
-  "How to use the JeetBuzz mobile app on Android and iOS — install, login, biometric security, push notifications and live betting tips.";
+  "JeetBuzz mobile app guide for Bangladesh 2026 — Android APK and iOS install, login, biometric security, push notifications and live cricket in-play tips on the go.";
 
 export const Route = createFileRoute("/mobile-app-guide")({
   head: () => ({

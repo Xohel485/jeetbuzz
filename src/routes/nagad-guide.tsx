@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/nagad-guide";
-const TITLE = "JeetBuzz Nagad Guide — Deposits & Withdrawals";
+const TITLE =
+  "JeetBuzz Nagad Deposit & Withdrawal Guide Bangladesh 2026 - Step by Step";
 const DESC =
-  "Step-by-step Nagad deposits and withdrawals on JeetBuzz — minimums, processing times and troubleshooting for Bangladesh players.";
+  "Step-by-step JeetBuzz Nagad deposit and withdrawal guide for Bangladesh 2026 — Send Money flow, minimums, fees, processing times and fixes for failed Nagad transfers.";
 
 export const Route = createFileRoute("/nagad-guide")({
   head: () => ({

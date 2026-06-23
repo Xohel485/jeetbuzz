@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/paytm-guide";
-const TITLE = "JeetBuzz Paytm Guide — Deposits via UPI from India";
+const TITLE =
+  "JeetBuzz Paytm Deposit Guide India 2026 - UPI Path, Step by Step";
 const DESC =
-  "Funding JeetBuzz from India using Paytm — the UPI path (recommended), what changed after Paytm Payments Bank restrictions, and how Paytm differs from PhonePe in practice.";
+  "Step-by-step JeetBuzz Paytm deposit guide for India 2026 — UPI path (recommended), what changed after Paytm Payments Bank restrictions and how it differs from PhonePe.";
 
 export const Route = createFileRoute("/paytm-guide")({
   head: () => ({

@@ -4,8 +4,8 @@ import { GuidePage } from "@/components/GuidePage";
 export const Route = createFileRoute("/sports-betting")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Sports Betting Guide | GetJeetBuzz" },
-      { name: "description", content: "Football, tennis, kabaddi and eSports on JeetBuzz — markets, odds and Bangladesh-friendly tips." },
+      { title: "JeetBuzz Sports Betting Guide 2026 - Cricket, Football, Kabaddi & eSports" },
+      { name: "description", content: "JeetBuzz sports betting guide 2026 — cricket, football, tennis, kabaddi and eSports markets with odds comparison and bankroll tips for Bangladesh, Pakistan and India." },
       { property: "og:title", content: "JeetBuzz Sports Betting Guide" },
       { property: "og:description", content: "Sports markets, odds and tips on JeetBuzz." },
       { property: "og:type", content: "article" },

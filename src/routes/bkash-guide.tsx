@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/bkash-guide";
-const TITLE = "JeetBuzz bKash Guide — Deposits & Withdrawals from Bangladesh";
+const TITLE =
+  "JeetBuzz bKash Deposit & Withdrawal Guide Bangladesh 2026 - Step by Step";
 const DESC =
-  "How to deposit and withdraw on JeetBuzz with bKash — step-by-step, minimums, fees, processing times and fixes for failed transactions.";
+  "Step-by-step JeetBuzz bKash deposit and withdrawal guide for Bangladesh 2026 — Send Money flow, minimums, fees, processing times and fixes for failed transactions.";
 
 export const Route = createFileRoute("/bkash-guide")({
   head: () => ({

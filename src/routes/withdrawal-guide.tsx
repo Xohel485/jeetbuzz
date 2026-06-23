@@ -3,9 +3,10 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/withdrawal-guide";
-const TITLE = "JeetBuzz Withdrawal Guide — Cash Out to bKash, Nagad, Rocket";
+const TITLE =
+  "JeetBuzz Withdrawal Guide Bangladesh 2026 - bKash, Nagad, Rocket Cash Out";
 const DESC =
-  "How withdrawals work on JeetBuzz for Bangladesh players — KYC, processing times, limits and what to do if a withdrawal is delayed.";
+  "JeetBuzz withdrawal guide for Bangladesh 2026 — cash out to bKash, Nagad and Rocket, KYC checklist, daily limits, processing times and what to do if withdrawal is delayed.";
 
 export const Route = createFileRoute("/withdrawal-guide")({
   head: () => ({

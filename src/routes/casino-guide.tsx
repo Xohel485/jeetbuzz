@@ -5,8 +5,8 @@ import { imageAbsoluteUrl } from "@/lib/images";
 export const Route = createFileRoute("/casino-guide")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Casino Guide — Slots, Live Tables & RTP | GetJeetBuzz" },
-      { name: "description", content: "What's actually worth playing at JeetBuzz casino — slot RTPs, live tables and Bengali-speaking dealers." },
+      { title: "JeetBuzz Casino Guide 2026 - Slots, Live Tables, RTP & Bengali Dealers" },
+      { name: "description", content: "JeetBuzz casino guide 2026 — what slots are worth playing, RTP numbers to look for, live tables, Bengali-speaking dealers and how casino bonuses are wagered." },
       { property: "og:title", content: "JeetBuzz Casino Guide — Slots, Live Tables & RTP" },
       { property: "og:description", content: "Slots, live tables and RTP guidance for JeetBuzz casino." },
       { property: "og:type", content: "article" },
