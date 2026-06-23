@@ -7,6 +7,8 @@ import {
   Smartphone,
   Trophy,
   Wallet,
+  ShieldAlert,
+  Banknote,
 } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 
@@ -14,38 +16,50 @@ const GUIDE_CARDS = [
   {
     to: "/jeetbuzz-review",
     icon: BookOpen,
-    title: "Full JeetBuzz Review",
-    desc: "Honest 2026 breakdown — features, odds, payments, support.",
+    title: "JeetBuzz Review 2026 — Full Operator Breakdown",
+    desc: "The pillar JeetBuzz review for Bangladesh, Pakistan and India — odds quality, payment speed, support and the trust verdict in one place.",
   },
   {
     to: "/registration-guide",
     icon: ShieldCheck,
-    title: "Registration Guide",
-    desc: "Step-by-step signup from Bangladesh, in Bengali & English.",
+    title: "JeetBuzz Registration & KYC",
+    desc: "Open an account in under 3 minutes — phone signup, OTP, KYC and first bKash/Nagad deposit in Bengali and English.",
   },
   {
     to: "/bonus-and-promotions",
     icon: Gift,
-    title: "Bonuses Explained",
-    desc: "Welcome offer, wagering terms, free bets — no fluff.",
+    title: "Bonus & Promotions Explained",
+    desc: "Welcome bonus, reloads, cashback and free bets with wagering and max-bet rules in plain language.",
   },
   {
     to: "/apk-download-guide",
     icon: Smartphone,
-    title: "App Access Guide",
-    desc: "How to get the JeetBuzz app safely from the official site.",
+    title: "JeetBuzz APK Download Guide",
+    desc: "Install the official Android app safely — verified source, permission walk-through and common install errors fixed.",
   },
   {
-    to: "/deposit-withdrawal-guide",
+    to: "/deposit-guide",
     icon: Wallet,
-    title: "Payments (bKash · Nagad · Rocket)",
-    desc: "Min deposit, withdrawal times, common errors solved.",
+    title: "Deposit Guide — bKash, Nagad, UPI",
+    desc: "Every supported rail with minimums, processing times and the exact Send-Money flow for first-time depositors.",
+  },
+  {
+    to: "/withdrawal-guide",
+    icon: Banknote,
+    title: "Withdrawal Guide & Limits",
+    desc: "How to cash out fast — KYC checklist, VIP-tier limits and what to do when a withdrawal sits pending.",
   },
   {
     to: "/live-cricket-betting",
     icon: Trophy,
     title: "Live Cricket Betting",
-    desc: "Markets, in-play tips, BPL/IPL coverage on JeetBuzz.",
+    desc: "BPL, IPL and PSL markets — in-play odds, cash-out timing and the volatility playbook for live cricket.",
+  },
+  {
+    to: "/is-jeetbuzz-safe",
+    icon: ShieldAlert,
+    title: "Is JeetBuzz Safe & Legit?",
+    desc: "Independent 2026 trust review — Curacao licence, payout record, KYC handling and the red flags every player should know.",
   },
 ] as const;
 
