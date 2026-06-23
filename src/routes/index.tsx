@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
         href: imageUrl("hero", 768, "avif"),
         type: "image/avif",
         imageSrcSet: `${imageUrl("hero", 480, "avif")} 480w, ${imageUrl("hero", 768, "avif")} 768w, ${imageUrl("hero", 1125, "avif")} 1125w`,
-        imageSizes: "100vw",
+        imageSizes: "(max-width: 768px) 100vw, 1200px",
         fetchPriority: "high",
       },
       canonicalLink("/"),
