@@ -12,7 +12,8 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { organizationSchema, websiteSchema } from "../lib/schema";
-import { I18nProvider } from "../lib/i18n";
+import { I18nProvider, useLocale } from "../lib/i18n";
+import { useState, useRef } from "react";
 import { AnalyticsRouterBridge } from "../components/AnalyticsRouterBridge";
 
 // GTM container — routes events to GA4 (G-KD7NELS5DS) and Microsoft
@@ -194,9 +195,32 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
         <AnalyticsRouterBridge />
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
+        <LocaleFader>
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </LocaleFader>
       </I18nProvider>
     </QueryClientProvider>
+  );
+}
+
+/**
+ * Premium 150ms opacity fade on locale change. No layout animation, no
+ * reload, no white flash, no skeleton — just opacity 1 → 0 → 1 on the
+ * already-rendered route content when the active locale changes.
+ */
+function LocaleFader({ children }: { children: ReactNode }) {
+  const locale = useLocale();
+  const prev = useRef(locale);
+  const [opacity, setOpacity] = useState(1);
+  useEffect(() => {
+    if (prev.current === locale) return;
+    prev.current = locale;
+    setOpacity(0);
+    const t = setTimeout(() => setOpacity(1), 16);
+    return () => clearTimeout(t);
+  }, [locale]);
+  return (
+    <div style={{ opacity, transition: "opacity 150ms ease-out" }}>{children}</div>
   );
 }

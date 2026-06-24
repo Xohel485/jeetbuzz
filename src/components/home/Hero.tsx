@@ -52,9 +52,9 @@ export function Hero() {
           }}
         />
         <div className="container-pro pt-16 pb-16 text-center md:pt-28 md:pb-28">
-          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3.5 py-1.5 text-xs text-muted-foreground backdrop-blur">
-            <span className="size-1.5 rounded-full bg-primary" />
-            {t("hero.eyebrow")}
+          <div className="mx-auto flex max-w-full flex-wrap items-center justify-center gap-2 whitespace-normal rounded-full border border-white/10 bg-black/40 px-3.5 py-1.5 text-xs text-muted-foreground backdrop-blur">
+            <span className="size-1.5 shrink-0 rounded-full bg-primary" />
+            <span className="whitespace-normal break-words text-center">{t("hero.eyebrow")}</span>
           </div>
           <h1 className="mx-auto mt-6 max-w-4xl text-balance text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl">
             {t("hero.title.lead")}{" "}
