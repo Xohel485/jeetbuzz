@@ -25,9 +25,9 @@ export const BUILD_TIME = (() => {
     ...Object.values(LASTMOD_MAP),
     LOCALIZED_LASTMOD,
     BLOG_INDEX_LASTMOD,
-    BUILD_FALLBACK,
   ].filter(Boolean);
-  return all.reduce((a, b) => (a > b ? a : b), "");
+  const max = all.reduce((a, b) => (a > b ? a : b), "");
+  return max || BUILD_FALLBACK;
 })();
 export const BUILD_DATE = BUILD_TIME.slice(0, 10);
 
