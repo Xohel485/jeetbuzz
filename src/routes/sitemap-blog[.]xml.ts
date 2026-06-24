@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { POSTS } from "@/lib/blog-posts";
-import { BUILD_DATE, renderUrlset, type SitemapEntry } from "@/lib/sitemap-helpers";
+import { BLOG_INDEX_LASTMOD, renderUrlset, type SitemapEntry } from "@/lib/sitemap-helpers";
 
 export const Route = createFileRoute("/sitemap-blog.xml")({
   server: {
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/sitemap-blog.xml")({
         const entries: SitemapEntry[] = [
           {
             path: "/blog",
-            lastmod: BUILD_DATE,
+            lastmod: BLOG_INDEX_LASTMOD,
             changefreq: "weekly",
             priority: "0.8",
           },
