@@ -9,7 +9,7 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 import { SmartImage } from "@/components/SmartImage";
 import { imageAbsoluteUrl, IMAGES } from "@/lib/images";
 import { Star } from "lucide-react";
-import { articleSchema, reviewSchema, jsonLdScript, canonicalLink } from "@/lib/schema";
+import { articleSchema, reviewSchema, jsonLdScript, canonicalLink, hreflangLinks } from "@/lib/schema";
 
 export const Route = createFileRoute("/jeetbuzz-review")({
   head: () => ({
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/jeetbuzz-review")({
       { property: "og:image:height", content: String(IMAGES.liveCricket.h) },
       { name: "twitter:image", content: imageAbsoluteUrl("liveCricket") },
     ],
-    links: [canonicalLink("/jeetbuzz-review")],
+    links: [canonicalLink("/jeetbuzz-review"), ...hreflangLinks("/jeetbuzz-review")],
     scripts: [
       jsonLdScript(
         articleSchema({

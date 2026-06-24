@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { imageAbsoluteUrl } from "@/lib/images";
-import { articleSchema, jsonLdScript, canonicalLink } from "@/lib/schema";
+import { articleSchema, jsonLdScript, canonicalLink, hreflangLinks } from "@/lib/schema";
 import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 
 export const Route = createFileRoute("/registration-guide")({
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/registration-guide")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("registration") },
     ],
-    links: [canonicalLink("/registration-guide")],
+    links: [canonicalLink("/registration-guide"), ...hreflangLinks("/registration-guide")],
     scripts: [
       jsonLdScript(
         articleSchema({
