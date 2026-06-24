@@ -114,6 +114,10 @@
 :root {
   /* GetJeetBuzz — brand: cricket green + vivid orange on deep slate */
   --radius: 0.75rem;
+  /* Live header height — kept in sync by SiteHeader via ResizeObserver.
+     Used by html { scroll-padding-top } so in-page anchor jumps land
+     below the sticky header regardless of locale or wrap state. */
+  --header-h: 64px;
   /* Deep near-black background (#0a0a0a / #111111) */
   --background: oklch(0.15 0 0);
   --foreground: oklch(0.98 0 0);
@@ -184,6 +188,11 @@
 @layer base {
   * {
     border-color: var(--color-border);
+  }
+
+  html {
+    /* Anchor scrolls (and #hash navigation) clear the sticky header. */
+    scroll-padding-top: calc(var(--header-h, 64px) + 8px);
   }
 
   body {

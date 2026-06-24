@@ -1,5 +1,5 @@
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { GO, REL } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
@@ -181,8 +181,33 @@ function CompactAuthButtons() {
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { t } = useI18n();
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  // Publish the live header height as a CSS variable so layout primitives
+  // (scroll-padding-top, anchor offsets, content clearance) stay correct
+  // regardless of locale, font wrap, or future header changes.
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const setVar = () => {
+      const h = Math.round(el.getBoundingClientRect().height);
+      if (h > 0) document.documentElement.style.setProperty("--header-h", `${h}px`);
+    };
+    setVar();
+    const ro = new ResizeObserver(setVar);
+    ro.observe(el);
+    window.addEventListener("orientationchange", setVar);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("orientationchange", setVar);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/55">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-40 border-b border-white/10 bg-background/90 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80"
+    >
       <div className="container-pro flex h-16 items-center justify-between gap-2 md:h-20 md:gap-4">
         <Link to="/" className="flex min-w-0 shrink items-center" aria-label="GetJeetBuzz — Home">
           <img
