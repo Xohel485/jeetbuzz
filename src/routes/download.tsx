@@ -98,6 +98,14 @@ export const Route = createFileRoute("/download")({
         "Sign in via [Login](/login). If you do not have an account, tap Sign Up inside the app or use our [Signup](/signup) page. Set 2FA from Account → Security. Open the Cashier and link your local wallet — [Payment Methods](/payment-methods) walks through the options. Then explore: live cricket, live casino, Aviator, the Exchange.",
         "## Removing the app",
         "Android: long-press the JeetBuzz icon, tap Uninstall. iOS: long-press the home-screen icon, tap Remove App, Delete from Home Screen. Your JeetBuzz account is untouched — log back in any time from any device.",
+        "## Storage, battery and data usage in practice",
+        "Storage: the JeetBuzz Android APK installs at under 50 MB; cached game assets push the on-device footprint to roughly 120–180 MB after a week of mixed Sportsbook and Casino use. Battery: a 30-minute live cricket session drains a similar amount as 30 minutes of Instagram, because the stream is the costly part — pure bet placement is negligible. Data: live cricket video uses around 1 MB per minute on the default quality; bet placement and casino spins are well under 1 MB per hour combined. Cap stream quality in Settings on metered plans.",
+        "## Sideloading risks and how to mitigate them",
+        "Sideloading any Android APK carries the abstract risk of a tampered file. Mitigations: only download from the verified outbound button on this page, verify the SHA-256 hash, keep Google Play Protect enabled (it scans sideloaded APKs in real time), and refuse to install any APK that asks for SMS, contacts or background location. The official JeetBuzz app passes Play Protect cleanly because the permissions match what the operator declares.",
+        "## Push notifications and what they tell you",
+        "Once installed, the JeetBuzz Android app can send push for OTP codes during login, deposit confirmations, withdrawal status changes, bet settlement on big tickets, and live event reminders for fixtures you opted into. Turn them all on at first launch — OTP via push routinely arrives in under three seconds versus 30–60 seconds for SMS in BD, PK and IN. Granular toggles live under Account → Notifications if you later want to mute promotional messages.",
+        "## When to skip the app entirely",
+        "On a borrowed phone, on a desktop or laptop, on a one-off netcafe session, or when you simply want zero install footprint, the mobile site is the right answer — it delivers the same Sportsbook, Casino, Live and Cashier in any modern browser. The app earns its place only when you play often enough that biometric login, push OTP and ISP-block resilience genuinely save you time.",
       ]}
       faqs={[
         {
