@@ -411,33 +411,37 @@ function AffiliateProgramPage() {
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <h2 className="text-2xl font-bold md:text-3xl">
-              How to Join — কীভাবে যুক্ত হবেন
+              Requirements & How to Join
             </h2>
             <p className="mt-2 text-sm text-muted-foreground md:text-base">
-              পাঁচ মিনিটে সাইন আপ — কোনো ফি নেই, কোনো hidden শর্ত নেই।
+              Six simple steps to start earning up to 60% weekly commission.
             </p>
           </div>
           <ol className="mt-8 space-y-4">
             {[
               {
-                t: "নিচের 'Become Affiliate' বাটনে ক্লিক করুন",
-                d: "আপনাকে অফিসিয়াল JeetBuzz Partners portal-এ নিয়ে যাবে।",
+                t: "Register as a JeetBuzz Affiliate",
+                d: "Sign up on the official JeetBuzz Partners portal — free and fast.",
               },
               {
-                t: "jeetbuzzpartners.info-এ ফ্রি অ্যাকাউন্ট তৈরি করুন",
-                d: "নাম, ইমেইল, ট্রাফিক সোর্স এবং পেমেন্ট প্রেফারেন্স দিন।",
+                t: "Complete your KYC verification",
+                d: "KYC verification is mandatory before commissions are released.",
               },
               {
-                t: "অনুমোদনের জন্য অপেক্ষা করুন (সাধারণত ২৪ ঘণ্টা)",
-                d: "অ্যাপ্রুভ হলে ইমেইলে dashboard access পাবেন।",
+                t: "Join the official JeetBuzz Affiliate Telegram Channel",
+                d: "Stay informed about updates, payouts and promotions.",
               },
               {
-                t: "Marketing materials ও ইউনিক লিংক ডাউনলোড করুন",
-                d: "Bengali/English banners, landing pages এবং sub-ID tracking ব্যবহার করুন।",
+                t: "Promote your affiliate link",
+                d: "Share your unique referral link across your audience and channels.",
               },
               {
-                t: "প্রমোট শুরু করুন এবং কমিশন আয় করুন",
-                d: "Real-time dashboard-এ clicks, deposits ও earnings track করুন।",
+                t: "Maintain qualified active players",
+                d: "Minimum 5 active players with at least ৳3000 turnover each.",
+              },
+              {
+                t: "Receive weekly commission every Wednesday",
+                d: "Up to 60% weekly payout plus an extra 3.5% referral commission.",
               },
             ].map((step, i) => (
               <li key={i} className="glass flex gap-4 rounded-2xl p-4 md:p-5">
