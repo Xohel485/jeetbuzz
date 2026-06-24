@@ -106,6 +106,8 @@ export const Route = createFileRoute("/login")({
         "Travelling from Bangladesh to Pakistan, or India to the UAE, and trying to log in often triggers an extra email or SMS verification step. This is by design — the operator flags first-time geo changes as a possible takeover. Have your registered SIM with you when crossing borders, or expect to spend ten minutes with Live Chat verifying identity.",
         "## What to do if your account is hacked",
         "Signs: login emails you did not request, withdrawals to a wallet you do not recognise, balance drops with no bet history. Act in this order — change the password from the [Login](/login) hub, force-logout every session under Account → Sessions, enable 2FA if it was off, contact Live Chat with a description of the timeline. JeetBuzz can freeze the account during investigation and, in most documented cases, restore stolen balances if 2FA was active at the time of breach.",
+        "## How JeetBuzz login compares to other South Asian platforms",
+        "Many readers arrive here after trying to sign in across several platforms — JeetBuzz, Baji, Crickex or Krikya — and want to understand why the JeetBuzz login feels different. The short answer is single sign-on: one JeetBuzz account spans Sportsbook, Casino, Live and Exchange, whereas some neighbours split their casino and exchange behind separate forms. The rest of this guide focuses purely on JeetBuzz access, 2FA and recovery — the only login you are signing into from this page.",
       ]}
       faqs={[
         {
@@ -139,6 +141,14 @@ export const Route = createFileRoute("/login")({
         {
           q: "Where is the JeetBuzz logout button?",
           a: "Open your profile avatar at the top right after signing in — Logout is the last entry. To kill sessions on devices you no longer have, go to Account → Sessions.",
+        },
+        {
+          q: "How is the JeetBuzz login different from Baji or Crickex login?",
+          a: "This guide only documents JeetBuzz. In practice players notice that JeetBuzz uses a single sign-on across Sportsbook, Casino, Live and Exchange, so there is no separate JeetBuzz Casino Login form to remember. For competitor specifics, consult those operators' own help pages — we focus exclusively on the verified JeetBuzz sign-in flow.",
+        },
+        {
+          q: "Why do users compare JeetBuzz with platforms like Krikya or 1xBet before logging in?",
+          a: "First-time bettors in Bangladesh, Pakistan and India often shortlist two or three brands before committing. Once an account exists, the comparison stops mattering and login hygiene takes over: bookmark this verified JeetBuzz hub, enable 2FA, and never reuse a JeetBuzz password on any other site.",
         },
       ]}
       related={[
