@@ -13,11 +13,11 @@ import {
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Login — Official Player Sign-In Page (BD · PK · IN)" },
+      { title: "JeetBuzz Login 2026 | Secure Sign In, Account Access & Login Guide | GetJeetBuzz" },
       {
         name: "description",
         content:
-          "JeetBuzz login hub for verified players in Bangladesh, Pakistan and India. Reach the official www jeetbuzz com sign-in, recover access, enable 2FA and avoid fake JetBuzz mirrors.",
+          "Access your JeetBuzz account securely with the latest JeetBuzz Login 2026 guide. Learn sign in steps, password recovery, login security, common fixes, mobile login and account access tips.",
       },
       { property: "og:title", content: "JeetBuzz Login — Verified Sign-In Hub" },
       {

@@ -13,11 +13,11 @@ import {
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Registration — Full Account Setup, KYC & First Deposit" },
+      { title: "JeetBuzz Register 2026 | Safe Account Registration Guide | GetJeetBuzz" },
       {
         name: "description",
         content:
-          "JeetBuzz registration walkthrough for Bangladesh, Pakistan and India players — full account setup, KYC document checklist, currency choice and verified first deposit through bKash, EasyPaisa or UPI.",
+          "Register a JeetBuzz account safely using our complete 2026 guide. Find registration requirements, account verification, security recommendations and helpful FAQs for new users.",
       },
       { property: "og:title", content: "JeetBuzz Registration — Full Account Setup" },
       {

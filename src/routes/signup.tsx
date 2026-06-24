@@ -13,11 +13,11 @@ import {
 export const Route = createFileRoute("/signup")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Signup — Open a Verified Player Account in 3 Minutes" },
+      { title: "JeetBuzz Signup 2026 | Create Your Account & Get Started | GetJeetBuzz" },
       {
         name: "description",
         content:
-          "JeetBuzz signup for Bangladesh, Pakistan and India. Open a verified player account with phone or email, claim the welcome bonus and start with bKash, EasyPaisa or UPI in under three minutes.",
+          "Complete your JeetBuzz Signup in minutes with our step-by-step registration guide. Learn account creation, verification, security tips, welcome offers and responsible gaming information.",
       },
       { property: "og:title", content: "JeetBuzz Signup — Open a Verified Account" },
       {
