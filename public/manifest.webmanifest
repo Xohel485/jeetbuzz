@@ -1,0 +1,19 @@
+{
+  "name": "GetJeetBuzz Web App",
+  "short_name": "GetJeetBuzz",
+  "description": "GetJeetBuzz Web App — fast access to JeetBuzz for BD, PK and IN.",
+  "start_url": "/app/launch",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "theme_color": "#0c1a13",
+  "background_color": "#0c1a13",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    { "src": "/favicon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ]
+}
