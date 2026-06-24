@@ -26,6 +26,7 @@ import { Route as SitemapGuidesDotxmlRouteImport } from './routes/sitemap-guides
 import { Route as SitemapBlogDotxmlRouteImport } from './routes/sitemap-blog[.]xml'
 import { Route as SitemapBdDotxmlRouteImport } from './routes/sitemap-bd[.]xml'
 import { Route as SitemapAffiliateDotxmlRouteImport } from './routes/sitemap-affiliate[.]xml'
+import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SecurityGuideRouteImport } from './routes/security-guide'
 import { Route as RocketGuideRouteImport } from './routes/rocket-guide'
 import { Route as ReviewPolicyRouteImport } from './routes/review-policy'
@@ -161,6 +162,11 @@ const SitemapBdDotxmlRoute = SitemapBdDotxmlRouteImport.update({
 const SitemapAffiliateDotxmlRoute = SitemapAffiliateDotxmlRouteImport.update({
   id: '/sitemap-affiliate.xml',
   path: '/sitemap-affiliate.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecurityGuideRoute = SecurityGuideRouteImport.update({
@@ -464,6 +470,7 @@ export interface FileRoutesByFullPath {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/signup': typeof SignupRoute
   '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
   '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
   '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
@@ -533,6 +540,7 @@ export interface FileRoutesByTo {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/signup': typeof SignupRoute
   '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
   '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
   '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
@@ -604,6 +612,7 @@ export interface FileRoutesById {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/signup': typeof SignupRoute
   '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
   '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
   '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
@@ -676,6 +685,7 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/signup'
     | '/sitemap-affiliate.xml'
     | '/sitemap-bd.xml'
     | '/sitemap-blog.xml'
@@ -745,6 +755,7 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/signup'
     | '/sitemap-affiliate.xml'
     | '/sitemap-bd.xml'
     | '/sitemap-blog.xml'
@@ -815,6 +826,7 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/signup'
     | '/sitemap-affiliate.xml'
     | '/sitemap-bd.xml'
     | '/sitemap-blog.xml'
@@ -886,6 +898,7 @@ export interface RootRouteChildren {
   ReviewPolicyRoute: typeof ReviewPolicyRoute
   RocketGuideRoute: typeof RocketGuideRoute
   SecurityGuideRoute: typeof SecurityGuideRoute
+  SignupRoute: typeof SignupRoute
   SitemapAffiliateDotxmlRoute: typeof SitemapAffiliateDotxmlRoute
   SitemapBdDotxmlRoute: typeof SitemapBdDotxmlRoute
   SitemapBlogDotxmlRoute: typeof SitemapBlogDotxmlRoute
@@ -1029,6 +1042,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap-affiliate.xml'
       fullPath: '/sitemap-affiliate.xml'
       preLoaderRoute: typeof SitemapAffiliateDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security-guide': {
@@ -1448,6 +1468,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewPolicyRoute: ReviewPolicyRoute,
   RocketGuideRoute: RocketGuideRoute,
   SecurityGuideRoute: SecurityGuideRoute,
+  SignupRoute: SignupRoute,
   SitemapAffiliateDotxmlRoute: SitemapAffiliateDotxmlRoute,
   SitemapBdDotxmlRoute: SitemapBdDotxmlRoute,
   SitemapBlogDotxmlRoute: SitemapBlogDotxmlRoute,
