@@ -45,7 +45,17 @@ import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
+import { Route as Jeetbuzz66VsGetjeetbuzzRouteImport } from './routes/jeetbuzz66-vs-getjeetbuzz'
+import { Route as Jeetbuzz123VsGetjeetbuzzRouteImport } from './routes/jeetbuzz123-vs-getjeetbuzz'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
+import { Route as JeetbuzzPkVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-pk-vs-getjeetbuzz'
+import { Route as JeetbuzzOrgVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-org-vs-getjeetbuzz'
+import { Route as JeetbuzzNetVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-net-vs-getjeetbuzz'
+import { Route as JeetbuzzLiveVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-live-vs-getjeetbuzz'
+import { Route as JeetbuzzIoVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-io-vs-getjeetbuzz'
+import { Route as JeetbuzzCcVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-cc-vs-getjeetbuzz'
+import { Route as JeetbuzzBetVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-bet-vs-getjeetbuzz'
+import { Route as JeetbuzzBdVsGetjeetbuzzRouteImport } from './routes/jeetbuzz-bd-vs-getjeetbuzz'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
@@ -262,9 +272,64 @@ const LiveCricketBettingRoute = LiveCricketBettingRouteImport.update({
   path: '/live-cricket-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Jeetbuzz66VsGetjeetbuzzRoute = Jeetbuzz66VsGetjeetbuzzRouteImport.update({
+  id: '/jeetbuzz66-vs-getjeetbuzz',
+  path: '/jeetbuzz66-vs-getjeetbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Jeetbuzz123VsGetjeetbuzzRoute =
+  Jeetbuzz123VsGetjeetbuzzRouteImport.update({
+    id: '/jeetbuzz123-vs-getjeetbuzz',
+    path: '/jeetbuzz123-vs-getjeetbuzz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
   id: '/jeetbuzz-review',
   path: '/jeetbuzz-review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzPkVsGetjeetbuzzRoute = JeetbuzzPkVsGetjeetbuzzRouteImport.update({
+  id: '/jeetbuzz-pk-vs-getjeetbuzz',
+  path: '/jeetbuzz-pk-vs-getjeetbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzOrgVsGetjeetbuzzRoute =
+  JeetbuzzOrgVsGetjeetbuzzRouteImport.update({
+    id: '/jeetbuzz-org-vs-getjeetbuzz',
+    path: '/jeetbuzz-org-vs-getjeetbuzz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzNetVsGetjeetbuzzRoute =
+  JeetbuzzNetVsGetjeetbuzzRouteImport.update({
+    id: '/jeetbuzz-net-vs-getjeetbuzz',
+    path: '/jeetbuzz-net-vs-getjeetbuzz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzLiveVsGetjeetbuzzRoute =
+  JeetbuzzLiveVsGetjeetbuzzRouteImport.update({
+    id: '/jeetbuzz-live-vs-getjeetbuzz',
+    path: '/jeetbuzz-live-vs-getjeetbuzz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzIoVsGetjeetbuzzRoute = JeetbuzzIoVsGetjeetbuzzRouteImport.update({
+  id: '/jeetbuzz-io-vs-getjeetbuzz',
+  path: '/jeetbuzz-io-vs-getjeetbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzCcVsGetjeetbuzzRoute = JeetbuzzCcVsGetjeetbuzzRouteImport.update({
+  id: '/jeetbuzz-cc-vs-getjeetbuzz',
+  path: '/jeetbuzz-cc-vs-getjeetbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzBetVsGetjeetbuzzRoute =
+  JeetbuzzBetVsGetjeetbuzzRouteImport.update({
+    id: '/jeetbuzz-bet-vs-getjeetbuzz',
+    path: '/jeetbuzz-bet-vs-getjeetbuzz',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzBdVsGetjeetbuzzRoute = JeetbuzzBdVsGetjeetbuzzRouteImport.update({
+  id: '/jeetbuzz-bd-vs-getjeetbuzz',
+  path: '/jeetbuzz-bd-vs-getjeetbuzz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
@@ -471,7 +536,17 @@ export interface FileRoutesByFullPath {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-bd-vs-getjeetbuzz': typeof JeetbuzzBdVsGetjeetbuzzRoute
+  '/jeetbuzz-bet-vs-getjeetbuzz': typeof JeetbuzzBetVsGetjeetbuzzRoute
+  '/jeetbuzz-cc-vs-getjeetbuzz': typeof JeetbuzzCcVsGetjeetbuzzRoute
+  '/jeetbuzz-io-vs-getjeetbuzz': typeof JeetbuzzIoVsGetjeetbuzzRoute
+  '/jeetbuzz-live-vs-getjeetbuzz': typeof JeetbuzzLiveVsGetjeetbuzzRoute
+  '/jeetbuzz-net-vs-getjeetbuzz': typeof JeetbuzzNetVsGetjeetbuzzRoute
+  '/jeetbuzz-org-vs-getjeetbuzz': typeof JeetbuzzOrgVsGetjeetbuzzRoute
+  '/jeetbuzz-pk-vs-getjeetbuzz': typeof JeetbuzzPkVsGetjeetbuzzRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz123-vs-getjeetbuzz': typeof Jeetbuzz123VsGetjeetbuzzRoute
+  '/jeetbuzz66-vs-getjeetbuzz': typeof Jeetbuzz66VsGetjeetbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -544,7 +619,17 @@ export interface FileRoutesByTo {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-bd-vs-getjeetbuzz': typeof JeetbuzzBdVsGetjeetbuzzRoute
+  '/jeetbuzz-bet-vs-getjeetbuzz': typeof JeetbuzzBetVsGetjeetbuzzRoute
+  '/jeetbuzz-cc-vs-getjeetbuzz': typeof JeetbuzzCcVsGetjeetbuzzRoute
+  '/jeetbuzz-io-vs-getjeetbuzz': typeof JeetbuzzIoVsGetjeetbuzzRoute
+  '/jeetbuzz-live-vs-getjeetbuzz': typeof JeetbuzzLiveVsGetjeetbuzzRoute
+  '/jeetbuzz-net-vs-getjeetbuzz': typeof JeetbuzzNetVsGetjeetbuzzRoute
+  '/jeetbuzz-org-vs-getjeetbuzz': typeof JeetbuzzOrgVsGetjeetbuzzRoute
+  '/jeetbuzz-pk-vs-getjeetbuzz': typeof JeetbuzzPkVsGetjeetbuzzRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz123-vs-getjeetbuzz': typeof Jeetbuzz123VsGetjeetbuzzRoute
+  '/jeetbuzz66-vs-getjeetbuzz': typeof Jeetbuzz66VsGetjeetbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -619,7 +704,17 @@ export interface FileRoutesById {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-bd-vs-getjeetbuzz': typeof JeetbuzzBdVsGetjeetbuzzRoute
+  '/jeetbuzz-bet-vs-getjeetbuzz': typeof JeetbuzzBetVsGetjeetbuzzRoute
+  '/jeetbuzz-cc-vs-getjeetbuzz': typeof JeetbuzzCcVsGetjeetbuzzRoute
+  '/jeetbuzz-io-vs-getjeetbuzz': typeof JeetbuzzIoVsGetjeetbuzzRoute
+  '/jeetbuzz-live-vs-getjeetbuzz': typeof JeetbuzzLiveVsGetjeetbuzzRoute
+  '/jeetbuzz-net-vs-getjeetbuzz': typeof JeetbuzzNetVsGetjeetbuzzRoute
+  '/jeetbuzz-org-vs-getjeetbuzz': typeof JeetbuzzOrgVsGetjeetbuzzRoute
+  '/jeetbuzz-pk-vs-getjeetbuzz': typeof JeetbuzzPkVsGetjeetbuzzRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz123-vs-getjeetbuzz': typeof Jeetbuzz123VsGetjeetbuzzRoute
+  '/jeetbuzz66-vs-getjeetbuzz': typeof Jeetbuzz66VsGetjeetbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -695,7 +790,17 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-bd-vs-getjeetbuzz'
+    | '/jeetbuzz-bet-vs-getjeetbuzz'
+    | '/jeetbuzz-cc-vs-getjeetbuzz'
+    | '/jeetbuzz-io-vs-getjeetbuzz'
+    | '/jeetbuzz-live-vs-getjeetbuzz'
+    | '/jeetbuzz-net-vs-getjeetbuzz'
+    | '/jeetbuzz-org-vs-getjeetbuzz'
+    | '/jeetbuzz-pk-vs-getjeetbuzz'
     | '/jeetbuzz-review'
+    | '/jeetbuzz123-vs-getjeetbuzz'
+    | '/jeetbuzz66-vs-getjeetbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -768,7 +873,17 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-bd-vs-getjeetbuzz'
+    | '/jeetbuzz-bet-vs-getjeetbuzz'
+    | '/jeetbuzz-cc-vs-getjeetbuzz'
+    | '/jeetbuzz-io-vs-getjeetbuzz'
+    | '/jeetbuzz-live-vs-getjeetbuzz'
+    | '/jeetbuzz-net-vs-getjeetbuzz'
+    | '/jeetbuzz-org-vs-getjeetbuzz'
+    | '/jeetbuzz-pk-vs-getjeetbuzz'
     | '/jeetbuzz-review'
+    | '/jeetbuzz123-vs-getjeetbuzz'
+    | '/jeetbuzz66-vs-getjeetbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -842,7 +957,17 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-bd-vs-getjeetbuzz'
+    | '/jeetbuzz-bet-vs-getjeetbuzz'
+    | '/jeetbuzz-cc-vs-getjeetbuzz'
+    | '/jeetbuzz-io-vs-getjeetbuzz'
+    | '/jeetbuzz-live-vs-getjeetbuzz'
+    | '/jeetbuzz-net-vs-getjeetbuzz'
+    | '/jeetbuzz-org-vs-getjeetbuzz'
+    | '/jeetbuzz-pk-vs-getjeetbuzz'
     | '/jeetbuzz-review'
+    | '/jeetbuzz123-vs-getjeetbuzz'
+    | '/jeetbuzz66-vs-getjeetbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -917,7 +1042,17 @@ export interface RootRouteChildren {
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
+  JeetbuzzBdVsGetjeetbuzzRoute: typeof JeetbuzzBdVsGetjeetbuzzRoute
+  JeetbuzzBetVsGetjeetbuzzRoute: typeof JeetbuzzBetVsGetjeetbuzzRoute
+  JeetbuzzCcVsGetjeetbuzzRoute: typeof JeetbuzzCcVsGetjeetbuzzRoute
+  JeetbuzzIoVsGetjeetbuzzRoute: typeof JeetbuzzIoVsGetjeetbuzzRoute
+  JeetbuzzLiveVsGetjeetbuzzRoute: typeof JeetbuzzLiveVsGetjeetbuzzRoute
+  JeetbuzzNetVsGetjeetbuzzRoute: typeof JeetbuzzNetVsGetjeetbuzzRoute
+  JeetbuzzOrgVsGetjeetbuzzRoute: typeof JeetbuzzOrgVsGetjeetbuzzRoute
+  JeetbuzzPkVsGetjeetbuzzRoute: typeof JeetbuzzPkVsGetjeetbuzzRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
+  Jeetbuzz123VsGetjeetbuzzRoute: typeof Jeetbuzz123VsGetjeetbuzzRoute
+  Jeetbuzz66VsGetjeetbuzzRoute: typeof Jeetbuzz66VsGetjeetbuzzRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
   LoginGuideRoute: typeof LoginGuideRoute
@@ -1216,11 +1351,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LiveCricketBettingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz66-vs-getjeetbuzz': {
+      id: '/jeetbuzz66-vs-getjeetbuzz'
+      path: '/jeetbuzz66-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz66-vs-getjeetbuzz'
+      preLoaderRoute: typeof Jeetbuzz66VsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz123-vs-getjeetbuzz': {
+      id: '/jeetbuzz123-vs-getjeetbuzz'
+      path: '/jeetbuzz123-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz123-vs-getjeetbuzz'
+      preLoaderRoute: typeof Jeetbuzz123VsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-review': {
       id: '/jeetbuzz-review'
       path: '/jeetbuzz-review'
       fullPath: '/jeetbuzz-review'
       preLoaderRoute: typeof JeetbuzzReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-pk-vs-getjeetbuzz': {
+      id: '/jeetbuzz-pk-vs-getjeetbuzz'
+      path: '/jeetbuzz-pk-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-pk-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzPkVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-org-vs-getjeetbuzz': {
+      id: '/jeetbuzz-org-vs-getjeetbuzz'
+      path: '/jeetbuzz-org-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-org-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzOrgVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-net-vs-getjeetbuzz': {
+      id: '/jeetbuzz-net-vs-getjeetbuzz'
+      path: '/jeetbuzz-net-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-net-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzNetVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-live-vs-getjeetbuzz': {
+      id: '/jeetbuzz-live-vs-getjeetbuzz'
+      path: '/jeetbuzz-live-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-live-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzLiveVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-io-vs-getjeetbuzz': {
+      id: '/jeetbuzz-io-vs-getjeetbuzz'
+      path: '/jeetbuzz-io-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-io-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzIoVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-cc-vs-getjeetbuzz': {
+      id: '/jeetbuzz-cc-vs-getjeetbuzz'
+      path: '/jeetbuzz-cc-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-cc-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzCcVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-bet-vs-getjeetbuzz': {
+      id: '/jeetbuzz-bet-vs-getjeetbuzz'
+      path: '/jeetbuzz-bet-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-bet-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzBetVsGetjeetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-bd-vs-getjeetbuzz': {
+      id: '/jeetbuzz-bd-vs-getjeetbuzz'
+      path: '/jeetbuzz-bd-vs-getjeetbuzz'
+      fullPath: '/jeetbuzz-bd-vs-getjeetbuzz'
+      preLoaderRoute: typeof JeetbuzzBdVsGetjeetbuzzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jazzcash-guide': {
@@ -1511,7 +1716,17 @@ const rootRouteChildren: RootRouteChildren = {
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
+  JeetbuzzBdVsGetjeetbuzzRoute: JeetbuzzBdVsGetjeetbuzzRoute,
+  JeetbuzzBetVsGetjeetbuzzRoute: JeetbuzzBetVsGetjeetbuzzRoute,
+  JeetbuzzCcVsGetjeetbuzzRoute: JeetbuzzCcVsGetjeetbuzzRoute,
+  JeetbuzzIoVsGetjeetbuzzRoute: JeetbuzzIoVsGetjeetbuzzRoute,
+  JeetbuzzLiveVsGetjeetbuzzRoute: JeetbuzzLiveVsGetjeetbuzzRoute,
+  JeetbuzzNetVsGetjeetbuzzRoute: JeetbuzzNetVsGetjeetbuzzRoute,
+  JeetbuzzOrgVsGetjeetbuzzRoute: JeetbuzzOrgVsGetjeetbuzzRoute,
+  JeetbuzzPkVsGetjeetbuzzRoute: JeetbuzzPkVsGetjeetbuzzRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
+  Jeetbuzz123VsGetjeetbuzzRoute: Jeetbuzz123VsGetjeetbuzzRoute,
+  Jeetbuzz66VsGetjeetbuzzRoute: Jeetbuzz66VsGetjeetbuzzRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
   LoginGuideRoute: LoginGuideRoute,
