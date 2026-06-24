@@ -103,7 +103,7 @@ export const Route = createFileRoute("/signup")({
         "## Account name vs display name vs payment-wallet name",
         "Three names that must align cleanly. Account name is your legal full name as it appears on NID, CNIC or Aadhaar — this is the name JeetBuzz uses for KYC and the only name that ever matters for withdrawals. Display name is the public handle visible on leaderboards; pick something innocuous. Payment-wallet name is whatever your bKash, EasyPaisa or UPI is registered under — it must match the legal name on your KYC document, or withdrawals will be rejected even though deposits worked. Sort this out at signup, not at first withdrawal.",
         "## What happens if you forget your password the day after signup",
-        "Open the [Login](/login) page, tap Forgot Password, type the phone or email you registered with. A reset link arrives within 60 seconds. The new password takes effect immediately and force-logs out any other sessions. If neither the phone nor email is reachable, only 24/7 Live Chat can help, and they will ask identity questions tied to the registration data you entered.",
+        "Open the [Login](/login) page, tap Forgot Password, type the phone or email you registered with. A reset link arrives within 60 seconds. The new password takes effect immediately and force-logs out any other sessions. If neither the phone nor email is reachable, only 24/7 Live Chat can help, and they will ask identity questions tied to the registration data you entered — registered phone or email, chosen wallet currency, approximate signup date, and the first deposit method you used.",
       ]}
       faqs={[
         {
