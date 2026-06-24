@@ -9,5 +9,6 @@ Disallow: /preview/
 Disallow: /draft/
 Disallow: /staging/
 Disallow: /search
+Disallow: /app/launch
 
 Sitemap: https://getjeetbuzz.com/sitemap.xml
