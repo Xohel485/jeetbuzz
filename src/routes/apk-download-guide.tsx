@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { imageAbsoluteUrl } from "@/lib/images";
-import { softwareApplicationSchema, articleSchema, jsonLdScript, canonicalLink } from "@/lib/schema";
+import { softwareApplicationSchema, articleSchema, jsonLdScript, canonicalLink, hreflangLinks } from "@/lib/schema";
 
 export const Route = createFileRoute("/apk-download-guide")({
   head: () => ({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/apk-download-guide")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("androidApp") },
     ],
-    links: [canonicalLink("/apk-download-guide")],
+    links: [canonicalLink("/apk-download-guide"), ...hreflangLinks("/apk-download-guide")],
     scripts: [
       jsonLdScript(softwareApplicationSchema()),
       jsonLdScript(
