@@ -1,5 +1,33 @@
+import { createContext, useContext, type ReactNode } from "react";
 import type { Country, Locale } from "@/lib/i18n";
 import { LOCALIZED_INTROS } from "@/lib/localized-intros";
+
+/**
+ * Context-based slot so `PageShell` can render the localized intro INSIDE
+ * `<main>` (below the sticky header). Rendering it as a sibling of the
+ * page component pushed the sticky header down because it became the first
+ * child of `<body>`.
+ */
+type LocalizedIntroSlot = { slug: string; country: Country; lang: Locale } | null;
+const LocalizedIntroContext = createContext<LocalizedIntroSlot>(null);
+
+export function LocalizedIntroProvider({
+  value,
+  children,
+}: {
+  value: LocalizedIntroSlot;
+  children: ReactNode;
+}) {
+  return (
+    <LocalizedIntroContext.Provider value={value}>{children}</LocalizedIntroContext.Provider>
+  );
+}
+
+export function LocalizedIntroSlotRenderer() {
+  const v = useContext(LocalizedIntroContext);
+  if (!v) return null;
+  return <LocalizedIntro slug={v.slug} country={v.country} lang={v.lang} />;
+}
 
 /**
  * Country + locale + slug specific intro block.
