@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
+import { lazy, Suspense } from "react";
 import { imageAbsoluteUrl } from "@/lib/images";
 import {
   articleSchema,
@@ -10,6 +11,10 @@ import {
   hreflangLinks,
   ogUrl,
 } from "@/lib/schema";
+
+const PWAInstallPrompt = lazy(() =>
+  import("@/components/PWAInstallPrompt").then((m) => ({ default: m.PWAInstallPrompt })),
+);
 
 export const Route = createFileRoute("/download")({
   head: () => ({
@@ -149,6 +154,11 @@ export const Route = createFileRoute("/download")({
         { to: "/ios-app-guide", title: "iOS App Guide", desc: "Step-by-step iPhone install." },
         { to: "/mobile-app-guide", title: "Mobile App Guide", desc: "Compare features across devices." },
       ]}
+      extra={
+        <Suspense fallback={null}>
+          <PWAInstallPrompt />
+        </Suspense>
+      }
     />
   ),
 });

@@ -8,6 +8,7 @@ const CHILD_SITEMAPS = [
   "sitemap-payments.xml",
   "sitemap-affiliate.xml",
   "sitemap-blog.xml",
+  "sitemap-compare.xml",
   "sitemap-bd.xml",
   "sitemap-pk.xml",
   "sitemap-in.xml",
