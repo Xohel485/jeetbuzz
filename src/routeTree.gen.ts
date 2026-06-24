@@ -41,6 +41,7 @@ import { Route as MobileAppGuideRouteImport } from './routes/mobile-app-guide'
 import { Route as LoginSecurityRouteImport } from './routes/login-security'
 import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
@@ -235,6 +236,11 @@ const LoginProblemsRoute = LoginProblemsRouteImport.update({
 const LoginGuideRoute = LoginGuideRouteImport.update({
   id: '/login-guide',
   path: '/login-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LiveCricketBettingRoute = LiveCricketBettingRouteImport.update({
@@ -442,6 +448,7 @@ export interface FileRoutesByFullPath {
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
+  '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
   '/login-problems': typeof LoginProblemsRoute
   '/login-security': typeof LoginSecurityRoute
@@ -510,6 +517,7 @@ export interface FileRoutesByTo {
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
+  '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
   '/login-problems': typeof LoginProblemsRoute
   '/login-security': typeof LoginSecurityRoute
@@ -580,6 +588,7 @@ export interface FileRoutesById {
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
+  '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
   '/login-problems': typeof LoginProblemsRoute
   '/login-security': typeof LoginSecurityRoute
@@ -651,6 +660,7 @@ export interface FileRouteTypes {
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
+    | '/login'
     | '/login-guide'
     | '/login-problems'
     | '/login-security'
@@ -719,6 +729,7 @@ export interface FileRouteTypes {
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
+    | '/login'
     | '/login-guide'
     | '/login-problems'
     | '/login-security'
@@ -788,6 +799,7 @@ export interface FileRouteTypes {
     | '/jazzcash-guide'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
+    | '/login'
     | '/login-guide'
     | '/login-problems'
     | '/login-security'
@@ -858,6 +870,7 @@ export interface RootRouteChildren {
   JazzcashGuideRoute: typeof JazzcashGuideRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
+  LoginRoute: typeof LoginRoute
   LoginGuideRoute: typeof LoginGuideRoute
   LoginProblemsRoute: typeof LoginProblemsRoute
   LoginSecurityRoute: typeof LoginSecurityRoute
@@ -1121,6 +1134,13 @@ declare module '@tanstack/react-router' {
       path: '/login-guide'
       fullPath: '/login-guide'
       preLoaderRoute: typeof LoginGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/live-cricket-betting': {
@@ -1412,6 +1432,7 @@ const rootRouteChildren: RootRouteChildren = {
   JazzcashGuideRoute: JazzcashGuideRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
+  LoginRoute: LoginRoute,
   LoginGuideRoute: LoginGuideRoute,
   LoginProblemsRoute: LoginProblemsRoute,
   LoginSecurityRoute: LoginSecurityRoute,
@@ -1453,13 +1474,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
