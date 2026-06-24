@@ -358,6 +358,15 @@ function AffiliateProgramPage() {
           Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000 per
           active player applies. KYC and Telegram membership required.
         </p>
+        <img
+          src={referralAsset.url}
+          alt="JeetBuzz Affiliate Referral Program – Extra 3.5% Commission"
+          width={580}
+          height={680}
+          loading="lazy"
+          decoding="async"
+          className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
+        />
       </section>
 
       {/* Benefits */}
