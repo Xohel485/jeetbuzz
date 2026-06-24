@@ -30,6 +30,11 @@ import {
   ogUrl,
 } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
+import elite60Asset from "@/assets/jeetbuzz-60-affiliate-commission.png.asset.json";
+import affiliateProgramAsset from "@/assets/jeetbuzz-affiliate-program.png.asset.json";
+import referralAsset from "@/assets/jeetbuzz-affiliate-referral-program.png.asset.json";
+import eliteClubLogoAsset from "@/assets/jeetbuzz-affiliate-elite-club-logo.webp.asset.json";
+import eliteClubCrestAsset from "@/assets/jeetbuzz-affiliate-elite-club.webp.asset.json";
 
 // Client-facing link goes through our first-party /go/affiliate redirect so
 // every click is captured for attribution before hitting jeetbuzzpartners.info.
@@ -218,6 +223,16 @@ function AffiliateProgramPage() {
             <span className="size-1.5 rounded-full bg-primary" />
             JeetBuzz Partners · Updated {LAST_VERIFIED}
           </div>
+          <img
+            src={elite60Asset.url}
+            alt="JeetBuzz Affiliate Program – Earn Up to 60% Weekly Commission"
+            width={1158}
+            height={1395}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="mx-auto mb-6 h-auto w-full max-w-[280px] rounded-2xl md:max-w-[340px]"
+          />
           <h1 className="mx-auto max-w-4xl text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
             Weekly Commission
@@ -268,6 +283,15 @@ function AffiliateProgramPage() {
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
             Register, verify, promote and receive your weekly commission every Wednesday.
           </p>
+          <img
+            src={affiliateProgramAsset.url}
+            alt="Join JeetBuzz Affiliate Program Partnership"
+            width={580}
+            height={680}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
+          />
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
@@ -334,6 +358,15 @@ function AffiliateProgramPage() {
           Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000 per
           active player applies. KYC and Telegram membership required.
         </p>
+        <img
+          src={referralAsset.url}
+          alt="JeetBuzz Affiliate Referral Program – Extra 3.5% Commission"
+          width={580}
+          height={680}
+          loading="lazy"
+          decoding="async"
+          className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
+        />
       </section>
 
       {/* Benefits */}
@@ -367,6 +400,24 @@ function AffiliateProgramPage() {
       {/* Testimonials */}
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
+          <img
+            src={eliteClubLogoAsset.url}
+            alt="JeetBuzz Affiliates Elite Club"
+            width={624}
+            height={143}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto mb-4 h-auto w-full max-w-[320px] md:max-w-[420px]"
+          />
+          <img
+            src={eliteClubCrestAsset.url}
+            alt="JeetBuzz Affiliate Elite Club Crest"
+            width={740}
+            height={720}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto mb-4 h-auto w-full max-w-[180px] md:max-w-[220px]"
+          />
           <h2 className="text-2xl font-bold md:text-3xl">
             Affiliate Elite Club
           </h2>
