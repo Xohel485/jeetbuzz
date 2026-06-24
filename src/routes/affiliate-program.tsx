@@ -30,11 +30,11 @@ import {
   ogUrl,
 } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
-import elite60Asset from "@/assets/jeetbuzz-60-affiliate-commission.png.asset.json";
-import affiliateProgramAsset from "@/assets/jeetbuzz-affiliate-program.png.asset.json";
-import referralAsset from "@/assets/jeetbuzz-affiliate-referral-program.png.asset.json";
-import eliteClubLogoAsset from "@/assets/jeetbuzz-affiliate-elite-club-logo.webp.asset.json";
-import eliteClubCrestAsset from "@/assets/jeetbuzz-affiliate-elite-club.webp.asset.json";
+import elite60Url from "@/assets/jeetbuzz-60-affiliate-commission.webp";
+import affiliateProgramUrl from "@/assets/jeetbuzz-affiliate-program.webp";
+import referralUrl from "@/assets/jeetbuzz-affiliate-referral-program.webp";
+import eliteClubLogoUrl from "@/assets/jeetbuzz-affiliate-elite-club-logo.webp";
+import eliteClubCrestUrl from "@/assets/jeetbuzz-affiliate-elite-club.webp";
 
 // Client-facing link goes through our first-party /go/affiliate redirect so
 // every click is captured for attribution before hitting jeetbuzzpartners.info.
@@ -224,10 +224,10 @@ function AffiliateProgramPage() {
             JeetBuzz Partners · Updated {LAST_VERIFIED}
           </div>
           <img
-            src={elite60Asset.url}
+            src={elite60Url}
             alt="JeetBuzz Affiliate Program – Earn Up to 60% Weekly Commission"
-            width={1158}
-            height={1395}
+            width={680}
+            height={790}
             loading="eager"
             fetchPriority="high"
             decoding="async"
@@ -284,10 +284,10 @@ function AffiliateProgramPage() {
             Register, verify, promote and receive your weekly commission every Wednesday.
           </p>
           <img
-            src={affiliateProgramAsset.url}
+            src={affiliateProgramUrl}
             alt="Join JeetBuzz Affiliate Program Partnership"
             width={580}
-            height={680}
+            height={674}
             loading="lazy"
             decoding="async"
             className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
@@ -359,10 +359,10 @@ function AffiliateProgramPage() {
           active player applies. KYC and Telegram membership required.
         </p>
         <img
-          src={referralAsset.url}
+          src={referralUrl}
           alt="JeetBuzz Affiliate Referral Program – Extra 3.5% Commission"
           width={580}
-          height={680}
+          height={674}
           loading="lazy"
           decoding="async"
           className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
@@ -401,19 +401,19 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <img
-            src={eliteClubLogoAsset.url}
+            src={eliteClubLogoUrl}
             alt="JeetBuzz Affiliates Elite Club"
-            width={624}
-            height={143}
+            width={628}
+            height={150}
             loading="lazy"
             decoding="async"
             className="mx-auto mb-4 h-auto w-full max-w-[320px] md:max-w-[420px]"
           />
           <img
-            src={eliteClubCrestAsset.url}
+            src={eliteClubCrestUrl}
             alt="JeetBuzz Affiliate Elite Club Crest"
-            width={740}
-            height={720}
+            width={480}
+            height={469}
             loading="lazy"
             decoding="async"
             className="mx-auto mb-4 h-auto w-full max-w-[180px] md:max-w-[220px]"
