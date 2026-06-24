@@ -10,7 +10,7 @@ import {
   type Locale,
 } from "@/lib/i18n";
 import { findLocalizedRoute } from "@/lib/localized-routes";
-import { LocalizedIntro } from "@/components/LocalizedIntro";
+import { LocalizedIntroProvider } from "@/components/LocalizedIntro";
 
 const SITE = "https://getjeetbuzz.com";
 
@@ -78,9 +78,8 @@ function LocalizedSplat() {
   }, [lang, setLocale]);
   const Comp = reg.component;
   return (
-    <>
-      <LocalizedIntro slug={slug} country={country as Country} lang={lang as Locale} />
+    <LocalizedIntroProvider value={{ slug, country: country as Country, lang: lang as Locale }}>
       <Comp />
-    </>
+    </LocalizedIntroProvider>
   );
 }
