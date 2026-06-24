@@ -97,22 +97,22 @@ export function Hero() {
       </section>
 
       <section className="container-pro -mt-10 md:-mt-16">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-1 gap-3 min-[340px]:grid-cols-2 sm:gap-4 md:gap-5">
           {JEETBUZZ_STATS.map((s, i) => {
             const Icon = [ShieldIcon, Languages, Headphones, Trophy][i] ?? ShieldIcon;
             return (
               <div
                 key={s.label}
-                className="glass group relative flex flex-col items-start gap-5 rounded-2xl border border-white/8 bg-background/70 p-7 md:p-8 transition-colors hover:border-primary/30"
+                className="glass group relative flex h-full flex-col items-start justify-center gap-3 rounded-2xl border border-white/8 bg-background/70 p-5 transition-colors hover:border-primary/30 md:gap-4 md:p-6"
               >
-                <span className="inline-flex size-11 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
+                <span className="inline-flex size-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
                   <Icon className="size-5 text-primary" strokeWidth={1.75} />
                 </span>
-                <div className="space-y-2">
-                  <p className="gold-text text-2xl font-semibold leading-tight tracking-tight md:text-[1.75rem]">
+                <div className="space-y-1.5">
+                  <p className="gold-text text-[28px] font-bold leading-[1.05] tracking-tight md:text-[34px]">
                     {s.value}
                   </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="text-[15px] leading-[1.4] text-muted-foreground md:text-base">
                     {s.label}
                   </p>
                 </div>
