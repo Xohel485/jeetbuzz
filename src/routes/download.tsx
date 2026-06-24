@@ -14,11 +14,11 @@ import {
 export const Route = createFileRoute("/download")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Download — Official Android APK & iOS Web App (2026)" },
+      { title: "JeetBuzz APK Download & Web App Install 2026 | Fast & Secure | GetJeetBuzz" },
       {
         name: "description",
         content:
-          "Download the official JeetBuzz Android APK or install the iOS web app for Bangladesh, Pakistan and India. Verified mirror, SHA-256 check, ISP-block bypass and Casino + Live in one install.",
+          "Download the JeetBuzz Web App or install it directly from your browser. Learn how to add the app to your home screen, enjoy fast loading, secure access and a smooth mobile experience.",
       },
       { property: "og:title", content: "JeetBuzz Download — Android APK & iOS Web App" },
       {
