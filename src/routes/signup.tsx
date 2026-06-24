@@ -96,6 +96,14 @@ export const Route = createFileRoute("/signup")({
         "- Wallet (bKash / EasyPaisa / UPI) is in your own name?",
         "- You are 18 or older?",
         "If yes to all, tap Start JeetBuzz Signup above and you'll be playing within five minutes.",
+        "## How long until you can actually bet",
+        "From tapping Start JeetBuzz Signup to your first live cricket bet, the realistic median is six to eight minutes. Two to three minutes for the form, one minute for OTP delivery, one to two minutes to deposit via bKash, EasyPaisa or UPI, and a minute to find the market you want. Players who already have their wallet PIN memorised and pick a quick deposit amount routinely beat five minutes end-to-end.",
+        "## Signup on Android app vs. browser",
+        "The signup form inside the JeetBuzz Android app is identical to the website form, with two small advantages: push OTP delivery is faster than SMS, and biometric unlock is offered as soon as the account is live. If your ISP throttles the public JeetBuzz domain, install the app first via our [Download](/download) page, then sign up inside it.",
+        "## Account name vs display name vs payment-wallet name",
+        "Three names that must align cleanly. Account name is your legal full name as it appears on NID, CNIC or Aadhaar — this is the name JeetBuzz uses for KYC and the only name that ever matters for withdrawals. Display name is the public handle visible on leaderboards; pick something innocuous. Payment-wallet name is whatever your bKash, EasyPaisa or UPI is registered under — it must match the legal name on your KYC document, or withdrawals will be rejected even though deposits worked. Sort this out at signup, not at first withdrawal.",
+        "## What happens if you forget your password the day after signup",
+        "Open the [Login](/login) page, tap Forgot Password, type the phone or email you registered with. A reset link arrives within 60 seconds. The new password takes effect immediately and force-logs out any other sessions. If neither the phone nor email is reachable, only 24/7 Live Chat can help, and they will ask identity questions tied to the registration data you entered.",
       ]}
       faqs={[
         {
