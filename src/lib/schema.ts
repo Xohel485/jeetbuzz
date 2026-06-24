@@ -1,4 +1,5 @@
 import { SITE_NAME } from "./affiliate";
+import { BRAND } from "./entity-map";
 
 export const SITE_ORIGIN = "https://getjeetbuzz.com";
 
@@ -10,6 +11,7 @@ export const organizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
+  alternateName: [...BRAND.alternateNames],
   url: SITE_ORIGIN,
   logo: `${SITE_ORIGIN}/img/jeetbuzz-affiliate-program-224.webp`,
   sameAs: [] as string[],
@@ -21,6 +23,7 @@ export const websiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE_NAME,
+  alternateName: [...BRAND.alternateNames],
   url: SITE_ORIGIN,
   inLanguage: ["bn-BD", "en", "hi", "ur"],
   potentialAction: {
