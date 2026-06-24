@@ -110,6 +110,8 @@ export const Route = createFileRoute("/register")({
         "JeetBuzz cross-checks three names: the name on your registration profile, the name on the KYC document (NID, CNIC or Aadhaar), and the name on the payment wallet (bKash, EasyPaisa, UPI). If any of the three disagree, withdrawals stall even though deposits worked. Fix this at registration by typing your legal name exactly as it appears on your NID, then making sure your wallet is registered under the same name. Two minutes of friction here saves a multi-day support ticket later.",
         "## What separates a registered JeetBuzz player from a casual visitor",
         "A casual visitor can browse markets and read the welcome bonus terms but cannot place a bet, deposit, withdraw, claim a promo, enter a tournament, post on the Exchange, request KYC unlocking of higher limits, contact 24/7 Live Chat from an authenticated session, or run a JeetBuzz Partner affiliate link. Registration is the gate. Once through it, everything from the Aviator round starting in 30 seconds to the IPL final outright market is one tap away.",
+        "## How JeetBuzz registration sits among other South Asian operators",
+        "Players often shortlist JeetBuzz against neighbours like Baji or Crickex before deciding where to register. We deliberately keep this page operator-specific: the registration arc described above — form, currency lock, KYC at first big withdrawal, three-name alignment — applies only to JeetBuzz. Following another platform's playbook here will cause withdrawal delays. Use the verified outbound button to register, then return to the [Login](/login) hub for daily access.",
       ]}
       faqs={[
         {
@@ -143,6 +145,14 @@ export const Route = createFileRoute("/register")({
         {
           q: "Is JeetBuzz Partner registration different?",
           a: "Yes. Affiliates and master agents register at the JeetBuzz Partner portal. See our [Affiliate Program](/affiliate-program) page for that flow.",
+        },
+        {
+          q: "How is JeetBuzz registration different from Baji or Crickex registration?",
+          a: "This page documents JeetBuzz only. The JeetBuzz flow locks wallet currency at signup, defers KYC until your first larger withdrawal, and enforces strict alignment between your registration name, KYC document and payment wallet. For competitor flows, consult those operators' own help centres.",
+        },
+        {
+          q: "Why do users compare JeetBuzz with platforms like Krikya before registering?",
+          a: "First-time bettors in BD, PK and IN naturally evaluate two or three brands before committing. Once you have decided on JeetBuzz, the comparison is over — follow the ten-step registration above and the rest of this guide treats JeetBuzz as your single platform.",
         },
       ]}
       related={[

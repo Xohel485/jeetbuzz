@@ -104,6 +104,8 @@ export const Route = createFileRoute("/signup")({
         "Three names that must align cleanly. Account name is your legal full name as it appears on NID, CNIC or Aadhaar — this is the name JeetBuzz uses for KYC and the only name that ever matters for withdrawals. Display name is the public handle visible on leaderboards; pick something innocuous. Payment-wallet name is whatever your bKash, EasyPaisa or UPI is registered under — it must match the legal name on your KYC document, or withdrawals will be rejected even though deposits worked. Sort this out at signup, not at first withdrawal.",
         "## What happens if you forget your password the day after signup",
         "Open the [Login](/login) page, tap Forgot Password, type the phone or email you registered with. A reset link arrives within 60 seconds. The new password takes effect immediately and force-logs out any other sessions. If neither the phone nor email is reachable, only 24/7 Live Chat can help, and they will ask identity questions tied to the registration data you entered — registered phone or email, chosen wallet currency, approximate signup date, and the first deposit method you used.",
+        "## Where JeetBuzz signup fits in the wider market",
+        "Players in Bangladesh, Pakistan and India typically evaluate a handful of platforms — for example JeetBuzz, Baji and Crickex — before opening their first account. This page is not a comparison. It documents the verified JeetBuzz signup flow only: one form, one currency choice, one wallet, one account that unlocks the entire JeetBuzz Sportsbook, Casino, Live and Exchange catalogue.",
       ]}
       faqs={[
         {
@@ -137,6 +139,14 @@ export const Route = createFileRoute("/signup")({
         {
           q: "Why does the signup form say my phone is already registered?",
           a: "The SIM is already attached to an existing JeetBuzz account. Use Forgot Password on the login page instead of signing up again.",
+        },
+        {
+          q: "How does JeetBuzz signup differ from Baji or Crickex signup?",
+          a: "This guide only covers JeetBuzz. The JeetBuzz signup form locks your wallet currency at registration and unlocks Sportsbook, Casino and Live with one set of credentials. For other operators, refer to their own help pages — we keep this page focused on the JeetBuzz flow.",
+        },
+        {
+          q: "I am switching to JeetBuzz from a competitor — do I need a fresh account?",
+          a: "Yes. Each operator runs its own KYC and wallet. A JeetBuzz signup is independent of any account you hold on another platform such as Krikya or 1xBet. Use a fresh password and the verified outbound button above.",
         },
       ]}
       related={[

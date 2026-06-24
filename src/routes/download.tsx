@@ -111,6 +111,8 @@ export const Route = createFileRoute("/download")({
         "Once installed, the JeetBuzz Android app can send push for OTP codes during login, deposit confirmations, withdrawal status changes, bet settlement on big tickets, and live event reminders for fixtures you opted into. Turn them all on at first launch — OTP via push routinely arrives in under three seconds versus 30–60 seconds for SMS in BD, PK and IN. Granular toggles live under Account → Notifications if you later want to mute promotional messages.",
         "## When to skip the app entirely",
         "On a borrowed phone, on a desktop or laptop, on a one-off netcafe session, or when you simply want zero install footprint, the mobile site is the right answer — it delivers the same Sportsbook, Casino, Live and Cashier in any modern browser. The app earns its place only when you play often enough that biometric login, push OTP and ISP-block resilience genuinely save you time.",
+        "## How the JeetBuzz app compares across the South Asian market",
+        "Readers often arrive after trying installers from several brands — JeetBuzz, Baji and Crickex are the most-searched in this category. We do not host those APKs. This page only links to the official JeetBuzz Android build and the JeetBuzz iOS web app, both downloaded directly from the operator. Any APK forwarded over WhatsApp or Telegram claiming to be JeetBuzz is, by definition, not from this hub — re-download from the verified button above instead.",
       ]}
       faqs={[
         {
@@ -144,6 +146,14 @@ export const Route = createFileRoute("/download")({
         {
           q: "How do I update the JeetBuzz app?",
           a: "Android prompts inside the app when a new APK is available. iOS auto-updates because the web app loads the latest live site each launch. Never install an update sent over messaging apps.",
+        },
+        {
+          q: "Is the JeetBuzz app different from Baji or Crickex apps?",
+          a: "We only ship the JeetBuzz install path. In practice players notice JeetBuzz uses a single APK covering Sportsbook, Casino, Live and Exchange with no separate companion downloads. For competitor specifics, consult those operators directly — this hub is JeetBuzz-only.",
+        },
+        {
+          q: "Why do users compare JeetBuzz with platforms like 1xBet or Krikya before downloading?",
+          a: "Bettors in BD, PK and IN often shortlist two or three brands before installing anything. Once you have chosen JeetBuzz, the safest path is the verified outbound APK on this page; never sideload an installer received from a stranger that claims to bundle multiple brands.",
         },
       ]}
       related={[
