@@ -18,7 +18,14 @@ import { Route as UpdatePolicyRouteImport } from './routes/update-policy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SportsBettingRouteImport } from './routes/sports-betting'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapPkDotxmlRouteImport } from './routes/sitemap-pk[.]xml'
+import { Route as SitemapPaymentsDotxmlRouteImport } from './routes/sitemap-payments[.]xml'
 import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
+import { Route as SitemapInDotxmlRouteImport } from './routes/sitemap-in[.]xml'
+import { Route as SitemapGuidesDotxmlRouteImport } from './routes/sitemap-guides[.]xml'
+import { Route as SitemapBlogDotxmlRouteImport } from './routes/sitemap-blog[.]xml'
+import { Route as SitemapBdDotxmlRouteImport } from './routes/sitemap-bd[.]xml'
+import { Route as SitemapAffiliateDotxmlRouteImport } from './routes/sitemap-affiliate[.]xml'
 import { Route as SecurityGuideRouteImport } from './routes/security-guide'
 import { Route as RocketGuideRouteImport } from './routes/rocket-guide'
 import { Route as ReviewPolicyRouteImport } from './routes/review-policy'
@@ -115,9 +122,44 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapPkDotxmlRoute = SitemapPkDotxmlRouteImport.update({
+  id: '/sitemap-pk.xml',
+  path: '/sitemap-pk.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapPaymentsDotxmlRoute = SitemapPaymentsDotxmlRouteImport.update({
+  id: '/sitemap-payments.xml',
+  path: '/sitemap-payments.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapPagesDotxmlRoute = SitemapPagesDotxmlRouteImport.update({
   id: '/sitemap-pages.xml',
   path: '/sitemap-pages.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapInDotxmlRoute = SitemapInDotxmlRouteImport.update({
+  id: '/sitemap-in.xml',
+  path: '/sitemap-in.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapGuidesDotxmlRoute = SitemapGuidesDotxmlRouteImport.update({
+  id: '/sitemap-guides.xml',
+  path: '/sitemap-guides.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapBlogDotxmlRoute = SitemapBlogDotxmlRouteImport.update({
+  id: '/sitemap-blog.xml',
+  path: '/sitemap-blog.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapBdDotxmlRoute = SitemapBdDotxmlRouteImport.update({
+  id: '/sitemap-bd.xml',
+  path: '/sitemap-bd.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapAffiliateDotxmlRoute = SitemapAffiliateDotxmlRouteImport.update({
+  id: '/sitemap-affiliate.xml',
+  path: '/sitemap-affiliate.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecurityGuideRoute = SecurityGuideRouteImport.update({
@@ -415,7 +457,14 @@ export interface FileRoutesByFullPath {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
+  '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
+  '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-guides.xml': typeof SitemapGuidesDotxmlRoute
+  '/sitemap-in.xml': typeof SitemapInDotxmlRoute
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
+  '/sitemap-payments.xml': typeof SitemapPaymentsDotxmlRoute
+  '/sitemap-pk.xml': typeof SitemapPkDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -476,7 +525,14 @@ export interface FileRoutesByTo {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
+  '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
+  '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-guides.xml': typeof SitemapGuidesDotxmlRoute
+  '/sitemap-in.xml': typeof SitemapInDotxmlRoute
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
+  '/sitemap-payments.xml': typeof SitemapPaymentsDotxmlRoute
+  '/sitemap-pk.xml': typeof SitemapPkDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -539,7 +595,14 @@ export interface FileRoutesById {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
+  '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
+  '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-guides.xml': typeof SitemapGuidesDotxmlRoute
+  '/sitemap-in.xml': typeof SitemapInDotxmlRoute
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
+  '/sitemap-payments.xml': typeof SitemapPaymentsDotxmlRoute
+  '/sitemap-pk.xml': typeof SitemapPkDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -603,7 +666,14 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/sitemap-affiliate.xml'
+    | '/sitemap-bd.xml'
+    | '/sitemap-blog.xml'
+    | '/sitemap-guides.xml'
+    | '/sitemap-in.xml'
     | '/sitemap-pages.xml'
+    | '/sitemap-payments.xml'
+    | '/sitemap-pk.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -664,7 +734,14 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/sitemap-affiliate.xml'
+    | '/sitemap-bd.xml'
+    | '/sitemap-blog.xml'
+    | '/sitemap-guides.xml'
+    | '/sitemap-in.xml'
     | '/sitemap-pages.xml'
+    | '/sitemap-payments.xml'
+    | '/sitemap-pk.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -726,7 +803,14 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/sitemap-affiliate.xml'
+    | '/sitemap-bd.xml'
+    | '/sitemap-blog.xml'
+    | '/sitemap-guides.xml'
+    | '/sitemap-in.xml'
     | '/sitemap-pages.xml'
+    | '/sitemap-payments.xml'
+    | '/sitemap-pk.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -789,7 +873,14 @@ export interface RootRouteChildren {
   ReviewPolicyRoute: typeof ReviewPolicyRoute
   RocketGuideRoute: typeof RocketGuideRoute
   SecurityGuideRoute: typeof SecurityGuideRoute
+  SitemapAffiliateDotxmlRoute: typeof SitemapAffiliateDotxmlRoute
+  SitemapBdDotxmlRoute: typeof SitemapBdDotxmlRoute
+  SitemapBlogDotxmlRoute: typeof SitemapBlogDotxmlRoute
+  SitemapGuidesDotxmlRoute: typeof SitemapGuidesDotxmlRoute
+  SitemapInDotxmlRoute: typeof SitemapInDotxmlRoute
   SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
+  SitemapPaymentsDotxmlRoute: typeof SitemapPaymentsDotxmlRoute
+  SitemapPkDotxmlRoute: typeof SitemapPkDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SportsBettingRoute: typeof SportsBettingRoute
   TermsRoute: typeof TermsRoute
@@ -871,11 +962,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap-pk.xml': {
+      id: '/sitemap-pk.xml'
+      path: '/sitemap-pk.xml'
+      fullPath: '/sitemap-pk.xml'
+      preLoaderRoute: typeof SitemapPkDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-payments.xml': {
+      id: '/sitemap-payments.xml'
+      path: '/sitemap-payments.xml'
+      fullPath: '/sitemap-payments.xml'
+      preLoaderRoute: typeof SitemapPaymentsDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap-pages.xml': {
       id: '/sitemap-pages.xml'
       path: '/sitemap-pages.xml'
       fullPath: '/sitemap-pages.xml'
       preLoaderRoute: typeof SitemapPagesDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-in.xml': {
+      id: '/sitemap-in.xml'
+      path: '/sitemap-in.xml'
+      fullPath: '/sitemap-in.xml'
+      preLoaderRoute: typeof SitemapInDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-guides.xml': {
+      id: '/sitemap-guides.xml'
+      path: '/sitemap-guides.xml'
+      fullPath: '/sitemap-guides.xml'
+      preLoaderRoute: typeof SitemapGuidesDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-blog.xml': {
+      id: '/sitemap-blog.xml'
+      path: '/sitemap-blog.xml'
+      fullPath: '/sitemap-blog.xml'
+      preLoaderRoute: typeof SitemapBlogDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-bd.xml': {
+      id: '/sitemap-bd.xml'
+      path: '/sitemap-bd.xml'
+      fullPath: '/sitemap-bd.xml'
+      preLoaderRoute: typeof SitemapBdDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-affiliate.xml': {
+      id: '/sitemap-affiliate.xml'
+      path: '/sitemap-affiliate.xml'
+      fullPath: '/sitemap-affiliate.xml'
+      preLoaderRoute: typeof SitemapAffiliateDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security-guide': {
@@ -1287,7 +1427,14 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewPolicyRoute: ReviewPolicyRoute,
   RocketGuideRoute: RocketGuideRoute,
   SecurityGuideRoute: SecurityGuideRoute,
+  SitemapAffiliateDotxmlRoute: SitemapAffiliateDotxmlRoute,
+  SitemapBdDotxmlRoute: SitemapBdDotxmlRoute,
+  SitemapBlogDotxmlRoute: SitemapBlogDotxmlRoute,
+  SitemapGuidesDotxmlRoute: SitemapGuidesDotxmlRoute,
+  SitemapInDotxmlRoute: SitemapInDotxmlRoute,
   SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
+  SitemapPaymentsDotxmlRoute: SitemapPaymentsDotxmlRoute,
+  SitemapPkDotxmlRoute: SitemapPkDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SportsBettingRoute: SportsBettingRoute,
   TermsRoute: TermsRoute,
