@@ -120,11 +120,21 @@ export function canonicalLink(path: string) {
   return { rel: "canonical", href: url(path) } as const;
 }
 
-export function hreflangLinks(path: string) {
+/**
+ * Standard hreflang cluster for a given slug (slug = "" → homepage).
+ * Always emits x-default, en, bn-BD, ur-PK, hi-IN pointing to the
+ * locale-equivalent URL on getjeetbuzz.com.
+ */
+export function hreflangLinks(slug = "") {
+  const s = slug.replace(/^\//, "");
+  const tail = s ? `/${s}` : "";
+  const en = `${SITE_ORIGIN}${tail || "/"}`;
   return [
-    { rel: "alternate", hrefLang: "bn-BD", href: url(path) },
-    { rel: "alternate", hrefLang: "en", href: url(path) },
-    { rel: "alternate", hrefLang: "x-default", href: url(path) },
+    { rel: "alternate", hrefLang: "x-default", href: en },
+    { rel: "alternate", hrefLang: "en", href: en },
+    { rel: "alternate", hrefLang: "bn-BD", href: `${SITE_ORIGIN}/bd/bn${tail}` },
+    { rel: "alternate", hrefLang: "ur-PK", href: `${SITE_ORIGIN}/pk/ur${tail}` },
+    { rel: "alternate", hrefLang: "hi-IN", href: `${SITE_ORIGIN}/in/hi${tail}` },
   ] as const;
 }
 

@@ -12,7 +12,7 @@ import {
   type Locale,
 } from "@/lib/i18n";
 
-const SITE = "https://getjeetbuzzv1.lovable.app";
+const SITE = "https://getjeetbuzz.com";
 
 function isValid(country: string, lang: string): country is Country {
   if (!(COUNTRIES as readonly string[]).includes(country)) return false;

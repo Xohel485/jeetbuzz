@@ -43,10 +43,7 @@ export const Route = createFileRoute("/")({
         fetchPriority: "high",
       },
       canonicalLink("/"),
-      ...hreflangLinks("/"),
-      { rel: "alternate", hrefLang: "bn-BD", href: "https://getjeetbuzzv1.lovable.app/bd/bn" },
-      { rel: "alternate", hrefLang: "ur-PK", href: "https://getjeetbuzzv1.lovable.app/pk/ur" },
-      { rel: "alternate", hrefLang: "hi-IN", href: "https://getjeetbuzzv1.lovable.app/in/hi" },
+      ...hreflangLinks(""),
     ],
     scripts: [
       {
