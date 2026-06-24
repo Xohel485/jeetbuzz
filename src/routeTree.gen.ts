@@ -32,6 +32,7 @@ import { Route as RocketGuideRouteImport } from './routes/rocket-guide'
 import { Route as ReviewPolicyRouteImport } from './routes/review-policy'
 import { Route as ResponsibleGamingRouteImport } from './routes/responsible-gaming'
 import { Route as RegistrationGuideRouteImport } from './routes/registration-guide'
+import { Route as RegisterRouteImport } from './routes/register'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PhonepeGuideRouteImport } from './routes/phonepe-guide'
 import { Route as PaytmGuideRouteImport } from './routes/paytm-guide'
@@ -192,6 +193,11 @@ const ResponsibleGamingRoute = ResponsibleGamingRouteImport.update({
 const RegistrationGuideRoute = RegistrationGuideRouteImport.update({
   id: '/registration-guide',
   path: '/registration-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -465,6 +471,7 @@ export interface FileRoutesByFullPath {
   '/paytm-guide': typeof PaytmGuideRoute
   '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/register': typeof RegisterRoute
   '/registration-guide': typeof RegistrationGuideRoute
   '/responsible-gaming': typeof ResponsibleGamingRoute
   '/review-policy': typeof ReviewPolicyRoute
@@ -535,6 +542,7 @@ export interface FileRoutesByTo {
   '/paytm-guide': typeof PaytmGuideRoute
   '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/register': typeof RegisterRoute
   '/registration-guide': typeof RegistrationGuideRoute
   '/responsible-gaming': typeof ResponsibleGamingRoute
   '/review-policy': typeof ReviewPolicyRoute
@@ -607,6 +615,7 @@ export interface FileRoutesById {
   '/paytm-guide': typeof PaytmGuideRoute
   '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/register': typeof RegisterRoute
   '/registration-guide': typeof RegistrationGuideRoute
   '/responsible-gaming': typeof ResponsibleGamingRoute
   '/review-policy': typeof ReviewPolicyRoute
@@ -680,6 +689,7 @@ export interface FileRouteTypes {
     | '/paytm-guide'
     | '/phonepe-guide'
     | '/privacy-policy'
+    | '/register'
     | '/registration-guide'
     | '/responsible-gaming'
     | '/review-policy'
@@ -750,6 +760,7 @@ export interface FileRouteTypes {
     | '/paytm-guide'
     | '/phonepe-guide'
     | '/privacy-policy'
+    | '/register'
     | '/registration-guide'
     | '/responsible-gaming'
     | '/review-policy'
@@ -821,6 +832,7 @@ export interface FileRouteTypes {
     | '/paytm-guide'
     | '/phonepe-guide'
     | '/privacy-policy'
+    | '/register'
     | '/registration-guide'
     | '/responsible-gaming'
     | '/review-policy'
@@ -893,6 +905,7 @@ export interface RootRouteChildren {
   PaytmGuideRoute: typeof PaytmGuideRoute
   PhonepeGuideRoute: typeof PhonepeGuideRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RegisterRoute: typeof RegisterRoute
   RegistrationGuideRoute: typeof RegistrationGuideRoute
   ResponsibleGamingRoute: typeof ResponsibleGamingRoute
   ReviewPolicyRoute: typeof ReviewPolicyRoute
@@ -1084,6 +1097,13 @@ declare module '@tanstack/react-router' {
       path: '/registration-guide'
       fullPath: '/registration-guide'
       preLoaderRoute: typeof RegistrationGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -1463,6 +1483,7 @@ const rootRouteChildren: RootRouteChildren = {
   PaytmGuideRoute: PaytmGuideRoute,
   PhonepeGuideRoute: PhonepeGuideRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RegisterRoute: RegisterRoute,
   RegistrationGuideRoute: RegistrationGuideRoute,
   ResponsibleGamingRoute: ResponsibleGamingRoute,
   ReviewPolicyRoute: ReviewPolicyRoute,
