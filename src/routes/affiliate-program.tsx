@@ -264,9 +264,9 @@ function AffiliateProgramPage() {
       {/* How it works */}
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold md:text-3xl">How It Works — কীভাবে কাজ করে</h2>
+          <h2 className="text-2xl font-bold md:text-3xl">How to Participate</h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            চার ধাপে শুরু করুন — সাইন আপ থেকে পেমেন্ট পর্যন্ত পুরো প্রক্রিয়া সহজ ও স্বচ্ছ।
+            Register, verify, promote and receive your weekly commission every Wednesday.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -294,11 +294,11 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Commission Structure — কমিশন প্ল্যান
+            Commission Plan
           </h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            ভলিউম যত বাড়বে, কমিশন তত বাড়বে। Hybrid deal (RevShare + CPA) Elite পার্টনারদের
-            জন্য available.
+            The more qualified active players you bring, the higher your weekly commission —
+            up to 60%. Refer another affiliate for an extra 3.5% commission.
           </p>
         </div>
         <div className="glass overflow-hidden rounded-2xl">
@@ -308,8 +308,8 @@ function AffiliateProgramPage() {
                 <tr>
                   <th className="px-4 py-3 font-semibold">Tier</th>
                   <th className="px-4 py-3 font-semibold">Active players</th>
-                  <th className="px-4 py-3 font-semibold">Revenue share</th>
-                  <th className="px-4 py-3 font-semibold">CPA</th>
+                  <th className="px-4 py-3 font-semibold">Commission</th>
+                  <th className="px-4 py-3 font-semibold">Payout</th>
                 </tr>
               </thead>
               <tbody>
@@ -331,8 +331,8 @@ function AffiliateProgramPage() {
           </div>
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
-          * Indicative tiers. Final commercials confirmed inside the official partner
-          dashboard after signup.
+          Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000 per
+          active player applies. KYC and Telegram membership required.
         </p>
       </section>
 
@@ -340,11 +340,10 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Benefits for Bangladeshi Affiliates
+            Commission Highlights
           </h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            বাংলাদেশের মার্কেটের জন্য specially optimized — local payments, Bengali creatives
-            এবং dedicated support.
+            Everything you get as a JeetBuzz affiliate — transparent, weekly and long-term.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -369,10 +368,12 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Affiliate Success Stories
+            Affiliate Elite Club
           </h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            বাংলাদেশি পার্টনারদের রিয়েল অভিজ্ঞতা।
+            An exclusive program for our top-performing affiliates with increased commission
+            rates and premium privileges. Your dedication deserves the very best — welcome
+            to the JeetBuzz Elite Club.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
