@@ -400,6 +400,24 @@ function AffiliateProgramPage() {
       {/* Testimonials */}
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
+          <img
+            src={eliteClubLogoAsset.url}
+            alt="JeetBuzz Affiliates Elite Club"
+            width={624}
+            height={143}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto mb-4 h-auto w-full max-w-[320px] md:max-w-[420px]"
+          />
+          <img
+            src={eliteClubCrestAsset.url}
+            alt="JeetBuzz Affiliate Elite Club Crest"
+            width={740}
+            height={720}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto mb-4 h-auto w-full max-w-[180px] md:max-w-[220px]"
+          />
           <h2 className="text-2xl font-bold md:text-3xl">
             Affiliate Elite Club
           </h2>
