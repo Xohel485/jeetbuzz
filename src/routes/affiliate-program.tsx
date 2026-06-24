@@ -38,99 +38,99 @@ const PARTNERS_DESTINATION = AFFILIATE.partners;
 
 const FAQS = [
   {
-    q: "JeetBuzz Affiliate Program কী? (What is the JeetBuzz Affiliate Program?)",
-    a: "JeetBuzz Affiliate Program একটি অফিসিয়াল রেফারেল প্রোগ্রাম যেখানে আপনি আপনার ইউনিক লিংক ও ব্যানার ব্যবহার করে নতুন প্লেয়ার নিয়ে আসলে তাদের লাইফটাইম অ্যাক্টিভিটি থেকে কমিশন আয় করতে পারেন। It is JeetBuzz's official partner program for content creators, tipsters, and website owners in Bangladesh and South Asia.",
+    q: "How do I become a JeetBuzz affiliate?",
+    a: "Complete the affiliate registration form, verify your account and start promoting your referral link.",
   },
   {
-    q: "কত কমিশন পাওয়া যায়? (How much commission can I earn?)",
-    a: "ভলিউম অনুযায়ী রেভিনিউ শেয়ার সাধারণত ২৫% থেকে শুরু হয় এবং ৩৫–৫০% পর্যন্ত যেতে পারে। এছাড়াও CPA ($20–$50 per qualifying first deposit) এবং Hybrid deal পাওয়া যায় বড় পার্টনারদের জন্য।",
+    q: "How many active players are required?",
+    a: "A minimum of five active players is required.",
   },
   {
-    q: "পেমেন্ট কীভাবে পাব? (How and when do affiliates get paid?)",
-    a: "Payouts are processed on a weekly cycle for qualifying affiliates (monthly for smaller volumes). bKash, Nagad, ব্যাংক ট্রান্সফার, USDT এবং আরও কিছু লোকাল ও ক্রিপ্টো অপশন supported. Minimum thresholds apply.",
+    q: "What qualifies as an active player?",
+    a: "An active player meets the required turnover condition of at least ৳3000.",
   },
   {
-    q: "জিতবাজ অ্যাফিলিয়েট হতে কি কোনো ফি লাগে? (Is there any sign-up fee?)",
-    a: "না, JeetBuzz Affiliate Program-এ join করতে কোনো fee নেই। সাইন আপ ১০০% ফ্রি এবং অনুমোদন সাধারণত ২৪ ঘণ্টার মধ্যে হয়ে যায়।",
+    q: "Is KYC mandatory?",
+    a: "Yes. KYC verification is required before receiving commissions.",
   },
   {
-    q: "Cookie window কতদিনের? (What is the attribution window?)",
-    a: "Standard attribution window is 30 days per unique click, with sub-ID tracking so you can split campaigns by source, page, or creative.",
+    q: "Is Telegram mandatory?",
+    a: "Yes. Affiliates must join the official JeetBuzz Affiliate Telegram Channel.",
   },
   {
-    q: "বাংলাদেশ থেকে কি প্রমোট করা যাবে? (Can I promote from Bangladesh?)",
-    a: "হ্যাঁ — বাংলাদেশ, পাকিস্তান ও ভারত JeetBuzz-এর core market। বাংলায় কন্টেন্ট, লোকাল পেমেন্ট সাপোর্ট (bKash, Nagad, Rocket) এবং বাংলা মার্কেটিং ম্যাটেরিয়াল available.",
+    q: "When are commissions paid?",
+    a: "Commission payments are processed every Wednesday.",
   },
   {
-    q: "Marketing materials কি দেওয়া হয়? (Are creatives provided?)",
-    a: "Yes. Ready-made banners, landing pages, video ads এবং বাংলা/English copy পার্টনার ড্যাশবোর্ড থেকে download করতে পারবেন।",
+    q: "Can bonus commissions be transferred?",
+    a: "No. Bonus commissions are non-transferable.",
   },
 ];
 
 const STEPS = [
   {
     icon: UserPlus,
-    title: "Sign Up — সাইন আপ করুন",
-    desc: "jeetbuzzpartners.info-এ গিয়ে ফ্রি অ্যাফিলিয়েট অ্যাকাউন্ট খুলুন। অনুমোদন সাধারণত ২৪ ঘণ্টার মধ্যে।",
+    title: "Register as a JeetBuzz Affiliate",
+    desc: "Sign up on the official JeetBuzz Partners portal and create your free affiliate account.",
   },
   {
     icon: Share2,
-    title: "Promote — প্রমোট করুন",
-    desc: "আপনার ইউনিক রেফারেল লিংক, ব্যানার ও ল্যান্ডিং পেজ social media, website বা WhatsApp-এ শেয়ার করুন।",
+    title: "Complete KYC & Join Telegram",
+    desc: "Verify your KYC and join the official JeetBuzz Affiliate Telegram Channel to unlock payouts.",
   },
   {
     icon: BadgeDollarSign,
-    title: "Earn — কমিশন আয় করুন",
-    desc: "প্রতিটি qualifying ডিপোজিট ও player activity থেকে লাইফটাইম রেভিনিউ শেয়ার অথবা CPA পান।",
+    title: "Promote & Refer Active Players",
+    desc: "Share your affiliate link and maintain at least five qualified active players each cycle.",
   },
   {
     icon: Wallet,
-    title: "Get Paid — উইথড্র করুন",
-    desc: "bKash, Nagad, bank transfer বা USDT-তে weekly পেমেন্ট নিন — দ্রুত ও নির্ভরযোগ্য।",
+    title: "Get Paid Every Wednesday",
+    desc: "Receive your weekly commission of up to 60% every Wednesday — transparent and on time.",
   },
 ];
 
 const COMMISSION = [
-  { tier: "Starter", players: "1–10 active players / mo", revshare: "25%", cpa: "$20" },
-  { tier: "Growth", players: "11–30 active players / mo", revshare: "30%", cpa: "$30" },
-  { tier: "Pro", players: "31–80 active players / mo", revshare: "40%", cpa: "$40" },
-  { tier: "Elite", players: "80+ active players / mo", revshare: "Up to 50%", cpa: "$50 + Hybrid" },
+  { tier: "Starter", players: "0 – 10 active players", revshare: "50%", cpa: "Weekly Wednesday" },
+  { tier: "Growth", players: "11 – 20 active players", revshare: "55%", cpa: "Weekly Wednesday" },
+  { tier: "Elite", players: "20+ active players", revshare: "60%", cpa: "Weekly Wednesday" },
+  { tier: "Referral Bonus", players: "Refer another affiliate", revshare: "+3.5%", cpa: "Extra commission" },
 ];
 
 const BENEFITS = [
-  { icon: TrendingUp, title: "High BD conversion", desc: "বাংলাদেশের মার্কেটে JeetBuzz-এর brand recognition সবচেয়ে শক্তিশালী — high CR এবং low CPL." },
-  { icon: Wallet, title: "Local payments", desc: "bKash, Nagad, Rocket — প্লেয়ার ও অ্যাফিলিয়েট উভয়ের জন্য সহজ deposit/withdrawal." },
-  { icon: Megaphone, title: "Marketing kit", desc: "Bengali + English banners, landing pages, video creatives — সব ready-to-use." },
-  { icon: HeadphonesIcon, title: "Dedicated support", desc: "Personal affiliate manager — WhatsApp, Telegram ও email-এ ২৪/৭ সাপোর্ট." },
-  { icon: Repeat, title: "Lifetime revenue", desc: "আপনার রেফার করা প্লেয়ার যতদিন খেলবে ততদিন আপনি কমিশন পাবেন।" },
-  { icon: CheckCircle2, title: "Transparent reporting", desc: "Real-time dashboard — clicks, deposits, NGR ও commission সব dekhte পারবেন." },
+  { icon: TrendingUp, title: "Up to 60% Weekly Commission", desc: "Earn up to 60% commission on qualified active players every single week." },
+  { icon: Wallet, title: "Weekly Wednesday Payouts", desc: "All commissions are paid out every Wednesday — reliable, predictable income." },
+  { icon: Megaphone, title: "Real-Time Performance Tracking", desc: "Monitor clicks, conversions and earnings in real time from your affiliate dashboard." },
+  { icon: HeadphonesIcon, title: "Dedicated Affiliate Support", desc: "Get help from a dedicated affiliate manager via Telegram and email." },
+  { icon: CheckCircle2, title: "Transparent Reporting", desc: "Net Profit = Customer Win/Loss − Deduction − Bonus. Clear, auditable numbers." },
+  { icon: Repeat, title: "Long-Term Partnership", desc: "Build recurring revenue with a partnership designed for the long run." },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Rahim H.",
     role: "Sports tipster, Dhaka",
-    quote: "প্রথম মাসেই ১২,০০০ টাকা আয় করেছি। বাংলা banner থাকার কারণে আমার Telegram channel-এ দারুণ কাজ করে।",
+    quote: "I qualified for the 60% tier within two months. Wednesday payouts always arrive on time.",
     rating: 5,
   },
   {
     name: "Sadia R.",
     role: "Casino review blogger",
-    quote: "Weekly payout time-মতোই আসে। bKash-এ ২ ঘণ্টার মধ্যে পেমেন্ট পেয়েছি — অনেক প্রোগ্রামে এত fast পাইনি।",
+    quote: "Transparent reporting and weekly payouts make the JeetBuzz affiliate program one of the easiest to scale.",
     rating: 5,
   },
   {
     name: "Imran K.",
-    role: "YouTube creator",
-    quote: "Affiliate manager-এর সাথে সরাসরি WhatsApp-এ কথা বলতে পারি, hybrid deal-ও negotiate করা গেছে।",
+    role: "Content creator",
+    quote: "The extra 3.5% referral commission and the Elite Club perks have completely changed my monthly earnings.",
     rating: 5,
   },
 ];
 
 const PAGE_PATH = "/affiliate-program";
-const PAGE_TITLE = "JeetBuzz Affiliate Program — Earn 35–50% Lifetime Commission | GetJeetBuzz";
+const PAGE_TITLE = "JeetBuzz Affiliate Program | Earn Up to 60% Weekly Commission";
 const PAGE_DESC =
-  "জিতবাজ অ্যাফিলিয়েট প্রোগ্রাম — Bangladesh-এর জনপ্রিয় বেটিং সাইট promote করে up to 50% lifetime commission + weekly payouts. Free signup, bKash/Nagad support.";
+  "Join the JeetBuzz Affiliate Program and earn up to 60% weekly commission. Complete KYC, invite active players, receive weekly payouts and build long-term affiliate income.";
 
 export const Route = createFileRoute("/affiliate-program")({
   head: () => ({
@@ -219,26 +219,27 @@ function AffiliateProgramPage() {
             JeetBuzz Partners · Updated {LAST_VERIFIED}
           </div>
           <h1 className="mx-auto max-w-4xl text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Money by
-            Promoting Bangladesh's Popular Betting Site
+            JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
+            Weekly Commission
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            Join thousands of Bangladeshi affiliates earning up to{" "}
-            <span className="font-semibold text-foreground">35–50% lifetime commission</span>{" "}
-            every week. হাজারো বাংলাদেশি অ্যাফিলিয়েটের সাথে যুক্ত হয়ে সাপ্তাহিক আয় শুরু করুন।
+            Earn up to{" "}
+            <span className="font-semibold text-foreground">60% weekly commission</span>{" "}
+            by referring active players and growing your affiliate business with
+            transparent weekly payouts every Wednesday.
           </p>
           <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <PartnerCTA size="xl">Become JeetBuzz Affiliate Now</PartnerCTA>
+            <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
             <Button asChild size="lg" variant="glass">
-              <a href="#how-to-join">How to join</a>
+              <a href="/affiliate-login">Affiliate Login</a>
             </Button>
           </div>
           <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
             {[
-              { v: "50%", l: "Lifetime revshare" },
-              { v: "$50", l: "CPA per FTD" },
-              { v: "Weekly", l: "Payouts" },
-              { v: "24h", l: "Approval" },
+              { v: "60%", l: "Weekly commission" },
+              { v: "Wed", l: "Payout day" },
+              { v: "5+", l: "Active players" },
+              { v: "৳3000", l: "Min turnover" },
             ].map((s) => (
               <div
                 key={s.l}
@@ -263,9 +264,9 @@ function AffiliateProgramPage() {
       {/* How it works */}
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold md:text-3xl">How It Works — কীভাবে কাজ করে</h2>
+          <h2 className="text-2xl font-bold md:text-3xl">How to Participate</h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            চার ধাপে শুরু করুন — সাইন আপ থেকে পেমেন্ট পর্যন্ত পুরো প্রক্রিয়া সহজ ও স্বচ্ছ।
+            Register, verify, promote and receive your weekly commission every Wednesday.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -293,11 +294,11 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Commission Structure — কমিশন প্ল্যান
+            Commission Plan
           </h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            ভলিউম যত বাড়বে, কমিশন তত বাড়বে। Hybrid deal (RevShare + CPA) Elite পার্টনারদের
-            জন্য available.
+            The more qualified active players you bring, the higher your weekly commission —
+            up to 60%. Refer another affiliate for an extra 3.5% commission.
           </p>
         </div>
         <div className="glass overflow-hidden rounded-2xl">
@@ -307,8 +308,8 @@ function AffiliateProgramPage() {
                 <tr>
                   <th className="px-4 py-3 font-semibold">Tier</th>
                   <th className="px-4 py-3 font-semibold">Active players</th>
-                  <th className="px-4 py-3 font-semibold">Revenue share</th>
-                  <th className="px-4 py-3 font-semibold">CPA</th>
+                  <th className="px-4 py-3 font-semibold">Commission</th>
+                  <th className="px-4 py-3 font-semibold">Payout</th>
                 </tr>
               </thead>
               <tbody>
@@ -330,8 +331,8 @@ function AffiliateProgramPage() {
           </div>
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
-          * Indicative tiers. Final commercials confirmed inside the official partner
-          dashboard after signup.
+          Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000 per
+          active player applies. KYC and Telegram membership required.
         </p>
       </section>
 
@@ -339,11 +340,10 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Benefits for Bangladeshi Affiliates
+            Commission Highlights
           </h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            বাংলাদেশের মার্কেটের জন্য specially optimized — local payments, Bengali creatives
-            এবং dedicated support.
+            Everything you get as a JeetBuzz affiliate — transparent, weekly and long-term.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -368,10 +368,12 @@ function AffiliateProgramPage() {
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
           <h2 className="text-2xl font-bold md:text-3xl">
-            Affiliate Success Stories
+            Affiliate Elite Club
           </h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            বাংলাদেশি পার্টনারদের রিয়েল অভিজ্ঞতা।
+            An exclusive program for our top-performing affiliates with increased commission
+            rates and premium privileges. Your dedication deserves the very best — welcome
+            to the JeetBuzz Elite Club.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -409,33 +411,37 @@ function AffiliateProgramPage() {
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <h2 className="text-2xl font-bold md:text-3xl">
-              How to Join — কীভাবে যুক্ত হবেন
+              Requirements & How to Join
             </h2>
             <p className="mt-2 text-sm text-muted-foreground md:text-base">
-              পাঁচ মিনিটে সাইন আপ — কোনো ফি নেই, কোনো hidden শর্ত নেই।
+              Six simple steps to start earning up to 60% weekly commission.
             </p>
           </div>
           <ol className="mt-8 space-y-4">
             {[
               {
-                t: "নিচের 'Become Affiliate' বাটনে ক্লিক করুন",
-                d: "আপনাকে অফিসিয়াল JeetBuzz Partners portal-এ নিয়ে যাবে।",
+                t: "Register as a JeetBuzz Affiliate",
+                d: "Sign up on the official JeetBuzz Partners portal — free and fast.",
               },
               {
-                t: "jeetbuzzpartners.info-এ ফ্রি অ্যাকাউন্ট তৈরি করুন",
-                d: "নাম, ইমেইল, ট্রাফিক সোর্স এবং পেমেন্ট প্রেফারেন্স দিন।",
+                t: "Complete your KYC verification",
+                d: "KYC verification is mandatory before commissions are released.",
               },
               {
-                t: "অনুমোদনের জন্য অপেক্ষা করুন (সাধারণত ২৪ ঘণ্টা)",
-                d: "অ্যাপ্রুভ হলে ইমেইলে dashboard access পাবেন।",
+                t: "Join the official JeetBuzz Affiliate Telegram Channel",
+                d: "Stay informed about updates, payouts and promotions.",
               },
               {
-                t: "Marketing materials ও ইউনিক লিংক ডাউনলোড করুন",
-                d: "Bengali/English banners, landing pages এবং sub-ID tracking ব্যবহার করুন।",
+                t: "Promote your affiliate link",
+                d: "Share your unique referral link across your audience and channels.",
               },
               {
-                t: "প্রমোট শুরু করুন এবং কমিশন আয় করুন",
-                d: "Real-time dashboard-এ clicks, deposits ও earnings track করুন।",
+                t: "Maintain qualified active players",
+                d: "Minimum 5 active players with at least ৳3000 turnover each.",
+              },
+              {
+                t: "Receive weekly commission every Wednesday",
+                d: "Up to 60% weekly payout plus an extra 3.5% referral commission.",
               },
             ].map((step, i) => (
               <li key={i} className="glass flex gap-4 rounded-2xl p-4 md:p-5">
@@ -460,7 +466,7 @@ function AffiliateProgramPage() {
         <div className="mx-auto max-w-3xl">
           <FAQAccordion
             faqs={FAQS}
-            heading="Frequently asked questions — সাধারণ প্রশ্ন"
+            heading="Frequently asked questions"
           />
         </div>
       </section>
@@ -469,14 +475,14 @@ function AffiliateProgramPage() {
       <section className="container-pro pb-20">
         <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 border-t-2 border-t-primary/60 bg-white/[0.03] px-6 py-10 text-center md:px-12 md:py-14">
           <h2 className="text-2xl font-bold md:text-4xl">
-            আজই <span className="gold-text">JeetBuzz Affiliate</span> হয়ে আয় শুরু করুন
+            Become a <span className="gold-text">JeetBuzz Affiliate</span> today
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground md:text-base">
-            Free signup. Weekly payouts. Up to 50% lifetime commission. বাংলাদেশের সবচেয়ে
-            trusted betting brand-এর সাথে partner হোন।
+            Up to 60% weekly commission. Weekly Wednesday payouts. Transparent reporting and
+            long-term partnership.
           </p>
           <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <PartnerCTA size="xl">Become JeetBuzz Affiliate Now</PartnerCTA>
+            <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
           </div>
           <p className="mt-4 text-[11px] text-muted-foreground">
             We earn commission if you sign up through our links — at no extra cost to you.
@@ -491,11 +497,12 @@ function AffiliateProgramPage() {
           "@type": "HowTo",
           name: "How to join the JeetBuzz Affiliate Program",
           step: [
-            { "@type": "HowToStep", name: "Click Become Affiliate", url: PARTNERS_DESTINATION },
-            { "@type": "HowToStep", name: "Register on jeetbuzzpartners.info" },
-            { "@type": "HowToStep", name: "Wait for approval (≈24h)" },
-            { "@type": "HowToStep", name: "Download marketing materials" },
-            { "@type": "HowToStep", name: "Promote and earn weekly commission" },
+            { "@type": "HowToStep", name: "Register as a JeetBuzz Affiliate", url: PARTNERS_DESTINATION },
+            { "@type": "HowToStep", name: "Complete KYC verification" },
+            { "@type": "HowToStep", name: "Join the official JeetBuzz Affiliate Telegram Channel" },
+            { "@type": "HowToStep", name: "Promote your affiliate link" },
+            { "@type": "HowToStep", name: "Maintain at least five qualified active players" },
+            { "@type": "HowToStep", name: "Receive weekly commission every Wednesday" },
           ],
         }}
       />
