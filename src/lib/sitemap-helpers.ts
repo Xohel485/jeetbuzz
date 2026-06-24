@@ -1,10 +1,34 @@
 import { IMAGES, type ImageKey } from "@/lib/images";
+import {
+  BUILD_FALLBACK,
+  LASTMOD_MAP,
+  LOCALIZED_LASTMOD,
+  BLOG_INDEX_LASTMOD,
+  lastmodFor as _lastmodFor,
+} from "virtual:sitemap-lastmod";
 
 export const BASE_URL = "https://getjeetbuzz.com";
 
-/** Cold-start time used as build-time lastmod for static pages.
- *  Set once at module load so the value does not jitter per request. */
-export const BUILD_TIME = new Date().toISOString();
+/** Per-route last-modified timestamps captured at build time from git
+ *  history. A page that has not changed since its last commit keeps the
+ *  same `lastmod` across deploys. */
+export { LASTMOD_MAP, LOCALIZED_LASTMOD, BLOG_INDEX_LASTMOD };
+
+export function lastmodFor(path: string): string {
+  return _lastmodFor(path);
+}
+
+/** Most recent commit timestamp across all tracked routes — used as the
+ *  sitemap index `<lastmod>` so it only changes when some child changes. */
+export const BUILD_TIME = (() => {
+  const all = [
+    ...Object.values(LASTMOD_MAP),
+    LOCALIZED_LASTMOD,
+    BLOG_INDEX_LASTMOD,
+  ].filter(Boolean);
+  const max = all.reduce((a, b) => (a > b ? a : b), "");
+  return max || BUILD_FALLBACK;
+})();
 export const BUILD_DATE = BUILD_TIME.slice(0, 10);
 
 /** Images attached to specific routes for the image: namespace. */
@@ -79,7 +103,7 @@ export function renderUrlset(entries: SitemapEntry[]): Response {
 export function staticEntries(paths: string[]): SitemapEntry[] {
   return paths.map((p) => ({
     path: p,
-    lastmod: BUILD_DATE,
+    lastmod: lastmodFor(p),
     changefreq: "weekly",
     priority: p === "/" ? "1.0" : "0.8",
   }));
