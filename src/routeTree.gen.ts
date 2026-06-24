@@ -23,6 +23,7 @@ import { Route as SitemapPaymentsDotxmlRouteImport } from './routes/sitemap-paym
 import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
 import { Route as SitemapInDotxmlRouteImport } from './routes/sitemap-in[.]xml'
 import { Route as SitemapGuidesDotxmlRouteImport } from './routes/sitemap-guides[.]xml'
+import { Route as SitemapCompareDotxmlRouteImport } from './routes/sitemap-compare[.]xml'
 import { Route as SitemapBlogDotxmlRouteImport } from './routes/sitemap-blog[.]xml'
 import { Route as SitemapBdDotxmlRouteImport } from './routes/sitemap-bd[.]xml'
 import { Route as SitemapAffiliateDotxmlRouteImport } from './routes/sitemap-affiliate[.]xml'
@@ -160,6 +161,11 @@ const SitemapInDotxmlRoute = SitemapInDotxmlRouteImport.update({
 const SitemapGuidesDotxmlRoute = SitemapGuidesDotxmlRouteImport.update({
   id: '/sitemap-guides.xml',
   path: '/sitemap-guides.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapCompareDotxmlRoute = SitemapCompareDotxmlRouteImport.update({
+  id: '/sitemap-compare.xml',
+  path: '/sitemap-compare.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapBlogDotxmlRoute = SitemapBlogDotxmlRouteImport.update({
@@ -569,6 +575,7 @@ export interface FileRoutesByFullPath {
   '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
   '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
   '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-compare.xml': typeof SitemapCompareDotxmlRoute
   '/sitemap-guides.xml': typeof SitemapGuidesDotxmlRoute
   '/sitemap-in.xml': typeof SitemapInDotxmlRoute
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
@@ -652,6 +659,7 @@ export interface FileRoutesByTo {
   '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
   '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
   '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-compare.xml': typeof SitemapCompareDotxmlRoute
   '/sitemap-guides.xml': typeof SitemapGuidesDotxmlRoute
   '/sitemap-in.xml': typeof SitemapInDotxmlRoute
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
@@ -737,6 +745,7 @@ export interface FileRoutesById {
   '/sitemap-affiliate.xml': typeof SitemapAffiliateDotxmlRoute
   '/sitemap-bd.xml': typeof SitemapBdDotxmlRoute
   '/sitemap-blog.xml': typeof SitemapBlogDotxmlRoute
+  '/sitemap-compare.xml': typeof SitemapCompareDotxmlRoute
   '/sitemap-guides.xml': typeof SitemapGuidesDotxmlRoute
   '/sitemap-in.xml': typeof SitemapInDotxmlRoute
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
@@ -823,6 +832,7 @@ export interface FileRouteTypes {
     | '/sitemap-affiliate.xml'
     | '/sitemap-bd.xml'
     | '/sitemap-blog.xml'
+    | '/sitemap-compare.xml'
     | '/sitemap-guides.xml'
     | '/sitemap-in.xml'
     | '/sitemap-pages.xml'
@@ -906,6 +916,7 @@ export interface FileRouteTypes {
     | '/sitemap-affiliate.xml'
     | '/sitemap-bd.xml'
     | '/sitemap-blog.xml'
+    | '/sitemap-compare.xml'
     | '/sitemap-guides.xml'
     | '/sitemap-in.xml'
     | '/sitemap-pages.xml'
@@ -990,6 +1001,7 @@ export interface FileRouteTypes {
     | '/sitemap-affiliate.xml'
     | '/sitemap-bd.xml'
     | '/sitemap-blog.xml'
+    | '/sitemap-compare.xml'
     | '/sitemap-guides.xml'
     | '/sitemap-in.xml'
     | '/sitemap-pages.xml'
@@ -1075,6 +1087,7 @@ export interface RootRouteChildren {
   SitemapAffiliateDotxmlRoute: typeof SitemapAffiliateDotxmlRoute
   SitemapBdDotxmlRoute: typeof SitemapBdDotxmlRoute
   SitemapBlogDotxmlRoute: typeof SitemapBlogDotxmlRoute
+  SitemapCompareDotxmlRoute: typeof SitemapCompareDotxmlRoute
   SitemapGuidesDotxmlRoute: typeof SitemapGuidesDotxmlRoute
   SitemapInDotxmlRoute: typeof SitemapInDotxmlRoute
   SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
@@ -1195,6 +1208,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap-guides.xml'
       fullPath: '/sitemap-guides.xml'
       preLoaderRoute: typeof SitemapGuidesDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-compare.xml': {
+      id: '/sitemap-compare.xml'
+      path: '/sitemap-compare.xml'
+      fullPath: '/sitemap-compare.xml'
+      preLoaderRoute: typeof SitemapCompareDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap-blog.xml': {
@@ -1749,6 +1769,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapAffiliateDotxmlRoute: SitemapAffiliateDotxmlRoute,
   SitemapBdDotxmlRoute: SitemapBdDotxmlRoute,
   SitemapBlogDotxmlRoute: SitemapBlogDotxmlRoute,
+  SitemapCompareDotxmlRoute: SitemapCompareDotxmlRoute,
   SitemapGuidesDotxmlRoute: SitemapGuidesDotxmlRoute,
   SitemapInDotxmlRoute: SitemapInDotxmlRoute,
   SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
