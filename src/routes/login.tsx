@@ -98,6 +98,14 @@ export const Route = createFileRoute("/login")({
         "- Is your phone clock correct? (2FA codes fail with clock drift)",
         "- Do you have access to the SIM you registered with, in case OTP is needed?",
         "If yes to all four, tap Open JeetBuzz Login above. Play responsibly — JeetBuzz is strictly 18+.",
+        "## Desktop vs mobile login behaviour",
+        "On desktop the JeetBuzz login screen is a centred modal over the lobby; tabbing through fields works as you would expect. On mobile the form takes the full viewport and the keyboard usually opens to numeric for the phone field — switch to alphabetic for the password field by tapping the abc key. iPad sits in between: it uses the desktop layout but with mobile keyboard quirks. None of this changes the credentials — the same email or phone and password works everywhere.",
+        "## Remember-me and trusted devices",
+        "Tick Remember Me only on a device you alone use. JeetBuzz then keeps the session alive for roughly seven days unless your IP country changes or you log out manually. On a borrowed phone or a netcafe machine, leave Remember Me unticked, and after you finish, open Account → Sessions and sign out everything just in case.",
+        "## Login from a new country triggers a verification",
+        "Travelling from Bangladesh to Pakistan, or India to the UAE, and trying to log in often triggers an extra email or SMS verification step. This is by design — the operator flags first-time geo changes as a possible takeover. Have your registered SIM with you when crossing borders, or expect to spend ten minutes with Live Chat verifying identity.",
+        "## What to do if your account is hacked",
+        "Signs: login emails you did not request, withdrawals to a wallet you do not recognise, balance drops with no bet history. Act in this order — change the password from the [Login](/login) hub, force-logout every session under Account → Sessions, enable 2FA if it was off, contact Live Chat with a description of the timeline. JeetBuzz can freeze the account during investigation and, in most documented cases, restore stolen balances if 2FA was active at the time of breach.",
       ]}
       faqs={[
         {
