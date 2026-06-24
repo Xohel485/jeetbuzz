@@ -71,12 +71,14 @@ function LocalizedHome() {
   useEffect(() => {
     setLocale(lang as Locale);
   }, [lang, setLocale]);
-  // Country/locale unique content above the shared homepage to lift uniqueness
-  // for /bd/bn, /pk/ur, /in/hi — local payments, leagues, FAQ in local script.
+  // Inject localized copy INTO the shared HomePage (rendered after Hero).
+  // Rendering it as a sibling above <HomePage /> previously pushed the
+  // header + Hero down the DOM on localized routes.
   return (
-    <>
-      <CountryLocalContent country={country as Country} lang={lang as Locale} />
-      <HomePage />
-    </>
+    <HomePage
+      localExtras={
+        <CountryLocalContent country={country as Country} lang={lang as Locale} />
+      }
+    />
   );
 }
