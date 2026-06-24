@@ -78,6 +78,7 @@ import { Route as GoSignupRouteImport } from './routes/go.signup'
 import { Route as GoLoginRouteImport } from './routes/go.login'
 import { Route as GoAffiliateRouteImport } from './routes/go.affiliate'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AppLaunchRouteImport } from './routes/app.launch'
 import { Route as CountryLangIndexRouteImport } from './routes/$country.$lang.index'
 import { Route as CountryLangSplatRouteImport } from './routes/$country.$lang.$'
 
@@ -426,6 +427,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const AppLaunchRoute = AppLaunchRouteImport.update({
+  id: '/app/launch',
+  path: '/app/launch',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CountryLangIndexRoute = CountryLangIndexRouteImport.update({
   id: '/$country/$lang/',
   path: '/$country/$lang/',
@@ -502,6 +508,7 @@ export interface FileRoutesByFullPath {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
@@ -574,6 +581,7 @@ export interface FileRoutesByTo {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
@@ -648,6 +656,7 @@ export interface FileRoutesById {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
@@ -723,6 +732,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
     | '/go/login'
@@ -795,6 +805,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
     | '/go/login'
@@ -868,6 +879,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
     | '/go/login'
@@ -942,6 +954,7 @@ export interface RootRouteChildren {
   VipProgramRoute: typeof VipProgramRoute
   WelcomeBonusRoute: typeof WelcomeBonusRoute
   WithdrawalGuideRoute: typeof WithdrawalGuideRoute
+  AppLaunchRoute: typeof AppLaunchRoute
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
   GoSignupRoute: typeof GoSignupRoute
@@ -1434,6 +1447,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/app/launch': {
+      id: '/app/launch'
+      path: '/app/launch'
+      fullPath: '/app/launch'
+      preLoaderRoute: typeof AppLaunchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$country/$lang/': {
       id: '/$country/$lang/'
       path: '/$country/$lang'
@@ -1528,6 +1548,7 @@ const rootRouteChildren: RootRouteChildren = {
   VipProgramRoute: VipProgramRoute,
   WelcomeBonusRoute: WelcomeBonusRoute,
   WithdrawalGuideRoute: WithdrawalGuideRoute,
+  AppLaunchRoute: AppLaunchRoute,
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,
   GoSignupRoute: GoSignupRoute,

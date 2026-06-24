@@ -124,6 +124,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", sizes: "64x64", href: "/favicon-64.png" },
       { rel: "icon", type: "image/png", sizes: "128x128", href: "/favicon-128.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
       // Self-hosted Hind Siliguri (400/700) — declared via @font-face in styles.css.
       // Preload the Latin subsets so above-the-fold text never blocks on a network roundtrip.
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-400-latin.woff2", crossOrigin: "anonymous" },
