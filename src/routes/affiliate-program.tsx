@@ -219,26 +219,27 @@ function AffiliateProgramPage() {
             JeetBuzz Partners · Updated {LAST_VERIFIED}
           </div>
           <h1 className="mx-auto max-w-4xl text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Money by
-            Promoting Bangladesh's Popular Betting Site
+            JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
+            Weekly Commission
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            Join thousands of Bangladeshi affiliates earning up to{" "}
-            <span className="font-semibold text-foreground">35–50% lifetime commission</span>{" "}
-            every week. হাজারো বাংলাদেশি অ্যাফিলিয়েটের সাথে যুক্ত হয়ে সাপ্তাহিক আয় শুরু করুন।
+            Earn up to{" "}
+            <span className="font-semibold text-foreground">60% weekly commission</span>{" "}
+            by referring active players and growing your affiliate business with
+            transparent weekly payouts every Wednesday.
           </p>
           <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <PartnerCTA size="xl">Become JeetBuzz Affiliate Now</PartnerCTA>
+            <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
             <Button asChild size="lg" variant="glass">
-              <a href="#how-to-join">How to join</a>
+              <a href="/affiliate-login">Affiliate Login</a>
             </Button>
           </div>
           <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
             {[
-              { v: "50%", l: "Lifetime revshare" },
-              { v: "$50", l: "CPA per FTD" },
-              { v: "Weekly", l: "Payouts" },
-              { v: "24h", l: "Approval" },
+              { v: "60%", l: "Weekly commission" },
+              { v: "Wed", l: "Payout day" },
+              { v: "5+", l: "Active players" },
+              { v: "৳3000", l: "Min turnover" },
             ].map((s) => (
               <div
                 key={s.l}
