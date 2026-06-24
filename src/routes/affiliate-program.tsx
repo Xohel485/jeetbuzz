@@ -421,33 +421,41 @@ function AffiliateProgramPage() {
 
       {/* Testimonials */}
       <section className="container-pro py-10 md:py-14">
-        <div className="mx-auto mb-8 max-w-2xl text-center">
-          <img
-            src={eliteClubLogoUrl}
-            alt="JeetBuzz Affiliates Elite Club"
-            width={628}
-            height={150}
-            loading="lazy"
-            decoding="async"
-            className="mx-auto mb-4 h-auto w-full max-w-[320px] md:max-w-[420px]"
+        <div className="relative mb-8 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-10">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,color-mix(in_oklab,var(--gold,#f5c451)_18%,transparent),transparent_70%)]"
           />
-          <img
-            src={eliteClubCrestUrl}
-            alt="JeetBuzz Affiliate Elite Club Crest"
-            width={480}
-            height={469}
-            loading="lazy"
-            decoding="async"
-            className="mx-auto mb-4 h-auto w-full max-w-[180px] md:max-w-[220px]"
-          />
-          <h2 className="text-2xl font-bold md:text-3xl">
-            Affiliate Elite Club
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            An exclusive program for our top-performing affiliates with increased commission
-            rates and premium privileges. Your dedication deserves the very best — welcome
-            to the JeetBuzz Elite Club.
-          </p>
+          <div className="grid items-center gap-8 md:grid-cols-[0.7fr_1.3fr] md:gap-10">
+            <img
+              src={eliteClubCrestUrl}
+              alt="JeetBuzz Affiliate Elite Club Crest"
+              width={480}
+              height={469}
+              loading="lazy"
+              decoding="async"
+              className="mx-auto h-auto w-full max-w-[200px] md:max-w-[260px]"
+            />
+            <div className="text-center md:text-left">
+              <img
+                src={eliteClubLogoUrl}
+                alt="JeetBuzz Affiliates Elite Club"
+                width={628}
+                height={150}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto h-auto w-full max-w-[320px] md:mx-0 md:max-w-[380px]"
+              />
+              <h2 className="mt-4 text-2xl font-bold md:text-3xl">
+                Affiliate Elite Club
+              </h2>
+              <p className="mt-3 text-sm text-muted-foreground md:text-base">
+                An exclusive program for our top-performing affiliates with increased
+                commission rates and premium privileges. Your dedication deserves the very
+                best — welcome to the JeetBuzz Elite Club.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
