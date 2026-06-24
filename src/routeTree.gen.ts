@@ -53,6 +53,7 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FactCheckingRouteImport } from './routes/fact-checking'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
 import { Route as EasypaisaGuideRouteImport } from './routes/easypaisa-guide'
+import { Route as DownloadRouteImport } from './routes/download'
 import { Route as DepositWithdrawalGuideRouteImport } from './routes/deposit-withdrawal-guide'
 import { Route as DepositGuideRouteImport } from './routes/deposit-guide'
 import { Route as CricketExchangeGuideRouteImport } from './routes/cricket-exchange-guide'
@@ -300,6 +301,11 @@ const EasypaisaGuideRoute = EasypaisaGuideRouteImport.update({
   path: '/easypaisa-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DownloadRoute = DownloadRouteImport.update({
+  id: '/download',
+  path: '/download',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DepositWithdrawalGuideRoute = DepositWithdrawalGuideRouteImport.update({
   id: '/deposit-withdrawal-guide',
   path: '/deposit-withdrawal-guide',
@@ -451,6 +457,7 @@ export interface FileRoutesByFullPath {
   '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
+  '/download': typeof DownloadRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
@@ -522,6 +529,7 @@ export interface FileRoutesByTo {
   '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
+  '/download': typeof DownloadRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
@@ -595,6 +603,7 @@ export interface FileRoutesById {
   '/cricket-exchange-guide': typeof CricketExchangeGuideRoute
   '/deposit-guide': typeof DepositGuideRoute
   '/deposit-withdrawal-guide': typeof DepositWithdrawalGuideRoute
+  '/download': typeof DownloadRoute
   '/easypaisa-guide': typeof EasypaisaGuideRoute
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
@@ -669,6 +678,7 @@ export interface FileRouteTypes {
     | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
+    | '/download'
     | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
@@ -740,6 +750,7 @@ export interface FileRouteTypes {
     | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
+    | '/download'
     | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
@@ -812,6 +823,7 @@ export interface FileRouteTypes {
     | '/cricket-exchange-guide'
     | '/deposit-guide'
     | '/deposit-withdrawal-guide'
+    | '/download'
     | '/easypaisa-guide'
     | '/editorial-policy'
     | '/fact-checking'
@@ -885,6 +897,7 @@ export interface RootRouteChildren {
   CricketExchangeGuideRoute: typeof CricketExchangeGuideRoute
   DepositGuideRoute: typeof DepositGuideRoute
   DepositWithdrawalGuideRoute: typeof DepositWithdrawalGuideRoute
+  DownloadRoute: typeof DownloadRoute
   EasypaisaGuideRoute: typeof EasypaisaGuideRoute
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FactCheckingRoute: typeof FactCheckingRoute
@@ -1246,6 +1259,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EasypaisaGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/download': {
+      id: '/download'
+      path: '/download'
+      fullPath: '/download'
+      preLoaderRoute: typeof DownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/deposit-withdrawal-guide': {
       id: '/deposit-withdrawal-guide'
       path: '/deposit-withdrawal-guide'
@@ -1463,6 +1483,7 @@ const rootRouteChildren: RootRouteChildren = {
   CricketExchangeGuideRoute: CricketExchangeGuideRoute,
   DepositGuideRoute: DepositGuideRoute,
   DepositWithdrawalGuideRoute: DepositWithdrawalGuideRoute,
+  DownloadRoute: DownloadRoute,
   EasypaisaGuideRoute: EasypaisaGuideRoute,
   EditorialPolicyRoute: EditorialPolicyRoute,
   FactCheckingRoute: FactCheckingRoute,
