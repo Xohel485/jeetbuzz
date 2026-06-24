@@ -102,6 +102,14 @@ export const Route = createFileRoute("/register")({
         "- Depositing a large sum before testing a small withdrawal.",
         "## Responsible gaming reminder",
         "Registration includes acceptance of the 18+ terms. Set deposit limits before, not after, your first big session. Use the cool-off and self-exclude tools — they are there because the operator knows some players need them, not as a marketing fig leaf. Help lines and external resources are listed on our [Responsible Gaming](/responsible-gaming) page.",
+        "## Registration timelines you can expect",
+        "Form submission to first lobby load: under three minutes for phone registration, four to five for email. First deposit clearing: under 90 seconds for bKash, Nagad, EasyPaisa, JazzCash, UPI and PhonePe. KYC turnaround at first large withdrawal: usually under 24 hours when documents are clean, occasionally up to 72 hours during cricket peak weekends (IPL final, BPL final, T20 World Cup). Withdrawal clearing after KYC: 15 minutes to a few hours depending on processor and amount.",
+        "## Registering on the JeetBuzz Android app",
+        "If your ISP throttles the public JeetBuzz domain, install the Android APK from our [Download](/download) page first, then register inside the app. The form is identical, push OTP delivery is faster than SMS, and biometric login is offered immediately after first sign-in. iOS users follow the same flow via the iOS web app — Safari, Add to Home Screen, then Register inside the installed shortcut.",
+        "## Why three names must align — and how to align them",
+        "JeetBuzz cross-checks three names: the name on your registration profile, the name on the KYC document (NID, CNIC or Aadhaar), and the name on the payment wallet (bKash, EasyPaisa, UPI). If any of the three disagree, withdrawals stall even though deposits worked. Fix this at registration by typing your legal name exactly as it appears on your NID, then making sure your wallet is registered under the same name. Two minutes of friction here saves a multi-day support ticket later.",
+        "## What separates a registered JeetBuzz player from a casual visitor",
+        "A casual visitor can browse markets and read the welcome bonus terms but cannot place a bet, deposit, withdraw, claim a promo, enter a tournament, post on the Exchange, request KYC unlocking of higher limits, contact 24/7 Live Chat from an authenticated session, or run a JeetBuzz Partner affiliate link. Registration is the gate. Once through it, everything from the Aviator round starting in 30 seconds to the IPL final outright market is one tap away.",
       ]}
       faqs={[
         {
