@@ -24,6 +24,7 @@ const GUIDES = [
   "/live-cricket-betting",
   "/aviator-guide",
   "/cricket-exchange-guide",
+  "/jeetbuzz-alternatives",
 ];
 
 export const Route = createFileRoute("/sitemap-guides.xml")({
