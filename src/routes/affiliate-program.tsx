@@ -223,6 +223,16 @@ function AffiliateProgramPage() {
             <span className="size-1.5 rounded-full bg-primary" />
             JeetBuzz Partners · Updated {LAST_VERIFIED}
           </div>
+          <img
+            src={elite60Asset.url}
+            alt="JeetBuzz Affiliate Program – Earn Up to 60% Weekly Commission"
+            width={1158}
+            height={1395}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="mx-auto mb-6 h-auto w-full max-w-[280px] rounded-2xl md:max-w-[340px]"
+          />
           <h1 className="mx-auto max-w-4xl text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
             Weekly Commission
