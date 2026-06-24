@@ -136,9 +136,9 @@ export function SiteFooter() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {TRUST_GROUPS.map((g) => (
             <div key={g.title} className="glass flex h-full flex-col p-6">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 {g.title}
-              </h4>
+              </p>
               <p className="mt-2 text-xs text-muted-foreground/80">{g.desc}</p>
               <div className="mt-5 flex flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-3">
                 {g.badges.map((b) => (
@@ -175,7 +175,7 @@ export function SiteFooter() {
         <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 text-left sm:grid-cols-3 md:grid-cols-5 md:gap-x-8">
           {COLS.map((c) => (
             <div key={c.title}>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">{c.title}</h4>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">{c.title}</p>
               <ul className="mt-4 space-y-2.5">
                 {c.links.map((l) => (
                   <li key={l.to}>
@@ -194,9 +194,9 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-white/5 pt-10 text-left">
           <div className="flex items-baseline justify-between gap-4">
-            <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
               JeetBuzz Blog — Latest Guides
-            </h4>
+            </p>
             <Link to="/blog" className="shrink-0 text-xs font-medium text-primary hover:underline">
               View all
             </Link>
