@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
 Disallow: /go/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /cms/
+Disallow: /api/
+Disallow: /preview/
+Disallow: /draft/
+Disallow: /staging/
+Disallow: /search
 
 Sitemap: https://getjeetbuzz.com/sitemap.xml

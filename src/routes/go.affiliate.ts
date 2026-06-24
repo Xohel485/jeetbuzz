@@ -10,7 +10,7 @@ export const Route = createFileRoute("/go/affiliate")({
           headers: {
             Location: GO_DESTINATIONS.affiliate,
             "Cache-Control": "no-store, max-age=0",
-            "X-Robots-Tag": "noindex, nofollow",
+            "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet",
             "Referrer-Policy": "no-referrer-when-downgrade",
           },
         });
