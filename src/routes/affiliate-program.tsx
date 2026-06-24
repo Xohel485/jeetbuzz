@@ -466,7 +466,7 @@ function AffiliateProgramPage() {
         <div className="mx-auto max-w-3xl">
           <FAQAccordion
             faqs={FAQS}
-            heading="Frequently asked questions — সাধারণ প্রশ্ন"
+            heading="Frequently asked questions"
           />
         </div>
       </section>
@@ -475,14 +475,14 @@ function AffiliateProgramPage() {
       <section className="container-pro pb-20">
         <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 border-t-2 border-t-primary/60 bg-white/[0.03] px-6 py-10 text-center md:px-12 md:py-14">
           <h2 className="text-2xl font-bold md:text-4xl">
-            আজই <span className="gold-text">JeetBuzz Affiliate</span> হয়ে আয় শুরু করুন
+            Become a <span className="gold-text">JeetBuzz Affiliate</span> today
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground md:text-base">
-            Free signup. Weekly payouts. Up to 50% lifetime commission. বাংলাদেশের সবচেয়ে
-            trusted betting brand-এর সাথে partner হোন।
+            Up to 60% weekly commission. Weekly Wednesday payouts. Transparent reporting and
+            long-term partnership.
           </p>
           <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <PartnerCTA size="xl">Become JeetBuzz Affiliate Now</PartnerCTA>
+            <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
           </div>
           <p className="mt-4 text-[11px] text-muted-foreground">
             We earn commission if you sign up through our links — at no extra cost to you.
@@ -497,11 +497,12 @@ function AffiliateProgramPage() {
           "@type": "HowTo",
           name: "How to join the JeetBuzz Affiliate Program",
           step: [
-            { "@type": "HowToStep", name: "Click Become Affiliate", url: PARTNERS_DESTINATION },
-            { "@type": "HowToStep", name: "Register on jeetbuzzpartners.info" },
-            { "@type": "HowToStep", name: "Wait for approval (≈24h)" },
-            { "@type": "HowToStep", name: "Download marketing materials" },
-            { "@type": "HowToStep", name: "Promote and earn weekly commission" },
+            { "@type": "HowToStep", name: "Register as a JeetBuzz Affiliate", url: PARTNERS_DESTINATION },
+            { "@type": "HowToStep", name: "Complete KYC verification" },
+            { "@type": "HowToStep", name: "Join the official JeetBuzz Affiliate Telegram Channel" },
+            { "@type": "HowToStep", name: "Promote your affiliate link" },
+            { "@type": "HowToStep", name: "Maintain at least five qualified active players" },
+            { "@type": "HowToStep", name: "Receive weekly commission every Wednesday" },
           ],
         }}
       />
