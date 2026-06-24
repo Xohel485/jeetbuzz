@@ -46,6 +46,7 @@ import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
+import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alternatives'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
@@ -267,6 +268,11 @@ const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
   path: '/jeetbuzz-review',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzAlternativesRoute = JeetbuzzAlternativesRouteImport.update({
+  id: '/jeetbuzz-alternatives',
+  path: '/jeetbuzz-alternatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
   id: '/jazzcash-guide',
   path: '/jazzcash-guide',
@@ -471,6 +477,7 @@ export interface FileRoutesByFullPath {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -544,6 +551,7 @@ export interface FileRoutesByTo {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -619,6 +627,7 @@ export interface FileRoutesById {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -695,6 +704,7 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-alternatives'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login'
@@ -768,6 +778,7 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-alternatives'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login'
@@ -842,6 +853,7 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-alternatives'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login'
@@ -917,6 +929,7 @@ export interface RootRouteChildren {
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
+  JeetbuzzAlternativesRoute: typeof JeetbuzzAlternativesRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
@@ -1223,6 +1236,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-alternatives': {
+      id: '/jeetbuzz-alternatives'
+      path: '/jeetbuzz-alternatives'
+      fullPath: '/jeetbuzz-alternatives'
+      preLoaderRoute: typeof JeetbuzzAlternativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jazzcash-guide': {
       id: '/jazzcash-guide'
       path: '/jazzcash-guide'
@@ -1511,6 +1531,7 @@ const rootRouteChildren: RootRouteChildren = {
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
+  JeetbuzzAlternativesRoute: JeetbuzzAlternativesRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
