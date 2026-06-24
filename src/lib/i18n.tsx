@@ -4,9 +4,9 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
   type ReactNode,
 } from "react";
+import { useRouterState } from "@tanstack/react-router";
 
 /**
  * Multilingual foundation for GetJeetBuzz.
@@ -210,32 +210,39 @@ const Ctx = createContext<I18nCtx | null>(null);
 
 const STORAGE_KEY = "gjb_lang";
 
+/**
+ * Derive the active locale strictly from the URL pathname.
+ *
+ *   /              → "en"
+ *   /login-guide   → "en"
+ *   /bd/bn/...     → "bn"
+ *   /pk/ur/...     → "ur"
+ *   /in/hi/...     → "hi"
+ *
+ * No IP / geo / Accept-Language / navigator.language / localStorage input —
+ * URL is the single source of truth. The root homepage is always English.
+ */
+function localeFromPathname(pathname: string): Locale {
+  const segs = pathname.split("/").filter(Boolean);
+  if (segs.length >= 2 && isCountry(segs[0]) && isLocale(segs[1])) {
+    return segs[1] as Locale;
+  }
+  return "en";
+}
+
 export function I18nProvider({
   children,
-  initialLocale,
 }: {
   children: ReactNode;
-  initialLocale?: Locale;
 }) {
-  const [locale, setLocaleState] = useState<Locale>(initialLocale ?? "en");
+  // URL is the single source of truth. No IP/geo/navigator detection and
+  // localStorage is never used as a fallback source — it is persisted as
+  // a *preference* signal only, never read here to override the URL.
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const locale = localeFromPathname(pathname);
 
-  // Read persisted locale on mount (client only).
-  useEffect(() => {
-    if (initialLocale) return; // URL-driven locale wins
-    if (typeof window === "undefined") return;
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (isLocale(saved)) setLocaleState(saved);
-  }, [initialLocale]);
-
-  // If a route provides initialLocale, mirror it into state.
-  useEffect(() => {
-    if (initialLocale && initialLocale !== locale) {
-      setLocaleState(initialLocale);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialLocale]);
-
-  // Sync <html lang> + dir and persist.
+  // Sync <html lang> + dir to match the URL-derived locale and persist
+  // the preference (write-only — never read back as a redirect trigger).
   useEffect(() => {
     if (typeof document === "undefined") return;
     const meta = LOCALE_META[locale];
@@ -248,7 +255,18 @@ export function I18nProvider({
     }
   }, [locale]);
 
-  const setLocale = useCallback((l: Locale) => setLocaleState(l), []);
+  // setLocale is a no-op writer: language switching is done by navigating
+  // to the equivalent localized URL (see SiteHeader LanguageSwitcher).
+  // We still persist the requested preference for analytics / future use.
+  const setLocale = useCallback((l: Locale) => {
+    try {
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(STORAGE_KEY, l);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, []);
 
   const t = useCallback(
     (key: string, vars?: Record<string, string | number>) => {

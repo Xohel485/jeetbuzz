@@ -206,7 +206,7 @@ export function SiteHeader() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-40 border-b border-white/10 bg-background/90 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80"
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-background/95 backdrop-blur-xl supports-[backdrop-filter]:bg-background/85"
     >
       <div className="container-pro flex h-16 items-center justify-between gap-2 md:h-20 md:gap-4">
         <Link to="/" className="flex min-w-0 shrink items-center" aria-label="GetJeetBuzz — Home">

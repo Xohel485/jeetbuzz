@@ -11,6 +11,10 @@ export function PageShell({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
+      {/* Spacer that reserves the fixed header's height so page content
+          never sits underneath it. --header-h is published by SiteHeader
+          and updates on resize / orientation change. */}
+      <div aria-hidden="true" style={{ height: "var(--header-h, 64px)" }} />
       <main className="flex-1">
         <LocalizedIntroSlotRenderer />
         {children}
