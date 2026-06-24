@@ -30,6 +30,11 @@ import {
   ogUrl,
 } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
+import elite60Asset from "@/assets/jeetbuzz-60-affiliate-commission.png.asset.json";
+import affiliateProgramAsset from "@/assets/jeetbuzz-affiliate-program.png.asset.json";
+import referralAsset from "@/assets/jeetbuzz-affiliate-referral-program.png.asset.json";
+import eliteClubLogoAsset from "@/assets/jeetbuzz-affiliate-elite-club-logo.webp.asset.json";
+import eliteClubCrestAsset from "@/assets/jeetbuzz-affiliate-elite-club.webp.asset.json";
 
 // Client-facing link goes through our first-party /go/affiliate redirect so
 // every click is captured for attribution before hitting jeetbuzzpartners.info.
