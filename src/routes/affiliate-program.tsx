@@ -283,6 +283,15 @@ function AffiliateProgramPage() {
           <p className="mt-2 text-sm text-muted-foreground md:text-base">
             Register, verify, promote and receive your weekly commission every Wednesday.
           </p>
+          <img
+            src={affiliateProgramAsset.url}
+            alt="Join JeetBuzz Affiliate Program Partnership"
+            width={580}
+            height={680}
+            loading="lazy"
+            decoding="async"
+            className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
+          />
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
