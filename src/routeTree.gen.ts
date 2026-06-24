@@ -18,6 +18,7 @@ import { Route as UpdatePolicyRouteImport } from './routes/update-policy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SportsBettingRouteImport } from './routes/sports-betting'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
 import { Route as SecurityGuideRouteImport } from './routes/security-guide'
 import { Route as RocketGuideRouteImport } from './routes/rocket-guide'
 import { Route as ReviewPolicyRouteImport } from './routes/review-policy'
@@ -112,6 +113,11 @@ const SportsBettingRoute = SportsBettingRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapPagesDotxmlRoute = SitemapPagesDotxmlRouteImport.update({
+  id: '/sitemap-pages.xml',
+  path: '/sitemap-pages.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecurityGuideRoute = SecurityGuideRouteImport.update({
@@ -409,6 +415,7 @@ export interface FileRoutesByFullPath {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -469,6 +476,7 @@ export interface FileRoutesByTo {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -531,6 +539,7 @@ export interface FileRoutesById {
   '/review-policy': typeof ReviewPolicyRoute
   '/rocket-guide': typeof RocketGuideRoute
   '/security-guide': typeof SecurityGuideRoute
+  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -594,6 +603,7 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/sitemap-pages.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -654,6 +664,7 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/sitemap-pages.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -715,6 +726,7 @@ export interface FileRouteTypes {
     | '/review-policy'
     | '/rocket-guide'
     | '/security-guide'
+    | '/sitemap-pages.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -777,6 +789,7 @@ export interface RootRouteChildren {
   ReviewPolicyRoute: typeof ReviewPolicyRoute
   RocketGuideRoute: typeof RocketGuideRoute
   SecurityGuideRoute: typeof SecurityGuideRoute
+  SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SportsBettingRoute: typeof SportsBettingRoute
   TermsRoute: typeof TermsRoute
@@ -856,6 +869,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-pages.xml': {
+      id: '/sitemap-pages.xml'
+      path: '/sitemap-pages.xml'
+      fullPath: '/sitemap-pages.xml'
+      preLoaderRoute: typeof SitemapPagesDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security-guide': {
@@ -1267,6 +1287,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewPolicyRoute: ReviewPolicyRoute,
   RocketGuideRoute: RocketGuideRoute,
   SecurityGuideRoute: SecurityGuideRoute,
+  SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SportsBettingRoute: SportsBettingRoute,
   TermsRoute: TermsRoute,
