@@ -218,59 +218,66 @@ function AffiliateProgramPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(80%_60%_at_50%_0%,color-mix(in_oklab,var(--primary)_18%,transparent),transparent_60%)]"
         />
-        <div className="container-pro pt-14 pb-10 text-center md:pt-24 md:pb-16">
-          <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-muted-foreground">
-            <span className="size-1.5 rounded-full bg-primary" />
-            JeetBuzz Partners · Updated {LAST_VERIFIED}
-          </div>
-          <img
-            src={elite60Url}
-            alt="JeetBuzz Affiliate Program – Earn Up to 60% Weekly Commission"
-            width={680}
-            height={790}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            className="mx-auto mb-6 h-auto w-full max-w-[280px] rounded-2xl md:max-w-[340px]"
-          />
-          <h1 className="mx-auto max-w-4xl text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
-            Weekly Commission
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-            Earn up to{" "}
-            <span className="font-semibold text-foreground">60% weekly commission</span>{" "}
-            by referring active players and growing your affiliate business with
-            transparent weekly payouts every Wednesday.
-          </p>
-          <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
-            <Button asChild size="lg" variant="glass">
-              <a href="/affiliate-login">Affiliate Login</a>
-            </Button>
-          </div>
-          <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-            {[
-              { v: "60%", l: "Weekly commission" },
-              { v: "Wed", l: "Payout day" },
-              { v: "5+", l: "Active players" },
-              { v: "৳3000", l: "Min turnover" },
-            ].map((s) => (
-              <div
-                key={s.l}
-                className="glass rounded-xl px-3 py-3 text-center"
-              >
-                <div className="gold-text text-lg font-bold md:text-xl">{s.v}</div>
-                <div className="mt-0.5 text-[11px] text-muted-foreground md:text-xs">
-                  {s.l}
+        <div className="container-pro pt-14 pb-10 md:pt-24 md:pb-16">
+          <div className="grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr] md:gap-12">
+            <div className="text-center md:text-left">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-muted-foreground">
+                <span className="size-1.5 rounded-full bg-primary" />
+                JeetBuzz Partners · Updated {LAST_VERIFIED}
+              </div>
+              <h1 className="text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+                JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
+                Weekly Commission
+              </h1>
+              <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg md:mx-0 mx-auto">
+                Earn up to{" "}
+                <span className="font-semibold text-foreground">60% weekly commission</span>{" "}
+                by referring active players and growing your affiliate business with
+                transparent weekly payouts every Wednesday.
+              </p>
+              <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center md:justify-start">
+                <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
+                <Button asChild size="lg" variant="glass">
+                  <a href="/affiliate-login">Affiliate Login</a>
+                </Button>
+              </div>
+              <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
+                {[
+                  { v: "60%", l: "Weekly commission" },
+                  { v: "Wed", l: "Payout day" },
+                  { v: "5+", l: "Active players" },
+                  { v: "৳3000", l: "Min turnover" },
+                ].map((s) => (
+                  <div key={s.l} className="glass rounded-xl px-3 py-3 text-center">
+                    <div className="gold-text text-lg font-bold md:text-xl">{s.v}</div>
+                    <div className="mt-0.5 text-[11px] text-muted-foreground md:text-xs">
+                      {s.l}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 max-w-2xl">
+                <AffiliateDisclosure variant="inline" />
+                <div className="mt-3">
+                  <AuthorByline />
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="mx-auto mt-6 max-w-2xl">
-            <AffiliateDisclosure variant="inline" />
-            <div className="mt-3">
-              <AuthorByline />
+            </div>
+            <div className="relative mx-auto w-full max-w-[420px] md:max-w-none">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(60%_60%_at_50%_50%,color-mix(in_oklab,var(--primary)_22%,transparent),transparent_70%)] blur-2xl"
+              />
+              <img
+                src={elite60Url}
+                alt="JeetBuzz Affiliate Program – Earn Up to 60% Weekly Commission"
+                width={680}
+                height={790}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="mx-auto h-auto w-full rounded-3xl"
+              />
             </div>
           </div>
         </div>
@@ -278,20 +285,25 @@ function AffiliateProgramPage() {
 
       {/* How it works */}
       <section className="container-pro py-10 md:py-14">
-        <div className="mx-auto mb-8 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold md:text-3xl">How to Participate</h2>
-          <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            Register, verify, promote and receive your weekly commission every Wednesday.
-          </p>
-          <img
-            src={affiliateProgramUrl}
-            alt="Join JeetBuzz Affiliate Program Partnership"
-            width={580}
-            height={674}
-            loading="lazy"
-            decoding="async"
-            className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
-          />
+        <div className="mb-10 grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
+          <div className="order-2 md:order-1">
+            <img
+              src={affiliateProgramUrl}
+              alt="Join JeetBuzz Affiliate Program Partnership"
+              width={580}
+              height={674}
+              loading="lazy"
+              decoding="async"
+              className="mx-auto h-auto w-full max-w-[360px] rounded-3xl md:max-w-none"
+            />
+          </div>
+          <div className="order-1 text-center md:order-2 md:text-left">
+            <h2 className="text-2xl font-bold md:text-3xl">How to Participate</h2>
+            <p className="mt-3 text-sm text-muted-foreground md:text-base">
+              Register, verify, promote and receive your weekly commission every Wednesday —
+              a partnership designed for long-term growth with the JeetBuzz Affiliates team.
+            </p>
+          </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((s, i) => (
@@ -325,48 +337,58 @@ function AffiliateProgramPage() {
             up to 60%. Refer another affiliate for an extra 3.5% commission.
           </p>
         </div>
-        <div className="glass overflow-hidden rounded-2xl">
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[560px] text-left text-sm">
-              <thead className="bg-white/[0.04] text-xs uppercase tracking-wider text-muted-foreground">
-                <tr>
-                  <th className="px-4 py-3 font-semibold">Tier</th>
-                  <th className="px-4 py-3 font-semibold">Active players</th>
-                  <th className="px-4 py-3 font-semibold">Commission</th>
-                  <th className="px-4 py-3 font-semibold">Payout</th>
-                </tr>
-              </thead>
-              <tbody>
-                {COMMISSION.map((row) => (
-                  <tr
-                    key={row.tier}
-                    className="border-t border-white/5 hover:bg-white/[0.02]"
-                  >
-                    <td className="px-4 py-3 font-semibold">{row.tier}</td>
-                    <td className="px-4 py-3 text-muted-foreground">{row.players}</td>
-                    <td className="px-4 py-3">
-                      <span className="gold-text font-semibold">{row.revshare}</span>
-                    </td>
-                    <td className="px-4 py-3 text-foreground/90">{row.cpa}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className="grid items-start gap-6 lg:grid-cols-[1.4fr_1fr] lg:gap-8">
+          <div>
+            <div className="glass overflow-hidden rounded-2xl">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[560px] text-left text-sm">
+                  <thead className="bg-white/[0.04] text-xs uppercase tracking-wider text-muted-foreground">
+                    <tr>
+                      <th className="px-4 py-3 font-semibold">Tier</th>
+                      <th className="px-4 py-3 font-semibold">Active players</th>
+                      <th className="px-4 py-3 font-semibold">Commission</th>
+                      <th className="px-4 py-3 font-semibold">Payout</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {COMMISSION.map((row) => (
+                      <tr
+                        key={row.tier}
+                        className="border-t border-white/5 hover:bg-white/[0.02]"
+                      >
+                        <td className="px-4 py-3 font-semibold">{row.tier}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{row.players}</td>
+                        <td className="px-4 py-3">
+                          <span className="gold-text font-semibold">{row.revshare}</span>
+                        </td>
+                        <td className="px-4 py-3 text-foreground/90">{row.cpa}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000
+              per active player applies. KYC and Telegram membership required.
+            </p>
           </div>
+          <figure className="glass overflow-hidden rounded-3xl p-4">
+            <img
+              src={referralUrl}
+              alt="JeetBuzz Affiliate Referral Program – Extra 3.5% Commission"
+              width={580}
+              height={674}
+              loading="lazy"
+              decoding="async"
+              className="mx-auto h-auto w-full rounded-2xl"
+            />
+            <figcaption className="mt-3 text-center text-xs text-muted-foreground">
+              Refer another affiliate and earn an extra 3.5% commission on top of your
+              weekly rate.
+            </figcaption>
+          </figure>
         </div>
-        <p className="mt-3 text-xs text-muted-foreground">
-          Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000 per
-          active player applies. KYC and Telegram membership required.
-        </p>
-        <img
-          src={referralUrl}
-          alt="JeetBuzz Affiliate Referral Program – Extra 3.5% Commission"
-          width={580}
-          height={674}
-          loading="lazy"
-          decoding="async"
-          className="mx-auto mt-6 h-auto w-full max-w-[260px] rounded-2xl md:max-w-[320px]"
-        />
       </section>
 
       {/* Benefits */}
@@ -399,33 +421,41 @@ function AffiliateProgramPage() {
 
       {/* Testimonials */}
       <section className="container-pro py-10 md:py-14">
-        <div className="mx-auto mb-8 max-w-2xl text-center">
-          <img
-            src={eliteClubLogoUrl}
-            alt="JeetBuzz Affiliates Elite Club"
-            width={628}
-            height={150}
-            loading="lazy"
-            decoding="async"
-            className="mx-auto mb-4 h-auto w-full max-w-[320px] md:max-w-[420px]"
+        <div className="relative mb-8 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-10">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,color-mix(in_oklab,var(--gold,#f5c451)_18%,transparent),transparent_70%)]"
           />
-          <img
-            src={eliteClubCrestUrl}
-            alt="JeetBuzz Affiliate Elite Club Crest"
-            width={480}
-            height={469}
-            loading="lazy"
-            decoding="async"
-            className="mx-auto mb-4 h-auto w-full max-w-[180px] md:max-w-[220px]"
-          />
-          <h2 className="text-2xl font-bold md:text-3xl">
-            Affiliate Elite Club
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            An exclusive program for our top-performing affiliates with increased commission
-            rates and premium privileges. Your dedication deserves the very best — welcome
-            to the JeetBuzz Elite Club.
-          </p>
+          <div className="grid items-center gap-8 md:grid-cols-[0.7fr_1.3fr] md:gap-10">
+            <img
+              src={eliteClubCrestUrl}
+              alt="JeetBuzz Affiliate Elite Club Crest"
+              width={480}
+              height={469}
+              loading="lazy"
+              decoding="async"
+              className="mx-auto h-auto w-full max-w-[200px] md:max-w-[260px]"
+            />
+            <div className="text-center md:text-left">
+              <img
+                src={eliteClubLogoUrl}
+                alt="JeetBuzz Affiliates Elite Club"
+                width={628}
+                height={150}
+                loading="lazy"
+                decoding="async"
+                className="mx-auto h-auto w-full max-w-[320px] md:mx-0 md:max-w-[380px]"
+              />
+              <h2 className="mt-4 text-2xl font-bold md:text-3xl">
+                Affiliate Elite Club
+              </h2>
+              <p className="mt-3 text-sm text-muted-foreground md:text-base">
+                An exclusive program for our top-performing affiliates with increased
+                commission rates and premium privileges. Your dedication deserves the very
+                best — welcome to the JeetBuzz Elite Club.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
