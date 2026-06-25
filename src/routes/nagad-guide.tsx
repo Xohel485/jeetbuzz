@@ -136,7 +136,7 @@ export const Route = createFileRoute("/nagad-guide")({
         ],
       }}
       faqs={[
-        { q: "Is Nagad faster than bKash on JeetBuzz?", a: "Both are usually instant. Differences are minutes, not hours." },
+        { q: "Is Nagad faster than bKash on JeetBuzz?", a: "Both usually credit within minutes. Actual speed can vary with network and operator processing." },
         { q: "Can I deposit with Nagad and withdraw to bKash?", a: "Usually no — JeetBuzz prefers the same wallet for deposit and withdrawal." },
         { q: "What if I send the wrong amount?", a: "Open live chat with the TrxID; many cases can still be credited." },
         { q: "Is there a minimum?", a: "Typically 200–500 BDT — confirm in the cashier." },
