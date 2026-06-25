@@ -11,28 +11,28 @@ import rgAge from "@/assets/badges/responsible-gaming-18.webp";
 import rgMain from "@/assets/badges/responsible-gambling.webp";
 import gamcare from "@/assets/badges/gamcare.webp";
 
-const FOOTER_POSTS: { slug: string; title: string }[] = [
-  { slug: "jeetbuzz-registration-guide-bangladesh", title: "JeetBuzz Registration Guide for Bangladesh (2026)" },
-  { slug: "jeetbuzz-login-guide", title: "JeetBuzz Login Guide — Safe Access from Bangladesh" },
-  { slug: "jeetbuzz-apk-download-safe-guide", title: "JeetBuzz APK Download — Safe Install Guide" },
-  { slug: "jeetbuzz-bonus-terms-explained", title: "JeetBuzz Bonus Terms — What the Fine Print Actually Means" },
-  { slug: "jeetbuzz-bkash-nagad-deposit-guide", title: "JeetBuzz Deposits with bKash, Nagad & Rocket" },
-  { slug: "jeetbuzz-live-cricket-betting-guide", title: "JeetBuzz Live Cricket Betting — A Practical Guide" },
+const FOOTER_POSTS: { slug: string; titleKey: string }[] = [
+  { slug: "jeetbuzz-registration-guide-bangladesh", titleKey: "footer.post.registration_bd" },
+  { slug: "jeetbuzz-login-guide", titleKey: "footer.post.login" },
+  { slug: "jeetbuzz-apk-download-safe-guide", titleKey: "footer.post.apk" },
+  { slug: "jeetbuzz-bonus-terms-explained", titleKey: "footer.post.bonus_terms" },
+  { slug: "jeetbuzz-bkash-nagad-deposit-guide", titleKey: "footer.post.bkash_nagad" },
+  { slug: "jeetbuzz-live-cricket-betting-guide", titleKey: "footer.post.live_cricket" },
 ];
 
 type Badge = { src: string; alt: string; label: string };
 
-const TRUST_GROUPS: { title: string; desc: string; tileLight?: boolean; badges: Badge[] }[] = [
+const TRUST_GROUPS: { titleKey: string; descKey: string; tileLight?: boolean; badges: Badge[] }[] = [
   {
-    title: "Gaming alliance",
-    desc: "Official partnerships and operator alliances.",
+    titleKey: "footer.trust.alliance",
+    descKey: "footer.trust.alliance.desc",
     badges: [
       { src: cazvip, alt: "CazVIP Gaming Alliance — JeetBuzz partner", label: "CazVIP Alliance" },
     ],
   },
   {
-    title: "Gaming license",
-    desc: "Regulators and licences covering the operator.",
+    titleKey: "footer.trust.license",
+    descKey: "footer.trust.license.desc",
     badges: [
       { src: curacao, alt: "Gaming Curaçao licensing authority", label: "Gaming Curaçao" },
       { src: montenegro, alt: "Montenegro E-Gambling licence", label: "Montenegro Licence" },
@@ -40,8 +40,8 @@ const TRUST_GROUPS: { title: string; desc: string; tileLight?: boolean; badges: 
     ],
   },
   {
-    title: "Responsible gaming",
-    desc: "Player-protection bodies and age-gating standards we follow.",
+    titleKey: "footer.trust.rg",
+    descKey: "footer.trust.rg.desc",
     tileLight: true,
     badges: [
       { src: rgAge, alt: "18+ only — responsible gaming", label: "18+ Only" },
@@ -53,62 +53,62 @@ const TRUST_GROUPS: { title: string; desc: string; tileLight?: boolean; badges: 
 
 const COLS = [
   {
-    title: "JeetBuzz Guides",
+    titleKey: "footer.col.guides",
     links: [
-      { to: "/", label: "Home" },
-      { to: "/jeetbuzz-review", label: "JeetBuzz Review" },
-      { to: "/registration-guide", label: "Registration Guide" },
-      { to: "/login-guide", label: "Login Guide" },
-      { to: "/apk-download-guide", label: "APK Download Guide" },
-      { to: "/mobile-app-guide", label: "Mobile App Guide" },
-      { to: "/security-guide", label: "Security Guide" },
-      { to: "/vip-program", label: "VIP Program" },
+      { to: "/", labelKey: "footer.link.home" },
+      { to: "/jeetbuzz-review", labelKey: "footer.link.review" },
+      { to: "/registration-guide", labelKey: "footer.link.registration" },
+      { to: "/login-guide", labelKey: "footer.link.login" },
+      { to: "/apk-download-guide", labelKey: "footer.link.apk" },
+      { to: "/mobile-app-guide", labelKey: "footer.link.mobile" },
+      { to: "/security-guide", labelKey: "footer.link.security" },
+      { to: "/vip-program", labelKey: "footer.link.vip" },
     ],
   },
   {
-    title: "Betting & Games",
+    titleKey: "footer.col.bets",
     links: [
-      { to: "/bonus-and-promotions", label: "Bonus & Promotions" },
-      { to: "/live-cricket-betting", label: "Live Cricket" },
-      { to: "/sports-betting", label: "Sports Betting" },
-      { to: "/casino-guide", label: "Casino Guide" },
-      { to: "/affiliate-program", label: "Affiliate Program" },
-      { to: "/affiliate-login", label: "Affiliate Login" },
+      { to: "/bonus-and-promotions", labelKey: "footer.link.bonus" },
+      { to: "/live-cricket-betting", labelKey: "footer.link.live" },
+      { to: "/sports-betting", labelKey: "footer.link.sports" },
+      { to: "/casino-guide", labelKey: "footer.link.casino" },
+      { to: "/affiliate-program", labelKey: "footer.link.affiliate" },
+      { to: "/affiliate-login", labelKey: "footer.link.affiliate_login" },
     ],
   },
   {
-    title: "Payments",
+    titleKey: "footer.col.payments",
     links: [
-      { to: "/payment-methods", label: "All Payment Methods" },
-      { to: "/deposit-guide", label: "Deposit Guide" },
-      { to: "/withdrawal-guide", label: "Withdrawal Guide" },
-      { to: "/bkash-guide", label: "bKash Guide" },
-      { to: "/nagad-guide", label: "Nagad Guide" },
-      { to: "/rocket-guide", label: "Rocket Guide" },
-      { to: "/deposit-withdrawal-guide", label: "Deposit & Withdrawal Overview" },
+      { to: "/payment-methods", labelKey: "footer.link.payments_all" },
+      { to: "/deposit-guide", labelKey: "footer.link.deposit" },
+      { to: "/withdrawal-guide", labelKey: "footer.link.withdraw" },
+      { to: "/bkash-guide", labelKey: "footer.link.bkash" },
+      { to: "/nagad-guide", labelKey: "footer.link.nagad" },
+      { to: "/rocket-guide", labelKey: "footer.link.rocket" },
+      { to: "/deposit-withdrawal-guide", labelKey: "footer.link.dw" },
     ],
   },
   {
-    title: "Site",
+    titleKey: "footer.col.site",
     links: [
-      { to: "/about", label: "About Us" },
-      { to: "/blog", label: "Blog" },
-      { to: "/faq", label: "FAQ" },
-      { to: "/contact", label: "Contact" },
+      { to: "/about", labelKey: "footer.link.about" },
+      { to: "/blog", labelKey: "footer.link.blog" },
+      { to: "/faq", labelKey: "footer.link.faq" },
+      { to: "/contact", labelKey: "footer.link.contact" },
     ],
   },
   {
-    title: "Policies & Legal",
+    titleKey: "footer.col.legal",
     links: [
-      { to: "/affiliate-disclosure", label: "Affiliate Disclosure" },
-      { to: "/privacy-policy", label: "Privacy Policy" },
-      { to: "/terms", label: "Terms" },
-      { to: "/responsible-gaming", label: "Responsible Gaming" },
-      { to: "/editorial-policy", label: "Editorial Policy" },
-      { to: "/review-policy", label: "Review Policy" },
-      { to: "/content-policy", label: "Content Policy" },
-      { to: "/fact-checking", label: "Fact-Checking" },
-      { to: "/update-policy", label: "Update Policy" },
+      { to: "/affiliate-disclosure", labelKey: "footer.link.disclosure" },
+      { to: "/privacy-policy", labelKey: "footer.link.privacy" },
+      { to: "/terms", labelKey: "footer.link.terms" },
+      { to: "/responsible-gaming", labelKey: "footer.link.rg" },
+      { to: "/editorial-policy", labelKey: "footer.link.editorial" },
+      { to: "/review-policy", labelKey: "footer.link.review_policy" },
+      { to: "/content-policy", labelKey: "footer.link.content" },
+      { to: "/fact-checking", labelKey: "footer.link.fact" },
+      { to: "/update-policy", labelKey: "footer.link.update" },
     ],
   },
 ] as const;
@@ -135,11 +135,11 @@ export function SiteFooter() {
         <AffiliateDisclosure />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {TRUST_GROUPS.map((g) => (
-            <div key={g.title} className="glass flex h-full flex-col p-6">
+            <div key={g.titleKey} className="glass flex h-full flex-col p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                {g.title}
+                {t(g.titleKey)}
               </p>
-              <p className="mt-2 text-xs text-muted-foreground/80">{g.desc}</p>
+              <p className="mt-2 text-xs text-muted-foreground/80">{t(g.descKey)}</p>
               <div className="mt-5 flex flex-1 flex-wrap items-center justify-center gap-x-4 gap-y-3">
                 {g.badges.map((b) => (
                   <div
@@ -174,8 +174,8 @@ export function SiteFooter() {
         </div>
         <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 text-left sm:grid-cols-3 md:grid-cols-5 md:gap-x-8">
           {COLS.map((c) => (
-            <div key={c.title}>
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">{c.title}</p>
+            <div key={c.titleKey}>
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">{t(c.titleKey)}</p>
               <ul className="mt-4 space-y-2.5">
                 {c.links.map((l) => (
                   <li key={l.to}>
@@ -183,7 +183,7 @@ export function SiteFooter() {
                       to={l.to}
                       className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
-                      {l.label}
+                      {t(l.labelKey)}
                     </Link>
                   </li>
                 ))}
@@ -195,10 +195,10 @@ export function SiteFooter() {
         <div className="mt-12 border-t border-white/5 pt-10 text-left">
           <div className="flex items-baseline justify-between gap-4">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
-              JeetBuzz Blog — Latest Guides
+              {t("footer.blog.latest")}
             </p>
             <Link to="/blog" className="shrink-0 text-xs font-medium text-primary hover:underline">
-              View all
+              {t("footer.blog.viewall")}
             </Link>
           </div>
           <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
@@ -209,7 +209,7 @@ export function SiteFooter() {
                   params={{ slug: p.slug }}
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  {p.title}
+                  {t(p.titleKey)}
                 </Link>
               </li>
             ))}

@@ -7,20 +7,23 @@ import {
 import { JsonLd } from "./JsonLd";
 import { faqSchema } from "@/lib/schema";
 import { track } from "@/lib/analytics";
+import { useI18n } from "@/lib/i18n";
 
 export type FAQItem = { q: string; a: string };
 
 export default function FAQAccordionImpl({
   faqs,
-  heading = "Frequently asked questions",
+  heading,
 }: {
   faqs: FAQItem[];
   heading?: string;
 }) {
+  const { t } = useI18n();
+  const resolvedHeading = heading ?? t("faq.default_heading");
   if (!faqs?.length) return null;
   return (
     <section className="mt-12">
-      <h2 className="text-xl font-semibold md:text-2xl">{heading}</h2>
+      <h2 className="text-xl font-semibold md:text-2xl">{resolvedHeading}</h2>
       <Accordion
         type="single"
         collapsible
