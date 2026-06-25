@@ -222,7 +222,7 @@ export const Route = createFileRoute("/withdrawal-guide")({
       }}
       faqs={[
         { q: "Why is my withdrawal pending?", a: "Usually KYC is incomplete, you have an active bonus, or the receiving wallet name doesn't match. Open live chat with your transaction ID." },
-        { q: "Is there a withdrawal fee?", a: "No fee from JeetBuzz on standard wallets within normal limits. Your wallet provider may apply standard cash-out fees." },
+        { q: "Is there a withdrawal fee?", a: "Applicable fees, if any, are displayed in the cashier before you confirm the withdrawal. Your wallet provider may also apply its standard cash-out fees." },
         { q: "How long does the first withdrawal take?", a: "Typically a few hours after KYC approval. Subsequent withdrawals are faster." },
         { q: "Can I withdraw to a different wallet than my deposit?", a: "Generally no — JeetBuzz requires the withdrawal wallet to match the deposit wallet and account name." },
         { q: "What is the minimum withdrawal?", a: "500 BDT in Bangladesh, 1,000 PKR in Pakistan, ₹500 in India, and roughly $20 in USDT. Tier and method may adjust the floor." },

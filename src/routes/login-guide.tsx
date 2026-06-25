@@ -54,7 +54,7 @@ export const Route = createFileRoute("/login-guide")({
         "## Forgot password",
         "Use 'Forgot password' on the official site. A reset link is sent to your registered phone or email.",
         "## JeetBuzz login not working? Try a working alternative link",
-        "If the main JeetBuzz login page won't open in Bangladesh, Pakistan or India, the operator publishes additional working access points. The safest way to reach one is to use our verified outbound button above — it always routes to JeetBuzz's current live domain, even when ISPs throttle the older one.",
+        "If the main JeetBuzz login page won't open in Bangladesh, Pakistan or India, the operator publishes additional working access points. The safest way to reach one is to use our verified outbound button above — it links to JeetBuzz's current live domain, which we update when the operator rotates its URL.",
         "- Use the 'Go to JeetBuzz Login' button — it auto-redirects to the live JeetBuzz login URL.",
         "- Bookmark the page you land on after redirect so you can return directly next time.",
         "- If a domain is suddenly offline, come back to GetJeetBuzz — we update the outbound link as soon as JeetBuzz rotates it.",
@@ -166,7 +166,7 @@ export const Route = createFileRoute("/login-guide")({
         },
         {
           q: "Is there a working alternative JeetBuzz login link?",
-          a: "Yes — JeetBuzz rotates its public domain when one is blocked. The 'Go to JeetBuzz Login' button at the top of this page always points at the current live URL. If it ever stops working, refresh this page and we'll have updated the redirect.",
+          a: "Yes — JeetBuzz rotates its public domain when one is blocked. The 'Go to JeetBuzz Login' button at the top of this page links to the current live URL we have on file. If it stops working, refresh this page so the latest redirect loads.",
         },
         {
           q: "I forgot my JeetBuzz password — how do I recover my account?",
@@ -213,7 +213,7 @@ export const Route = createFileRoute("/login-guide")({
       articleDescription="How to log in to JeetBuzz from Bangladesh, Pakistan and India, find a working alternative link, fix blocked access and avoid fake mirrors."
       articlePath="/login-guide"
       related={[
-        { to: "/registration-guide", title: "Registration Guide", desc: "Open a JeetBuzz account in under 3 minutes." },
+        { to: "/registration-guide", title: "Registration Guide", desc: "Open a JeetBuzz account in just a few minutes." },
         { to: "/security-guide", title: "Account Security", desc: "2FA, password hygiene and avoiding fake mirrors." },
         { to: "/apk-download-guide", title: "APK Download Guide", desc: "Install the JeetBuzz Android app safely." },
         { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Our full pillar review of JeetBuzz." },

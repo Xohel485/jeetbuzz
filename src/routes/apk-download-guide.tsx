@@ -122,11 +122,11 @@ export const Route = createFileRoute("/apk-download-guide")({
       articleDescription="Install the JeetBuzz Android app safely from the official site."
       articlePath="/apk-download-guide"
       faqs={[
-        { q: "Is the JeetBuzz APK safe to install?", a: "Only when downloaded from the official JeetBuzz site. APKs re-hosted on Telegram, Google ads, blogspot mirrors or unknown forums are a common vector for credential-stealing malware. The button above always points to the live JeetBuzz domain." },
+        { q: "Is the JeetBuzz APK safe to install?", a: "Only when downloaded from the official JeetBuzz site. APKs re-hosted on Telegram, Google ads, blogspot mirrors or unknown forums are a common vector for credential-stealing malware. The button above links to the official JeetBuzz domain we have on file." },
         { q: "Why does my phone show 'Install from unknown sources' for the JeetBuzz APK?", a: "Android shows that warning for any APK installed outside the Play Store — JeetBuzz is not on Play because of Google's gambling policy in BD/PK/IN. Enable the permission only for your browser, install the APK, then disable the permission again." },
         { q: "There is no native iOS app — how do I use JeetBuzz on iPhone?", a: "Open the official JeetBuzz site in Safari, tap Share, then Add to Home Screen. You get an icon that opens in fullscreen — same login, same wallet, same markets as the Android app." },
         { q: "The APK installed but won't open or won't connect — what now?", a: "Disable any third-party VPN, switch from Wi-Fi to mobile data, and re-open. If 'App not installed' appeared during install, the download was partial — delete the file and download again from the official site." },
-        { q: "How often is the JeetBuzz APK updated?", a: "JeetBuzz pushes silent app updates every few weeks. The app prompts you on launch when a new build is available — always accept; older builds can stop connecting after a domain rotation." },
+        { q: "How often is the JeetBuzz APK updated?", a: "JeetBuzz typically releases app updates every few weeks. The app prompts you on launch when a new build is available — we recommend accepting it, since older builds can stop connecting after a domain rotation." },
       ]}
       faqsByLocale={{
         bn: [

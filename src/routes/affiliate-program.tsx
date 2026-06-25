@@ -103,8 +103,8 @@ const COMMISSION = [
 ];
 
 const BENEFITS = [
-  { icon: TrendingUp, title: "Up to 60% Weekly Commission", desc: "Earn up to 60% commission on qualified active players every single week." },
-  { icon: Wallet, title: "Weekly Wednesday Payouts", desc: "All commissions are paid out every Wednesday — reliable, predictable income." },
+  { icon: TrendingUp, title: "Up to 60% Weekly Commission", desc: "Earn up to 60% commission on qualified active players each weekly cycle, based on the published tier you reach." },
+  { icon: Wallet, title: "Weekly Wednesday Payouts", desc: "Commissions are scheduled for weekly payout on Wednesday, subject to KYC, valid wallet details and any pending compliance review." },
   { icon: Megaphone, title: "Real-Time Performance Tracking", desc: "Monitor clicks, conversions and earnings in real time from your affiliate dashboard." },
   { icon: HeadphonesIcon, title: "Dedicated Affiliate Support", desc: "Get help from a dedicated affiliate manager via Telegram and email." },
   { icon: CheckCircle2, title: "Transparent Reporting", desc: "Net Profit = Customer Win/Loss − Deduction − Bonus. Clear, auditable numbers." },
@@ -115,7 +115,7 @@ const TESTIMONIALS = [
   {
     name: "Rahim H.",
     role: "Sports tipster, Dhaka",
-    quote: "I qualified for the 60% tier within two months. Wednesday payouts always arrive on time.",
+    quote: "I qualified for the 60% tier within a couple of months and Wednesday payouts have been consistent for me.",
     rating: 5,
   },
   {

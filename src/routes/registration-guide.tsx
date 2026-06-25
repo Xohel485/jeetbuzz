@@ -36,11 +36,11 @@ export const Route = createFileRoute("/registration-guide")({
         ur: <>JeetBuzz <span className="gold-text">رجسٹریشن گائیڈ</span> — پاکستان</>,
         hi: <>JeetBuzz <span className="gold-text">रजिस्ट्रेशन गाइड</span> — भारत</>,
       }}
-      subtitle="Open a JeetBuzz account in under 3 minutes. We'll walk through phone signup, OTP, KYC and your first deposit."
+      subtitle="Open a JeetBuzz account in just a few minutes. We'll walk through phone signup, OTP, KYC and your first deposit."
       subtitleByLocale={{
-        bn: "৩ মিনিটেরও কম সময়ে জিতবাজে অ্যাকাউন্ট খুলুন। ফোন সাইনআপ, OTP, KYC এবং প্রথম bKash/Nagad ডিপোজিট — প্রতিটি ধাপ সহজভাবে দেখানো হলো।",
-        ur: "JeetBuzz پر 3 منٹ سے کم وقت میں اکاؤنٹ بنائیں۔ فون سائن اپ، OTP، KYC اور پہلے EasyPaisa/JazzCash ڈپازٹ تک ہر قدم۔",
-        hi: "JeetBuzz पर 3 मिनट से कम में अकाउंट खोलें। फ़ोन साइनअप, OTP, KYC और पहली UPI/PhonePe डिपॉज़िट — हर स्टेप आसान भाषा में।",
+        bn: "মাত্র কয়েক মিনিটে জিতবাজে অ্যাকাউন্ট খুলুন। ফোন সাইনআপ, OTP, KYC এবং প্রথম bKash/Nagad ডিপোজিট — প্রতিটি ধাপ সহজভাবে দেখানো হলো।",
+        ur: "JeetBuzz پر چند منٹوں میں اکاؤنٹ بنائیں۔ فون سائن اپ، OTP، KYC اور پہلے EasyPaisa/JazzCash ڈپازٹ تک ہر قدم۔",
+        hi: "JeetBuzz पर कुछ ही मिनटों में अकाउंट खोलें। फ़ोन साइनअप, OTP, KYC और पहली UPI/PhonePe डिपॉज़िट — हर स्टेप आसान भाषा में।",
       }}
       ctaLabel="Register on JeetBuzz"
       ctaLabelByLocale={{
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/registration-guide")({
       }}
       heroImage="registration"
       body={[
-        "> **Quick summary:** jeetbuzz registration takes under 3 minutes — phone signup, OTP, set BDT/PKR/INR currency, deposit from a wallet in your own name (bKash/Nagad/Rocket, EasyPaisa/JazzCash, UPI/PhonePe). Complete KYC (NID/CNIC/Aadhaar + selfie) before requesting your first large withdrawal to avoid delays. Opt into the welcome bonus only if its wagering fits your style.",
+        "> **Quick summary:** jeetbuzz registration typically takes only a few minutes — phone signup, OTP, set BDT/PKR/INR currency, deposit from a wallet in your own name (bKash/Nagad/Rocket, EasyPaisa/JazzCash, UPI/PhonePe). Complete KYC (NID/CNIC/Aadhaar + selfie) before requesting your first large withdrawal to avoid delays. Opt into the welcome bonus only if its wagering fits your style.",
         "## What you'll need",
         "A valid mobile number, an email, and a local payment method like bKash, Nagad, Rocket (BD), EasyPaisa/JazzCash (PK) or UPI/PhonePe (IN).",
         "## Step 1 — Open the official site",
