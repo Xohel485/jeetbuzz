@@ -347,7 +347,7 @@ const CONTENT_BN: AffiliateContent = {
 const CONTENT: Record<Locale, AffiliateContent> = {
   en: CONTENT_EN,
   bn: CONTENT_BN,
-  ur: CONTENT_EN,
+  ur: CONTENT_UR,
   hi: CONTENT_EN,
 };
 
