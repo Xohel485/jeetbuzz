@@ -547,60 +547,32 @@ function AffiliateProgramPage() {
         </div>
         <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-8">
           <div className="min-w-0">
-            {/* Mobile: stacked cards (no horizontal scroll) */}
-            <ul className="space-y-3 lg:hidden" aria-label={c.planH2}>
-              {c.commission.map((row) => (
-                <li
-                  key={row.tier}
-                  className="glass rounded-2xl p-4"
-                >
-                  <h3 className="text-base font-semibold">{row.tier}</h3>
-                  <dl className="mt-3 grid grid-cols-1 gap-2 text-sm">
-                    <div className="flex flex-col">
-                      <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.players}</dt>
-                      <dd className="mt-0.5 text-foreground/90">{row.players}</dd>
-                    </div>
-                    <div className="flex flex-col">
-                      <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.commission}</dt>
-                      <dd className="mt-0.5"><span className="gold-text font-semibold">{row.revshare}</span></dd>
-                    </div>
-                    <div className="flex flex-col">
-                      <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.payout}</dt>
-                      <dd className="mt-0.5 text-foreground/90">{row.cpa}</dd>
-                    </div>
-                  </dl>
-                </li>
-              ))}
-            </ul>
-            {/* Desktop/tablet (lg+): original table */}
-            <div className="glass hidden overflow-hidden rounded-2xl lg:block">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-sm">
-                  <thead className="bg-white/[0.04] text-xs uppercase tracking-wider text-muted-foreground">
-                    <tr>
-                      <th className="px-4 py-3 font-semibold">{c.tableHead.tier}</th>
-                      <th className="px-4 py-3 font-semibold">{c.tableHead.players}</th>
-                      <th className="px-4 py-3 font-semibold">{c.tableHead.commission}</th>
-                      <th className="px-4 py-3 font-semibold">{c.tableHead.payout}</th>
+            <div className="glass overflow-hidden rounded-2xl">
+              <table className="w-full table-fixed text-left text-[11px] sm:text-sm">
+                <thead className="bg-white/[0.04] text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
+                  <tr>
+                    <th className="px-1.5 py-2.5 font-semibold sm:px-4 sm:py-3">{c.tableHead.tier}</th>
+                    <th className="px-1.5 py-2.5 font-semibold sm:px-4 sm:py-3">{c.tableHead.players}</th>
+                    <th className="px-1.5 py-2.5 font-semibold sm:px-4 sm:py-3">{c.tableHead.commission}</th>
+                    <th className="px-1.5 py-2.5 font-semibold sm:px-4 sm:py-3">{c.tableHead.payout}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {c.commission.map((row) => (
+                    <tr
+                      key={row.tier}
+                      className="border-t border-white/5 align-top hover:bg-white/[0.02]"
+                    >
+                      <td className="break-words px-1.5 py-2.5 font-semibold sm:px-4 sm:py-3">{row.tier}</td>
+                      <td className="break-words px-1.5 py-2.5 text-muted-foreground sm:px-4 sm:py-3">{row.players}</td>
+                      <td className="break-words px-1.5 py-2.5 sm:px-4 sm:py-3">
+                        <span className="gold-text font-semibold">{row.revshare}</span>
+                      </td>
+                      <td className="break-words px-1.5 py-2.5 text-foreground/90 sm:px-4 sm:py-3">{row.cpa}</td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {c.commission.map((row) => (
-                      <tr
-                        key={row.tier}
-                        className="border-t border-white/5 hover:bg-white/[0.02]"
-                      >
-                        <td className="px-4 py-3 font-semibold">{row.tier}</td>
-                        <td className="px-4 py-3 text-muted-foreground">{row.players}</td>
-                        <td className="px-4 py-3">
-                          <span className="gold-text font-semibold">{row.revshare}</span>
-                        </td>
-                        <td className="px-4 py-3 text-foreground/90">{row.cpa}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
             <p className="mt-3 text-xs text-muted-foreground">{c.planFoot}</p>
           </div>
