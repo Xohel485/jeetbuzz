@@ -22,6 +22,7 @@ import { AuthorByline } from "@/components/AuthorByline";
 import { RelatedGuides } from "@/components/RelatedGuides";
 import { JsonLd } from "@/components/JsonLd";
 import { AFFILIATE, REL, LAST_VERIFIED } from "@/lib/affiliate";
+import { useLocale, type Locale } from "@/lib/i18n";
 import {
   faqSchema,
   articleSchema,
@@ -41,7 +42,14 @@ import eliteClubCrestUrl from "@/assets/jeetbuzz-affiliate-elite-club.webp";
 const PARTNERS_URL = "/go/affiliate";
 const PARTNERS_DESTINATION = AFFILIATE.partners;
 
-const FAQS = [
+type FAQ = { q: string; a: string };
+type Step = { icon: typeof UserPlus; title: string; desc: string };
+type CommissionRow = { tier: string; players: string; revshare: string; cpa: string };
+type Benefit = { icon: typeof TrendingUp; title: string; desc: string };
+type Testimonial = { name: string; role: string; quote: string; rating: number };
+type JoinStep = { t: string; d: string };
+
+const FAQS: FAQ[] = [
   {
     q: "How do I become a JeetBuzz affiliate?",
     a: "Complete the affiliate registration form, verify your account and start promoting your referral link.",
@@ -72,7 +80,7 @@ const FAQS = [
   },
 ];
 
-const STEPS = [
+const STEPS: Step[] = [
   {
     icon: UserPlus,
     title: "Register as a JeetBuzz Affiliate",
@@ -95,14 +103,14 @@ const STEPS = [
   },
 ];
 
-const COMMISSION = [
+const COMMISSION: CommissionRow[] = [
   { tier: "Starter", players: "0 – 10 active players", revshare: "50%", cpa: "Weekly Wednesday" },
   { tier: "Growth", players: "11 – 20 active players", revshare: "55%", cpa: "Weekly Wednesday" },
   { tier: "Elite", players: "20+ active players", revshare: "60%", cpa: "Weekly Wednesday" },
   { tier: "Referral Bonus", players: "Refer another affiliate", revshare: "+3.5%", cpa: "Extra commission" },
 ];
 
-const BENEFITS = [
+const BENEFITS: Benefit[] = [
   { icon: TrendingUp, title: "Up to 60% Weekly Commission", desc: "Earn up to 60% commission on qualified active players each weekly cycle, based on the published tier you reach." },
   { icon: Wallet, title: "Weekly Wednesday Payouts", desc: "Commissions are scheduled for weekly payout on Wednesday, subject to KYC, valid wallet details and any pending compliance review." },
   { icon: Megaphone, title: "Real-Time Performance Tracking", desc: "Monitor clicks, conversions and earnings in real time from your affiliate dashboard." },
@@ -111,7 +119,7 @@ const BENEFITS = [
   { icon: Repeat, title: "Long-Term Partnership", desc: "Build recurring revenue with a partnership designed for the long run." },
 ];
 
-const TESTIMONIALS = [
+const TESTIMONIALS: Testimonial[] = [
   {
     name: "Rahim H.",
     role: "Sports tipster, Dhaka",
