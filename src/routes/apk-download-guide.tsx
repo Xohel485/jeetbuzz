@@ -121,6 +121,36 @@ export const Route = createFileRoute("/apk-download-guide")({
       articleHeadline="JeetBuzz APK Download Guide"
       articleDescription="Install the JeetBuzz Android app safely from the official site."
       articlePath="/apk-download-guide"
+      faqs={[
+        { q: "Is the JeetBuzz APK safe to install?", a: "Only when downloaded from the official JeetBuzz site. APKs re-hosted on Telegram, Google ads, blogspot mirrors or unknown forums are a common vector for credential-stealing malware. The button above always points to the live JeetBuzz domain." },
+        { q: "Why does my phone show 'Install from unknown sources' for the JeetBuzz APK?", a: "Android shows that warning for any APK installed outside the Play Store — JeetBuzz is not on Play because of Google's gambling policy in BD/PK/IN. Enable the permission only for your browser, install the APK, then disable the permission again." },
+        { q: "There is no native iOS app — how do I use JeetBuzz on iPhone?", a: "Open the official JeetBuzz site in Safari, tap Share, then Add to Home Screen. You get an icon that opens in fullscreen — same login, same wallet, same markets as the Android app." },
+        { q: "The APK installed but won't open or won't connect — what now?", a: "Disable any third-party VPN, switch from Wi-Fi to mobile data, and re-open. If 'App not installed' appeared during install, the download was partial — delete the file and download again from the official site." },
+        { q: "How often is the JeetBuzz APK updated?", a: "JeetBuzz pushes silent app updates every few weeks. The app prompts you on launch when a new build is available — always accept; older builds can stop connecting after a domain rotation." },
+      ]}
+      faqsByLocale={{
+        bn: [
+          { q: "জিতবাজ APK ইনস্টল করা কি নিরাপদ?", a: "শুধু অফিসিয়াল জিতবাজ সাইট থেকে নামালে নিরাপদ। Telegram, Google ads, ব্লগ মিরর বা অপরিচিত ফোরামে রি-হোস্টেড APK পাসওয়ার্ড চুরির ম্যালওয়্যার বহন করে। উপরের বাটনটি সবসময় বর্তমান লাইভ জিতবাজ ডোমেইনে নিয়ে যায়।" },
+          { q: "‘Install from unknown sources’ ওয়ার্নিং আসছে কেন?", a: "Play Store-এর বাইরে যেকোনো APK ইনস্টলের সময় Android এই ওয়ার্নিং দেখায় — Google-এর গ্যাম্বলিং পলিসির কারণে জিতবাজ Play Store-এ নেই। শুধু আপনার ব্রাউজারের জন্য পারমিশন দিন, ইনস্টল শেষ হলে আবার বন্ধ করে দিন।" },
+          { q: "iPhone-এ কোনো নেটিভ অ্যাপ নেই — তাহলে কীভাবে চালাবো?", a: "Safari-তে অফিসিয়াল জিতবাজ সাইট খুলুন, Share চাপুন, তারপর ‘Add to Home Screen’ সিলেক্ট করুন। ফুলস্ক্রিন আইকন তৈরি হবে — একই লগইন, একই ওয়ালেট, একই মার্কেট।" },
+          { q: "APK ইনস্টল হয়েছে কিন্তু খুলছে না বা কানেক্ট হচ্ছে না?", a: "যেকোনো থার্ড-পার্টি VPN বন্ধ করুন, Wi-Fi থেকে মোবাইল ডেটায় যান এবং আবার চালু করুন। ইনস্টলের সময় ‘App not installed’ দেখালে ফাইলটি সম্পূর্ণ ডাউনলোড হয়নি — মুছে আবার অফিসিয়াল সাইট থেকে নামান।" },
+          { q: "জিতবাজ APK কতদিন পরপর আপডেট হয়?", a: "প্রতি কয়েক সপ্তাহে জিতবাজ নতুন বিল্ড দেয়। অ্যাপ চালু করলে আপডেট প্রম্পট আসবে — সবসময় অ্যাকসেপ্ট করুন; পুরোনো বিল্ড ডোমেইন রোটেট হলে কাজ করা বন্ধ করে দেয়।" },
+        ],
+        ur: [
+          { q: "کیا JeetBuzz APK انسٹال کرنا محفوظ ہے؟", a: "صرف اس وقت جب آپ آفیشل JeetBuzz سائٹ سے ڈاؤن لوڈ کریں۔ Telegram، Google ads یا اجنبی فورمز پر دوبارہ ہوسٹڈ APK پاس ورڈ چوری کرنے والے میل ویئر کا ذریعہ ہیں۔" },
+          { q: "'Install from unknown sources' وارننگ کیوں آتی ہے؟", a: "Play Store کے باہر کسی بھی APK پر Android یہ وارننگ دکھاتا ہے — Google کی گیمبلنگ پالیسی کے باعث JeetBuzz Play Store پر نہیں۔ صرف اپنے براؤزر کے لیے اجازت دیں، انسٹال کے بعد بند کر دیں۔" },
+          { q: "iPhone پر کوئی نیٹیو ایپ نہیں — کیسے استعمال کروں؟", a: "Safari میں آفیشل JeetBuzz سائٹ کھولیں، Share دبائیں اور 'Add to Home Screen' منتخب کریں۔ فُل اسکرین آئیکن بن جائے گا — وہی لاگ ان، وہی والٹ، وہی مارکیٹس۔" },
+          { q: "APK انسٹال ہو گیا لیکن کھل یا کنیکٹ نہیں ہو رہا؟", a: "تھرڈ پارٹی VPN بند کریں، Wi-Fi سے موبائل ڈیٹا پر جائیں اور دوبارہ کھولیں۔ 'App not installed' کا مطلب نامکمل ڈاؤن لوڈ ہے — فائل ڈیلیٹ کر کے دوبارہ ڈاؤن لوڈ کریں۔" },
+          { q: "JeetBuzz APK کتنی بار اپڈیٹ ہوتا ہے؟", a: "ہر چند ہفتوں میں نیا بلڈ آتا ہے۔ ایپ کھولنے پر اپڈیٹ پرامپٹ آئے — ہمیشہ قبول کریں؛ پرانے بلڈ ڈومین تبدیلی کے بعد کام کرنا چھوڑ دیتے ہیں۔" },
+        ],
+        hi: [
+          { q: "क्या JeetBuzz APK इंस्टॉल करना सुरक्षित है?", a: "केवल तब, जब आप ऑफ़िशियल JeetBuzz साइट से डाउनलोड करें। Telegram, Google ads या अनजान फ़ोरम पर री-होस्टेड APK पासवर्ड चोरी करने वाले मैलवेयर का बड़ा ज़रिया हैं। ऊपर का बटन हमेशा मौजूदा लाइव डोमेन पर ले जाता है।" },
+          { q: "‘Install from unknown sources’ चेतावनी क्यों आती है?", a: "Play Store के बाहर किसी भी APK पर Android यह चेतावनी दिखाता है — Google की गैम्बलिंग नीति के कारण JeetBuzz Play Store पर नहीं है। केवल अपने ब्राउज़र के लिए अनुमति दें, इंस्टॉल के बाद बंद कर दें।" },
+          { q: "iPhone पर कोई नेटिव ऐप नहीं — कैसे इस्तेमाल करें?", a: "Safari में ऑफ़िशियल JeetBuzz साइट खोलें, Share दबाएँ और ‘Add to Home Screen’ चुनें। फ़ुल-स्क्रीन आइकन बन जाएगा — वही लॉगिन, वही वॉलेट, वही मार्केट।" },
+          { q: "APK इंस्टॉल हो गया पर खुलता या कनेक्ट नहीं हो रहा?", a: "थर्ड-पार्टी VPN बंद करें, Wi-Fi से मोबाइल डेटा पर जाएँ और दोबारा खोलें। ‘App not installed’ का मतलब अधूरी डाउनलोड — फ़ाइल डिलीट कर के दोबारा डाउनलोड करें।" },
+          { q: "JeetBuzz APK कितनी बार अपडेट होता है?", a: "हर कुछ हफ़्तों में नया बिल्ड आता है। ऐप खोलने पर अपडेट प्रॉम्प्ट दिखे — हमेशा स्वीकारें; पुराने बिल्ड डोमेन रोटेशन के बाद काम करना बंद कर देते हैं।" },
+        ],
+      }}
       related={[
         { to: "/mobile-app-guide", title: "Mobile App Guide", desc: "Tour the JeetBuzz mobile experience." },
         { to: "/security-guide", title: "Security Guide", desc: "Lock down your account and device." },
