@@ -52,6 +52,7 @@ export const Route = createFileRoute("/cricket-exchange-guide")({
       subtitleByLocale={{
         bn: "এক্সচেঞ্জ সাধারণ স্পোর্টসবুক নয় — এখানে আপনি অন্য ব্যবহারকারীর বিরুদ্ধে বাজি ধরছেন, JeetBuzz-এর বিরুদ্ধে নয়। ফলে অডস, লায়াবিলিটি ও কমিশনের নিয়ম আলাদা। BPL, IPL ও PSL বেটরদের জন্য ব্যবহারিক বাংলা সংস্করণ।",
         ur: "Exchange عام Sportsbook نہیں — یہاں آپ JeetBuzz کے بجائے دوسرے صارفین کے خلاف بیٹ لگاتے ہیں۔ اسی لیے آڈز، Liability اور Commission کے اصول مختلف ہیں۔ PSL، IPL اور BPL کے پاکستانی بیٹرز کے لیے عملی اردو رہنمائی۔",
+        hi: "एक्सचेंज एक सामान्य sportsbook नहीं है — यहाँ आप JeetBuzz के ख़िलाफ़ नहीं, बल्कि दूसरे यूज़र्स के ख़िलाफ़ बेट लगाते हैं। इसी वजह से ऑड्स, Liability और Commission के नियम अलग हैं। IPL, Ranji Trophy और अंतरराष्ट्रीय क्रिकेट खेलने वाले भारतीय बेटर्स के लिए व्यावहारिक हिंदी गाइड।",
       }}
       bodyByLocale={{
         bn: [
@@ -92,6 +93,25 @@ export const Route = createFileRoute("/cricket-exchange-guide")({
           "## Exchange کے لیے ادائیگیاں",
           "وہی ریلز — [JazzCash](/jazzcash-guide)، [EasyPaisa](/easypaisa-guide) اور USDT TRC20۔ Withdrawal عام طور پر اُسی ریل پر واپس ہوتی ہے جس سے ڈپازٹ کیا ہو۔",
         ],
+        hi: [
+          "## Exchange बनाम Sportsbook — असली अंतर",
+          "Sportsbook में JeetBuzz स्वयं क़ीमत तय करता है और आपकी बेट के विपरीत पक्ष में खड़ा होता है। Exchange में क़ीमत दूसरे यूज़र्स तय करते हैं — जब आप किसी टीम को **Back** करते हैं तो कोई और उसे **Lay** कर रहा होता है। JeetBuzz ऑड्स में margin जोड़ने के बजाय net winnings पर मामूली Commission लेता है, इसी वजह से एक ही मैच पर Exchange की क़ीमत आमतौर पर Book से अधिक शार्प होती है।",
+          "## Back और Lay — आसान शब्दों में",
+          "- **Back** = कोई घटना होगी, इस पर बेट (जैसे India को 1.85 पर Back)। सही होने पर लाभ = स्टेक × (ऑड्स − 1)।",
+          "- **Lay** = घटना नहीं होगी, इस पर बेट (जैसे India को 1.85 पर Lay)। India हारे या मैच टाई हो तो आप backer का स्टेक प्राप्त करते हैं; लेकिन India जीत जाए तो स्टेक × (ऑड्स − 1) देना होगा — इस exposure को **Liability** कहते हैं और यह confirm करने से पहले स्क्रीन पर दिखाया जाता है।",
+          "## Commission",
+          "Exchange हर मार्केट की net winnings पर Commission लेता है — नुक़सान पर नहीं। इसे हर जीतने वाली बेट पर एक हल्का drag समझें, न कि per-click फ़ीस। JeetBuzz Exchange के info section में वर्तमान Commission rate दिखाया जाता है — सेशन शुरू करने से पहले एक बार ज़रूर देख लें।",
+          "## In-Play और Matched Odds",
+          "Exchange पर ऑड्स तभी भरते हैं जब कोई counterparty उन्हें match करे। शांत मार्केट में आपकी Back/Lay unmatched पड़ी रह सकती है। विकेट, छक्का या आख़िरी ओवर जैसे तेज़ in-play पलों में आपके tap करने से पहले क़ीमत बदल सकती है — JeetBuzz नया भाव ऑफ़र करता है, आप स्वीकार या रद्द कर सकते हैं।",
+          "## लीग के अनुसार संदर्भ",
+          "- **IPL (इंडिया):** मार्च–मई। साल की सबसे गहरी क्रिकेट Exchange — मध्यम-स्टेक खिलाड़ी भी क़ीमत लगभग नहीं हिला पाते, इसलिए नए बेटर्स को यहाँ liquidity का अनुभव सबसे अच्छा मिलता है।",
+          "- **अंतरराष्ट्रीय क्रिकेट / T20 World Cup:** India की पारी के बीच के Total Runs और Top Batsman मार्केट्स पर अच्छी depth रहती है।",
+          "- **Ranji Trophy / घरेलू क्रिकेट:** liquidity सीमित होती है — बड़े स्टेक्स लगाने पर slippage बढ़ता है, छोटे साइज़ ही समझदारी है।",
+          "## बैंकरोल और ज़िम्मेदार खेल",
+          "Lay Liability ही ज़्यादातर खातों के टूटने की वजह है। 5.0 ऑड्स पर ₹1,000 स्टेक की Lay पर ₹4,000 का exposure बनता है। सिर्फ़ स्टेक नहीं, हर मार्केट पर Maximum Liability की सीमा भी तय करें — [Responsible Gaming](/responsible-gaming) के सुझाव पढ़ें।",
+          "## Exchange के लिए भुगतान",
+          "वही rails — [UPI](/upi-guide), [PhonePe](/phonepe-guide), Google Pay और [Paytm](/paytm-guide)। Withdrawal आमतौर पर उसी rail पर लौटती है जिससे डिपॉज़िट किया गया हो; ज़रूरत पड़ने पर [Withdrawal Guide](/withdrawal-guide) देखें।",
+        ],
       }}
       faqs={[
         { q: "Is the exchange better odds than the sportsbook?", a: "Usually yes on liquid cricket markets like IPL — exchange prices have no built-in margin, only a commission on net winnings. On thin markets the exchange can be worse because depth is shallow." },
@@ -113,6 +133,13 @@ export const Route = createFileRoute("/cricket-exchange-guide")({
           { q: "کیا میچ ختم ہونے سے پہلے ‘ٹریڈ’ کر کے Lock کیا جا سکتا ہے؟", a: "ہاں — Back کھولنے کے بعد اسی Selection پر کم آڈز پر Lay (یا اس کے برعکس) لگانے سے Green Book Lock ہو جاتا ہے۔ JeetBuzz سپورٹڈ مارکیٹس میں Cash Out بھی فراہم کرتا ہے۔" },
           { q: "کیا Welcome Bonus Exchange بیٹس پر لاگو ہوتا ہے؟", a: "زیادہ تر آپریٹرز Exchange ٹرن اوور کو Welcome Wagering سے خارج کرتے ہیں، کیونکہ House Edge مارجن نہیں — Commission ہے۔ Opt-in سے پہلے شرائط پڑھیں۔" },
           { q: "Unmatched بیٹ کب تک رہتی ہے؟", a: "جب تک مارکیٹ کھلی رہے — میچ ہوتے ہی فعال، اور میچ شروع ہونے یا مارکیٹ suspend ہونے پر منسوخ۔" },
+        ],
+        hi: [
+          { q: "क्या Exchange के ऑड्स Sportsbook से बेहतर होते हैं?", a: "IPL जैसी liquid मार्केट्स में आमतौर पर हाँ — Exchange के ऑड्स में margin नहीं होता, केवल net winnings पर Commission लगता है। पतली मार्केट्स में depth कम होने से Book कभी-कभी अधिक प्रतिस्पर्धी हो सकता है।" },
+          { q: "Back और Lay में क्या फ़र्क है?", a: "Back = घटना होगी; Lay = घटना नहीं होगी। 2.0 से अधिक किसी भी ऑड्स पर Lay की Liability स्टेक से अधिक होती है — confirm करने से पहले स्क्रीन पर दिखाई गई Liability अवश्य पढ़ें।" },
+          { q: "क्या मैच ख़त्म होने से पहले ‘ट्रेड’ करके लॉक किया जा सकता है?", a: "हाँ — Back खोलने के बाद उसी selection पर कम ऑड्स पर Lay (या इसके विपरीत) लगाने से Green Book lock हो जाता है। JeetBuzz supported markets में Cash Out विकल्प भी देता है, यदि counter-price मौजूद हो।" },
+          { q: "क्या Welcome Bonus Exchange बेट्स पर लागू होता है?", a: "ज़्यादातर ऑपरेटर Exchange turnover को Welcome wagering से बाहर रखते हैं, क्योंकि यहाँ House Edge margin नहीं — Commission है। Opt-in से पहले शर्तें अवश्य पढ़ें।" },
+          { q: "Unmatched बेट कितनी देर तक रहती है?", a: "जब तक मार्केट खुली है — match होते ही active, और मैच शुरू होने या मार्केट suspend होने पर रद्द हो जाती है।" },
         ],
       }}
       related={[
