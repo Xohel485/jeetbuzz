@@ -58,6 +58,7 @@ export const Route = createFileRoute("/aviator-guide")({
       subtitleByLocale={{
         bn: "Aviator হলো Spribe-এর provably fair ক্র্যাশ গেম — প্লেন ওড়ে, মাল্টিপ্লায়ার ১.০০x থেকে উপরে উঠতে থাকে, প্লেন উড়ে যাওয়ার আগেই Cash Out করতে হয়। JeetBuzz-এ ভ্রান্ত মিথে পা না দিয়ে কীভাবে খেলবেন — এই গাইডে বিস্তারিত।",
         ur: "Aviator، Spribe کا provably fair کریش گیم ہے — جہاز اڑتا ہے، Multiplier 1.00x سے بڑھتا ہے، اور جہاز اڑ جانے سے پہلے Cash Out کرنا ہوتا ہے۔ یہ گائیڈ JeetBuzz پر اِسے بغیر کسی مفروضے کے کھیلنے کا عملی طریقہ بیان کرتی ہے۔",
+        hi: "Aviator, Spribe का provably fair क्रैश गेम है — एक प्लेन उड़ान भरता है, Multiplier 1.00x से बढ़ता है, और प्लेन के उड़ जाने से पहले आपको Cash Out करना होता है। यह गाइड JeetBuzz पर इसे बिना किसी मिथक के, भारतीय खिलाड़ियों के लिए व्यावहारिक तरीके से समझाती है।",
       }}
       bodyByLocale={{
         bn: [
