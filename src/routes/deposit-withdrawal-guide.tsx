@@ -69,7 +69,6 @@ export const Route = createFileRoute("/deposit-withdrawal-guide")({
           "> ১৮+ মাত্র। দায়িত্বশীল গেমিং সম্পর্কে [Responsible Gaming](/responsible-gaming) পেজটি দেখুন।",
         ],
         ur: [
-        ur: [
           "## ایک نظر میں",
           "پاکستان میں JeetBuzz پر ڈپازٹ اور ودڈرا بنیادی طور پر موبائل والیٹس (JazzCash، EasyPaisa) اور بینک ٹرانسفر سے ہوتی ہے۔ نیچے کام کے مراحل، عام وقت کے دورانیے اور غلطی کی صورت میں کیا کرنا ہے — سب کچھ سادہ اردو میں۔",
           "## معاون طریقے",
