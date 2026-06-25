@@ -344,10 +344,104 @@ const CONTENT_BN: AffiliateContent = {
   starRatingAria: (n) => `${n} স্টার রেটিং`,
 };
 
+const CONTENT_UR: AffiliateContent = {
+  badge: `JeetBuzz Partners · آخری اپ ڈیٹ ${LAST_VERIFIED}`,
+  h1Lead: "JeetBuzz ",
+  h1Gold: "Affiliate Program",
+  h1Tail: " — ہر ہفتے 60% تک کمیشن",
+  heroLead: "اہل فعال کھلاڑیوں کو refer کر کے ہر ہفتے ",
+  heroBold: "60% تک کمیشن",
+  heroTail:
+    " کمائیں — ہر بدھ شفاف ہفتہ وار پے آؤٹ کے ساتھ اپنا affiliate کاروبار بڑھائیں۔",
+  ctaPrimary: "Affiliate بنیں",
+  ctaSecondary: "Affiliate لاگ ان",
+  ctaAria: "JeetBuzz Affiliate بنیں",
+  stats: [
+    { v: "60%", l: "ہفتہ وار کمیشن" },
+    { v: "بدھ", l: "پے آؤٹ دن" },
+    { v: "5+", l: "فعال کھلاڑی" },
+    { v: "৳3000", l: "کم از کم ٹرن اوور" },
+  ],
+  howH2: "حصہ کیسے لیں",
+  howSub:
+    "رجسٹر کریں، تصدیق کریں، پروموٹ کریں اور ہر بدھ ہفتہ وار کمیشن وصول کریں — JeetBuzz Affiliates ٹیم کے ساتھ طویل المدتی شراکت داری کے لیے ڈیزائن کیا گیا۔",
+  steps: [
+    { icon: UserPlus, title: "JeetBuzz Affiliate کے طور پر رجسٹر کریں", desc: "آفیشل JeetBuzz Partners پورٹل پر مفت affiliate اکاؤنٹ بنائیں۔" },
+    { icon: Share2, title: "KYC مکمل کریں اور Telegram جوائن کریں", desc: "پے آؤٹ فعال کرنے کے لیے KYC تصدیق مکمل کریں اور آفیشل JeetBuzz Affiliate Telegram چینل جوائن کریں۔" },
+    { icon: BadgeDollarSign, title: "پروموٹ کریں اور فعال کھلاڑی refer کریں", desc: "اپنا affiliate لنک شیئر کریں اور ہر سائیکل میں کم از کم پانچ اہل فعال کھلاڑی برقرار رکھیں۔" },
+    { icon: Wallet, title: "ہر بدھ پے آؤٹ پائیں", desc: "ہر بدھ 60% تک ہفتہ وار کمیشن وصول کریں — شفاف اور بروقت۔" },
+  ],
+  planH2: "کمیشن پلان",
+  planSub:
+    "جتنے زیادہ اہل فعال کھلاڑی لائیں گے، اتنا زیادہ ہفتہ وار کمیشن — 60% تک۔ کسی اور affiliate کو refer کرنے پر اضافی 3.5% کمیشن۔",
+  tableHead: { tier: "ٹیئر", players: "فعال کھلاڑی", commission: "کمیشن", payout: "پے آؤٹ" },
+  commission: [
+    { tier: "Starter", players: "0 – 10 فعال کھلاڑی", revshare: "50%", cpa: "ہر بدھ ہفتہ وار" },
+    { tier: "Growth", players: "11 – 20 فعال کھلاڑی", revshare: "55%", cpa: "ہر بدھ ہفتہ وار" },
+    { tier: "Elite", players: "20+ فعال کھلاڑی", revshare: "60%", cpa: "ہر بدھ ہفتہ وار" },
+    { tier: "Referral Bonus", players: "کسی اور affiliate کو refer کریں", revshare: "+3.5%", cpa: "اضافی کمیشن" },
+  ],
+  planFoot:
+    "Net Profit = Customer Win/Loss − Deduction − Bonus۔ فی فعال کھلاڑی کم از کم ৳3000 ٹرن اوور لاگو۔ KYC اور Telegram رکنیت لازمی۔",
+  referralCaption:
+    "کسی اور affiliate کو refer کریں اور ہفتہ وار ریٹ کے علاوہ اضافی 3.5% کمیشن حاصل کریں۔",
+  benefitsH2: "کمیشن کی خصوصیات",
+  benefitsSub:
+    "JeetBuzz affiliate کے طور پر آپ کو جو کچھ ملتا ہے — شفاف، ہفتہ وار اور طویل المدتی۔",
+  benefits: [
+    { icon: TrendingUp, title: "ہر ہفتے 60% تک کمیشن", desc: "ہر ہفتہ وار سائیکل میں اہل فعال کھلاڑیوں پر — حاصل کردہ ٹیئر کے مطابق — 60% تک کمیشن کمائیں۔" },
+    { icon: Wallet, title: "ہر بدھ ہفتہ وار پے آؤٹ", desc: "ہر بدھ ہفتہ وار پے آؤٹ شیڈولڈ — KYC، درست والیٹ تفصیلات اور قابل اطلاق compliance ریویو کے تابع۔" },
+    { icon: Megaphone, title: "ریئل ٹائم پرفارمنس ٹریکنگ", desc: "affiliate ڈیش بورڈ سے ریئل ٹائم میں کلکس، کنورژنز اور آمدنی دیکھیں۔" },
+    { icon: HeadphonesIcon, title: "ڈیڈیکیٹڈ Affiliate سپورٹ", desc: "Telegram اور ای میل پر ڈیڈیکیٹڈ affiliate manager سے براہ راست مدد۔" },
+    { icon: CheckCircle2, title: "شفاف رپورٹنگ", desc: "Net Profit = Customer Win/Loss − Deduction − Bonus۔ واضح اور قابل آڈٹ اعداد۔" },
+    { icon: Repeat, title: "طویل المدتی شراکت داری", desc: "طویل عرصے کے لیے ڈیزائن کی گئی شراکت داری میں باقاعدہ آمدنی کی بنیاد رکھیں۔" },
+  ],
+  testimonials: [
+    { name: "احمد ایچ.", role: "اسپورٹس ٹپسٹر، لاہور", quote: "چند ماہ میں 60% ٹیئر تک پہنچ گیا اور بدھ کے پے آؤٹ میرے لیے مستقل رہے ہیں۔", rating: 5 },
+    { name: "صائمہ آر.", role: "کیسینو ریویو بلاگر", quote: "شفاف رپورٹنگ اور ہفتہ وار پے آؤٹ کی وجہ سے JeetBuzz affiliate پروگرام اسکیل کرنا آسان لگا۔", rating: 5 },
+    { name: "عمران کے.", role: "کنٹینٹ کریئٹر", quote: "اضافی 3.5% ریفرل کمیشن اور Elite Club کے فوائد نے میری ماہانہ آمدنی بدل دی۔", rating: 5 },
+  ],
+  testimonialDisclaimer:
+    "یہ testimonials پارٹنر فیڈ بیک کی نمائندہ مثالیں ہیں؛ ذاتی آمدنی ٹریفک اور محنت کے مطابق مختلف ہوتی ہے۔",
+  eliteH2: "Affiliate Elite Club",
+  eliteBody:
+    "ہمارے سب سے بہترین پرفارمنگ affiliates کے لیے ایک خصوصی پروگرام — بہتر کمیشن ریٹس اور پریمیم مراعات کے ساتھ۔ آپ کی محنت بہترین کی حقدار ہے — JeetBuzz Elite Club میں خوش آمدید۔",
+  joinH2: "شرائط اور شامل ہونے کا طریقہ",
+  joinSub: "60% تک ہفتہ وار کمیشن شروع کرنے کے لیے چھ آسان مراحل۔",
+  joinSteps: [
+    { t: "JeetBuzz Affiliate کے طور پر رجسٹر کریں", d: "آفیشل JeetBuzz Partners پورٹل پر رجسٹر کریں — مفت اور تیز۔" },
+    { t: "KYC تصدیق مکمل کریں", d: "کمیشن ریلیز سے پہلے KYC تصدیق لازمی ہے۔" },
+    { t: "آفیشل JeetBuzz Affiliate Telegram چینل جوائن کریں", d: "اپ ڈیٹس، پے آؤٹ اور پروموشنز سے باخبر رہیں۔" },
+    { t: "اپنا affiliate لنک پروموٹ کریں", d: "اپنے سامعین اور چینلز میں منفرد ریفرل لنک شیئر کریں۔" },
+    { t: "اہل فعال کھلاڑی برقرار رکھیں", d: "فی کھلاڑی ৳3000 کم از کم ٹرن اوور کے ساتھ کم از کم 5 فعال کھلاڑی۔" },
+    { t: "ہر بدھ ہفتہ وار کمیشن وصول کریں", d: "60% تک ہفتہ وار پے آؤٹ اور اضافی 3.5% ریفرل کمیشن۔" },
+  ],
+  joinCta: "درخواست شروع کریں",
+  faqHeading: "اکثر پوچھے گئے سوالات",
+  faqs: [
+    { q: "JeetBuzz Affiliate کیسے بنوں؟", a: "affiliate رجسٹریشن فارم پُر کریں، اکاؤنٹ کی تصدیق کریں اور اپنا ریفرل لنک پروموٹ کرنا شروع کریں۔" },
+    { q: "کتنے فعال کھلاڑی درکار ہیں؟", a: "کم از کم پانچ فعال کھلاڑی لازمی ہیں۔" },
+    { q: "‘فعال کھلاڑی’ سے کیا مراد ہے؟", a: "وہ کھلاڑی جو کم از کم ৳3000 ٹرن اوور کی شرط پوری کرتا ہے، اسے فعال کھلاڑی شمار کیا جاتا ہے۔" },
+    { q: "کیا KYC لازمی ہے؟", a: "ہاں۔ کمیشن وصول کرنے سے پہلے KYC تصدیق لازمی ہے۔" },
+    { q: "کیا Telegram لازمی ہے؟", a: "ہاں۔ affiliates کو آفیشل JeetBuzz Affiliate Telegram چینل جوائن کرنا لازمی ہے۔" },
+    { q: "کمیشن کب پے آؤٹ ہوتا ہے؟", a: "کمیشن پیمنٹس ہر بدھ پروسیس کی جاتی ہیں۔" },
+    { q: "کیا بونس کمیشن ٹرانسفر کیا جا سکتا ہے؟", a: "نہیں۔ بونس کمیشن non-transferable ہے۔" },
+  ],
+  finalH2Lead: "آج ہی بنیں ",
+  finalH2Gold: "JeetBuzz Affiliate",
+  finalH2Tail: "",
+  finalSub:
+    "ہر ہفتے 60% تک کمیشن۔ ہر بدھ ہفتہ وار پے آؤٹ۔ شفاف رپورٹنگ اور طویل المدتی شراکت داری۔",
+  finalCta: "Affiliate بنیں",
+  finalDisclosure:
+    "اگر آپ ہمارے لنکس سے سائن اپ کرتے ہیں تو ہمیں کمیشن ملتا ہے — آپ کے لیے کوئی اضافی خرچ نہیں۔",
+  starRatingAria: (n) => `${n} اسٹار ریٹنگ`,
+};
+
 const CONTENT: Record<Locale, AffiliateContent> = {
   en: CONTENT_EN,
   bn: CONTENT_BN,
-  ur: CONTENT_EN,
+  ur: CONTENT_UR,
   hi: CONTENT_EN,
 };
 
