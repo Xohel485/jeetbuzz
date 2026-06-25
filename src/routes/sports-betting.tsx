@@ -80,6 +80,28 @@ export const Route = createFileRoute("/sports-betting")({
           "ओपनिंग ऑड्स बनाम मौजूदा ऑड्स की तुलना करें — शार्प लाइन मूव्स जानकारी देते हैं।",
         ],
       }}
+      faqs={[
+        { q: "Which sports beyond cricket have the deepest liquidity on JeetBuzz?", a: "Football (especially EPL, La Liga and Champions League) has the deepest non-cricket liquidity, followed by tennis Grand Slams and Pro Kabaddi League playoffs." },
+        { q: "Are eSports markets reliable on JeetBuzz?", a: "Yes for tier-1 events (CS Majors, The International, VCT). Tier-3 leagues can have shallow liquidity and wider margins — stick to major tournaments." },
+        { q: "What does a sharp line move tell me?", a: "A consistent move against the public side usually reflects informed money — squad changes, weather, late injuries. It does not guarantee a winner, but it is a stronger signal than crowd opinion." },
+        { q: "Is Asian Handicap better than 1X2 for football?", a: "For close matches yes — it removes the draw and tightens variance. For mismatched fixtures the 1X2 market is often easier to read." },
+      ]}
+      faqsByLocale={{
+        bn: [
+          { q: "ক্রিকেট ছাড়া কোন স্পোর্টসে JeetBuzz-এ সবচেয়ে বেশি লিকুইডিটি?", a: "ফুটবলে — বিশেষত EPL, La Liga ও চ্যাম্পিয়নস লিগ। এরপর টেনিসের গ্র্যান্ড স্ল্যাম এবং প্রো কাবাডি লিগের প্লে-অফ পর্যায়।" },
+          { q: "eSports মার্কেট কতটা নির্ভরযোগ্য?", a: "টিয়ার-১ ইভেন্ট (CS Major, The International, VCT) যথেষ্ট স্থির। ছোট টুর্নামেন্টে লিকুইডিটি কম, মার্জিন বেশি — তাই বড় ইভেন্টে সীমাবদ্ধ থাকুন।" },
+          { q: "শার্প লাইন মুভমেন্ট দেখলে কী বুঝব?", a: "জনতার বিপরীতে ধারাবাহিক মুভমেন্ট মানে সাধারণত ইনফর্মড মানি প্রবেশ করেছে — স্কোয়াড পরিবর্তন, আবহাওয়া বা চোটের তথ্য। এটি গ্যারান্টি নয়, তবে গণমতের চেয়ে শক্তিশালী সংকেত।" },
+          { q: "ফুটবলে Asian Handicap কি 1X2-এর চেয়ে ভালো?", a: "ক্লোজ ম্যাচে — হ্যাঁ, ড্র বাদ যায় ও ভ্যারিয়েন্স কমে। বড় ব্যবধানের ম্যাচে 1X2 পড়া সহজ।" },
+          { q: "প্রি-ম্যাচ নাকি ইন-প্লে — কোনটা ভালো?", a: "ফুটবলে গবেষণার সুযোগ থাকলে প্রি-ম্যাচই ভালো। টেনিস ও কাবাডিতে ইন-প্লে অডস দ্রুত ভ্যালু দেয়, তবে স্থিতিশীল ইন্টারনেট ছাড়া ঝুঁকিপূর্ণ।" },
+        ],
+      }}
+      related={[
+        { to: "/live-cricket-betting", title: "Live Cricket Betting" },
+        { to: "/cricket-exchange-guide", title: "Cricket Exchange Guide" },
+        { to: "/aviator-guide", title: "Aviator & Crash Games" },
+        { to: "/vip-program", title: "VIP Program" },
+        { to: "/welcome-bonus", title: "Welcome Bonus" },
+      ]}
     />
   ),
 });
