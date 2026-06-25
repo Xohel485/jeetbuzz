@@ -2,11 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { ChevronRight } from "lucide-react";
 import { JsonLd } from "./JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import { useI18n } from "@/lib/i18n";
 
 export type Crumb = { name: string; path: string };
 
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
-  const all: Crumb[] = [{ name: "Home", path: "/" }, ...items];
+  const { t } = useI18n();
+  const all: Crumb[] = [{ name: t("breadcrumb.home"), path: "/" }, ...items];
   return (
     <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground">
       <ol className="flex flex-wrap items-center gap-1">

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { GO, REL } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
 import { ArrowUpRight } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 type Props = {
   intent?: "signup" | "login";
@@ -30,12 +31,11 @@ export function AffiliateCTA({
   className,
   position = "guide_page",
 }: Props) {
+  const { t } = useI18n();
   const href = GO[intent];
   const text =
     label ??
-    (intent === "login"
-      ? "Visit Official JeetBuzz Login"
-      : "Visit Official JeetBuzz Site");
+    (intent === "login" ? t("cta.login_full") : t("cta.signup_full"));
   return (
     <Button asChild size={size} variant={variant} className={className}>
       <a
