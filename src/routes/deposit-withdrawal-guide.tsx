@@ -33,7 +33,7 @@ export const Route = createFileRoute("/deposit-withdrawal-guide")({
         "- UPI (for cross-border users)",
         "- Crypto (USDT TRC20)",
         "## Deposits",
-        "Open the Cashier, choose a method, follow the on-screen instructions and paste your TrxID. Deposits are usually instant.",
+        "Open the Cashier, choose a method, follow the on-screen instructions and paste your TrxID. Deposits usually credit within a few minutes, subject to wallet and operator processing.",
         "## Withdrawals",
         "Withdraw to the same wallet you deposited from. KYC may be required for the first cash-out. Typical clearing time: minutes to a few hours.",
         "## Common errors",
