@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 type Props = {
-  intent?: "signup" | "login";
+  intent?: "signup" | "login" | "partners";
   label?: string;
   size?: "default" | "lg" | "xl";
   variant?: "hero" | "emerald" | "glass";
@@ -35,7 +35,11 @@ export function AffiliateCTA({
   const href = GO[intent];
   const text =
     label ??
-    (intent === "login" ? t("cta.login_full") : t("cta.signup_full"));
+    (intent === "login"
+      ? t("cta.login_full")
+      : intent === "partners"
+        ? t("cta.signup_full")
+        : t("cta.signup_full"));
   return (
     <Button asChild size={size} variant={variant} className={className}>
       <a
@@ -44,7 +48,12 @@ export function AffiliateCTA({
         rel={REL}
         aria-label={text}
         onClick={() => {
-          const evt = intent === "login" ? "login_click" : "signup_click";
+          const evt =
+            intent === "login"
+              ? "login_click"
+              : intent === "partners"
+                ? "affiliate_click"
+                : "signup_click";
           track(evt, { destination: intent, button_position: position });
           track("affiliate_click", { intent, destination: intent, button_position: position, label: text });
           track("outbound_link_click", { href, destination: intent, button_position: position });

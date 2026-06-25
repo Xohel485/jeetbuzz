@@ -31,7 +31,7 @@ export const Route = createFileRoute("/affiliate-login")({
       subtitleByLocale={{
         bn: "JeetBuzz Affiliate পার্টনার পোর্টালে নিরাপদে লগইন, ড্যাশবোর্ড পরিচিতি, sub-ID ট্র্যাকিং ও পেআউট রিপোর্টের সংক্ষিপ্ত বাংলা গাইড।",
       }}
-      ctaIntent="login"
+      ctaIntent="partners"
       ctaLabel="Open JeetBuzz Login"
       ctaLabelByLocale={{
         bn: "অফিসিয়াল Affiliate পোর্টাল খুলুন",
