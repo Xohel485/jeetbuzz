@@ -52,6 +52,7 @@ export const Route = createFileRoute("/cricket-exchange-guide")({
       subtitleByLocale={{
         bn: "এক্সচেঞ্জ সাধারণ স্পোর্টসবুক নয় — এখানে আপনি অন্য ব্যবহারকারীর বিরুদ্ধে বাজি ধরছেন, JeetBuzz-এর বিরুদ্ধে নয়। ফলে অডস, লায়াবিলিটি ও কমিশনের নিয়ম আলাদা। BPL, IPL ও PSL বেটরদের জন্য ব্যবহারিক বাংলা সংস্করণ।",
         ur: "Exchange عام Sportsbook نہیں — یہاں آپ JeetBuzz کے بجائے دوسرے صارفین کے خلاف بیٹ لگاتے ہیں۔ اسی لیے آڈز، Liability اور Commission کے اصول مختلف ہیں۔ PSL، IPL اور BPL کے پاکستانی بیٹرز کے لیے عملی اردو رہنمائی۔",
+        hi: "एक्सचेंज एक सामान्य sportsbook नहीं है — यहाँ आप JeetBuzz के ख़िलाफ़ नहीं, बल्कि दूसरे यूज़र्स के ख़िलाफ़ बेट लगाते हैं। इसी वजह से ऑड्स, Liability और Commission के नियम अलग हैं। IPL, Ranji Trophy और अंतरराष्ट्रीय क्रिकेट खेलने वाले भारतीय बेटर्स के लिए व्यावहारिक हिंदी गाइड।",
       }}
       bodyByLocale={{
         bn: [
@@ -113,6 +114,13 @@ export const Route = createFileRoute("/cricket-exchange-guide")({
           { q: "کیا میچ ختم ہونے سے پہلے ‘ٹریڈ’ کر کے Lock کیا جا سکتا ہے؟", a: "ہاں — Back کھولنے کے بعد اسی Selection پر کم آڈز پر Lay (یا اس کے برعکس) لگانے سے Green Book Lock ہو جاتا ہے۔ JeetBuzz سپورٹڈ مارکیٹس میں Cash Out بھی فراہم کرتا ہے۔" },
           { q: "کیا Welcome Bonus Exchange بیٹس پر لاگو ہوتا ہے؟", a: "زیادہ تر آپریٹرز Exchange ٹرن اوور کو Welcome Wagering سے خارج کرتے ہیں، کیونکہ House Edge مارجن نہیں — Commission ہے۔ Opt-in سے پہلے شرائط پڑھیں۔" },
           { q: "Unmatched بیٹ کب تک رہتی ہے؟", a: "جب تک مارکیٹ کھلی رہے — میچ ہوتے ہی فعال، اور میچ شروع ہونے یا مارکیٹ suspend ہونے پر منسوخ۔" },
+        ],
+        hi: [
+          { q: "क्या Exchange के ऑड्स Sportsbook से बेहतर होते हैं?", a: "IPL जैसी liquid मार्केट्स में आमतौर पर हाँ — Exchange के ऑड्स में margin नहीं होता, केवल net winnings पर Commission लगता है। पतली मार्केट्स में depth कम होने से Book कभी-कभी अधिक प्रतिस्पर्धी हो सकता है।" },
+          { q: "Back और Lay में क्या फ़र्क है?", a: "Back = घटना होगी; Lay = घटना नहीं होगी। 2.0 से अधिक किसी भी ऑड्स पर Lay की Liability स्टेक से अधिक होती है — confirm करने से पहले स्क्रीन पर दिखाई गई Liability अवश्य पढ़ें।" },
+          { q: "क्या मैच ख़त्म होने से पहले ‘ट्रेड’ करके लॉक किया जा सकता है?", a: "हाँ — Back खोलने के बाद उसी selection पर कम ऑड्स पर Lay (या इसके विपरीत) लगाने से Green Book lock हो जाता है। JeetBuzz supported markets में Cash Out विकल्प भी देता है, यदि counter-price मौजूद हो।" },
+          { q: "क्या Welcome Bonus Exchange बेट्स पर लागू होता है?", a: "ज़्यादातर ऑपरेटर Exchange turnover को Welcome wagering से बाहर रखते हैं, क्योंकि यहाँ House Edge margin नहीं — Commission है। Opt-in से पहले शर्तें अवश्य पढ़ें।" },
+          { q: "Unmatched बेट कितनी देर तक रहती है?", a: "जब तक मार्केट खुली है — match होते ही active, और मैच शुरू होने या मार्केट suspend होने पर रद्द हो जाती है।" },
         ],
       }}
       related={[
