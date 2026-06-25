@@ -79,6 +79,27 @@ export const Route = createFileRoute("/casino-guide")({
           "लाइव कैसीनो आमतौर पर वेजरिंग में 10% से कम योगदान करता है। स्पोर्ट्सबुक बोनस आसान।",
         ],
       }}
+      faqs={[
+        { q: "Which casino games have the best odds for the player?", a: "Blackjack with correct basic strategy approaches 99%+ RTP, followed by Baccarat (Banker) and European Roulette. Slots vary widely — check published RTP before playing." },
+        { q: "Are live dealer tables available in Bengali?", a: "Yes — JeetBuzz lists a small number of Bengali-speaking live tables alongside standard English and Hindi tables from Evolution and Ezugi." },
+        { q: "How is the casino welcome bonus wagered?", a: "Wagering contributions vary by game type — slots typically count 100%, table games 10–20%, live casino around 10%. Confirm the latest terms in the cashier before opting in." },
+        { q: "Is the casino fair?", a: "Game RNGs and live dealer feeds come from third-party studios with independent audits. The house edge exists regardless — set a session budget." },
+      ]}
+      faqsByLocale={{
+        bn: [
+          { q: "কোন ক্যাসিনো গেমে প্লেয়ারের জন্য সবচেয়ে ভালো অডস?", a: "সঠিক বেসিক স্ট্র্যাটেজিতে ব্ল্যাকজ্যাক ৯৯%+ RTP দেয়। এরপর ব্যাকারাট (ব্যাঙ্কার) ও ইউরোপীয় রুলেট। স্লটে RTP ভিন্ন — খেলার আগে নিশ্চিত হোন।" },
+          { q: "লাইভ ডিলার টেবিল কি বাংলায় পাওয়া যায়?", a: "হ্যাঁ — JeetBuzz-এ Evolution ও Ezugi-র কিছু বাংলা-ভাষী টেবিল আছে; পাশাপাশি ইংরেজি ও হিন্দি টেবিলও রয়েছে।" },
+          { q: "ক্যাসিনো ওয়েলকাম বোনাসের ওয়েজারিং কীভাবে হয়?", a: "গেম অনুযায়ী কন্ট্রিবিউশন আলাদা — স্লট সাধারণত ১০০%, টেবিল গেম ১০–২০%, লাইভ ক্যাসিনো প্রায় ১০%। কনফার্ম করার আগে ক্যাশিয়ারে শর্ত দেখুন।" },
+          { q: "JeetBuzz ক্যাসিনো কি ন্যায্য?", a: "RNG ও লাইভ ফিড স্বনামধন্য তৃতীয় পক্ষ স্টুডিও থেকে আসে এবং স্বাধীন অডিট হয়। হাউস এজ থাকেই — সেশন বাজেট ঠিক করুন।" },
+          { q: "ক্যাসিনো খেলার জন্য কোন ডিপোজিট রেইল ভালো?", a: "বাংলাদেশের প্লেয়াররা সাধারণত [bKash](/bkash-guide) বা [Nagad](/nagad-guide) ব্যবহার করেন — দ্রুত ক্রেডিট হয়। বড় ডিপোজিটে USDT TRC20 বিবেচনা করতে পারেন।" },
+        ],
+      }}
+      related={[
+        { to: "/aviator-guide", title: "Aviator & Crash Games" },
+        { to: "/welcome-bonus", title: "Welcome Bonus" },
+        { to: "/vip-program", title: "VIP Program" },
+        { to: "/responsible-gaming", title: "Responsible Gaming" },
+      ]}
     />
   ),
 });
