@@ -132,6 +132,16 @@ export const Route = createFileRoute("/live-cricket-betting")({
         { q: "Does JeetBuzz cover BPL, IPL and PSL?", a: "Yes — all three are covered with pre-match and in-play markets. Coverage extends to T20 World Cup, Champions Trophy, Test and ODI internationals." },
         { q: "Which payment method is best for cricket betting?", a: "Bangladesh players default to bKash or Nagad, Pakistan players use JazzCash or EasyPaisa, India players use UPI. See the payment-method guides for full step-by-step flows." },
       ]}
+      faqsByLocale={{
+        bn: [
+          { q: "লাইভ ক্রিকেটে ন্যূনতম স্টেক কত?", a: "বেশিরভাগ মার্কেটে ন্যূনতম স্টেক প্রায় ১০ টাকা; বড় মার্কেটে (BPL/IPL ম্যাচ উইনার) সর্বোচ্চ সিঙ্গেল বেট লিমিট সাধারণত অনেক বেশি — সঠিক সীমা বেট স্লিপে দেখানো হয়।" },
+          { q: "লাইভ বেট Cash-Out করা যাবে?", a: "হ্যাঁ — লিকুইডিটি থাকলে বেট স্লিপে Cash-Out অপশন আসে এবং প্রতি কয়েক সেকেন্ডে মান আপডেট হয়।" },
+          { q: "JeetBuzz-এ কি BPL, IPL ও PSL — সবই থাকে?", a: "হ্যাঁ — তিনটি লিগই প্রি-ম্যাচ ও লাইভ মার্কেটে কভার করা হয়। T20 বিশ্বকাপ, চ্যাম্পিয়নস ট্রফি, টেস্ট ও ODI সিরিজও অন্তর্ভুক্ত।" },
+          { q: "ক্রিকেট বেটিংয়ের জন্য সবচেয়ে সুবিধাজনক পেমেন্ট কোনটি?", a: "বাংলাদেশের প্লেয়ারদের জন্য bKash বা Nagad সবচেয়ে দ্রুত — সাধারণত কয়েক মিনিটে ক্লিয়ার হয়। বিস্তারিত পেমেন্ট গাইডগুলো দেখুন।" },
+          { q: "উইকেট পড়ার সঙ্গে সঙ্গে বেট রাখা কি বুদ্ধিমানের কাজ?", a: "প্রথম ১০–১৫ সেকেন্ড অডস অস্থির থাকে; অভিজ্ঞ না হলে কিছুটা অপেক্ষা করুন।" },
+          { q: "Cash-Out কখন ব্যবহার করব?", a: "যখন অডস আপনার অনুকূলে ১৫–২০% সরে এসেছে, বা ম্যাচ পরিস্থিতি আপনার থিসিসের বিপরীতে গেছে। অভ্যাস নয়, কৌশলগত হাতিয়ার হিসেবে দেখুন।" },
+        ],
+      }}
       related={[
         { to: "/sports-betting", title: "JeetBuzz Sports Betting" },
         { to: "/cricket-exchange-guide", title: "Cricket Exchange Guide" },
