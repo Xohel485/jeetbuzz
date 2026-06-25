@@ -547,9 +547,38 @@ function AffiliateProgramPage() {
         </div>
         <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-8">
           <div className="min-w-0">
-            <div className="glass overflow-hidden rounded-2xl">
+            {/* Mobile: stacked cards (no horizontal scroll) */}
+            <ul className="space-y-3 lg:hidden" aria-label={c.planH2}>
+              {c.commission.map((row) => (
+                <li
+                  key={row.tier}
+                  className="glass rounded-2xl p-4"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-base font-semibold">{row.tier}</h3>
+                    <span className="gold-text shrink-0 text-base font-semibold">{row.revshare}</span>
+                  </div>
+                  <dl className="mt-3 grid grid-cols-1 gap-2 text-sm">
+                    <div className="flex flex-col">
+                      <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.players}</dt>
+                      <dd className="mt-0.5 text-foreground/90">{row.players}</dd>
+                    </div>
+                    <div className="flex flex-col">
+                      <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.commission}</dt>
+                      <dd className="mt-0.5"><span className="gold-text font-semibold">{row.revshare}</span></dd>
+                    </div>
+                    <div className="flex flex-col">
+                      <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.payout}</dt>
+                      <dd className="mt-0.5 text-foreground/90">{row.cpa}</dd>
+                    </div>
+                  </dl>
+                </li>
+              ))}
+            </ul>
+            {/* Desktop/tablet (lg+): original table */}
+            <div className="glass hidden overflow-hidden rounded-2xl lg:block">
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[560px] text-left text-sm">
+                <table className="w-full text-left text-sm">
                   <thead className="bg-white/[0.04] text-xs uppercase tracking-wider text-muted-foreground">
                     <tr>
                       <th className="px-4 py-3 font-semibold">{c.tableHead.tier}</th>
