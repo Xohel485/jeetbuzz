@@ -11,13 +11,13 @@ import rgAge from "@/assets/badges/responsible-gaming-18.webp";
 import rgMain from "@/assets/badges/responsible-gambling.webp";
 import gamcare from "@/assets/badges/gamcare.webp";
 
-const FOOTER_POSTS: { slug: string; titleKey: string; fallback: string }[] = [
-  { slug: "jeetbuzz-registration-guide-bangladesh", titleKey: "footer.post.registration_bd", fallback: "JeetBuzz Registration Guide for Bangladesh (2026)" },
-  { slug: "jeetbuzz-login-guide", titleKey: "footer.post.login", fallback: "JeetBuzz Login Guide — Safe Access from Bangladesh" },
-  { slug: "jeetbuzz-apk-download-safe-guide", titleKey: "footer.post.apk", fallback: "JeetBuzz APK Download — Safe Install Guide" },
-  { slug: "jeetbuzz-bonus-terms-explained", titleKey: "footer.post.bonus_terms", fallback: "JeetBuzz Bonus Terms — What the Fine Print Actually Means" },
-  { slug: "jeetbuzz-bkash-nagad-deposit-guide", titleKey: "footer.post.bkash_nagad", fallback: "JeetBuzz Deposits with bKash, Nagad & Rocket" },
-  { slug: "jeetbuzz-live-cricket-betting-guide", titleKey: "footer.post.live_cricket", fallback: "JeetBuzz Live Cricket Betting — A Practical Guide" },
+const FOOTER_POSTS: { slug: string; titleKey: string }[] = [
+  { slug: "jeetbuzz-registration-guide-bangladesh", titleKey: "footer.post.registration_bd" },
+  { slug: "jeetbuzz-login-guide", titleKey: "footer.post.login" },
+  { slug: "jeetbuzz-apk-download-safe-guide", titleKey: "footer.post.apk" },
+  { slug: "jeetbuzz-bonus-terms-explained", titleKey: "footer.post.bonus_terms" },
+  { slug: "jeetbuzz-bkash-nagad-deposit-guide", titleKey: "footer.post.bkash_nagad" },
+  { slug: "jeetbuzz-live-cricket-betting-guide", titleKey: "footer.post.live_cricket" },
 ];
 
 type Badge = { src: string; alt: string; label: string };
@@ -209,7 +209,7 @@ export function SiteFooter() {
                   params={{ slug: p.slug }}
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  {t(p.titleKey, {}) === p.titleKey ? p.fallback : t(p.titleKey)}
+                  {t(p.titleKey)}
                 </Link>
               </li>
             ))}
