@@ -554,10 +554,7 @@ function AffiliateProgramPage() {
                   key={row.tier}
                   className="glass rounded-2xl p-4"
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-base font-semibold">{row.tier}</h3>
-                    <span className="gold-text shrink-0 text-base font-semibold">{row.revshare}</span>
-                  </div>
+                  <h3 className="text-base font-semibold">{row.tier}</h3>
                   <dl className="mt-3 grid grid-cols-1 gap-2 text-sm">
                     <div className="flex flex-col">
                       <dt className="text-xs uppercase tracking-wider text-muted-foreground">{c.tableHead.players}</dt>
