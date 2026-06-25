@@ -644,19 +644,13 @@ function AffiliateProgramPage() {
                 decoding="async"
                 className="mx-auto h-auto w-full max-w-[320px] md:mx-0 md:max-w-[380px]"
               />
-              <h2 className="mt-4 text-2xl font-bold md:text-3xl">
-                Affiliate Elite Club
-              </h2>
-              <p className="mt-3 text-sm text-muted-foreground md:text-base">
-                An exclusive program for our top-performing affiliates with increased
-                commission rates and premium privileges. Your dedication deserves the very
-                best — welcome to the JeetBuzz Elite Club.
-              </p>
+              <h2 className="mt-4 text-2xl font-bold md:text-3xl">{c.eliteH2}</h2>
+              <p className="mt-3 text-sm text-muted-foreground md:text-base">{c.eliteBody}</p>
             </div>
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map((t) => (
+          {c.testimonials.map((t) => (
             <figure key={t.name} className="glass rounded-2xl p-5">
               <Quote className="size-5 text-primary/70" />
               <blockquote className="mt-3 text-sm leading-relaxed text-foreground/90">
@@ -669,7 +663,7 @@ function AffiliateProgramPage() {
                 </div>
                 <div
                   className="flex gap-0.5 text-[var(--gold,#f5c451)]"
-                  aria-label={`${t.rating} star rating`}
+                  aria-label={c.starRatingAria(t.rating)}
                 >
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star key={i} className="size-3.5 fill-current" />
@@ -679,50 +673,18 @@ function AffiliateProgramPage() {
             </figure>
           ))}
         </div>
-        <p className="mt-4 text-center text-[11px] text-muted-foreground">
-          Testimonials are representative examples from partner feedback; individual
-          earnings vary by traffic and effort.
-        </p>
+        <p className="mt-4 text-center text-[11px] text-muted-foreground">{c.testimonialDisclaimer}</p>
       </section>
 
       {/* How to join */}
       <section id="how-to-join" className="container-pro py-10 md:py-14">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">
-              Requirements & How to Join
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground md:text-base">
-              Six simple steps to start earning up to 60% weekly commission.
-            </p>
+            <h2 className="text-2xl font-bold md:text-3xl">{c.joinH2}</h2>
+            <p className="mt-2 text-sm text-muted-foreground md:text-base">{c.joinSub}</p>
           </div>
           <ol className="mt-8 space-y-4">
-            {[
-              {
-                t: "Register as a JeetBuzz Affiliate",
-                d: "Sign up on the official JeetBuzz Partners portal — free and fast.",
-              },
-              {
-                t: "Complete your KYC verification",
-                d: "KYC verification is mandatory before commissions are released.",
-              },
-              {
-                t: "Join the official JeetBuzz Affiliate Telegram Channel",
-                d: "Stay informed about updates, payouts and promotions.",
-              },
-              {
-                t: "Promote your affiliate link",
-                d: "Share your unique referral link across your audience and channels.",
-              },
-              {
-                t: "Maintain qualified active players",
-                d: "Minimum 5 active players with at least ৳3000 turnover each.",
-              },
-              {
-                t: "Receive weekly commission every Wednesday",
-                d: "Up to 60% weekly payout plus an extra 3.5% referral commission.",
-              },
-            ].map((step, i) => (
+            {c.joinSteps.map((step, i) => (
               <li key={i} className="glass flex gap-4 rounded-2xl p-4 md:p-5">
                 <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary ring-1 ring-primary/20">
                   {i + 1}
@@ -735,7 +697,7 @@ function AffiliateProgramPage() {
             ))}
           </ol>
           <div className="mt-8 flex justify-center">
-            <PartnerCTA size="xl">Start your application</PartnerCTA>
+            <PartnerCTA size="xl" ariaLabel={c.ctaAria}>{c.joinCta}</PartnerCTA>
           </div>
         </div>
       </section>
@@ -744,8 +706,8 @@ function AffiliateProgramPage() {
       <section className="container-pro pb-12">
         <div className="mx-auto max-w-3xl">
           <FAQAccordion
-            faqs={FAQS}
-            heading="Frequently asked questions"
+            faqs={c.faqs}
+            heading={c.faqHeading}
           />
         </div>
       </section>
@@ -754,18 +716,13 @@ function AffiliateProgramPage() {
       <section className="container-pro pb-20">
         <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-white/10 border-t-2 border-t-primary/60 bg-white/[0.03] px-6 py-10 text-center md:px-12 md:py-14">
           <h2 className="text-2xl font-bold md:text-4xl">
-            Become a <span className="gold-text">JeetBuzz Affiliate</span> today
+            {c.finalH2Lead}<span className="gold-text">{c.finalH2Gold}</span>{c.finalH2Tail}
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground md:text-base">
-            Up to 60% weekly commission. Weekly Wednesday payouts. Transparent reporting and
-            long-term partnership.
-          </p>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground md:text-base">{c.finalSub}</p>
           <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
+            <PartnerCTA size="xl" ariaLabel={c.ctaAria}>{c.finalCta}</PartnerCTA>
           </div>
-          <p className="mt-4 text-[11px] text-muted-foreground">
-            We earn commission if you sign up through our links — at no extra cost to you.
-          </p>
+          <p className="mt-4 text-[11px] text-muted-foreground">{c.finalDisclosure}</p>
         </div>
       </section>
 
