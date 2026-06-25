@@ -45,7 +45,7 @@ export function GuidePage({
   subtitleByLocale?: Partial<Record<Locale, ReactNode>>;
   body: string[];
   bodyByLocale?: Partial<Record<Locale, string[]>>;
-  ctaIntent?: "signup" | "login";
+  ctaIntent?: "signup" | "login" | "partners";
   ctaLabel?: string;
   ctaLabelByLocale?: Partial<Record<Locale, string>>;
   showDisclosure?: boolean;
