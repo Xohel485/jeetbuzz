@@ -545,8 +545,8 @@ function AffiliateProgramPage() {
           <h2 className="text-2xl font-bold md:text-3xl">{c.planH2}</h2>
           <p className="mt-2 text-sm text-muted-foreground md:text-base">{c.planSub}</p>
         </div>
-        <div className="grid items-start gap-6 lg:grid-cols-[1.4fr_1fr] lg:gap-8">
-          <div>
+        <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-8">
+          <div className="min-w-0">
             <div className="glass overflow-hidden rounded-2xl">
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[560px] text-left text-sm">
