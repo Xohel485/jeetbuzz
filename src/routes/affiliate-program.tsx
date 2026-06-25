@@ -401,11 +401,13 @@ function PartnerCTA({
   size = "lg",
   variant = "hero",
   className,
+  ariaLabel,
 }: {
   children: ReactNode;
   size?: "default" | "lg" | "xl";
   variant?: "hero" | "emerald" | "glass";
   className?: string;
+  ariaLabel?: string;
 }) {
   return (
     <Button asChild size={size} variant={variant} className={className}>
@@ -413,7 +415,7 @@ function PartnerCTA({
         href={PARTNERS_URL}
         target="_blank"
         rel={REL}
-        aria-label="Become a JeetBuzz Affiliate"
+        aria-label={ariaLabel ?? "Become a JeetBuzz Affiliate"}
         onClick={() => {
           import("@/lib/analytics").then(({ track }) => {
             track("affiliate_click", { intent: "affiliate", destination: "affiliate", button_position: "affiliate_section" });
