@@ -408,7 +408,7 @@ const EXTRA: BlogPost[] = [
     readTime: "4 min",
     body: [
       "## How it works",
-      "Cash out before the plane flies away. Multiplier rises from 1.0x. RTP is ~97%.",
+      "Cash out before the plane flies away. Multiplier rises from 1.0x. RTP is shown in the game's info panel and may vary by provider build.",
       "## Auto cashout",
       "Set a fixed multiplier to remove emotion.",
       "## Strategy reality",

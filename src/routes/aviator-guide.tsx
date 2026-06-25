@@ -6,7 +6,7 @@ const PATH = "/aviator-guide";
 const TITLE =
   "JeetBuzz Aviator & Crash Games Guide 2026 - Strategy, Auto Cash-Out & RTP";
 const DESC =
-  "JeetBuzz Aviator and crash games guide for 2026 — how the multiplier works, auto cash-out setup, bankroll sizing, RTP basics and honest myth-busting for BD, PK and IN players.";
+  "JeetBuzz Aviator and crash games guide for 2026 — how the multiplier works, auto cash-out setup, bankroll sizing and honest myth-busting for BD, PK and IN players.";
 
 export const Route = createFileRoute("/aviator-guide")({
   head: () => ({
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/aviator-guide")({
         "- Lower target multipliers (1.30x-1.50x) hit more often but the expected value is still negative — house edge is built in.",
         "- Doubling after a loss (Martingale) blows up faster than people expect on Aviator because long losing streaks happen routinely in a random-multiplier game.",
         "## RTP and house edge",
-        "Aviator's published RTP is around 97% (Spribe lists it on the in-game info panel — confirm the number shown in the JeetBuzz client at the time of play, since some operators run an alternative RTP build). 97% RTP still means an expected long-run loss of 3% of total turnover.",
+        "Aviator's RTP is not officially published by JeetBuzz and can vary between provider builds and game versions. Always check the in-game info panel in the JeetBuzz client at the time of play for the current value. Regardless of the exact number, every crash game carries a built-in house edge — expect a long-run negative return on total turnover.",
         "## Country-specific notes",
         "- Bangladesh: bKash and Nagad deposits clear fast enough to fund quick Aviator sessions; keep the unique reference handy.",
         "- Pakistan: EasyPaisa and JazzCash Mobile Account transfers work; avoid Retailer sends.",
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/aviator-guide")({
           "- নিচু টার্গেট (১.৩০x–১.৫০x) বেশি হিট করে, কিন্তু expected value তবু নেগেটিভ — হাউস এজ গাঁথা আছে।",
           "- লসের পর স্টেক ডবল করা (Martingale) Aviator-এ দ্রুত ব্যাংকরোল শূন্য করে দেয়, কারণ লং লসিং স্ট্রিক এখানে স্বাভাবিক।",
           "## RTP ও হাউস এজ",
-          "Aviator-এর প্রকাশিত RTP প্রায় ৯৭% (Spribe-এর ইন-গেম ইনফো প্যানেলে দেখা যায় — খেলার সময় JeetBuzz ক্লায়েন্টে দেখানো সংখ্যাটিই নিশ্চিত করুন)। ৯৭% RTP মানে দীর্ঘমেয়াদে মোট টার্নওভারের ~৩% ক্ষতি প্রত্যাশিত।",
+          "Aviator-এর RTP JeetBuzz অফিসিয়ালভাবে প্রকাশ করে না এবং প্রোভাইডার বিল্ড ও গেম সংস্করণ অনুসারে এটি ভিন্ন হতে পারে। খেলার সময় JeetBuzz ক্লায়েন্টের ইন-গেম ইনফো প্যানেলে বর্তমান মান যাচাই করুন। সংখ্যা যাই হোক, প্রতিটি ক্র্যাশ গেমে একটি বিল্ট-ইন হাউস এজ থাকে — দীর্ঘমেয়াদে মোট টার্নওভারে নেগেটিভ রিটার্ন প্রত্যাশিত।",
           "## বাংলাদেশের প্লেয়ারদের জন্য নোট",
           "- [bKash](/bkash-guide) ও [Nagad](/nagad-guide) ডিপোজিট দ্রুত ক্লিয়ার হয় — ছোট, দ্রুত সেশনের জন্য আদর্শ।",
           "- প্রতিটি ডিপোজিটে ইউনিক রেফারেন্স কোড সঠিকভাবে ব্যবহার করুন।",
@@ -87,14 +87,14 @@ export const Route = createFileRoute("/aviator-guide")({
         ],
       }}
       faqs={[
-        { q: "Is Aviator rigged?", a: "No. Aviator is provably fair — each round's crash point is committed before the round starts and can be verified after. The house edge comes from the RTP (~97%), not from manipulating outcomes." },
+        { q: "Is Aviator rigged?", a: "No. Aviator is provably fair — each round's crash point is committed before the round starts and can be verified after. The house edge comes from the game's built-in RTP, not from manipulating outcomes. The current RTP value is shown inside the game's info panel and may vary by provider build." },
         { q: "What's the safest auto cash-out value?", a: "There is no safe value — every value has negative expected value over the long run. Low multipliers (1.30x-1.50x) hit more often but pay less; high ones pay more but hit rarely. Pick what matches your bankroll plan, not what feels lucky." },
         { q: "Can I use a script or bot on JeetBuzz Aviator?", a: "No. Third-party automation breaches JeetBuzz terms and can lead to balance forfeiture. The in-game auto cash-out and auto bet features are the only sanctioned automation." },
         { q: "Does the welcome bonus work on Aviator?", a: "Casino welcome bonuses on JeetBuzz typically exclude or only partially count crash-style games toward wagering. Read the bonus T&Cs in the cashier before opting in — see our Welcome Bonus guide." },
       ]}
       faqsByLocale={{
         bn: [
-          { q: "Aviator কি কারচুপি করা?", a: "না। Aviator provably fair — প্রতিটি রাউন্ডের ক্র্যাশ পয়েন্ট রাউন্ড শুরুর আগেই কমিট করা হয় এবং পরে যাচাই করা যায়। হাউস এজ আসে RTP (~৯৭%) থেকে, ফলাফল কারচুপি থেকে নয়।" },
+          { q: "Aviator কি কারচুপি করা?", a: "না। Aviator provably fair — প্রতিটি রাউন্ডের ক্র্যাশ পয়েন্ট রাউন্ড শুরুর আগেই কমিট করা হয় এবং পরে যাচাই করা যায়। হাউস এজ আসে গেমের বিল্ট-ইন RTP থেকে, ফলাফল কারচুপি থেকে নয়। সঠিক RTP মান গেমের ইন-গেম ইনফো প্যানেলে দেখানো থাকে এবং প্রোভাইডার বিল্ড অনুযায়ী পরিবর্তিত হতে পারে।" },
           { q: "Auto Cash Out-এর ‘নিরাপদ’ ভ্যালু কত?", a: "কোনো নিরাপদ ভ্যালু নেই — দীর্ঘমেয়াদে সব মানেরই expected value নেগেটিভ। ১.৩০x–১.৫০x বেশি হিট করে কিন্তু পেআউট কম; বড় মাল্টিপ্লায়ার বিরল কিন্তু বেশি দেয়। ব্যাংকরোল প্ল্যানের সঙ্গে যেটা মেলে সেটাই বেছে নিন।" },
           { q: "Aviator-এ স্ক্রিপ্ট/বট ব্যবহার করা যাবে?", a: "না। তৃতীয় পক্ষের অটোমেশন JeetBuzz টার্মস ভঙ্গ করে এবং ব্যালেন্স বাজেয়াপ্ত হতে পারে। শুধু ইন-গেম Auto Cash Out ও Auto Bet অনুমোদিত।" },
           { q: "ওয়েলকাম বোনাস কি Aviator-এ কাজ করে?", a: "ক্যাসিনো ওয়েলকাম বোনাস সাধারণত ক্র্যাশ গেমকে ওয়েজারিং-এ আংশিক বা শূন্য কন্ট্রিবিউশন দেয়। অপ্ট-ইন করার আগে [ওয়েলকাম বোনাস](/welcome-bonus) শর্ত দেখুন।" },
