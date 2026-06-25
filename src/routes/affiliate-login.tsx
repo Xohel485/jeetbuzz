@@ -27,17 +27,20 @@ export const Route = createFileRoute("/affiliate-login")({
       titleByLocale={{
         bn: <>JeetBuzz Affiliate <span className="gold-text">লগইন গাইড</span></>,
         ur: <>JeetBuzz Affiliate <span className="gold-text">لاگ ان گائیڈ</span></>,
+        hi: <>JeetBuzz Affiliate <span className="gold-text">लॉगिन गाइड</span></>,
       }}
       subtitle="A short, security-first walkthrough of the JeetBuzz affiliate partner portal — login, dashboard, sub-IDs and payout reports."
       subtitleByLocale={{
         bn: "JeetBuzz Affiliate পার্টনার পোর্টালে নিরাপদে লগইন, ড্যাশবোর্ড পরিচিতি, sub-ID ট্র্যাকিং ও পেআউট রিপোর্টের সংক্ষিপ্ত বাংলা গাইড।",
         ur: "JeetBuzz Affiliate پارٹنر پورٹل میں محفوظ لاگ ان، ڈیش بورڈ کا تعارف، sub-ID ٹریکنگ اور پے آؤٹ رپورٹس کی مختصر اردو گائیڈ۔",
+        hi: "JeetBuzz Affiliate पार्टनर पोर्टल में सुरक्षित लॉगिन, डैशबोर्ड परिचय, sub-ID ट्रैकिंग और पे-आउट रिपोर्ट्स की संक्षिप्त हिंदी गाइड।",
       }}
       ctaIntent="partners"
       ctaLabel="Open JeetBuzz Login"
       ctaLabelByLocale={{
         bn: "অফিসিয়াল Affiliate পোর্টাল খুলুন",
         ur: "آفیشل Affiliate پورٹل کھولیں",
+        hi: "ऑफ़िशियल Affiliate पोर्टल खोलें",
       }}
       breadcrumbs={[{ name: "Affiliate", path: "/affiliate-program" }, { name: "Affiliate Login", path: PATH }]}
       articlePath={PATH}
@@ -118,6 +121,31 @@ export const Route = createFileRoute("/affiliate-login")({
           "Finance → Settings سے پے آؤٹ والیٹ اپ ڈیٹ کیا جا سکتا ہے۔ سیکیورٹی کے لیے زیادہ تر تبدیلیوں پر ای میل کنفرمیشن درکار ہوتی ہے۔",
           "> اشتہاری اشاعت سے پہلے [Affiliate Disclosure](/affiliate-disclosure) پر ہمارا لسانی معیار ضرور دیکھیں۔",
         ],
+        hi: [
+          "## यह पेज असल में क्या है",
+          "GetJeetBuzz एक स्वतंत्र संपादकीय गाइड साइट है — यहाँ ऑफ़िशियल Affiliate पोर्टल होस्ट नहीं किया जाता। ऊपर दिया गया बटन आपको ऑफ़िशियल JeetBuzz Partners पोर्टल पर ले जाता है, जहाँ असली लॉगिन होता है।",
+          "## लॉगिन से पहले क्या ज़रूरी है",
+          "पहले से JeetBuzz Affiliate के रूप में रजिस्ट्रेशन पूरा होना चाहिए। अगर अभी तक नहीं किया तो पहले हमारी [Affiliate Program](/affiliate-program) और [Agent & Affiliate Earning Guide](/agent-earning-guide) पढ़ लें।",
+          "## लॉगिन कैसे करें",
+          "1. भरोसेमंद बुकमार्क या हमारे verified आउटबाउंड लिंक से ऑफ़िशियल Affiliate पोर्टल खोलें।",
+          "2. रजिस्ट्रेशन के समय इस्तेमाल की गई ईमेल दर्ज करें।",
+          "3. पासवर्ड डालकर Submit दबाएँ।",
+          "4. जहाँ ऑपरेटर समर्थन करता है — 2FA सक्रिय हो तो कोड से सत्यापन पूरा करें।",
+          "## पासवर्ड भूल गए?",
+          "पोर्टल का ‘Forgot password’ लिंक इस्तेमाल करें — Affiliate पर रजिस्टर्ड ईमेल पर रीसेट लिंक भेजा जाता है। Spam और Promotions फ़ोल्डर भी देखें; फिर भी न मिले तो अपने Affiliate Manager से संपर्क करें।",
+          "## डैशबोर्ड का परिचय",
+          "- Overview: क्लिक्स, रजिस्ट्रेशन, FTD और रेवेन्यू एक जगह।",
+          "- Reports: sub-ID, कैम्पेन, देश या तारीख़ के अनुसार फ़िल्टर।",
+          "- Creatives: बैनर और ट्रैकिंग लिंक — भारतीय लैंडिंग पेजों के लिए अलग creatives भी उपलब्ध।",
+          "- Finance: बैलेंस, पे-आउट हिस्ट्री और KYC दस्तावेज़।",
+          "## sub-ID और ट्रैकिंग",
+          "सबसे ज़रूरी आदत — हर ट्रैफ़िक स्रोत के लिए अलग sub-ID इस्तेमाल करें (जैसे Telegram, YouTube, ब्लॉग पोस्ट)। इससे स्पष्ट हो जाता है कि कौन-सा चैनल असल में आमदनी ला रहा है और बजट कहाँ लगाना है।",
+          "## सुरक्षा चेकलिस्ट",
+          "मज़बूत यूनीक पासवर्ड, जहाँ ऑपरेटर समर्थन करता है वहाँ 2FA सक्रिय, कभी शेयर्ड लॉगिन नहीं। Affiliate अकाउंट में आपकी पे-आउट हिस्ट्री और बैंक/वॉलेट जानकारी होती है — इसे बैंकिंग ऐप जितना महत्व दें। अधिक विवरण [Security Guide](/security-guide) में।",
+          "## पे-आउट वॉलेट बदलना",
+          "Finance → Settings से पे-आउट वॉलेट अपडेट किया जा सकता है। सुरक्षा के लिए ज़्यादातर बदलावों पर ईमेल कन्फ़र्मेशन ज़रूरी होती है।",
+          "> व्यावसायिक प्रकाशन से पहले [Affiliate Disclosure](/affiliate-disclosure) पर हमारी भाषा-शैली ज़रूर देखें।",
+        ],
       }}
       faqs={[
         { q: "Is this the official affiliate login page?", a: "No. GetJeetBuzz is a verified affiliate partner of JeetBuzz, but this site is not the affiliate portal. The button above opens the official JeetBuzz affiliate portal where login happens." },
@@ -139,6 +167,13 @@ export const Route = createFileRoute("/affiliate-login")({
           { q: "کیا ایک سے زیادہ Affiliate اکاؤنٹ رکھے جا سکتے ہیں؟", a: "نہیں۔ ہر پارٹنر کے لیے ایک ہی اکاؤنٹ۔ مختلف ٹریفک سورسز کو الگ کرنے کے لیے sub-ID استعمال کریں۔" },
           { q: "کمیشن کب پے آؤٹ ہوتا ہے؟", a: "آفیشل شیڈول اور کم از کم حد کے مطابق پے آؤٹ پروسیس ہوتا ہے؛ صحیح اقدار آفیشل Affiliate معاہدے اور ڈیش بورڈ پر دکھائی دیتی ہیں۔ KYC مکمل نہ ہو تو پے آؤٹ روکا جا سکتا ہے۔" },
           { q: "کیا Affiliate اکاؤنٹ پر 2FA لازمی ہے؟", a: "جہاں دستیاب ہو، 2FA فعال رکھنا سختی سے تجویز کیا جاتا ہے — پے آؤٹ اور بینک معلومات محفوظ رہتی ہیں۔" },
+        ],
+        hi: [
+          { q: "क्या यह ऑफ़िशियल Affiliate लॉगिन पेज है?", a: "नहीं। GetJeetBuzz JeetBuzz का verified affiliate पार्टनर है, लेकिन यहाँ लॉगिन नहीं होता। ऊपर दिया गया बटन ऑफ़िशियल JeetBuzz Affiliate पोर्टल खोलता है, जहाँ असली लॉगिन होता है।" },
+          { q: "मैं Affiliate ईमेल भूल गया — अब क्या करूँ?", a: "अपने Affiliate Manager से संपर्क करें और पार्टनर ID या हाल के कैम्पेन URL दें; वे अकाउंट खोज देंगे।" },
+          { q: "क्या एक से ज़्यादा Affiliate अकाउंट रखे जा सकते हैं?", a: "नहीं। हर पार्टनर के लिए एक ही अकाउंट। अलग-अलग ट्रैफ़िक स्रोतों को विभाजित करने के लिए sub-ID इस्तेमाल करें।" },
+          { q: "कमीशन कब पे-आउट होता है?", a: "ऑफ़िशियल शेड्यूल और न्यूनतम सीमा के अनुसार पे-आउट प्रोसेस होता है; सटीक मान ऑफ़िशियल Affiliate अनुबंध और डैशबोर्ड पर दिखाए जाते हैं। KYC पूरा न हो तो पे-आउट रुक सकता है।" },
+          { q: "क्या Affiliate अकाउंट पर 2FA अनिवार्य है?", a: "जहाँ ऑपरेटर समर्थन करता है, 2FA सक्रिय रखना दृढ़ता से अनुशंसित है — पे-आउट और बैंक जानकारी सुरक्षित रहती है।" },
         ],
       }}
       related={[
