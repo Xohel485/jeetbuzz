@@ -431,6 +431,8 @@ function PartnerCTA({
 }
 
 function AffiliateProgramPage() {
+  const locale = useLocale();
+  const c = CONTENT[locale] ?? CONTENT_EN;
   return (
     <PageShell>
       {/* Hero */}
@@ -444,31 +446,24 @@ function AffiliateProgramPage() {
             <div className="text-center md:text-left">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-muted-foreground">
                 <span className="size-1.5 rounded-full bg-primary" />
-                JeetBuzz Partners · Updated {LAST_VERIFIED}
+                {c.badge}
               </div>
               <h1 className="text-balance text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                JeetBuzz <span className="gold-text">Affiliate Program</span> — Earn Up to 60%
-                Weekly Commission
+                {c.h1Lead}<span className="gold-text">{c.h1Gold}</span>{c.h1Tail}
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg md:mx-0 mx-auto">
-                Earn up to{" "}
-                <span className="font-semibold text-foreground">60% weekly commission</span>{" "}
-                by referring active players and growing your affiliate business with
-                transparent weekly payouts every Wednesday.
+                {c.heroLead}
+                <span className="font-semibold text-foreground">{c.heroBold}</span>
+                {c.heroTail}
               </p>
               <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center md:justify-start">
-                <PartnerCTA size="xl">Become an Affiliate</PartnerCTA>
+                <PartnerCTA size="xl" ariaLabel={c.ctaAria}>{c.ctaPrimary}</PartnerCTA>
                 <Button asChild size="lg" variant="glass">
-                  <a href="/affiliate-login">Affiliate Login</a>
+                  <a href="/affiliate-login">{c.ctaSecondary}</a>
                 </Button>
               </div>
               <div className="mt-8 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-                {[
-                  { v: "60%", l: "Weekly commission" },
-                  { v: "Wed", l: "Payout day" },
-                  { v: "5+", l: "Active players" },
-                  { v: "৳3000", l: "Min turnover" },
-                ].map((s) => (
+                {c.stats.map((s) => (
                   <div key={s.l} className="glass rounded-xl px-3 py-3 text-center">
                     <div className="gold-text text-lg font-bold md:text-xl">{s.v}</div>
                     <div className="mt-0.5 text-[11px] text-muted-foreground md:text-xs">
@@ -519,15 +514,12 @@ function AffiliateProgramPage() {
             />
           </div>
           <div className="order-1 text-center md:order-2 md:text-left">
-            <h2 className="text-2xl font-bold md:text-3xl">How to Participate</h2>
-            <p className="mt-3 text-sm text-muted-foreground md:text-base">
-              Register, verify, promote and receive your weekly commission every Wednesday —
-              a partnership designed for long-term growth with the JeetBuzz Affiliates team.
-            </p>
+            <h2 className="text-2xl font-bold md:text-3xl">{c.howH2}</h2>
+            <p className="mt-3 text-sm text-muted-foreground md:text-base">{c.howSub}</p>
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((s, i) => (
+          {c.steps.map((s, i) => (
             <div
               key={s.title}
               className="glass relative rounded-2xl p-5"
@@ -550,13 +542,8 @@ function AffiliateProgramPage() {
       {/* Commission Structure */}
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold md:text-3xl">
-            Commission Plan
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            The more qualified active players you bring, the higher your weekly commission —
-            up to 60%. Refer another affiliate for an extra 3.5% commission.
-          </p>
+          <h2 className="text-2xl font-bold md:text-3xl">{c.planH2}</h2>
+          <p className="mt-2 text-sm text-muted-foreground md:text-base">{c.planSub}</p>
         </div>
         <div className="grid items-start gap-6 lg:grid-cols-[1.4fr_1fr] lg:gap-8">
           <div>
@@ -565,14 +552,14 @@ function AffiliateProgramPage() {
                 <table className="w-full min-w-[560px] text-left text-sm">
                   <thead className="bg-white/[0.04] text-xs uppercase tracking-wider text-muted-foreground">
                     <tr>
-                      <th className="px-4 py-3 font-semibold">Tier</th>
-                      <th className="px-4 py-3 font-semibold">Active players</th>
-                      <th className="px-4 py-3 font-semibold">Commission</th>
-                      <th className="px-4 py-3 font-semibold">Payout</th>
+                      <th className="px-4 py-3 font-semibold">{c.tableHead.tier}</th>
+                      <th className="px-4 py-3 font-semibold">{c.tableHead.players}</th>
+                      <th className="px-4 py-3 font-semibold">{c.tableHead.commission}</th>
+                      <th className="px-4 py-3 font-semibold">{c.tableHead.payout}</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {COMMISSION.map((row) => (
+                    {c.commission.map((row) => (
                       <tr
                         key={row.tier}
                         className="border-t border-white/5 hover:bg-white/[0.02]"
@@ -589,10 +576,7 @@ function AffiliateProgramPage() {
                 </table>
               </div>
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">
-              Net Profit = Customer Win/Loss − Deduction − Bonus. Minimum turnover of ৳3000
-              per active player applies. KYC and Telegram membership required.
-            </p>
+            <p className="mt-3 text-xs text-muted-foreground">{c.planFoot}</p>
           </div>
           <figure className="glass overflow-hidden rounded-3xl p-4">
             <img
@@ -604,10 +588,7 @@ function AffiliateProgramPage() {
               decoding="async"
               className="mx-auto h-auto w-full rounded-2xl"
             />
-            <figcaption className="mt-3 text-center text-xs text-muted-foreground">
-              Refer another affiliate and earn an extra 3.5% commission on top of your
-              weekly rate.
-            </figcaption>
+            <figcaption className="mt-3 text-center text-xs text-muted-foreground">{c.referralCaption}</figcaption>
           </figure>
         </div>
       </section>
@@ -615,15 +596,11 @@ function AffiliateProgramPage() {
       {/* Benefits */}
       <section className="container-pro py-10 md:py-14">
         <div className="mx-auto mb-8 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold md:text-3xl">
-            Commission Highlights
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground md:text-base">
-            Everything you get as a JeetBuzz affiliate — transparent, weekly and long-term.
-          </p>
+          <h2 className="text-2xl font-bold md:text-3xl">{c.benefitsH2}</h2>
+          <p className="mt-2 text-sm text-muted-foreground md:text-base">{c.benefitsSub}</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {BENEFITS.map((b) => (
+          {c.benefits.map((b) => (
             <div
               key={b.title}
               className="glass rounded-2xl p-5"
