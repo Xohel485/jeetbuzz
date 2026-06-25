@@ -26,15 +26,18 @@ export const Route = createFileRoute("/affiliate-login")({
       title={<>JeetBuzz Affiliate <span className="gold-text">Login Guide</span></>}
       titleByLocale={{
         bn: <>JeetBuzz Affiliate <span className="gold-text">লগইন গাইড</span></>,
+        ur: <>JeetBuzz Affiliate <span className="gold-text">لاگ ان گائیڈ</span></>,
       }}
       subtitle="A short, security-first walkthrough of the JeetBuzz affiliate partner portal — login, dashboard, sub-IDs and payout reports."
       subtitleByLocale={{
         bn: "JeetBuzz Affiliate পার্টনার পোর্টালে নিরাপদে লগইন, ড্যাশবোর্ড পরিচিতি, sub-ID ট্র্যাকিং ও পেআউট রিপোর্টের সংক্ষিপ্ত বাংলা গাইড।",
+        ur: "JeetBuzz Affiliate پارٹنر پورٹل میں محفوظ لاگ ان، ڈیش بورڈ کا تعارف، sub-ID ٹریکنگ اور پے آؤٹ رپورٹس کی مختصر اردو گائیڈ۔",
       }}
       ctaIntent="partners"
       ctaLabel="Open JeetBuzz Login"
       ctaLabelByLocale={{
         bn: "অফিসিয়াল Affiliate পোর্টাল খুলুন",
+        ur: "آفیشل Affiliate پورٹل کھولیں",
       }}
       breadcrumbs={[{ name: "Affiliate", path: "/affiliate-program" }, { name: "Affiliate Login", path: PATH }]}
       articlePath={PATH}
@@ -90,6 +93,31 @@ export const Route = createFileRoute("/affiliate-login")({
           "Finance → Settings থেকে পেআউট ওয়ালেট আপডেট করা যায়। নিরাপত্তার জন্য বেশিরভাগ পরিবর্তনে ইমেইল কনফার্মেশন প্রয়োজন।",
           "> বাণিজ্যিক প্রকাশনার আগে [Affiliate Disclosure](/affiliate-disclosure) পেজে আমাদের ভাষাগত মান দেখে নিন।",
         ],
+        ur: [
+          "## یہ پیج اصل میں کیا ہے",
+          "GetJeetBuzz ایک خود مختار ادارتی گائیڈ سائٹ ہے — یہاں آفیشل Affiliate پورٹل ہوسٹ نہیں کیا جاتا۔ اوپر دیا گیا بٹن آپ کو آفیشل JeetBuzz Partners پورٹل پر لے جاتا ہے، جہاں اصل لاگ ان ہوتا ہے۔",
+          "## لاگ ان سے پہلے کیا ہونا چاہیے",
+          "پہلے سے JeetBuzz Affiliate کے طور پر رجسٹریشن مکمل ہونی چاہیے۔ اگر ابھی تک نہیں کیا تو پہلے ہماری [Affiliate Program](/affiliate-program) اور [Agent & Affiliate Earning Guide](/agent-earning-guide) پڑھ لیں۔",
+          "## لاگ ان کیسے کریں",
+          "1. قابل اعتماد بک مارک یا ہمارے verified آؤٹ باؤنڈ لنک سے آفیشل Affiliate پورٹل کھولیں۔",
+          "2. رجسٹریشن کے وقت استعمال شدہ ای میل درج کریں۔",
+          "3. پاس ورڈ درج کر کے Submit دبائیں۔",
+          "4. اگر 2FA فعال ہے تو کوڈ سے تصدیق مکمل کریں۔",
+          "## پاس ورڈ بھول گئے؟",
+          "پورٹل کا ‘Forgot password’ لنک استعمال کریں — Affiliate پر رجسٹرڈ ای میل پر ری سیٹ لنک بھیجا جاتا ہے۔ Spam اور Promotions فولڈر بھی چیک کریں؛ پھر بھی نہ ملے تو اپنے Affiliate Manager سے رابطہ کریں۔",
+          "## ڈیش بورڈ کا تعارف",
+          "- Overview: کلکس، رجسٹریشنز، FTD اور ریونیو ایک جگہ۔",
+          "- Reports: sub-ID، کیمپین، ملک یا تاریخ کے مطابق فلٹر۔",
+          "- Creatives: بینرز اور ٹریکنگ لنکس — پاکستانی لینڈنگ پیجز کے لیے علیحدہ کریٹیوز بھی دستیاب۔",
+          "- Finance: بیلنس، پے آؤٹ ہسٹری اور KYC دستاویزات۔",
+          "## sub-ID اور ٹریکنگ",
+          "سب سے اہم عادت — ہر ٹریفک سورس کے لیے علیحدہ sub-ID استعمال کریں (مثلاً Telegram، YouTube، بلاگ پوسٹ)۔ اس سے واضح ہو جاتا ہے کہ کون سا چینل اصل میں آمدنی پیدا کر رہا ہے اور بجٹ کہاں لگانا ہے۔",
+          "## سیکیورٹی چیک لسٹ",
+          "مضبوط منفرد پاس ورڈ، جہاں دستیاب ہو 2FA فعال، کبھی شیئرڈ لاگ ان نہیں۔ Affiliate اکاؤنٹ میں آپ کی پے آؤٹ ہسٹری اور بینک/والیٹ معلومات ہوتی ہیں — اسے بینکنگ ایپ جتنی اہمیت دیں۔ مزید تفصیل [Security Guide](/security-guide) میں۔",
+          "## پے آؤٹ والیٹ کی تبدیلی",
+          "Finance → Settings سے پے آؤٹ والیٹ اپ ڈیٹ کیا جا سکتا ہے۔ سیکیورٹی کے لیے زیادہ تر تبدیلیوں پر ای میل کنفرمیشن درکار ہوتی ہے۔",
+          "> اشتہاری اشاعت سے پہلے [Affiliate Disclosure](/affiliate-disclosure) پر ہمارا لسانی معیار ضرور دیکھیں۔",
+        ],
       }}
       faqs={[
         { q: "Is this the official affiliate login page?", a: "No. GetJeetBuzz is a verified affiliate partner of JeetBuzz, but this site is not the affiliate portal. The button above opens the official JeetBuzz affiliate portal where login happens." },
@@ -104,6 +132,13 @@ export const Route = createFileRoute("/affiliate-login")({
           { q: "একাধিক Affiliate অ্যাকাউন্ট রাখা যাবে?", a: "না। প্রতি পার্টনারের জন্য একটি অ্যাকাউন্ট। ভিন্ন ট্রাফিক উৎস আলাদা করতে sub-ID ব্যবহার করুন।" },
           { q: "কমিশন কখন পেআউট হয়?", a: "অফিসিয়াল সিডিউল ও মিনিমাম থ্রেশহোল্ড অনুযায়ী পেআউট প্রসেস হয়; নির্দিষ্ট মান অফিসিয়াল Affiliate চুক্তি ও ড্যাশবোর্ডে দেখানো হয়। KYC সম্পন্ন না হলে পেআউট আটকে থাকতে পারে।" },
           { q: "Affiliate অ্যাকাউন্টে 2FA চালু থাকা কি বাধ্যতামূলক?", a: "যেখানে উপলব্ধ, 2FA চালু রাখাই শক্ত সুপারিশ — পেআউট ও ব্যাংক তথ্য সুরক্ষিত থাকে।" },
+        ],
+        ur: [
+          { q: "کیا یہ آفیشل Affiliate لاگ ان پیج ہے؟", a: "نہیں۔ GetJeetBuzz JeetBuzz کا verified affiliate پارٹنر ہے، لیکن یہاں لاگ ان نہیں ہوتا۔ اوپر دیا گیا بٹن آفیشل JeetBuzz Affiliate پورٹل کھولتا ہے، جہاں اصل لاگ ان ہوتا ہے۔" },
+          { q: "میں Affiliate ای میل بھول گیا — اب کیا کروں؟", a: "اپنے Affiliate Manager سے رابطہ کریں اور پارٹنر ID یا حالیہ کیمپین URL دیں؛ وہ اکاؤنٹ ڈھونڈ دیں گے۔" },
+          { q: "کیا ایک سے زیادہ Affiliate اکاؤنٹ رکھے جا سکتے ہیں؟", a: "نہیں۔ ہر پارٹنر کے لیے ایک ہی اکاؤنٹ۔ مختلف ٹریفک سورسز کو الگ کرنے کے لیے sub-ID استعمال کریں۔" },
+          { q: "کمیشن کب پے آؤٹ ہوتا ہے؟", a: "آفیشل شیڈول اور کم از کم حد کے مطابق پے آؤٹ پروسیس ہوتا ہے؛ صحیح اقدار آفیشل Affiliate معاہدے اور ڈیش بورڈ پر دکھائی دیتی ہیں۔ KYC مکمل نہ ہو تو پے آؤٹ روکا جا سکتا ہے۔" },
+          { q: "کیا Affiliate اکاؤنٹ پر 2FA لازمی ہے؟", a: "جہاں دستیاب ہو، 2FA فعال رکھنا سختی سے تجویز کیا جاتا ہے — پے آؤٹ اور بینک معلومات محفوظ رہتی ہیں۔" },
         ],
       }}
       related={[
