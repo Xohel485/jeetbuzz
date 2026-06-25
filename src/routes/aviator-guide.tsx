@@ -55,12 +55,52 @@ export const Route = createFileRoute("/aviator-guide")({
         "- Treating in-game chat tips as signals; they are not.",
         "- Funding a session with money needed for bills. Set a hard stop and walk away when it hits.",
       ]}
+      subtitleByLocale={{
+        bn: "Aviator হলো Spribe-এর provably fair ক্র্যাশ গেম — প্লেন ওড়ে, মাল্টিপ্লায়ার ১.০০x থেকে উপরে উঠতে থাকে, প্লেন উড়ে যাওয়ার আগেই Cash Out করতে হয়। JeetBuzz-এ ভ্রান্ত মিথে পা না দিয়ে কীভাবে খেলবেন — এই গাইডে বিস্তারিত।",
+      }}
+      bodyByLocale={{
+        bn: [
+          "## Aviator আসলে কী",
+          "Aviator হলো Spribe-নির্মিত একটি ক্র্যাশ গেম, JeetBuzz-এর ক্যাসিনো / আর্কেড লবিতে পাওয়া যায়। প্রতিটি রাউন্ড **provably fair** — সার্ভার সিড ও প্লেয়ার সিডের কম্বিনেশন থেকে রাউন্ড শুরুর আগেই ক্র্যাশ পয়েন্ট নির্ধারিত হয়। অতীত ফলাফল ভবিষ্যৎ রাউন্ডের কোনো ইঙ্গিত দেয় না — কোনো প্যাটার্ন, কোনো স্ট্রিক, কোনো ‘due’ মাল্টিপ্লায়ার নেই।",
+          "## একটি রাউন্ড কীভাবে চলে",
+          "1. বাজি রাখুন (প্রতি রাউন্ডে এক বা দুটি সমান্তরাল বেট সমর্থিত)।",
+          "2. রাউন্ড শুরু হলে মাল্টিপ্লায়ার ১.০০x থেকে উপরে উঠতে থাকবে।",
+          "3. প্লেন উড়ে যাওয়ার আগে যেকোনো মুহূর্তে Cash Out করুন — আপনার পেআউট = স্টেক × ঐ মুহূর্তের মাল্টিপ্লায়ার।",
+          "4. Cash Out না করতে পারলে স্টেক হারাবেন।",
+          "## Auto Cash Out ও Auto Bet",
+          "নির্দিষ্ট মাল্টিপ্লায়ারে (যেমন ১.৫০x বা ২.০০x) Auto Cash Out সেট করলে সেই পয়েন্টে অটোমেটিক বেট ক্লোজ হবে। মোবাইলে দ্রুত রিঅ্যাক্ট করতে না পারলে বা ফ্ল্যাট স্ট্র্যাটেজি ব্যবহার করলে এটি কাজে আসে। Auto Bet একই স্টেকে প্রতিটি রাউন্ড পুনরাবৃত্তি করে এবং Auto Cash Out-এর সঙ্গে স্বাভাবিকভাবে মিলে যায়।",
+          "## ব্যাংকরোল ব্যবস্থাপনা — একমাত্র টিকে থাকা ‘স্ট্র্যাটেজি’",
+          "- প্রতিটি সেশনকে একটি স্থির ব্যাংকরোল হিসেবে দেখুন — পুরোটাই হারানোর জন্য প্রস্তুত থাকুন।",
+          "- ৫০–১০০ রাউন্ড, প্রতি রাউন্ডে ব্যাংকরোলের ১–২%-এর বেশি নয়।",
+          "- নিচু টার্গেট (১.৩০x–১.৫০x) বেশি হিট করে, কিন্তু expected value তবু নেগেটিভ — হাউস এজ গাঁথা আছে।",
+          "- লসের পর স্টেক ডবল করা (Martingale) Aviator-এ দ্রুত ব্যাংকরোল শূন্য করে দেয়, কারণ লং লসিং স্ট্রিক এখানে স্বাভাবিক।",
+          "## RTP ও হাউস এজ",
+          "Aviator-এর প্রকাশিত RTP প্রায় ৯৭% (Spribe-এর ইন-গেম ইনফো প্যানেলে দেখা যায় — খেলার সময় JeetBuzz ক্লায়েন্টে দেখানো সংখ্যাটিই নিশ্চিত করুন)। ৯৭% RTP মানে দীর্ঘমেয়াদে মোট টার্নওভারের ~৩% ক্ষতি প্রত্যাশিত।",
+          "## বাংলাদেশের প্লেয়ারদের জন্য নোট",
+          "- [bKash](/bkash-guide) ও [Nagad](/nagad-guide) ডিপোজিট দ্রুত ক্লিয়ার হয় — ছোট, দ্রুত সেশনের জন্য আদর্শ।",
+          "- প্রতিটি ডিপোজিটে ইউনিক রেফারেন্স কোড সঠিকভাবে ব্যবহার করুন।",
+          "- VPN দিয়ে লোকেশন পরিবর্তন করে খেলা টার্মস ভঙ্গ — অ্যাকাউন্ট স্থগিতের ঝুঁকি আছে।",
+          "## সাধারণ ভুল",
+          "- বড় ক্র্যাশের পর ‘পরেরটা ছোট হবে’ ধরে নেওয়া — রাউন্ড স্বাধীন।",
+          "- ইন-গেম চ্যাটের ‘টিপ’-কে সিগন্যাল ভাবা — এগুলো নয়।",
+          "- বিল বা পারিবারিক খরচের টাকায় সেশন চালানো — হার্ড স্টপ সেট করুন।",
+        ],
+      }}
       faqs={[
         { q: "Is Aviator rigged?", a: "No. Aviator is provably fair — each round's crash point is committed before the round starts and can be verified after. The house edge comes from the RTP (~97%), not from manipulating outcomes." },
         { q: "What's the safest auto cash-out value?", a: "There is no safe value — every value has negative expected value over the long run. Low multipliers (1.30x-1.50x) hit more often but pay less; high ones pay more but hit rarely. Pick what matches your bankroll plan, not what feels lucky." },
         { q: "Can I use a script or bot on JeetBuzz Aviator?", a: "No. Third-party automation breaches JeetBuzz terms and can lead to balance forfeiture. The in-game auto cash-out and auto bet features are the only sanctioned automation." },
         { q: "Does the welcome bonus work on Aviator?", a: "Casino welcome bonuses on JeetBuzz typically exclude or only partially count crash-style games toward wagering. Read the bonus T&Cs in the cashier before opting in — see our Welcome Bonus guide." },
       ]}
+      faqsByLocale={{
+        bn: [
+          { q: "Aviator কি কারচুপি করা?", a: "না। Aviator provably fair — প্রতিটি রাউন্ডের ক্র্যাশ পয়েন্ট রাউন্ড শুরুর আগেই কমিট করা হয় এবং পরে যাচাই করা যায়। হাউস এজ আসে RTP (~৯৭%) থেকে, ফলাফল কারচুপি থেকে নয়।" },
+          { q: "Auto Cash Out-এর ‘নিরাপদ’ ভ্যালু কত?", a: "কোনো নিরাপদ ভ্যালু নেই — দীর্ঘমেয়াদে সব মানেরই expected value নেগেটিভ। ১.৩০x–১.৫০x বেশি হিট করে কিন্তু পেআউট কম; বড় মাল্টিপ্লায়ার বিরল কিন্তু বেশি দেয়। ব্যাংকরোল প্ল্যানের সঙ্গে যেটা মেলে সেটাই বেছে নিন।" },
+          { q: "Aviator-এ স্ক্রিপ্ট/বট ব্যবহার করা যাবে?", a: "না। তৃতীয় পক্ষের অটোমেশন JeetBuzz টার্মস ভঙ্গ করে এবং ব্যালেন্স বাজেয়াপ্ত হতে পারে। শুধু ইন-গেম Auto Cash Out ও Auto Bet অনুমোদিত।" },
+          { q: "ওয়েলকাম বোনাস কি Aviator-এ কাজ করে?", a: "ক্যাসিনো ওয়েলকাম বোনাস সাধারণত ক্র্যাশ গেমকে ওয়েজারিং-এ আংশিক বা শূন্য কন্ট্রিবিউশন দেয়। অপ্ট-ইন করার আগে [ওয়েলকাম বোনাস](/welcome-bonus) শর্ত দেখুন।" },
+          { q: "একই সঙ্গে দুটি বেট রাখা কি ভালো কৌশল?", a: "একটি নিচু টার্গেটে (যেমন ১.৫x) ও অন্যটি উচ্চতর টার্গেটে রাখলে ভ্যারিয়েন্স কিছুটা ভারসাম্যপূর্ণ হয়, তবে দীর্ঘমেয়াদে EV নেগেটিভই থাকে।" },
+        ],
+      }}
       related={[
         { to: "/casino-guide", title: "Casino Guide" },
         { to: "/welcome-bonus", title: "Welcome Bonus" },
