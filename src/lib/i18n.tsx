@@ -153,6 +153,12 @@ const en: Dict = {
   "footer.trust.rg.desc": "Player-protection bodies and age-gating standards we follow.",
   "footer.blog.latest": "JeetBuzz Blog — Latest Guides",
   "footer.blog.viewall": "View all",
+  "footer.post.registration_bd": "JeetBuzz Registration Guide for Bangladesh (2026)",
+  "footer.post.login": "JeetBuzz Login Guide — Safe Access from Bangladesh",
+  "footer.post.apk": "JeetBuzz APK Download — Safe Install Guide",
+  "footer.post.bonus_terms": "JeetBuzz Bonus Terms — What the Fine Print Actually Means",
+  "footer.post.bkash_nagad": "JeetBuzz Deposits with bKash, Nagad & Rocket",
+  "footer.post.live_cricket": "JeetBuzz Live Cricket Betting — A Practical Guide",
 
   // Shared UI
   "support.need_help": "Need help?",
@@ -245,6 +251,12 @@ const bn: Dict = {
   "footer.trust.rg.desc": "প্লেয়ার সুরক্ষা সংস্থা ও বয়স যাচাইয়ের মান।",
   "footer.blog.latest": "জিতবাজ ব্লগ — সাম্প্রতিক গাইড",
   "footer.blog.viewall": "সব দেখুন",
+  "footer.post.registration_bd": "বাংলাদেশের জন্য জিতবাজ রেজিস্ট্রেশন গাইড (২০২৬)",
+  "footer.post.login": "জিতবাজ লগইন গাইড — বাংলাদেশ থেকে নিরাপদ অ্যাক্সেস",
+  "footer.post.apk": "জিতবাজ APK ডাউনলোড — নিরাপদ ইনস্টল গাইড",
+  "footer.post.bonus_terms": "জিতবাজ বোনাস শর্তাবলী — সূক্ষ্ম শর্তগুলোর ব্যাখ্যা",
+  "footer.post.bkash_nagad": "bKash, Nagad ও Rocket দিয়ে জিতবাজ ডিপোজিট",
+  "footer.post.live_cricket": "জিতবাজ লাইভ ক্রিকেট বেটিং — ব্যবহারিক গাইড",
 
   "support.need_help": "সাহায্য দরকার?",
   "support.body":
@@ -336,6 +348,12 @@ const ur: Dict = {
   "footer.trust.rg.desc": "کھلاڑیوں کے تحفظ کے ادارے اور عمر کی توثیق کے معیار۔",
   "footer.blog.latest": "JeetBuzz بلاگ — تازہ ترین گائیڈز",
   "footer.blog.viewall": "سب دیکھیں",
+  "footer.post.registration_bd": "بنگلہ دیش کے لیے JeetBuzz رجسٹریشن گائیڈ (2026)",
+  "footer.post.login": "JeetBuzz لاگ ان گائیڈ — محفوظ رسائی",
+  "footer.post.apk": "JeetBuzz APK ڈاؤن لوڈ — محفوظ انسٹال گائیڈ",
+  "footer.post.bonus_terms": "JeetBuzz بونس شرائط — باریک پرنٹ کی وضاحت",
+  "footer.post.bkash_nagad": "bKash، Nagad اور Rocket کے ذریعے JeetBuzz ڈپازٹ",
+  "footer.post.live_cricket": "JeetBuzz لائیو کرکٹ بیٹنگ — عملی گائیڈ",
 
   "support.need_help": "مدد چاہیے؟",
   "support.body":
@@ -427,6 +445,12 @@ const hi: Dict = {
   "footer.trust.rg.desc": "खिलाड़ी सुरक्षा संस्थाएँ और आयु-सत्यापन मानक।",
   "footer.blog.latest": "JeetBuzz ब्लॉग — नवीनतम गाइड्स",
   "footer.blog.viewall": "सभी देखें",
+  "footer.post.registration_bd": "बांग्लादेश के लिए JeetBuzz रजिस्ट्रेशन गाइड (2026)",
+  "footer.post.login": "JeetBuzz लॉगिन गाइड — सुरक्षित एक्सेस",
+  "footer.post.apk": "JeetBuzz APK डाउनलोड — सुरक्षित इंस्टॉल गाइड",
+  "footer.post.bonus_terms": "JeetBuzz बोनस शर्तें — बारीक प्रिंट की व्याख्या",
+  "footer.post.bkash_nagad": "bKash, Nagad और Rocket से JeetBuzz डिपॉज़िट",
+  "footer.post.live_cricket": "JeetBuzz लाइव क्रिकेट बेटिंग — व्यावहारिक गाइड",
 
   "support.need_help": "मदद चाहिए?",
   "support.body":
