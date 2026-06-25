@@ -104,7 +104,7 @@ export const POSTS: BlogPost[] = [
     readTime: "6 min",
     body: [
       "## At a glance",
-      "bKash, Nagad and Rocket are the three most popular deposit methods for Bangladeshi JeetBuzz users. Deposits are usually instant; withdrawals typically clear within hours.",
+      "bKash, Nagad and Rocket are the three most popular deposit methods for Bangladeshi JeetBuzz users. Deposits usually credit within minutes; withdrawals typically clear within hours, subject to payment verification and network conditions.",
       "## How to deposit (bKash example)",
       "1. Log into JeetBuzz and open the Cashier.",
       "2. Choose bKash and enter the amount.",
