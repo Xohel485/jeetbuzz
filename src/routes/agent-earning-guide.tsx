@@ -28,11 +28,13 @@ export const Route = createFileRoute("/agent-earning-guide")({
       titleByLocale={{
         bn: <>JeetBuzz <span className="gold-text">এজেন্ট</span> ও Affiliate আয় গাইড</>,
         ur: <>JeetBuzz <span className="gold-text">ایجنٹ</span> اور Affiliate آمدنی گائیڈ</>,
+        hi: <>JeetBuzz <span className="gold-text">एजेंट</span> और Affiliate आय गाइड</>,
       }}
       subtitle="Two different programs sit under one umbrella: the affiliate program (you send traffic, you get paid on net player loss) and the agent program (you onboard and manage players directly). This guide explains both honestly."
       subtitleByLocale={{
         bn: "একই ছাতার নিচে দুটি আলাদা প্রোগ্রাম: Affiliate (ট্রাফিক পাঠান, প্লেয়ারের নেট লসের ওপর কমিশন) এবং Agent (নিজে প্লেয়ার অনবোর্ড ও পরিচালনা)। দুটির পার্থক্য সরল বাংলায়।",
         ur: "ایک ہی چھتری کے نیچے دو مختلف پروگرام: Affiliate (آپ ٹریفک بھیجتے ہیں، کھلاڑی کے نیٹ نقصان پر کمیشن) اور Agent (آپ خود کھلاڑیوں کو onboard اور منظم کرتے ہیں)۔ دونوں کا فرق سادہ اردو میں۔",
+        hi: "एक ही छतरी के नीचे दो अलग प्रोग्राम: Affiliate (आप ट्रैफ़िक भेजते हैं, खिलाड़ी के नेट नुक़सान पर कमीशन) और Agent (आप ख़ुद खिलाड़ियों को onboard और प्रबंधित करते हैं)। दोनों का फ़र्क़ सरल हिंदी में।",
       }}
       breadcrumbs={[{ name: "Affiliate", path: "/affiliate-program" }, { name: "Earning Guide", path: PATH }]}
       articlePath={PATH}
