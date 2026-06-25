@@ -442,7 +442,7 @@ const CONTENT: Record<Locale, AffiliateContent> = {
   en: CONTENT_EN,
   bn: CONTENT_BN,
   ur: CONTENT_UR,
-  hi: CONTENT_EN,
+  hi: CONTENT_HI,
 };
 
 const PAGE_PATH = "/affiliate-program";
