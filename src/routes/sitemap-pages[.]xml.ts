@@ -22,7 +22,14 @@ const PAGES = [
 export const Route = createFileRoute("/sitemap-pages.xml")({
   server: {
     handlers: {
-      GET: async () => renderUrlset(staticEntries(PAGES)),
+      GET: async () => {
+        const res = await renderUrlset(staticEntries(PAGES));
+        const body = (await res.text()).replace(
+          "http://www.google.com/schemas/sitemaps-image/1.1",
+          "http://www.google.com/schemas/sitemap-image/1.1",
+        );
+        return new Response(body, { headers: res.headers });
+      },
     },
   },
 });
