@@ -101,6 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "robots", content: "index,follow" },
       { name: "theme-color", content: "#0c1a13" },
       { name: "msapplication-TileColor", content: "#1f9d3e" },
+      { name: "msvalidate.01", content: "EDEE3FCBF42112BAF6C1A5C0C2997D3D" },
       { property: "og:title", content: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
       { name: "twitter:title", content: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
       { property: "og:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
