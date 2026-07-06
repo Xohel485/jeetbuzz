@@ -14,7 +14,15 @@ export const organizationSchema = () => ({
   alternateName: [...BRAND.alternateNames],
   url: SITE_ORIGIN,
   logo: `${SITE_ORIGIN}/img/jeetbuzz-affiliate-program-224.webp`,
-  sameAs: [] as string[],
+  sameAs: [
+    "https://facebook.com/GetJeetBuzz",
+    "https://youtube.com/@jeetbuzz",
+    "https://youtube.com/@getjeetbuzz",
+    "https://instagram.com/getjeetbuzz",
+    "https://tiktok.com/@getjeetbuzz",
+    "https://x.com/GetJeetBuzz",
+    "https://t.me/GetJeetBuzz",
+  ] as string[],
   description:
     "GetJeetBuzz is the JeetBuzz partner guide for Bangladesh, Pakistan and India — login, registration, bonuses, app, payments and live cricket.",
 });
