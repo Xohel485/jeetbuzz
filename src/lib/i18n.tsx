@@ -160,6 +160,15 @@ const en: Dict = {
   "footer.post.bkash_nagad": "JeetBuzz Deposits with bKash, Nagad & Rocket",
   "footer.post.live_cricket": "JeetBuzz Live Cricket Betting — A Practical Guide",
 
+  // Footer social links
+  "footer.socials.title": "Official Socials",
+  "footer.social.facebook": "GetJeetBuzz on Facebook",
+  "footer.social.youtube": "GetJeetBuzz on YouTube",
+  "footer.social.instagram": "GetJeetBuzz on Instagram",
+  "footer.social.tiktok": "GetJeetBuzz on TikTok",
+  "footer.social.x": "GetJeetBuzz on X",
+  "footer.social.telegram": "GetJeetBuzz on Telegram",
+
   // Shared UI
   "support.need_help": "Need help?",
   "support.body":
@@ -257,6 +266,14 @@ const bn: Dict = {
   "footer.post.bonus_terms": "জিতবাজ বোনাস শর্তাবলী — সূক্ষ্ম শর্তগুলোর ব্যাখ্যা",
   "footer.post.bkash_nagad": "bKash, Nagad ও Rocket দিয়ে জিতবাজ ডিপোজিট",
   "footer.post.live_cricket": "জিতবাজ লাইভ ক্রিকেট বেটিং — ব্যবহারিক গাইড",
+  // Footer social links
+  "footer.socials.title": "অফিসিয়াল সোশ্যাল",
+  "footer.social.facebook": "GetJeetBuzz Facebook-এ",
+  "footer.social.youtube": "GetJeetBuzz YouTube-এ",
+  "footer.social.instagram": "GetJeetBuzz Instagram-এ",
+  "footer.social.tiktok": "GetJeetBuzz TikTok-এ",
+  "footer.social.x": "GetJeetBuzz X-এ",
+  "footer.social.telegram": "GetJeetBuzz Telegram-এ",
 
   "support.need_help": "সাহায্য দরকার?",
   "support.body":
@@ -354,6 +371,14 @@ const ur: Dict = {
   "footer.post.bonus_terms": "JeetBuzz بونس شرائط — باریک پرنٹ کی وضاحت",
   "footer.post.bkash_nagad": "bKash، Nagad اور Rocket کے ذریعے JeetBuzz ڈپازٹ",
   "footer.post.live_cricket": "JeetBuzz لائیو کرکٹ بیٹنگ — عملی گائیڈ",
+  // Footer social links
+  "footer.socials.title": "آفیشل سوشل",
+  "footer.social.facebook": "GetJeetBuzz Facebook پر",
+  "footer.social.youtube": "GetJeetBuzz YouTube پر",
+  "footer.social.instagram": "GetJeetBuzz Instagram پر",
+  "footer.social.tiktok": "GetJeetBuzz TikTok پر",
+  "footer.social.x": "GetJeetBuzz X پر",
+  "footer.social.telegram": "GetJeetBuzz Telegram پر",
 
   "support.need_help": "مدد چاہیے؟",
   "support.body":
@@ -451,6 +476,14 @@ const hi: Dict = {
   "footer.post.bonus_terms": "JeetBuzz बोनस शर्तें — बारीक प्रिंट की व्याख्या",
   "footer.post.bkash_nagad": "bKash, Nagad और Rocket से JeetBuzz डिपॉज़िट",
   "footer.post.live_cricket": "JeetBuzz लाइव क्रिकेट बेटिंग — व्यावहारिक गाइड",
+  // Footer social links
+  "footer.socials.title": "ऑफिशल सोशल",
+  "footer.social.facebook": "GetJeetBuzz Facebook पर",
+  "footer.social.youtube": "GetJeetBuzz YouTube पर",
+  "footer.social.instagram": "GetJeetBuzz Instagram पर",
+  "footer.social.tiktok": "GetJeetBuzz TikTok पर",
+  "footer.social.x": "GetJeetBuzz X पर",
+  "footer.social.telegram": "GetJeetBuzz Telegram पर",
 
   "support.need_help": "मदद चाहिए?",
   "support.body":
