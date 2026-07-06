@@ -266,6 +266,14 @@ const bn: Dict = {
   "footer.post.bonus_terms": "জিতবাজ বোনাস শর্তাবলী — সূক্ষ্ম শর্তগুলোর ব্যাখ্যা",
   "footer.post.bkash_nagad": "bKash, Nagad ও Rocket দিয়ে জিতবাজ ডিপোজিট",
   "footer.post.live_cricket": "জিতবাজ লাইভ ক্রিকেট বেটিং — ব্যবহারিক গাইড",
+  // Footer social links
+  "footer.socials.title": "অফিসিয়াল সোশ্যাল",
+  "footer.social.facebook": "GetJeetBuzz Facebook-এ",
+  "footer.social.youtube": "GetJeetBuzz YouTube-এ",
+  "footer.social.instagram": "GetJeetBuzz Instagram-এ",
+  "footer.social.tiktok": "GetJeetBuzz TikTok-এ",
+  "footer.social.x": "GetJeetBuzz X-এ",
+  "footer.social.telegram": "GetJeetBuzz Telegram-এ",
 
   "support.need_help": "সাহায্য দরকার?",
   "support.body":
