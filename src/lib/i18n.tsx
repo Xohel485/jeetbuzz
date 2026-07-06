@@ -160,6 +160,15 @@ const en: Dict = {
   "footer.post.bkash_nagad": "JeetBuzz Deposits with bKash, Nagad & Rocket",
   "footer.post.live_cricket": "JeetBuzz Live Cricket Betting — A Practical Guide",
 
+  // Footer social links
+  "footer.socials.title": "Official Socials",
+  "footer.social.facebook": "GetJeetBuzz on Facebook",
+  "footer.social.youtube": "GetJeetBuzz on YouTube",
+  "footer.social.instagram": "GetJeetBuzz on Instagram",
+  "footer.social.tiktok": "GetJeetBuzz on TikTok",
+  "footer.social.x": "GetJeetBuzz on X",
+  "footer.social.telegram": "GetJeetBuzz on Telegram",
+
   // Shared UI
   "support.need_help": "Need help?",
   "support.body":
