@@ -261,6 +261,26 @@ export function SiteFooter() {
           </ul>
         </div>
 
+        <div className="mt-12 flex flex-col items-center gap-3 border-t border-white/5 pt-8 md:flex-row md:justify-between">
+          <div className="text-center md:text-left">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">{t("footer.socials.title")}</p>
+            <div className="mt-3 flex items-center justify-center gap-3 md:justify-start">
+              {SOCIALS.map((s) => (
+                <a
+                  key={s.key}
+                  href={s.href}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  aria-label={t(s.labelKey)}
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <s.Icon />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="mt-12 flex flex-col items-center gap-3 border-t border-white/5 pt-8 text-center text-xs text-muted-foreground md:flex-row md:items-center md:justify-between md:text-left">
           <p>{t("footer.copy", { year: new Date().getFullYear(), site: SITE_NAME })}</p>
           <p>
