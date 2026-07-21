@@ -58,8 +58,8 @@ export const Route = createFileRoute("/payments")({
         "- [Nagad Withdrawal](/jeetbuzz-nagad-withdrawal) — Nagad payout walk-through with realistic timing.",
         "- [Minimum Deposit](/jeetbuzz-minimum-deposit) — smallest amount you can fund per rail.",
       ]}
-      faqs={[
       related={PAYMENTS_CLUSTER}
+      faqs={[
         { q: "Which payment method is fastest on JeetBuzz?", a: "For Bangladesh, bKash and Nagad usually clear within minutes. For India, UPI via PhonePe / Google Pay / Paytm is the standard. For Pakistan, JazzCash typically has the best uptime. Exact timing depends on operator status." },
         { q: "Are there fees to deposit on JeetBuzz?", a: "The cashier displays the current fee for each method before you confirm. Wallet-level fees (bKash Send Money, UPI merchant charges) are set by the provider, not JeetBuzz." },
         { q: "Can I use one wallet for deposit and a different one for withdrawal?", a: "JeetBuzz generally credits withdrawals to the same wallet used for deposit for anti-fraud reasons. Changing the payout wallet requires KYC re-verification." },
