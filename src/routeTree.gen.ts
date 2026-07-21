@@ -47,7 +47,12 @@ import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
+import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
 import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alternatives'
+import { Route as JeetbuzzAffiliateWithdrawalRouteImport } from './routes/jeetbuzz-affiliate-withdrawal'
+import { Route as JeetbuzzAffiliateSignupRouteImport } from './routes/jeetbuzz-affiliate-signup'
+import { Route as JeetbuzzAffiliateCommissionRateRouteImport } from './routes/jeetbuzz-affiliate-commission-rate'
+import { Route as JeetbuzzAffiliateAppRouteImport } from './routes/jeetbuzz-affiliate-app'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
@@ -277,9 +282,36 @@ const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
   path: '/jeetbuzz-review',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzReferralCodeRoute = JeetbuzzReferralCodeRouteImport.update({
+  id: '/jeetbuzz-referral-code',
+  path: '/jeetbuzz-referral-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzAlternativesRoute = JeetbuzzAlternativesRouteImport.update({
   id: '/jeetbuzz-alternatives',
   path: '/jeetbuzz-alternatives',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzAffiliateWithdrawalRoute =
+  JeetbuzzAffiliateWithdrawalRouteImport.update({
+    id: '/jeetbuzz-affiliate-withdrawal',
+    path: '/jeetbuzz-affiliate-withdrawal',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzAffiliateSignupRoute = JeetbuzzAffiliateSignupRouteImport.update({
+  id: '/jeetbuzz-affiliate-signup',
+  path: '/jeetbuzz-affiliate-signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzAffiliateCommissionRateRoute =
+  JeetbuzzAffiliateCommissionRateRouteImport.update({
+    id: '/jeetbuzz-affiliate-commission-rate',
+    path: '/jeetbuzz-affiliate-commission-rate',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzAffiliateAppRoute = JeetbuzzAffiliateAppRouteImport.update({
+  id: '/jeetbuzz-affiliate-app',
+  path: '/jeetbuzz-affiliate-app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
@@ -504,7 +536,12 @@ export interface FileRoutesByFullPath {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
+  '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
+  '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
+  '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -582,7 +619,12 @@ export interface FileRoutesByTo {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
+  '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
+  '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
+  '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -662,7 +704,12 @@ export interface FileRoutesById {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
+  '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
+  '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
+  '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -743,7 +790,12 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-affiliate-app'
+    | '/jeetbuzz-affiliate-commission-rate'
+    | '/jeetbuzz-affiliate-signup'
+    | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login'
@@ -821,7 +873,12 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-affiliate-app'
+    | '/jeetbuzz-affiliate-commission-rate'
+    | '/jeetbuzz-affiliate-signup'
+    | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login'
@@ -900,7 +957,12 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-affiliate-app'
+    | '/jeetbuzz-affiliate-commission-rate'
+    | '/jeetbuzz-affiliate-signup'
+    | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/live-cricket-betting'
     | '/login'
@@ -980,7 +1042,12 @@ export interface RootRouteChildren {
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
+  JeetbuzzAffiliateAppRoute: typeof JeetbuzzAffiliateAppRoute
+  JeetbuzzAffiliateCommissionRateRoute: typeof JeetbuzzAffiliateCommissionRateRoute
+  JeetbuzzAffiliateSignupRoute: typeof JeetbuzzAffiliateSignupRoute
+  JeetbuzzAffiliateWithdrawalRoute: typeof JeetbuzzAffiliateWithdrawalRoute
   JeetbuzzAlternativesRoute: typeof JeetbuzzAlternativesRoute
+  JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
@@ -1295,11 +1362,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-referral-code': {
+      id: '/jeetbuzz-referral-code'
+      path: '/jeetbuzz-referral-code'
+      fullPath: '/jeetbuzz-referral-code'
+      preLoaderRoute: typeof JeetbuzzReferralCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-alternatives': {
       id: '/jeetbuzz-alternatives'
       path: '/jeetbuzz-alternatives'
       fullPath: '/jeetbuzz-alternatives'
       preLoaderRoute: typeof JeetbuzzAlternativesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-affiliate-withdrawal': {
+      id: '/jeetbuzz-affiliate-withdrawal'
+      path: '/jeetbuzz-affiliate-withdrawal'
+      fullPath: '/jeetbuzz-affiliate-withdrawal'
+      preLoaderRoute: typeof JeetbuzzAffiliateWithdrawalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-affiliate-signup': {
+      id: '/jeetbuzz-affiliate-signup'
+      path: '/jeetbuzz-affiliate-signup'
+      fullPath: '/jeetbuzz-affiliate-signup'
+      preLoaderRoute: typeof JeetbuzzAffiliateSignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-affiliate-commission-rate': {
+      id: '/jeetbuzz-affiliate-commission-rate'
+      path: '/jeetbuzz-affiliate-commission-rate'
+      fullPath: '/jeetbuzz-affiliate-commission-rate'
+      preLoaderRoute: typeof JeetbuzzAffiliateCommissionRateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-affiliate-app': {
+      id: '/jeetbuzz-affiliate-app'
+      path: '/jeetbuzz-affiliate-app'
+      fullPath: '/jeetbuzz-affiliate-app'
+      preLoaderRoute: typeof JeetbuzzAffiliateAppRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jazzcash-guide': {
@@ -1614,7 +1716,12 @@ const rootRouteChildren: RootRouteChildren = {
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
+  JeetbuzzAffiliateAppRoute: JeetbuzzAffiliateAppRoute,
+  JeetbuzzAffiliateCommissionRateRoute: JeetbuzzAffiliateCommissionRateRoute,
+  JeetbuzzAffiliateSignupRoute: JeetbuzzAffiliateSignupRoute,
+  JeetbuzzAffiliateWithdrawalRoute: JeetbuzzAffiliateWithdrawalRoute,
   JeetbuzzAlternativesRoute: JeetbuzzAlternativesRoute,
+  JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
