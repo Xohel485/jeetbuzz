@@ -46,16 +46,26 @@ import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
+import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
+import { Route as JeetbuzzReferBonusRouteImport } from './routes/jeetbuzz-refer-bonus'
+import { Route as JeetbuzzPromoCodeRouteImport } from './routes/jeetbuzz-promo-code'
+import { Route as JeetbuzzFirstDepositBonusRouteImport } from './routes/jeetbuzz-first-deposit-bonus'
+import { Route as JeetbuzzDownloadForIosRouteImport } from './routes/jeetbuzz-download-for-ios'
+import { Route as JeetbuzzDownloadForAndroidRouteImport } from './routes/jeetbuzz-download-for-android'
+import { Route as JeetbuzzDepositProblemRouteImport } from './routes/jeetbuzz-deposit-problem'
+import { Route as JeetbuzzAppUpdateRouteImport } from './routes/jeetbuzz-app-update'
 import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alternatives'
 import { Route as JeetbuzzAffiliateWithdrawalRouteImport } from './routes/jeetbuzz-affiliate-withdrawal'
 import { Route as JeetbuzzAffiliateSignupRouteImport } from './routes/jeetbuzz-affiliate-signup'
 import { Route as JeetbuzzAffiliateCommissionRateRouteImport } from './routes/jeetbuzz-affiliate-commission-rate'
 import { Route as JeetbuzzAffiliateAppRouteImport } from './routes/jeetbuzz-affiliate-app'
+import { Route as JeetbuzzAccountLockedRouteImport } from './routes/jeetbuzz-account-locked'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
+import { Route as HowToDeleteJeetbuzzAccountRouteImport } from './routes/how-to-delete-jeetbuzz-account'
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as GamesRouteImport } from './routes/games'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -277,6 +287,11 @@ const LiveCricketBettingRoute = LiveCricketBettingRouteImport.update({
   path: '/live-cricket-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
+  id: '/jeetbuzz-withdrawal-time',
+  path: '/jeetbuzz-withdrawal-time',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
   id: '/jeetbuzz-review',
   path: '/jeetbuzz-review',
@@ -285,6 +300,43 @@ const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
 const JeetbuzzReferralCodeRoute = JeetbuzzReferralCodeRouteImport.update({
   id: '/jeetbuzz-referral-code',
   path: '/jeetbuzz-referral-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzReferBonusRoute = JeetbuzzReferBonusRouteImport.update({
+  id: '/jeetbuzz-refer-bonus',
+  path: '/jeetbuzz-refer-bonus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzPromoCodeRoute = JeetbuzzPromoCodeRouteImport.update({
+  id: '/jeetbuzz-promo-code',
+  path: '/jeetbuzz-promo-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzFirstDepositBonusRoute =
+  JeetbuzzFirstDepositBonusRouteImport.update({
+    id: '/jeetbuzz-first-deposit-bonus',
+    path: '/jeetbuzz-first-deposit-bonus',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzDownloadForIosRoute = JeetbuzzDownloadForIosRouteImport.update({
+  id: '/jeetbuzz-download-for-ios',
+  path: '/jeetbuzz-download-for-ios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzDownloadForAndroidRoute =
+  JeetbuzzDownloadForAndroidRouteImport.update({
+    id: '/jeetbuzz-download-for-android',
+    path: '/jeetbuzz-download-for-android',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const JeetbuzzDepositProblemRoute = JeetbuzzDepositProblemRouteImport.update({
+  id: '/jeetbuzz-deposit-problem',
+  path: '/jeetbuzz-deposit-problem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzAppUpdateRoute = JeetbuzzAppUpdateRouteImport.update({
+  id: '/jeetbuzz-app-update',
+  path: '/jeetbuzz-app-update',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzAlternativesRoute = JeetbuzzAlternativesRouteImport.update({
@@ -314,6 +366,11 @@ const JeetbuzzAffiliateAppRoute = JeetbuzzAffiliateAppRouteImport.update({
   path: '/jeetbuzz-affiliate-app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzAccountLockedRoute = JeetbuzzAccountLockedRouteImport.update({
+  id: '/jeetbuzz-account-locked',
+  path: '/jeetbuzz-account-locked',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
   id: '/jazzcash-guide',
   path: '/jazzcash-guide',
@@ -329,6 +386,12 @@ const IosAppGuideRoute = IosAppGuideRouteImport.update({
   path: '/ios-app-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowToDeleteJeetbuzzAccountRoute =
+  HowToDeleteJeetbuzzAccountRouteImport.update({
+    id: '/how-to-delete-jeetbuzz-account',
+    path: '/how-to-delete-jeetbuzz-account',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
@@ -533,16 +596,26 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/games': typeof GamesRoute
   '/help': typeof HelpRoute
+  '/how-to-delete-jeetbuzz-account': typeof HowToDeleteJeetbuzzAccountRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
   '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
+  '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
+  '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
+  '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-promo-code': typeof JeetbuzzPromoCodeRoute
+  '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -616,16 +689,26 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/games': typeof GamesRoute
   '/help': typeof HelpRoute
+  '/how-to-delete-jeetbuzz-account': typeof HowToDeleteJeetbuzzAccountRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
   '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
+  '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
+  '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
+  '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-promo-code': typeof JeetbuzzPromoCodeRoute
+  '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -701,16 +784,26 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/games': typeof GamesRoute
   '/help': typeof HelpRoute
+  '/how-to-delete-jeetbuzz-account': typeof HowToDeleteJeetbuzzAccountRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
   '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
+  '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
+  '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
+  '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-promo-code': typeof JeetbuzzPromoCodeRoute
+  '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -787,16 +880,26 @@ export interface FileRouteTypes {
     | '/faq'
     | '/games'
     | '/help'
+    | '/how-to-delete-jeetbuzz-account'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-account-locked'
     | '/jeetbuzz-affiliate-app'
     | '/jeetbuzz-affiliate-commission-rate'
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-app-update'
+    | '/jeetbuzz-deposit-problem'
+    | '/jeetbuzz-download-for-android'
+    | '/jeetbuzz-download-for-ios'
+    | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-promo-code'
+    | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-withdrawal-time'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -870,16 +973,26 @@ export interface FileRouteTypes {
     | '/faq'
     | '/games'
     | '/help'
+    | '/how-to-delete-jeetbuzz-account'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-account-locked'
     | '/jeetbuzz-affiliate-app'
     | '/jeetbuzz-affiliate-commission-rate'
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-app-update'
+    | '/jeetbuzz-deposit-problem'
+    | '/jeetbuzz-download-for-android'
+    | '/jeetbuzz-download-for-ios'
+    | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-promo-code'
+    | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-withdrawal-time'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -954,16 +1067,26 @@ export interface FileRouteTypes {
     | '/faq'
     | '/games'
     | '/help'
+    | '/how-to-delete-jeetbuzz-account'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeetbuzz-account-locked'
     | '/jeetbuzz-affiliate-app'
     | '/jeetbuzz-affiliate-commission-rate'
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-app-update'
+    | '/jeetbuzz-deposit-problem'
+    | '/jeetbuzz-download-for-android'
+    | '/jeetbuzz-download-for-ios'
+    | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-promo-code'
+    | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-withdrawal-time'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -1039,16 +1162,26 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   GamesRoute: typeof GamesRoute
   HelpRoute: typeof HelpRoute
+  HowToDeleteJeetbuzzAccountRoute: typeof HowToDeleteJeetbuzzAccountRoute
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
+  JeetbuzzAccountLockedRoute: typeof JeetbuzzAccountLockedRoute
   JeetbuzzAffiliateAppRoute: typeof JeetbuzzAffiliateAppRoute
   JeetbuzzAffiliateCommissionRateRoute: typeof JeetbuzzAffiliateCommissionRateRoute
   JeetbuzzAffiliateSignupRoute: typeof JeetbuzzAffiliateSignupRoute
   JeetbuzzAffiliateWithdrawalRoute: typeof JeetbuzzAffiliateWithdrawalRoute
   JeetbuzzAlternativesRoute: typeof JeetbuzzAlternativesRoute
+  JeetbuzzAppUpdateRoute: typeof JeetbuzzAppUpdateRoute
+  JeetbuzzDepositProblemRoute: typeof JeetbuzzDepositProblemRoute
+  JeetbuzzDownloadForAndroidRoute: typeof JeetbuzzDownloadForAndroidRoute
+  JeetbuzzDownloadForIosRoute: typeof JeetbuzzDownloadForIosRoute
+  JeetbuzzFirstDepositBonusRoute: typeof JeetbuzzFirstDepositBonusRoute
+  JeetbuzzPromoCodeRoute: typeof JeetbuzzPromoCodeRoute
+  JeetbuzzReferBonusRoute: typeof JeetbuzzReferBonusRoute
   JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
+  JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
   LoginGuideRoute: typeof LoginGuideRoute
@@ -1355,6 +1488,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LiveCricketBettingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-withdrawal-time': {
+      id: '/jeetbuzz-withdrawal-time'
+      path: '/jeetbuzz-withdrawal-time'
+      fullPath: '/jeetbuzz-withdrawal-time'
+      preLoaderRoute: typeof JeetbuzzWithdrawalTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-review': {
       id: '/jeetbuzz-review'
       path: '/jeetbuzz-review'
@@ -1367,6 +1507,55 @@ declare module '@tanstack/react-router' {
       path: '/jeetbuzz-referral-code'
       fullPath: '/jeetbuzz-referral-code'
       preLoaderRoute: typeof JeetbuzzReferralCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-refer-bonus': {
+      id: '/jeetbuzz-refer-bonus'
+      path: '/jeetbuzz-refer-bonus'
+      fullPath: '/jeetbuzz-refer-bonus'
+      preLoaderRoute: typeof JeetbuzzReferBonusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-promo-code': {
+      id: '/jeetbuzz-promo-code'
+      path: '/jeetbuzz-promo-code'
+      fullPath: '/jeetbuzz-promo-code'
+      preLoaderRoute: typeof JeetbuzzPromoCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-first-deposit-bonus': {
+      id: '/jeetbuzz-first-deposit-bonus'
+      path: '/jeetbuzz-first-deposit-bonus'
+      fullPath: '/jeetbuzz-first-deposit-bonus'
+      preLoaderRoute: typeof JeetbuzzFirstDepositBonusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-download-for-ios': {
+      id: '/jeetbuzz-download-for-ios'
+      path: '/jeetbuzz-download-for-ios'
+      fullPath: '/jeetbuzz-download-for-ios'
+      preLoaderRoute: typeof JeetbuzzDownloadForIosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-download-for-android': {
+      id: '/jeetbuzz-download-for-android'
+      path: '/jeetbuzz-download-for-android'
+      fullPath: '/jeetbuzz-download-for-android'
+      preLoaderRoute: typeof JeetbuzzDownloadForAndroidRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-deposit-problem': {
+      id: '/jeetbuzz-deposit-problem'
+      path: '/jeetbuzz-deposit-problem'
+      fullPath: '/jeetbuzz-deposit-problem'
+      preLoaderRoute: typeof JeetbuzzDepositProblemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-app-update': {
+      id: '/jeetbuzz-app-update'
+      path: '/jeetbuzz-app-update'
+      fullPath: '/jeetbuzz-app-update'
+      preLoaderRoute: typeof JeetbuzzAppUpdateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-alternatives': {
@@ -1404,6 +1593,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzAffiliateAppRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-account-locked': {
+      id: '/jeetbuzz-account-locked'
+      path: '/jeetbuzz-account-locked'
+      fullPath: '/jeetbuzz-account-locked'
+      preLoaderRoute: typeof JeetbuzzAccountLockedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jazzcash-guide': {
       id: '/jazzcash-guide'
       path: '/jazzcash-guide'
@@ -1423,6 +1619,13 @@ declare module '@tanstack/react-router' {
       path: '/ios-app-guide'
       fullPath: '/ios-app-guide'
       preLoaderRoute: typeof IosAppGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-delete-jeetbuzz-account': {
+      id: '/how-to-delete-jeetbuzz-account'
+      path: '/how-to-delete-jeetbuzz-account'
+      fullPath: '/how-to-delete-jeetbuzz-account'
+      preLoaderRoute: typeof HowToDeleteJeetbuzzAccountRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/help': {
@@ -1713,16 +1916,26 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   GamesRoute: GamesRoute,
   HelpRoute: HelpRoute,
+  HowToDeleteJeetbuzzAccountRoute: HowToDeleteJeetbuzzAccountRoute,
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
+  JeetbuzzAccountLockedRoute: JeetbuzzAccountLockedRoute,
   JeetbuzzAffiliateAppRoute: JeetbuzzAffiliateAppRoute,
   JeetbuzzAffiliateCommissionRateRoute: JeetbuzzAffiliateCommissionRateRoute,
   JeetbuzzAffiliateSignupRoute: JeetbuzzAffiliateSignupRoute,
   JeetbuzzAffiliateWithdrawalRoute: JeetbuzzAffiliateWithdrawalRoute,
   JeetbuzzAlternativesRoute: JeetbuzzAlternativesRoute,
+  JeetbuzzAppUpdateRoute: JeetbuzzAppUpdateRoute,
+  JeetbuzzDepositProblemRoute: JeetbuzzDepositProblemRoute,
+  JeetbuzzDownloadForAndroidRoute: JeetbuzzDownloadForAndroidRoute,
+  JeetbuzzDownloadForIosRoute: JeetbuzzDownloadForIosRoute,
+  JeetbuzzFirstDepositBonusRoute: JeetbuzzFirstDepositBonusRoute,
+  JeetbuzzPromoCodeRoute: JeetbuzzPromoCodeRoute,
+  JeetbuzzReferBonusRoute: JeetbuzzReferBonusRoute,
   JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
+  JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
   LoginGuideRoute: LoginGuideRoute,
