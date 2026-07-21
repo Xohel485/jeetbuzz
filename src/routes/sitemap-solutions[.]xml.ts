@@ -28,6 +28,12 @@ const SOLUTIONS = [
   "/jeetbuzz-account-locked",
   "/jeetbuzz-deposit-problem",
   "/how-to-delete-jeetbuzz-account",
+  // Phase B batch 1: brand variants
+  "/jitbuzz",
+  "/jetbuzz",
+  "/jeetbuzz-com-login",
+  "/jeetbuzz-sign-up",
+  "/jeetbuzz-apk-download",
 ];
 
 export const Route = createFileRoute("/sitemap-solutions.xml")({
