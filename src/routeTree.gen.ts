@@ -36,6 +36,7 @@ import { Route as RegisterRouteImport } from './routes/register'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PhonepeGuideRouteImport } from './routes/phonepe-guide'
 import { Route as PaytmGuideRouteImport } from './routes/paytm-guide'
+import { Route as PaymentsRouteImport } from './routes/payments'
 import { Route as PaymentMethodsRouteImport } from './routes/payment-methods'
 import { Route as PasswordResetRouteImport } from './routes/password-reset'
 import { Route as NagadGuideRouteImport } from './routes/nagad-guide'
@@ -51,6 +52,7 @@ import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
 import { Route as HelpRouteImport } from './routes/help'
+import { Route as GamesRouteImport } from './routes/games'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FactCheckingRouteImport } from './routes/fact-checking'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
@@ -62,6 +64,7 @@ import { Route as CricketExchangeGuideRouteImport } from './routes/cricket-excha
 import { Route as ContentPolicyRouteImport } from './routes/content-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CasinoGuideRouteImport } from './routes/casino-guide'
+import { Route as BonusesRouteImport } from './routes/bonuses'
 import { Route as BonusAndPromotionsRouteImport } from './routes/bonus-and-promotions'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BkashGuideRouteImport } from './routes/bkash-guide'
@@ -219,6 +222,11 @@ const PaytmGuideRoute = PaytmGuideRouteImport.update({
   path: '/paytm-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PaymentsRoute = PaymentsRouteImport.update({
+  id: '/payments',
+  path: '/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PaymentMethodsRoute = PaymentMethodsRouteImport.update({
   id: '/payment-methods',
   path: '/payment-methods',
@@ -294,6 +302,11 @@ const HelpRoute = HelpRouteImport.update({
   path: '/help',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GamesRoute = GamesRouteImport.update({
+  id: '/games',
+  path: '/games',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -347,6 +360,11 @@ const ContactRoute = ContactRouteImport.update({
 const CasinoGuideRoute = CasinoGuideRouteImport.update({
   id: '/casino-guide',
   path: '/casino-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BonusesRoute = BonusesRouteImport.update({
+  id: '/bonuses',
+  path: '/bonuses',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BonusAndPromotionsRoute = BonusAndPromotionsRouteImport.update({
@@ -469,6 +487,7 @@ export interface FileRoutesByFullPath {
   '/bkash-guide': typeof BkashGuideRoute
   '/blog': typeof BlogRouteWithChildren
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
+  '/bonuses': typeof BonusesRoute
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
@@ -480,6 +499,7 @@ export interface FileRoutesByFullPath {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/games': typeof GamesRoute
   '/help': typeof HelpRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
@@ -495,6 +515,7 @@ export interface FileRoutesByFullPath {
   '/nagad-guide': typeof NagadGuideRoute
   '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
+  '/payments': typeof PaymentsRoute
   '/paytm-guide': typeof PaytmGuideRoute
   '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -544,6 +565,7 @@ export interface FileRoutesByTo {
   '/aviator-guide': typeof AviatorGuideRoute
   '/bkash-guide': typeof BkashGuideRoute
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
+  '/bonuses': typeof BonusesRoute
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
@@ -555,6 +577,7 @@ export interface FileRoutesByTo {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/games': typeof GamesRoute
   '/help': typeof HelpRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
@@ -570,6 +593,7 @@ export interface FileRoutesByTo {
   '/nagad-guide': typeof NagadGuideRoute
   '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
+  '/payments': typeof PaymentsRoute
   '/paytm-guide': typeof PaytmGuideRoute
   '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -621,6 +645,7 @@ export interface FileRoutesById {
   '/bkash-guide': typeof BkashGuideRoute
   '/blog': typeof BlogRouteWithChildren
   '/bonus-and-promotions': typeof BonusAndPromotionsRoute
+  '/bonuses': typeof BonusesRoute
   '/casino-guide': typeof CasinoGuideRoute
   '/contact': typeof ContactRoute
   '/content-policy': typeof ContentPolicyRoute
@@ -632,6 +657,7 @@ export interface FileRoutesById {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/games': typeof GamesRoute
   '/help': typeof HelpRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
@@ -647,6 +673,7 @@ export interface FileRoutesById {
   '/nagad-guide': typeof NagadGuideRoute
   '/password-reset': typeof PasswordResetRoute
   '/payment-methods': typeof PaymentMethodsRoute
+  '/payments': typeof PaymentsRoute
   '/paytm-guide': typeof PaytmGuideRoute
   '/phonepe-guide': typeof PhonepeGuideRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -699,6 +726,7 @@ export interface FileRouteTypes {
     | '/bkash-guide'
     | '/blog'
     | '/bonus-and-promotions'
+    | '/bonuses'
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
@@ -710,6 +738,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/games'
     | '/help'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
@@ -725,6 +754,7 @@ export interface FileRouteTypes {
     | '/nagad-guide'
     | '/password-reset'
     | '/payment-methods'
+    | '/payments'
     | '/paytm-guide'
     | '/phonepe-guide'
     | '/privacy-policy'
@@ -774,6 +804,7 @@ export interface FileRouteTypes {
     | '/aviator-guide'
     | '/bkash-guide'
     | '/bonus-and-promotions'
+    | '/bonuses'
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
@@ -785,6 +816,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/games'
     | '/help'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
@@ -800,6 +832,7 @@ export interface FileRouteTypes {
     | '/nagad-guide'
     | '/password-reset'
     | '/payment-methods'
+    | '/payments'
     | '/paytm-guide'
     | '/phonepe-guide'
     | '/privacy-policy'
@@ -850,6 +883,7 @@ export interface FileRouteTypes {
     | '/bkash-guide'
     | '/blog'
     | '/bonus-and-promotions'
+    | '/bonuses'
     | '/casino-guide'
     | '/contact'
     | '/content-policy'
@@ -861,6 +895,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/games'
     | '/help'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
@@ -876,6 +911,7 @@ export interface FileRouteTypes {
     | '/nagad-guide'
     | '/password-reset'
     | '/payment-methods'
+    | '/payments'
     | '/paytm-guide'
     | '/phonepe-guide'
     | '/privacy-policy'
@@ -927,6 +963,7 @@ export interface RootRouteChildren {
   BkashGuideRoute: typeof BkashGuideRoute
   BlogRoute: typeof BlogRouteWithChildren
   BonusAndPromotionsRoute: typeof BonusAndPromotionsRoute
+  BonusesRoute: typeof BonusesRoute
   CasinoGuideRoute: typeof CasinoGuideRoute
   ContactRoute: typeof ContactRoute
   ContentPolicyRoute: typeof ContentPolicyRoute
@@ -938,6 +975,7 @@ export interface RootRouteChildren {
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FactCheckingRoute: typeof FactCheckingRoute
   FaqRoute: typeof FaqRoute
+  GamesRoute: typeof GamesRoute
   HelpRoute: typeof HelpRoute
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
@@ -953,6 +991,7 @@ export interface RootRouteChildren {
   NagadGuideRoute: typeof NagadGuideRoute
   PasswordResetRoute: typeof PasswordResetRoute
   PaymentMethodsRoute: typeof PaymentMethodsRoute
+  PaymentsRoute: typeof PaymentsRoute
   PaytmGuideRoute: typeof PaytmGuideRoute
   PhonepeGuideRoute: typeof PhonepeGuideRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -1179,6 +1218,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PaytmGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/payments': {
+      id: '/payments'
+      path: '/payments'
+      fullPath: '/payments'
+      preLoaderRoute: typeof PaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/payment-methods': {
       id: '/payment-methods'
       path: '/payment-methods'
@@ -1284,6 +1330,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HelpRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/games': {
+      id: '/games'
+      path: '/games'
+      fullPath: '/games'
+      preLoaderRoute: typeof GamesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -1359,6 +1412,13 @@ declare module '@tanstack/react-router' {
       path: '/casino-guide'
       fullPath: '/casino-guide'
       preLoaderRoute: typeof CasinoGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bonuses': {
+      id: '/bonuses'
+      path: '/bonuses'
+      fullPath: '/bonuses'
+      preLoaderRoute: typeof BonusesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bonus-and-promotions': {
@@ -1537,6 +1597,7 @@ const rootRouteChildren: RootRouteChildren = {
   BkashGuideRoute: BkashGuideRoute,
   BlogRoute: BlogRouteWithChildren,
   BonusAndPromotionsRoute: BonusAndPromotionsRoute,
+  BonusesRoute: BonusesRoute,
   CasinoGuideRoute: CasinoGuideRoute,
   ContactRoute: ContactRoute,
   ContentPolicyRoute: ContentPolicyRoute,
@@ -1548,6 +1609,7 @@ const rootRouteChildren: RootRouteChildren = {
   EditorialPolicyRoute: EditorialPolicyRoute,
   FactCheckingRoute: FactCheckingRoute,
   FaqRoute: FaqRoute,
+  GamesRoute: GamesRoute,
   HelpRoute: HelpRoute,
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
@@ -1563,6 +1625,7 @@ const rootRouteChildren: RootRouteChildren = {
   NagadGuideRoute: NagadGuideRoute,
   PasswordResetRoute: PasswordResetRoute,
   PaymentMethodsRoute: PaymentMethodsRoute,
+  PaymentsRoute: PaymentsRoute,
   PaytmGuideRoute: PaytmGuideRoute,
   PhonepeGuideRoute: PhonepeGuideRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
