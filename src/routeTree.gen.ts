@@ -50,6 +50,7 @@ import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alte
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
+import { Route as HelpRouteImport } from './routes/help'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FactCheckingRouteImport } from './routes/fact-checking'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
@@ -288,6 +289,11 @@ const IosAppGuideRoute = IosAppGuideRouteImport.update({
   path: '/ios-app-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
@@ -474,6 +480,7 @@ export interface FileRoutesByFullPath {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/help': typeof HelpRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
@@ -548,6 +555,7 @@ export interface FileRoutesByTo {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/help': typeof HelpRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
@@ -624,6 +632,7 @@ export interface FileRoutesById {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/fact-checking': typeof FactCheckingRoute
   '/faq': typeof FaqRoute
+  '/help': typeof HelpRoute
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
@@ -701,6 +710,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/help'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
@@ -775,6 +785,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/help'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
@@ -850,6 +861,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/fact-checking'
     | '/faq'
+    | '/help'
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
@@ -926,6 +938,7 @@ export interface RootRouteChildren {
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   FactCheckingRoute: typeof FactCheckingRoute
   FaqRoute: typeof FaqRoute
+  HelpRoute: typeof HelpRoute
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
@@ -1264,6 +1277,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IosAppGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -1528,6 +1548,7 @@ const rootRouteChildren: RootRouteChildren = {
   EditorialPolicyRoute: EditorialPolicyRoute,
   FactCheckingRoute: FactCheckingRoute,
   FaqRoute: FaqRoute,
+  HelpRoute: HelpRoute,
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
