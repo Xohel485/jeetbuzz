@@ -75,6 +75,17 @@ import { Route as AgentEarningGuideRoute } from "@/routes/agent-earning-guide";
 import { Route as IosAppGuideRoute } from "@/routes/ios-app-guide";
 import { Route as AndroidWebAppGuideRoute } from "@/routes/android-web-app-guide";
 import { Route as IsJeetbuzzSafeRoute } from "@/routes/is-jeetbuzz-safe";
+// Phase A GSC-driven solution routes with native Bangla content.
+import { Route as AffiliateCommissionRateRoute } from "@/routes/jeetbuzz-affiliate-commission-rate";
+import { Route as AffiliateSignupRoute } from "@/routes/jeetbuzz-affiliate-signup";
+import { Route as DownloadForAndroidRoute } from "@/routes/jeetbuzz-download-for-android";
+import { Route as AppUpdateRoute } from "@/routes/jeetbuzz-app-update";
+import { Route as PromoCodeRoute } from "@/routes/jeetbuzz-promo-code";
+import { Route as FirstDepositBonusRoute } from "@/routes/jeetbuzz-first-deposit-bonus";
+import { Route as ReferBonusRoute } from "@/routes/jeetbuzz-refer-bonus";
+import { Route as WithdrawalTimeRoute } from "@/routes/jeetbuzz-withdrawal-time";
+import { Route as AccountLockedRoute } from "@/routes/jeetbuzz-account-locked";
+import { Route as DepositProblemRoute } from "@/routes/jeetbuzz-deposit-problem";
 
 export type LocaleMeta = { title: string; description: string };
 
@@ -428,6 +439,70 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     ur: { title: "کیا JeetBuzz 2026 میں محفوظ ہے؟" + BRAND_UR, description: "JeetBuzz کا 2026 آزاد جائزہ — لائسنس، ادائیگیاں، KYC، شکایات اور خطرے کے نشانات۔" },
     hi: { title: "क्या JeetBuzz 2026 में सुरक्षित है?" + BRAND_HI, description: "JeetBuzz की 2026 स्वतंत्र समीक्षा — लाइसेंस, पेआउट, KYC, शिकायतें और रेड फ़्लैग्स।" },
   }),
+  // ---- Phase A: GSC-driven solution routes with native Bangla body ----
+  // Registered with countries: ["bd"] so the localized splat only serves
+  // /bd/bn/{slug}. English is available at the root URL. Other locales
+  // fall back to English SEO/meta but are NOT surfaced under /pk/ur or /in/hi.
+  entry("jeetbuzz-affiliate-commission-rate", AffiliateCommissionRateRoute, {
+    en: { title: "JeetBuzz Affiliate Commission Rate 2026" + BRAND_EN, description: "JeetBuzz affiliate commission rate for 2026 — tiered up to 60% weekly revenue share on NGR." },
+    bn: { title: "জিতবাজ অ্যাফিলিয়েট কমিশন রেট ২০২৬" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট কমিশন রেট ২০২৬ — NGR-এর উপর সর্বোচ্চ ৬০% সাপ্তাহিক রেভিনিউ শেয়ার।" },
+    ur: { title: "JeetBuzz Affiliate Commission Rate 2026" + BRAND_UR, description: "JeetBuzz affiliate commission rate for 2026 — tiered up to 60% weekly revenue share on NGR." },
+    hi: { title: "JeetBuzz Affiliate Commission Rate 2026" + BRAND_HI, description: "JeetBuzz affiliate commission rate for 2026 — tiered up to 60% weekly revenue share on NGR." },
+  }, ["bd"]),
+  entry("jeetbuzz-affiliate-signup", AffiliateSignupRoute, {
+    en: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_EN, description: "JeetBuzz affiliate signup — application, KYC and approval timing in under 10 minutes." },
+    bn: { title: "জিতবাজ অ্যাফিলিয়েট সাইনআপ ২০২৬" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট সাইনআপ — আবেদন, KYC এবং অনুমোদনের সময় ১০ মিনিটেরও কম।" },
+    ur: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_UR, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
+    hi: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_HI, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
+  }, ["bd"]),
+  entry("jeetbuzz-download-for-android", DownloadForAndroidRoute, {
+    en: { title: "JeetBuzz Download for Android 2026" + BRAND_EN, description: "Safe JeetBuzz APK install for Android — permission checks and fake mirror detection." },
+    bn: { title: "জিতবাজ অ্যান্ড্রয়েড ডাউনলোড ২০২৬" + BRAND_BN, description: "অ্যান্ড্রয়েডে নিরাপদ জিতবাজ APK ইনস্টল — পারমিশন চেক এবং নকল মিরর চেনা।" },
+    ur: { title: "JeetBuzz Download for Android 2026" + BRAND_UR, description: "Safe JeetBuzz APK install for Android." },
+    hi: { title: "JeetBuzz Download for Android 2026" + BRAND_HI, description: "Safe JeetBuzz APK install for Android." },
+  }, ["bd"]),
+  entry("jeetbuzz-app-update", AppUpdateRoute, {
+    en: { title: "JeetBuzz App Update 2026" + BRAND_EN, description: "Update JeetBuzz on Android and iOS safely — fixes for old-version bugs and App not installed errors." },
+    bn: { title: "জিতবাজ অ্যাপ আপডেট ২০২৬" + BRAND_BN, description: "অ্যান্ড্রয়েড ও iOS-এ নিরাপদে জিতবাজ অ্যাপ আপডেট — পুরনো ভার্সন সমস্যার সমাধান।" },
+    ur: { title: "JeetBuzz App Update 2026" + BRAND_UR, description: "Update JeetBuzz on Android and iOS safely." },
+    hi: { title: "JeetBuzz App Update 2026" + BRAND_HI, description: "Update JeetBuzz on Android and iOS safely." },
+  }, ["bd"]),
+  entry("jeetbuzz-promo-code", PromoCodeRoute, {
+    en: { title: "JeetBuzz Promo Code 2026" + BRAND_EN, description: "How JeetBuzz promo codes work — where to find valid codes today and why some silently fail." },
+    bn: { title: "জিতবাজ প্রোমো কোড ২০২৬" + BRAND_BN, description: "জিতবাজ প্রোমো কোড কীভাবে কাজ করে — আজকের বৈধ কোড কোথায় পাবেন।" },
+    ur: { title: "JeetBuzz Promo Code 2026" + BRAND_UR, description: "How JeetBuzz promo codes work." },
+    hi: { title: "JeetBuzz Promo Code 2026" + BRAND_HI, description: "How JeetBuzz promo codes work." },
+  }, ["bd"]),
+  entry("jeetbuzz-first-deposit-bonus", FirstDepositBonusRoute, {
+    en: { title: "JeetBuzz First Deposit Bonus 2026" + BRAND_EN, description: "JeetBuzz first deposit bonus — match percentage, rollover and mistakes that void it." },
+    bn: { title: "জিতবাজ ফার্স্ট ডিপোজিট বোনাস ২০২৬" + BRAND_BN, description: "জিতবাজ ফার্স্ট ডিপোজিট বোনাস — ম্যাচ শতাংশ, রোলওভার এবং যেসব ভুলে বাতিল হয়।" },
+    ur: { title: "JeetBuzz First Deposit Bonus 2026" + BRAND_UR, description: "JeetBuzz first deposit bonus explained." },
+    hi: { title: "JeetBuzz First Deposit Bonus 2026" + BRAND_HI, description: "JeetBuzz first deposit bonus explained." },
+  }, ["bd"]),
+  entry("jeetbuzz-refer-bonus", ReferBonusRoute, {
+    en: { title: "JeetBuzz Refer Bonus 2026" + BRAND_EN, description: "JeetBuzz refer-a-friend bonus — how it credits, why some referrals silently fail." },
+    bn: { title: "জিতবাজ রেফার বোনাস ২০২৬" + BRAND_BN, description: "জিতবাজ রেফার-এ-ফ্রেন্ড বোনাস — কীভাবে ক্রেডিট হয়, কেন কিছু রেফারেল ব্যর্থ হয়।" },
+    ur: { title: "JeetBuzz Refer Bonus 2026" + BRAND_UR, description: "JeetBuzz refer-a-friend bonus explained." },
+    hi: { title: "JeetBuzz Refer Bonus 2026" + BRAND_HI, description: "JeetBuzz refer-a-friend bonus explained." },
+  }, ["bd"]),
+  entry("jeetbuzz-withdrawal-time", WithdrawalTimeRoute, {
+    en: { title: "JeetBuzz Withdrawal Time 2026" + BRAND_EN, description: "Realistic JeetBuzz withdrawal timing per method and why the first cash-out takes longer." },
+    bn: { title: "জিতবাজ উইথড্রয়াল সময় ২০২৬" + BRAND_BN, description: "জিতবাজে প্রতি মেথডে বাস্তব উইথড্রয়াল সময় এবং প্রথম ক্যাশআউট কেন বেশি সময় নেয়।" },
+    ur: { title: "JeetBuzz Withdrawal Time 2026" + BRAND_UR, description: "Realistic JeetBuzz withdrawal timing per method." },
+    hi: { title: "JeetBuzz Withdrawal Time 2026" + BRAND_HI, description: "Realistic JeetBuzz withdrawal timing per method." },
+  }, ["bd"]),
+  entry("jeetbuzz-account-locked", AccountLockedRoute, {
+    en: { title: "JeetBuzz Account Locked 2026" + BRAND_EN, description: "Why a JeetBuzz account gets locked and how to recover it — with the live-chat script that works." },
+    bn: { title: "জিতবাজ অ্যাকাউন্ট লকড ২০২৬" + BRAND_BN, description: "কেন জিতবাজ অ্যাকাউন্ট লকড হয় এবং পুনরুদ্ধারের পথ — লাইভ চ্যাটে ব্যবহারের স্ক্রিপ্ট সহ।" },
+    ur: { title: "JeetBuzz Account Locked 2026" + BRAND_UR, description: "Why a JeetBuzz account gets locked and how to recover it." },
+    hi: { title: "JeetBuzz Account Locked 2026" + BRAND_HI, description: "Why a JeetBuzz account gets locked and how to recover it." },
+  }, ["bd"]),
+  entry("jeetbuzz-deposit-problem", DepositProblemRoute, {
+    en: { title: "JeetBuzz Deposit Problem 2026" + BRAND_EN, description: "JeetBuzz deposit problems — debited but not credited, name mismatch, wrong reference — with the exact evidence support needs." },
+    bn: { title: "জিতবাজ ডিপোজিট সমস্যা ২০২৬" + BRAND_BN, description: "জিতবাজ ডিপোজিট সমস্যা — টাকা কেটেছে কিন্তু ক্রেডিট হয়নি, নাম মিসম্যাচ — সাপোর্টের জন্য সঠিক প্রমাণ।" },
+    ur: { title: "JeetBuzz Deposit Problem 2026" + BRAND_UR, description: "JeetBuzz deposit problem fixes." },
+    hi: { title: "JeetBuzz Deposit Problem 2026" + BRAND_HI, description: "JeetBuzz deposit problem fixes." },
+  }, ["bd"]),
 ];
 
 /** Build a lookup map by slug for fast splat-route resolution. */
