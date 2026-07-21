@@ -58,6 +58,7 @@ import { Route as JeetbuzzFirstDepositBonusRouteImport } from './routes/jeetbuzz
 import { Route as JeetbuzzDownloadForIosRouteImport } from './routes/jeetbuzz-download-for-ios'
 import { Route as JeetbuzzDownloadForAndroidRouteImport } from './routes/jeetbuzz-download-for-android'
 import { Route as JeetbuzzDepositProblemRouteImport } from './routes/jeetbuzz-deposit-problem'
+import { Route as JeetbuzzComLoginRouteImport } from './routes/jeetbuzz-com-login'
 import { Route as JeetbuzzAppUpdateRouteImport } from './routes/jeetbuzz-app-update'
 import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alternatives'
 import { Route as JeetbuzzAffiliateWithdrawalRouteImport } from './routes/jeetbuzz-affiliate-withdrawal'
@@ -352,6 +353,11 @@ const JeetbuzzDepositProblemRoute = JeetbuzzDepositProblemRouteImport.update({
   path: '/jeetbuzz-deposit-problem',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzComLoginRoute = JeetbuzzComLoginRouteImport.update({
+  id: '/jeetbuzz-com-login',
+  path: '/jeetbuzz-com-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzAppUpdateRoute = JeetbuzzAppUpdateRouteImport.update({
   id: '/jeetbuzz-app-update',
   path: '/jeetbuzz-app-update',
@@ -625,6 +631,7 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
@@ -721,6 +728,7 @@ export interface FileRoutesByTo {
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
@@ -819,6 +827,7 @@ export interface FileRoutesById {
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
@@ -918,6 +927,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
     | '/jeetbuzz-app-update'
+    | '/jeetbuzz-com-login'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
@@ -1014,6 +1024,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
     | '/jeetbuzz-app-update'
+    | '/jeetbuzz-com-login'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
@@ -1111,6 +1122,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
     | '/jeetbuzz-app-update'
+    | '/jeetbuzz-com-login'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
@@ -1209,6 +1221,7 @@ export interface RootRouteChildren {
   JeetbuzzAffiliateWithdrawalRoute: typeof JeetbuzzAffiliateWithdrawalRoute
   JeetbuzzAlternativesRoute: typeof JeetbuzzAlternativesRoute
   JeetbuzzAppUpdateRoute: typeof JeetbuzzAppUpdateRoute
+  JeetbuzzComLoginRoute: typeof JeetbuzzComLoginRoute
   JeetbuzzDepositProblemRoute: typeof JeetbuzzDepositProblemRoute
   JeetbuzzDownloadForAndroidRoute: typeof JeetbuzzDownloadForAndroidRoute
   JeetbuzzDownloadForIosRoute: typeof JeetbuzzDownloadForIosRoute
@@ -1611,6 +1624,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzDepositProblemRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-com-login': {
+      id: '/jeetbuzz-com-login'
+      path: '/jeetbuzz-com-login'
+      fullPath: '/jeetbuzz-com-login'
+      preLoaderRoute: typeof JeetbuzzComLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-app-update': {
       id: '/jeetbuzz-app-update'
       path: '/jeetbuzz-app-update'
@@ -1987,6 +2007,7 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzAffiliateWithdrawalRoute: JeetbuzzAffiliateWithdrawalRoute,
   JeetbuzzAlternativesRoute: JeetbuzzAlternativesRoute,
   JeetbuzzAppUpdateRoute: JeetbuzzAppUpdateRoute,
+  JeetbuzzComLoginRoute: JeetbuzzComLoginRoute,
   JeetbuzzDepositProblemRoute: JeetbuzzDepositProblemRoute,
   JeetbuzzDownloadForAndroidRoute: JeetbuzzDownloadForAndroidRoute,
   JeetbuzzDownloadForIosRoute: JeetbuzzDownloadForIosRoute,
