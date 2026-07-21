@@ -55,6 +55,12 @@ export const PROBLEMS_CLUSTER: RelatedItem[] = [
   { to: "/password-reset", title: "Password Reset", desc: "Reset via phone OTP or email link step by step." },
   { to: "/login-problems", title: "Login Problems", desc: "Site not opening, OTP not arriving, greyed-out button." },
   { to: "/how-to-delete-jeetbuzz-account", title: "Delete Account", desc: "Formal account deletion / self-exclusion request." },
+  { to: "/jeetbuzz-withdrawal-pending", title: "Withdrawal Pending", desc: "Cash-out stuck on Pending — the seven real causes and fixes." },
+  { to: "/jeetbuzz-otp-not-received", title: "OTP Not Received", desc: "Missing SMS OTP — carrier, DND and voice-OTP fallback." },
+  { to: "/jeetbuzz-account-verification", title: "Account Verification", desc: "KYC checklist and the six rejection reasons that trip everyone." },
+  { to: "/jeetbuzz-app-not-opening", title: "App Not Opening", desc: "Splash freeze, blank screen, crash — ranked recovery checklist." },
+  { to: "/jeetbuzz-deposit-failed", title: "Deposit Failed", desc: "Debited but not credited — the four evidence items support needs." },
+  { to: "/jeetbuzz-password-reset", title: "Password Reset (Branded)", desc: "Phone OTP and email link reset, plus escalation if both fail." },
 ];
 
 export const HUBS: RelatedItem[] = [
