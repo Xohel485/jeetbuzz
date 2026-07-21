@@ -54,6 +54,8 @@ export const Route = createFileRoute("/jeetbuzz-refer-bonus")({
         "If you plan to bring more than a couple of players, apply for the [Affiliate Program](/affiliate-program) instead — you earn weekly revenue share (up to 60%) on all of their NGR, not a small one-time reward. See the [Referral Code comparison](/jeetbuzz-referral-code) for the side-by-side.",
         "## Neutral disclosure",
         "Never pressure family members into signing up. Refer only people who were already looking to bet, and share the [Responsible Gaming page](/responsible-gaming) alongside your code. Referral rewards do not compensate anyone for gambling losses.",
+        "## Scaling up — affiliate program & commission",
+        "Sending more than a handful of players? The [JeetBuzz affiliate program](/affiliate-program) pays weekly revenue share instead of a fixed reward, and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) page shows the exact 25%–60% NGR tiers and payout timing.",
       ]}
       bodyByLocale={{
         bn: [

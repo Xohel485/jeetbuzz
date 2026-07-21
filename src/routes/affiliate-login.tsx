@@ -69,6 +69,8 @@ export const Route = createFileRoute("/affiliate-login")({
         "Unique strong password, 2FA enabled, no shared logins. Affiliate accounts hold payout history and bank info — treat them like a bank login.",
         "## Need to switch wallets?",
         "Update your payout wallet inside Finance > Settings. Most changes require email confirmation.",
+        "## JeetBuzz affiliate program & commission",
+        "New here? Read the full [JeetBuzz affiliate program](/affiliate-program) overview for tier structure and terms, then check the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) breakdown for weekly 25%–60% revenue share, NGR math and payout timing.",
       ]}
       bodyByLocale={{
         bn: [

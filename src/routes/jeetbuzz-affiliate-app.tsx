@@ -48,6 +48,8 @@ export const Route = createFileRoute("/jeetbuzz-affiliate-app")({
         "- **Dashboard shows zero clicks** — confirm you are using the tracking link from your own dashboard, not a raw affiliate URL scraped from someone else.",
         "- **Numbers reset overnight** — the daily view resets at midnight server time. Weekly and monthly views retain history.",
         "- **Cannot install to home screen on iOS** — Safari (not Chrome) is required for iOS PWA install.",
+        "## Program & commission — see the numbers",
+        "The dashboard shows your live commission, but the rules behind it live on the [JeetBuzz affiliate program](/affiliate-program) page (tiers, terms, requirements) and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) page (weekly 25%–60% revenue share, NGR math, payout schedule).",
       ]}
       related={siblings(AFFILIATE_CLUSTER, PATH)}
       faqs={[

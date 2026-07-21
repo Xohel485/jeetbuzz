@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { PageShell } from "@/components/PageShell";
 import { Hero } from "./Hero";
 import { HubLinksStrip } from "./HubLinksStrip";
+import { EEATStrip } from "./EEATStrip";
 import { LazyOnVisible } from "@/components/LazyOnVisible";
 
 /**
@@ -22,6 +23,9 @@ export function HomePage({ localExtras }: { localExtras?: ReactNode } = {}) {
 
       {/* Batch 7: eager internal-link strip → hubs (Help/Payments/Bonuses/Games). */}
       <HubLinksStrip />
+
+      {/* Batch 8: eager E-E-A-T trust strip — Last Updated / Editorially Reviewed / Fact Checked. */}
+      <EEATStrip />
 
       {/* Locale-specific copy (payments / leagues / FAQ in native script).
           Rendered AFTER Hero so the section order never changes by locale. */}
