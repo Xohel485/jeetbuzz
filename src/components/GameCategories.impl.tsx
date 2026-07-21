@@ -24,7 +24,7 @@ const CATEGORIES: Category[] = [
     tagline: "Cricket, football & more",
     to: "/sports-betting",
     img: sport,
-    alt: "JeetBuzz sports betting category — cricket and football markets",
+    alt: "JeetBuzz sports betting category, cricket and football markets",
   },
   {
     key: "casino",
@@ -32,7 +32,7 @@ const CATEGORIES: Category[] = [
     tagline: "Bengali-speaking dealers",
     to: "/casino-guide",
     img: casino,
-    alt: "JeetBuzz live casino category — roulette, baccarat and blackjack",
+    alt: "JeetBuzz live casino category, roulette, baccarat and blackjack",
   },
   {
     key: "slot",
@@ -40,7 +40,7 @@ const CATEGORIES: Category[] = [
     tagline: "Pragmatic, PG, JILI",
     to: "/casino-guide",
     img: slot,
-    alt: "JeetBuzz slots category — Pragmatic Play, PG Soft and JILI titles",
+    alt: "JeetBuzz slots category. Pragmatic Play, PG Soft and JILI titles",
   },
   {
     key: "crash",
@@ -48,7 +48,7 @@ const CATEGORIES: Category[] = [
     tagline: "Aviator, Spaceman & co.",
     to: "/casino-guide",
     img: crash,
-    alt: "JeetBuzz crash games category — Aviator and Spaceman style titles",
+    alt: "JeetBuzz crash games category. Aviator and Spaceman style titles",
   },
   {
     key: "table",
@@ -56,7 +56,7 @@ const CATEGORIES: Category[] = [
     tagline: "Poker, Andar Bahar, Teen Patti",
     to: "/casino-guide",
     img: table,
-    alt: "JeetBuzz table games category — poker, Andar Bahar and Teen Patti",
+    alt: "JeetBuzz table games category, poker, Andar Bahar and Teen Patti",
   },
   {
     key: "fishing",
@@ -64,7 +64,7 @@ const CATEGORIES: Category[] = [
     tagline: "Skill-based arcade shooters",
     to: "/casino-guide",
     img: fishing,
-    alt: "JeetBuzz fishing games category — skill-based arcade shooters",
+    alt: "JeetBuzz fishing games category, skill-based arcade shooters",
   },
   {
     key: "lottery",
@@ -72,7 +72,7 @@ const CATEGORIES: Category[] = [
     tagline: "Daily draws & keno",
     to: "/casino-guide",
     img: lottery,
-    alt: "JeetBuzz lottery category — daily number draws and keno",
+    alt: "JeetBuzz lottery category, daily number draws and keno",
   },
   {
     key: "arcade",
@@ -80,7 +80,7 @@ const CATEGORIES: Category[] = [
     tagline: "Mini games & quick wins",
     to: "/casino-guide",
     img: arcade,
-    alt: "JeetBuzz arcade category — mini games and quick-win titles",
+    alt: "JeetBuzz arcade category, mini games and quick-win titles",
   },
 ];
 

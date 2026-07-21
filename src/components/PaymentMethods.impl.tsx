@@ -43,18 +43,18 @@ type Group = {
 
 const GROUPS: Group[] = [
   {
-    title: "Mobile wallets — Bangladesh",
-    desc: "bKash, Rocket, Upay and other BDT wallets — deposit in seconds.",
+    title: "Mobile wallets. Bangladesh",
+    desc: "bKash, Rocket, Upay and other BDT wallets, deposit in seconds.",
     to: "/deposit-guide",
     dark: true,
     methods: [
-      { key: "bkash", name: "bKash", img: bkash, alt: "bKash — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/bkash-guide" },
-      { key: "rocket", name: "Rocket", img: rocket, alt: "Rocket DBBL — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/rocket-guide" },
-      { key: "upay", name: "Upay", img: upay, alt: "Upay — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "tap", name: "Tap", img: tap, alt: "Tap — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "surecash", name: "SureCash", img: surecash, alt: "SureCash — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "ipay", name: "iPay", img: ipay, alt: "iPay — JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
-      { key: "okwallet", name: "OK Wallet", img: okwallet, alt: "OK Wallet by ONE Bank — JeetBuzz deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "bkash", name: "bKash", img: bkash, alt: "bKash. JeetBuzz mobile wallet deposit (Bangladesh)", to: "/bkash-guide" },
+      { key: "rocket", name: "Rocket", img: rocket, alt: "Rocket DBBL. JeetBuzz mobile wallet deposit (Bangladesh)", to: "/rocket-guide" },
+      { key: "upay", name: "Upay", img: upay, alt: "Upay. JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "tap", name: "Tap", img: tap, alt: "Tap. JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "surecash", name: "SureCash", img: surecash, alt: "SureCash. JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "ipay", name: "iPay", img: ipay, alt: "iPay. JeetBuzz mobile wallet deposit (Bangladesh)", to: "/deposit-guide" },
+      { key: "okwallet", name: "OK Wallet", img: okwallet, alt: "OK Wallet by ONE Bank. JeetBuzz deposit (Bangladesh)", to: "/deposit-guide" },
     ],
   },
   {
@@ -62,31 +62,31 @@ const GROUPS: Group[] = [
     desc: "Direct deposit & NEFT from major Bangladeshi banks.",
     to: "/deposit-guide",
     methods: [
-      { key: "pubali", name: "Pubali Bank", img: pubali, alt: "Pubali Bank PLC — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "dbbl", name: "Dutch-Bangla Bank", img: dbbl, alt: "Dutch-Bangla Bank — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "islami", name: "Islami Bank", img: islami, alt: "Islami Bank Bangladesh PLC — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "city", name: "City Bank", img: city, alt: "City Bank — JeetBuzz bank deposit option", to: "/deposit-guide" },
-      { key: "bank-deposit", name: "Bank Deposit", img: bankDeposit, alt: "Branch bank deposit — JeetBuzz funding option", to: "/deposit-guide" },
+      { key: "pubali", name: "Pubali Bank", img: pubali, alt: "Pubali Bank PLC. JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "dbbl", name: "Dutch-Bangla Bank", img: dbbl, alt: "Dutch-Bangla Bank. JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "islami", name: "Islami Bank", img: islami, alt: "Islami Bank Bangladesh PLC. JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "city", name: "City Bank", img: city, alt: "City Bank. JeetBuzz bank deposit option", to: "/deposit-guide" },
+      { key: "bank-deposit", name: "Bank Deposit", img: bankDeposit, alt: "Branch bank deposit. JeetBuzz funding option", to: "/deposit-guide" },
     ],
   },
   {
-    title: "Mobile wallets — Pakistan",
+    title: "Mobile wallets. Pakistan",
     desc: "Easypaisa and JazzCash for instant PKR deposits.",
     to: "/deposit-guide",
     dark: true,
     methods: [
-      { key: "easypaisa", name: "Easypaisa", img: easypaisa, alt: "Easypaisa — JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
-      { key: "jazzcash", name: "JazzCash", img: jazzcash, alt: "JazzCash — JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
+      { key: "easypaisa", name: "Easypaisa", img: easypaisa, alt: "Easypaisa. JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
+      { key: "jazzcash", name: "JazzCash", img: jazzcash, alt: "JazzCash. JeetBuzz mobile wallet deposit (Pakistan)", to: "/deposit-guide" },
     ],
   },
   {
-    title: "UPI & wallets — India",
+    title: "UPI & wallets. India",
     desc: "UPI and PhonePe for instant INR deposits across India.",
     to: "/payment-methods",
     dark: true,
     methods: [
-      { key: "upi", name: "UPI", img: upi, alt: "UPI — JeetBuzz instant INR deposit (India)", to: "/payment-methods" },
-      { key: "phonepe", name: "PhonePe", img: phonepe, alt: "PhonePe — JeetBuzz UPI wallet deposit (India)", to: "/payment-methods" },
+      { key: "upi", name: "UPI", img: upi, alt: "UPI. JeetBuzz instant INR deposit (India)", to: "/payment-methods" },
+      { key: "phonepe", name: "PhonePe", img: phonepe, alt: "PhonePe. JeetBuzz UPI wallet deposit (India)", to: "/payment-methods" },
     ],
   },
   {
@@ -94,8 +94,8 @@ const GROUPS: Group[] = [
     desc: "Cross-border wallets and Google Pay for fast settlement.",
     to: "/payment-methods",
     methods: [
-      { key: "payoneer", name: "Payoneer", img: payoneer, alt: "Payoneer — international wallet for JeetBuzz", to: "/payment-methods" },
-      { key: "gpay", name: "Google Pay", img: gpay, alt: "Google Pay — wallet payment for JeetBuzz", to: "/payment-methods" },
+      { key: "payoneer", name: "Payoneer", img: payoneer, alt: "Payoneer, international wallet for JeetBuzz", to: "/payment-methods" },
+      { key: "gpay", name: "Google Pay", img: gpay, alt: "Google Pay, wallet payment for JeetBuzz", to: "/payment-methods" },
     ],
   },
   {
@@ -103,10 +103,10 @@ const GROUPS: Group[] = [
     desc: "Stablecoin and on-chain deposits with low fees.",
     to: "/payment-methods",
     methods: [
-      { key: "usdt", name: "USDT", img: usdt, alt: "Tether USDT — crypto deposit on JeetBuzz", to: "/payment-methods" },
-      { key: "btc", name: "Bitcoin", img: bitcoin, alt: "Bitcoin — crypto deposit on JeetBuzz", to: "/payment-methods" },
-      { key: "ltc", name: "Litecoin", img: litecoin, alt: "Litecoin — crypto deposit on JeetBuzz", to: "/payment-methods" },
-      { key: "binance", name: "Binance Pay", img: binance, alt: "Binance Pay — crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "usdt", name: "USDT", img: usdt, alt: "Tether USDT, crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "btc", name: "Bitcoin", img: bitcoin, alt: "Bitcoin, crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "ltc", name: "Litecoin", img: litecoin, alt: "Litecoin, crypto deposit on JeetBuzz", to: "/payment-methods" },
+      { key: "binance", name: "Binance Pay", img: binance, alt: "Binance Pay, crypto deposit on JeetBuzz", to: "/payment-methods" },
     ],
   },
 ];
@@ -114,10 +114,10 @@ const GROUPS: Group[] = [
 // Tag each group with the countries it should appear for.
 // "global" pages (default English /) show everything.
 const GROUP_COUNTRIES: Record<string, Array<"bd" | "pk" | "in" | "global">> = {
-  "Mobile wallets — Bangladesh": ["bd", "global"],
+  "Mobile wallets. Bangladesh": ["bd", "global"],
   "Bank transfer": ["bd", "pk", "in", "global"],
-  "Mobile wallets — Pakistan": ["pk", "global"],
-  "UPI & wallets — India": ["in", "global"],
+  "Mobile wallets. Pakistan": ["pk", "global"],
+  "UPI & wallets. India": ["in", "global"],
   "International wallets": ["global"],
   Crypto: ["global"],
 };
@@ -126,7 +126,7 @@ function Tile({ m, dark }: { m: Method; dark?: boolean }) {
   return (
     <Link
       to={m.to}
-      aria-label={`${m.name} — payment method on JeetBuzz`}
+      aria-label={`${m.name}, payment method on JeetBuzz`}
       onClick={() =>
         track("payment_method_click", { method: m.key, name: m.name, to: m.to })
       }

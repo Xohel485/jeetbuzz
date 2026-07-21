@@ -27,7 +27,7 @@ const TRUST_GROUPS: { titleKey: string; descKey: string; tileLight?: boolean; ba
     titleKey: "footer.trust.alliance",
     descKey: "footer.trust.alliance.desc",
     badges: [
-      { src: cazvip, alt: "CazVIP Gaming Alliance — JeetBuzz partner", label: "CazVIP Alliance" },
+      { src: cazvip, alt: "CazVIP Gaming Alliance. JeetBuzz partner", label: "CazVIP Alliance" },
     ],
   },
   {
@@ -44,9 +44,9 @@ const TRUST_GROUPS: { titleKey: string; descKey: string; tileLight?: boolean; ba
     descKey: "footer.trust.rg.desc",
     tileLight: true,
     badges: [
-      { src: rgAge, alt: "18+ only — responsible gaming", label: "18+ Only" },
+      { src: rgAge, alt: "18+ only, responsible gaming", label: "18+ Only" },
       { src: rgMain, alt: "Responsible gambling support", label: "Responsible Gambling" },
-      { src: gamcare, alt: "GamCare — responsible gaming support", label: "GamCare" },
+      { src: gamcare, alt: "GamCare, responsible gaming support", label: "GamCare" },
     ],
   },
 ];
@@ -165,10 +165,10 @@ export function SiteFooter() {
     <footer className="mt-28 border-t border-white/5 bg-black/40">
       <div className="container-pro py-16 text-center md:text-left">
         <div className="mb-10 flex items-center justify-center md:justify-start">
-          <Link to="/" aria-label="GetJeetBuzz — Home">
+          <Link to="/" aria-label="GetJeetBuzz. Home">
             <img
               src={logoAsset}
-              alt="JeetBuzz — GetJeetBuzz.com verified affiliate partner logo"
+              alt="JeetBuzz. GetJeetBuzz.com verified affiliate partner logo"
               width={220}
               height={66}
               className="h-14 w-auto md:h-16"
