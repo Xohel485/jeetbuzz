@@ -645,6 +645,12 @@ LOCALIZED_ROUTES.push(
     ur: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_UR, description: "JeetBuzz minimum deposit — per-rail and bonus thresholds." },
     hi: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_HI, description: "JeetBuzz minimum deposit — per-rail and bonus thresholds." },
   }, ["bd"]),
+  entry("jeetbuzz-live-cricket", JeetbuzzLiveCricketRoute, {
+    en: { title: "JeetBuzz Live Cricket 2026 — BPL, IPL, PSL In-Play Markets" + BRAND_EN, description: "JeetBuzz live cricket in-play markets — BPL, IPL, PSL, cash-out timing, ball-by-ball settlement and market strategy." },
+    bn: { title: "JeetBuzz Live Cricket ২০২৬ — BPL, IPL, PSL In-Play" + BRAND_BN, description: "JeetBuzz লাইভ ক্রিকেট in-play market, cash-out timing ও কৌশল।" },
+    ur: { title: "JeetBuzz Live Cricket 2026" + BRAND_UR, description: "JeetBuzz live cricket in-play markets and strategy." },
+    hi: { title: "JeetBuzz Live Cricket 2026" + BRAND_HI, description: "JeetBuzz live cricket in-play markets and strategy." },
+  }, ["bd"]),
 );
 
 /** Build a lookup map by slug for fast splat-route resolution. */
