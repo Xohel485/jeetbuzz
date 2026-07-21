@@ -77,9 +77,7 @@ import { Route as IosAppGuideRoute } from "@/routes/ios-app-guide";
 import { Route as AndroidWebAppGuideRoute } from "@/routes/android-web-app-guide";
 import { Route as IsJeetbuzzSafeRoute } from "@/routes/is-jeetbuzz-safe";
 // Phase A GSC-driven solution routes with native Bangla content.
-import { Route as AffiliateCommissionRateRoute } from "@/routes/jeetbuzz-affiliate-commission-rate";
 import { Route as AffiliateSignupRoute } from "@/routes/jeetbuzz-affiliate-signup";
-import { Route as DownloadForAndroidRoute } from "@/routes/jeetbuzz-download-for-android";
 import { Route as AppUpdateRoute } from "@/routes/jeetbuzz-app-update";
 import { Route as PromoCodeRoute } from "@/routes/jeetbuzz-promo-code";
 import { Route as FirstDepositBonusRoute } from "@/routes/jeetbuzz-first-deposit-bonus";
@@ -92,7 +90,6 @@ import { Route as JitbuzzRoute } from "@/routes/jitbuzz";
 import { Route as JetbuzzRoute } from "@/routes/jetbuzz";
 import { Route as JeetbuzzComLoginRoute } from "@/routes/jeetbuzz-com-login";
 import { Route as JeetbuzzSignUpRoute } from "@/routes/jeetbuzz-sign-up";
-import { Route as JeetbuzzApkDownloadRoute } from "@/routes/jeetbuzz-apk-download";
 // Phase B batch 2: problems cluster
 import { Route as WithdrawalPendingRoute } from "@/routes/jeetbuzz-withdrawal-pending";
 import { Route as OtpNotReceivedRoute } from "@/routes/jeetbuzz-otp-not-received";

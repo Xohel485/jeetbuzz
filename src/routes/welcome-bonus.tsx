@@ -170,7 +170,7 @@ export const Route = createFileRoute("/welcome-bonus")({
         { q: "Is there a no-deposit free bonus on JeetBuzz?", a: "No. Anyone offering cashable no-deposit credit to your JeetBuzz account is impersonating support. The only zero-deposit rewards are demo-play chips inside slot games." },
         { q: "How long do I have to clear the welcome bonus?", a: "Usually 7–30 days from activation. If wagering is not complete by expiry, the bonus and any winnings derived from it are forfeited; your original deposit stays intact." },
         { q: "Can I opt out of the welcome bonus after depositing?", a: "Yes. Live chat can remove an active bonus and release any wagering restrictions, but any bonus-derived winnings are removed with it. Only opt out if the max-bet cap or expiry is blocking your normal play." },
-        { q: "Does the welcome bonus work on the JeetBuzz Android app?", a: "Yes. The APK and the web share one wallet — the bonus is tied to the account, not the device. Install from [APK Download](/jeetbuzz-apk-download) if you prefer to sign up from mobile." },
+        { q: "Does the welcome bonus work on the JeetBuzz Android app?", a: "Yes. The APK and the web share one wallet — the bonus is tied to the account, not the device. Install from [APK Download](/download) if you prefer to sign up from mobile." },
       ]}
       faqsByLocale={{
         bn: [

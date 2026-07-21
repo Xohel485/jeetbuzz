@@ -25,7 +25,6 @@ export const SIGNUP_CLUSTER: RelatedItem[] = [
 
 export const AFFILIATE_CLUSTER: RelatedItem[] = [
   { to: "/affiliate-program", title: "Affiliate Program Overview", desc: "Commission tiers, terms and how the program works." },
-  { to: "/jeetbuzz-affiliate-commission-rate", title: "Commission Rate", desc: "Up to 60% weekly revenue share explained tier by tier." },
   { to: "/jeetbuzz-affiliate-signup", title: "Affiliate Signup", desc: "Apply for the partner program step by step." },
   { to: "/jeetbuzz-affiliate-withdrawal", title: "Affiliate Withdrawal", desc: "Weekly payout schedule, methods and minimums." },
   { to: "/jeetbuzz-affiliate-app", title: "Affiliate App / Dashboard", desc: "Track clicks, players and commission on mobile." },
@@ -38,7 +37,6 @@ export const AFFILIATE_CLUSTER: RelatedItem[] = [
 
 export const APP_CLUSTER: RelatedItem[] = [
   { to: "/apk-download-guide", title: "APK Download Guide", desc: "Safe Android APK install with permission checks." },
-  { to: "/jeetbuzz-download-for-android", title: "Download for Android", desc: "Latest Android build with install walk-through." },
   { to: "/jeetbuzz-download-for-ios", title: "Download for iOS", desc: "iPhone / iPad web app install without App Store." },
   { to: "/jeetbuzz-app-update", title: "App Update", desc: "Update the JeetBuzz app safely — old version fixes." },
   { to: "/mobile-app-guide", title: "Mobile App Guide", desc: "Feature parity and performance tips across devices." },
@@ -79,7 +77,6 @@ export const BRAND_CLUSTER: RelatedItem[] = [
   { to: "/jetbuzz", title: "Jetbuzz Spelling", desc: "One 'e' missing — how the misspelling happens and the real URL." },
   { to: "/jeetbuzz-com-login", title: "JeetBuzz.com Login", desc: "Reach the real login page and dodge fake mirrors." },
   { to: "/jeetbuzz-sign-up", title: "JeetBuzz Sign Up", desc: "Three-minute signup with the welcome bonus opt-in." },
-  { to: "/jeetbuzz-apk-download", title: "JeetBuzz APK Download", desc: "Latest Android APK with safe install and permission checks." },
 ];
 
 /**

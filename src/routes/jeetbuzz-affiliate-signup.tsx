@@ -49,7 +49,7 @@ export const Route = createFileRoute("/jeetbuzz-affiliate-signup")({
         "## If your application is rejected",
         "Rejection is almost always about traffic source, not about you personally. Reply to the rejection email with more detail — a link to your existing site, screenshots of your community, follower counts. Most rejections are reversible with better context.",
         "## Understand the payout",
-        "Read the [Commission Rate page](/jeetbuzz-affiliate-commission-rate) and the [Affiliate Withdrawal page](/jeetbuzz-affiliate-withdrawal) before you send your first click — knowing the payout math shapes which traffic is worth sending.",
+        "Read the [Commission Rate page](/jeetbuzz-affiliate-commission) and the [Affiliate Withdrawal page](/jeetbuzz-affiliate-withdrawal) before you send your first click — knowing the payout math shapes which traffic is worth sending.",
       ]}
       bodyByLocale={{
         bn: [
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/jeetbuzz-affiliate-signup")({
           "## প্রত্যাখ্যান হলে",
           "প্রত্যাখ্যান প্রায়ই ট্রাফিক সোর্সের কারণে হয়, ব্যক্তিগত নয়। প্রত্যাখ্যান ইমেইলের রিপ্লাইতে বিস্তারিত দিন — আপনার বিদ্যমান সাইটের লিংক, কমিউনিটির স্ক্রিনশট, ফলোয়ার সংখ্যা। বেশিরভাগ প্রত্যাখ্যান ভালো কনটেক্সট দিলে উল্টানো যায়।",
           "## পেআউট বুঝুন",
-          "প্রথম ক্লিক পাঠানোর আগে [Commission Rate পেজ](/jeetbuzz-affiliate-commission-rate) এবং [Affiliate Withdrawal পেজ](/jeetbuzz-affiliate-withdrawal) পড়ুন — পেআউটের গণিত জানলে কোন ট্রাফিক পাঠানো লাভজনক তা ঠিক হয়।",
+          "প্রথম ক্লিক পাঠানোর আগে [Commission Rate পেজ](/jeetbuzz-affiliate-commission) এবং [Affiliate Withdrawal পেজ](/jeetbuzz-affiliate-withdrawal) পড়ুন — পেআউটের গণিত জানলে কোন ট্রাফিক পাঠানো লাভজনক তা ঠিক হয়।",
         ],
       }}
       related={siblings(AFFILIATE_CLUSTER, PATH)}

@@ -10,13 +10,11 @@ const SOLUTIONS = [
   "/bonuses",
   "/games",
   // Affiliate cluster
-  "/jeetbuzz-affiliate-commission-rate",
   "/jeetbuzz-affiliate-signup",
   "/jeetbuzz-affiliate-withdrawal",
   "/jeetbuzz-affiliate-app",
   "/jeetbuzz-referral-code",
   // App cluster
-  "/jeetbuzz-download-for-android",
   "/jeetbuzz-download-for-ios",
   "/jeetbuzz-app-update",
   // Bonus cluster
@@ -33,7 +31,6 @@ const SOLUTIONS = [
   "/jetbuzz",
   "/jeetbuzz-com-login",
   "/jeetbuzz-sign-up",
-  "/jeetbuzz-apk-download",
   // Phase B batch 2: problems cluster
   "/jeetbuzz-withdrawal-pending",
   "/jeetbuzz-otp-not-received",
