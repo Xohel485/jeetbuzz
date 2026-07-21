@@ -466,7 +466,8 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     bn: { title: "জিতবাজ অ্যাফিলিয়েট সাইনআপ ২০২৬" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট সাইনআপ — আবেদন, KYC এবং অনুমোদনের সময় ১০ মিনিটেরও কম।" },
     ur: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_UR, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
     hi: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_HI, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
-  }, ["bd"]),  entry("jeetbuzz-app-update", AppUpdateRoute, {
+  }, ["bd"]),
+  entry("jeetbuzz-app-update", AppUpdateRoute, {
     en: { title: "JeetBuzz App Update 2026" + BRAND_EN, description: "Update JeetBuzz on Android and iOS safely — fixes for old-version bugs and App not installed errors." },
     bn: { title: "জিতবাজ অ্যাপ আপডেট ২০২৬" + BRAND_BN, description: "অ্যান্ড্রয়েড ও iOS-এ নিরাপদে জিতবাজ অ্যাপ আপডেট — পুরনো ভার্সন সমস্যার সমাধান।" },
     ur: { title: "JeetBuzz App Update 2026" + BRAND_UR, description: "Update JeetBuzz on Android and iOS safely." },
