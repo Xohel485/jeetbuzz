@@ -47,8 +47,8 @@ export const Route = createFileRoute("/games")({
         "## More cricket coverage",
         "- [JeetBuzz Live Cricket](/jeetbuzz-live-cricket) — brand-focused live cricket streaming and in-play markets.",
       ]}
+      related={GAMES_CLUSTER}
       faqs={[
-        // placeholder retained
         { q: "Which JeetBuzz game has the best odds for players?", a: "Blackjack and baccarat have the highest theoretical RTP (~98–99%). Slots vary widely (94–97%). Aviator is around 97%. No game has a positive expected value long term." },
         { q: "Is live cricket in-play delayed?", a: "In-play odds are calibrated against a live data feed with a small delay to prevent latency arbitrage. This is standard across every regulated sportsbook." },
         { q: "Can I try games for free?", a: "Most slots offer demo mode; live dealer and sportsbook markets do not. Use demo to learn the interface, not to \"test a strategy\" — outcomes still match live RTP." },
