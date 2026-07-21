@@ -86,6 +86,12 @@ import { Route as ReferBonusRoute } from "@/routes/jeetbuzz-refer-bonus";
 import { Route as WithdrawalTimeRoute } from "@/routes/jeetbuzz-withdrawal-time";
 import { Route as AccountLockedRoute } from "@/routes/jeetbuzz-account-locked";
 import { Route as DepositProblemRoute } from "@/routes/jeetbuzz-deposit-problem";
+// Phase B batch 1: brand variants
+import { Route as JitbuzzRoute } from "@/routes/jitbuzz";
+import { Route as JetbuzzRoute } from "@/routes/jetbuzz";
+import { Route as JeetbuzzComLoginRoute } from "@/routes/jeetbuzz-com-login";
+import { Route as JeetbuzzSignUpRoute } from "@/routes/jeetbuzz-sign-up";
+import { Route as JeetbuzzApkDownloadRoute } from "@/routes/jeetbuzz-apk-download";
 
 export type LocaleMeta = { title: string; description: string };
 
@@ -504,6 +510,40 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     hi: { title: "JeetBuzz Deposit Problem 2026" + BRAND_HI, description: "JeetBuzz deposit problem fixes." },
   }, ["bd"]),
 ];
+
+// ---- Phase B batch 1: brand variants (BD-only native BN) ----
+LOCALIZED_ROUTES.push(
+  entry("jitbuzz", JitbuzzRoute, {
+    en: { title: "Jitbuzz or JeetBuzz? Correct Spelling 2026" + BRAND_EN, description: "'Jitbuzz' is a misspelling of JeetBuzz — official spelling, why the typo happens and how to reach the real site." },
+    bn: { title: "Jitbuzz নাকি JeetBuzz? সঠিক বানান ২০২৬" + BRAND_BN, description: "Jitbuzz হচ্ছে JeetBuzz-এর ভুল বানান — কেন হয় এবং আসল সাইটে যাওয়ার নিরাপদ পথ।" },
+    ur: { title: "Jitbuzz or JeetBuzz? Correct Spelling 2026" + BRAND_UR, description: "'Jitbuzz' is a misspelling of JeetBuzz — reach the official site safely." },
+    hi: { title: "Jitbuzz or JeetBuzz? Correct Spelling 2026" + BRAND_HI, description: "'Jitbuzz' is a misspelling of JeetBuzz — reach the official site safely." },
+  }, ["bd"]),
+  entry("jetbuzz", JetbuzzRoute, {
+    en: { title: "Jetbuzz or JeetBuzz? Correct Brand Spelling 2026" + BRAND_EN, description: "'Jetbuzz' is a misspelling of JeetBuzz — official spelling and how to avoid look-alike domains." },
+    bn: { title: "Jetbuzz নাকি JeetBuzz? সঠিক বানান ২০২৬" + BRAND_BN, description: "Jetbuzz হচ্ছে JeetBuzz-এর ভুল বানান — আসল সাইটে যাওয়ার নিরাপদ পথ।" },
+    ur: { title: "Jetbuzz or JeetBuzz? Correct Spelling 2026" + BRAND_UR, description: "'Jetbuzz' is a misspelling of JeetBuzz." },
+    hi: { title: "Jetbuzz or JeetBuzz? Correct Spelling 2026" + BRAND_HI, description: "'Jetbuzz' is a misspelling of JeetBuzz." },
+  }, ["bd"]),
+  entry("jeetbuzz-com-login", JeetbuzzComLoginRoute, {
+    en: { title: "JeetBuzz.com Login 2026 — Safe Access & Recovery" + BRAND_EN, description: "How to log in on the real JeetBuzz.com domain, spot fake mirrors and recover locked accounts." },
+    bn: { title: "JeetBuzz.com লগইন ২০২৬ — নিরাপদ অ্যাক্সেস" + BRAND_BN, description: "আসল JeetBuzz.com ডোমেইনে লগইন, ফেক মিরর সনাক্ত এবং লকড অ্যাকাউন্ট রিকভারি।" },
+    ur: { title: "JeetBuzz.com Login 2026" + BRAND_UR, description: "Safe JeetBuzz.com login and recovery." },
+    hi: { title: "JeetBuzz.com Login 2026" + BRAND_HI, description: "Safe JeetBuzz.com login and recovery." },
+  }, ["bd"]),
+  entry("jeetbuzz-sign-up", JeetbuzzSignUpRoute, {
+    en: { title: "JeetBuzz Sign Up 2026 — 3-Minute Registration" + BRAND_EN, description: "JeetBuzz sign up in three minutes — phone/email registration, welcome bonus opt-in and KYC tips." },
+    bn: { title: "JeetBuzz সাইন আপ ২০২৬ — ৩ মিনিটে রেজিস্ট্রেশন" + BRAND_BN, description: "JeetBuzz সাইনআপ ৩ মিনিটে — ফোন/ইমেইল রেজিস্ট্রেশন, ওয়েলকাম বোনাস ও KYC টিপস।" },
+    ur: { title: "JeetBuzz Sign Up 2026" + BRAND_UR, description: "JeetBuzz sign up in three minutes." },
+    hi: { title: "JeetBuzz Sign Up 2026" + BRAND_HI, description: "JeetBuzz sign up in three minutes." },
+  }, ["bd"]),
+  entry("jeetbuzz-apk-download", JeetbuzzApkDownloadRoute, {
+    en: { title: "JeetBuzz APK Download 2026 — Latest Safe Install" + BRAND_EN, description: "JeetBuzz APK download — latest version, safe Android install with permission checks and update path." },
+    bn: { title: "JeetBuzz APK ডাউনলোড ২০২৬ — নিরাপদ ইনস্টল" + BRAND_BN, description: "JeetBuzz APK ডাউনলোড — সর্বশেষ ভার্সন, নিরাপদ Android ইনস্টল ও আপডেট পথ।" },
+    ur: { title: "JeetBuzz APK Download 2026" + BRAND_UR, description: "Latest JeetBuzz APK download and safe install." },
+    hi: { title: "JeetBuzz APK Download 2026" + BRAND_HI, description: "Latest JeetBuzz APK download and safe install." },
+  }, ["bd"]),
+);
 
 /** Build a lookup map by slug for fast splat-route resolution. */
 export const LOCALIZED_ROUTE_BY_SLUG: Record<string, LocalizedRoute> = Object.fromEntries(
