@@ -43,6 +43,10 @@ export const Route = createFileRoute("/welcome-bonus")({
       ]}
       heroImage="bonus"
       body={[
+        "## Welcome bonus, sign-up bonus, first-deposit bonus — same thing?",
+        "Yes, these three phrases all point to the same promotion in the JeetBuzz cashier. **Welcome bonus** is the marketing name, **sign-up bonus** is what players search for, and **first deposit bonus** describes when it credits. There is exactly one of these per KYC, and it applies only to your very first real-money transfer.",
+        "## Today's promo code — where and how",
+        "The **JeetBuzz promo code** field sits on the registration form directly under Currency. Paste today's code before you tap *Create Account*; codes never back-apply. Codes rotate weekly and often unlock a higher match percentage than the default banner. Copy the current active code from [JeetBuzz Promo Code](/jeetbuzz-promo-code) minutes before signing up — an expired code silently voids the bonus.",
         "## What the offer usually looks like",
         "JeetBuzz typically runs a 100% deposit-match bonus up to a cap, separately for Sports and Casino. You pick one at signup — you can't double-claim.",
         "## The 4 numbers you must check",
@@ -58,6 +62,28 @@ export const Route = createFileRoute("/welcome-bonus")({
         "5. Withdraw — the bonus and any winnings are now real cash.",
         "## When to skip the bonus",
         "If you bet large stakes, the max-bet rule will frustrate you. Skip the bonus, deposit as normal, and withdraw freely.",
+        "## Sign-up bonus math (worked example)",
+        "- Match: 150% up to 15,000 BDT.",
+        "- First deposit: 3,000 BDT via bKash.",
+        "- Bonus credited: 4,500 BDT.",
+        "- Rollover: 15× on the bonus → 4,500 × 15 = **67,500 BDT of qualifying bets** before withdrawal.",
+        "- Max-bet cap: 500 BDT per stake while the bonus is active.",
+        "- At an average stake of 300 BDT on 1.80 cricket odds, that clears in ~225 bets — plan around a week of daily play, not a single evening.",
+        "## Why 'jeetbuzz free bonus' searches are misleading",
+        "There is no cash-out-able free bonus without a deposit on JeetBuzz today. What players call a *free bonus* is either (a) the sign-up match bonus described here, (b) a small free-bet coupon during a specific cricket match promotion, or (c) refer-a-friend credit on the friend's first deposit — see [Refer Bonus](/jeetbuzz-refer-bonus). Any site promising no-deposit cash to your JeetBuzz account is a phishing attempt.",
+        "## New account sign-up bonus — step-by-step",
+        "1. Open the registration form on the official site.",
+        "2. Fill in phone, email, currency and today's promo code.",
+        "3. Tick the **Welcome Bonus** opt-in.",
+        "4. Tap *Create Account*, verify OTP, complete profile.",
+        "5. Head to **Cashier**, deposit the minimum qualifying amount (usually 500 BDT / 500 PKR / ₹500).",
+        "6. Bonus lands within minutes. Wagering counter appears under **Promotions → Active**.",
+        "## Signals that a welcome bonus offer is worth claiming",
+        "- Match percentage ≥ 100% with a rollover ≤ 20×.",
+        "- Max-bet cap ≥ your usual stake size.",
+        "- Game contribution table published in the promo T&C.",
+        "- Expiry ≥ 14 days from activation.",
+        "- Withdrawable balance clearly separated from bonus balance in the cashier.",
         "> Promotions change frequently — confirm the current offer on the official JeetBuzz site before depositing.",
       ]}
       bodyByLocale={{
@@ -138,6 +164,13 @@ export const Route = createFileRoute("/welcome-bonus")({
         { q: "Can I claim both the sports and casino welcome bonus?", a: "No. JeetBuzz lets you pick one at signup. Pick the product you'll actually play." },
         { q: "Do bKash, Nagad and UPI all qualify for the bonus?", a: "Usually yes, but the current promotions page lists exact eligible methods — always re-check before depositing, as the list changes." },
         { q: "What happens if I withdraw before wagering is complete?", a: "JeetBuzz forfeits the bonus and any winnings derived from it. Your original deposit (minus any bets placed) is returned." },
+        { q: "How big is the JeetBuzz sign-up bonus in 2026?", a: "The active welcome/sign-up bonus rotates between 100% and 200% match on the first deposit, up to a cap in your local currency. Log in to the Promotions tab or check [JeetBuzz Promo Code](/jeetbuzz-promo-code) for today's exact numbers." },
+        { q: "Is there a JeetBuzz promo code today?", a: "Yes — a new promo code goes live most weeks and often unlocks a higher match than the default banner. Copy today's code from [JeetBuzz Promo Code](/jeetbuzz-promo-code) and paste it into the registration form before creating your account." },
+        { q: "How is the welcome bonus different from the first deposit bonus?", a: "They're the same promotion under different names. Marketing calls it the welcome bonus; the mechanics document calls it the first deposit bonus because it only credits on your very first transfer. See [First Deposit Bonus](/jeetbuzz-first-deposit-bonus) for the math." },
+        { q: "Is there a no-deposit free bonus on JeetBuzz?", a: "No. Anyone offering cashable no-deposit credit to your JeetBuzz account is impersonating support. The only zero-deposit rewards are demo-play chips inside slot games." },
+        { q: "How long do I have to clear the welcome bonus?", a: "Usually 7–30 days from activation. If wagering is not complete by expiry, the bonus and any winnings derived from it are forfeited; your original deposit stays intact." },
+        { q: "Can I opt out of the welcome bonus after depositing?", a: "Yes. Live chat can remove an active bonus and release any wagering restrictions, but any bonus-derived winnings are removed with it. Only opt out if the max-bet cap or expiry is blocking your normal play." },
+        { q: "Does the welcome bonus work on the JeetBuzz Android app?", a: "Yes. The APK and the web share one wallet — the bonus is tied to the account, not the device. Install from [APK Download](/jeetbuzz-apk-download) if you prefer to sign up from mobile." },
       ]}
       faqsByLocale={{
         bn: [
