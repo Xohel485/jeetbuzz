@@ -23,6 +23,47 @@ export const SIGNUP_CLUSTER: RelatedItem[] = [
   { to: "/faq", title: "Signup FAQ", desc: "Common signup and verification questions answered." },
 ];
 
+export const AFFILIATE_CLUSTER: RelatedItem[] = [
+  { to: "/affiliate-program", title: "Affiliate Program Overview", desc: "Commission tiers, terms and how the program works." },
+  { to: "/jeetbuzz-affiliate-commission-rate", title: "Commission Rate", desc: "Up to 60% weekly revenue share explained tier by tier." },
+  { to: "/jeetbuzz-affiliate-signup", title: "Affiliate Signup", desc: "Apply for the partner program step by step." },
+  { to: "/jeetbuzz-affiliate-withdrawal", title: "Affiliate Withdrawal", desc: "Weekly payout schedule, methods and minimums." },
+  { to: "/jeetbuzz-affiliate-app", title: "Affiliate App / Dashboard", desc: "Track clicks, players and commission on mobile." },
+  { to: "/jeetbuzz-referral-code", title: "Referral Code", desc: "How referral codes and refer-a-friend work." },
+];
+
+export const APP_CLUSTER: RelatedItem[] = [
+  { to: "/apk-download-guide", title: "APK Download Guide", desc: "Safe Android APK install with permission checks." },
+  { to: "/jeetbuzz-download-for-android", title: "Download for Android", desc: "Latest Android build with install walk-through." },
+  { to: "/jeetbuzz-download-for-ios", title: "Download for iOS", desc: "iPhone / iPad web app install without App Store." },
+  { to: "/jeetbuzz-app-update", title: "App Update", desc: "Update the JeetBuzz app safely — old version fixes." },
+  { to: "/mobile-app-guide", title: "Mobile App Guide", desc: "Feature parity and performance tips across devices." },
+];
+
+export const BONUS_CLUSTER: RelatedItem[] = [
+  { to: "/bonus-and-promotions", title: "Bonuses & Promotions", desc: "Active JeetBuzz bonuses with clear T&C." },
+  { to: "/welcome-bonus", title: "Welcome Bonus", desc: "New-player bonus with wagering explained." },
+  { to: "/jeetbuzz-promo-code", title: "Promo Code", desc: "Today's valid promo codes and how to redeem." },
+  { to: "/jeetbuzz-first-deposit-bonus", title: "First Deposit Bonus", desc: "Match percentage, minimum deposit and rollover." },
+  { to: "/jeetbuzz-refer-bonus", title: "Refer Bonus", desc: "Refer-a-friend rewards and where to find your code." },
+];
+
+export const PROBLEMS_CLUSTER: RelatedItem[] = [
+  { to: "/jeetbuzz-account-locked", title: "Account Locked", desc: "Why accounts get locked and how to recover access." },
+  { to: "/jeetbuzz-withdrawal-time", title: "Withdrawal Time", desc: "Expected processing times per payment rail." },
+  { to: "/jeetbuzz-deposit-problem", title: "Deposit Problem", desc: "Debit pending, wrong amount, name mismatch — fixes." },
+  { to: "/password-reset", title: "Password Reset", desc: "Reset via phone OTP or email link step by step." },
+  { to: "/login-problems", title: "Login Problems", desc: "Site not opening, OTP not arriving, greyed-out button." },
+  { to: "/how-to-delete-jeetbuzz-account", title: "Delete Account", desc: "Formal account deletion / self-exclusion request." },
+];
+
+export const HUBS: RelatedItem[] = [
+  { to: "/help", title: "Help Center", desc: "Support pillar — login, KYC, deposits, withdrawals, appeals." },
+  { to: "/payments", title: "Payments Hub", desc: "Every deposit and withdrawal method across BD, PK, IN." },
+  { to: "/bonuses", title: "Bonuses Hub", desc: "All active promos, promo codes, refer bonus and rollover." },
+  { to: "/games", title: "Games Hub", desc: "Live cricket, casino, crash and slots — one map." },
+];
+
 /** Return cluster siblings, excluding the current page. */
 export function siblings(cluster: RelatedItem[], currentPath: string): RelatedItem[] {
   return cluster.filter((item) => item.to !== currentPath);
