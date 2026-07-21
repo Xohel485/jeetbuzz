@@ -41,6 +41,14 @@ const SOLUTIONS = [
   "/jeetbuzz-app-not-opening",
   "/jeetbuzz-deposit-failed",
   "/jeetbuzz-password-reset",
+  // Phase B batch 3: affiliate + payments
+  "/jeetbuzz-affiliate-dashboard",
+  "/jeetbuzz-affiliate-payment-methods",
+  "/jeetbuzz-affiliate-commission",
+  "/jeetbuzz-partner-login",
+  "/jeetbuzz-bkash-deposit",
+  "/jeetbuzz-nagad-withdrawal",
+  "/jeetbuzz-minimum-deposit",
 ];
 
 export const Route = createFileRoute("/sitemap-solutions.xml")({
