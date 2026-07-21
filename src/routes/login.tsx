@@ -13,13 +13,13 @@ import {
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Login 2026 | Secure Sign In, Account Access & Login Guide | GetJeetBuzz" },
+      { title: "JeetBuzz Login 2026 — Official Sign In, Password Reset & Fix Login Problems" },
       {
         name: "description",
         content:
-          "Access your JeetBuzz account securely with the latest JeetBuzz Login 2026 guide. Learn sign in steps, password recovery, login security, common fixes, mobile login and account access tips.",
+          "JeetBuzz login 2026 — official sign-in link, step-by-step password reset, 2FA setup, OTP not received fix and the top 6 reasons login fails on mobile. Verified for BD, PK and IN players.",
       },
-      { property: "og:title", content: "JeetBuzz Login — Verified Sign-In Hub" },
+      { property: "og:title", content: "JeetBuzz Login 2026 — Sign In, Reset Password, Fix Errors" },
       {
         property: "og:description",
         content:
