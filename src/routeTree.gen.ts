@@ -47,6 +47,7 @@ import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
+import { Route as JitbuzzRouteImport } from './routes/jitbuzz'
 import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
@@ -291,6 +292,11 @@ const LoginRoute = LoginRouteImport.update({
 const LiveCricketBettingRoute = LiveCricketBettingRouteImport.update({
   id: '/live-cricket-betting',
   path: '/live-cricket-betting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JitbuzzRoute = JitbuzzRouteImport.update({
+  id: '/jitbuzz',
+  path: '/jitbuzz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
@@ -622,6 +628,7 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -716,6 +723,7 @@ export interface FileRoutesByTo {
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -812,6 +820,7 @@ export interface FileRoutesById {
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -909,6 +918,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-withdrawal-time'
+    | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -1003,6 +1013,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-withdrawal-time'
+    | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -1098,6 +1109,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-withdrawal-time'
+    | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -1194,6 +1206,7 @@ export interface RootRouteChildren {
   JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
+  JitbuzzRoute: typeof JitbuzzRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
   LoginGuideRoute: typeof LoginGuideRoute
@@ -1506,6 +1519,13 @@ declare module '@tanstack/react-router' {
       path: '/live-cricket-betting'
       fullPath: '/live-cricket-betting'
       preLoaderRoute: typeof LiveCricketBettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jitbuzz': {
+      id: '/jitbuzz'
+      path: '/jitbuzz'
+      fullPath: '/jitbuzz'
+      preLoaderRoute: typeof JitbuzzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-withdrawal-time': {
@@ -1956,6 +1976,7 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
+  JitbuzzRoute: JitbuzzRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
   LoginGuideRoute: LoginGuideRoute,
@@ -2004,13 +2025,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
