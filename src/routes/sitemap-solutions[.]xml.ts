@@ -34,6 +34,13 @@ const SOLUTIONS = [
   "/jeetbuzz-com-login",
   "/jeetbuzz-sign-up",
   "/jeetbuzz-apk-download",
+  // Phase B batch 2: problems cluster
+  "/jeetbuzz-withdrawal-pending",
+  "/jeetbuzz-otp-not-received",
+  "/jeetbuzz-account-verification",
+  "/jeetbuzz-app-not-opening",
+  "/jeetbuzz-deposit-failed",
+  "/jeetbuzz-password-reset",
 ];
 
 export const Route = createFileRoute("/sitemap-solutions.xml")({

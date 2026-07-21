@@ -92,6 +92,13 @@ import { Route as JetbuzzRoute } from "@/routes/jetbuzz";
 import { Route as JeetbuzzComLoginRoute } from "@/routes/jeetbuzz-com-login";
 import { Route as JeetbuzzSignUpRoute } from "@/routes/jeetbuzz-sign-up";
 import { Route as JeetbuzzApkDownloadRoute } from "@/routes/jeetbuzz-apk-download";
+// Phase B batch 2: problems cluster
+import { Route as WithdrawalPendingRoute } from "@/routes/jeetbuzz-withdrawal-pending";
+import { Route as OtpNotReceivedRoute } from "@/routes/jeetbuzz-otp-not-received";
+import { Route as AccountVerificationRoute } from "@/routes/jeetbuzz-account-verification";
+import { Route as AppNotOpeningRoute } from "@/routes/jeetbuzz-app-not-opening";
+import { Route as DepositFailedRoute } from "@/routes/jeetbuzz-deposit-failed";
+import { Route as PasswordResetBrandedRoute } from "@/routes/jeetbuzz-password-reset";
 
 export type LocaleMeta = { title: string; description: string };
 
@@ -542,6 +549,46 @@ LOCALIZED_ROUTES.push(
     bn: { title: "JeetBuzz APK ডাউনলোড ২০২৬ — নিরাপদ ইনস্টল" + BRAND_BN, description: "JeetBuzz APK ডাউনলোড — সর্বশেষ ভার্সন, নিরাপদ Android ইনস্টল ও আপডেট পথ।" },
     ur: { title: "JeetBuzz APK Download 2026" + BRAND_UR, description: "Latest JeetBuzz APK download and safe install." },
     hi: { title: "JeetBuzz APK Download 2026" + BRAND_HI, description: "Latest JeetBuzz APK download and safe install." },
+  }, ["bd"]),
+);
+
+// ---- Phase B batch 2: problems cluster (BD-only native BN) ----
+LOCALIZED_ROUTES.push(
+  entry("jeetbuzz-withdrawal-pending", WithdrawalPendingRoute, {
+    en: { title: "JeetBuzz Withdrawal Pending 2026 — Why It's Stuck" + BRAND_EN, description: "The seven real reasons a JeetBuzz withdrawal is stuck on Pending and the live-chat script that unblocks each." },
+    bn: { title: "JeetBuzz উইথড্রয়াল Pending ২০২৬ — কেন আটকে" + BRAND_BN, description: "উইথড্রয়াল Pending থাকার ৭টি আসল কারণ এবং প্রতিটির সমাধান।" },
+    ur: { title: "JeetBuzz Withdrawal Pending 2026" + BRAND_UR, description: "Why a JeetBuzz withdrawal is stuck on Pending and how to fix it." },
+    hi: { title: "JeetBuzz Withdrawal Pending 2026" + BRAND_HI, description: "Why a JeetBuzz withdrawal is stuck on Pending and how to fix it." },
+  }, ["bd"]),
+  entry("jeetbuzz-otp-not-received", OtpNotReceivedRoute, {
+    en: { title: "JeetBuzz OTP Not Received 2026 — Every Cause & Fix" + BRAND_EN, description: "Fix missing JeetBuzz OTP — DND, carrier block, wrong country code, voice-OTP fallback and support escalation." },
+    bn: { title: "JeetBuzz OTP আসছে না ২০২৬ — সমাধান" + BRAND_BN, description: "JeetBuzz OTP না আসার ৬ কারণ এবং প্রতিটির দ্রুত সমাধান।" },
+    ur: { title: "JeetBuzz OTP Not Received 2026" + BRAND_UR, description: "Fix missing JeetBuzz OTP — DND, carrier and voice-OTP fallback." },
+    hi: { title: "JeetBuzz OTP Not Received 2026" + BRAND_HI, description: "Fix missing JeetBuzz OTP — DND, carrier and voice-OTP fallback." },
+  }, ["bd"]),
+  entry("jeetbuzz-account-verification", AccountVerificationRoute, {
+    en: { title: "JeetBuzz Account Verification 2026 — KYC Checklist" + BRAND_EN, description: "Clear JeetBuzz KYC on the first try — required docs, rejection reasons and how to speed up review." },
+    bn: { title: "JeetBuzz অ্যাকাউন্ট Verification ২০২৬ — KYC চেকলিস্ট" + BRAND_BN, description: "প্রথম বারেই JeetBuzz KYC clear করুন — প্রয়োজনীয় document এবং rejection কারণ।" },
+    ur: { title: "JeetBuzz Account Verification 2026" + BRAND_UR, description: "Clear JeetBuzz KYC on the first try." },
+    hi: { title: "JeetBuzz Account Verification 2026" + BRAND_HI, description: "Clear JeetBuzz KYC on the first try." },
+  }, ["bd"]),
+  entry("jeetbuzz-app-not-opening", AppNotOpeningRoute, {
+    en: { title: "JeetBuzz App Not Opening 2026 — Every Crash Fix" + BRAND_EN, description: "Splash freeze, blank screen, crash — the seven real causes of a JeetBuzz app that won't open and the fixes." },
+    bn: { title: "JeetBuzz অ্যাপ খুলছে না ২০২৬ — সমাধান" + BRAND_BN, description: "Splash freeze, blank screen, crash — JeetBuzz অ্যাপ না খোলার ৭ কারণ ও সমাধান।" },
+    ur: { title: "JeetBuzz App Not Opening 2026" + BRAND_UR, description: "Every JeetBuzz app crash cause and fix." },
+    hi: { title: "JeetBuzz App Not Opening 2026" + BRAND_HI, description: "Every JeetBuzz app crash cause and fix." },
+  }, ["bd"]),
+  entry("jeetbuzz-deposit-failed", DepositFailedRoute, {
+    en: { title: "JeetBuzz Deposit Failed 2026 — Debited But Not Credited" + BRAND_EN, description: "Money debited but not credited to JeetBuzz — every cause with the four evidence items support needs to recover it." },
+    bn: { title: "JeetBuzz Deposit Failed ২০২৬ — টাকা কেটেছে কিন্তু credit হয়নি" + BRAND_BN, description: "টাকা কেটেছে কিন্তু credit হয়নি — সব কারণ ও সাপোর্টে যা দরকার।" },
+    ur: { title: "JeetBuzz Deposit Failed 2026" + BRAND_UR, description: "Debited but not credited — every cause and recovery." },
+    hi: { title: "JeetBuzz Deposit Failed 2026" + BRAND_HI, description: "Debited but not credited — every cause and recovery." },
+  }, ["bd"]),
+  entry("jeetbuzz-password-reset", PasswordResetBrandedRoute, {
+    en: { title: "JeetBuzz Password Reset 2026 — Recover in 3 Minutes" + BRAND_EN, description: "Reset your JeetBuzz password via phone OTP or email link in three minutes, plus support escalation when both fail." },
+    bn: { title: "JeetBuzz পাসওয়ার্ড রিসেট ২০২৬ — ৩ মিনিটে recovery" + BRAND_BN, description: "ফোন OTP বা ইমেইল link দিয়ে ৩ মিনিটে JeetBuzz পাসওয়ার্ড reset এবং fallback flow।" },
+    ur: { title: "JeetBuzz Password Reset 2026" + BRAND_UR, description: "Reset your JeetBuzz password via phone OTP or email link." },
+    hi: { title: "JeetBuzz Password Reset 2026" + BRAND_HI, description: "Reset your JeetBuzz password via phone OTP or email link." },
   }, ["bd"]),
 );
 
