@@ -49,6 +49,8 @@ const SOLUTIONS = [
   "/jeetbuzz-bkash-deposit",
   "/jeetbuzz-nagad-withdrawal",
   "/jeetbuzz-minimum-deposit",
+  // Phase B batch 5: cricket + brand consolidation
+  "/jeetbuzz-live-cricket",
 ];
 
 export const Route = createFileRoute("/sitemap-solutions.xml")({
