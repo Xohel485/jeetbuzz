@@ -50,23 +50,29 @@ import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-be
 import { Route as JitbuzzRouteImport } from './routes/jitbuzz'
 import { Route as JetbuzzRouteImport } from './routes/jetbuzz'
 import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
+import { Route as JeetbuzzWithdrawalPendingRouteImport } from './routes/jeetbuzz-withdrawal-pending'
 import { Route as JeetbuzzSignUpRouteImport } from './routes/jeetbuzz-sign-up'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
 import { Route as JeetbuzzReferBonusRouteImport } from './routes/jeetbuzz-refer-bonus'
 import { Route as JeetbuzzPromoCodeRouteImport } from './routes/jeetbuzz-promo-code'
+import { Route as JeetbuzzPasswordResetRouteImport } from './routes/jeetbuzz-password-reset'
+import { Route as JeetbuzzOtpNotReceivedRouteImport } from './routes/jeetbuzz-otp-not-received'
 import { Route as JeetbuzzFirstDepositBonusRouteImport } from './routes/jeetbuzz-first-deposit-bonus'
 import { Route as JeetbuzzDownloadForIosRouteImport } from './routes/jeetbuzz-download-for-ios'
 import { Route as JeetbuzzDownloadForAndroidRouteImport } from './routes/jeetbuzz-download-for-android'
 import { Route as JeetbuzzDepositProblemRouteImport } from './routes/jeetbuzz-deposit-problem'
+import { Route as JeetbuzzDepositFailedRouteImport } from './routes/jeetbuzz-deposit-failed'
 import { Route as JeetbuzzComLoginRouteImport } from './routes/jeetbuzz-com-login'
 import { Route as JeetbuzzAppUpdateRouteImport } from './routes/jeetbuzz-app-update'
+import { Route as JeetbuzzAppNotOpeningRouteImport } from './routes/jeetbuzz-app-not-opening'
 import { Route as JeetbuzzApkDownloadRouteImport } from './routes/jeetbuzz-apk-download'
 import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alternatives'
 import { Route as JeetbuzzAffiliateWithdrawalRouteImport } from './routes/jeetbuzz-affiliate-withdrawal'
 import { Route as JeetbuzzAffiliateSignupRouteImport } from './routes/jeetbuzz-affiliate-signup'
 import { Route as JeetbuzzAffiliateCommissionRateRouteImport } from './routes/jeetbuzz-affiliate-commission-rate'
 import { Route as JeetbuzzAffiliateAppRouteImport } from './routes/jeetbuzz-affiliate-app'
+import { Route as JeetbuzzAccountVerificationRouteImport } from './routes/jeetbuzz-account-verification'
 import { Route as JeetbuzzAccountLockedRouteImport } from './routes/jeetbuzz-account-locked'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
@@ -313,6 +319,12 @@ const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
   path: '/jeetbuzz-withdrawal-time',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzWithdrawalPendingRoute =
+  JeetbuzzWithdrawalPendingRouteImport.update({
+    id: '/jeetbuzz-withdrawal-pending',
+    path: '/jeetbuzz-withdrawal-pending',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const JeetbuzzSignUpRoute = JeetbuzzSignUpRouteImport.update({
   id: '/jeetbuzz-sign-up',
   path: '/jeetbuzz-sign-up',
@@ -338,6 +350,16 @@ const JeetbuzzPromoCodeRoute = JeetbuzzPromoCodeRouteImport.update({
   path: '/jeetbuzz-promo-code',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzPasswordResetRoute = JeetbuzzPasswordResetRouteImport.update({
+  id: '/jeetbuzz-password-reset',
+  path: '/jeetbuzz-password-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzOtpNotReceivedRoute = JeetbuzzOtpNotReceivedRouteImport.update({
+  id: '/jeetbuzz-otp-not-received',
+  path: '/jeetbuzz-otp-not-received',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzFirstDepositBonusRoute =
   JeetbuzzFirstDepositBonusRouteImport.update({
     id: '/jeetbuzz-first-deposit-bonus',
@@ -360,6 +382,11 @@ const JeetbuzzDepositProblemRoute = JeetbuzzDepositProblemRouteImport.update({
   path: '/jeetbuzz-deposit-problem',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzDepositFailedRoute = JeetbuzzDepositFailedRouteImport.update({
+  id: '/jeetbuzz-deposit-failed',
+  path: '/jeetbuzz-deposit-failed',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzComLoginRoute = JeetbuzzComLoginRouteImport.update({
   id: '/jeetbuzz-com-login',
   path: '/jeetbuzz-com-login',
@@ -368,6 +395,11 @@ const JeetbuzzComLoginRoute = JeetbuzzComLoginRouteImport.update({
 const JeetbuzzAppUpdateRoute = JeetbuzzAppUpdateRouteImport.update({
   id: '/jeetbuzz-app-update',
   path: '/jeetbuzz-app-update',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzAppNotOpeningRoute = JeetbuzzAppNotOpeningRouteImport.update({
+  id: '/jeetbuzz-app-not-opening',
+  path: '/jeetbuzz-app-not-opening',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzApkDownloadRoute = JeetbuzzApkDownloadRouteImport.update({
@@ -402,6 +434,12 @@ const JeetbuzzAffiliateAppRoute = JeetbuzzAffiliateAppRouteImport.update({
   path: '/jeetbuzz-affiliate-app',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzAccountVerificationRoute =
+  JeetbuzzAccountVerificationRouteImport.update({
+    id: '/jeetbuzz-account-verification',
+    path: '/jeetbuzz-account-verification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const JeetbuzzAccountLockedRoute = JeetbuzzAccountLockedRouteImport.update({
   id: '/jeetbuzz-account-locked',
   path: '/jeetbuzz-account-locked',
@@ -637,23 +675,29 @@ export interface FileRoutesByFullPath {
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
+  '/jeetbuzz-account-verification': typeof JeetbuzzAccountVerificationRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
   '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-apk-download': typeof JeetbuzzApkDownloadRoute
+  '/jeetbuzz-app-not-opening': typeof JeetbuzzAppNotOpeningRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
   '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
+  '/jeetbuzz-deposit-failed': typeof JeetbuzzDepositFailedRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
   '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-otp-not-received': typeof JeetbuzzOtpNotReceivedRoute
+  '/jeetbuzz-password-reset': typeof JeetbuzzPasswordResetRoute
   '/jeetbuzz-promo-code': typeof JeetbuzzPromoCodeRoute
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
+  '/jeetbuzz-withdrawal-pending': typeof JeetbuzzWithdrawalPendingRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
@@ -736,23 +780,29 @@ export interface FileRoutesByTo {
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
+  '/jeetbuzz-account-verification': typeof JeetbuzzAccountVerificationRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
   '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-apk-download': typeof JeetbuzzApkDownloadRoute
+  '/jeetbuzz-app-not-opening': typeof JeetbuzzAppNotOpeningRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
   '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
+  '/jeetbuzz-deposit-failed': typeof JeetbuzzDepositFailedRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
   '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-otp-not-received': typeof JeetbuzzOtpNotReceivedRoute
+  '/jeetbuzz-password-reset': typeof JeetbuzzPasswordResetRoute
   '/jeetbuzz-promo-code': typeof JeetbuzzPromoCodeRoute
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
+  '/jeetbuzz-withdrawal-pending': typeof JeetbuzzWithdrawalPendingRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
@@ -837,23 +887,29 @@ export interface FileRoutesById {
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
   '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
+  '/jeetbuzz-account-verification': typeof JeetbuzzAccountVerificationRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
   '/jeetbuzz-affiliate-commission-rate': typeof JeetbuzzAffiliateCommissionRateRoute
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
   '/jeetbuzz-apk-download': typeof JeetbuzzApkDownloadRoute
+  '/jeetbuzz-app-not-opening': typeof JeetbuzzAppNotOpeningRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
   '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
+  '/jeetbuzz-deposit-failed': typeof JeetbuzzDepositFailedRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
   '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-otp-not-received': typeof JeetbuzzOtpNotReceivedRoute
+  '/jeetbuzz-password-reset': typeof JeetbuzzPasswordResetRoute
   '/jeetbuzz-promo-code': typeof JeetbuzzPromoCodeRoute
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
+  '/jeetbuzz-withdrawal-pending': typeof JeetbuzzWithdrawalPendingRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
@@ -939,23 +995,29 @@ export interface FileRouteTypes {
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
     | '/jeetbuzz-account-locked'
+    | '/jeetbuzz-account-verification'
     | '/jeetbuzz-affiliate-app'
     | '/jeetbuzz-affiliate-commission-rate'
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
     | '/jeetbuzz-apk-download'
+    | '/jeetbuzz-app-not-opening'
     | '/jeetbuzz-app-update'
     | '/jeetbuzz-com-login'
+    | '/jeetbuzz-deposit-failed'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
     | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-otp-not-received'
+    | '/jeetbuzz-password-reset'
     | '/jeetbuzz-promo-code'
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-sign-up'
+    | '/jeetbuzz-withdrawal-pending'
     | '/jeetbuzz-withdrawal-time'
     | '/jetbuzz'
     | '/jitbuzz'
@@ -1038,23 +1100,29 @@ export interface FileRouteTypes {
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
     | '/jeetbuzz-account-locked'
+    | '/jeetbuzz-account-verification'
     | '/jeetbuzz-affiliate-app'
     | '/jeetbuzz-affiliate-commission-rate'
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
     | '/jeetbuzz-apk-download'
+    | '/jeetbuzz-app-not-opening'
     | '/jeetbuzz-app-update'
     | '/jeetbuzz-com-login'
+    | '/jeetbuzz-deposit-failed'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
     | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-otp-not-received'
+    | '/jeetbuzz-password-reset'
     | '/jeetbuzz-promo-code'
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-sign-up'
+    | '/jeetbuzz-withdrawal-pending'
     | '/jeetbuzz-withdrawal-time'
     | '/jetbuzz'
     | '/jitbuzz'
@@ -1138,23 +1206,29 @@ export interface FileRouteTypes {
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
     | '/jeetbuzz-account-locked'
+    | '/jeetbuzz-account-verification'
     | '/jeetbuzz-affiliate-app'
     | '/jeetbuzz-affiliate-commission-rate'
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
     | '/jeetbuzz-apk-download'
+    | '/jeetbuzz-app-not-opening'
     | '/jeetbuzz-app-update'
     | '/jeetbuzz-com-login'
+    | '/jeetbuzz-deposit-failed'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
     | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-otp-not-received'
+    | '/jeetbuzz-password-reset'
     | '/jeetbuzz-promo-code'
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-sign-up'
+    | '/jeetbuzz-withdrawal-pending'
     | '/jeetbuzz-withdrawal-time'
     | '/jetbuzz'
     | '/jitbuzz'
@@ -1239,23 +1313,29 @@ export interface RootRouteChildren {
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
   JeetbuzzAccountLockedRoute: typeof JeetbuzzAccountLockedRoute
+  JeetbuzzAccountVerificationRoute: typeof JeetbuzzAccountVerificationRoute
   JeetbuzzAffiliateAppRoute: typeof JeetbuzzAffiliateAppRoute
   JeetbuzzAffiliateCommissionRateRoute: typeof JeetbuzzAffiliateCommissionRateRoute
   JeetbuzzAffiliateSignupRoute: typeof JeetbuzzAffiliateSignupRoute
   JeetbuzzAffiliateWithdrawalRoute: typeof JeetbuzzAffiliateWithdrawalRoute
   JeetbuzzAlternativesRoute: typeof JeetbuzzAlternativesRoute
   JeetbuzzApkDownloadRoute: typeof JeetbuzzApkDownloadRoute
+  JeetbuzzAppNotOpeningRoute: typeof JeetbuzzAppNotOpeningRoute
   JeetbuzzAppUpdateRoute: typeof JeetbuzzAppUpdateRoute
   JeetbuzzComLoginRoute: typeof JeetbuzzComLoginRoute
+  JeetbuzzDepositFailedRoute: typeof JeetbuzzDepositFailedRoute
   JeetbuzzDepositProblemRoute: typeof JeetbuzzDepositProblemRoute
   JeetbuzzDownloadForAndroidRoute: typeof JeetbuzzDownloadForAndroidRoute
   JeetbuzzDownloadForIosRoute: typeof JeetbuzzDownloadForIosRoute
   JeetbuzzFirstDepositBonusRoute: typeof JeetbuzzFirstDepositBonusRoute
+  JeetbuzzOtpNotReceivedRoute: typeof JeetbuzzOtpNotReceivedRoute
+  JeetbuzzPasswordResetRoute: typeof JeetbuzzPasswordResetRoute
   JeetbuzzPromoCodeRoute: typeof JeetbuzzPromoCodeRoute
   JeetbuzzReferBonusRoute: typeof JeetbuzzReferBonusRoute
   JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   JeetbuzzSignUpRoute: typeof JeetbuzzSignUpRoute
+  JeetbuzzWithdrawalPendingRoute: typeof JeetbuzzWithdrawalPendingRoute
   JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
   JetbuzzRoute: typeof JetbuzzRoute
   JitbuzzRoute: typeof JitbuzzRoute
@@ -1594,6 +1674,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzWithdrawalTimeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-withdrawal-pending': {
+      id: '/jeetbuzz-withdrawal-pending'
+      path: '/jeetbuzz-withdrawal-pending'
+      fullPath: '/jeetbuzz-withdrawal-pending'
+      preLoaderRoute: typeof JeetbuzzWithdrawalPendingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-sign-up': {
       id: '/jeetbuzz-sign-up'
       path: '/jeetbuzz-sign-up'
@@ -1629,6 +1716,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzPromoCodeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-password-reset': {
+      id: '/jeetbuzz-password-reset'
+      path: '/jeetbuzz-password-reset'
+      fullPath: '/jeetbuzz-password-reset'
+      preLoaderRoute: typeof JeetbuzzPasswordResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-otp-not-received': {
+      id: '/jeetbuzz-otp-not-received'
+      path: '/jeetbuzz-otp-not-received'
+      fullPath: '/jeetbuzz-otp-not-received'
+      preLoaderRoute: typeof JeetbuzzOtpNotReceivedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-first-deposit-bonus': {
       id: '/jeetbuzz-first-deposit-bonus'
       path: '/jeetbuzz-first-deposit-bonus'
@@ -1657,6 +1758,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzDepositProblemRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-deposit-failed': {
+      id: '/jeetbuzz-deposit-failed'
+      path: '/jeetbuzz-deposit-failed'
+      fullPath: '/jeetbuzz-deposit-failed'
+      preLoaderRoute: typeof JeetbuzzDepositFailedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-com-login': {
       id: '/jeetbuzz-com-login'
       path: '/jeetbuzz-com-login'
@@ -1669,6 +1777,13 @@ declare module '@tanstack/react-router' {
       path: '/jeetbuzz-app-update'
       fullPath: '/jeetbuzz-app-update'
       preLoaderRoute: typeof JeetbuzzAppUpdateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-app-not-opening': {
+      id: '/jeetbuzz-app-not-opening'
+      path: '/jeetbuzz-app-not-opening'
+      fullPath: '/jeetbuzz-app-not-opening'
+      preLoaderRoute: typeof JeetbuzzAppNotOpeningRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-apk-download': {
@@ -1711,6 +1826,13 @@ declare module '@tanstack/react-router' {
       path: '/jeetbuzz-affiliate-app'
       fullPath: '/jeetbuzz-affiliate-app'
       preLoaderRoute: typeof JeetbuzzAffiliateAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-account-verification': {
+      id: '/jeetbuzz-account-verification'
+      path: '/jeetbuzz-account-verification'
+      fullPath: '/jeetbuzz-account-verification'
+      preLoaderRoute: typeof JeetbuzzAccountVerificationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-account-locked': {
@@ -2041,23 +2163,29 @@ const rootRouteChildren: RootRouteChildren = {
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
   JeetbuzzAccountLockedRoute: JeetbuzzAccountLockedRoute,
+  JeetbuzzAccountVerificationRoute: JeetbuzzAccountVerificationRoute,
   JeetbuzzAffiliateAppRoute: JeetbuzzAffiliateAppRoute,
   JeetbuzzAffiliateCommissionRateRoute: JeetbuzzAffiliateCommissionRateRoute,
   JeetbuzzAffiliateSignupRoute: JeetbuzzAffiliateSignupRoute,
   JeetbuzzAffiliateWithdrawalRoute: JeetbuzzAffiliateWithdrawalRoute,
   JeetbuzzAlternativesRoute: JeetbuzzAlternativesRoute,
   JeetbuzzApkDownloadRoute: JeetbuzzApkDownloadRoute,
+  JeetbuzzAppNotOpeningRoute: JeetbuzzAppNotOpeningRoute,
   JeetbuzzAppUpdateRoute: JeetbuzzAppUpdateRoute,
   JeetbuzzComLoginRoute: JeetbuzzComLoginRoute,
+  JeetbuzzDepositFailedRoute: JeetbuzzDepositFailedRoute,
   JeetbuzzDepositProblemRoute: JeetbuzzDepositProblemRoute,
   JeetbuzzDownloadForAndroidRoute: JeetbuzzDownloadForAndroidRoute,
   JeetbuzzDownloadForIosRoute: JeetbuzzDownloadForIosRoute,
   JeetbuzzFirstDepositBonusRoute: JeetbuzzFirstDepositBonusRoute,
+  JeetbuzzOtpNotReceivedRoute: JeetbuzzOtpNotReceivedRoute,
+  JeetbuzzPasswordResetRoute: JeetbuzzPasswordResetRoute,
   JeetbuzzPromoCodeRoute: JeetbuzzPromoCodeRoute,
   JeetbuzzReferBonusRoute: JeetbuzzReferBonusRoute,
   JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   JeetbuzzSignUpRoute: JeetbuzzSignUpRoute,
+  JeetbuzzWithdrawalPendingRoute: JeetbuzzWithdrawalPendingRoute,
   JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
   JetbuzzRoute: JetbuzzRoute,
   JitbuzzRoute: JitbuzzRoute,
