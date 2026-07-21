@@ -33,6 +33,10 @@ export const Route = createFileRoute("/bonuses")({
       body={[
         "## Read this first",
         "Every bonus on JeetBuzz has a **rollover** (also called wagering). If a bonus reads \"100% up to 10,000 BDT with 15x rollover\", you must place bets totalling 15 × your bonus amount before the balance can be withdrawn. Wagering is the single most-misunderstood detail — skim it and you will not be able to cash out.",
+        "## Recent updates",
+        "- **2026-07** — Re-verified [Promo Code](/jeetbuzz-promo-code) list and region locks (BD / PK / IN).",
+        "- **2026-07** — Expanded [First Deposit Bonus](/jeetbuzz-first-deposit-bonus) with rollover math and opt-in timing.",
+        "- **2026-06** — Refreshed [Welcome Bonus](/welcome-bonus) with the current cap and eligible-game contribution table.",
         "## The four bonuses that matter",
         "- **[Welcome Bonus](/welcome-bonus)** — first-time players only, opt-in *before* the first deposit.",
         "- **[First Deposit Bonus](/jeetbuzz-first-deposit-bonus)** — match percentage on your very first transfer.",
