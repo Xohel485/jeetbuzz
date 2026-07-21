@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { PAYMENTS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/payments";
 const TITLE = "JeetBuzz Payments Hub — Deposit & Withdraw in BD, PK, India 2026";

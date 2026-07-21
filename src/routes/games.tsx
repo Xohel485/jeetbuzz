@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { GAMES_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/games";
 const TITLE = "JeetBuzz Games Hub — Live Cricket, Casino, Aviator & Slots 2026";

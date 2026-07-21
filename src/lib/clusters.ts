@@ -82,6 +82,46 @@ export const BRAND_CLUSTER: RelatedItem[] = [
   { to: "/jeetbuzz-apk-download", title: "JeetBuzz APK Download", desc: "Latest Android APK with safe install and permission checks." },
 ];
 
+/**
+ * Hub coverage clusters — sourced from the internal-link gap audit
+ * (`.lovable/internal-link-gaps.md`). Each array bridges pages that had
+ * zero inbound hub links so hubs can pass authority downward.
+ */
+export const HELP_CLUSTER: RelatedItem[] = [
+  { to: "/login", title: "Login", desc: "Reach the real JeetBuzz login and avoid fake mirrors." },
+  { to: "/register", title: "Register", desc: "Open a new JeetBuzz account in under three minutes." },
+  { to: "/signup", title: "Signup", desc: "Signup walkthrough with welcome-bonus opt-in." },
+  { to: "/affiliate-login", title: "Affiliate Login", desc: "Partner dashboard sign-in with 2FA." },
+  { to: "/download", title: "Download", desc: "Install the JeetBuzz app on Android or iPhone." },
+  { to: "/android-web-app-guide", title: "Android Web App Guide", desc: "Android PWA install and permission checklist." },
+  { to: "/ios-app-guide", title: "iOS App Guide", desc: "iPhone / iPad install without the App Store." },
+  { to: "/is-jeetbuzz-safe", title: "Is JeetBuzz Safe", desc: "Licensing, security and trust signals." },
+  { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Full editorial review, pros and cons." },
+  { to: "/jeetbuzz-alternatives", title: "JeetBuzz Alternatives", desc: "How JeetBuzz compares to other BD/PK/IN books." },
+  { to: "/security-guide", title: "Security Guide", desc: "2FA, device hygiene and phishing checks." },
+  { to: "/responsible-gaming", title: "Responsible Gaming", desc: "Deposit limits, time-outs and self-exclusion." },
+  { to: "/vip-program", title: "VIP Program", desc: "Loyalty tiers, cashback and dedicated host." },
+  { to: "/agent-earning-guide", title: "Agent Earning Guide", desc: "How sub-agents earn on JeetBuzz." },
+  { to: "/blog", title: "Blog", desc: "Latest guides, updates and cricket coverage." },
+  { to: "/blog/index", title: "Blog Index", desc: "Full archive of published posts." },
+  { to: "/terms", title: "Terms", desc: "User agreement and account terms." },
+  { to: "/privacy-policy", title: "Privacy Policy", desc: "How JeetBuzz handles player data." },
+  { to: "/review-policy", title: "Review Policy", desc: "How our editorial reviews are produced." },
+  { to: "/update-policy", title: "Update Policy", desc: "How and when guides are refreshed." },
+];
+
+export const PAYMENTS_CLUSTER: RelatedItem[] = [
+  { to: "/deposit-withdrawal-guide", title: "Deposit & Withdrawal Guide", desc: "End-to-end cashier walkthrough for both directions." },
+  { to: "/withdrawal-guide", title: "Withdrawal Guide", desc: "Cash-out steps, KYC checkpoints and payout timing." },
+  { to: "/jeetbuzz-bkash-deposit", title: "bKash Deposit", desc: "bKash-specific cashier flow and name-match rules." },
+  { to: "/jeetbuzz-nagad-withdrawal", title: "Nagad Withdrawal", desc: "Nagad payout walk-through with realistic timing." },
+  { to: "/jeetbuzz-minimum-deposit", title: "Minimum Deposit", desc: "Smallest amount you can fund per rail." },
+];
+
+export const GAMES_CLUSTER: RelatedItem[] = [
+  { to: "/jeetbuzz-live-cricket", title: "JeetBuzz Live Cricket", desc: "Brand-focused live cricket streaming and in-play markets." },
+];
+
 /** Return cluster siblings, excluding the current page. */
 export function siblings(cluster: RelatedItem[], currentPath: string): RelatedItem[] {
   return cluster.filter((item) => item.to !== currentPath);
