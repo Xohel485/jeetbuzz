@@ -50,6 +50,7 @@ import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-be
 import { Route as JitbuzzRouteImport } from './routes/jitbuzz'
 import { Route as JetbuzzRouteImport } from './routes/jetbuzz'
 import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
+import { Route as JeetbuzzSignUpRouteImport } from './routes/jeetbuzz-sign-up'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
 import { Route as JeetbuzzReferBonusRouteImport } from './routes/jeetbuzz-refer-bonus'
@@ -309,6 +310,11 @@ const JetbuzzRoute = JetbuzzRouteImport.update({
 const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
   id: '/jeetbuzz-withdrawal-time',
   path: '/jeetbuzz-withdrawal-time',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzSignUpRoute = JeetbuzzSignUpRouteImport.update({
+  id: '/jeetbuzz-sign-up',
+  path: '/jeetbuzz-sign-up',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
@@ -640,6 +646,7 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
@@ -737,6 +744,7 @@ export interface FileRoutesByTo {
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
@@ -836,6 +844,7 @@ export interface FileRoutesById {
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
@@ -936,6 +945,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-time'
     | '/jetbuzz'
     | '/jitbuzz'
@@ -1033,6 +1043,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-time'
     | '/jetbuzz'
     | '/jitbuzz'
@@ -1131,6 +1142,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-time'
     | '/jetbuzz'
     | '/jitbuzz'
@@ -1230,6 +1242,7 @@ export interface RootRouteChildren {
   JeetbuzzReferBonusRoute: typeof JeetbuzzReferBonusRoute
   JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
+  JeetbuzzSignUpRoute: typeof JeetbuzzSignUpRoute
   JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
   JetbuzzRoute: typeof JetbuzzRoute
   JitbuzzRoute: typeof JitbuzzRoute
@@ -1566,6 +1579,13 @@ declare module '@tanstack/react-router' {
       path: '/jeetbuzz-withdrawal-time'
       fullPath: '/jeetbuzz-withdrawal-time'
       preLoaderRoute: typeof JeetbuzzWithdrawalTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-sign-up': {
+      id: '/jeetbuzz-sign-up'
+      path: '/jeetbuzz-sign-up'
+      fullPath: '/jeetbuzz-sign-up'
+      preLoaderRoute: typeof JeetbuzzSignUpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-review': {
@@ -2016,6 +2036,7 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzReferBonusRoute: JeetbuzzReferBonusRoute,
   JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
+  JeetbuzzSignUpRoute: JeetbuzzSignUpRoute,
   JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
   JetbuzzRoute: JetbuzzRoute,
   JitbuzzRoute: JitbuzzRoute,
