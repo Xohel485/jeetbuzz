@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "./SectionHeader";
@@ -9,16 +8,19 @@ const FEATURED_POSTS = [
     slug: "jeetbuzz-registration-guide-bangladesh",
     title: "JeetBuzz Registration Guide for Bangladesh (2026)",
     desc: "A clean, screenshot-friendly walkthrough of signing up from Bangladesh.",
+    cta: "Open the walkthrough",
   },
   {
     slug: "jeetbuzz-bkash-nagad-deposit-guide",
     title: "Deposit on JeetBuzz with bKash, Nagad & Rocket",
     desc: "Minimums, fees, processing times and what to do if a deposit fails.",
+    cta: "Compare deposit rails",
   },
   {
     slug: "is-jeetbuzz-safe-bangladesh",
     title: "Is JeetBuzz Safe for Bangladeshi Players?",
-    desc: "Licensing, KYC, withdrawals and red flags — an independent take.",
+    desc: "Licensing, KYC, withdrawals and red flags. An independent take.",
+    cta: "See the trust verdict",
   },
 ];
 
@@ -33,12 +35,15 @@ export default function BlogSection() {
               key={p.slug}
               to="/blog/$slug"
               params={{ slug: p.slug }}
-              className="glass group flex h-full flex-col p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40"
+              className="group flex h-full flex-col rounded-2xl bg-white/[0.03] p-6 transition-colors hover:bg-white/[0.06]"
             >
-              <h3 className="text-base font-semibold leading-snug md:text-lg">{p.title}</h3>
+              <span className="text-[11px] uppercase tracking-[0.14em] text-primary/80">
+                Guide article
+              </span>
+              <h3 className="mt-3 text-base font-semibold leading-snug md:text-lg">{p.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
-              <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                Read article <ArrowRight className="size-4 transition group-hover:translate-x-1" />
+              <span className="mt-5 text-sm font-medium text-foreground/90 group-hover:text-primary">
+                {p.cta}
               </span>
             </Link>
           ))}
