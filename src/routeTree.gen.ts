@@ -48,6 +48,7 @@ import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JitbuzzRouteImport } from './routes/jitbuzz'
+import { Route as JetbuzzRouteImport } from './routes/jetbuzz'
 import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
@@ -297,6 +298,11 @@ const LiveCricketBettingRoute = LiveCricketBettingRouteImport.update({
 const JitbuzzRoute = JitbuzzRouteImport.update({
   id: '/jitbuzz',
   path: '/jitbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JetbuzzRoute = JetbuzzRouteImport.update({
+  id: '/jetbuzz',
+  path: '/jetbuzz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
@@ -628,6 +634,7 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -723,6 +730,7 @@ export interface FileRoutesByTo {
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -820,6 +828,7 @@ export interface FileRoutesById {
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
@@ -918,6 +927,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-withdrawal-time'
+    | '/jetbuzz'
     | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
@@ -1013,6 +1023,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-withdrawal-time'
+    | '/jetbuzz'
     | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
@@ -1109,6 +1120,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
     | '/jeetbuzz-withdrawal-time'
+    | '/jetbuzz'
     | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
@@ -1206,6 +1218,7 @@ export interface RootRouteChildren {
   JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
   JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
+  JetbuzzRoute: typeof JetbuzzRoute
   JitbuzzRoute: typeof JitbuzzRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
@@ -1526,6 +1539,13 @@ declare module '@tanstack/react-router' {
       path: '/jitbuzz'
       fullPath: '/jitbuzz'
       preLoaderRoute: typeof JitbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jetbuzz': {
+      id: '/jetbuzz'
+      path: '/jetbuzz'
+      fullPath: '/jetbuzz'
+      preLoaderRoute: typeof JetbuzzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-withdrawal-time': {
@@ -1976,6 +1996,7 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
   JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
+  JetbuzzRoute: JetbuzzRoute,
   JitbuzzRoute: JitbuzzRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
