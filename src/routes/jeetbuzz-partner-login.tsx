@@ -4,8 +4,8 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-partner-login";
-const TITLE = "JeetBuzz Affiliate Login & Password 2026 — Partner Dashboard";
-const DESC = "JeetBuzz affiliate / partner login for 2026 — official URL, password recovery, 2FA setup, blocked-region workaround and phishing guardrails for the dashboard.";
+const TITLE = "JeetBuzz Affiliate Login & Password Recovery 2026 — Partner Dashboard";
+const DESC = "JeetBuzz affiliate / partner login 2026 — forgot password recovery, password reset via email link, 2FA reset, account recovery, Telegram support escalation and phishing guardrails.";
 
 export const Route = createFileRoute("/jeetbuzz-partner-login")({
   head: () => ({
@@ -51,6 +51,30 @@ export const Route = createFileRoute("/jeetbuzz-partner-login")({
         "4. Click the link and set a new password — 14+ characters, unique, stored in a password manager.",
         "5. Log in again. All existing sessions on other devices are terminated automatically.",
         "If the email doesn't arrive, verify the address you used at signup and check whether your inbox is quota-full. The general [password reset](/jeetbuzz-password-reset) walkthrough applies identically to partner accounts.",
+        "## Password reset — a dedicated walkthrough",
+        "'Forgot Password' sends a **single-use reset link** valid for 30 minutes. If it expires before you click, request another — old links are invalidated as soon as a new one is sent.",
+        "1. Open the partner login. Tap **Forgot Password**.",
+        "2. Enter your affiliate signup email. Case does not matter; a trailing space does.",
+        "3. Watch your inbox for a sender ending in the official JeetBuzz domain. Check Spam and Promotions.",
+        "4. Click the link **from the device you'll log in on** (some browsers strip the token on cross-device copy-paste).",
+        "5. Set a new password: 14+ characters, unique, mix of case + digits + one symbol. Store in a password manager immediately.",
+        "6. The reset flow logs you in automatically on the current device and terminates every other session.",
+        "If the same account keeps requesting resets and never receiving mail, the problem is almost always on the inbox side — quota full, aggressive spam filter, or an email alias that no longer forwards. Fix that first, then reset once more.",
+        "## Account recovery — when reset alone is not enough",
+        "Standard reset assumes you can access the signup email. When you cannot — inbox lost, phone stolen with authenticator, or account locked after failed logins — the flow is:",
+        "1. From a clean device, open the partner login and tap **Need help signing in?** (below the password field).",
+        "2. Provide the affiliate account ID (visible on any past commission email) and the last payout reference.",
+        "3. Submit a live selfie holding your NID / CNIC / Aadhaar. The same document used at signup.",
+        "4. Wait 24–72 hours for the affiliate-support identity team to re-issue access. They will email a temporary password to a recovery email you nominate.",
+        "5. Log in with the temporary password, immediately change it, re-enable 2FA and generate new recovery codes.",
+        "Never accept a 'recovery' service offered by anyone in a Telegram or WhatsApp DM — the recovery flow is entirely inside JeetBuzz support. External help is a phishing pattern.",
+        "## Telegram support — the safe way to use it",
+        "JeetBuzz maintains official Telegram channels for affiliate announcements, but **not** for login recovery. Rules:",
+        "- The **only** trustworthy Telegram handle is the one linked from inside your logged-in affiliate dashboard, or from your original affiliate signup email.",
+        "- Official support never asks for your password, 2FA code, recovery codes, or NID over Telegram. Any request for those is a scam — block and report.",
+        "- For a login issue, message the official handle with: your affiliate account ID, the exact error message, a timestamp (with timezone), and a screenshot with sensitive fields blurred. Nothing more.",
+        "- Announcements about 'new login URL' or 'urgent verification' pushed via Telegram groups are the single most common partner-phishing vector. Verify by logging in from your bookmark first; if the bookmark works, the alert was fake.",
+        "For anything that can wait 24 hours, use the in-dashboard support ticket instead — it creates a written record tied to your account ID.",
         "## What to do if 2FA is blocking you",
         "- **Phone lost, recovery codes safe** — enter a recovery code in place of the 6-digit code, then immediately regenerate 2FA on a new device from the dashboard.",
         "- **Phone lost and no recovery codes** — contact affiliate support with your NID, a live selfie and your last payout reference. Identity re-verification takes 24–72 hours.",
@@ -144,6 +168,10 @@ export const Route = createFileRoute("/jeetbuzz-partner-login")({
         { q: "What if I lost my 2FA phone and recovery codes?", a: "Contact affiliate support with NID, a live selfie holding it and your last payout reference. Identity re-verification takes 24–72 hours." },
         { q: "Why won't the login URL load in my browser?", a: "Almost always a local ISP or corporate network filter — try mobile data or the mobile app. Never trust an unofficial 'mirror' URL from social media." },
         { q: "Can affiliate commission ever be paid out without logging in?", a: "No. Every payout is initiated from inside the dashboard, which requires a login. Anyone offering a 'payout' outside the dashboard is running a scam." },
+        { q: "How do I recover a partner account when I lost both the password and the 2FA phone?", a: "Use 'Need help signing in?' on the login screen. Provide the affiliate account ID, last payout reference and a live selfie holding your NID/CNIC/Aadhaar. Support re-issues access in 24–72 hours via a temporary password to a recovery email you nominate." },
+        { q: "Does JeetBuzz have official Telegram support for the partner login?", a: "There is an official Telegram announcement channel linked from inside the affiliate dashboard, but login recovery is handled through the site's password-reset flow and the identity team — never via a chat DM. Anyone offering account recovery on Telegram is phishing." },
+        { q: "How long is the Forgot Password reset link valid?", a: "30 minutes from send. If it expires, request another — old links are invalidated the moment a new one is issued." },
+        { q: "The reset email never arrives — what now?", a: "Check Spam / Promotions, verify inbox quota, and confirm the email you used at affiliate signup. If mail was forwarding from an alias that no longer exists, restore the alias first, then reset once more." },
       ]}
       faqsByLocale={{
         bn: [

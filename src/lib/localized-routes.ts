@@ -46,6 +46,7 @@ import { Route as VipProgramRoute } from "@/routes/vip-program";
 import { Route as CasinoGuideRoute } from "@/routes/casino-guide";
 import { Route as SportsBettingRoute } from "@/routes/sports-betting";
 import { Route as LiveCricketBettingRoute } from "@/routes/live-cricket-betting";
+import { Route as JeetbuzzLiveCricketRoute } from "@/routes/jeetbuzz-live-cricket";
 import { Route as DepositWithdrawalGuideRoute } from "@/routes/deposit-withdrawal-guide";
 import { Route as DepositGuideRoute } from "@/routes/deposit-guide";
 import { Route as WithdrawalGuideRoute } from "@/routes/withdrawal-guide";
@@ -643,6 +644,12 @@ LOCALIZED_ROUTES.push(
     bn: { title: "JeetBuzz Minimum Deposit ২০২৬ — প্রথম ১০০, পরের ২০০" + BRAND_BN, description: "প্রথম BDT ১০০, পরের ২০০ — per-rail threshold ও bonus minimum।" },
     ur: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_UR, description: "JeetBuzz minimum deposit — per-rail and bonus thresholds." },
     hi: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_HI, description: "JeetBuzz minimum deposit — per-rail and bonus thresholds." },
+  }, ["bd"]),
+  entry("jeetbuzz-live-cricket", JeetbuzzLiveCricketRoute, {
+    en: { title: "JeetBuzz Live Cricket 2026 — BPL, IPL, PSL In-Play Markets" + BRAND_EN, description: "JeetBuzz live cricket in-play markets — BPL, IPL, PSL, cash-out timing, ball-by-ball settlement and market strategy." },
+    bn: { title: "JeetBuzz Live Cricket ২০২৬ — BPL, IPL, PSL In-Play" + BRAND_BN, description: "JeetBuzz লাইভ ক্রিকেট in-play market, cash-out timing ও কৌশল।" },
+    ur: { title: "JeetBuzz Live Cricket 2026" + BRAND_UR, description: "JeetBuzz live cricket in-play markets and strategy." },
+    hi: { title: "JeetBuzz Live Cricket 2026" + BRAND_HI, description: "JeetBuzz live cricket in-play markets and strategy." },
   }, ["bd"]),
 );
 

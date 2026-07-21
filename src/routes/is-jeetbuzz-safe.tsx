@@ -4,9 +4,9 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 
 const PATH = "/is-jeetbuzz-safe";
 const TITLE =
-  "Is JeetBuzz Safe & Legit in Bangladesh 2026? Full Trust & License Review";
+  "Is JeetBuzz Safe? 2026 Trust, License, Security & Responsible Gaming Guide";
 const DESC =
-  "Is JeetBuzz safe and legit in Bangladesh, Pakistan and India in 2026? Independent trust analysis — Curacao license, payouts, KYC, complaints and red flags.";
+  "Is JeetBuzz safe in 2026? Dedicated trust page — Curacao license verification, account security controls, data handling, responsible gaming tools and dispute escalation. For the full editorial verdict, see the JeetBuzz Review.";
 
 export const Route = createFileRoute("/is-jeetbuzz-safe")({
   head: () => ({
@@ -23,14 +23,14 @@ export const Route = createFileRoute("/is-jeetbuzz-safe")({
   }),
   component: () => (
     <GuidePage
-      eyebrow="Trust & Safety"
-      title={<>Is <span className="gold-text">JeetBuzz Safe & Legit</span> in Bangladesh?</>}
+      eyebrow="Trust · Security · Responsible Gaming"
+      title={<>Is <span className="gold-text">JeetBuzz Safe</span>? License, Security & Responsible Gaming</>}
       titleByLocale={{
         bn: <>জিতবাজ কি বাংলাদেশে <span className="gold-text">নিরাপদ ও বিশ্বস্ত</span>?</>,
         ur: <>کیا JeetBuzz پاکستان میں <span className="gold-text">محفوظ اور قانونی</span> ہے؟</>,
         hi: <>क्या JeetBuzz भारत में <span className="gold-text">सुरक्षित और भरोसेमंद</span> है?</>,
       }}
-      subtitle="An independent 2026 trust review of JeetBuzz — license, payout track record, KYC, complaint patterns and the red flags every BD, PK and IN player should check before depositing."
+      subtitle="A trust and security-first look at JeetBuzz — licensing authority, encryption and account controls, KYC/data handling, and the responsible-gaming tools every BD, PK and IN player should switch on. For payout speed, bonus mechanics and our editorial verdict, see the full [JeetBuzz Review](/jeetbuzz-review)."
       subtitleByLocale={{
         bn: "JeetBuzz এর ২০২৬ স্বাধীন ট্রাস্ট রিভিউ — লাইসেন্স, পেআউট রেকর্ড, KYC, অভিযোগ ও সতর্কতা চিহ্ন।",
         ur: "JeetBuzz کا 2026 آزاد جائزہ — لائسنس، ادائیگیوں کا ریکارڈ، KYC، شکایات اور خطرے کے نشانات۔",
@@ -50,15 +50,34 @@ export const Route = createFileRoute("/is-jeetbuzz-safe")({
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
-        "> **Quick summary:** JeetBuzz is licensed offshore by Curaçao (Antillephone N.V.) and has a multi-year payout record across BD, PK and IN. It is **not** licensed by the BTRC, PTA or any Indian state — legal responsibility sits with you under local law. Most 'withdrawal stuck' complaints trace back to KYC, unfinished bonus wagering or wallet-name mismatch — not unprovoked seizures. Use the official APK and avoid Telegram 'agents'.",
-        "## Short answer",
-        "Yes — JeetBuzz operates under a Curaçao eGaming licence and has a multi-year payout track record across Bangladesh, Pakistan and India. Treat it as an offshore-licensed sportsbook, not a domestically regulated one.",
+        "> **This page is about safety only.** Licence, encryption, account controls and responsible-gaming tools — the things that decide whether the platform is safe *for you*. Deposit speed, bonus quality and the editorial rating live on the [JeetBuzz Review](/jeetbuzz-review) page so the two do not compete for the same query.",
+        "## The safety verdict in one paragraph",
+        "JeetBuzz operates under a Curaçao eGaming licence (Antillephone N.V.) with a multi-year payout record across BD, PK and IN. It is **not** licensed by the BTRC, PTA or any Indian state — legal responsibility sits with you under local law. Safety on the platform is real but conditional: use the official app, complete KYC before large deposits, enable 2FA, and never share credentials with anyone claiming to be a Telegram 'agent'.",
         "## Licensing",
         "JeetBuzz is licensed by the Government of Curacao (Antillephone N.V. / Curacao Gaming Control Board). This is a standard offshore licence used by most operators serving South Asia. It is not a domestic licence in Bangladesh, Pakistan or India — none of those countries currently issue real-money online casino licences to foreign operators.",
+        "### How to verify the licence yourself",
+        "1. On the operator homepage, scroll to the footer and open the licence seal.",
+        "2. The seal opens the Antillephone / GCB validation page for the licence number.",
+        "3. Confirm the licensee entity name matches what the site claims. If the seal does not open a validator, treat that as a red flag and do not deposit.",
+        "## Account security controls you should switch on",
+        "- **Two-factor authentication (2FA)** — Account → Security. Use an authenticator app, store the 8 recovery codes offline. This is the single highest-impact safety toggle.",
+        "- **Login alerts** — email on every new-device login. Enables you to catch account takeover within minutes.",
+        "- **Session timeout** — reduce from the default to 30 minutes on shared or mobile devices.",
+        "- **Withdrawal-only wallet binding** — lock cash-outs to a single verified wallet/name so a compromised session cannot reroute funds.",
+        "- **Unique password + password manager** — treat the account like online banking, not like a game login. See [Login Security](/login-security).",
+        "## Data handling and KYC",
+        "KYC documents (NID / CNIC / Aadhaar or PAN, selfie holding it, phone verification) are uploaded through the in-app KYC panel only. **JeetBuzz never asks for KYC over Telegram, WhatsApp, Facebook or email** — every request outside the app is impersonation. Submit sharp photos in good light to avoid rejection cycles that leave documents unnecessarily in a review queue.",
+        "## Encryption and transport",
+        "All player-facing pages run over HTTPS with modern TLS. Payment rails (bKash / Nagad / JazzCash / EasyPaisa / UPI) settle through the provider's own encrypted gateway; the operator never sees your MFS PIN. Any login screen that asks for a bKash or JazzCash PIN is not JeetBuzz.",
+        "## Responsible-gaming tools",
+        "Account → Responsible Play exposes four controls every player should know about, whether or not they think they need them today:",
+        "- **Deposit limits** — daily, weekly, monthly caps. Setting one is instant; raising it takes 24 hours.",
+        "- **Loss limits** — caps net losses across a rolling window.",
+        "- **Session reminders** — a pop-up every 30 / 60 minutes of active play.",
+        "- **Time-out and self-exclusion** — 24 hours, 7 days, 30 days, or 6+ months. Self-exclusion blocks new deposits and marketing across every device tied to your KYC.",
+        "See [Responsible Gaming](/responsible-gaming) for the full support-contact list — 18+ only, and gambling should never be treated as a source of income.",
         "## Payout track record",
         "bKash, Nagad and Rocket withdrawals for BD players typically clear within a few hours after KYC. EasyPaisa / JazzCash for PK and UPI / PhonePe for IN are usually same-day. Large withdrawals (above ~50,000 BDT / 30,000 PKR / 25,000 INR) often trigger a manual review — this is normal.",
-        "## KYC & data handling",
-        "Standard KYC: NID (BD) / CNIC (PK) / Aadhaar or PAN (IN), a selfie holding the document, and proof of the registered phone. Submit clear photos in good light to avoid back-and-forth. Never send KYC documents over Telegram or WhatsApp to anyone claiming to be a JeetBuzz agent — use only the in-app upload.",
         "## Common complaints (and what they really mean)",
         "- 'Withdrawal stuck' — almost always incomplete KYC, an active bonus with unfinished wagering, or a wallet/account name mismatch.",
         "- 'Account locked' — usually triggered by multi-account attempts, VPN use during deposit, or shared device login.",
@@ -67,8 +86,12 @@ export const Route = createFileRoute("/is-jeetbuzz-safe")({
         "- Any 'JeetBuzz agent' on Telegram offering deposit help or higher bonuses — these are scams.",
         "- APK files downloaded from third-party sites. Use the [official APK guide](/apk-download-guide) only.",
         "- Mirror sites with slightly different spellings (jeet-buzz, jeetbuzzbd-app, etc.). Confirm the URL via our [login guide](/login-guide).",
-        "## Our verdict",
-        "JeetBuzz is one of the more trustworthy offshore operators serving the BD / PK / IN market in 2026. Combine it with strong account hygiene (2FA, official APK, single account, complete KYC before depositing big) and the platform is safe to use within its limits.",
+        "## Dispute escalation",
+        "1. Open a support ticket from inside the app — screenshot the ticket number.",
+        "2. Email the official support address referencing the ticket ID.",
+        "3. If unresolved after 30 days, file a complaint with the **Curaçao Gaming Control Board** referencing your account ID and ticket number. This is the enforceable escalation route granted by the licence.",
+        "## For the editorial rating and payout speed",
+        "This page intentionally does not repeat what belongs on the review. For the 4.6/5 rating, deposit and withdrawal benchmarks across Dhaka / Karachi / Mumbai, and the head-to-head with alternative operators, read the full **[JeetBuzz Review](/jeetbuzz-review)**.",
         "> Reminder: 18+ only. Gambling can be addictive. See our [responsible gaming](/responsible-gaming) page if betting is no longer fun.",
       ]}
       bodyByLocale={{
