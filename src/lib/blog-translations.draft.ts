@@ -1,5 +1,5 @@
 /**
- * STAGED blog translation drafts — NOT SERVED ON THE LIVE SITE.
+ * STAGED blog translation drafts. NOT SERVED ON THE LIVE SITE.
  *
  * Purpose: provide a structured starter draft of every blog post in
  * Bengali (bn), Urdu (ur) and Hindi (hi) for a native reviewer to
@@ -42,9 +42,9 @@ export type BlogDraftTranslation = {
 };
 
 const LEAD_PREFIX: Record<DraftLocale, string> = {
-  bn: "এই গাইডটি — ",
-  ur: "یہ گائیڈ — ",
-  hi: "यह गाइड — ",
+  bn: "এই গাইডটি, ",
+  ur: "یہ گائیڈ, ",
+  hi: "यह गाइड, ",
 };
 
 function titleFor(post: BlogPost, locale: DraftLocale): string {
@@ -58,9 +58,9 @@ function titleFor(post: BlogPost, locale: DraftLocale): string {
 
 function descFor(post: BlogPost, locale: DraftLocale): string {
   const map: Record<DraftLocale, string> = {
-    bn: `${post.description} — বাংলায় সম্পূর্ণ গাইড, রিভিউয়ের জন্য খসড়া।`,
-    ur: `${post.description} — اردو میں مکمل گائیڈ، نظرثانی کے لیے مسودہ۔`,
-    hi: `${post.description} — हिंदी में पूरी गाइड, समीक्षा के लिए मसौदा।`,
+    bn: `${post.description}, বাংলায় সম্পূর্ণ গাইড, রিভিউয়ের জন্য খসড়া।`,
+    ur: `${post.description}, اردو میں مکمل گائیڈ، نظرثانی کے لیے مسودہ۔`,
+    hi: `${post.description}, हिंदी में पूरी गाइड, समीक्षा के लिए मसौदा।`,
   };
   return map[locale];
 }

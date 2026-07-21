@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "JeetBuzz 2026 guide for Bangladesh, Pakistan and India — login links, signup, welcome bonus, APK install, bKash/Nagad/UPI deposits and live cricket markets.",
+          "JeetBuzz 2026 guide for Bangladesh, Pakistan and India, login links, signup, welcome bonus, APK install, bKash/Nagad/UPI deposits and live cricket markets.",
       },
       {
         property: "og:title",
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "JeetBuzz 2026 guide for Bangladesh, Pakistan and India — login, signup, welcome bonus, APK download, bKash/Nagad/UPI deposits and BPL/IPL cricket markets.",
+          "JeetBuzz 2026 guide for Bangladesh, Pakistan and India, login, signup, welcome bonus, APK download, bKash/Nagad/UPI deposits and BPL/IPL cricket markets.",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: imageAbsoluteUrl("hero") },
@@ -42,8 +42,7 @@ export const Route = createFileRoute("/")({
         imageSizes: "(max-width: 768px) 100vw, 1200px",
         fetchPriority: "high",
       },
-      canonicalLink("/"),
-      ...hreflangLinks(""),
+      canonicalLink("/")...hreflangLinks(""),
     ],
     scripts: [
       {
@@ -54,9 +53,9 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify(
           articleSchema({
-            headline: "JeetBuzz — Login, Registration & Review for Bangladesh, Pakistan, India",
+            headline: "JeetBuzz. Login, Registration & Review for Bangladesh, Pakistan, India",
             description:
-              "JeetBuzz handbook for Bangladesh, Pakistan and India — signup, login, bonuses, app, payments and live cricket.",
+              "JeetBuzz handbook for Bangladesh, Pakistan and India, signup, login, bonuses, app, payments and live cricket.",
             path: "/",
             image: imageAbsoluteUrl("hero"),
           }),

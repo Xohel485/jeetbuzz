@@ -94,7 +94,7 @@ const en: Dict = {
   "hero.title.lead": "JeetBuzz Login, Signup & Bonus Guide —",
   "hero.title.highlight": "Bangladesh, Pakistan & India",
   "hero.subtitle":
-    "JeetBuzz makes it simple — open a JeetBuzz account in 3 minutes, deposit from 200 BDT via bKash, Nagad or UPI, and bet live on BPL, IPL and PSL. Step-by-step JeetBuzz login, JeetBuzz APK and JeetBuzz withdrawal guides written by South-Asian punters. Curaçao-licensed JeetBuzz partner with 24/7 Bengali support.",
+    "JeetBuzz makes it simple, open a JeetBuzz account in 3 minutes, deposit from 200 BDT via bKash, Nagad or UPI, and bet live on BPL, IPL and PSL. Step-by-step JeetBuzz login, JeetBuzz APK and JeetBuzz withdrawal guides written by South-Asian punters. Curaçao-licensed JeetBuzz partner with 24/7 Bengali support.",
   "hero.cta.join": "Join JeetBuzz Now",
   "hero.cta.login": "JeetBuzz Login",
   "hero.markets.label": "Available in:",
@@ -151,14 +151,14 @@ const en: Dict = {
   "footer.trust.license.desc": "Regulators and licences covering the operator.",
   "footer.trust.rg": "Responsible gaming",
   "footer.trust.rg.desc": "Player-protection bodies and age-gating standards we follow.",
-  "footer.blog.latest": "JeetBuzz Blog — Latest Guides",
+  "footer.blog.latest": "JeetBuzz Blog. Latest Guides",
   "footer.blog.viewall": "View all",
   "footer.post.registration_bd": "JeetBuzz Registration Guide for Bangladesh (2026)",
-  "footer.post.login": "JeetBuzz Login Guide — Safe Access from Bangladesh",
-  "footer.post.apk": "JeetBuzz APK Download — Safe Install Guide",
-  "footer.post.bonus_terms": "JeetBuzz Bonus Terms — What the Fine Print Actually Means",
+  "footer.post.login": "JeetBuzz Login Guide. Safe Access from Bangladesh",
+  "footer.post.apk": "JeetBuzz APK Download. Safe Install Guide",
+  "footer.post.bonus_terms": "JeetBuzz Bonus Terms. What the Fine Print Actually Means",
   "footer.post.bkash_nagad": "JeetBuzz Deposits with bKash, Nagad & Rocket",
-  "footer.post.live_cricket": "JeetBuzz Live Cricket Betting — A Practical Guide",
+  "footer.post.live_cricket": "JeetBuzz Live Cricket Betting. A Practical Guide",
 
   // Footer social links
   "footer.socials.title": "Official Socials",
@@ -172,7 +172,7 @@ const en: Dict = {
   // Shared UI
   "support.need_help": "Need help?",
   "support.body":
-    "We are an editorial guide — not JeetBuzz support. For account issues use JeetBuzz live chat. For editorial questions:",
+    "We are an editorial guide, not JeetBuzz support. For account issues use JeetBuzz live chat. For editorial questions:",
   "support.open_contact": "Open contact page",
   "support.close_aria": "Close",
   "support.open_aria": "Open support",
@@ -182,9 +182,9 @@ const en: Dict = {
   "cta.login_full": "Visit Official JeetBuzz Login",
   "disclosure.label": "Affiliate disclosure:",
   "disclosure.banner":
-    "GetJeetBuzz.com is a verified affiliate partner of JeetBuzz for Bangladesh, Pakistan and India — we hold a real commission agreement with the operator, but this site is not the JeetBuzz platform itself. Account signup, deposits and withdrawals happen on JeetBuzz's own site. We may earn commission when you sign up through our outbound links, at no extra cost to you. 18+ only.",
+    "GetJeetBuzz.com is a verified affiliate partner of JeetBuzz for Bangladesh, Pakistan and India, we hold a real commission agreement with the operator, but this site is not the JeetBuzz platform itself. Account signup, deposits and withdrawals happen on JeetBuzz's own site. We may earn commission when you sign up through our outbound links, at no extra cost to you. 18+ only.",
   "disclosure.inline":
-    "Affiliate disclosure: GetJeetBuzz is a verified affiliate partner of JeetBuzz — not the JeetBuzz platform itself. We may earn a commission when you sign up via our outbound links, at no extra cost to you.",
+    "Affiliate disclosure: GetJeetBuzz is a verified affiliate partner of JeetBuzz, not the JeetBuzz platform itself. We may earn a commission when you sign up via our outbound links, at no extra cost to you.",
 };
 
 const bn: Dict = {
@@ -203,7 +203,7 @@ const bn: Dict = {
   "hero.title.lead": "জিতবাজ লগইন, সাইন আপ ও বোনাস গাইড —",
   "hero.title.highlight": "বাংলাদেশ · পাকিস্তান · ভারত",
   "hero.subtitle":
-    "জিতবাজে ৩ মিনিটে অ্যাকাউন্ট খুলুন, ২০০ টাকা থেকে bKash/Nagad/Rocket-এ জিতবাজ ডিপোজিট করুন এবং BPL, IPL ও PSL-এ লাইভ বেট করুন। ধাপে ধাপে জিতবাজ লগইন, জিতবাজ APK ও জিতবাজ উইথড্রয়াল গাইড — Curaçao লাইসেন্সপ্রাপ্ত জিতবাজ পার্টনার, ২৪/৭ বাংলা সাপোর্ট।",
+    "জিতবাজে ৩ মিনিটে অ্যাকাউন্ট খুলুন, ২০০ টাকা থেকে bKash/Nagad/Rocket-এ জিতবাজ ডিপোজিট করুন এবং BPL, IPL ও PSL-এ লাইভ বেট করুন। ধাপে ধাপে জিতবাজ লগইন, জিতবাজ APK ও জিতবাজ উইথড্রয়াল গাইড. Curaçao লাইসেন্সপ্রাপ্ত জিতবাজ পার্টনার, ২৪/৭ বাংলা সাপোর্ট।",
   "hero.cta.join": "জিতবাজে যোগ দিন",
   "hero.cta.login": "জিতবাজ লগইন",
   "hero.markets.label": "উপলব্ধ:",
@@ -258,14 +258,14 @@ const bn: Dict = {
   "footer.trust.license.desc": "অপারেটরের লাইসেন্স ও নিয়ন্ত্রক সংস্থা।",
   "footer.trust.rg": "দায়িত্বশীল গেমিং",
   "footer.trust.rg.desc": "প্লেয়ার সুরক্ষা সংস্থা ও বয়স যাচাইয়ের মান।",
-  "footer.blog.latest": "জিতবাজ ব্লগ — সাম্প্রতিক গাইড",
+  "footer.blog.latest": "জিতবাজ ব্লগ, সাম্প্রতিক গাইড",
   "footer.blog.viewall": "সব দেখুন",
   "footer.post.registration_bd": "বাংলাদেশের জন্য জিতবাজ রেজিস্ট্রেশন গাইড (২০২৬)",
-  "footer.post.login": "জিতবাজ লগইন গাইড — বাংলাদেশ থেকে নিরাপদ অ্যাক্সেস",
-  "footer.post.apk": "জিতবাজ APK ডাউনলোড — নিরাপদ ইনস্টল গাইড",
-  "footer.post.bonus_terms": "জিতবাজ বোনাস শর্তাবলী — সূক্ষ্ম শর্তগুলোর ব্যাখ্যা",
+  "footer.post.login": "জিতবাজ লগইন গাইড, বাংলাদেশ থেকে নিরাপদ অ্যাক্সেস",
+  "footer.post.apk": "জিতবাজ APK ডাউনলোড, নিরাপদ ইনস্টল গাইড",
+  "footer.post.bonus_terms": "জিতবাজ বোনাস শর্তাবলী, সূক্ষ্ম শর্তগুলোর ব্যাখ্যা",
   "footer.post.bkash_nagad": "bKash, Nagad ও Rocket দিয়ে জিতবাজ ডিপোজিট",
-  "footer.post.live_cricket": "জিতবাজ লাইভ ক্রিকেট বেটিং — ব্যবহারিক গাইড",
+  "footer.post.live_cricket": "জিতবাজ লাইভ ক্রিকেট বেটিং, ব্যবহারিক গাইড",
   // Footer social links
   "footer.socials.title": "অফিসিয়াল সোশ্যাল",
   "footer.social.facebook": "GetJeetBuzz Facebook-এ",
@@ -277,7 +277,7 @@ const bn: Dict = {
 
   "support.need_help": "সাহায্য দরকার?",
   "support.body":
-    "আমরা একটি সম্পাদকীয় গাইড — জিতবাজ অফিসিয়াল সাপোর্ট নই। অ্যাকাউন্ট সমস্যার জন্য জিতবাজ লাইভ চ্যাট ব্যবহার করুন। সম্পাদকীয় প্রশ্নের জন্য:",
+    "আমরা একটি সম্পাদকীয় গাইড, জিতবাজ অফিসিয়াল সাপোর্ট নই। অ্যাকাউন্ট সমস্যার জন্য জিতবাজ লাইভ চ্যাট ব্যবহার করুন। সম্পাদকীয় প্রশ্নের জন্য:",
   "support.open_contact": "যোগাযোগ পেজে যান",
   "support.close_aria": "বন্ধ করুন",
   "support.open_aria": "সাপোর্ট খুলুন",
@@ -287,9 +287,9 @@ const bn: Dict = {
   "cta.login_full": "অফিসিয়াল জিতবাজ লগইনে যান",
   "disclosure.label": "অ্যাফিলিয়েট ডিসক্লোজার:",
   "disclosure.banner":
-    "GetJeetBuzz.com হলো বাংলাদেশ, পাকিস্তান ও ভারতের জন্য জিতবাজের একটি ভেরিফায়েড অ্যাফিলিয়েট পার্টনার — অপারেটরের সাথে আমাদের প্রকৃত কমিশন চুক্তি রয়েছে, তবে এই সাইট জিতবাজ প্ল্যাটফর্ম নয়। অ্যাকাউন্ট সাইনআপ, ডিপোজিট ও উইথড্রয়াল জিতবাজের নিজস্ব সাইটে হয়। আমাদের আউটবাউন্ড লিংকের মাধ্যমে সাইন আপ করলে আমরা কমিশন পেতে পারি, আপনার কোনো অতিরিক্ত খরচ নেই। শুধুমাত্র ১৮+।",
+    "GetJeetBuzz.com হলো বাংলাদেশ, পাকিস্তান ও ভারতের জন্য জিতবাজের একটি ভেরিফায়েড অ্যাফিলিয়েট পার্টনার, অপারেটরের সাথে আমাদের প্রকৃত কমিশন চুক্তি রয়েছে, তবে এই সাইট জিতবাজ প্ল্যাটফর্ম নয়। অ্যাকাউন্ট সাইনআপ, ডিপোজিট ও উইথড্রয়াল জিতবাজের নিজস্ব সাইটে হয়। আমাদের আউটবাউন্ড লিংকের মাধ্যমে সাইন আপ করলে আমরা কমিশন পেতে পারি, আপনার কোনো অতিরিক্ত খরচ নেই। শুধুমাত্র ১৮+।",
   "disclosure.inline":
-    "অ্যাফিলিয়েট ডিসক্লোজার: GetJeetBuzz জিতবাজের ভেরিফায়েড অ্যাফিলিয়েট পার্টনার — জিতবাজ প্ল্যাটফর্ম নয়। আমাদের আউটবাউন্ড লিংকে সাইন আপ করলে আমরা কমিশন পেতে পারি, আপনার অতিরিক্ত কোনো খরচ নেই।",
+    "অ্যাফিলিয়েট ডিসক্লোজার: GetJeetBuzz জিতবাজের ভেরিফায়েড অ্যাফিলিয়েট পার্টনার, জিতবাজ প্ল্যাটফর্ম নয়। আমাদের আউটবাউন্ড লিংকে সাইন আপ করলে আমরা কমিশন পেতে পারি, আপনার অতিরিক্ত কোনো খরচ নেই।",
 };
 
 const ur: Dict = {
@@ -308,7 +308,7 @@ const ur: Dict = {
   "hero.title.lead": "JeetBuzz لاگ ان، سائن اپ اور بونس گائیڈ —",
   "hero.title.highlight": "جنوبی ایشیا",
   "hero.subtitle":
-    "پاکستان، بنگلہ دیش اور بھارت کے کھلاڑیوں کے لیے JeetBuzz کی عملی گائیڈ — سائن اپ، بونس، ایپ، EasyPaisa / JazzCash / UPI ڈپازٹ اور لائیو کرکٹ مارکیٹس۔ Curaçao لائسنس، 24/7 لائیو سپورٹ، PSL، BPL اور IPL کی گہری کوریج۔",
+    "پاکستان، بنگلہ دیش اور بھارت کے کھلاڑیوں کے لیے JeetBuzz کی عملی گائیڈ, سائن اپ، بونس، ایپ، EasyPaisa / JazzCash / UPI ڈپازٹ اور لائیو کرکٹ مارکیٹس۔ Curaçao لائسنس، 24/7 لائیو سپورٹ، PSL، BPL اور IPL کی گہری کوریج۔",
   "hero.cta.join": "JeetBuzz میں شامل ہوں",
   "hero.cta.login": "JeetBuzz لاگ ان",
   "hero.markets.label": "دستیاب:",
@@ -363,14 +363,14 @@ const ur: Dict = {
   "footer.trust.license.desc": "آپریٹر کا احاطہ کرنے والے ریگولیٹرز اور لائسنس۔",
   "footer.trust.rg": "ذمہ دارانہ گیمنگ",
   "footer.trust.rg.desc": "کھلاڑیوں کے تحفظ کے ادارے اور عمر کی توثیق کے معیار۔",
-  "footer.blog.latest": "JeetBuzz بلاگ — تازہ ترین گائیڈز",
+  "footer.blog.latest": "JeetBuzz بلاگ, تازہ ترین گائیڈز",
   "footer.blog.viewall": "سب دیکھیں",
   "footer.post.registration_bd": "بنگلہ دیش کے لیے JeetBuzz رجسٹریشن گائیڈ (2026)",
-  "footer.post.login": "JeetBuzz لاگ ان گائیڈ — محفوظ رسائی",
-  "footer.post.apk": "JeetBuzz APK ڈاؤن لوڈ — محفوظ انسٹال گائیڈ",
-  "footer.post.bonus_terms": "JeetBuzz بونس شرائط — باریک پرنٹ کی وضاحت",
+  "footer.post.login": "JeetBuzz لاگ ان گائیڈ, محفوظ رسائی",
+  "footer.post.apk": "JeetBuzz APK ڈاؤن لوڈ, محفوظ انسٹال گائیڈ",
+  "footer.post.bonus_terms": "JeetBuzz بونس شرائط, باریک پرنٹ کی وضاحت",
   "footer.post.bkash_nagad": "bKash، Nagad اور Rocket کے ذریعے JeetBuzz ڈپازٹ",
-  "footer.post.live_cricket": "JeetBuzz لائیو کرکٹ بیٹنگ — عملی گائیڈ",
+  "footer.post.live_cricket": "JeetBuzz لائیو کرکٹ بیٹنگ, عملی گائیڈ",
   // Footer social links
   "footer.socials.title": "آفیشل سوشل",
   "footer.social.facebook": "GetJeetBuzz Facebook پر",
@@ -382,7 +382,7 @@ const ur: Dict = {
 
   "support.need_help": "مدد چاہیے؟",
   "support.body":
-    "ہم ایک ادارتی گائیڈ ہیں — JeetBuzz سپورٹ نہیں۔ اکاؤنٹ کے مسائل کے لیے JeetBuzz لائیو چیٹ استعمال کریں۔ ادارتی سوالات کے لیے:",
+    "ہم ایک ادارتی گائیڈ ہیں. JeetBuzz سپورٹ نہیں۔ اکاؤنٹ کے مسائل کے لیے JeetBuzz لائیو چیٹ استعمال کریں۔ ادارتی سوالات کے لیے:",
   "support.open_contact": "رابطہ صفحہ کھولیں",
   "support.close_aria": "بند کریں",
   "support.open_aria": "سپورٹ کھولیں",
@@ -392,9 +392,9 @@ const ur: Dict = {
   "cta.login_full": "JeetBuzz کی سرکاری لاگ ان پر جائیں",
   "disclosure.label": "ایفیلیئٹ انکشاف:",
   "disclosure.banner":
-    "GetJeetBuzz.com پاکستان، بنگلہ دیش اور بھارت کے لیے JeetBuzz کا تصدیق شدہ ایفیلیئٹ پارٹنر ہے — آپریٹر کے ساتھ ہمارا حقیقی کمیشن معاہدہ ہے، لیکن یہ سائٹ خود JeetBuzz پلیٹ فارم نہیں۔ سائن اپ، ڈپازٹ اور ودڈرا JeetBuzz کی اپنی سائٹ پر ہوتے ہیں۔ ہمارے لنکس کے ذریعے سائن اپ پر ہمیں کمیشن مل سکتا ہے، آپ پر کوئی اضافی لاگت نہیں۔ صرف 18+۔",
+    "GetJeetBuzz.com پاکستان، بنگلہ دیش اور بھارت کے لیے JeetBuzz کا تصدیق شدہ ایفیلیئٹ پارٹنر ہے, آپریٹر کے ساتھ ہمارا حقیقی کمیشن معاہدہ ہے، لیکن یہ سائٹ خود JeetBuzz پلیٹ فارم نہیں۔ سائن اپ، ڈپازٹ اور ودڈرا JeetBuzz کی اپنی سائٹ پر ہوتے ہیں۔ ہمارے لنکس کے ذریعے سائن اپ پر ہمیں کمیشن مل سکتا ہے، آپ پر کوئی اضافی لاگت نہیں۔ صرف 18+۔",
   "disclosure.inline":
-    "ایفیلیئٹ انکشاف: GetJeetBuzz JeetBuzz کا تصدیق شدہ ایفیلیئٹ پارٹنر ہے — خود JeetBuzz پلیٹ فارم نہیں۔ ہمارے لنکس سے سائن اپ پر ہمیں کمیشن مل سکتا ہے، آپ پر کوئی اضافی لاگت نہیں۔",
+    "ایفیلیئٹ انکشاف: GetJeetBuzz JeetBuzz کا تصدیق شدہ ایفیلیئٹ پارٹنر ہے, خود JeetBuzz پلیٹ فارم نہیں۔ ہمارے لنکس سے سائن اپ پر ہمیں کمیشن مل سکتا ہے، آپ پر کوئی اضافی لاگت نہیں۔",
 };
 
 const hi: Dict = {
@@ -413,7 +413,7 @@ const hi: Dict = {
   "hero.title.lead": "JeetBuzz लॉगिन, साइनअप और बोनस गाइड —",
   "hero.title.highlight": "दक्षिण एशिया",
   "hero.subtitle":
-    "भारत, बांग्लादेश और पाकिस्तान के खिलाड़ियों के लिए JeetBuzz की व्यावहारिक गाइड — साइनअप, बोनस, ऐप, UPI / PhonePe / Paytm डिपॉज़िट और लाइव क्रिकेट मार्केट्स। Curaçao लाइसेंस, 24/7 लाइव सपोर्ट, IPL, BPL और PSL की गहरी मार्केट कवरेज।",
+    "भारत, बांग्लादेश और पाकिस्तान के खिलाड़ियों के लिए JeetBuzz की व्यावहारिक गाइड, साइनअप, बोनस, ऐप, UPI / PhonePe / Paytm डिपॉज़िट और लाइव क्रिकेट मार्केट्स। Curaçao लाइसेंस, 24/7 लाइव सपोर्ट, IPL, BPL और PSL की गहरी मार्केट कवरेज।",
   "hero.cta.join": "JeetBuzz जॉइन करें",
   "hero.cta.login": "JeetBuzz लॉगिन",
   "hero.markets.label": "उपलब्ध:",
@@ -468,14 +468,14 @@ const hi: Dict = {
   "footer.trust.license.desc": "ऑपरेटर को कवर करने वाले रेगुलेटर और लाइसेंस।",
   "footer.trust.rg": "ज़िम्मेदार गेमिंग",
   "footer.trust.rg.desc": "खिलाड़ी सुरक्षा संस्थाएँ और आयु-सत्यापन मानक।",
-  "footer.blog.latest": "JeetBuzz ब्लॉग — नवीनतम गाइड्स",
+  "footer.blog.latest": "JeetBuzz ब्लॉग, नवीनतम गाइड्स",
   "footer.blog.viewall": "सभी देखें",
   "footer.post.registration_bd": "बांग्लादेश के लिए JeetBuzz रजिस्ट्रेशन गाइड (2026)",
-  "footer.post.login": "JeetBuzz लॉगिन गाइड — सुरक्षित एक्सेस",
-  "footer.post.apk": "JeetBuzz APK डाउनलोड — सुरक्षित इंस्टॉल गाइड",
-  "footer.post.bonus_terms": "JeetBuzz बोनस शर्तें — बारीक प्रिंट की व्याख्या",
+  "footer.post.login": "JeetBuzz लॉगिन गाइड, सुरक्षित एक्सेस",
+  "footer.post.apk": "JeetBuzz APK डाउनलोड, सुरक्षित इंस्टॉल गाइड",
+  "footer.post.bonus_terms": "JeetBuzz बोनस शर्तें, बारीक प्रिंट की व्याख्या",
   "footer.post.bkash_nagad": "bKash, Nagad और Rocket से JeetBuzz डिपॉज़िट",
-  "footer.post.live_cricket": "JeetBuzz लाइव क्रिकेट बेटिंग — व्यावहारिक गाइड",
+  "footer.post.live_cricket": "JeetBuzz लाइव क्रिकेट बेटिंग, व्यावहारिक गाइड",
   // Footer social links
   "footer.socials.title": "ऑफिशल सोशल",
   "footer.social.facebook": "GetJeetBuzz Facebook पर",
@@ -487,7 +487,7 @@ const hi: Dict = {
 
   "support.need_help": "मदद चाहिए?",
   "support.body":
-    "हम एक संपादकीय गाइड हैं — JeetBuzz सपोर्ट नहीं। अकाउंट संबंधी समस्याओं के लिए JeetBuzz लाइव चैट का उपयोग करें। संपादकीय प्रश्नों के लिए:",
+    "हम एक संपादकीय गाइड हैं. JeetBuzz सपोर्ट नहीं। अकाउंट संबंधी समस्याओं के लिए JeetBuzz लाइव चैट का उपयोग करें। संपादकीय प्रश्नों के लिए:",
   "support.open_contact": "संपर्क पेज खोलें",
   "support.close_aria": "बंद करें",
   "support.open_aria": "सपोर्ट खोलें",
@@ -497,9 +497,9 @@ const hi: Dict = {
   "cta.login_full": "आधिकारिक JeetBuzz लॉगिन पर जाएँ",
   "disclosure.label": "एफिलिएट डिस्क्लोज़र:",
   "disclosure.banner":
-    "GetJeetBuzz.com भारत, बांग्लादेश और पाकिस्तान के लिए JeetBuzz का सत्यापित एफिलिएट पार्टनर है — ऑपरेटर के साथ हमारा वास्तविक कमीशन समझौता है, लेकिन यह साइट स्वयं JeetBuzz प्लेटफ़ॉर्म नहीं है। साइनअप, डिपॉज़िट और निकासी JeetBuzz की अपनी साइट पर होते हैं। हमारे लिंक से साइन अप करने पर हमें कमीशन मिल सकता है, आप पर कोई अतिरिक्त खर्च नहीं। केवल 18+।",
+    "GetJeetBuzz.com भारत, बांग्लादेश और पाकिस्तान के लिए JeetBuzz का सत्यापित एफिलिएट पार्टनर है, ऑपरेटर के साथ हमारा वास्तविक कमीशन समझौता है, लेकिन यह साइट स्वयं JeetBuzz प्लेटफ़ॉर्म नहीं है। साइनअप, डिपॉज़िट और निकासी JeetBuzz की अपनी साइट पर होते हैं। हमारे लिंक से साइन अप करने पर हमें कमीशन मिल सकता है, आप पर कोई अतिरिक्त खर्च नहीं। केवल 18+।",
   "disclosure.inline":
-    "एफिलिएट डिस्क्लोज़र: GetJeetBuzz JeetBuzz का सत्यापित एफिलिएट पार्टनर है — स्वयं JeetBuzz प्लेटफ़ॉर्म नहीं। हमारे आउटबाउंड लिंक से साइन अप पर हमें कमीशन मिल सकता है, आप पर कोई अतिरिक्त खर्च नहीं।",
+    "एफिलिएट डिस्क्लोज़र: GetJeetBuzz JeetBuzz का सत्यापित एफिलिएट पार्टनर है, स्वयं JeetBuzz प्लेटफ़ॉर्म नहीं। हमारे आउटबाउंड लिंक से साइन अप पर हमें कमीशन मिल सकता है, आप पर कोई अतिरिक्त खर्च नहीं।",
 };
 
 const DICTIONARIES: Record<Locale, Dict> = { en, bn, ur, hi };
@@ -551,13 +551,13 @@ export function I18nProvider({
   children: ReactNode;
 }) {
   // URL is the single source of truth. No IP/geo/navigator detection and
-  // localStorage is never used as a fallback source — it is persisted as
+  // localStorage is never used as a fallback source, it is persisted as
   // a *preference* signal only, never read here to override the URL.
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const locale = localeFromPathname(pathname);
 
   // Sync <html lang> + dir to match the URL-derived locale and persist
-  // the preference (write-only — never read back as a redirect trigger).
+  // the preference (write-only, never read back as a redirect trigger).
   useEffect(() => {
     if (typeof document === "undefined") return;
     const meta = LOCALE_META[locale];

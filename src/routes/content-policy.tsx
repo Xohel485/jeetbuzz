@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 
 const PATH = "/content-policy";
 const TITLE = "GetJeetBuzz Content Policy";
-const DESC = "What GetJeetBuzz publishes and what it does not — age gating, responsible gaming and content GetJeetBuzz refuses to produce.";
+const DESC = "What GetJeetBuzz publishes and what it does not, age gating, responsible gaming and content GetJeetBuzz refuses to produce.";
 
 export const Route = createFileRoute("/content-policy")({
   head: () => ({
@@ -16,14 +16,14 @@ export const Route = createFileRoute("/content-policy")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
     <GuidePage
       eyebrow="Policy"
       title={<><span className="gold-text">Content</span> Policy</>}
-      subtitle="What we publish — and the categories of content we refuse to produce on principle."
+      subtitle="What we publish, and the categories of content we refuse to produce on principle."
       showDisclosure={false}
       breadcrumbs={[{ name: "Content Policy", path: PATH }]}
       articlePath={PATH}

@@ -1,17 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Languages, ShieldCheck, Headphones, Trophy, ShieldCheck as ShieldIcon } from "lucide-react";
+import { ArrowRight, Languages, Headphones, Trophy, ShieldCheck as ShieldIcon } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { IMAGES, imageUrl } from "@/lib/images";
 import { MARKETS, JEETBUZZ_STATS } from "@/lib/affiliate";
 import { useI18n } from "@/lib/i18n";
 
-function Trust({ icon: Icon, label }: { icon: typeof ShieldCheck; label: string }) {
+function TrustPill({ label }: { label: string }) {
   return (
-    <div className="flex items-center gap-2">
-      <Icon className="size-4 text-primary" />
-      <span>{label}</span>
-    </div>
+    <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-muted-foreground">
+      <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
+      {label}
+    </span>
   );
 }
 
@@ -123,10 +123,10 @@ export function Hero() {
       </section>
 
       <section className="container-pro mt-12 md:mt-16">
-        <div className="glass grid grid-cols-2 gap-4 px-5 py-5 text-xs text-muted-foreground md:grid-cols-4 md:gap-6 md:px-7 md:py-6 md:text-sm">
-          <Trust icon={ShieldCheck} label="Verified JeetBuzz links" />
-          <Trust icon={BookOpen} label="Transparent affiliate disclosure" />
-          <Trust icon={Languages} label="Bengali · English · Hindi · Urdu" />
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+          <TrustPill label="Verified JeetBuzz links" />
+          <TrustPill label="Transparent affiliate disclosure" />
+          <TrustPill label="Bengali · English · Hindi · Urdu" />
         </div>
       </section>
     </>

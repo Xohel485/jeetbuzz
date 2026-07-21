@@ -6,7 +6,7 @@ const PATH = "/security-guide";
 const TITLE =
   "JeetBuzz Security Guide 2026 - 2FA, Phishing Defence & Account Recovery";
 const DESC =
-  "JeetBuzz account security guide for 2026 — strong passwords, 2FA setup, biometric login, phishing defence and recovery steps if your JeetBuzz account is compromised.";
+  "JeetBuzz account security guide for 2026, strong passwords, 2FA setup, biometric login, phishing defence and recovery steps if your JeetBuzz account is compromised.";
 
 export const Route = createFileRoute("/security-guide")({
   head: () => ({
@@ -18,14 +18,14 @@ export const Route = createFileRoute("/security-guide")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
     <GuidePage
       eyebrow="Security"
       title={<>JeetBuzz <span className="gold-text">Security Guide</span></>}
-      subtitle="A five-minute checklist to harden your JeetBuzz account — password, 2FA, biometrics, phishing defence and incident response."
+      subtitle="A five-minute checklist to harden your JeetBuzz account, password, 2FA, biometrics, phishing defence and incident response."
       heroImage="security"
       ctaIntent="login"
       ctaLabel="Open JeetBuzz Login"
@@ -36,45 +36,45 @@ export const Route = createFileRoute("/security-guide")({
       body={[
         "## Why this matters",
         "Your JeetBuzz account holds money. Treat it like a bank login, not a social media one.",
-        "## Step 1 — Strong unique password",
+        "## Step 1. Strong unique password",
         "12+ characters, mix of letters/numbers/symbols, and not reused on any other site. A password manager is the easiest way.",
-        "## Step 2 — Enable 2FA",
+        "## Step 2. Enable 2FA",
         "Inside Account > Security, turn on any available 2FA option. Even SMS 2FA is better than none.",
-        "## Step 3 — Use biometric login on mobile",
-        "Fingerprint or Face ID on the official app removes the daily password entry — reducing keystroke logging risk.",
-        "## Step 4 — Recognise phishing",
+        "## Step 3. Use biometric login on mobile",
+        "Fingerprint or Face ID on the official app removes the daily password entry, reducing keystroke logging risk.",
+        "## Step 4. Recognise phishing",
         "- Domains that look like JeetBuzz but are not",
         "- Telegram messages claiming to recover your account",
         "- 'Promotion' emails asking for password",
         "- Telegram APKs shared by strangers",
-        "## Step 5 — Incident response",
+        "## Step 5. Incident response",
         "If you suspect compromise: change password from a trusted device, log out all sessions, open live chat, freeze withdrawals temporarily.",
         "## Wallet hygiene",
         "Only deposit and withdraw to wallets in your own name. Sharing wallets is a fast track to account suspension.",
       ]}
       subtitleByLocale={{
-        bn: "JeetBuzz অ্যাকাউন্ট সুরক্ষার ৫-মিনিট চেকলিস্ট — পাসওয়ার্ড, 2FA, বায়োমেট্রিক, ফিশিং।",
-        ur: "JeetBuzz اکاؤنٹ سیکیورٹی کی پانچ منٹ چیک لسٹ — پاس ورڈ، 2FA، بایومیٹرک، فشنگ۔",
-        hi: "JeetBuzz अकाउंट सुरक्षा 5-मिनट चेकलिस्ट — पासवर्ड, 2FA, बायोमेट्रिक, फिशिंग।",
+        bn: "JeetBuzz অ্যাকাউন্ট সুরক্ষার ৫-মিনিট চেকলিস্ট, পাসওয়ার্ড, 2FA, বায়োমেট্রিক, ফিশিং।",
+        ur: "JeetBuzz اکاؤنٹ سیکیورٹی کی پانچ منٹ چیک لسٹ, پاس ورڈ، 2FA، بایومیٹرک، فشنگ۔",
+        hi: "JeetBuzz अकाउंट सुरक्षा 5-मिनट चेकलिस्ट, पासवर्ड, 2FA, बायोमेट्रिक, फिशिंग।",
       }}
       bodyByLocale={{
         bn: [
           "## কেন এই গাইড আপনার জন্য",
-          "JeetBuzz অ্যাকাউন্ট মানে শুধু একটি লগইন নয় — এর সঙ্গে যুক্ত আপনার bKash, Nagad বা Rocket ওয়ালেট, ডিপোজিট ইতিহাস এবং জমে থাকা ব্যালান্স। তাই অ্যাকাউন্টকে সোশ্যাল মিডিয়ার মতো না দেখে ব্যাংকিং অ্যাপের সমান গুরুত্ব দিন।",
-          "## ধাপ ১ — শক্তিশালী ও ইউনিক পাসওয়ার্ড",
-          "কমপক্ষে ১২ অক্ষর, বড়-ছোট হাতের অক্ষর, সংখ্যা ও বিশেষ চিহ্নের মিশ্রণ রাখুন। সবচেয়ে জরুরি — এই পাসওয়ার্ড যেন আপনার Gmail, Facebook, NID-সংযুক্ত কোনো সাইট বা bKash অ্যাপে আগে ব্যবহার করা না হয়। একটি ফ্রি পাসওয়ার্ড ম্যানেজার (যেমন Bitwarden বা KeePass) প্রতিটি সাইটে আলাদা পাসওয়ার্ড মনে রাখার ঝামেলা কমিয়ে দেয়।",
-          "## ধাপ ২ — দুই-ধাপ যাচাই (যেখানে উপলব্ধ)",
-          "Account → Security সেকশনে গিয়ে দেখুন আপনার অ্যাকাউন্টে কোন দুই-ধাপ যাচাই অপশন চালু করা যায়। SMS-ভিত্তিক অপশন থাকলেও সেটি চালু রাখুন — কিছু না থাকার চেয়ে যেকোনো 2FA অনেক বেশি নিরাপদ। সম্ভব হলে Google Authenticator বা Authy ব্যবহার করলে SIM swap-জনিত ঝুঁকি অনেকটাই কমে।",
-          "## ধাপ ৩ — মোবাইলে বায়োমেট্রিক লগইন",
+          "JeetBuzz অ্যাকাউন্ট মানে শুধু একটি লগইন নয়, এর সঙ্গে যুক্ত আপনার bKash, Nagad বা Rocket ওয়ালেট, ডিপোজিট ইতিহাস এবং জমে থাকা ব্যালান্স। তাই অ্যাকাউন্টকে সোশ্যাল মিডিয়ার মতো না দেখে ব্যাংকিং অ্যাপের সমান গুরুত্ব দিন।",
+          "## ধাপ ১, শক্তিশালী ও ইউনিক পাসওয়ার্ড",
+          "কমপক্ষে ১২ অক্ষর, বড়-ছোট হাতের অক্ষর, সংখ্যা ও বিশেষ চিহ্নের মিশ্রণ রাখুন। সবচেয়ে জরুরি, এই পাসওয়ার্ড যেন আপনার Gmail, Facebook, NID-সংযুক্ত কোনো সাইট বা bKash অ্যাপে আগে ব্যবহার করা না হয়। একটি ফ্রি পাসওয়ার্ড ম্যানেজার (যেমন Bitwarden বা KeePass) প্রতিটি সাইটে আলাদা পাসওয়ার্ড মনে রাখার ঝামেলা কমিয়ে দেয়।",
+          "## ধাপ ২, দুই-ধাপ যাচাই (যেখানে উপলব্ধ)",
+          "Account → Security সেকশনে গিয়ে দেখুন আপনার অ্যাকাউন্টে কোন দুই-ধাপ যাচাই অপশন চালু করা যায়। SMS-ভিত্তিক অপশন থাকলেও সেটি চালু রাখুন, কিছু না থাকার চেয়ে যেকোনো 2FA অনেক বেশি নিরাপদ। সম্ভব হলে Google Authenticator বা Authy ব্যবহার করলে SIM swap-জনিত ঝুঁকি অনেকটাই কমে।",
+          "## ধাপ ৩, মোবাইলে বায়োমেট্রিক লগইন",
           "অফিসিয়াল অ্যাপে ফিঙ্গারপ্রিন্ট বা Face Unlock চালু রাখলে প্রতিদিন পাসওয়ার্ড টাইপ করতে হয় না। এতে কীবোর্ড লগার, পাশ থেকে কেউ দেখে ফেলা (shoulder surfing) বা শেয়ারড কীবোর্ডে পাসওয়ার্ড সেভ হওয়ার ঝুঁকি কমে।",
-          "## ধাপ ৪ — ফিশিং ও প্রতারণার ধরন চেনা",
+          "## ধাপ ৪, ফিশিং ও প্রতারণার ধরন চেনা",
           "বাংলাদেশে JeetBuzz-কেন্দ্রিক প্রতারণার কয়েকটি প্রচলিত ধরন:",
-          "- Facebook গ্রুপ বা পেজে ‘ফ্রি ১০০০৳ বোনাস’ লিংক — প্রায় সবই ফিশিং।",
+          "- Facebook গ্রুপ বা পেজে ‘ফ্রি ১০০০৳ বোনাস’ লিংক, প্রায় সবই ফিশিং।",
           "- টেলিগ্রামে ‘JeetBuzz এজেন্ট’ পরিচয়ে অ্যাকাউন্ট রিকভারি বা ডিপোজিট সাহায্যের অফার।",
           "- SMS বা WhatsApp-এ পাঠানো ‘ভেরিফিকেশন’ লিংক যা আপনার পাসওয়ার্ড চায়।",
-          "- অপরিচিতদের শেয়ার করা APK — অনেক সময় ভেতরে পাসওয়ার্ড-চুরির ম্যালওয়্যার লুকানো থাকে।",
-          "JeetBuzz কখনো ইমেইল, SMS, WhatsApp বা টেলিগ্রামে আপনার পাসওয়ার্ড বা bKash/Nagad PIN চায় না — কেউ চাইলেই সেটি প্রতারণা।",
-          "## ধাপ ৫ — সন্দেহ হলে কী করবেন",
+          "- অপরিচিতদের শেয়ার করা APK, অনেক সময় ভেতরে পাসওয়ার্ড-চুরির ম্যালওয়্যার লুকানো থাকে।",
+          "JeetBuzz কখনো ইমেইল, SMS, WhatsApp বা টেলিগ্রামে আপনার পাসওয়ার্ড বা bKash/Nagad PIN চায় না, কেউ চাইলেই সেটি প্রতারণা।",
+          "## ধাপ ৫, সন্দেহ হলে কী করবেন",
           "যদি মনে হয় অ্যাকাউন্ট কেউ অ্যাক্সেস করেছে: প্রথমে নিজের বিশ্বস্ত ডিভাইস থেকে [পাসওয়ার্ড রিসেট](/password-reset) করুন। এরপর Account → Active Sessions থেকে সব ডিভাইসে সাইন আউট দিন। তারপর অফিসিয়াল লাইভ চ্যাটে গিয়ে pending withdrawal হোল্ড করতে অনুরোধ করুন এবং শেষ ডিপোজিট/উইথড্রয়াল আইডি রেডি রাখুন।",
           "## ওয়ালেট ও KYC হাইজিন",
           "শুধু নিজের নামে রেজিস্টার্ড bKash, Nagad বা Rocket ওয়ালেট ব্যবহার করুন। বন্ধু-পরিবারের নামের ওয়ালেট দিয়ে ডিপোজিট বা উইথড্রয়াল করলে KYC নাম-মিসম্যাচে অ্যাকাউন্ট সাময়িকভাবে স্থগিত হতে পারে এবং ফান্ড আটকে যাওয়ার আশঙ্কা থাকে।",
@@ -86,21 +86,21 @@ export const Route = createFileRoute("/security-guide")({
         ],
         ur: [
           "## یہ گائیڈ آپ کے لیے کیوں ضروری ہے",
-          "JeetBuzz اکاؤنٹ صرف ایک لاگ ان نہیں — اس کے ساتھ آپ کا JazzCash یا EasyPaisa والیٹ، ڈپازٹ کی تاریخ اور موجودہ بیلنس جڑا ہوتا ہے۔ اسے سوشل میڈیا اکاؤنٹ کی طرح نہ سمجھیں؛ بینکنگ ایپ جتنی ہی اہمیت دیں۔",
-          "## مرحلہ 1 — مضبوط اور منفرد پاس ورڈ",
-          "کم از کم 12 حروف رکھیں، بڑے اور چھوٹے حروف، اعداد اور خاص علامتوں کا مرکب ہو۔ سب سے اہم بات — یہ پاس ورڈ آپ کے Gmail، Facebook، JazzCash یا EasyPaisa میں پہلے استعمال نہیں ہونا چاہیے۔ ایک مفت پاس ورڈ مینیجر (مثلاً Bitwarden یا KeePass) ہر سائٹ کے لیے الگ پاس ورڈ یاد رکھنے کی پریشانی ختم کر دیتا ہے۔",
-          "## مرحلہ 2 — دو-قدمی تصدیق (جہاں آپریٹر سپورٹ کرے)",
-          "Account → Security میں جا کر دیکھیں کہ آپ کے اکاؤنٹ پر کون سی 2FA آپشن دستیاب ہے۔ ہر اکاؤنٹ پر ہر طرح کی 2FA دستیاب نہیں ہوتی۔ اگر صرف SMS آپشن ہو، وہی فعال رکھیں — کچھ نہ ہونے سے بہتر ہے۔ ممکن ہو تو Google Authenticator یا Authy استعمال کریں؛ Jazz یا Zong پر SIM swap حملہ ہونے کی صورت میں بھی یہ محفوظ رہتی ہیں۔",
-          "## مرحلہ 3 — موبائل پر بایومیٹرک لاگ ان",
+          "JeetBuzz اکاؤنٹ صرف ایک لاگ ان نہیں, اس کے ساتھ آپ کا JazzCash یا EasyPaisa والیٹ، ڈپازٹ کی تاریخ اور موجودہ بیلنس جڑا ہوتا ہے۔ اسے سوشل میڈیا اکاؤنٹ کی طرح نہ سمجھیں؛ بینکنگ ایپ جتنی ہی اہمیت دیں۔",
+          "## مرحلہ 1, مضبوط اور منفرد پاس ورڈ",
+          "کم از کم 12 حروف رکھیں، بڑے اور چھوٹے حروف، اعداد اور خاص علامتوں کا مرکب ہو۔ سب سے اہم بات, یہ پاس ورڈ آپ کے Gmail، Facebook، JazzCash یا EasyPaisa میں پہلے استعمال نہیں ہونا چاہیے۔ ایک مفت پاس ورڈ مینیجر (مثلاً Bitwarden یا KeePass) ہر سائٹ کے لیے الگ پاس ورڈ یاد رکھنے کی پریشانی ختم کر دیتا ہے۔",
+          "## مرحلہ 2, دو-قدمی تصدیق (جہاں آپریٹر سپورٹ کرے)",
+          "Account → Security میں جا کر دیکھیں کہ آپ کے اکاؤنٹ پر کون سی 2FA آپشن دستیاب ہے۔ ہر اکاؤنٹ پر ہر طرح کی 2FA دستیاب نہیں ہوتی۔ اگر صرف SMS آپشن ہو، وہی فعال رکھیں, کچھ نہ ہونے سے بہتر ہے۔ ممکن ہو تو Google Authenticator یا Authy استعمال کریں؛ Jazz یا Zong پر SIM swap حملہ ہونے کی صورت میں بھی یہ محفوظ رہتی ہیں۔",
+          "## مرحلہ 3, موبائل پر بایومیٹرک لاگ ان",
           "آفیشل ایپ میں فنگرپرنٹ یا Face Unlock فعال رکھنے سے روزانہ پاس ورڈ ٹائپ کرنے کی ضرورت نہیں رہتی۔ اس سے کی-بورڈ لاگر، ساتھ کھڑے کسی شخص کی نظر (shoulder surfing) یا مشترکہ کی-بورڈ پر پاس ورڈ محفوظ ہو جانے کا خطرہ کم ہو جاتا ہے۔",
-          "## مرحلہ 4 — فشنگ اور دھوکا دہی کی پہچان",
+          "## مرحلہ 4, فشنگ اور دھوکا دہی کی پہچان",
           "پاکستان میں JeetBuzz سے متعلق چند عام دھوکے یہ ہیں:",
-          "- WhatsApp گروپوں یا Facebook پیجز پر ‘مفت 1000 PKR بونس’ کے لنک — تقریباً تمام phishing ہوتے ہیں۔",
+          "- WhatsApp گروپوں یا Facebook پیجز پر ‘مفت 1000 PKR بونس’ کے لنک, تقریباً تمام phishing ہوتے ہیں۔",
           "- Telegram پر ‘JeetBuzz ایجنٹ’ بن کر اکاؤنٹ ریکوری یا ڈپازٹ میں مدد کی پیشکش۔",
           "- SMS یا WhatsApp پر بھیجے گئے ‘تصدیقی’ لنک جو آپ سے پاس ورڈ مانگیں۔",
-          "- اجنبیوں سے ملی APK فائلیں — اکثر ان میں پاس ورڈ چرانے والا مال ویئر چھپا ہوتا ہے۔",
-          "JeetBuzz کبھی ای میل، SMS، WhatsApp یا Telegram پر آپ کا پاس ورڈ یا JazzCash/EasyPaisa MPIN نہیں مانگتا — اگر کوئی مانگے تو وہ یقیناً دھوکا ہے۔",
-          "## مرحلہ 5 — شبہ ہونے پر کیا کریں",
+          "- اجنبیوں سے ملی APK فائلیں, اکثر ان میں پاس ورڈ چرانے والا مال ویئر چھپا ہوتا ہے۔",
+          "JeetBuzz کبھی ای میل، SMS، WhatsApp یا Telegram پر آپ کا پاس ورڈ یا JazzCash/EasyPaisa MPIN نہیں مانگتا, اگر کوئی مانگے تو وہ یقیناً دھوکا ہے۔",
+          "## مرحلہ 5, شبہ ہونے پر کیا کریں",
           "اگر شک ہو کہ کوئی آپ کے اکاؤنٹ تک پہنچ گیا ہے: پہلے اپنی قابلِ اعتماد ڈیوائس سے [پاس ورڈ ری سیٹ](/password-reset) کریں۔ پھر Account → Active Sessions سے تمام ڈیوائسز پر سائن آؤٹ کریں۔ اس کے بعد آفیشل لائیو چیٹ پر pending withdrawals کو ہولڈ کرنے کی درخواست کریں اور آخری ڈپازٹ یا ودڈرا ٹرانزیکشن آئی ڈی تیار رکھیں۔",
           "## والیٹ اور KYC احتیاط",
           "صرف اپنے CNIC پر رجسٹرڈ JazzCash، EasyPaisa یا بینک اکاؤنٹ استعمال کریں۔ دوست یا گھر والوں کے نام والے والیٹ سے ڈپازٹ/ودڈرا کرنے پر KYC نام-مماثلت کی وجہ سے اکاؤنٹ عارضی طور پر معطل ہو سکتا ہے اور رقم پھنسنے کا خطرہ بڑھتا ہے۔",
@@ -112,20 +112,20 @@ export const Route = createFileRoute("/security-guide")({
         ],
         hi: [
           "## यह गाइड आपके लिए क्यों ज़रूरी है",
-          "JeetBuzz अकाउंट सिर्फ़ एक लॉगिन नहीं है — इससे आपका UPI, PhonePe, Paytm या Google Pay वॉलेट, डिपॉज़िट इतिहास और जमा बैलेंस सीधे जुड़ा होता है। इसे सोशल मीडिया अकाउंट की तरह नहीं, बल्कि अपने नेट-बैंकिंग ऐप की तरह सुरक्षित रखें।",
-          "## स्टेप 1 — मज़बूत और यूनिक पासवर्ड",
-          "कम से कम 12 अक्षर रखें — बड़े/छोटे अक्षर, अंक और चिह्न मिलाकर। सबसे ज़रूरी बात — यही पासवर्ड पहले से आपके Gmail, Facebook, UPI ऐप या किसी Aadhaar/PAN-लिंक्ड साइट पर इस्तेमाल नहीं होना चाहिए। Bitwarden या KeePass जैसा फ़्री पासवर्ड मैनेजर हर साइट के लिए अलग पासवर्ड याद रखने का झंझट हटा देता है।",
-          "## स्टेप 2 — दो-चरण सत्यापन (जहाँ ऑपरेटर समर्थन करता है)",
-          "Account → Security सेक्शन में जाकर देखें कि आपके अकाउंट पर कौन-सा 2FA विकल्प उपलब्ध है, और जहाँ ऑपरेटर समर्थन करता है वहाँ उसे चालू कर लें। संभव हो तो Google Authenticator या Authy इस्तेमाल करें — Jio/Airtel/Vi पर SIM swap के हमलों के विरुद्ध ये SMS से ज़्यादा मज़बूत हैं।",
-          "## स्टेप 3 — मोबाइल पर बायोमेट्रिक लॉगिन",
+          "JeetBuzz अकाउंट सिर्फ़ एक लॉगिन नहीं है, इससे आपका UPI, PhonePe, Paytm या Google Pay वॉलेट, डिपॉज़िट इतिहास और जमा बैलेंस सीधे जुड़ा होता है। इसे सोशल मीडिया अकाउंट की तरह नहीं, बल्कि अपने नेट-बैंकिंग ऐप की तरह सुरक्षित रखें।",
+          "## स्टेप 1, मज़बूत और यूनिक पासवर्ड",
+          "कम से कम 12 अक्षर रखें, बड़े/छोटे अक्षर, अंक और चिह्न मिलाकर। सबसे ज़रूरी बात, यही पासवर्ड पहले से आपके Gmail, Facebook, UPI ऐप या किसी Aadhaar/PAN-लिंक्ड साइट पर इस्तेमाल नहीं होना चाहिए। Bitwarden या KeePass जैसा फ़्री पासवर्ड मैनेजर हर साइट के लिए अलग पासवर्ड याद रखने का झंझट हटा देता है।",
+          "## स्टेप 2, दो-चरण सत्यापन (जहाँ ऑपरेटर समर्थन करता है)",
+          "Account → Security सेक्शन में जाकर देखें कि आपके अकाउंट पर कौन-सा 2FA विकल्प उपलब्ध है, और जहाँ ऑपरेटर समर्थन करता है वहाँ उसे चालू कर लें। संभव हो तो Google Authenticator या Authy इस्तेमाल करें. Jio/Airtel/Vi पर SIM swap के हमलों के विरुद्ध ये SMS से ज़्यादा मज़बूत हैं।",
+          "## स्टेप 3, मोबाइल पर बायोमेट्रिक लॉगिन",
           "ऑफ़िशियल ऐप में फ़िंगरप्रिंट या Face Unlock चालू रखें ताकि रोज़ पासवर्ड टाइप न करना पड़े। इससे शोल्डर सर्फिंग, पब्लिक कीबोर्ड पर पासवर्ड सेव हो जाने और कीस्ट्रोक लॉगिंग जैसे ख़तरे कम होते हैं।",
-          "## स्टेप 4 — फ़िशिंग की पहचान",
+          "## स्टेप 4, फ़िशिंग की पहचान",
           "- थोड़े बदले हुए नाम वाले डोमेन (jeetbuz, jeet-buzz, jeetbuzzindia-app आदि)।",
-          "- Telegram/WhatsApp पर 'JeetBuzz अकाउंट रिकवरी एजेंट' के दावे — ये सभी फ़र्ज़ी हैं।",
+          "- Telegram/WhatsApp पर 'JeetBuzz अकाउंट रिकवरी एजेंट' के दावे, ये सभी फ़र्ज़ी हैं।",
           "- SMS या ईमेल पर भेजे गए 'वेरिफ़िकेशन' लिंक जो आपसे पासवर्ड माँगें।",
-          "- अजनबियों से मिली APK फ़ाइलें — इनमें अक्सर पासवर्ड चुराने वाला malware छिपा होता है।",
-          "JeetBuzz कभी ईमेल, SMS, WhatsApp या Telegram पर आपका पासवर्ड या UPI PIN नहीं माँगता — अगर कोई माँगे तो वह निश्चित रूप से धोखा है।",
-          "## स्टेप 5 — संदेह होने पर क्या करें",
+          "- अजनबियों से मिली APK फ़ाइलें, इनमें अक्सर पासवर्ड चुराने वाला malware छिपा होता है।",
+          "JeetBuzz कभी ईमेल, SMS, WhatsApp या Telegram पर आपका पासवर्ड या UPI PIN नहीं माँगता, अगर कोई माँगे तो वह निश्चित रूप से धोखा है।",
+          "## स्टेप 5, संदेह होने पर क्या करें",
           "अगर शक हो कि किसी ने आपके अकाउंट तक पहुँच बना ली है: पहले अपनी भरोसेमंद डिवाइस से [पासवर्ड रीसेट](/password-reset) करें। फिर Account → Active Sessions से सभी डिवाइसेज़ पर साइन आउट करें। उसके बाद ऑफ़िशियल लाइव चैट पर pending withdrawals को होल्ड कराने का अनुरोध करें और आख़िरी डिपॉज़िट/विदड्रॉल transaction ID तैयार रखें।",
           "## वॉलेट और KYC हाइजीन",
           "केवल अपने Aadhaar/PAN पर रजिस्टर्ड UPI, PhonePe, Google Pay, Paytm या बैंक अकाउंट से ही डिपॉज़िट और निकासी करें। दोस्त या परिवार के नाम वाले वॉलेट से लेन-देन करने पर KYC नाम-मिलान फ़ेल होकर अकाउंट अस्थायी रूप से सस्पेंड हो सकता है और रकम फँसने का जोखिम बढ़ता है।",
@@ -167,7 +167,7 @@ export const Route = createFileRoute("/security-guide")({
         ],
       }}
       faqs={[
-        { q: "Does JeetBuzz support 2FA?", a: "Yes — enable it under Account > Security. SMS is the most common option in Bangladesh." },
+        { q: "Does JeetBuzz support 2FA?", a: "Yes, enable it under Account > Security. SMS is the most common option in Bangladesh." },
         { q: "What if someone logs into my account?", a: "Change your password immediately, log out all sessions, open live chat. Have your TrxID history ready." },
         { q: "Is the APK safe?", a: "Only from the official site. Telegram APKs are a leading source of credential theft." },
         { q: "Should I reuse my email password?", a: "Never. Use a password manager." },

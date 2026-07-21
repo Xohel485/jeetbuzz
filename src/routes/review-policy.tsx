@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 
 const PATH = "/review-policy";
 const TITLE = "GetJeetBuzz Review Policy";
-const DESC = "How GetJeetBuzz scores JeetBuzz — methodology, weighting and what we test before publishing a review or rating.";
+const DESC = "How GetJeetBuzz scores JeetBuzz, methodology, weighting and what we test before publishing a review or rating.";
 
 export const Route = createFileRoute("/review-policy")({
   head: () => ({
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/review-policy")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/review-policy")({
       bodyByLocale={{
         bn: [
           "## আমরা কী টেস্ট করি",
-          "সাইনআপ, KYC, bKash/Nagad/Rocket দিয়ে ডিপোজিট, স্পোর্টসবুক মার্কেট (বিশেষ করে ক্রিকেট — BPL/IPL), লাইভ ক্যাসিনো, মোবাইল অ্যাপ, বাংলায় সাপোর্ট রেসপন্স, এবং প্রকৃত ক্যাশ-আউট।",
+          "সাইনআপ, KYC, bKash/Nagad/Rocket দিয়ে ডিপোজিট, স্পোর্টসবুক মার্কেট (বিশেষ করে ক্রিকেট. BPL/IPL), লাইভ ক্যাসিনো, মোবাইল অ্যাপ, বাংলায় সাপোর্ট রেসপন্স, এবং প্রকৃত ক্যাশ-আউট।",
           "## স্কোরিং",
           "প্রতিটি ক্যাটাগরিকে ১–৫ স্কেলে স্কোর। ওয়েট: ক্রিকেট মার্কেট ২৫%, পেমেন্ট ২৫%, অ্যাপ ১৫%, বোনাস ১৫%, সাপোর্ট ১০%, সিকিউরিটি ১০%।",
           "## পুনঃপরীক্ষা",
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/review-policy")({
         ],
         ur: [
           "## ہم کیا ٹیسٹ کرتے ہیں",
-          "سائن اپ، KYC، EasyPaisa/JazzCash ڈپازٹ، اسپورٹس بک مارکیٹس (خاص طور پر کرکٹ — PSL/IPL)، لائیو کیسینو، موبائل ایپ، اردو سپورٹ ریسپانس، اور حقیقی کیش آؤٹ۔",
+          "سائن اپ، KYC، EasyPaisa/JazzCash ڈپازٹ، اسپورٹس بک مارکیٹس (خاص طور پر کرکٹ. PSL/IPL)، لائیو کیسینو، موبائل ایپ، اردو سپورٹ ریسپانس، اور حقیقی کیش آؤٹ۔",
           "## اسکورنگ",
           "ہر زمرہ 1–5 پر اسکور۔ وزن: کرکٹ مارکیٹس 25%، ادائیگیاں 25%، ایپ 15%، بونس 15%، سپورٹ 10%، حفاظت 10%۔",
           "## دوبارہ ٹیسٹ",
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/review-policy")({
         ],
         hi: [
           "## हम क्या टेस्ट करते हैं",
-          "साइनअप, KYC, UPI/PhonePe/Paytm डिपॉज़िट, स्पोर्ट्सबुक मार्केट्स (विशेष रूप से क्रिकेट — IPL/BPL), लाइव कैसीनो, मोबाइल ऐप, हिंदी सपोर्ट रिस्पॉन्स, और वास्तविक कैश-आउट।",
+          "साइनअप, KYC, UPI/PhonePe/Paytm डिपॉज़िट, स्पोर्ट्सबुक मार्केट्स (विशेष रूप से क्रिकेट. IPL/BPL), लाइव कैसीनो, मोबाइल ऐप, हिंदी सपोर्ट रिस्पॉन्स, और वास्तविक कैश-आउट।",
           "## स्कोरिंग",
           "हर श्रेणी को 1–5 पर स्कोर। वज़न: क्रिकेट मार्केट्स 25%, पेमेंट 25%, ऐप 15%, बोनस 15%, सपोर्ट 10%, सुरक्षा 10%।",
           "## पुनः परीक्षण",

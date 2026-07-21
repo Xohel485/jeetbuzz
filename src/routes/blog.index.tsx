@@ -7,14 +7,14 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, SITE_ORIGIN } from "
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Blog — Guides & Tips for Bangladesh | GetJeetBuzz" },
-      { name: "description", content: "Latest JeetBuzz guides for Bangladesh — registration, login, bonuses, payments, live cricket and more." },
-      { property: "og:title", content: "JeetBuzz Blog — Guides & Tips for Bangladesh" },
+      { title: "JeetBuzz Blog. Guides & Tips for Bangladesh | GetJeetBuzz" },
+      { name: "description", content: "Latest JeetBuzz guides for Bangladesh, registration, login, bonuses, payments, live cricket and more." },
+      { property: "og:title", content: "JeetBuzz Blog. Guides & Tips for Bangladesh" },
       { property: "og:description", content: "Latest JeetBuzz guides for Bangladesh." },
       { property: "og:type", content: "website" },
       ogUrl("/blog"),
     ],
-    links: [canonicalLink("/blog"), ...hreflangLinks("/blog")],
+    links: [canonicalLink("/blog")...hreflangLinks("/blog")],
     scripts: [
       jsonLdScript({
         "@context": "https://schema.org",
@@ -40,7 +40,7 @@ function BlogIndex() {
       <PageHero
         eyebrow="Blog"
         title={<>JeetBuzz <span className="gold-text">Guides & Tips</span></>}
-        subtitle="Practical, dated, Bengali-first articles on everything JeetBuzz — written by Bangladeshi bettors."
+        subtitle="Practical, dated, Bengali-first articles on everything JeetBuzz, written by Bangladeshi bettors."
       />
       <section className="container-pro">
         <div className="grid gap-4 md:grid-cols-2">

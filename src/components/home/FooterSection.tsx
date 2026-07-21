@@ -43,7 +43,7 @@ export default function FooterSection() {
       </section>
 
       <section className="container-pro mt-20 md:mt-28">
-        <SectionHeader eyebrow="What to play" title="Sports vs Casino vs Live — quick comparison" />
+        <SectionHeader eyebrow="What to play" title="Sports vs Casino vs Live, quick comparison" />
         <div className="glass mt-10 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>

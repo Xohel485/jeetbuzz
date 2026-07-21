@@ -18,7 +18,7 @@ export const Route = createFileRoute("/privacy-policy")({
       showDisclosure={false}
       body={[
         "## What we collect",
-        "We collect basic, anonymous analytics (pages viewed, country, device) to improve the site. We do not collect JeetBuzz account credentials — we never ask for them.",
+        "We collect basic, anonymous analytics (pages viewed, country, device) to improve the site. We do not collect JeetBuzz account credentials, we never ask for them.",
         "## Cookies",
         "We use first-party analytics cookies and affiliate tracking cookies set when you click an outbound JeetBuzz link.",
         "## Third parties",
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/privacy-policy")({
       bodyByLocale={{
         bn: [
           "## আমরা কী সংগ্রহ করি",
-          "সাইট উন্নত করতে আমরা মৌলিক, বেনামী অ্যানালিটিক্স সংগ্রহ করি (পেজ ভিউ, দেশ, ডিভাইস)। আমরা JeetBuzz অ্যাকাউন্ট তথ্য সংগ্রহ করি না — কখনোই চাই না।",
+          "সাইট উন্নত করতে আমরা মৌলিক, বেনামী অ্যানালিটিক্স সংগ্রহ করি (পেজ ভিউ, দেশ, ডিভাইস)। আমরা JeetBuzz অ্যাকাউন্ট তথ্য সংগ্রহ করি না, কখনোই চাই না।",
           "## কুকিজ",
           "আমরা ফার্স্ট-পার্টি অ্যানালিটিক্স কুকি এবং আউটবাউন্ড JeetBuzz লিঙ্কে ক্লিক করলে সেট হওয়া অ্যাফিলিয়েট ট্র্যাকিং কুকি ব্যবহার করি।",
           "## থার্ড পার্টি",

@@ -9,7 +9,7 @@ const PATH = "/author" as const;
 const NAME = "GetJeetBuzz Editorial Team";
 const TITLE = "About the GetJeetBuzz Editorial Team";
 const DESC =
-  "Who writes GetJeetBuzz: a small team of Bangladeshi bettors who test JeetBuzz with real accounts, real bKash/Nagad deposits and real withdrawals — and re-verify every guide on a published schedule.";
+  "Who writes GetJeetBuzz: a small team of Bangladeshi bettors who test JeetBuzz with real accounts, real bKash/Nagad deposits and real withdrawals, and re-verify every guide on a published schedule.";
 
 export const Route = createFileRoute("/author")({
   head: () => ({
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/author")({
       { property: "og:type", content: "profile" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [
       {
         type: "application/ld+json",
@@ -161,16 +161,16 @@ type Copy = {
 const COPY: Record<Locale, Copy> = {
   en: {
     eyebrow: "Author profile", title1: "About the ", title2: "GetJeetBuzz Editorial Team",
-    subtitle: "A small team of South Asian bettors testing JeetBuzz with real accounts, real deposits and real withdrawals — then writing it up honestly.",
+    subtitle: "A small team of South Asian bettors testing JeetBuzz with real accounts, real deposits and real withdrawals, then writing it up honestly.",
     lastVerified: "Last full site re-verification",
     whoH: "Who we are",
-    whoP: "GetJeetBuzz is written by a small editorial team covering Bangladesh, Pakistan and India. We are everyday cricket bettors first and writers second — most of us started betting on BPL, IPL and PSL on JeetBuzz before this site existed. We publish under the team byline rather than individual names because online betting is a sensitive topic in our markets.",
+    whoP: "GetJeetBuzz is written by a small editorial team covering Bangladesh, Pakistan and India. We are everyday cricket bettors first and writers second, most of us started betting on BPL, IPL and PSL on JeetBuzz before this site existed. We publish under the team byline rather than individual names because online betting is a sensitive topic in our markets.",
     testH: "How we test",
     testP: "Every guide on this site is based on hands-on testing, not press releases or affiliate decks. Specifically, we:",
     testList: [
       "Maintain real JeetBuzz player accounts in Bangladesh, Pakistan and India to verify country-specific behaviour.",
       "Make real deposits via bKash, Nagad and Rocket (and EasyPaisa / JazzCash / UPI for the PK and IN guides) so the screenshots and times in our payment guides come from our own cashier.",
-      "Run real withdrawal attempts — including the slow ones — and note how long KYC actually takes in practice.",
+      "Run real withdrawal attempts, including the slow ones, and note how long KYC actually takes in practice.",
       "Bet on in-play BPL, IPL, PSL, internationals and live casino so the market depth and cash-out behaviour in our reviews are first-hand.",
     ],
     reverifyH: "How often we re-verify",
@@ -187,17 +187,17 @@ const COPY: Record<Locale, Copy> = {
     contactPage: "Contact page",
   },
   bn: {
-    eyebrow: "লেখক প্রোফাইল", title1: "পরিচিতি — ", title2: "GetJeetBuzz Editorial Team",
-    subtitle: "বাংলাদেশের একদল সাধারণ বেটর — প্রকৃত অ্যাকাউন্ট, প্রকৃত bKash/Nagad ডিপোজিট ও প্রকৃত উইথড্রয়াল দিয়ে JeetBuzz পরীক্ষা করি, তারপর সৎভাবে লিখি।",
+    eyebrow: "লেখক প্রোফাইল", title1: "পরিচিতি, ", title2: "GetJeetBuzz Editorial Team",
+    subtitle: "বাংলাদেশের একদল সাধারণ বেটর, প্রকৃত অ্যাকাউন্ট, প্রকৃত bKash/Nagad ডিপোজিট ও প্রকৃত উইথড্রয়াল দিয়ে JeetBuzz পরীক্ষা করি, তারপর সৎভাবে লিখি।",
     lastVerified: "সর্বশেষ সম্পূর্ণ সাইট পুনঃযাচাই",
     whoH: "আমরা কারা",
-    whoP: "GetJeetBuzz লিখছে একটি ছোট সম্পাদকীয় দল — মূলত বাংলাদেশ ভিত্তিক, পাকিস্তান ও ভারতের জন্যও কাজ করি। আমরা প্রথমে ক্রিকেট বেটর, পরে লেখক — বেশিরভাগ আমরা এই সাইট তৈরির আগে JeetBuzz-এ BPL ও IPL-এ বাজি ধরতাম। বাংলাদেশে অনলাইন বেটিং সংবেদনশীল বিষয় বলেই আমরা ব্যক্তি নয়, টিম বাইলাইনে প্রকাশ করি।",
+    whoP: "GetJeetBuzz লিখছে একটি ছোট সম্পাদকীয় দল, মূলত বাংলাদেশ ভিত্তিক, পাকিস্তান ও ভারতের জন্যও কাজ করি। আমরা প্রথমে ক্রিকেট বেটর, পরে লেখক, বেশিরভাগ আমরা এই সাইট তৈরির আগে JeetBuzz-এ BPL ও IPL-এ বাজি ধরতাম। বাংলাদেশে অনলাইন বেটিং সংবেদনশীল বিষয় বলেই আমরা ব্যক্তি নয়, টিম বাইলাইনে প্রকাশ করি।",
     testH: "আমরা কীভাবে টেস্ট করি",
-    testP: "এই সাইটের প্রতিটি গাইড হাতে-কলমে পরীক্ষার উপর ভিত্তি করে — প্রেস রিলিজ বা অ্যাফিলিয়েট ডেক নয়। নির্দিষ্টভাবে আমরা:",
+    testP: "এই সাইটের প্রতিটি গাইড হাতে-কলমে পরীক্ষার উপর ভিত্তি করে, প্রেস রিলিজ বা অ্যাফিলিয়েট ডেক নয়। নির্দিষ্টভাবে আমরা:",
     testList: [
       "বাংলাদেশ, পাকিস্তান ও ভারতে প্রকৃত JeetBuzz প্লেয়ার অ্যাকাউন্ট রক্ষণাবেক্ষণ করি দেশ-নির্দিষ্ট আচরণ যাচাই করতে।",
-      "bKash, Nagad, Rocket (এবং PK/IN গাইডের জন্য EasyPaisa/JazzCash/UPI) দিয়ে প্রকৃত ডিপোজিট করি — তাই স্ক্রিনশট ও সময় আমাদের নিজের ক্যাশিয়ার থেকে আসে।",
-      "প্রকৃত উইথড্রয়াল চেষ্টা করি — ধীরগুলোসহ — এবং KYC প্রকৃতপক্ষে কত সময় নেয় তা নথিভুক্ত করি।",
+      "bKash, Nagad, Rocket (এবং PK/IN গাইডের জন্য EasyPaisa/JazzCash/UPI) দিয়ে প্রকৃত ডিপোজিট করি, তাই স্ক্রিনশট ও সময় আমাদের নিজের ক্যাশিয়ার থেকে আসে।",
+      "প্রকৃত উইথড্রয়াল চেষ্টা করি, ধীরগুলোসহ, এবং KYC প্রকৃতপক্ষে কত সময় নেয় তা নথিভুক্ত করি।",
       "ইন-প্লে BPL, IPL, PSL, ইন্টারন্যাশনাল ও লাইভ ক্যাসিনোতে বাজি ধরি যাতে আমাদের রিভিউয়ের মার্কেট ডেপথ ও ক্যাশ-আউট আচরণ প্রথম হাতে যাচাইকৃত।",
     ],
     reverifyH: "কত ঘন ঘন পুনঃযাচাই",
@@ -214,11 +214,11 @@ const COPY: Record<Locale, Copy> = {
     contactPage: "Contact পেজে",
   },
   ur: {
-    eyebrow: "مصنف پروفائل", title1: "تعارف — ", title2: "GetJeetBuzz Editorial Team",
-    subtitle: "جنوبی ایشیائی کھلاڑیوں کی ایک چھوٹی ٹیم — حقیقی اکاؤنٹس، حقیقی EasyPaisa/JazzCash ڈپازٹ اور حقیقی وڈرا کے ساتھ JeetBuzz کو ٹیسٹ کرتے ہیں۔",
+    eyebrow: "مصنف پروفائل", title1: "تعارف, ", title2: "GetJeetBuzz Editorial Team",
+    subtitle: "جنوبی ایشیائی کھلاڑیوں کی ایک چھوٹی ٹیم, حقیقی اکاؤنٹس، حقیقی EasyPaisa/JazzCash ڈپازٹ اور حقیقی وڈرا کے ساتھ JeetBuzz کو ٹیسٹ کرتے ہیں۔",
     lastVerified: "آخری مکمل سائٹ ری ویریفکیشن",
     whoH: "ہم کون ہیں",
-    whoP: "GetJeetBuzz ایک چھوٹی ادارتی ٹیم لکھتی ہے جو پاکستان، بنگلہ دیش اور بھارت کو کور کرتی ہے۔ ہم پہلے کرکٹ بیٹرز اور پھر لکھاری ہیں — ہم میں سے اکثر اس سائٹ سے پہلے JeetBuzz پر PSL، BPL اور IPL پر بیٹ لگاتے تھے۔",
+    whoP: "GetJeetBuzz ایک چھوٹی ادارتی ٹیم لکھتی ہے جو پاکستان، بنگلہ دیش اور بھارت کو کور کرتی ہے۔ ہم پہلے کرکٹ بیٹرز اور پھر لکھاری ہیں, ہم میں سے اکثر اس سائٹ سے پہلے JeetBuzz پر PSL، BPL اور IPL پر بیٹ لگاتے تھے۔",
     testH: "ہم کیسے ٹیسٹ کرتے ہیں",
     testP: "اس سائٹ پر ہر گائیڈ ہینڈز آن ٹیسٹنگ پر مبنی ہے، پریس ریلیز یا ایفیلیٹ ڈیک پر نہیں۔ خاص طور پر ہم:",
     testList: [
@@ -241,11 +241,11 @@ const COPY: Record<Locale, Copy> = {
     contactPage: "Contact صفحہ پر",
   },
   hi: {
-    eyebrow: "लेखक प्रोफ़ाइल", title1: "परिचय — ", title2: "GetJeetBuzz Editorial Team",
-    subtitle: "दक्षिण एशियाई बेटर्स की एक छोटी टीम — असली अकाउंट, असली UPI/PhonePe डिपॉज़िट और असली विदड्रॉल के साथ JeetBuzz टेस्ट करते हैं।",
+    eyebrow: "लेखक प्रोफ़ाइल", title1: "परिचय, ", title2: "GetJeetBuzz Editorial Team",
+    subtitle: "दक्षिण एशियाई बेटर्स की एक छोटी टीम, असली अकाउंट, असली UPI/PhonePe डिपॉज़िट और असली विदड्रॉल के साथ JeetBuzz टेस्ट करते हैं।",
     lastVerified: "अंतिम पूर्ण साइट पुन: सत्यापन",
     whoH: "हम कौन हैं",
-    whoP: "GetJeetBuzz एक छोटी संपादकीय टीम लिखती है जो भारत, बांग्लादेश और पाकिस्तान को कवर करती है। हम पहले क्रिकेट बेटर्स हैं, फिर लेखक — हम में से अधिकांश इस साइट से पहले JeetBuzz पर IPL, BPL और PSL पर दांव लगाते थे।",
+    whoP: "GetJeetBuzz एक छोटी संपादकीय टीम लिखती है जो भारत, बांग्लादेश और पाकिस्तान को कवर करती है। हम पहले क्रिकेट बेटर्स हैं, फिर लेखक, हम में से अधिकांश इस साइट से पहले JeetBuzz पर IPL, BPL और PSL पर दांव लगाते थे।",
     testH: "हम कैसे टेस्ट करते हैं",
     testP: "इस साइट की हर गाइड हैंड्स-ऑन टेस्टिंग पर आधारित है, प्रेस रिलीज़ या एफिलिएट डेक पर नहीं। विशेष रूप से, हम:",
     testList: [

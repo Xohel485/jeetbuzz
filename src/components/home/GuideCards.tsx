@@ -1,67 +1,153 @@
 import { Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  BookOpen,
-  Gift,
-  ShieldCheck,
-  Smartphone,
-  Trophy,
-  Wallet,
-  ShieldAlert,
-  Banknote,
-} from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 
-const GUIDE_CARDS = [
+/**
+ * Home guide cards.
+ *
+ * Deliberately avoids the "icon in rounded coloured box + Read guide →"
+ * template look. Cards mix three visual variants (indexed numeral, quiet
+ * text card, accent-border pillar) and every CTA uses distinct copy.
+ */
+type CardVariant = "numeral" | "quiet" | "accent";
+
+type Card = {
+  to: string;
+  eyebrow: string;
+  title: string;
+  desc: string;
+  cta: string;
+  variant: CardVariant;
+};
+
+const GUIDE_CARDS: Card[] = [
   {
     to: "/jeetbuzz-review",
-    icon: BookOpen,
-    title: "JeetBuzz Review 2026 — Full Operator Breakdown",
-    desc: "The pillar JeetBuzz review for Bangladesh, Pakistan and India — odds quality, payment speed, support and the trust verdict in one place.",
+    eyebrow: "Pillar review",
+    title: "JeetBuzz Review 2026: the full operator verdict",
+    desc: "Odds quality, payment speed, support responsiveness and the trust verdict for players across Bangladesh, Pakistan and India.",
+    cta: "See the full breakdown",
+    variant: "accent",
   },
   {
     to: "/registration-guide",
-    icon: ShieldCheck,
-    title: "JeetBuzz Registration & KYC",
-    desc: "Open an account in under 3 minutes — phone signup, OTP, KYC and first bKash/Nagad deposit in Bengali and English.",
+    eyebrow: "Getting started",
+    title: "Registration & KYC",
+    desc: "Open an account in under three minutes. Phone signup, OTP, KYC and the first bKash or Nagad deposit, in Bengali and English.",
+    cta: "Walk through signup",
+    variant: "numeral",
   },
   {
     to: "/bonus-and-promotions",
-    icon: Gift,
-    title: "Bonus & Promotions Explained",
-    desc: "Welcome bonus, reloads, cashback and free bets with wagering and max-bet rules in plain language.",
+    eyebrow: "Bonuses",
+    title: "Bonuses & promotions, explained plainly",
+    desc: "Welcome bonus, reloads, cashback and free bets with wagering and max-bet rules translated into normal English.",
+    cta: "Check eligibility",
+    variant: "quiet",
   },
   {
     to: "/apk-download-guide",
-    icon: Smartphone,
-    title: "JeetBuzz APK Download Guide",
-    desc: "Install the official Android app safely — verified source, permission walk-through and common install errors fixed.",
+    eyebrow: "Android",
+    title: "APK download, safely",
+    desc: "Install the official Android app from a verified source. Permission walk-through and the common install errors, actually fixed.",
+    cta: "Install on Android",
+    variant: "numeral",
   },
   {
     to: "/deposit-guide",
-    icon: Wallet,
-    title: "Deposit Guide — bKash, Nagad, UPI",
+    eyebrow: "Cashier",
+    title: "Deposit guide: bKash, Nagad, UPI",
     desc: "Every supported rail with minimums, processing times and the exact Send-Money flow for first-time depositors.",
+    cta: "Compare deposit rails",
+    variant: "quiet",
   },
   {
     to: "/withdrawal-guide",
-    icon: Banknote,
-    title: "Withdrawal Guide & Limits",
-    desc: "How to cash out fast — KYC checklist, VIP-tier limits and what to do when a withdrawal sits pending.",
+    eyebrow: "Cashier",
+    title: "Withdrawal guide & limits",
+    desc: "Cash out faster. KYC checklist, VIP-tier limits and what to do when a withdrawal sits pending for hours.",
+    cta: "Compare payout times",
+    variant: "numeral",
   },
   {
     to: "/live-cricket-betting",
-    icon: Trophy,
-    title: "Live Cricket Betting",
-    desc: "BPL, IPL and PSL markets — in-play odds, cash-out timing and the volatility playbook for live cricket.",
+    eyebrow: "Cricket",
+    title: "Live cricket betting",
+    desc: "BPL, IPL and PSL markets. In-play odds, cash-out timing and a volatility playbook for the last five overs.",
+    cta: "Read the in-play playbook",
+    variant: "quiet",
   },
   {
     to: "/is-jeetbuzz-safe",
-    icon: ShieldAlert,
-    title: "Is JeetBuzz Safe & Legit?",
-    desc: "Independent 2026 trust review — Curacao licence, payout record, KYC handling and the red flags every player should know.",
+    eyebrow: "Trust",
+    title: "Is JeetBuzz safe & legit?",
+    desc: "Independent 2026 trust review. Curaçao licence, payout record, KYC handling and the red flags every player should know.",
+    cta: "See the trust verdict",
+    variant: "accent",
   },
-] as const;
+];
+
+function NumeralCard({ card, index }: { card: Card; index: number }) {
+  return (
+    <Link
+      to={card.to}
+      className="group relative flex h-full flex-col rounded-2xl border border-white/8 bg-white/[0.02] p-6 transition-colors hover:border-primary/30 hover:bg-white/[0.04]"
+    >
+      <div className="flex items-baseline justify-between">
+        <span className="gold-text font-mono text-3xl font-bold leading-none tracking-tight">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <span className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground/80">
+          {card.eyebrow}
+        </span>
+      </div>
+      <h3 className="mt-5 text-base font-semibold leading-snug md:text-lg">{card.title}</h3>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
+      <span className="mt-5 text-sm font-medium text-primary underline-offset-4 group-hover:underline">
+        {card.cta}
+      </span>
+    </Link>
+  );
+}
+
+function QuietCard({ card }: { card: Card }) {
+  return (
+    <Link
+      to={card.to}
+      className="group flex h-full flex-col rounded-2xl bg-white/[0.03] p-6 transition-colors hover:bg-white/[0.06]"
+    >
+      <span className="text-[11px] uppercase tracking-[0.14em] text-primary/80">
+        {card.eyebrow}
+      </span>
+      <h3 className="mt-3 text-base font-semibold leading-snug md:text-lg">{card.title}</h3>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
+      <span className="mt-5 text-sm font-medium text-foreground/90 group-hover:text-primary">
+        {card.cta}
+      </span>
+    </Link>
+  );
+}
+
+function AccentCard({ card }: { card: Card }) {
+  return (
+    <Link
+      to={card.to}
+      className="group relative flex h-full flex-col rounded-2xl border-l-2 border-primary/60 bg-gradient-to-br from-white/[0.05] to-white/[0.01] p-7 transition-colors hover:border-primary hover:from-white/[0.08]"
+    >
+      <span className="text-[11px] uppercase tracking-[0.16em] text-primary">
+        {card.eyebrow}
+      </span>
+      <h3 className="mt-4 text-lg font-semibold leading-snug md:text-2xl">
+        {card.title}
+      </h3>
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+        {card.desc}
+      </p>
+      <span className="mt-6 text-sm font-medium text-primary underline-offset-4 group-hover:underline">
+        {card.cta}
+      </span>
+    </Link>
+  );
+}
 
 export default function GuideCards() {
   return (
@@ -69,51 +155,13 @@ export default function GuideCards() {
       <SectionHeader
         eyebrow="JeetBuzz guides"
         title="Everything you need to use JeetBuzz"
-        desc="Step-by-step JeetBuzz guides written for players in Bangladesh, Pakistan and India — updated whenever JeetBuzz changes its terms."
+        desc="Step-by-step guides written for players in Bangladesh, Pakistan and India, refreshed whenever JeetBuzz changes its terms."
       />
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {GUIDE_CARDS.map((c, i) => {
-          const featured = i === 0;
-          return (
-            <Link
-              key={c.to}
-              to={c.to}
-              className={
-                "glass group flex h-full flex-col p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white/[0.06] " +
-                (featured ? "lg:col-span-2 lg:p-8 lg:row-span-1" : "")
-              }
-            >
-              <div className="flex items-center gap-3.5">
-                <span
-                  className={
-                    "grid shrink-0 place-items-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/20 " +
-                    (featured ? "size-12" : "size-11")
-                  }
-                >
-                  <c.icon className={featured ? "size-6" : "size-5"} />
-                </span>
-                <h3
-                  className={
-                    "font-semibold leading-snug " +
-                    (featured ? "text-lg md:text-2xl" : "text-base md:text-lg")
-                  }
-                >
-                  {c.title}
-                </h3>
-              </div>
-              <p
-                className={
-                  "mt-4 flex-1 leading-relaxed text-muted-foreground " +
-                  (featured ? "text-sm md:text-base" : "text-sm")
-                }
-              >
-                {c.desc}
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                Read guide <ArrowRight className="size-4 transition group-hover:translate-x-1" />
-              </span>
-            </Link>
-          );
+          if (c.variant === "accent") return <AccentCard key={c.to} card={c} />;
+          if (c.variant === "quiet") return <QuietCard key={c.to} card={c} />;
+          return <NumeralCard key={c.to} card={c} index={i} />;
         })}
       </div>
     </section>

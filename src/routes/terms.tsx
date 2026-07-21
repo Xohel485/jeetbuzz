@@ -18,7 +18,7 @@ export const Route = createFileRoute("/terms")({
       showDisclosure={false}
       body={[
         "## Informational only",
-        "Content on GetJeetBuzz is for informational purposes. We make no guarantees about JeetBuzz's services, bonuses or odds — those are controlled by JeetBuzz.",
+        "Content on GetJeetBuzz is for informational purposes. We make no guarantees about JeetBuzz's services, bonuses or odds, those are controlled by JeetBuzz.",
         "## 18+ only",
         "This site is intended for adults aged 18 or over (or the legal gambling age in your jurisdiction).",
         "## No liability",
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/terms")({
       bodyByLocale={{
         bn: [
           "## কেবল তথ্যমূলক",
-          "GetJeetBuzz-এর কনটেন্ট তথ্যমূলক উদ্দেশ্যে। JeetBuzz-এর সার্ভিস, বোনাস বা অডস সম্পর্কে আমরা কোনো গ্যারান্টি দিই না — সেগুলো JeetBuzz নিয়ন্ত্রণ করে।",
+          "GetJeetBuzz-এর কনটেন্ট তথ্যমূলক উদ্দেশ্যে। JeetBuzz-এর সার্ভিস, বোনাস বা অডস সম্পর্কে আমরা কোনো গ্যারান্টি দিই না, সেগুলো JeetBuzz নিয়ন্ত্রণ করে।",
           "## ১৮+ মাত্র",
           "এই সাইট ১৮ বা তদূর্ধ্ব প্রাপ্তবয়স্কদের জন্য (অথবা আপনার এখতিয়ারের আইনি জুয়া বয়সের জন্য)।",
           "## কোনো দায়বদ্ধতা নেই",

@@ -7,7 +7,7 @@ const PATH = "/deposit-guide";
 const TITLE =
   "JeetBuzz Deposit Guide Bangladesh Pakistan India 2026 - bKash, Nagad, UPI";
 const DESC =
-  "How to deposit on JeetBuzz in 2026 from Bangladesh, Pakistan and India — bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
+  "How to deposit on JeetBuzz in 2026 from Bangladesh, Pakistan and India, bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
 
 export const Route = createFileRoute("/deposit-guide")({
   head: () => ({
@@ -19,26 +19,26 @@ export const Route = createFileRoute("/deposit-guide")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
     <GuidePage
       eyebrow="Payments"
       title={<>JeetBuzz <span className="gold-text">Deposit Guide</span></>}
-      subtitle="The complete deposit handbook for JeetBuzz Bangladesh — bKash, Nagad, Rocket and UPI minimums, processing times and common errors."
+      subtitle="The complete deposit handbook for JeetBuzz Bangladesh, bKash, Nagad, Rocket and UPI minimums, processing times and common errors."
       breadcrumbs={[{ name: "Payments", path: "/payment-methods" }, { name: "Deposit Guide", path: PATH }]}
       articlePath={PATH}
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
-        "> **Quick summary:** Log in, open Cashier > Deposit, pick your country's rail (bKash/Nagad/Rocket in BD, JazzCash/EasyPaisa in PK, UPI in IN, USDT globally), send the exact amount with the JeetBuzz reference via Send Money, paste the TrxID/UTR and submit. Local wallets credit in under 60 seconds. Activate the welcome bonus first — bonuses are not applied retroactively.",
+        "> **Quick summary:** Log in, open Cashier > Deposit, pick your country's rail (bKash/Nagad/Rocket in BD, JazzCash/EasyPaisa in PK, UPI in IN, USDT globally), send the exact amount with the JeetBuzz reference via Send Money, paste the TrxID/UTR and submit. Local wallets credit in under 60 seconds. Activate the welcome bonus first, bonuses are not applied retroactively.",
         "## Overview",
         "This jeetbuzz deposit guide covers every supported rail across Bangladesh, Pakistan and India for 2026, with minimums, processing times, fees, and the exact flow for each payment method. Deposits usually credit within a few minutes when you follow the correct Send Money flow, subject to wallet and operator processing.",
         "## Universal step-by-step",
         "1. Log in to JeetBuzz via the [official site or app](/apk-download-guide).",
         "2. Open **Cashier > Deposit**.",
-        "3. Pick your method — country tiles appear automatically based on your IP.",
+        "3. Pick your method, country tiles appear automatically based on your IP.",
         "4. Enter the amount (see the per-method minimum table below).",
         "5. Copy the merchant number/VPA/wallet address plus the unique reference code.",
         "6. Open your wallet app and use **Send Money** (never Mobile Recharge or Make Payment).",
@@ -79,9 +79,9 @@ export const Route = createFileRoute("/deposit-guide")({
         "| USDT TRC20 | ~$10 | 1 | 2–5 min |",
         "| USDT BEP20 | ~$10 | 3 | 3–10 min |",
         "## Why deposits fail",
-        "- Wrong TrxID / UTR — double-check the last 4 characters",
+        "- Wrong TrxID / UTR, double-check the last 4 characters",
         "- Sending to a personal number instead of the merchant",
-        "- Using someone else's wallet — JeetBuzz requires the wallet name to match your account",
+        "- Using someone else's wallet. JeetBuzz requires the wallet name to match your account",
         "- Below the minimum amount or rounded incorrectly (500.50 vs 500)",
         "- Reference code missing or with extra spaces",
         "## Fees",
@@ -103,26 +103,26 @@ export const Route = createFileRoute("/deposit-guide")({
         "- **Merchant pane:** copy-pill for the receiving number/VPA/address, copy-pill for the unique reference code (always begins with JB-), and a \"How to pay\" mini guide collapsed by default.",
         "- **Confirmation form:** field for the TrxID / UTR / hash, optional screenshot upload, and a Submit button that turns gold when the form is valid.",
         "## Country-specific tips",
-        "- **Bangladesh:** Use Send Money only — never Make Payment or Mobile Recharge. Keep both bKash and Nagad funded as failover.",
-        "- **Pakistan:** EasyPaisa wallet limits reset at midnight PKT — top up before evening kickoffs.",
+        "- **Bangladesh:** Use Send Money only, never Make Payment or Mobile Recharge. Keep both bKash and Nagad funded as failover.",
+        "- **Pakistan:** EasyPaisa wallet limits reset at midnight PKT, top up before evening kickoffs.",
         "- **India:** If a UPI VPA rejects, refresh the cashier to rotate to a fresh acquiring bank VPA. PhonePe and Google Pay sometimes whitelist different VPAs.",
         "## Ready to make your first deposit?",
-        "Pick your country, follow the 9 universal steps, and screenshot every screen until you are comfortable. Activate the [Welcome Bonus](/welcome-bonus) first, then deposit — bonuses are not added retroactively.",
+        "Pick your country, follow the 9 universal steps, and screenshot every screen until you are comfortable. Activate the [Welcome Bonus](/welcome-bonus) first, then deposit, bonuses are not added retroactively.",
       ]}
       subtitleByLocale={{
-        bn: "JeetBuzz বাংলাদেশের জন্য সম্পূর্ণ ডিপোজিট হ্যান্ডবুক — bKash, Nagad, Rocket-এর মিনিমাম, প্রসেসিং সময়, ফি এবং কেন কিছু লেনদেন পেন্ডিং হয় তার ব্যাখ্যা।",
-        ur: "JeetBuzz پاکستان ڈپازٹ گائیڈ — EasyPaisa, JazzCash کی کم از کم رقم اور پروسیسنگ ٹائم۔",
-        hi: "JeetBuzz इंडिया डिपॉज़िट गाइड — UPI, PhonePe, Paytm की मिनिमम और प्रोसेसिंग टाइम।",
+        bn: "JeetBuzz বাংলাদেশের জন্য সম্পূর্ণ ডিপোজিট হ্যান্ডবুক, bKash, Nagad, Rocket-এর মিনিমাম, প্রসেসিং সময়, ফি এবং কেন কিছু লেনদেন পেন্ডিং হয় তার ব্যাখ্যা।",
+        ur: "JeetBuzz پاکستان ڈپازٹ گائیڈ. EasyPaisa, JazzCash کی کم از کم رقم اور پروسیسنگ ٹائم۔",
+        hi: "JeetBuzz इंडिया डिपॉज़िट गाइड. UPI, PhonePe, Paytm की मिनिमम और प्रोसेसिंग टाइम।",
       }}
       bodyByLocale={{
         bn: [
-          "> **এক নজরে:** লগইন করুন, Cashier > Deposit খুলুন, আপনার পছন্দের রেল বেছে নিন (BD-তে bKash/Nagad/Rocket), Send Money দিয়ে সঠিক পরিমাণ ও JeetBuzz রেফারেন্স পাঠান, TrxID পেস্ট করে সাবমিট করুন। মোবাইল ওয়ালেট সাধারণত ৬০ সেকেন্ডের মধ্যে ব্যালেন্সে যোগ হয়। ওয়েলকাম বোনাস আগে অ্যাক্টিভেট করুন — পরে আর প্রযোজ্য হয় না।",
+          "> **এক নজরে:** লগইন করুন, Cashier > Deposit খুলুন, আপনার পছন্দের রেল বেছে নিন (BD-তে bKash/Nagad/Rocket), Send Money দিয়ে সঠিক পরিমাণ ও JeetBuzz রেফারেন্স পাঠান, TrxID পেস্ট করে সাবমিট করুন। মোবাইল ওয়ালেট সাধারণত ৬০ সেকেন্ডের মধ্যে ব্যালেন্সে যোগ হয়। ওয়েলকাম বোনাস আগে অ্যাক্টিভেট করুন, পরে আর প্রযোজ্য হয় না।",
           "## ভূমিকা",
-          "এই গাইডে JeetBuzz বাংলাদেশের জন্য সকল ডিপোজিট পদ্ধতি ২০২৬ সালের আপডেটসহ তুলে ধরা হয়েছে — মিনিমাম, প্রসেসিং টাইম, ফি এবং প্রতিটি ওয়ালেটের নির্ভরযোগ্য ফ্লো। সঠিক Send Money ফ্লো অনুসরণ করলে JeetBuzz-এ প্রায় সব ডিপোজিট তাৎক্ষণিকভাবে জমা হয়।",
+          "এই গাইডে JeetBuzz বাংলাদেশের জন্য সকল ডিপোজিট পদ্ধতি ২০২৬ সালের আপডেটসহ তুলে ধরা হয়েছে, মিনিমাম, প্রসেসিং টাইম, ফি এবং প্রতিটি ওয়ালেটের নির্ভরযোগ্য ফ্লো। সঠিক Send Money ফ্লো অনুসরণ করলে JeetBuzz-এ প্রায় সব ডিপোজিট তাৎক্ষণিকভাবে জমা হয়।",
           "## সর্বজনীন ধাপে ধাপে নির্দেশিকা",
           "১. [অফিশিয়াল সাইট বা অ্যাপ](/apk-download-guide) থেকে JeetBuzz-এ লগইন করুন।",
           "২. **Cashier > Deposit** খুলুন।",
-          "৩. পেমেন্ট মাধ্যম বাছুন — আপনার দেশ অনুযায়ী আইকন স্বয়ংক্রিয়ভাবে দেখা যাবে।",
+          "৩. পেমেন্ট মাধ্যম বাছুন, আপনার দেশ অনুযায়ী আইকন স্বয়ংক্রিয়ভাবে দেখা যাবে।",
           "৪. পরিমাণ লিখুন (নিচের টেবিলে মিনিমাম দেখুন)।",
           "৫. মার্চেন্ট নম্বর এবং ইউনিক রেফারেন্স কোড কপি করুন।",
           "৬. ওয়ালেট অ্যাপ খুলে **Send Money** বেছে নিন (Mobile Recharge বা Make Payment নয়)।",
@@ -137,17 +137,17 @@ export const Route = createFileRoute("/deposit-guide")({
           "| Nagad | ২০০ টাকা | সাধারণত কয়েক মিনিটে |",
           "| Rocket | ৩০০ টাকা | সাধারণত কয়েক মিনিটে |",
           "| Upay | ৩০০ টাকা | সাধারণত কয়েক মিনিটে |",
-          "দৈনিক সর্বোচ্চ লিমিট অ্যাকাউন্ট স্ট্যাটাস ও অপারেটরের বর্তমান নীতিমালা অনুযায়ী ভিন্ন হতে পারে — সর্বশেষ তথ্যের জন্য ক্যাশিয়ার দেখুন।",
+          "দৈনিক সর্বোচ্চ লিমিট অ্যাকাউন্ট স্ট্যাটাস ও অপারেটরের বর্তমান নীতিমালা অনুযায়ী ভিন্ন হতে পারে, সর্বশেষ তথ্যের জন্য ক্যাশিয়ার দেখুন।",
           "## ক্রিপ্টো: USDT",
-          "যারা বড় অঙ্কে খেলেন তাদের জন্য USDT (TRC20 বা BEP20) সবচেয়ে দ্রুত — ওয়ালেট ক্যাপ এড়িয়ে যাওয়া যায়।",
+          "যারা বড় অঙ্কে খেলেন তাদের জন্য USDT (TRC20 বা BEP20) সবচেয়ে দ্রুত, ওয়ালেট ক্যাপ এড়িয়ে যাওয়া যায়।",
           "| নেটওয়ার্ক | মিনিমাম | কনফার্ম | সময় |",
           "|---|---|---|---|",
           "| USDT TRC20 | ~$১০ | ১ | ২–৫ মিনিট |",
           "| USDT BEP20 | ~$১০ | ৩ | ৩–১০ মিনিট |",
           "## কেন ডিপোজিট ফেইল হয়",
-          "- ভুল TrxID — শেষ ৪ ডিজিট মিলিয়ে দেখুন",
+          "- ভুল TrxID, শেষ ৪ ডিজিট মিলিয়ে দেখুন",
           "- মার্চেন্টের বদলে পারসোনাল নম্বরে পাঠানো",
-          "- অন্যের ওয়ালেট থেকে পাঠানো — নাম আপনার অ্যাকাউন্টের সঙ্গে মিলতে হবে",
+          "- অন্যের ওয়ালেট থেকে পাঠানো, নাম আপনার অ্যাকাউন্টের সঙ্গে মিলতে হবে",
           "- মিনিমামের নিচে বা ভুল রাউন্ডিং (৫০০.৫০ বনাম ৫০০)",
           "- রেফারেন্স কোড বাদ পড়া বা অতিরিক্ত স্পেস",
           "## ফি",
@@ -160,22 +160,22 @@ export const Route = createFileRoute("/deposit-guide")({
           "- **ক্যাশিয়ার হোম:** JeetBuzz-এর ডার্ক লেআউট, IP অনুযায়ী দেশের টাইল প্রি-সিলেক্টেড, প্রতিটি টাইলে লাইভ স্ট্যাটাস (সবুজ = খোলা, হলুদ = ধীর, লাল = মেইনটেন্যান্স)।",
           "- **অ্যামাউন্ট এন্ট্রি:** সংখ্যা প্যাড এবং কুইক চিপস (৫০০ / ১,০০০ / ২,০০০ / ৫,০০০), উপরে ১৫ মিনিটের কাউন্টডাউন।",
           "- **মার্চেন্ট প্যানেল:** নম্বর/VPA/অ্যাড্রেস কপি করার পিল, ইউনিক রেফারেন্স কোড (সব সময় JB- দিয়ে শুরু) এবং একটি সংক্ষিপ্ত \"কীভাবে দেবেন\" গাইড।",
-          "- **কনফার্মেশন ফর্ম:** TrxID/UTR/হ্যাশ লেখার ফিল্ড, অপশনাল স্ক্রিনশট আপলোড এবং Submit বোতাম — সঠিক হলে গোল্ডেন হয়ে ওঠে।",
+          "- **কনফার্মেশন ফর্ম:** TrxID/UTR/হ্যাশ লেখার ফিল্ড, অপশনাল স্ক্রিনশট আপলোড এবং Submit বোতাম, সঠিক হলে গোল্ডেন হয়ে ওঠে।",
           "## বাংলাদেশের জন্য বিশেষ টিপস",
-          "- শুধু Send Money ব্যবহার করুন — Make Payment বা Mobile Recharge নয়। bKash এবং Nagad — দুটি ওয়ালেটেই কিছু টাকা রাখুন যাতে একটি মেইনটেন্যান্সে গেলে আরেকটি কাজ করে।",
+          "- শুধু Send Money ব্যবহার করুন. Make Payment বা Mobile Recharge নয়। bKash এবং Nagad, দুটি ওয়ালেটেই কিছু টাকা রাখুন যাতে একটি মেইনটেন্যান্সে গেলে আরেকটি কাজ করে।",
           "- শুক্রবার গভীর রাতে মেইনটেন্যান্স উইন্ডো এড়িয়ে চলুন।",
-          "- বড় ম্যাচের আগে ওয়ালেটে ব্যালেন্স আগেই টপ-আপ করুন — লাইভ মার্কেট দ্রুত শেষ হয়।",
+          "- বড় ম্যাচের আগে ওয়ালেটে ব্যালেন্স আগেই টপ-আপ করুন, লাইভ মার্কেট দ্রুত শেষ হয়।",
           "## প্রথম ডিপোজিটের জন্য প্রস্তুত?",
-          "আপনার রেল বেছে নিন, ৯টি ধাপ অনুসরণ করুন, এবং প্রতিটি স্ক্রিনের স্ক্রিনশট রাখুন। [ওয়েলকাম বোনাস](/welcome-bonus) আগে অ্যাক্টিভেট করুন — পরে যোগ হয় না।",
+          "আপনার রেল বেছে নিন, ৯টি ধাপ অনুসরণ করুন, এবং প্রতিটি স্ক্রিনের স্ক্রিনশট রাখুন। [ওয়েলকাম বোনাস](/welcome-bonus) আগে অ্যাক্টিভেট করুন, পরে যোগ হয় না।",
         ],
         ur: [
-          "> **ایک نظر میں:** JeetBuzz اکاؤنٹ میں لاگ ان کریں، Cashier > Deposit کھولیں، JazzCash یا EasyPaisa میں سے ایک منتخب کریں، PKR رقم درج کریں، اپنے موبائل والیٹ ایپ سے **Send Money** کے ذریعے درست مرچنٹ نمبر پر منفرد ریفرنس کے ساتھ بھیجیں اور TrxID جمع کرا دیں۔ تصدیق عموماً چند منٹ میں مکمل ہوتی ہے، البتہ والیٹ اور آپریٹر کی صورتحال پر منحصر ہے۔ ویلکم بونس کے لیے ڈپازٹ سے **پہلے** آپٹ-ان کرنا ضروری ہے — بعد میں ریٹرواسپیکٹیو نہیں لگتا۔",
+          "> **ایک نظر میں:** JeetBuzz اکاؤنٹ میں لاگ ان کریں، Cashier > Deposit کھولیں، JazzCash یا EasyPaisa میں سے ایک منتخب کریں، PKR رقم درج کریں، اپنے موبائل والیٹ ایپ سے **Send Money** کے ذریعے درست مرچنٹ نمبر پر منفرد ریفرنس کے ساتھ بھیجیں اور TrxID جمع کرا دیں۔ تصدیق عموماً چند منٹ میں مکمل ہوتی ہے، البتہ والیٹ اور آپریٹر کی صورتحال پر منحصر ہے۔ ویلکم بونس کے لیے ڈپازٹ سے **پہلے** آپٹ-ان کرنا ضروری ہے, بعد میں ریٹرواسپیکٹیو نہیں لگتا۔",
           "## تعارف",
           "یہ گائیڈ پاکستانی کھلاڑیوں کے لیے JeetBuzz پر ڈپازٹ کرنے کے تمام مقامی طریقے، کم از کم رقم، فیس اور عام مسائل کے حل کا احاطہ کرتی ہے۔ پاکستان میں بنیادی ریلز JazzCash، EasyPaisa اور بینک ٹرانسفر ہیں۔ کریڈٹ کارڈ سپورٹ نہیں ہے۔",
           "## عمومی مرحلہ وار",
           "1. [آفیشل سائٹ یا ایپ](/apk-download-guide) سے JeetBuzz میں لاگ ان کریں۔",
           "2. **Cashier > Deposit** کھولیں۔",
-          "3. ادائیگی کا طریقہ منتخب کریں — IP کے مطابق پاکستان کے ٹائلز خود نظر آتے ہیں۔",
+          "3. ادائیگی کا طریقہ منتخب کریں. IP کے مطابق پاکستان کے ٹائلز خود نظر آتے ہیں۔",
           "4. رقم درج کریں (نیچے ٹیبل میں کم از کم دیکھیں)۔",
           "5. مرچنٹ نمبر اور منفرد ریفرنس کوڈ کاپی کریں۔",
           "6. اپنا والیٹ ایپ کھول کر **Send Money** منتخب کریں (Mobile Load یا Bill Payment **نہیں**)۔",
@@ -189,7 +189,7 @@ export const Route = createFileRoute("/deposit-guide")({
           "| JazzCash | 500 PKR | عموماً چند منٹ میں |",
           "| EasyPaisa | 500 PKR | عموماً چند منٹ میں |",
           "| بینک ٹرانسفر | 1,000 PKR | پروسیسنگ کا وقت مختلف ہو سکتا ہے |",
-          "روزانہ زیادہ سے زیادہ حدود آپ کے اکاؤنٹ کی حالت اور آپریٹر کی موجودہ پالیسی کے مطابق مختلف ہو سکتی ہیں — تازہ ترین معلومات کے لیے کیشیئر دیکھیں۔",
+          "روزانہ زیادہ سے زیادہ حدود آپ کے اکاؤنٹ کی حالت اور آپریٹر کی موجودہ پالیسی کے مطابق مختلف ہو سکتی ہیں, تازہ ترین معلومات کے لیے کیشیئر دیکھیں۔",
           "## کرپٹو: USDT",
           "بڑے اسٹیک کھیلنے والوں کے لیے USDT (TRC20 یا BEP20) تیز ترین آپشن ہے کیونکہ یہ والیٹ کیپس کو بائی پاس کر دیتا ہے۔",
           "| نیٹ ورک | کم از کم | تصدیقات | وقت |",
@@ -197,9 +197,9 @@ export const Route = createFileRoute("/deposit-guide")({
           "| USDT TRC20 | ~$10 | 1 | 2–5 منٹ |",
           "| USDT BEP20 | ~$10 | 3 | 3–10 منٹ |",
           "## ڈپازٹ ناکام کیوں ہوتے ہیں",
-          "- غلط TrxID — آخری 4 ہندسے ضرور دوبارہ ملا لیں",
+          "- غلط TrxID, آخری 4 ہندسے ضرور دوبارہ ملا لیں",
           "- مرچنٹ کے بجائے کسی پرسنل نمبر پر بھیجنا",
-          "- کسی اور کا والیٹ — JeetBuzz چاہتا ہے کہ والیٹ کا نام آپ کے اکاؤنٹ سے میچ کرے (CNIC نام)",
+          "- کسی اور کا والیٹ. JeetBuzz چاہتا ہے کہ والیٹ کا نام آپ کے اکاؤنٹ سے میچ کرے (CNIC نام)",
           "- کم از کم سے کم رقم یا غلط راؤنڈنگ (500.50 بمقابلہ 500)",
           "- ریفرنس کوڈ غائب یا اضافی سپیس",
           "## فیس",
@@ -209,16 +209,16 @@ export const Route = createFileRoute("/deposit-guide")({
           "## پہلے ڈپازٹ کے بعد",
           "ایک چھوٹا بیٹ لگا کر تصدیق کریں کہ سب کام کر رہا ہے، پھر [Withdrawal Guide](/withdrawal-guide) پڑھ لیں تاکہ کیش آؤٹ سے پہلے تمام معلومات تیار ہوں۔ نئے کھلاڑی [Is JeetBuzz Safe](/is-jeetbuzz-safe) اور [Registration Guide](/registration-guide) بھی دیکھ لیں۔",
           "## پاکستان کے لیے خاص ٹپس",
-          "- صرف Send Money استعمال کریں — Mobile Load یا Bill Payment کبھی نہیں۔",
+          "- صرف Send Money استعمال کریں. Mobile Load یا Bill Payment کبھی نہیں۔",
           "- JazzCash اور EasyPaisa دونوں میں کچھ بیلنس رکھیں؛ ایک ڈاؤن ہو تو دوسرا کام آتا ہے۔",
-          "- EasyPaisa والیٹ کی حد رات 12 بجے PKT پر ری سیٹ ہوتی ہے — PSL ایوننگ کک آف سے پہلے ٹاپ اپ کر لیں۔",
+          "- EasyPaisa والیٹ کی حد رات 12 بجے PKT پر ری سیٹ ہوتی ہے. PSL ایوننگ کک آف سے پہلے ٹاپ اپ کر لیں۔",
           "- CNIC نام اور JeetBuzz پروفائل نام بالکل ایک ہونا چاہیے، ورنہ ڈپازٹ ریورس ہو سکتا ہے۔",
           "## اپنی پہلی ڈپازٹ کے لیے تیار ہیں؟",
-          "اپنا والیٹ منتخب کریں، 9 مراحل پر عمل کریں، اور ہر اسکرین کی اسکرین شاٹ رکھیں۔ پہلے [ویلکم بونس](/welcome-bonus) آپٹ-ان کریں — بعد میں اپلائی نہیں ہوتا۔",
+          "اپنا والیٹ منتخب کریں، 9 مراحل پر عمل کریں، اور ہر اسکرین کی اسکرین شاٹ رکھیں۔ پہلے [ویلکم بونس](/welcome-bonus) آپٹ-ان کریں, بعد میں اپلائی نہیں ہوتا۔",
         ],
         hi: [
           "## संक्षेप में",
-          "JeetBuzz इंडिया में UPI सबसे लोकप्रिय — PhonePe, Google Pay, Paytm सब काम करते हैं।",
+          "JeetBuzz इंडिया में UPI सबसे लोकप्रिय. PhonePe, Google Pay, Paytm सब काम करते हैं।",
           "## स्टेप-बाय-स्टेप",
           "1. लॉगिन करें।",
           "2. Cashier > Deposit खोलें।",
@@ -246,11 +246,11 @@ export const Route = createFileRoute("/deposit-guide")({
         bn: [
           { q: "JeetBuzz কি কোনো ডিপোজিট ফি নেয়?", a: "না, JeetBuzz নিজে কোনো ডিপোজিট ফি নেয় না। তবে ওয়ালেট প্রোভাইডার (যেমন bKash) তাদের নিয়মিত Send Money ফি কাটতে পারে।" },
           { q: "আমার bKash ডিপোজিট কেন পেন্ডিং দেখাচ্ছে?", a: "সাধারণত ভুল TrxID সাবমিট করা হয়েছে অথবা মার্চেন্টের বদলে পারসোনাল নম্বরে টাকা গেছে। TrxID স্ক্রিনশটসহ লাইভ চ্যাটে যোগাযোগ করুন।" },
-          { q: "বন্ধুর ওয়ালেট থেকে ডিপোজিট করা যাবে?", a: "না। যেই ওয়ালেট থেকে টাকা পাঠানো হবে সেটির নাম অবশ্যই আপনার JeetBuzz অ্যাকাউন্টের নামের সাথে মিলতে হবে — অন্যথায় ডিপোজিট রিভার্স হয়ে যেতে পারে।" },
+          { q: "বন্ধুর ওয়ালেট থেকে ডিপোজিট করা যাবে?", a: "না। যেই ওয়ালেট থেকে টাকা পাঠানো হবে সেটির নাম অবশ্যই আপনার JeetBuzz অ্যাকাউন্টের নামের সাথে মিলতে হবে, অন্যথায় ডিপোজিট রিভার্স হয়ে যেতে পারে।" },
           { q: "মিনিমাম ডিপোজিট কত?", a: "মোবাইল ওয়ালেটে সাধারণত ২০০–৫০০ টাকা। ক্যাশিয়ার পেজে সর্বশেষ মিনিমাম দেখে নিন।" },
           { q: "প্রথম ডিপোজিট কতক্ষণে জমা হয়?", a: "লোকাল ওয়ালেটে সাধারণত ৬০ সেকেন্ডের মধ্যে। USDT-এ নেটওয়ার্ক কনফার্মেশনের উপর নির্ভর করে ২–১০ মিনিট।" },
-          { q: "ভিন্ন কারেন্সিতে ডিপোজিট করা যায়?", a: "আপনার লোকাল কারেন্সিতেই (BDT) ডিপোজিট করুন — JeetBuzz আপনার দেশ অনুযায়ী অটো-ডিটেক্ট করে। কোনো FX মার্কআপ নেই।" },
-          { q: "টাকা পাঠানোর আগে ক্যাশিয়ার টাইম-আউট হলে?", a: "রেফারেন্স কোড ১৫ মিনিট পর এক্সপায়ার হয়ে যায়। নতুন ডিপোজিট শুরু করে নতুন কোড নিন — পুরোনো কোড পুনরায় ব্যবহার করবেন না।" },
+          { q: "ভিন্ন কারেন্সিতে ডিপোজিট করা যায়?", a: "আপনার লোকাল কারেন্সিতেই (BDT) ডিপোজিট করুন. JeetBuzz আপনার দেশ অনুযায়ী অটো-ডিটেক্ট করে। কোনো FX মার্কআপ নেই।" },
+          { q: "টাকা পাঠানোর আগে ক্যাশিয়ার টাইম-আউট হলে?", a: "রেফারেন্স কোড ১৫ মিনিট পর এক্সপায়ার হয়ে যায়। নতুন ডিপোজিট শুরু করে নতুন কোড নিন, পুরোনো কোড পুনরায় ব্যবহার করবেন না।" },
           { q: "ডিপোজিট বোনাস কি স্বয়ংক্রিয়?", a: "না। ডিপোজিটের আগে প্রোমোশন পেজে বোনাস অপ্ট-ইন করতে হবে, নাহলে যোগ্য লেনদেন ট্যাগ হবে না।" },
         ],
         ur: [
@@ -259,8 +259,8 @@ export const Route = createFileRoute("/deposit-guide")({
           { q: "کیا دوست کے والیٹ سے ڈپازٹ ممکن ہے؟", a: "نہیں۔ جس والیٹ سے رقم بھیجی جا رہی ہے اس کا نام JeetBuzz پر آپ کے اکاؤنٹ نام (CNIC نام) سے میچ کرنا ضروری ہے، ورنہ ڈپازٹ ریورس ہو سکتا ہے۔" },
           { q: "کم از کم ڈپازٹ کتنی ہے؟", a: "JazzCash اور EasyPaisa پر عموماً 500 PKR۔ تازہ ترین کم از کم کیشیئر پیج پر دیکھیں۔" },
           { q: "پہلی ڈپازٹ میں کتنا وقت لگتا ہے؟", a: "موبائل والیٹس میں عموماً چند منٹ میں۔ USDT میں نیٹ ورک تصدیقات کے مطابق 2–10 منٹ۔" },
-          { q: "کیا میں کسی اور کرنسی میں ڈپازٹ کر سکتا ہوں؟", a: "اپنی مقامی کرنسی PKR میں ہی ڈپازٹ کریں — JeetBuzz IP کے مطابق پاکستان کو خود ڈیٹیکٹ کرتا ہے۔ کوئی FX مارک اپ نہیں ہے۔" },
-          { q: "اگر ریفرنس کوڈ ایکسپائر ہو جائے؟", a: "ریفرنس کوڈ 15 منٹ بعد ایکسپائر ہو جاتا ہے۔ پرانا کوڈ دوبارہ استعمال مت کریں — نیا ڈپازٹ شروع کریں اور تازہ کوڈ لیں۔" },
+          { q: "کیا میں کسی اور کرنسی میں ڈپازٹ کر سکتا ہوں؟", a: "اپنی مقامی کرنسی PKR میں ہی ڈپازٹ کریں. JeetBuzz IP کے مطابق پاکستان کو خود ڈیٹیکٹ کرتا ہے۔ کوئی FX مارک اپ نہیں ہے۔" },
+          { q: "اگر ریفرنس کوڈ ایکسپائر ہو جائے؟", a: "ریفرنس کوڈ 15 منٹ بعد ایکسپائر ہو جاتا ہے۔ پرانا کوڈ دوبارہ استعمال مت کریں, نیا ڈپازٹ شروع کریں اور تازہ کوڈ لیں۔" },
           { q: "کیا ڈپازٹ بونس خودکار ہے؟", a: "نہیں۔ ڈپازٹ سے پہلے پروموشن پیج پر بونس آپٹ-ان کرنا ضروری ہے، ورنہ اہل لین دین ٹیگ نہیں ہو گا۔" },
         ],
         hi: [
@@ -276,8 +276,8 @@ export const Route = createFileRoute("/deposit-guide")({
         { q: "Can I deposit from a friend's wallet?", a: "No. The depositing wallet must match your registered JeetBuzz account name, otherwise the deposit can be reversed." },
         { q: "What's the minimum deposit?", a: "Typically 200–500 BDT for mobile wallets. Confirm the current minimum on the official cashier page before sending money." },
         { q: "How long does the first deposit take?", a: "Local wallets credit in under 60 seconds. UPI is usually under 30 seconds. USDT depends on network confirmations (2–10 minutes typical)." },
-        { q: "Can I deposit in a different currency?", a: "Deposit in your local currency (BDT, PKR, INR, USDT) — JeetBuzz auto-detects from your country. There is no FX markup." },
-        { q: "What if the cashier times out before I send?", a: "The reference code expires after 15 minutes. Start a fresh deposit so the code stays valid — never reuse an expired code." },
+        { q: "Can I deposit in a different currency?", a: "Deposit in your local currency (BDT, PKR, INR, USDT). JeetBuzz auto-detects from your country. There is no FX markup." },
+        { q: "What if the cashier times out before I send?", a: "The reference code expires after 15 minutes. Start a fresh deposit so the code stays valid, never reuse an expired code." },
         { q: "Are deposit bonuses automatic?", a: "No. You must opt into the bonus on the promotions page before the deposit, otherwise the qualifying transaction will not be tagged." },
       ]}
       related={[
@@ -285,8 +285,7 @@ export const Route = createFileRoute("/deposit-guide")({
         { to: "/bkash-guide", title: "bKash on JeetBuzz" },
         { to: "/nagad-guide", title: "Nagad on JeetBuzz" },
         { to: "/rocket-guide", title: "Rocket on JeetBuzz" },
-        { to: "/payment-methods", title: "All Payment Methods" },
-        ...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
+        { to: "/payment-methods", title: "All Payment Methods" }...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
       ]}
     />
   ),
