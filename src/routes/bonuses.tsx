@@ -4,6 +4,9 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { BONUS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/bonuses";
+// Duplicate-intent audit (Batch 7): /bonuses is a light hub, /bonus-and-promotions
+// is the deep editorial page. Consolidate authority on the deeper URL.
+const CANONICAL_PATH = "/bonus-and-promotions";
 const TITLE = "JeetBuzz Bonuses Hub — Promo Code, Welcome & Refer Bonus 2026";
 const DESC = "Every active JeetBuzz bonus in one place — welcome bonus, promo codes, first deposit match, refer-a-friend and rollover rules explained plainly.";
 
@@ -15,9 +18,9 @@ export const Route = createFileRoute("/bonuses")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      ogUrl(PATH),
+      ogUrl(CANONICAL_PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(CANONICAL_PATH), ...hreflangLinks(CANONICAL_PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
