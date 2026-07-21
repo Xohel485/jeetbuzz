@@ -103,7 +103,6 @@ export const HELP_CLUSTER: RelatedItem[] = [
   { to: "/vip-program", title: "VIP Program", desc: "Loyalty tiers, cashback and dedicated host." },
   { to: "/agent-earning-guide", title: "Agent Earning Guide", desc: "How sub-agents earn on JeetBuzz." },
   { to: "/blog", title: "Blog", desc: "Latest guides, updates and cricket coverage." },
-  { to: "/blog/index", title: "Blog Index", desc: "Full archive of published posts." },
   { to: "/terms", title: "Terms", desc: "User agreement and account terms." },
   { to: "/privacy-policy", title: "Privacy Policy", desc: "How JeetBuzz handles player data." },
   { to: "/review-policy", title: "Review Policy", desc: "How our editorial reviews are produced." },
