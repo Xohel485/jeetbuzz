@@ -5,10 +5,10 @@ import { imageAbsoluteUrl } from "@/lib/images";
 export const Route = createFileRoute("/bonus-and-promotions")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Bonus & Promotions 2026 - Reloads, Cashback & Free Bets Explained" },
-      { name: "description", content: "JeetBuzz bonus and promotions 2026 — welcome bonus, reloads, free bets and cashback rates explained, with the wagering and max-bet rules Bangladesh players must know." },
-      { property: "og:title", content: "JeetBuzz Bonus & Promotions — Terms Explained" },
-      { property: "og:description", content: "What JeetBuzz bonus terms really mean — wagering, max bet, eligible games." },
+      { title: "JeetBuzz Bonus 2026 — Welcome Offer, Free Bets, Cashback & Wagering Rules Decoded" },
+      { name: "description", content: "JeetBuzz bonus & promotions 2026 — welcome match, weekly reloads, 10% cashback, free bets and referral bonus, with the exact wagering (15x/25x) and max-bet rules that decide if a bonus is worth taking." },
+      { property: "og:title", content: "JeetBuzz Bonus 2026 — Welcome, Reload, Cashback & Wagering" },
+      { property: "og:description", content: "Which JeetBuzz bonus is actually worth taking in 2026 — wagering, max-bet, eligible games and opt-in rules explained." },
       { property: "og:type", content: "article" },
       { property: "og:image", content: imageAbsoluteUrl("bonus") },
       { name: "twitter:card", content: "summary_large_image" },

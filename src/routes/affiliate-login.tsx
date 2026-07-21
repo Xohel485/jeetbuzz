@@ -3,9 +3,9 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/affiliate-login" as const;
-const TITLE = "JeetBuzz Affiliate Login Guide — Partner Portal Access";
+const TITLE = "JeetBuzz Affiliate Login 2026 — Partner Portal, Password Reset & Dashboard";
 const DESC =
-  "How to access the JeetBuzz affiliate partner portal — login, password reset, dashboard tour and payout reports for Bangladesh partners.";
+  "JeetBuzz affiliate login 2026 — official partner portal link, password reset walkthrough, 2FA, sub-ID tracking and payout dashboard tour for BD, PK and IN affiliates.";
 
 export const Route = createFileRoute("/affiliate-login")({
   head: () => ({
