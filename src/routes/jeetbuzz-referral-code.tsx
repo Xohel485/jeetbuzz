@@ -59,6 +59,8 @@ export const Route = createFileRoute("/jeetbuzz-referral-code")({
         "| Tracking | In-account code | Full dashboard + links |",
         "| Best for | 1–2 friends | Anyone driving 5+ signups |",
         "Ready to go bigger? Read the [Affiliate Signup guide](/jeetbuzz-affiliate-signup).",
+        "## Program overview & weekly commission",
+        "For the full picture of what the partner side pays, see the [JeetBuzz affiliate program](/affiliate-program) page and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) breakdown — weekly 25%–60% revenue share instead of a fixed refer-a-friend reward.",
       ]}
       related={siblings(AFFILIATE_CLUSTER, PATH)}
       faqs={[
