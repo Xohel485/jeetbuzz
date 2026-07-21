@@ -18,6 +18,7 @@ import { Route as UpdatePolicyRouteImport } from './routes/update-policy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SportsBettingRouteImport } from './routes/sports-betting'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapSolutionsDotxmlRouteImport } from './routes/sitemap-solutions[.]xml'
 import { Route as SitemapPkDotxmlRouteImport } from './routes/sitemap-pk[.]xml'
 import { Route as SitemapPaymentsDotxmlRouteImport } from './routes/sitemap-payments[.]xml'
 import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
@@ -145,6 +146,11 @@ const SportsBettingRoute = SportsBettingRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapSolutionsDotxmlRoute = SitemapSolutionsDotxmlRouteImport.update({
+  id: '/sitemap-solutions.xml',
+  path: '/sitemap-solutions.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapPkDotxmlRoute = SitemapPkDotxmlRouteImport.update({
@@ -644,6 +650,7 @@ export interface FileRoutesByFullPath {
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/sitemap-payments.xml': typeof SitemapPaymentsDotxmlRoute
   '/sitemap-pk.xml': typeof SitemapPkDotxmlRoute
+  '/sitemap-solutions.xml': typeof SitemapSolutionsDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -737,6 +744,7 @@ export interface FileRoutesByTo {
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/sitemap-payments.xml': typeof SitemapPaymentsDotxmlRoute
   '/sitemap-pk.xml': typeof SitemapPkDotxmlRoute
+  '/sitemap-solutions.xml': typeof SitemapSolutionsDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -832,6 +840,7 @@ export interface FileRoutesById {
   '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
   '/sitemap-payments.xml': typeof SitemapPaymentsDotxmlRoute
   '/sitemap-pk.xml': typeof SitemapPkDotxmlRoute
+  '/sitemap-solutions.xml': typeof SitemapSolutionsDotxmlRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sports-betting': typeof SportsBettingRoute
   '/terms': typeof TermsRoute
@@ -928,6 +937,7 @@ export interface FileRouteTypes {
     | '/sitemap-pages.xml'
     | '/sitemap-payments.xml'
     | '/sitemap-pk.xml'
+    | '/sitemap-solutions.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -1021,6 +1031,7 @@ export interface FileRouteTypes {
     | '/sitemap-pages.xml'
     | '/sitemap-payments.xml'
     | '/sitemap-pk.xml'
+    | '/sitemap-solutions.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -1115,6 +1126,7 @@ export interface FileRouteTypes {
     | '/sitemap-pages.xml'
     | '/sitemap-payments.xml'
     | '/sitemap-pk.xml'
+    | '/sitemap-solutions.xml'
     | '/sitemap.xml'
     | '/sports-betting'
     | '/terms'
@@ -1210,6 +1222,7 @@ export interface RootRouteChildren {
   SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
   SitemapPaymentsDotxmlRoute: typeof SitemapPaymentsDotxmlRoute
   SitemapPkDotxmlRoute: typeof SitemapPkDotxmlRoute
+  SitemapSolutionsDotxmlRoute: typeof SitemapSolutionsDotxmlRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SportsBettingRoute: typeof SportsBettingRoute
   TermsRoute: typeof TermsRoute
@@ -1290,6 +1303,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap-solutions.xml': {
+      id: '/sitemap-solutions.xml'
+      path: '/sitemap-solutions.xml'
+      fullPath: '/sitemap-solutions.xml'
+      preLoaderRoute: typeof SitemapSolutionsDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap-pk.xml': {
@@ -1964,6 +1984,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
   SitemapPaymentsDotxmlRoute: SitemapPaymentsDotxmlRoute,
   SitemapPkDotxmlRoute: SitemapPkDotxmlRoute,
+  SitemapSolutionsDotxmlRoute: SitemapSolutionsDotxmlRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SportsBettingRoute: SportsBettingRoute,
   TermsRoute: TermsRoute,
