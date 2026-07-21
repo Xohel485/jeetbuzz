@@ -71,7 +71,6 @@ export const Route = createFileRoute("/help")({
         "- [VIP Program](/vip-program) — loyalty tiers, cashback and dedicated host.",
         "- [Agent Earning Guide](/agent-earning-guide) — how sub-agents earn on JeetBuzz.",
         "- [Blog](/blog) — latest guides, updates and cricket coverage.",
-        "- [Blog Index](/blog/index) — full archive of published posts.",
         "- [Terms](/terms) — user agreement and account terms.",
         "- [Privacy Policy](/privacy-policy) — how JeetBuzz handles player data.",
         "- [Review Policy](/review-policy) — how our editorial reviews are produced.",
