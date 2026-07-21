@@ -461,26 +461,12 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   // ---- Phase A: GSC-driven solution routes with native Bangla body ----
   // Registered with countries: ["bd"] so the localized splat only serves
   // /bd/bn/{slug}. English is available at the root URL. Other locales
-  // fall back to English SEO/meta but are NOT surfaced under /pk/ur or /in/hi.
-  entry("jeetbuzz-affiliate-commission-rate", AffiliateCommissionRateRoute, {
-    en: { title: "JeetBuzz Affiliate Commission Rate 2026" + BRAND_EN, description: "JeetBuzz affiliate commission rate for 2026 — tiered up to 60% weekly revenue share on NGR." },
-    bn: { title: "জিতবাজ অ্যাফিলিয়েট কমিশন রেট ২০২৬" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট কমিশন রেট ২০২৬ — NGR-এর উপর সর্বোচ্চ ৬০% সাপ্তাহিক রেভিনিউ শেয়ার।" },
-    ur: { title: "JeetBuzz Affiliate Commission Rate 2026" + BRAND_UR, description: "JeetBuzz affiliate commission rate for 2026 — tiered up to 60% weekly revenue share on NGR." },
-    hi: { title: "JeetBuzz Affiliate Commission Rate 2026" + BRAND_HI, description: "JeetBuzz affiliate commission rate for 2026 — tiered up to 60% weekly revenue share on NGR." },
-  }, ["bd"]),
-  entry("jeetbuzz-affiliate-signup", AffiliateSignupRoute, {
+  // fall back to English SEO/meta but are NOT surfaced under /pk/ur or /in/hi.  entry("jeetbuzz-affiliate-signup", AffiliateSignupRoute, {
     en: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_EN, description: "JeetBuzz affiliate signup — application, KYC and approval timing in under 10 minutes." },
     bn: { title: "জিতবাজ অ্যাফিলিয়েট সাইনআপ ২০২৬" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট সাইনআপ — আবেদন, KYC এবং অনুমোদনের সময় ১০ মিনিটেরও কম।" },
     ur: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_UR, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
     hi: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_HI, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
-  }, ["bd"]),
-  entry("jeetbuzz-download-for-android", DownloadForAndroidRoute, {
-    en: { title: "JeetBuzz Download for Android 2026" + BRAND_EN, description: "Safe JeetBuzz APK install for Android — permission checks and fake mirror detection." },
-    bn: { title: "জিতবাজ অ্যান্ড্রয়েড ডাউনলোড ২০২৬" + BRAND_BN, description: "অ্যান্ড্রয়েডে নিরাপদ জিতবাজ APK ইনস্টল — পারমিশন চেক এবং নকল মিরর চেনা।" },
-    ur: { title: "JeetBuzz Download for Android 2026" + BRAND_UR, description: "Safe JeetBuzz APK install for Android." },
-    hi: { title: "JeetBuzz Download for Android 2026" + BRAND_HI, description: "Safe JeetBuzz APK install for Android." },
-  }, ["bd"]),
-  entry("jeetbuzz-app-update", AppUpdateRoute, {
+  }, ["bd"]),  entry("jeetbuzz-app-update", AppUpdateRoute, {
     en: { title: "JeetBuzz App Update 2026" + BRAND_EN, description: "Update JeetBuzz on Android and iOS safely — fixes for old-version bugs and App not installed errors." },
     bn: { title: "জিতবাজ অ্যাপ আপডেট ২০২৬" + BRAND_BN, description: "অ্যান্ড্রয়েড ও iOS-এ নিরাপদে জিতবাজ অ্যাপ আপডেট — পুরনো ভার্সন সমস্যার সমাধান।" },
     ur: { title: "JeetBuzz App Update 2026" + BRAND_UR, description: "Update JeetBuzz on Android and iOS safely." },
@@ -549,14 +535,7 @@ LOCALIZED_ROUTES.push(
     bn: { title: "JeetBuzz সাইন আপ ২০২৬ — ৩ মিনিটে রেজিস্ট্রেশন" + BRAND_BN, description: "JeetBuzz সাইনআপ ৩ মিনিটে — ফোন/ইমেইল রেজিস্ট্রেশন, ওয়েলকাম বোনাস ও KYC টিপস।" },
     ur: { title: "JeetBuzz Sign Up 2026" + BRAND_UR, description: "JeetBuzz sign up in three minutes." },
     hi: { title: "JeetBuzz Sign Up 2026" + BRAND_HI, description: "JeetBuzz sign up in three minutes." },
-  }, ["bd"]),
-  entry("jeetbuzz-apk-download", JeetbuzzApkDownloadRoute, {
-    en: { title: "JeetBuzz APK Download 2026 — Latest Safe Install" + BRAND_EN, description: "JeetBuzz APK download — latest version, safe Android install with permission checks and update path." },
-    bn: { title: "JeetBuzz APK ডাউনলোড ২০২৬ — নিরাপদ ইনস্টল" + BRAND_BN, description: "JeetBuzz APK ডাউনলোড — সর্বশেষ ভার্সন, নিরাপদ Android ইনস্টল ও আপডেট পথ।" },
-    ur: { title: "JeetBuzz APK Download 2026" + BRAND_UR, description: "Latest JeetBuzz APK download and safe install." },
-    hi: { title: "JeetBuzz APK Download 2026" + BRAND_HI, description: "Latest JeetBuzz APK download and safe install." },
-  }, ["bd"]),
-);
+  }, ["bd"]),);
 
 // ---- Phase B batch 2: problems cluster (BD-only native BN) ----
 LOCALIZED_ROUTES.push(
