@@ -30,6 +30,10 @@ export const AFFILIATE_CLUSTER: RelatedItem[] = [
   { to: "/jeetbuzz-affiliate-withdrawal", title: "Affiliate Withdrawal", desc: "Weekly payout schedule, methods and minimums." },
   { to: "/jeetbuzz-affiliate-app", title: "Affiliate App / Dashboard", desc: "Track clicks, players and commission on mobile." },
   { to: "/jeetbuzz-referral-code", title: "Referral Code", desc: "How referral codes and refer-a-friend work." },
+  { to: "/jeetbuzz-affiliate-dashboard", title: "Affiliate Dashboard", desc: "Every metric the partner dashboard exposes — and what to watch." },
+  { to: "/jeetbuzz-affiliate-payment-methods", title: "Affiliate Payment Methods", desc: "bKash, Nagad, Rocket, bank, USDT — minimums, fees, timing." },
+  { to: "/jeetbuzz-affiliate-commission", title: "Affiliate Commission", desc: "Weekly 25%–60% revenue share, NGR math and carryover." },
+  { to: "/jeetbuzz-partner-login", title: "Partner Login", desc: "Sign in to the affiliate dashboard safely with 2FA." },
 ];
 
 export const APP_CLUSTER: RelatedItem[] = [
