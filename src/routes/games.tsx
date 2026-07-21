@@ -43,6 +43,8 @@ export const Route = createFileRoute("/games")({
         "Every listed game runs on licensed studio software (Evolution, Pragmatic Play, Spribe and others) with published RTP. RTP is a long-run average — a single session can and will vary wildly. Never chase losses; stop when your session budget is spent.",
         "## Responsible gaming",
         "JeetBuzz supports deposit limits, session-time reminders and self-exclusion. Set them from your account settings *before* your first losing session — they are much harder to enable in the middle of one.",
+        "## More cricket coverage",
+        "- [JeetBuzz Live Cricket](/jeetbuzz-live-cricket) — brand-focused live cricket streaming and in-play markets.",
       ]}
       faqs={[
         { q: "Which JeetBuzz game has the best odds for players?", a: "Blackjack and baccarat have the highest theoretical RTP (~98–99%). Slots vary widely (94–97%). Aviator is around 97%. No game has a positive expected value long term." },

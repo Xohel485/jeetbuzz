@@ -50,6 +50,12 @@ export const Route = createFileRoute("/payments")({
         "1. Verify your account name matches your wallet name — mismatched deposits are reversed.",
         "2. Opt into the [Welcome Bonus](/welcome-bonus) *before* transferring — bonuses are not applied retroactively.",
         "3. Save your transaction ID until the funds land in the JeetBuzz balance.",
+        "## More payment guides",
+        "- [Deposit & Withdrawal Guide](/deposit-withdrawal-guide) — end-to-end cashier walkthrough for both directions.",
+        "- [Withdrawal Guide](/withdrawal-guide) — cash-out steps, KYC checkpoints and payout timing.",
+        "- [bKash Deposit](/jeetbuzz-bkash-deposit) — bKash-specific cashier flow and name-match rules.",
+        "- [Nagad Withdrawal](/jeetbuzz-nagad-withdrawal) — Nagad payout walk-through with realistic timing.",
+        "- [Minimum Deposit](/jeetbuzz-minimum-deposit) — smallest amount you can fund per rail.",
       ]}
       faqs={[
         { q: "Which payment method is fastest on JeetBuzz?", a: "For Bangladesh, bKash and Nagad usually clear within minutes. For India, UPI via PhonePe / Google Pay / Paytm is the standard. For Pakistan, JazzCash typically has the best uptime. Exact timing depends on operator status." },
