@@ -1,0 +1,110 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { GuidePage } from "@/components/GuidePage";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
+
+const PATH = "/jeetbuzz-deposit-problem";
+const TITLE = "JeetBuzz Deposit Problem 2026 — Debited but Not Credited & Other Fixes";
+const DESC = "JeetBuzz deposit problem fixes for 2026 — money debited but not credited, wrong reference number, name mismatch and the exact evidence support needs.";
+
+export const Route = createFileRoute("/jeetbuzz-deposit-problem")({
+  head: () => ({
+    meta: [
+      { title: TITLE + " | GetJeetBuzz" },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "article" },
+      ogUrl(PATH),
+    ],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
+  }),
+  component: () => (
+    <GuidePage
+      eyebrow="Support"
+      title={<>JeetBuzz <span className="gold-text">Deposit Problem</span></>}
+      titleByLocale={{ bn: <>জিতবাজ <span className="gold-text">ডিপোজিট সমস্যা</span></> }}
+      subtitle="Debited but not credited, wrong reference number, name mismatch — every JeetBuzz deposit problem with the exact evidence to attach on live chat."
+      subtitleByLocale={{ bn: "টাকা কেটেছে কিন্তু ক্রেডিট হয়নি, ভুল রেফারেন্স নম্বর, নাম মিসম্যাচ — প্রতিটি ডিপোজিট সমস্যা এবং লাইভ চ্যাটে দেওয়ার সঠিক প্রমাণ।" }}
+      ctaIntent="login" ctaLabel="Check Deposit Status"
+      breadcrumbs={[{ name: "Help", path: "/help" }, { name: "Deposit Problem", path: PATH }]}
+      articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
+      body={[
+        "## Wait 15 minutes first",
+        "Most \"deposit not credited\" issues resolve themselves within 15 minutes as bKash / Nagad / JazzCash / UPI batches settle. Refresh the cashier once — don't refresh in a loop, that can trigger duplicate charge protection and delay things further.",
+        "## The five deposit problems (and their fix)",
+        "### 1. Money debited from wallet, not credited to JeetBuzz",
+        "**Cause:** wrong reference number, wallet operator batch lag, or wrong receiver number entered.",
+        "**Fix:** open live chat with (a) your JeetBuzz account ID, (b) the wallet transaction ID from your wallet SMS, (c) a screenshot of the cashier receipt. Support locates the transaction and credits manually — typical time is 30 minutes to a few hours.",
+        "### 2. Wrong reference number",
+        "The reference number links your wallet transfer to your JeetBuzz account. Missing or wrong reference means the payment sits in a suspense account until claimed. Provide the wallet TID and JeetBuzz account ID on live chat; support reconciles.",
+        "### 3. Name mismatch",
+        "If your wallet name is \"Rahim Ahmed\" but your JeetBuzz account is registered as \"Rahim A.\", the AML system flags the deposit. **The safe fix is to always deposit from the wallet that matches your KYC name exactly.** Never deposit from a friend's or family's wallet — mismatch deposits are reversed to source, minus wallet fees.",
+        "### 4. \"Deposit failed\" but wallet was debited",
+        "The cashier's Failed status refers to *its* attempt to auto-reconcile — the money did leave your wallet. Same fix as (1): wallet TID + cashier screenshot on live chat.",
+        "### 5. Deposit stuck at \"Pending\" for hours",
+        "Peak load (evenings before big cricket matches) or wallet operator downtime. Wait 2 hours, then escalate on live chat with the TID. Support cannot cancel a pending deposit — it must complete or fail before any action.",
+        "## Evidence checklist for support",
+        "Have all of these ready *before* opening the chat:",
+        "- JeetBuzz account ID / username.",
+        "- Wallet transaction ID (from the wallet SMS or in-app history).",
+        "- Wallet transfer amount and time (exact).",
+        "- Screenshot of the JeetBuzz cashier receipt.",
+        "- Screenshot of the wallet transaction detail.",
+        "Providing all five in the first message consistently cuts back-and-forth in half.",
+        "## What never fixes the issue",
+        "- Making a second deposit \"to retry\" — you may end up with a double charge.",
+        "- Uninstalling and reinstalling the app — the transaction lives server-side, not on the phone.",
+        "- Contacting anyone claiming to be JeetBuzz support on WhatsApp — they are scammers.",
+      ]}
+      bodyByLocale={{
+        bn: [
+          "## প্রথমে ১৫ মিনিট অপেক্ষা করুন",
+          "বেশিরভাগ \"ডিপোজিট ক্রেডিট হয়নি\" সমস্যা bKash/Nagad ব্যাচ সেটেল হওয়ার সাথে সাথে ১৫ মিনিটের মধ্যে নিজেই ঠিক হয়ে যায়। ক্যাশিয়ার একবার রিফ্রেশ করুন — বারবার নয়, তাতে ডুপ্লিকেট চার্জ প্রোটেকশন ট্রিগার হয়ে আরো দেরি হতে পারে।",
+          "## পাঁচটি ডিপোজিট সমস্যা (এবং সমাধান)",
+          "### ১. ওয়ালেট থেকে টাকা কেটেছে, JeetBuzz-এ ক্রেডিট হয়নি",
+          "**কারণ:** ভুল রেফারেন্স নম্বর, ওয়ালেট অপারেটর ব্যাচ ল্যাগ, বা ভুল রিসিভার নম্বর।",
+          "**সমাধান:** লাইভ চ্যাট খুলুন (ক) JeetBuzz অ্যাকাউন্ট ID, (খ) ওয়ালেট SMS থেকে ওয়ালেট ট্রানজেকশন ID, (গ) ক্যাশিয়ার রিসিটের স্ক্রিনশট সহ। সাপোর্ট ট্রানজেকশন খুঁজে ম্যানুয়ালি ক্রেডিট করে — সাধারণ সময় ৩০ মিনিট থেকে কয়েক ঘণ্টা।",
+          "### ২. ভুল রেফারেন্স নম্বর",
+          "রেফারেন্স নম্বর আপনার ওয়ালেট ট্রান্সফারকে JeetBuzz অ্যাকাউন্টের সাথে যুক্ত করে। রেফারেন্স নেই বা ভুল হলে পেমেন্ট দাবি না করা পর্যন্ত সাসপেন্স অ্যাকাউন্টে বসে থাকে। লাইভ চ্যাটে ওয়ালেট TID + JeetBuzz অ্যাকাউন্ট ID দিন; সাপোর্ট মিলিয়ে দেয়।",
+          "### ৩. নাম মিসম্যাচ",
+          "আপনার ওয়ালেট নাম \"রহিম আহমেদ\" কিন্তু JeetBuzz অ্যাকাউন্ট \"রহিম এ.\" নামে নিবন্ধিত হলে AML সিস্টেম ডিপোজিট ফ্ল্যাগ করে। **নিরাপদ সমাধান হলো সবসময় সেই ওয়ালেট থেকে ডিপোজিট যা আপনার KYC নামের সাথে হুবহু মিলে।** কখনো বন্ধু বা পরিবারের ওয়ালেট থেকে ডিপোজিট নয় — মিসম্যাচ ডিপোজিট সোর্সে রিভার্স হয়, ওয়ালেট ফি বাদে।",
+          "### ৪. \"Deposit failed\" কিন্তু ওয়ালেট থেকে কেটেছে",
+          "ক্যাশিয়ারের Failed স্ট্যাটাস *তার* অটো-রিকনসাইল চেষ্টা বোঝায় — টাকা আপনার ওয়ালেট থেকে বেরিয়েছে। সমাধান (১)-এর মতোই: লাইভ চ্যাটে ওয়ালেট TID + ক্যাশিয়ার স্ক্রিনশট।",
+          "### ৫. ডিপোজিট ঘণ্টার পর ঘণ্টা \"Pending\"",
+          "পিক লোড (বড় ক্রিকেট ম্যাচের আগে সন্ধ্যা) বা ওয়ালেট অপারেটর ডাউনটাইম। ২ ঘণ্টা অপেক্ষা করে TID সহ লাইভ চ্যাটে এসকেলেট করুন। সাপোর্ট পেন্ডিং ডিপোজিট বাতিল করতে পারে না — সেটি সম্পন্ন বা ব্যর্থ হতে হবে।",
+          "## সাপোর্টের জন্য প্রমাণ চেকলিস্ট",
+          "চ্যাট খোলার *আগে* এসব প্রস্তুত রাখুন:",
+          "- JeetBuzz অ্যাকাউন্ট ID / ইউজারনেম।",
+          "- ওয়ালেট ট্রানজেকশন ID (ওয়ালেট SMS বা ইন-অ্যাপ ইতিহাস থেকে)।",
+          "- ওয়ালেট ট্রান্সফারের পরিমাণ ও সময় (সঠিক)।",
+          "- JeetBuzz ক্যাশিয়ার রিসিটের স্ক্রিনশট।",
+          "- ওয়ালেট ট্রানজেকশন বিস্তারিতের স্ক্রিনশট।",
+          "প্রথম মেসেজেই পাঁচটি দিলে ব্যাক-অ্যান্ড-ফোর্থ অর্ধেক হয়ে যায়।",
+          "## যা কখনো সমস্যা ঠিক করে না",
+          "- \"রিট্রাই\" হিসেবে দ্বিতীয় ডিপোজিট — ডবল চার্জ হতে পারে।",
+          "- অ্যাপ আনইনস্টল/রিইনস্টল — ট্রানজেকশন সার্ভারে, ফোনে নয়।",
+          "- WhatsApp-এ JeetBuzz সাপোর্ট বলে দাবিকারী কাউকে ম্যাসেজ — তারা প্রতারক।",
+        ],
+      }}
+      related={siblings(PROBLEMS_CLUSTER, PATH)}
+      faqs={[
+        { q: "My bKash deposit was debited but JeetBuzz balance did not update — what do I do?", a: "Wait 15 minutes, then open live chat with your JeetBuzz account ID, the wallet transaction ID from bKash SMS, and a screenshot of the cashier receipt. Do not retry the deposit — it can double-charge." },
+        { q: "Can I get a refund for a failed deposit?", a: "Yes. Failed deposits where the money was debited from your wallet are refunded to source once support locates the transaction. Timing depends on the payment operator." },
+        { q: "What's a name mismatch and how do I avoid it?", a: "Your wallet's registered name must match your JeetBuzz account name exactly. Always deposit from your own wallet — never a friend or family member — to avoid AML flags and reversed transactions." },
+        { q: "Do I have to send my wallet PIN or OTP to support?", a: "Never. Real JeetBuzz support never asks for a wallet PIN, OTP or full card number. Anyone who does is a scammer impersonating support." },
+        { q: "How long does the deposit dispute take?", a: "Simple missing-reference cases: 30 minutes to a few hours. Name-mismatch reversals: 1–3 business days because they wait for the wallet operator batch. USDT credits are typically fastest to resolve." },
+      ]}
+      faqsByLocale={{
+        bn: [
+          { q: "bKash থেকে টাকা কাটল কিন্তু JeetBuzz ব্যালেন্স আপডেট হয়নি — কী করব?", a: "১৫ মিনিট অপেক্ষা করুন, তারপর JeetBuzz অ্যাকাউন্ট ID, bKash SMS থেকে ওয়ালেট ট্রানজেকশন ID এবং ক্যাশিয়ার রিসিটের স্ক্রিনশট সহ লাইভ চ্যাট খুলুন। ডিপোজিট আবার চেষ্টা করবেন না — ডবল চার্জ হতে পারে।" },
+          { q: "ব্যর্থ ডিপোজিটের রিফান্ড পাব?", a: "হ্যাঁ। ওয়ালেট থেকে টাকা কেটেছে এমন ব্যর্থ ডিপোজিট সাপোর্ট ট্রানজেকশন খুঁজে পাওয়ার পর সোর্সে রিফান্ড হয়। সময় পেমেন্ট অপারেটরের উপর নির্ভর।" },
+          { q: "নাম মিসম্যাচ কী এবং কীভাবে এড়াব?", a: "আপনার ওয়ালেটের নিবন্ধিত নাম JeetBuzz অ্যাকাউন্টের নামের সাথে হুবহু মিলতে হবে। সবসময় নিজের ওয়ালেট থেকে ডিপোজিট করুন — কখনো বন্ধু বা পরিবারের নয় — AML ফ্ল্যাগ ও রিভার্স ট্রানজেকশন এড়াতে।" },
+          { q: "সাপোর্টকে ওয়ালেট PIN বা OTP দিতে হবে?", a: "কখনো না। প্রকৃত JeetBuzz সাপোর্ট কখনো ওয়ালেট PIN, OTP বা কার্ড নম্বর চায় না। যে চায় সে সাপোর্টের ছদ্মবেশে প্রতারক।" },
+          { q: "ডিপোজিট ডিসপিউট কতক্ষণ নেয়?", a: "সহজ কেস (মিসিং রেফারেন্স): ৩০ মিনিট থেকে কয়েক ঘণ্টা। নাম মিসম্যাচ রিভার্সাল: ১–৩ কর্মদিবস কারণ ওয়ালেট অপারেটর ব্যাচের অপেক্ষা। USDT ক্রেডিট সাধারণত দ্রুততম।" },
+        ],
+      }}
+    />
+  ),
+});
