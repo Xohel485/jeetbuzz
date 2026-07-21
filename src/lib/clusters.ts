@@ -64,6 +64,14 @@ export const HUBS: RelatedItem[] = [
   { to: "/games", title: "Games Hub", desc: "Live cricket, casino, crash and slots — one map." },
 ];
 
+export const BRAND_CLUSTER: RelatedItem[] = [
+  { to: "/jitbuzz", title: "Jitbuzz Spelling", desc: "Why 'jitbuzz' shows up in search — and the correct brand name." },
+  { to: "/jetbuzz", title: "Jetbuzz Spelling", desc: "One 'e' missing — how the misspelling happens and the real URL." },
+  { to: "/jeetbuzz-com-login", title: "JeetBuzz.com Login", desc: "Reach the real login page and dodge fake mirrors." },
+  { to: "/jeetbuzz-sign-up", title: "JeetBuzz Sign Up", desc: "Three-minute signup with the welcome bonus opt-in." },
+  { to: "/jeetbuzz-apk-download", title: "JeetBuzz APK Download", desc: "Latest Android APK with safe install and permission checks." },
+];
+
 /** Return cluster siblings, excluding the current page. */
 export function siblings(cluster: RelatedItem[], currentPath: string): RelatedItem[] {
   return cluster.filter((item) => item.to !== currentPath);
