@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
-import { PROBLEMS_CLUSTER } from "@/lib/clusters";
+import { PROBLEMS_CLUSTER, HELP_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/help";
 const TITLE = "JeetBuzz Help Center — Login, KYC, Deposit & Withdrawal Fixes 2026";
@@ -55,8 +55,29 @@ export const Route = createFileRoute("/help")({
         "2. Collect proof — screenshots of the cashier receipt, wallet transaction ID and any error banners.",
         "3. Open live chat from the official site (not any mirror) with the proof attached.",
         "> Support cannot guarantee resolution timelines. Providing complete evidence in the first message consistently cuts back-and-forth in half.",
+        "## More help topics",
+        "- [Login](/login) — reach the real JeetBuzz login and avoid fake mirrors.",
+        "- [Register](/register) — open a new JeetBuzz account in under three minutes.",
+        "- [Signup](/signup) — signup walkthrough with welcome-bonus opt-in.",
+        "- [Affiliate Login](/affiliate-login) — partner dashboard sign-in with 2FA.",
+        "- [Download](/download) — install the JeetBuzz app on Android or iPhone.",
+        "- [Android Web App Guide](/android-web-app-guide) — Android PWA install and permission checklist.",
+        "- [iOS App Guide](/ios-app-guide) — iPhone / iPad install without the App Store.",
+        "- [Is JeetBuzz Safe](/is-jeetbuzz-safe) — licensing, security and trust signals.",
+        "- [JeetBuzz Review](/jeetbuzz-review) — full editorial review, pros and cons.",
+        "- [JeetBuzz Alternatives](/jeetbuzz-alternatives) — how JeetBuzz compares to other BD/PK/IN books.",
+        "- [Security Guide](/security-guide) — 2FA, device hygiene and phishing checks.",
+        "- [Responsible Gaming](/responsible-gaming) — deposit limits, time-outs and self-exclusion.",
+        "- [VIP Program](/vip-program) — loyalty tiers, cashback and dedicated host.",
+        "- [Agent Earning Guide](/agent-earning-guide) — how sub-agents earn on JeetBuzz.",
+        "- [Blog](/blog) — latest guides, updates and cricket coverage.",
+        "- [Blog Index](/blog/index) — full archive of published posts.",
+        "- [Terms](/terms) — user agreement and account terms.",
+        "- [Privacy Policy](/privacy-policy) — how JeetBuzz handles player data.",
+        "- [Review Policy](/review-policy) — how our editorial reviews are produced.",
+        "- [Update Policy](/update-policy) — how and when guides are refreshed.",
       ]}
-      related={PROBLEMS_CLUSTER}
+      related={[...PROBLEMS_CLUSTER, ...HELP_CLUSTER]}
       faqs={[
         { q: "Where is JeetBuzz customer support?", a: "24/7 live chat on the official site is the primary channel. There is no publicly listed support phone number, and no support agent will ever ask for your password, wallet PIN or OTP." },
         { q: "How long does JeetBuzz take to reply?", a: "Live chat is usually answered within a few minutes during peak hours. Complex disputes (KYC appeals, name mismatches) can take longer because they are escalated to a payments or risk team." },

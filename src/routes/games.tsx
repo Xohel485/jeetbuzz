@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { GAMES_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/games";
 const TITLE = "JeetBuzz Games Hub — Live Cricket, Casino, Aviator & Slots 2026";
@@ -43,7 +44,10 @@ export const Route = createFileRoute("/games")({
         "Every listed game runs on licensed studio software (Evolution, Pragmatic Play, Spribe and others) with published RTP. RTP is a long-run average — a single session can and will vary wildly. Never chase losses; stop when your session budget is spent.",
         "## Responsible gaming",
         "JeetBuzz supports deposit limits, session-time reminders and self-exclusion. Set them from your account settings *before* your first losing session — they are much harder to enable in the middle of one.",
+        "## More cricket coverage",
+        "- [JeetBuzz Live Cricket](/jeetbuzz-live-cricket) — brand-focused live cricket streaming and in-play markets.",
       ]}
+      related={GAMES_CLUSTER}
       faqs={[
         { q: "Which JeetBuzz game has the best odds for players?", a: "Blackjack and baccarat have the highest theoretical RTP (~98–99%). Slots vary widely (94–97%). Aviator is around 97%. No game has a positive expected value long term." },
         { q: "Is live cricket in-play delayed?", a: "In-play odds are calibrated against a live data feed with a small delay to prevent latency arbitrage. This is standard across every regulated sportsbook." },
