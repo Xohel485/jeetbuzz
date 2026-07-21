@@ -47,7 +47,10 @@ import { Route as LoginProblemsRouteImport } from './routes/login-problems'
 import { Route as LoginGuideRouteImport } from './routes/login-guide'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
+import { Route as JitbuzzRouteImport } from './routes/jitbuzz'
+import { Route as JetbuzzRouteImport } from './routes/jetbuzz'
 import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
+import { Route as JeetbuzzSignUpRouteImport } from './routes/jeetbuzz-sign-up'
 import { Route as JeetbuzzReviewRouteImport } from './routes/jeetbuzz-review'
 import { Route as JeetbuzzReferralCodeRouteImport } from './routes/jeetbuzz-referral-code'
 import { Route as JeetbuzzReferBonusRouteImport } from './routes/jeetbuzz-refer-bonus'
@@ -56,7 +59,9 @@ import { Route as JeetbuzzFirstDepositBonusRouteImport } from './routes/jeetbuzz
 import { Route as JeetbuzzDownloadForIosRouteImport } from './routes/jeetbuzz-download-for-ios'
 import { Route as JeetbuzzDownloadForAndroidRouteImport } from './routes/jeetbuzz-download-for-android'
 import { Route as JeetbuzzDepositProblemRouteImport } from './routes/jeetbuzz-deposit-problem'
+import { Route as JeetbuzzComLoginRouteImport } from './routes/jeetbuzz-com-login'
 import { Route as JeetbuzzAppUpdateRouteImport } from './routes/jeetbuzz-app-update'
+import { Route as JeetbuzzApkDownloadRouteImport } from './routes/jeetbuzz-apk-download'
 import { Route as JeetbuzzAlternativesRouteImport } from './routes/jeetbuzz-alternatives'
 import { Route as JeetbuzzAffiliateWithdrawalRouteImport } from './routes/jeetbuzz-affiliate-withdrawal'
 import { Route as JeetbuzzAffiliateSignupRouteImport } from './routes/jeetbuzz-affiliate-signup'
@@ -293,9 +298,24 @@ const LiveCricketBettingRoute = LiveCricketBettingRouteImport.update({
   path: '/live-cricket-betting',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JitbuzzRoute = JitbuzzRouteImport.update({
+  id: '/jitbuzz',
+  path: '/jitbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JetbuzzRoute = JetbuzzRouteImport.update({
+  id: '/jetbuzz',
+  path: '/jetbuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
   id: '/jeetbuzz-withdrawal-time',
   path: '/jeetbuzz-withdrawal-time',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzSignUpRoute = JeetbuzzSignUpRouteImport.update({
+  id: '/jeetbuzz-sign-up',
+  path: '/jeetbuzz-sign-up',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzReviewRoute = JeetbuzzReviewRouteImport.update({
@@ -340,9 +360,19 @@ const JeetbuzzDepositProblemRoute = JeetbuzzDepositProblemRouteImport.update({
   path: '/jeetbuzz-deposit-problem',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JeetbuzzComLoginRoute = JeetbuzzComLoginRouteImport.update({
+  id: '/jeetbuzz-com-login',
+  path: '/jeetbuzz-com-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzAppUpdateRoute = JeetbuzzAppUpdateRouteImport.update({
   id: '/jeetbuzz-app-update',
   path: '/jeetbuzz-app-update',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzApkDownloadRoute = JeetbuzzApkDownloadRouteImport.update({
+  id: '/jeetbuzz-apk-download',
+  path: '/jeetbuzz-apk-download',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzAlternativesRoute = JeetbuzzAlternativesRouteImport.update({
@@ -612,7 +642,9 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-apk-download': typeof JeetbuzzApkDownloadRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
@@ -621,7 +653,10 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jetbuzz': typeof JetbuzzRoute
+  '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -706,7 +741,9 @@ export interface FileRoutesByTo {
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-apk-download': typeof JeetbuzzApkDownloadRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
@@ -715,7 +752,10 @@ export interface FileRoutesByTo {
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jetbuzz': typeof JetbuzzRoute
+  '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -802,7 +842,9 @@ export interface FileRoutesById {
   '/jeetbuzz-affiliate-signup': typeof JeetbuzzAffiliateSignupRoute
   '/jeetbuzz-affiliate-withdrawal': typeof JeetbuzzAffiliateWithdrawalRoute
   '/jeetbuzz-alternatives': typeof JeetbuzzAlternativesRoute
+  '/jeetbuzz-apk-download': typeof JeetbuzzApkDownloadRoute
   '/jeetbuzz-app-update': typeof JeetbuzzAppUpdateRoute
+  '/jeetbuzz-com-login': typeof JeetbuzzComLoginRoute
   '/jeetbuzz-deposit-problem': typeof JeetbuzzDepositProblemRoute
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
@@ -811,7 +853,10 @@ export interface FileRoutesById {
   '/jeetbuzz-refer-bonus': typeof JeetbuzzReferBonusRoute
   '/jeetbuzz-referral-code': typeof JeetbuzzReferralCodeRoute
   '/jeetbuzz-review': typeof JeetbuzzReviewRoute
+  '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jetbuzz': typeof JetbuzzRoute
+  '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
   '/login': typeof LoginRoute
   '/login-guide': typeof LoginGuideRoute
@@ -899,7 +944,9 @@ export interface FileRouteTypes {
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-apk-download'
     | '/jeetbuzz-app-update'
+    | '/jeetbuzz-com-login'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
@@ -908,7 +955,10 @@ export interface FileRouteTypes {
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-time'
+    | '/jetbuzz'
+    | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -993,7 +1043,9 @@ export interface FileRouteTypes {
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-apk-download'
     | '/jeetbuzz-app-update'
+    | '/jeetbuzz-com-login'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
@@ -1002,7 +1054,10 @@ export interface FileRouteTypes {
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-time'
+    | '/jetbuzz'
+    | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -1088,7 +1143,9 @@ export interface FileRouteTypes {
     | '/jeetbuzz-affiliate-signup'
     | '/jeetbuzz-affiliate-withdrawal'
     | '/jeetbuzz-alternatives'
+    | '/jeetbuzz-apk-download'
     | '/jeetbuzz-app-update'
+    | '/jeetbuzz-com-login'
     | '/jeetbuzz-deposit-problem'
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
@@ -1097,7 +1154,10 @@ export interface FileRouteTypes {
     | '/jeetbuzz-refer-bonus'
     | '/jeetbuzz-referral-code'
     | '/jeetbuzz-review'
+    | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-time'
+    | '/jetbuzz'
+    | '/jitbuzz'
     | '/live-cricket-betting'
     | '/login'
     | '/login-guide'
@@ -1184,7 +1244,9 @@ export interface RootRouteChildren {
   JeetbuzzAffiliateSignupRoute: typeof JeetbuzzAffiliateSignupRoute
   JeetbuzzAffiliateWithdrawalRoute: typeof JeetbuzzAffiliateWithdrawalRoute
   JeetbuzzAlternativesRoute: typeof JeetbuzzAlternativesRoute
+  JeetbuzzApkDownloadRoute: typeof JeetbuzzApkDownloadRoute
   JeetbuzzAppUpdateRoute: typeof JeetbuzzAppUpdateRoute
+  JeetbuzzComLoginRoute: typeof JeetbuzzComLoginRoute
   JeetbuzzDepositProblemRoute: typeof JeetbuzzDepositProblemRoute
   JeetbuzzDownloadForAndroidRoute: typeof JeetbuzzDownloadForAndroidRoute
   JeetbuzzDownloadForIosRoute: typeof JeetbuzzDownloadForIosRoute
@@ -1193,7 +1255,10 @@ export interface RootRouteChildren {
   JeetbuzzReferBonusRoute: typeof JeetbuzzReferBonusRoute
   JeetbuzzReferralCodeRoute: typeof JeetbuzzReferralCodeRoute
   JeetbuzzReviewRoute: typeof JeetbuzzReviewRoute
+  JeetbuzzSignUpRoute: typeof JeetbuzzSignUpRoute
   JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
+  JetbuzzRoute: typeof JetbuzzRoute
+  JitbuzzRoute: typeof JitbuzzRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
   LoginRoute: typeof LoginRoute
   LoginGuideRoute: typeof LoginGuideRoute
@@ -1508,11 +1573,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LiveCricketBettingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jitbuzz': {
+      id: '/jitbuzz'
+      path: '/jitbuzz'
+      fullPath: '/jitbuzz'
+      preLoaderRoute: typeof JitbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jetbuzz': {
+      id: '/jetbuzz'
+      path: '/jetbuzz'
+      fullPath: '/jetbuzz'
+      preLoaderRoute: typeof JetbuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-withdrawal-time': {
       id: '/jeetbuzz-withdrawal-time'
       path: '/jeetbuzz-withdrawal-time'
       fullPath: '/jeetbuzz-withdrawal-time'
       preLoaderRoute: typeof JeetbuzzWithdrawalTimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-sign-up': {
+      id: '/jeetbuzz-sign-up'
+      path: '/jeetbuzz-sign-up'
+      fullPath: '/jeetbuzz-sign-up'
+      preLoaderRoute: typeof JeetbuzzSignUpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-review': {
@@ -1571,11 +1657,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JeetbuzzDepositProblemRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jeetbuzz-com-login': {
+      id: '/jeetbuzz-com-login'
+      path: '/jeetbuzz-com-login'
+      fullPath: '/jeetbuzz-com-login'
+      preLoaderRoute: typeof JeetbuzzComLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-app-update': {
       id: '/jeetbuzz-app-update'
       path: '/jeetbuzz-app-update'
       fullPath: '/jeetbuzz-app-update'
       preLoaderRoute: typeof JeetbuzzAppUpdateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-apk-download': {
+      id: '/jeetbuzz-apk-download'
+      path: '/jeetbuzz-apk-download'
+      fullPath: '/jeetbuzz-apk-download'
+      preLoaderRoute: typeof JeetbuzzApkDownloadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-alternatives': {
@@ -1946,7 +2046,9 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzAffiliateSignupRoute: JeetbuzzAffiliateSignupRoute,
   JeetbuzzAffiliateWithdrawalRoute: JeetbuzzAffiliateWithdrawalRoute,
   JeetbuzzAlternativesRoute: JeetbuzzAlternativesRoute,
+  JeetbuzzApkDownloadRoute: JeetbuzzApkDownloadRoute,
   JeetbuzzAppUpdateRoute: JeetbuzzAppUpdateRoute,
+  JeetbuzzComLoginRoute: JeetbuzzComLoginRoute,
   JeetbuzzDepositProblemRoute: JeetbuzzDepositProblemRoute,
   JeetbuzzDownloadForAndroidRoute: JeetbuzzDownloadForAndroidRoute,
   JeetbuzzDownloadForIosRoute: JeetbuzzDownloadForIosRoute,
@@ -1955,7 +2057,10 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzReferBonusRoute: JeetbuzzReferBonusRoute,
   JeetbuzzReferralCodeRoute: JeetbuzzReferralCodeRoute,
   JeetbuzzReviewRoute: JeetbuzzReviewRoute,
+  JeetbuzzSignUpRoute: JeetbuzzSignUpRoute,
   JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
+  JetbuzzRoute: JetbuzzRoute,
+  JitbuzzRoute: JitbuzzRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
   LoginRoute: LoginRoute,
   LoginGuideRoute: LoginGuideRoute,
@@ -2004,13 +2109,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
