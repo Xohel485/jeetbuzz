@@ -71,6 +71,8 @@ export const Route = createFileRoute("/agent-earning-guide")({
         "- A spreadsheet that reconciles dashboard NGR against your invoiced commission monthly.",
         "## Realistic earnings expectations",
         "Content affiliates with focused South Asia traffic typically see most revenue from a small number of high-LTV players, not from raw signup volume. One genuine cricket-betting reader who plays seasonally is worth dozens of one-deposit-and-gone signups.",
+        "## Program details & commission math",
+        "Ready to move from theory to numbers? The [JeetBuzz affiliate program](/affiliate-program) page has the tier requirements and terms, and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) page shows the weekly NGR formula, carryover rules and payout window.",
       ]}
       bodyByLocale={{
         bn: [

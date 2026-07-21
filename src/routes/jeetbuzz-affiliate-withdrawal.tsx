@@ -51,6 +51,8 @@ export const Route = createFileRoute("/jeetbuzz-affiliate-withdrawal")({
         "Delays happen when (a) your NGR needs manual review because of unusual traffic patterns, (b) a referred player raised a chargeback that has to be resolved, or (c) your KYC document is expired. The dashboard shows the exact reason under **Finance → Status**.",
         "## Tax responsibility",
         "Affiliate income is your responsibility to declare in your local jurisdiction. JeetBuzz issues no tax withholding on international payouts — talk to a local accountant if commission is a material part of your income.",
+        "## How the commission is calculated",
+        "Payout size depends on your tier. The [JeetBuzz affiliate program](/affiliate-program) page lists the tier requirements and terms, and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) page shows the exact weekly 25%–60% revenue share math on NGR that produces the balance you are withdrawing.",
       ]}
       related={siblings(AFFILIATE_CLUSTER, PATH)}
       faqs={[
