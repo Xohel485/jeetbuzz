@@ -99,6 +99,14 @@ import { Route as AccountVerificationRoute } from "@/routes/jeetbuzz-account-ver
 import { Route as AppNotOpeningRoute } from "@/routes/jeetbuzz-app-not-opening";
 import { Route as DepositFailedRoute } from "@/routes/jeetbuzz-deposit-failed";
 import { Route as PasswordResetBrandedRoute } from "@/routes/jeetbuzz-password-reset";
+// Phase B batch 3: affiliate + payments
+import { Route as AffiliateDashboardRoute } from "@/routes/jeetbuzz-affiliate-dashboard";
+import { Route as AffiliatePaymentMethodsRoute } from "@/routes/jeetbuzz-affiliate-payment-methods";
+import { Route as AffiliateCommissionRoute } from "@/routes/jeetbuzz-affiliate-commission";
+import { Route as PartnerLoginRoute } from "@/routes/jeetbuzz-partner-login";
+import { Route as BkashDepositRoute } from "@/routes/jeetbuzz-bkash-deposit";
+import { Route as NagadWithdrawalRoute } from "@/routes/jeetbuzz-nagad-withdrawal";
+import { Route as MinimumDepositRoute } from "@/routes/jeetbuzz-minimum-deposit";
 
 export type LocaleMeta = { title: string; description: string };
 
@@ -589,6 +597,52 @@ LOCALIZED_ROUTES.push(
     bn: { title: "JeetBuzz পাসওয়ার্ড রিসেট ২০২৬ — ৩ মিনিটে recovery" + BRAND_BN, description: "ফোন OTP বা ইমেইল link দিয়ে ৩ মিনিটে JeetBuzz পাসওয়ার্ড reset এবং fallback flow।" },
     ur: { title: "JeetBuzz Password Reset 2026" + BRAND_UR, description: "Reset your JeetBuzz password via phone OTP or email link." },
     hi: { title: "JeetBuzz Password Reset 2026" + BRAND_HI, description: "Reset your JeetBuzz password via phone OTP or email link." },
+  }, ["bd"]),
+);
+
+// ---- Phase B batch 3: affiliate + payments (BD-only native BN) ----
+LOCALIZED_ROUTES.push(
+  entry("jeetbuzz-affiliate-dashboard", AffiliateDashboardRoute, {
+    en: { title: "JeetBuzz Affiliate Dashboard 2026 — Reports & Metrics" + BRAND_EN, description: "Walkthrough of the JeetBuzz affiliate dashboard — clicks, FTDs, NGR, tier progress and payout history." },
+    bn: { title: "JeetBuzz Affiliate Dashboard ২০২৬ — রিপোর্ট ও মেট্রিক" + BRAND_BN, description: "JeetBuzz affiliate dashboard-এর প্রতিটি metric — click, FTD, NGR, tier, payout history।" },
+    ur: { title: "JeetBuzz Affiliate Dashboard 2026" + BRAND_UR, description: "Walkthrough of the JeetBuzz affiliate dashboard." },
+    hi: { title: "JeetBuzz Affiliate Dashboard 2026" + BRAND_HI, description: "Walkthrough of the JeetBuzz affiliate dashboard." },
+  }, ["bd"]),
+  entry("jeetbuzz-affiliate-payment-methods", AffiliatePaymentMethodsRoute, {
+    en: { title: "JeetBuzz Affiliate Payment Methods 2026" + BRAND_EN, description: "bKash, Nagad, Rocket, bank and USDT payouts — minimums, fees, timing and KYC for JeetBuzz affiliates." },
+    bn: { title: "JeetBuzz Affiliate Payment Methods ২০২৬" + BRAND_BN, description: "bKash, Nagad, Rocket, bank ও USDT — minimum, ফি, সময়, KYC।" },
+    ur: { title: "JeetBuzz Affiliate Payment Methods 2026" + BRAND_UR, description: "Every JeetBuzz affiliate payout method — minimums and timing." },
+    hi: { title: "JeetBuzz Affiliate Payment Methods 2026" + BRAND_HI, description: "Every JeetBuzz affiliate payout method — minimums and timing." },
+  }, ["bd"]),
+  entry("jeetbuzz-affiliate-commission", AffiliateCommissionRoute, {
+    en: { title: "JeetBuzz Affiliate Commission 2026 — 25% to 60%" + BRAND_EN, description: "Full JeetBuzz affiliate commission structure — tiers, weekly NGR calculation and carryover." },
+    bn: { title: "JeetBuzz Affiliate Commission ২০২৬ — ২৫% থেকে ৬০%" + BRAND_BN, description: "সাপ্তাহিক NGR অনুযায়ী tier, carryover ও ৩.৫% sub-affiliate override।" },
+    ur: { title: "JeetBuzz Affiliate Commission 2026" + BRAND_UR, description: "Full JeetBuzz affiliate commission structure." },
+    hi: { title: "JeetBuzz Affiliate Commission 2026" + BRAND_HI, description: "Full JeetBuzz affiliate commission structure." },
+  }, ["bd"]),
+  entry("jeetbuzz-partner-login", PartnerLoginRoute, {
+    en: { title: "JeetBuzz Partner Login 2026 — Affiliate Dashboard Access" + BRAND_EN, description: "Sign in to the JeetBuzz partner dashboard safely with 2FA, recovery codes and phishing guardrails." },
+    bn: { title: "JeetBuzz Partner Login ২০২৬" + BRAND_BN, description: "2FA, recovery code ও phishing guardrail সহ JeetBuzz partner dashboard-এ নিরাপদ signin।" },
+    ur: { title: "JeetBuzz Partner Login 2026" + BRAND_UR, description: "Sign in to the JeetBuzz partner dashboard safely." },
+    hi: { title: "JeetBuzz Partner Login 2026" + BRAND_HI, description: "Sign in to the JeetBuzz partner dashboard safely." },
+  }, ["bd"]),
+  entry("jeetbuzz-bkash-deposit", BkashDepositRoute, {
+    en: { title: "JeetBuzz bKash Deposit 2026 — Steps, Minimum & Fixes" + BRAND_EN, description: "5-step bKash deposit on JeetBuzz — minimum, credit timing, name-mismatch fixes and reference recovery." },
+    bn: { title: "JeetBuzz bKash Deposit ২০২৬ — ধাপ, minimum ও সমাধান" + BRAND_BN, description: "৫-ধাপ bKash deposit, minimum, credit সময় ও reference recovery।" },
+    ur: { title: "JeetBuzz bKash Deposit 2026" + BRAND_UR, description: "Complete bKash deposit walkthrough for JeetBuzz." },
+    hi: { title: "JeetBuzz bKash Deposit 2026" + BRAND_HI, description: "Complete bKash deposit walkthrough for JeetBuzz." },
+  }, ["bd"]),
+  entry("jeetbuzz-nagad-withdrawal", NagadWithdrawalRoute, {
+    en: { title: "JeetBuzz Nagad Withdrawal 2026 — Steps & Timing" + BRAND_EN, description: "5-step Nagad withdrawal on JeetBuzz — minimum, credit timing, KYC and Pending fixes." },
+    bn: { title: "JeetBuzz Nagad Withdrawal ২০২৬ — ধাপ ও সময়" + BRAND_BN, description: "৫-ধাপ Nagad withdrawal, minimum, credit সময়, KYC ও Pending সমাধান।" },
+    ur: { title: "JeetBuzz Nagad Withdrawal 2026" + BRAND_UR, description: "Complete Nagad withdrawal walkthrough for JeetBuzz." },
+    hi: { title: "JeetBuzz Nagad Withdrawal 2026" + BRAND_HI, description: "Complete Nagad withdrawal walkthrough for JeetBuzz." },
+  }, ["bd"]),
+  entry("jeetbuzz-minimum-deposit", MinimumDepositRoute, {
+    en: { title: "JeetBuzz Minimum Deposit 2026 — BDT 100 First, 200 Recurring" + BRAND_EN, description: "JeetBuzz minimum deposit — BDT 100 first, BDT 200 recurring, per-rail thresholds and bonus minimums." },
+    bn: { title: "JeetBuzz Minimum Deposit ২০২৬ — প্রথম ১০০, পরের ২০০" + BRAND_BN, description: "প্রথম BDT ১০০, পরের ২০০ — per-rail threshold ও bonus minimum।" },
+    ur: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_UR, description: "JeetBuzz minimum deposit — per-rail and bonus thresholds." },
+    hi: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_HI, description: "JeetBuzz minimum deposit — per-rail and bonus thresholds." },
   }, ["bd"]),
 );
 
