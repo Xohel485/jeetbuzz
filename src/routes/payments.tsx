@@ -4,8 +4,8 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PAYMENTS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/payments";
-const TITLE = "JeetBuzz Payments Hub — Deposit & Withdraw in BD, PK, India 2026";
-const DESC = "One JeetBuzz payments hub for Bangladesh, Pakistan and India — pick bKash, Nagad, JazzCash, EasyPaisa, UPI or USDT with clear minimums and timing.";
+const TITLE = "JeetBuzz Payments Hub. Deposit & Withdraw in BD, PK, India 2026";
+const DESC = "One JeetBuzz payments hub for Bangladesh, Pakistan and India, pick bKash, Nagad, JazzCash, EasyPaisa, UPI or USDT with clear minimums and timing.";
 
 export const Route = createFileRoute("/payments")({
   head: () => ({
@@ -17,46 +17,46 @@ export const Route = createFileRoute("/payments")({
       { property: "og:type", content: "website" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
     <GuidePage
       eyebrow="Payments"
       title={<>JeetBuzz <span className="gold-text">Payments Hub</span></>}
-      subtitle="Every deposit and withdrawal rail JeetBuzz supports across Bangladesh, Pakistan and India — with limits, speed and the right guide for each."
+      subtitle="Every deposit and withdrawal rail JeetBuzz supports across Bangladesh, Pakistan and India, with limits, speed and the right guide for each."
       breadcrumbs={[{ name: "Payments", path: PATH }]}
       articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
       body={[
         "## Choose by country",
         "JeetBuzz supports the dominant local rail in each market. Pick your country below and jump to the guide with screenshots.",
         "### Bangladesh",
-        "- [bKash Deposit Guide](/bkash-guide) — most popular wallet, 200 BDT minimum.",
-        "- [Nagad Deposit Guide](/nagad-guide) — near-identical speed, slightly higher daily caps.",
-        "- [Rocket Deposit Guide](/rocket-guide) — DBBL Mobile Banking, strong village-level agent network.",
+        "- [bKash Deposit Guide](/bkash-guide), most popular wallet, 200 BDT minimum.",
+        "- [Nagad Deposit Guide](/nagad-guide), near-identical speed, slightly higher daily caps.",
+        "- [Rocket Deposit Guide](/rocket-guide). DBBL Mobile Banking, strong village-level agent network.",
         "### Pakistan",
-        "- [JazzCash Deposit Guide](/jazzcash-guide) — Jazz operator, best uptime.",
-        "- [EasyPaisa Deposit Guide](/easypaisa-guide) — Telenor operator, wider rural agent network.",
+        "- [JazzCash Deposit Guide](/jazzcash-guide). Jazz operator, best uptime.",
+        "- [EasyPaisa Deposit Guide](/easypaisa-guide). Telenor operator, wider rural agent network.",
         "### India",
-        "- [UPI Deposit Guide](/upi-guide) — universal NPCI rail, any UPI app works.",
-        "- [PhonePe Deposit Guide](/phonepe-guide) — most used UPI app among Indian punters.",
-        "- [Paytm Deposit Guide](/paytm-guide) — Payments Bank UPI flow.",
+        "- [UPI Deposit Guide](/upi-guide), universal NPCI rail, any UPI app works.",
+        "- [PhonePe Deposit Guide](/phonepe-guide), most used UPI app among Indian punters.",
+        "- [Paytm Deposit Guide](/paytm-guide). Payments Bank UPI flow.",
         "## Deposit vs withdrawal",
-        "Deposits usually clear within minutes on all local wallets. Withdrawals go through an additional review — new accounts, mismatched names and first-time cash-outs take longer. Read the [Withdrawal Time page](/jeetbuzz-withdrawal-time) for realistic timelines per rail.",
+        "Deposits usually clear within minutes on all local wallets. Withdrawals go through an additional review, new accounts, mismatched names and first-time cash-outs take longer. Read the [Withdrawal Time page](/jeetbuzz-withdrawal-time) for realistic timelines per rail.",
         "## Common deposit issues",
         "The most frequent tickets are (1) amount debited but not credited, (2) wallet name does not match account name, and (3) wrong reference number entered in the cashier. The [Deposit Problem guide](/jeetbuzz-deposit-problem) walks through each with the exact evidence support needs.",
         "## Full comparison table",
-        "For side-by-side numbers on every method — minimum, speed, fees and best use case — open the full [Payment Methods table](/payment-methods).",
+        "For side-by-side numbers on every method, minimum, speed, fees and best use case, open the full [Payment Methods table](/payment-methods).",
         "## Before your first deposit",
-        "1. Verify your account name matches your wallet name — mismatched deposits are reversed.",
-        "2. Opt into the [Welcome Bonus](/welcome-bonus) *before* transferring — bonuses are not applied retroactively.",
+        "1. Verify your account name matches your wallet name, mismatched deposits are reversed.",
+        "2. Opt into the [Welcome Bonus](/welcome-bonus) *before* transferring, bonuses are not applied retroactively.",
         "3. Save your transaction ID until the funds land in the JeetBuzz balance.",
         "## More payment guides",
-        "- [Deposit & Withdrawal Guide](/deposit-withdrawal-guide) — end-to-end cashier walkthrough for both directions.",
-        "- [Withdrawal Guide](/withdrawal-guide) — cash-out steps, KYC checkpoints and payout timing.",
-        "- [bKash Deposit](/jeetbuzz-bkash-deposit) — bKash-specific cashier flow and name-match rules.",
-        "- [Nagad Withdrawal](/jeetbuzz-nagad-withdrawal) — Nagad payout walk-through with realistic timing.",
-        "- [Minimum Deposit](/jeetbuzz-minimum-deposit) — smallest amount you can fund per rail.",
+        "- [Deposit & Withdrawal Guide](/deposit-withdrawal-guide), end-to-end cashier walkthrough for both directions.",
+        "- [Withdrawal Guide](/withdrawal-guide), cash-out steps, KYC checkpoints and payout timing.",
+        "- [bKash Deposit](/jeetbuzz-bkash-deposit), bKash-specific cashier flow and name-match rules.",
+        "- [Nagad Withdrawal](/jeetbuzz-nagad-withdrawal). Nagad payout walk-through with realistic timing.",
+        "- [Minimum Deposit](/jeetbuzz-minimum-deposit), smallest amount you can fund per rail.",
       ]}
       related={PAYMENTS_CLUSTER}
       faqs={[

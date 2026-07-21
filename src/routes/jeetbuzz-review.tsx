@@ -16,10 +16,10 @@ import { useI18n, type Locale } from "@/lib/i18n";
 export const Route = createFileRoute("/jeetbuzz-review")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Review 2026 — Rated 4.6/5 on Cricket, bKash/Nagad/UPI & Support (BD, PK, IN)" },
-      { name: "description", content: "Independent JeetBuzz review 2026 — rated 4.6/5 across cricket odds, welcome bonus, bKash/Nagad/UPI payments, Android app, live chat support, licensing and safety for BD, PK and IN." },
-      { property: "og:title", content: "JeetBuzz Review 2026 — 4.6/5 Bangladesh, Pakistan, India Verdict" },
-      { property: "og:description", content: "Tested from Dhaka, Karachi and Mumbai — cricket odds, bonus terms, payments, app and safety scored 4.6/5." },
+      { title: "JeetBuzz Review 2026. Rated 4.6/5 on Cricket, bKash/Nagad/UPI & Support (BD, PK, IN)" },
+      { name: "description", content: "Independent JeetBuzz review 2026, rated 4.6/5 across cricket odds, welcome bonus, bKash/Nagad/UPI payments, Android app, live chat support, licensing and safety for BD, PK and IN." },
+      { property: "og:title", content: "JeetBuzz Review 2026, 4.6/5 Bangladesh, Pakistan, India Verdict" },
+      { property: "og:description", content: "Tested from Dhaka, Karachi and Mumbai, cricket odds, bonus terms, payments, app and safety scored 4.6/5." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:image", content: imageAbsoluteUrl("liveCricket") },
@@ -27,11 +27,11 @@ export const Route = createFileRoute("/jeetbuzz-review")({
       { property: "og:image:height", content: String(IMAGES.liveCricket.h) },
       { name: "twitter:image", content: imageAbsoluteUrl("liveCricket") },
     ],
-    links: [canonicalLink("/jeetbuzz-review"), ...hreflangLinks("/jeetbuzz-review")],
+    links: [canonicalLink("/jeetbuzz-review")...hreflangLinks("/jeetbuzz-review")],
     scripts: [
       jsonLdScript(
         articleSchema({
-          headline: "JeetBuzz Review 2026 — Honest Bangladesh Verdict",
+          headline: "JeetBuzz Review 2026. Honest Bangladesh Verdict",
           description:
             "Independent JeetBuzz review for Bangladesh: odds, bonuses, payments, app, support and safety.",
           path: "/jeetbuzz-review",
@@ -85,51 +85,51 @@ const RATING_LABELS: Record<Locale, Record<(typeof RATING_KEYS)[number], string>
 
 const BODY_EN: string[] = [
   "## One-minute verdict",
-  "JeetBuzz is a strong, well-rounded option for South Asian players — particularly for live cricket markets, bKash/Nagad/UPI payments, and the speed of its Bengali, Urdu and Hindi-speaking support. A few bonus terms are on the strict side, but for experienced punters none of it is a deal-breaker.",
+  "JeetBuzz is a strong, well-rounded option for South Asian players, particularly for live cricket markets, bKash/Nagad/UPI payments, and the speed of its Bengali, Urdu and Hindi-speaking support. A few bonus terms are on the strict side, but for experienced punters none of it is a deal-breaker.",
   "## What we tested",
   "We opened an account from Dhaka, deposited via bKash, placed live cricket bets across BPL and an English county T20, and withdrew to verify cash-out times. We repeated the deposit/withdrawal cycle on UPI from India and JazzCash from Pakistan, and tested chat support in Bengali, Urdu and Hindi.",
   "## Sportsbook",
   "Cricket is the standout. Pre-match depth on BPL, IPL, PSL and internationals is competitive with any operator in the region, and in-play markets stay liquid through the final overs. Football, tennis and kabaddi are present and priced fairly; eSports coverage is thinner and largely limited to majors.",
   "## Casino",
-  "A standard mix of slots from Pragmatic, PG Soft and JILI, plus live blackjack, baccarat and Bengali / Hindi-speaking dealer tables. Before chasing welcome-bonus wagering with casino games, read the contribution table — most slots count 100%, table games count far less.",
+  "A standard mix of slots from Pragmatic, PG Soft and JILI, plus live blackjack, baccarat and Bengali / Hindi-speaking dealer tables. Before chasing welcome-bonus wagering with casino games, read the contribution table, most slots count 100%, table games count far less.",
   "## Bonuses",
   "The welcome offer is competitive against Baji, Crickex and Krikya. Wagering is typically 15x with sane max-bet rules, plus recurring reloads, cashback and a referral bonus. Read the bonus T&C once before opting in.",
   "## Payments",
   "bKash, Nagad and Rocket deposits usually credit within minutes; UPI/PhonePe/Paytm in India and JazzCash/EasyPaisa in Pakistan behave similarly. In our tests, withdrawals typically arrived within a few hours during business hours, though timing can vary by method and verification status.",
   "## App and site",
-  "The Android APK is light, fast and stable on mid-range devices. iOS users install the JeetBuzz web app from Safari — same login and same wallet. The desktop site is clean and avoids the cluttered banner spam common to the category.",
+  "The Android APK is light, fast and stable on mid-range devices. iOS users install the JeetBuzz web app from Safari, same login and same wallet. The desktop site is clean and avoids the cluttered banner spam common to the category.",
   "## Support",
   "Live chat is available around the clock and answered our Bengali, Hindi and Urdu queries within a few minutes during our tests. Email exists for complex KYC questions; for anything time-sensitive, chat is generally faster.",
   "## Safety",
-  "JeetBuzz operates under an offshore licence — standard for the South Asian market. Use a unique password, switch on every 2FA option in account settings, and only ever reach the site through verified links.",
-  "> Last verified: " + LAST_VERIFIED + ". Terms change — confirm the current numbers on the official site before depositing.",
+  "JeetBuzz operates under an offshore licence, standard for the South Asian market. Use a unique password, switch on every 2FA option in account settings, and only ever reach the site through verified links.",
+  "> Last verified: " + LAST_VERIFIED + ". Terms change, confirm the current numbers on the official site before depositing.",
 ];
 
 const BODY_BN: string[] = [
   "## ১ মিনিটে রায়",
-  "জিতবাজ বাংলাদেশের প্লেয়ারদের জন্য একটি শক্তিশালী ও সুসংগঠিত পছন্দ — বিশেষ করে BPL/IPL-এর লাইভ ক্রিকেট মার্কেট, bKash/Nagad/Rocket পেমেন্ট এবং দ্রুত বাংলা সাপোর্টের কারণে। কিছু বোনাস শর্ত একটু কড়া হলেও অভিজ্ঞ প্লেয়ারদের জন্য এগুলো বাধা নয়।",
+  "জিতবাজ বাংলাদেশের প্লেয়ারদের জন্য একটি শক্তিশালী ও সুসংগঠিত পছন্দ, বিশেষ করে BPL/IPL-এর লাইভ ক্রিকেট মার্কেট, bKash/Nagad/Rocket পেমেন্ট এবং দ্রুত বাংলা সাপোর্টের কারণে। কিছু বোনাস শর্ত একটু কড়া হলেও অভিজ্ঞ প্লেয়ারদের জন্য এগুলো বাধা নয়।",
   "## আমরা কী পরীক্ষা করেছি",
-  "আমরা ঢাকা থেকে অ্যাকাউন্ট খুলেছি, bKash দিয়ে ডিপোজিট করেছি, BPL ও একটি ইংলিশ কাউন্টি T20-তে লাইভ বেট রেখেছি এবং উইথড্রয়াল সময় যাচাই করেছি। বাংলায় লাইভ চ্যাট সাপোর্টও পরখ করেছি — কতক্ষণে রিপ্লাই আসে, কতটা সরাসরি উত্তর দেয়।",
+  "আমরা ঢাকা থেকে অ্যাকাউন্ট খুলেছি, bKash দিয়ে ডিপোজিট করেছি, BPL ও একটি ইংলিশ কাউন্টি T20-তে লাইভ বেট রেখেছি এবং উইথড্রয়াল সময় যাচাই করেছি। বাংলায় লাইভ চ্যাট সাপোর্টও পরখ করেছি, কতক্ষণে রিপ্লাই আসে, কতটা সরাসরি উত্তর দেয়।",
   "## স্পোর্টসবুক",
   "ক্রিকেটই এখানে সবচেয়ে শক্তিশালী। BPL, IPL এবং আন্তর্জাতিক ম্যাচে প্রি-ম্যাচ মার্কেটের গভীরতা এই অঞ্চলের যেকোনো অপারেটরের সমকক্ষ, এবং শেষ ওভার পর্যন্ত ইন-প্লে মার্কেটে যথেষ্ট তরলতা থাকে। ফুটবল, টেনিস ও কাবাডি উপস্থিত; eSports কভারেজ তুলনামূলক কম।",
   "## ক্যাসিনো",
-  "Pragmatic, PG Soft, JILI-এর স্লট, লাইভ ব্ল্যাকজ্যাক, ব্যাকারাট এবং বাংলাভাষী ডিলার টেবিল আছে। ওয়েলকাম বোনাসের wagering ক্যাসিনো দিয়ে শেষ করার আগে কন্ট্রিবিউশন টেবিল দেখে নিন — বেশিরভাগ স্লট ১০০% কাউন্ট করে, টেবিল গেম অনেক কম।",
+  "Pragmatic, PG Soft, JILI-এর স্লট, লাইভ ব্ল্যাকজ্যাক, ব্যাকারাট এবং বাংলাভাষী ডিলার টেবিল আছে। ওয়েলকাম বোনাসের wagering ক্যাসিনো দিয়ে শেষ করার আগে কন্ট্রিবিউশন টেবিল দেখে নিন, বেশিরভাগ স্লট ১০০% কাউন্ট করে, টেবিল গেম অনেক কম।",
   "## বোনাস",
   "Baji, Crickex বা Krikya-র তুলনায় জিতবাজের ওয়েলকাম অফার প্রতিযোগিতাপূর্ণ। সাধারণত ১৫x wagering, যৌক্তিক max-bet নিয়ম, এবং সাথে রিলোড, ক্যাশব্যাক ও রেফারেল বোনাস। অপ্ট-ইন করার আগে একবার শর্তগুলো পড়ে নিন।",
   "## পেমেন্ট",
-  "bKash, Nagad এবং Rocket — তিনটিতেই ডিপোজিট ইনস্ট্যান্ট। আমাদের সব টেস্টে উইথড্রয়াল কয়েক ঘণ্টার মধ্যে অ্যাকাউন্টে এসেছে। সঠিক নাম মিল রাখলে কোনো হোল্ড পড়ে না।",
+  "bKash, Nagad এবং Rocket, তিনটিতেই ডিপোজিট ইনস্ট্যান্ট। আমাদের সব টেস্টে উইথড্রয়াল কয়েক ঘণ্টার মধ্যে অ্যাকাউন্টে এসেছে। সঠিক নাম মিল রাখলে কোনো হোল্ড পড়ে না।",
   "## অ্যাপ ও সাইট",
-  "Android APK হালকা, দ্রুত এবং মিড-রেঞ্জ ফোনেও স্থিতিশীল। iOS ব্যবহারকারীরা Safari থেকে JeetBuzz ওয়েব অ্যাপ ‘Add to Home Screen’ করতে পারেন — একই লগইন, একই ওয়ালেট। ডেস্কটপ সাইট পরিষ্কার, ক্যাটাগরিতে সাধারণ যে ব্যানার স্প্যাম থাকে সেটা এখানে নেই।",
+  "Android APK হালকা, দ্রুত এবং মিড-রেঞ্জ ফোনেও স্থিতিশীল। iOS ব্যবহারকারীরা Safari থেকে JeetBuzz ওয়েব অ্যাপ ‘Add to Home Screen’ করতে পারেন, একই লগইন, একই ওয়ালেট। ডেস্কটপ সাইট পরিষ্কার, ক্যাটাগরিতে সাধারণ যে ব্যানার স্প্যাম থাকে সেটা এখানে নেই।",
   "## সাপোর্ট",
   "২৪/৭ লাইভ চ্যাট আমাদের বাংলা প্রশ্নের উত্তর দুই মিনিটের মধ্যেই দিয়েছে। জটিল KYC প্রশ্নের জন্য ইমেইল আছে; দ্রুত উত্তর চাইলে চ্যাটই ভালো।",
   "## নিরাপত্তা",
-  "জিতবাজ অফশোর লাইসেন্সে পরিচালিত — দক্ষিণ এশিয়ার মার্কেটে এটাই সাধারণ। ইউনিক পাসওয়ার্ড ব্যবহার করুন, সেটিংসে 2FA চালু করুন এবং শুধু ভেরিফায়েড লিংক দিয়েই সাইটে যান।",
-  "> সর্বশেষ যাচাই: " + LAST_VERIFIED + "। শর্ত পরিবর্তন হতে পারে — ডিপোজিটের আগে অফিসিয়াল সাইটে বর্তমান নাম্বার মিলিয়ে নিন।",
+  "জিতবাজ অফশোর লাইসেন্সে পরিচালিত, দক্ষিণ এশিয়ার মার্কেটে এটাই সাধারণ। ইউনিক পাসওয়ার্ড ব্যবহার করুন, সেটিংসে 2FA চালু করুন এবং শুধু ভেরিফায়েড লিংক দিয়েই সাইটে যান।",
+  "> সর্বশেষ যাচাই: " + LAST_VERIFIED + "। শর্ত পরিবর্তন হতে পারে, ডিপোজিটের আগে অফিসিয়াল সাইটে বর্তমান নাম্বার মিলিয়ে নিন।",
 ];
 
 const BODY_UR: string[] = [
   "## ایک منٹ کا فیصلہ",
-  "JeetBuzz پاکستانی صارفین کے لیے ایک مضبوط آپشن ہے — خاص طور پر لائیو کرکٹ مارکیٹس، JazzCash اور EasyPaisa ادائیگیوں اور تیز اردو سپورٹ کی وجہ سے۔ کچھ بونس شرائط سخت ہیں مگر تجربہ کار صارفین کے لیے مسئلہ نہیں۔",
+  "JeetBuzz پاکستانی صارفین کے لیے ایک مضبوط آپشن ہے, خاص طور پر لائیو کرکٹ مارکیٹس، JazzCash اور EasyPaisa ادائیگیوں اور تیز اردو سپورٹ کی وجہ سے۔ کچھ بونس شرائط سخت ہیں مگر تجربہ کار صارفین کے لیے مسئلہ نہیں۔",
   "## ہم نے کیا ٹیسٹ کیا",
   "ہم نے اکاؤنٹ کھولا، JazzCash سے ڈپازٹ کیا، PSL اور بین الاقوامی میچوں میں لائیو بیٹس لگائیں اور ودڈرا کر کے ادائیگی کا وقت جانچا۔ اردو میں لائیو چیٹ کا جواب کتنی جلدی آتا ہے، یہ بھی دیکھا۔",
   "## اسپورٹس بک",
@@ -141,17 +141,17 @@ const BODY_UR: string[] = [
   "## ادائیگیاں",
   "JazzCash اور EasyPaisa پر ڈپازٹ عام طور پر چند منٹ میں مکمل ہوتا ہے، اور ودڈراول ہمارے ہر ٹیسٹ میں چند گھنٹوں میں اکاؤنٹ تک پہنچ گیا۔ نام درست ہونا ضروری ہے۔",
   "## ایپ اور سائٹ",
-  "Android APK ہلکی، تیز اور مڈ رینج فونز پر بھی مستحکم ہے۔ iPhone صارفین Safari سے JeetBuzz ویب ایپ کو 'Add to Home Screen' کر سکتے ہیں — وہی لاگ ان، وہی والٹ۔",
+  "Android APK ہلکی، تیز اور مڈ رینج فونز پر بھی مستحکم ہے۔ iPhone صارفین Safari سے JeetBuzz ویب ایپ کو 'Add to Home Screen' کر سکتے ہیں, وہی لاگ ان، وہی والٹ۔",
   "## سپورٹ",
   "24/7 لائیو چیٹ نے ہمارے اردو سوال کا جواب چار منٹ میں دیا۔ پیچیدہ KYC کے لیے ای میل ہے؛ فوری مسائل کے لیے چیٹ ہی بہتر۔",
   "## حفاظت",
-  "JeetBuzz آف شور لائسنس پر کام کرتا ہے — جنوبی ایشیائی مارکیٹ میں یہ معمول ہے۔ منفرد پاس ورڈ، 2FA اور صرف تصدیق شدہ لنکس استعمال کریں۔",
-  "> آخری تصدیق: " + LAST_VERIFIED + "۔ شرائط بدل سکتی ہیں — ڈپازٹ سے پہلے آفیشل سائٹ پر موجودہ نمبر دیکھ لیں۔",
+  "JeetBuzz آف شور لائسنس پر کام کرتا ہے, جنوبی ایشیائی مارکیٹ میں یہ معمول ہے۔ منفرد پاس ورڈ، 2FA اور صرف تصدیق شدہ لنکس استعمال کریں۔",
+  "> آخری تصدیق: " + LAST_VERIFIED + "۔ شرائط بدل سکتی ہیں, ڈپازٹ سے پہلے آفیشل سائٹ پر موجودہ نمبر دیکھ لیں۔",
 ];
 
 const BODY_HI: string[] = [
   "## एक मिनट का फैसला",
-  "JeetBuzz भारतीय खिलाड़ियों के लिए एक मज़बूत विकल्प है — ख़ासकर IPL की लाइव क्रिकेट मार्केट, UPI/PhonePe/Paytm पेमेंट और तेज़ हिंदी सपोर्ट के कारण। कुछ बोनस शर्तें कड़ी हैं, मगर अनुभवी खिलाड़ियों के लिए कोई बाधा नहीं।",
+  "JeetBuzz भारतीय खिलाड़ियों के लिए एक मज़बूत विकल्प है, ख़ासकर IPL की लाइव क्रिकेट मार्केट, UPI/PhonePe/Paytm पेमेंट और तेज़ हिंदी सपोर्ट के कारण। कुछ बोनस शर्तें कड़ी हैं, मगर अनुभवी खिलाड़ियों के लिए कोई बाधा नहीं।",
   "## हमने क्या टेस्ट किया",
   "हमने अकाउंट खोला, UPI से डिपॉज़िट किया, IPL और एक इंटरनेशनल T20 में लाइव बेट लगाई और विदड्रॉ कर के पेमेंट का समय जाँचा। हिंदी में लाइव चैट का जवाब कितनी जल्दी आता है, यह भी देखा।",
   "## स्पोर्ट्सबुक",
@@ -163,28 +163,28 @@ const BODY_HI: string[] = [
   "## पेमेंट",
   "UPI, PhonePe और Paytm पर डिपॉज़िट आम तौर पर कुछ मिनटों में हो जाता है, और विदड्रॉल हमारे हर टेस्ट में कुछ घंटों में अकाउंट तक पहुँच गया। नाम मिलान सही रखें तो होल्ड नहीं पड़ता।",
   "## ऐप और साइट",
-  "Android APK हल्की, तेज़ और मिड-रेंज फ़ोन पर भी स्थिर है। iPhone यूज़र Safari से JeetBuzz वेब ऐप को ‘Add to Home Screen’ कर सकते हैं — वही लॉगिन, वही वॉलेट।",
+  "Android APK हल्की, तेज़ और मिड-रेंज फ़ोन पर भी स्थिर है। iPhone यूज़र Safari से JeetBuzz वेब ऐप को ‘Add to Home Screen’ कर सकते हैं, वही लॉगिन, वही वॉलेट।",
   "## सपोर्ट",
   "24/7 लाइव चैट ने हमारे हिंदी सवाल का जवाब तीन मिनट में दिया। जटिल KYC सवालों के लिए ईमेल है; तत्काल समस्या के लिए चैट बेहतर।",
   "## सुरक्षा",
-  "JeetBuzz ऑफ़शोर लाइसेंस पर चलता है — दक्षिण एशियाई बाज़ार में यह सामान्य है। यूनीक पासवर्ड, 2FA और केवल वेरीफ़ाइड लिंक ही इस्तेमाल करें।",
-  "> आख़िरी सत्यापन: " + LAST_VERIFIED + "। शर्तें बदल सकती हैं — डिपॉज़िट से पहले ऑफ़िशियल साइट पर मौजूदा नंबर मिला लें।",
+  "JeetBuzz ऑफ़शोर लाइसेंस पर चलता है, दक्षिण एशियाई बाज़ार में यह सामान्य है। यूनीक पासवर्ड, 2FA और केवल वेरीफ़ाइड लिंक ही इस्तेमाल करें।",
+  "> आख़िरी सत्यापन: " + LAST_VERIFIED + "। शर्तें बदल सकती हैं, डिपॉज़िट से पहले ऑफ़िशियल साइट पर मौजूदा नंबर मिला लें।",
 ];
 
 const BODIES: Record<Locale, string[]> = { en: BODY_EN, bn: BODY_BN, ur: BODY_UR, hi: BODY_HI };
 
 const TITLES: Record<Locale, React.ReactNode> = {
-  en: (<>JeetBuzz Review 2026 — <span className="gold-text">An Honest South Asia Verdict</span></>),
-  bn: (<>জিতবাজ রিভিউ ২০২৬ — <span className="gold-text">নিরপেক্ষ বাংলাদেশ রায়</span></>),
-  ur: (<>JeetBuzz جائزہ 2026 — <span className="gold-text">غیر جانبدار پاکستانی رائے</span></>),
-  hi: (<>JeetBuzz रिव्यू 2026 — <span className="gold-text">ईमानदार भारतीय राय</span></>),
+  en: (<>JeetBuzz Review 2026, <span className="gold-text">An Honest South Asia Verdict</span></>),
+  bn: (<>জিতবাজ রিভিউ ২০২৬, <span className="gold-text">নিরপেক্ষ বাংলাদেশ রায়</span></>),
+  ur: (<>JeetBuzz جائزہ 2026, <span className="gold-text">غیر جانبدار پاکستانی رائے</span></>),
+  hi: (<>JeetBuzz रिव्यू 2026, <span className="gold-text">ईमानदार भारतीय राय</span></>),
 };
 
 const SUBTITLES: Record<Locale, string> = {
-  en: "We signed up, deposited via bKash/UPI/JazzCash, bet on IPL and BPL live and cashed out — here's what's actually good and what isn't.",
-  bn: "আমরা সাইনআপ করেছি, bKash দিয়ে ডিপোজিট করেছি, BPL/IPL-এ লাইভ বেট রেখেছি এবং উইথড্রয় করেছি — এখানে আসলে কী ভালো এবং কী নয়, সরাসরি বলছি।",
-  ur: "ہم نے سائن اپ کیا، JazzCash سے ڈپازٹ کیا، PSL/IPL پر لائیو بیٹ لگائے اور کیش آؤٹ کیا — یہاں سچائی پڑھیں کہ کیا اچھا ہے اور کیا نہیں۔",
-  hi: "हमने साइनअप किया, UPI से डिपॉज़िट किया, IPL में लाइव बेट लगाई और कैश आउट किया — यहाँ बिना लाग-लपेट के बताते हैं क्या अच्छा है और क्या नहीं।",
+  en: "We signed up, deposited via bKash/UPI/JazzCash, bet on IPL and BPL live and cashed out, here's what's actually good and what isn't.",
+  bn: "আমরা সাইনআপ করেছি, bKash দিয়ে ডিপোজিট করেছি, BPL/IPL-এ লাইভ বেট রেখেছি এবং উইথড্রয় করেছি, এখানে আসলে কী ভালো এবং কী নয়, সরাসরি বলছি।",
+  ur: "ہم نے سائن اپ کیا، JazzCash سے ڈپازٹ کیا، PSL/IPL پر لائیو بیٹ لگائے اور کیش آؤٹ کیا, یہاں سچائی پڑھیں کہ کیا اچھا ہے اور کیا نہیں۔",
+  hi: "हमने साइनअप किया, UPI से डिपॉज़िट किया, IPL में लाइव बेट लगाई और कैश आउट किया, यहाँ बिना लाग-लपेट के बताते हैं क्या अच्छा है और क्या नहीं।",
 };
 
 const CTA_LABELS: Record<Locale, string> = {
@@ -202,44 +202,44 @@ const EYEBROWS: Record<Locale, string> = {
 };
 
 const EDITOR_SCORE: Record<Locale, string> = {
-  en: "4.5 / 5 — Editor's score",
-  bn: "৪.৫ / ৫ — এডিটরের স্কোর",
-  ur: "4.5 / 5 — ایڈیٹر کا اسکور",
-  hi: "4.5 / 5 — एडिटर का स्कोर",
+  en: "4.5 / 5. Editor's score",
+  bn: "৪.৫ / ৫, এডিটরের স্কোর",
+  ur: "4.5 / 5, ایڈیٹر کا اسکور",
+  hi: "4.5 / 5, एडिटर का स्कोर",
 };
 
 const FAQS: Record<Locale, FAQItem[]> = {
   en: [
     { q: "Is JeetBuzz safe for players in Bangladesh, Pakistan and India?", a: "JeetBuzz operates under an offshore licence, which is standard across the South Asian market. In our testing the site, app, payment rails and support all behaved exactly as advertised. Use a unique password and enable 2FA for an extra layer." },
     { q: "How long do JeetBuzz withdrawals actually take?", a: "On bKash, Nagad, UPI and JazzCash we saw withdrawals land inside a few hours during business hours. Overnight requests cleared by morning. The biggest delay risk is a name mismatch between your JeetBuzz account and your wallet." },
-    { q: "Is the JeetBuzz welcome bonus worth claiming?", a: "Yes if you actually play sports — the 15x wagering on cricket markets is achievable. Skip it if you mostly play table-game casino, because contribution rates are low and you will not clear the bonus in time." },
-    { q: "Are JeetBuzz odds competitive with Baji, Crickex and Krikya?", a: "On BPL, IPL and PSL pre-match cricket they are within a tick or two of the regional leaders. In-play stays liquid late in the innings — that is where JeetBuzz noticeably beats some smaller competitors." },
-    { q: "Does JeetBuzz have a native iOS app?", a: "No native iOS app — Apple doesn't allow this category in BD/PK/IN. Open JeetBuzz in Safari, tap Share, then Add to Home Screen. The web app behaves like a native one, with the same login and wallet." },
-    { q: "What support languages does JeetBuzz live chat actually speak?", a: "Bengali, Hindi, Urdu and English — confirmed in our tests. Replies typically arrived within a few minutes across all three languages during business hours. For account or KYC issues, chat is generally faster than email." },
+    { q: "Is the JeetBuzz welcome bonus worth claiming?", a: "Yes if you actually play sports, the 15x wagering on cricket markets is achievable. Skip it if you mostly play table-game casino, because contribution rates are low and you will not clear the bonus in time." },
+    { q: "Are JeetBuzz odds competitive with Baji, Crickex and Krikya?", a: "On BPL, IPL and PSL pre-match cricket they are within a tick or two of the regional leaders. In-play stays liquid late in the innings, that is where JeetBuzz noticeably beats some smaller competitors." },
+    { q: "Does JeetBuzz have a native iOS app?", a: "No native iOS app. Apple doesn't allow this category in BD/PK/IN. Open JeetBuzz in Safari, tap Share, then Add to Home Screen. The web app behaves like a native one, with the same login and wallet." },
+    { q: "What support languages does JeetBuzz live chat actually speak?", a: "Bengali, Hindi, Urdu and English, confirmed in our tests. Replies typically arrived within a few minutes across all three languages during business hours. For account or KYC issues, chat is generally faster than email." },
   ],
   bn: [
-    { q: "বাংলাদেশের প্লেয়ারদের জন্য জিতবাজ কি নিরাপদ?", a: "জিতবাজ অফশোর লাইসেন্সে চলে — দক্ষিণ এশিয়ার মার্কেটে এটাই স্ট্যান্ডার্ড। আমাদের টেস্টে সাইট, অ্যাপ, পেমেন্ট ও সাপোর্ট সবই ঠিকঠাক কাজ করেছে। ইউনিক পাসওয়ার্ড আর 2FA অন রাখলে নিরাপত্তা আরও বাড়ে।" },
-    { q: "জিতবাজের উইথড্রয়াল আসলে কতক্ষণ লাগে?", a: "bKash, Nagad, Rocket-এ অফিস টাইমে আমরা কয়েক ঘণ্টার মধ্যেই টাকা পেয়েছি। রাতের রিকোয়েস্ট সকালের মধ্যে ক্লিয়ার হয়েছে। সবচেয়ে বড় দেরির কারণ — অ্যাকাউন্ট ও ওয়ালেটের নাম না মেলা।" },
-    { q: "জিতবাজ ওয়েলকাম বোনাস ক্লেইম করা কি লাভজনক?", a: "আপনি যদি সত্যিই স্পোর্টস বেট করেন — হ্যাঁ। ক্রিকেট মার্কেটে ১৫x wagering সম্ভব। বেশিরভাগ ক্যাসিনো খেললে স্কিপ করুন, কারণ টেবিল গেমের কন্ট্রিবিউশন কম, সময়মতো wagering পূরণ হবে না।" },
-    { q: "জিতবাজের অডস কি Baji, Crickex, Krikya-র চেয়ে ভালো?", a: "BPL, IPL-এ প্রি-ম্যাচ অডস আঞ্চলিক লিডারদের কাছাকাছি, এক-দুই টিকের ফারাক। ইনিংসের শেষ ওভার পর্যন্ত ইন-প্লে মার্কেটে তরলতা থাকে — এখানেই জিতবাজ ছোট প্রতিযোগীদের থেকে এগিয়ে।" },
-    { q: "জিতবাজের কি নেটিভ iOS অ্যাপ আছে?", a: "নেটিভ iOS অ্যাপ নেই — Apple BD/PK/IN-এ এই ক্যাটাগরি অনুমতি দেয় না। Safari-তে JeetBuzz খুলুন, Share → Add to Home Screen করুন। ওয়েব অ্যাপ নেটিভের মতোই কাজ করে।" },
-    { q: "জিতবাজ লাইভ চ্যাট কোন কোন ভাষায় উত্তর দেয়?", a: "বাংলা, হিন্দি, উর্দু, ইংরেজি — সব ভেরিফায়েড। অফিস টাইমে সাধারণত কয়েক মিনিটের মধ্যেই উত্তর এসেছে। অ্যাকাউন্ট বা KYC সমস্যায় ইমেইলের চেয়ে চ্যাট সাধারণত দ্রুত।" },
+    { q: "বাংলাদেশের প্লেয়ারদের জন্য জিতবাজ কি নিরাপদ?", a: "জিতবাজ অফশোর লাইসেন্সে চলে, দক্ষিণ এশিয়ার মার্কেটে এটাই স্ট্যান্ডার্ড। আমাদের টেস্টে সাইট, অ্যাপ, পেমেন্ট ও সাপোর্ট সবই ঠিকঠাক কাজ করেছে। ইউনিক পাসওয়ার্ড আর 2FA অন রাখলে নিরাপত্তা আরও বাড়ে।" },
+    { q: "জিতবাজের উইথড্রয়াল আসলে কতক্ষণ লাগে?", a: "bKash, Nagad, Rocket-এ অফিস টাইমে আমরা কয়েক ঘণ্টার মধ্যেই টাকা পেয়েছি। রাতের রিকোয়েস্ট সকালের মধ্যে ক্লিয়ার হয়েছে। সবচেয়ে বড় দেরির কারণ, অ্যাকাউন্ট ও ওয়ালেটের নাম না মেলা।" },
+    { q: "জিতবাজ ওয়েলকাম বোনাস ক্লেইম করা কি লাভজনক?", a: "আপনি যদি সত্যিই স্পোর্টস বেট করেন, হ্যাঁ। ক্রিকেট মার্কেটে ১৫x wagering সম্ভব। বেশিরভাগ ক্যাসিনো খেললে স্কিপ করুন, কারণ টেবিল গেমের কন্ট্রিবিউশন কম, সময়মতো wagering পূরণ হবে না।" },
+    { q: "জিতবাজের অডস কি Baji, Crickex, Krikya-র চেয়ে ভালো?", a: "BPL, IPL-এ প্রি-ম্যাচ অডস আঞ্চলিক লিডারদের কাছাকাছি, এক-দুই টিকের ফারাক। ইনিংসের শেষ ওভার পর্যন্ত ইন-প্লে মার্কেটে তরলতা থাকে, এখানেই জিতবাজ ছোট প্রতিযোগীদের থেকে এগিয়ে।" },
+    { q: "জিতবাজের কি নেটিভ iOS অ্যাপ আছে?", a: "নেটিভ iOS অ্যাপ নেই. Apple BD/PK/IN-এ এই ক্যাটাগরি অনুমতি দেয় না। Safari-তে JeetBuzz খুলুন, Share → Add to Home Screen করুন। ওয়েব অ্যাপ নেটিভের মতোই কাজ করে।" },
+    { q: "জিতবাজ লাইভ চ্যাট কোন কোন ভাষায় উত্তর দেয়?", a: "বাংলা, হিন্দি, উর্দু, ইংরেজি, সব ভেরিফায়েড। অফিস টাইমে সাধারণত কয়েক মিনিটের মধ্যেই উত্তর এসেছে। অ্যাকাউন্ট বা KYC সমস্যায় ইমেইলের চেয়ে চ্যাট সাধারণত দ্রুত।" },
   ],
   ur: [
-    { q: "کیا JeetBuzz پاکستانی صارفین کے لیے محفوظ ہے؟", a: "JeetBuzz آف شور لائسنس پر کام کرتا ہے — جنوبی ایشیائی مارکیٹ میں یہ معیار ہے۔ ہمارے ٹیسٹ میں سائٹ، ایپ، ادائیگیاں اور سپورٹ سب ٹھیک کام کرتے ہیں۔ منفرد پاس ورڈ اور 2FA ضرور آن کریں۔" },
+    { q: "کیا JeetBuzz پاکستانی صارفین کے لیے محفوظ ہے؟", a: "JeetBuzz آف شور لائسنس پر کام کرتا ہے, جنوبی ایشیائی مارکیٹ میں یہ معیار ہے۔ ہمارے ٹیسٹ میں سائٹ، ایپ، ادائیگیاں اور سپورٹ سب ٹھیک کام کرتے ہیں۔ منفرد پاس ورڈ اور 2FA ضرور آن کریں۔" },
     { q: "JeetBuzz ودڈراول حقیقت میں کتنا وقت لیتا ہے؟", a: "JazzCash اور EasyPaisa پر دفتری اوقات میں چند گھنٹوں میں رقم آ گئی۔ رات کی درخواستیں صبح تک کلیئر۔ سب سے بڑی تاخیر اکاؤنٹ اور والٹ کے نام میں فرق سے ہوتی ہے۔" },
-    { q: "کیا ویلکم بونس کلیم کرنا فائدہ مند ہے؟", a: "اگر آپ واقعی اسپورٹس بیٹنگ کرتے ہیں تو ہاں — کرکٹ مارکیٹس پر 15x شرط ممکن ہے۔ زیادہ تر کیسینو کھیلنے والے اسے چھوڑ دیں، کیونکہ ٹیبل گیمز کی شراکت کم ہے۔" },
-    { q: "کیا JeetBuzz کے oddsBaji یا Crickex سے بہتر ہیں؟", a: "PSL اور IPL میں پری میچ آڈز خطے کے سرفہرست آپریٹرز کے بہت قریب ہیں۔ آخری اوور تک اِن پلے مارکیٹ کام کرتے ہیں — یہاں JeetBuzz چھوٹے حریفوں سے آگے ہے۔" },
-    { q: "کیا iOS کے لیے کوئی نیٹیو ایپ ہے؟", a: "نہیں — Apple اس زمرے کو BD/PK/IN میں اجازت نہیں دیتا۔ Safari میں JeetBuzz کھولیں، Share → Add to Home Screen کریں۔ ویب ایپ نیٹیو کی طرح کام کرتا ہے۔" },
-    { q: "JeetBuzz لائیو چیٹ کن زبانوں میں جواب دیتا ہے؟", a: "بنگالی، اردو، ہندی اور انگریزی — تصدیق شدہ۔ دفتری اوقات میں عموماً چند منٹ میں جواب موصول ہوا۔ KYC مسائل کے لیے بھی ای میل سے چیٹ عام طور پر تیز ہے۔" },
+    { q: "کیا ویلکم بونس کلیم کرنا فائدہ مند ہے؟", a: "اگر آپ واقعی اسپورٹس بیٹنگ کرتے ہیں تو ہاں, کرکٹ مارکیٹس پر 15x شرط ممکن ہے۔ زیادہ تر کیسینو کھیلنے والے اسے چھوڑ دیں، کیونکہ ٹیبل گیمز کی شراکت کم ہے۔" },
+    { q: "کیا JeetBuzz کے oddsBaji یا Crickex سے بہتر ہیں؟", a: "PSL اور IPL میں پری میچ آڈز خطے کے سرفہرست آپریٹرز کے بہت قریب ہیں۔ آخری اوور تک اِن پلے مارکیٹ کام کرتے ہیں, یہاں JeetBuzz چھوٹے حریفوں سے آگے ہے۔" },
+    { q: "کیا iOS کے لیے کوئی نیٹیو ایپ ہے؟", a: "نہیں. Apple اس زمرے کو BD/PK/IN میں اجازت نہیں دیتا۔ Safari میں JeetBuzz کھولیں، Share → Add to Home Screen کریں۔ ویب ایپ نیٹیو کی طرح کام کرتا ہے۔" },
+    { q: "JeetBuzz لائیو چیٹ کن زبانوں میں جواب دیتا ہے؟", a: "بنگالی، اردو، ہندی اور انگریزی, تصدیق شدہ۔ دفتری اوقات میں عموماً چند منٹ میں جواب موصول ہوا۔ KYC مسائل کے لیے بھی ای میل سے چیٹ عام طور پر تیز ہے۔" },
   ],
   hi: [
-    { q: "क्या JeetBuzz भारतीय खिलाड़ियों के लिए सुरक्षित है?", a: "JeetBuzz ऑफ़शोर लाइसेंस पर चलता है — दक्षिण एशियाई बाज़ार में यही मानक है। हमारे टेस्ट में साइट, ऐप, पेमेंट और सपोर्ट सब ठीक काम करते हैं। यूनीक पासवर्ड और 2FA ज़रूर चालू करें।" },
+    { q: "क्या JeetBuzz भारतीय खिलाड़ियों के लिए सुरक्षित है?", a: "JeetBuzz ऑफ़शोर लाइसेंस पर चलता है, दक्षिण एशियाई बाज़ार में यही मानक है। हमारे टेस्ट में साइट, ऐप, पेमेंट और सपोर्ट सब ठीक काम करते हैं। यूनीक पासवर्ड और 2FA ज़रूर चालू करें।" },
     { q: "JeetBuzz विदड्रॉल असल में कितना समय लेता है?", a: "UPI, PhonePe, Paytm पर कार्यालय समय में कुछ घंटों में पैसा आ गया। रात के अनुरोध सुबह तक क्लियर। सबसे बड़ी देरी अकाउंट और बैंक के नाम में अंतर से होती है।" },
-    { q: "क्या वेलकम बोनस क्लेम करना फ़ायदेमंद है?", a: "अगर आप वाक़ई स्पोर्ट्स खेलते हैं तो हाँ — क्रिकेट मार्केट पर 15x वेजरिंग संभव है। ज़्यादा कैसीनो खेलते हैं तो छोड़ दें, क्योंकि टेबल गेम का कंट्रिब्यूशन कम है।" },
-    { q: "क्या JeetBuzz के odds Baji या Crickex से बेहतर हैं?", a: "IPL और इंटरनेशनल पर प्री-मैच ऑड्स क्षेत्रीय अग्रणियों के बहुत क़रीब हैं। आख़िरी ओवर तक इन-प्ले मार्केट चलते हैं — यहाँ JeetBuzz छोटे प्रतिस्पर्धियों से आगे है।" },
-    { q: "क्या iOS के लिए कोई नेटिव ऐप है?", a: "नहीं — Apple BD/PK/IN में यह श्रेणी अनुमत नहीं करता। Safari में JeetBuzz खोलें, Share → Add to Home Screen करें। वेब ऐप नेटिव जैसा ही चलता है।" },
-    { q: "JeetBuzz लाइव चैट किन भाषाओं में जवाब देता है?", a: "बंगाली, हिंदी, उर्दू और अंग्रेज़ी — सत्यापित। कार्यालय समय में आम तौर पर कुछ मिनटों में जवाब मिला। KYC समस्या के लिए भी ईमेल से चैट आम तौर पर तेज़ है।" },
+    { q: "क्या वेलकम बोनस क्लेम करना फ़ायदेमंद है?", a: "अगर आप वाक़ई स्पोर्ट्स खेलते हैं तो हाँ, क्रिकेट मार्केट पर 15x वेजरिंग संभव है। ज़्यादा कैसीनो खेलते हैं तो छोड़ दें, क्योंकि टेबल गेम का कंट्रिब्यूशन कम है।" },
+    { q: "क्या JeetBuzz के odds Baji या Crickex से बेहतर हैं?", a: "IPL और इंटरनेशनल पर प्री-मैच ऑड्स क्षेत्रीय अग्रणियों के बहुत क़रीब हैं। आख़िरी ओवर तक इन-प्ले मार्केट चलते हैं, यहाँ JeetBuzz छोटे प्रतिस्पर्धियों से आगे है।" },
+    { q: "क्या iOS के लिए कोई नेटिव ऐप है?", a: "नहीं. Apple BD/PK/IN में यह श्रेणी अनुमत नहीं करता। Safari में JeetBuzz खोलें, Share → Add to Home Screen करें। वेब ऐप नेटिव जैसा ही चलता है।" },
+    { q: "JeetBuzz लाइव चैट किन भाषाओं में जवाब देता है?", a: "बंगाली, हिंदी, उर्दू और अंग्रेज़ी, सत्यापित। कार्यालय समय में आम तौर पर कुछ मिनटों में जवाब मिला। KYC समस्या के लिए भी ईमेल से चैट आम तौर पर तेज़ है।" },
   ],
 };
 

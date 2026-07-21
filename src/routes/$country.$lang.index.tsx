@@ -31,16 +31,16 @@ export const Route = createFileRoute("/$country/$lang/")({
     const cm = COUNTRY_META[country];
     const path = `/${country}/${lang}`;
     const titles: Record<Locale, string> = {
-      en: `JeetBuzz ${cm.label} — Login, Signup, Bonus & App Guide`,
-      bn: `জিতবাজ ${cm.label} — লগইন, সাইনআপ, বোনাস ও অ্যাপ গাইড`,
-      ur: `JeetBuzz ${cm.label} — لاگ ان، سائن اپ، بونس اور ایپ گائیڈ`,
-      hi: `JeetBuzz ${cm.label} — लॉगिन, साइनअप, बोनस और ऐप गाइड`,
+      en: `JeetBuzz ${cm.label}. Login, Signup, Bonus & App Guide`,
+      bn: `জিতবাজ ${cm.label}, লগইন, সাইনআপ, বোনাস ও অ্যাপ গাইড`,
+      ur: `JeetBuzz ${cm.label}, لاگ ان، سائن اپ، بونس اور ایپ گائیڈ`,
+      hi: `JeetBuzz ${cm.label}, लॉगिन, साइनअप, बोनस और ऐप गाइड`,
     };
     const descs: Record<Locale, string> = {
-      en: `JeetBuzz ${cm.label} guide — registration, login, bonuses, APK download and local payments. Updated for ${cm.label} players.`,
-      bn: `জিতবাজ ${cm.label} গাইড — রেজিস্ট্রেশন, লগইন, বোনাস, APK ডাউনলোড এবং লোকাল পেমেন্ট। ${cm.label} প্লেয়ারদের জন্য আপডেটেড।`,
-      ur: `JeetBuzz ${cm.label} گائیڈ — رجسٹریشن، لاگ ان، بونس، APK ڈاؤن لوڈ اور مقامی ادائیگیاں۔ ${cm.label} کے کھلاڑیوں کے لیے۔`,
-      hi: `JeetBuzz ${cm.label} गाइड — रजिस्ट्रेशन, लॉगिन, बोनस, APK डाउनलोड और लोकल पेमेंट। ${cm.label} खिलाड़ियों के लिए अपडेटेड।`,
+      en: `JeetBuzz ${cm.label} guide, registration, login, bonuses, APK download and local payments. Updated for ${cm.label} players.`,
+      bn: `জিতবাজ ${cm.label} গাইড, রেজিস্ট্রেশন, লগইন, বোনাস, APK ডাউনলোড এবং লোকাল পেমেন্ট। ${cm.label} প্লেয়ারদের জন্য আপডেটেড।`,
+      ur: `JeetBuzz ${cm.label} گائیڈ, رجسٹریشن، لاگ ان، بونس، APK ڈاؤن لوڈ اور مقامی ادائیگیاں۔ ${cm.label} کے کھلاڑیوں کے لیے۔`,
+      hi: `JeetBuzz ${cm.label} गाइड, रजिस्ट्रेशन, लॉगिन, बोनस, APK डाउनलोड और लोकल पेमेंट। ${cm.label} खिलाड़ियों के लिए अपडेटेड।`,
     };
     return {
       meta: [

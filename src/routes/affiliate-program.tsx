@@ -87,11 +87,11 @@ const FAQS: FAQ[] = [
 const FAQS_EXTRA: FAQ[] = [
   {
     q: "Where is the JeetBuzz affiliate login page?",
-    a: "The Partner dashboard sign-in lives at /jeetbuzz-partner-login — bookmark it and always reach it through the official site, never a link received via WhatsApp or Telegram DM.",
+    a: "The Partner dashboard sign-in lives at /jeetbuzz-partner-login, bookmark it and always reach it through the official site, never a link received via WhatsApp or Telegram DM.",
   },
   {
     q: "How do I sign up for the JeetBuzz affiliate program?",
-    a: "Fill in the JeetBuzz Partners registration form with your name, email, contact number and traffic source. Verify email, complete KYC and join the official Telegram channel — full walkthrough is on the affiliate signup guide.",
+    a: "Fill in the JeetBuzz Partners registration form with your name, email, contact number and traffic source. Verify email, complete KYC and join the official Telegram channel, full walkthrough is on the affiliate signup guide.",
   },
   {
     q: "What is the JeetBuzz affiliate commission rate?",
@@ -99,7 +99,7 @@ const FAQS_EXTRA: FAQ[] = [
   },
   {
     q: "How do I find my JeetBuzz affiliate link?",
-    a: "Inside the Partner dashboard, open Tools → Tracking Links. Each brand and language has its own unique link so you can attribute traffic per campaign. Never edit the query string manually — that voids attribution.",
+    a: "Inside the Partner dashboard, open Tools → Tracking Links. Each brand and language has its own unique link so you can attribute traffic per campaign. Never edit the query string manually, that voids attribution.",
   },
   {
     q: "Is there a JeetBuzz affiliate app?",
@@ -107,7 +107,7 @@ const FAQS_EXTRA: FAQ[] = [
   },
   {
     q: "How is JeetBuzz affiliate withdrawal handled?",
-    a: "Payouts are pushed to your verified wallet every Wednesday once your account clears KYC and the weekly commission meets the minimum threshold. bKash, Nagad, bank transfer and USDT are all supported — see /jeetbuzz-affiliate-payment-methods.",
+    a: "Payouts are pushed to your verified wallet every Wednesday once your account clears KYC and the weekly commission meets the minimum threshold. bKash, Nagad, bank transfer and USDT are all supported, see /jeetbuzz-affiliate-payment-methods.",
   },
   {
     q: "Can I use a JeetBuzz referral code alongside the affiliate program?",
@@ -136,7 +136,7 @@ const STEPS: Step[] = [
   {
     icon: Wallet,
     title: "Get Paid Every Wednesday",
-    desc: "Receive your weekly commission of up to 60% every Wednesday — transparent and on time.",
+    desc: "Receive your weekly commission of up to 60% every Wednesday, transparent and on time.",
   },
 ];
 
@@ -178,7 +178,7 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 const JOIN_STEPS_EN: JoinStep[] = [
-  { t: "Register as a JeetBuzz Affiliate", d: "Sign up on the official JeetBuzz Partners portal — free and fast." },
+  { t: "Register as a JeetBuzz Affiliate", d: "Sign up on the official JeetBuzz Partners portal, free and fast." },
   { t: "Complete your KYC verification", d: "KYC verification is mandatory before commissions are released." },
   { t: "Join the official JeetBuzz Affiliate Telegram Channel", d: "Stay informed about updates, payouts and promotions." },
   { t: "Promote your affiliate link", d: "Share your unique referral link across your audience and channels." },
@@ -233,7 +233,7 @@ const CONTENT_EN: AffiliateContent = {
   badge: `JeetBuzz Partners · Updated ${LAST_VERIFIED}`,
   h1Lead: "JeetBuzz ",
   h1Gold: "Affiliate Program",
-  h1Tail: " — Earn Up to 60% Weekly Commission",
+  h1Tail: ". Earn Up to 60% Weekly Commission",
   heroLead: "Earn up to ",
   heroBold: "60% weekly commission",
   heroTail:
@@ -249,11 +249,11 @@ const CONTENT_EN: AffiliateContent = {
   ],
   howH2: "How to Participate",
   howSub:
-    "Register, verify, promote and receive your weekly commission every Wednesday — a partnership designed for long-term growth with the JeetBuzz Affiliates team.",
+    "Register, verify, promote and receive your weekly commission every Wednesday, a partnership designed for long-term growth with the JeetBuzz Affiliates team.",
   steps: STEPS,
   planH2: "Commission Plan",
   planSub:
-    "The more qualified active players you bring, the higher your weekly commission — up to 60%. Refer another affiliate for an extra 3.5% commission.",
+    "The more qualified active players you bring, the higher your weekly commission, up to 60%. Refer another affiliate for an extra 3.5% commission.",
   tableHead: { tier: "Tier", players: "Active players", commission: "Commission", payout: "Payout" },
   commission: COMMISSION,
   planFoot:
@@ -262,14 +262,14 @@ const CONTENT_EN: AffiliateContent = {
     "Refer another affiliate and earn an extra 3.5% commission on top of your weekly rate.",
   benefitsH2: "Commission Highlights",
   benefitsSub:
-    "Everything you get as a JeetBuzz affiliate — transparent, weekly and long-term.",
+    "Everything you get as a JeetBuzz affiliate, transparent, weekly and long-term.",
   benefits: BENEFITS,
   testimonials: TESTIMONIALS,
   testimonialDisclaimer:
     "Testimonials are representative examples from partner feedback; individual earnings vary by traffic and effort.",
   eliteH2: "Affiliate Elite Club",
   eliteBody:
-    "An exclusive program for our top-performing affiliates with increased commission rates and premium privileges. Your dedication deserves the very best — welcome to the JeetBuzz Elite Club.",
+    "An exclusive program for our top-performing affiliates with increased commission rates and premium privileges. Your dedication deserves the very best, welcome to the JeetBuzz Elite Club.",
   joinH2: "Requirements & How to Join",
   joinSub: "Six simple steps to start earning up to 60% weekly commission.",
   joinSteps: JOIN_STEPS_EN,
@@ -283,7 +283,7 @@ const CONTENT_EN: AffiliateContent = {
     "Up to 60% weekly commission. Weekly Wednesday payouts. Transparent reporting and long-term partnership.",
   finalCta: "Become an Affiliate",
   finalDisclosure:
-    "We earn commission if you sign up through our links — at no extra cost to you.",
+    "We earn commission if you sign up through our links, at no extra cost to you.",
   starRatingAria: (n) => `${n} star rating`,
 };
 
@@ -291,11 +291,11 @@ const CONTENT_BN: AffiliateContent = {
   badge: `JeetBuzz Partners · সর্বশেষ আপডেট ${LAST_VERIFIED}`,
   h1Lead: "JeetBuzz ",
   h1Gold: "অ্যাফিলিয়েট প্রোগ্রাম",
-  h1Tail: " — প্রতি সপ্তাহে ৬০% পর্যন্ত কমিশন",
+  h1Tail: ", প্রতি সপ্তাহে ৬০% পর্যন্ত কমিশন",
   heroLead: "যোগ্য সক্রিয় প্লেয়ার রেফার করে প্রতি সপ্তাহে ",
   heroBold: "৬০% পর্যন্ত কমিশন",
   heroTail:
-    " আয় করুন — প্রতি বুধবার স্বচ্ছ সাপ্তাহিক পেআউটে নিজের অ্যাফিলিয়েট ব্যবসা বড় করুন।",
+    " আয় করুন, প্রতি বুধবার স্বচ্ছ সাপ্তাহিক পেআউটে নিজের অ্যাফিলিয়েট ব্যবসা বড় করুন।",
   ctaPrimary: "অ্যাফিলিয়েট হোন",
   ctaSecondary: "অ্যাফিলিয়েট লগইন",
   ctaAria: "JeetBuzz অ্যাফিলিয়েট হোন",
@@ -307,16 +307,16 @@ const CONTENT_BN: AffiliateContent = {
   ],
   howH2: "কীভাবে অংশ নেবেন",
   howSub:
-    "রেজিস্টার করুন, যাচাই সম্পন্ন করুন, প্রচার করুন এবং প্রতি বুধবার সাপ্তাহিক কমিশন পান — JeetBuzz Affiliates টিমের সঙ্গে দীর্ঘমেয়াদী অংশীদারিত্বের জন্য তৈরি।",
+    "রেজিস্টার করুন, যাচাই সম্পন্ন করুন, প্রচার করুন এবং প্রতি বুধবার সাপ্তাহিক কমিশন পান. JeetBuzz Affiliates টিমের সঙ্গে দীর্ঘমেয়াদী অংশীদারিত্বের জন্য তৈরি।",
   steps: [
     { icon: UserPlus, title: "JeetBuzz অ্যাফিলিয়েট হিসেবে রেজিস্টার করুন", desc: "অফিসিয়াল JeetBuzz Partners পোর্টালে বিনামূল্যে অ্যাফিলিয়েট অ্যাকাউন্ট খুলুন।" },
     { icon: Share2, title: "KYC সম্পন্ন করুন ও Telegram-এ যোগ দিন", desc: "পেআউট চালু করতে KYC যাচাই সম্পন্ন করুন এবং অফিসিয়াল JeetBuzz Affiliate Telegram চ্যানেলে যোগ দিন।" },
     { icon: BadgeDollarSign, title: "প্রচার করুন ও সক্রিয় প্লেয়ার রেফার করুন", desc: "নিজের অ্যাফিলিয়েট লিংক শেয়ার করুন এবং প্রতিটি সাইকেলে কমপক্ষে পাঁচজন যোগ্য সক্রিয় প্লেয়ার ধরে রাখুন।" },
-    { icon: Wallet, title: "প্রতি বুধবার পেআউট পান", desc: "প্রতি বুধবার পর্যন্ত ৬০% সাপ্তাহিক কমিশন পান — স্বচ্ছ ও সময়মতো।" },
+    { icon: Wallet, title: "প্রতি বুধবার পেআউট পান", desc: "প্রতি বুধবার পর্যন্ত ৬০% সাপ্তাহিক কমিশন পান, স্বচ্ছ ও সময়মতো।" },
   ],
   planH2: "কমিশন প্ল্যান",
   planSub:
-    "যত বেশি যোগ্য সক্রিয় প্লেয়ার আনবেন, তত বেশি সাপ্তাহিক কমিশন — ৬০% পর্যন্ত। আরেকজন অ্যাফিলিয়েট রেফার করলে অতিরিক্ত ৩.৫% কমিশন।",
+    "যত বেশি যোগ্য সক্রিয় প্লেয়ার আনবেন, তত বেশি সাপ্তাহিক কমিশন, ৬০% পর্যন্ত। আরেকজন অ্যাফিলিয়েট রেফার করলে অতিরিক্ত ৩.৫% কমিশন।",
   tableHead: { tier: "টিয়ার", players: "সক্রিয় প্লেয়ার", commission: "কমিশন", payout: "পেআউট" },
   commission: [
     { tier: "Starter", players: "০ – ১০ সক্রিয় প্লেয়ার", revshare: "৫০%", cpa: "প্রতি বুধবার সাপ্তাহিক" },
@@ -330,10 +330,10 @@ const CONTENT_BN: AffiliateContent = {
     "আরেকজন অ্যাফিলিয়েট রেফার করুন এবং সাপ্তাহিক রেটের উপর অতিরিক্ত ৩.৫% কমিশন পান।",
   benefitsH2: "কমিশন হাইলাইটস",
   benefitsSub:
-    "JeetBuzz অ্যাফিলিয়েট হিসেবে আপনি যা পান — স্বচ্ছ, সাপ্তাহিক ও দীর্ঘমেয়াদী।",
+    "JeetBuzz অ্যাফিলিয়েট হিসেবে আপনি যা পান, স্বচ্ছ, সাপ্তাহিক ও দীর্ঘমেয়াদী।",
   benefits: [
-    { icon: TrendingUp, title: "প্রতি সপ্তাহে ৬০% পর্যন্ত কমিশন", desc: "প্রতিটি সাপ্তাহিক সাইকেলে যোগ্য সক্রিয় প্লেয়ারদের উপর — অর্জিত টিয়ার অনুযায়ী — ৬০% পর্যন্ত কমিশন আয় করুন।" },
-    { icon: Wallet, title: "প্রতি বুধবার সাপ্তাহিক পেআউট", desc: "প্রতি বুধবার সাপ্তাহিক পেআউট নির্ধারিত — KYC, বৈধ ওয়ালেট তথ্য এবং প্রযোজ্য কম্প্লায়েন্স রিভিউ-এর শর্ত সাপেক্ষে।" },
+    { icon: TrendingUp, title: "প্রতি সপ্তাহে ৬০% পর্যন্ত কমিশন", desc: "প্রতিটি সাপ্তাহিক সাইকেলে যোগ্য সক্রিয় প্লেয়ারদের উপর, অর্জিত টিয়ার অনুযায়ী, ৬০% পর্যন্ত কমিশন আয় করুন।" },
+    { icon: Wallet, title: "প্রতি বুধবার সাপ্তাহিক পেআউট", desc: "প্রতি বুধবার সাপ্তাহিক পেআউট নির্ধারিত. KYC, বৈধ ওয়ালেট তথ্য এবং প্রযোজ্য কম্প্লায়েন্স রিভিউ-এর শর্ত সাপেক্ষে।" },
     { icon: Megaphone, title: "রিয়েল-টাইম পারফরম্যান্স ট্র্যাকিং", desc: "অ্যাফিলিয়েট ড্যাশবোর্ড থেকে রিয়েল টাইমে ক্লিক, কনভার্সন ও আয় দেখুন।" },
     { icon: HeadphonesIcon, title: "ডেডিকেটেড অ্যাফিলিয়েট সাপোর্ট", desc: "Telegram ও ইমেইলে ডেডিকেটেড অ্যাফিলিয়েট ম্যানেজারের সরাসরি সহায়তা।" },
     { icon: CheckCircle2, title: "স্বচ্ছ রিপোর্টিং", desc: "Net Profit = Customer Win/Loss − Deduction − Bonus। স্পষ্ট ও অডিটযোগ্য হিসাব।" },
@@ -348,11 +348,11 @@ const CONTENT_BN: AffiliateContent = {
     "এই টেস্টিমোনিয়ালগুলো পার্টনার ফিডব্যাকের প্রতিনিধিত্বমূলক উদাহরণ; ব্যক্তিগত আয় ট্রাফিক ও পরিশ্রম অনুযায়ী ভিন্ন হয়।",
   eliteH2: "অ্যাফিলিয়েট Elite Club",
   eliteBody:
-    "আমাদের সেরা পারফর্মিং অ্যাফিলিয়েটদের জন্য একটি বিশেষ প্রোগ্রাম — উন্নত কমিশন হার ও প্রিমিয়াম সুবিধাসহ। আপনার নিষ্ঠা সেরাটারই দাবিদার — JeetBuzz Elite Club-এ স্বাগতম।",
+    "আমাদের সেরা পারফর্মিং অ্যাফিলিয়েটদের জন্য একটি বিশেষ প্রোগ্রাম, উন্নত কমিশন হার ও প্রিমিয়াম সুবিধাসহ। আপনার নিষ্ঠা সেরাটারই দাবিদার. JeetBuzz Elite Club-এ স্বাগতম।",
   joinH2: "শর্ত ও যোগ দেওয়ার নিয়ম",
   joinSub: "৬০% পর্যন্ত সাপ্তাহিক কমিশন শুরু করতে ছয়টি সহজ ধাপ।",
   joinSteps: [
-    { t: "JeetBuzz অ্যাফিলিয়েট হিসেবে রেজিস্টার করুন", d: "অফিসিয়াল JeetBuzz Partners পোর্টালে রেজিস্টার করুন — বিনামূল্যে ও দ্রুত।" },
+    { t: "JeetBuzz অ্যাফিলিয়েট হিসেবে রেজিস্টার করুন", d: "অফিসিয়াল JeetBuzz Partners পোর্টালে রেজিস্টার করুন, বিনামূল্যে ও দ্রুত।" },
     { t: "KYC যাচাই সম্পন্ন করুন", d: "কমিশন রিলিজের আগে KYC যাচাই বাধ্যতামূলক।" },
     { t: "অফিসিয়াল JeetBuzz Affiliate Telegram চ্যানেলে যোগ দিন", d: "আপডেট, পেআউট ও প্রোমোশন সম্পর্কে অবগত থাকুন।" },
     { t: "নিজের অ্যাফিলিয়েট লিংক প্রচার করুন", d: "নিজের দর্শক ও চ্যানেলে ইউনিক রেফারেল লিংক শেয়ার করুন।" },
@@ -377,7 +377,7 @@ const CONTENT_BN: AffiliateContent = {
     "প্রতি সপ্তাহে ৬০% পর্যন্ত কমিশন। প্রতি বুধবার সাপ্তাহিক পেআউট। স্বচ্ছ রিপোর্টিং ও দীর্ঘমেয়াদী অংশীদারিত্ব।",
   finalCta: "অ্যাফিলিয়েট হোন",
   finalDisclosure:
-    "আমাদের লিংকের মাধ্যমে সাইনআপ করলে আমরা কমিশন পাই — আপনার কোনো অতিরিক্ত খরচ নেই।",
+    "আমাদের লিংকের মাধ্যমে সাইনআপ করলে আমরা কমিশন পাই, আপনার কোনো অতিরিক্ত খরচ নেই।",
   starRatingAria: (n) => `${n} স্টার রেটিং`,
 };
 
@@ -385,11 +385,11 @@ const CONTENT_UR: AffiliateContent = {
   badge: `JeetBuzz Partners · آخری اپ ڈیٹ ${LAST_VERIFIED}`,
   h1Lead: "JeetBuzz ",
   h1Gold: "Affiliate Program",
-  h1Tail: " — ہر ہفتے 60% تک کمیشن",
+  h1Tail: ", ہر ہفتے 60% تک کمیشن",
   heroLead: "اہل فعال کھلاڑیوں کو refer کر کے ہر ہفتے ",
   heroBold: "60% تک کمیشن",
   heroTail:
-    " کمائیں — ہر بدھ شفاف ہفتہ وار پے آؤٹ کے ساتھ اپنا affiliate کاروبار بڑھائیں۔",
+    " کمائیں, ہر بدھ شفاف ہفتہ وار پے آؤٹ کے ساتھ اپنا affiliate کاروبار بڑھائیں۔",
   ctaPrimary: "Affiliate بنیں",
   ctaSecondary: "Affiliate لاگ ان",
   ctaAria: "JeetBuzz Affiliate بنیں",
@@ -401,16 +401,16 @@ const CONTENT_UR: AffiliateContent = {
   ],
   howH2: "حصہ کیسے لیں",
   howSub:
-    "رجسٹر کریں، تصدیق کریں، پروموٹ کریں اور ہر بدھ ہفتہ وار کمیشن وصول کریں — JeetBuzz Affiliates ٹیم کے ساتھ طویل المدتی شراکت داری کے لیے ڈیزائن کیا گیا۔",
+    "رجسٹر کریں، تصدیق کریں، پروموٹ کریں اور ہر بدھ ہفتہ وار کمیشن وصول کریں. JeetBuzz Affiliates ٹیم کے ساتھ طویل المدتی شراکت داری کے لیے ڈیزائن کیا گیا۔",
   steps: [
     { icon: UserPlus, title: "JeetBuzz Affiliate کے طور پر رجسٹر کریں", desc: "آفیشل JeetBuzz Partners پورٹل پر مفت affiliate اکاؤنٹ بنائیں۔" },
     { icon: Share2, title: "KYC مکمل کریں اور Telegram جوائن کریں", desc: "پے آؤٹ فعال کرنے کے لیے KYC تصدیق مکمل کریں اور آفیشل JeetBuzz Affiliate Telegram چینل جوائن کریں۔" },
     { icon: BadgeDollarSign, title: "پروموٹ کریں اور فعال کھلاڑی refer کریں", desc: "اپنا affiliate لنک شیئر کریں اور ہر سائیکل میں کم از کم پانچ اہل فعال کھلاڑی برقرار رکھیں۔" },
-    { icon: Wallet, title: "ہر بدھ پے آؤٹ پائیں", desc: "ہر بدھ 60% تک ہفتہ وار کمیشن وصول کریں — شفاف اور بروقت۔" },
+    { icon: Wallet, title: "ہر بدھ پے آؤٹ پائیں", desc: "ہر بدھ 60% تک ہفتہ وار کمیشن وصول کریں, شفاف اور بروقت۔" },
   ],
   planH2: "کمیشن پلان",
   planSub:
-    "جتنے زیادہ اہل فعال کھلاڑی لائیں گے، اتنا زیادہ ہفتہ وار کمیشن — 60% تک۔ کسی اور affiliate کو refer کرنے پر اضافی 3.5% کمیشن۔",
+    "جتنے زیادہ اہل فعال کھلاڑی لائیں گے، اتنا زیادہ ہفتہ وار کمیشن, 60% تک۔ کسی اور affiliate کو refer کرنے پر اضافی 3.5% کمیشن۔",
   tableHead: { tier: "ٹیئر", players: "فعال کھلاڑی", commission: "کمیشن", payout: "پے آؤٹ" },
   commission: [
     { tier: "Starter", players: "0 – 10 فعال کھلاڑی", revshare: "50%", cpa: "ہر بدھ ہفتہ وار" },
@@ -424,10 +424,10 @@ const CONTENT_UR: AffiliateContent = {
     "کسی اور affiliate کو refer کریں اور ہفتہ وار ریٹ کے علاوہ اضافی 3.5% کمیشن حاصل کریں۔",
   benefitsH2: "کمیشن کی خصوصیات",
   benefitsSub:
-    "JeetBuzz affiliate کے طور پر آپ کو جو کچھ ملتا ہے — شفاف، ہفتہ وار اور طویل المدتی۔",
+    "JeetBuzz affiliate کے طور پر آپ کو جو کچھ ملتا ہے, شفاف، ہفتہ وار اور طویل المدتی۔",
   benefits: [
-    { icon: TrendingUp, title: "ہر ہفتے 60% تک کمیشن", desc: "ہر ہفتہ وار سائیکل میں اہل فعال کھلاڑیوں پر — حاصل کردہ ٹیئر کے مطابق — 60% تک کمیشن کمائیں۔" },
-    { icon: Wallet, title: "ہر بدھ ہفتہ وار پے آؤٹ", desc: "ہر بدھ ہفتہ وار پے آؤٹ شیڈولڈ — KYC، درست والیٹ تفصیلات اور قابل اطلاق compliance ریویو کے تابع۔" },
+    { icon: TrendingUp, title: "ہر ہفتے 60% تک کمیشن", desc: "ہر ہفتہ وار سائیکل میں اہل فعال کھلاڑیوں پر, حاصل کردہ ٹیئر کے مطابق, 60% تک کمیشن کمائیں۔" },
+    { icon: Wallet, title: "ہر بدھ ہفتہ وار پے آؤٹ", desc: "ہر بدھ ہفتہ وار پے آؤٹ شیڈولڈ. KYC، درست والیٹ تفصیلات اور قابل اطلاق compliance ریویو کے تابع۔" },
     { icon: Megaphone, title: "ریئل ٹائم پرفارمنس ٹریکنگ", desc: "affiliate ڈیش بورڈ سے ریئل ٹائم میں کلکس، کنورژنز اور آمدنی دیکھیں۔" },
     { icon: HeadphonesIcon, title: "ڈیڈیکیٹڈ Affiliate سپورٹ", desc: "Telegram اور ای میل پر ڈیڈیکیٹڈ affiliate manager سے براہ راست مدد۔" },
     { icon: CheckCircle2, title: "شفاف رپورٹنگ", desc: "Net Profit = Customer Win/Loss − Deduction − Bonus۔ واضح اور قابل آڈٹ اعداد۔" },
@@ -442,11 +442,11 @@ const CONTENT_UR: AffiliateContent = {
     "یہ testimonials پارٹنر فیڈ بیک کی نمائندہ مثالیں ہیں؛ ذاتی آمدنی ٹریفک اور محنت کے مطابق مختلف ہوتی ہے۔",
   eliteH2: "Affiliate Elite Club",
   eliteBody:
-    "ہمارے سب سے بہترین پرفارمنگ affiliates کے لیے ایک خصوصی پروگرام — بہتر کمیشن ریٹس اور پریمیم مراعات کے ساتھ۔ آپ کی محنت بہترین کی حقدار ہے — JeetBuzz Elite Club میں خوش آمدید۔",
+    "ہمارے سب سے بہترین پرفارمنگ affiliates کے لیے ایک خصوصی پروگرام, بہتر کمیشن ریٹس اور پریمیم مراعات کے ساتھ۔ آپ کی محنت بہترین کی حقدار ہے. JeetBuzz Elite Club میں خوش آمدید۔",
   joinH2: "شرائط اور شامل ہونے کا طریقہ",
   joinSub: "60% تک ہفتہ وار کمیشن شروع کرنے کے لیے چھ آسان مراحل۔",
   joinSteps: [
-    { t: "JeetBuzz Affiliate کے طور پر رجسٹر کریں", d: "آفیشل JeetBuzz Partners پورٹل پر رجسٹر کریں — مفت اور تیز۔" },
+    { t: "JeetBuzz Affiliate کے طور پر رجسٹر کریں", d: "آفیشل JeetBuzz Partners پورٹل پر رجسٹر کریں, مفت اور تیز۔" },
     { t: "KYC تصدیق مکمل کریں", d: "کمیشن ریلیز سے پہلے KYC تصدیق لازمی ہے۔" },
     { t: "آفیشل JeetBuzz Affiliate Telegram چینل جوائن کریں", d: "اپ ڈیٹس، پے آؤٹ اور پروموشنز سے باخبر رہیں۔" },
     { t: "اپنا affiliate لنک پروموٹ کریں", d: "اپنے سامعین اور چینلز میں منفرد ریفرل لنک شیئر کریں۔" },
@@ -471,7 +471,7 @@ const CONTENT_UR: AffiliateContent = {
     "ہر ہفتے 60% تک کمیشن۔ ہر بدھ ہفتہ وار پے آؤٹ۔ شفاف رپورٹنگ اور طویل المدتی شراکت داری۔",
   finalCta: "Affiliate بنیں",
   finalDisclosure:
-    "اگر آپ ہمارے لنکس سے سائن اپ کرتے ہیں تو ہمیں کمیشن ملتا ہے — آپ کے لیے کوئی اضافی خرچ نہیں۔",
+    "اگر آپ ہمارے لنکس سے سائن اپ کرتے ہیں تو ہمیں کمیشن ملتا ہے, آپ کے لیے کوئی اضافی خرچ نہیں۔",
   starRatingAria: (n) => `${n} اسٹار ریٹنگ`,
 };
 
@@ -479,11 +479,11 @@ const CONTENT_HI: AffiliateContent = {
   badge: `JeetBuzz Partners · अंतिम अपडेट ${LAST_VERIFIED}`,
   h1Lead: "JeetBuzz ",
   h1Gold: "Affiliate Program",
-  h1Tail: " — हर हफ़्ते 60% तक कमीशन",
+  h1Tail: ", हर हफ़्ते 60% तक कमीशन",
   heroLead: "योग्य सक्रिय खिलाड़ियों को रेफ़र करके हर हफ़्ते ",
   heroBold: "60% तक कमीशन",
   heroTail:
-    " कमाएँ — हर बुधवार पारदर्शी साप्ताहिक पे-आउट के साथ अपना affiliate व्यवसाय बढ़ाएँ।",
+    " कमाएँ, हर बुधवार पारदर्शी साप्ताहिक पे-आउट के साथ अपना affiliate व्यवसाय बढ़ाएँ।",
   ctaPrimary: "Affiliate बनें",
   ctaSecondary: "Affiliate Login",
   ctaAria: "JeetBuzz Affiliate बनें",
@@ -495,16 +495,16 @@ const CONTENT_HI: AffiliateContent = {
   ],
   howH2: "कैसे हिस्सा लें",
   howSub:
-    "रजिस्टर करें, सत्यापन पूरा करें, प्रचार करें और हर बुधवार साप्ताहिक कमीशन प्राप्त करें — JeetBuzz Affiliates टीम के साथ दीर्घकालिक साझेदारी के लिए तैयार।",
+    "रजिस्टर करें, सत्यापन पूरा करें, प्रचार करें और हर बुधवार साप्ताहिक कमीशन प्राप्त करें. JeetBuzz Affiliates टीम के साथ दीर्घकालिक साझेदारी के लिए तैयार।",
   steps: [
     { icon: UserPlus, title: "JeetBuzz Affiliate के रूप में रजिस्टर करें", desc: "ऑफ़िशियल JeetBuzz Partners पोर्टल पर मुफ़्त affiliate अकाउंट बनाएँ।" },
     { icon: Share2, title: "KYC पूरा करें और Telegram जॉइन करें", desc: "पे-आउट चालू करने के लिए KYC सत्यापन पूरा करें और ऑफ़िशियल JeetBuzz Affiliate Telegram चैनल जॉइन करें।" },
     { icon: BadgeDollarSign, title: "प्रचार करें और सक्रिय खिलाड़ी रेफ़र करें", desc: "अपना affiliate लिंक शेयर करें और हर साइकल में कम से कम पाँच योग्य सक्रिय खिलाड़ी बनाए रखें।" },
-    { icon: Wallet, title: "हर बुधवार पे-आउट पाएँ", desc: "हर बुधवार 60% तक साप्ताहिक कमीशन प्राप्त करें — पारदर्शी और समय पर।" },
+    { icon: Wallet, title: "हर बुधवार पे-आउट पाएँ", desc: "हर बुधवार 60% तक साप्ताहिक कमीशन प्राप्त करें, पारदर्शी और समय पर।" },
   ],
   planH2: "कमीशन प्लान",
   planSub:
-    "जितने ज़्यादा योग्य सक्रिय खिलाड़ी लाएँगे, उतना ज़्यादा साप्ताहिक कमीशन — 60% तक। किसी और affiliate को रेफ़र करने पर अतिरिक्त 3.5% कमीशन।",
+    "जितने ज़्यादा योग्य सक्रिय खिलाड़ी लाएँगे, उतना ज़्यादा साप्ताहिक कमीशन, 60% तक। किसी और affiliate को रेफ़र करने पर अतिरिक्त 3.5% कमीशन।",
   tableHead: { tier: "टियर", players: "सक्रिय खिलाड़ी", commission: "कमीशन", payout: "पे-आउट" },
   commission: [
     { tier: "Starter", players: "0 – 10 सक्रिय खिलाड़ी", revshare: "50%", cpa: "हर बुधवार साप्ताहिक" },
@@ -518,10 +518,10 @@ const CONTENT_HI: AffiliateContent = {
     "किसी और affiliate को रेफ़र करें और साप्ताहिक रेट के ऊपर अतिरिक्त 3.5% कमीशन पाएँ।",
   benefitsH2: "कमीशन हाइलाइट्स",
   benefitsSub:
-    "JeetBuzz affiliate के रूप में आपको जो मिलता है — पारदर्शी, साप्ताहिक और दीर्घकालिक।",
+    "JeetBuzz affiliate के रूप में आपको जो मिलता है, पारदर्शी, साप्ताहिक और दीर्घकालिक।",
   benefits: [
-    { icon: TrendingUp, title: "हर हफ़्ते 60% तक कमीशन", desc: "हर साप्ताहिक साइकल में योग्य सक्रिय खिलाड़ियों पर — प्राप्त टियर के अनुसार — 60% तक कमीशन कमाएँ।" },
-    { icon: Wallet, title: "हर बुधवार साप्ताहिक पे-आउट", desc: "हर बुधवार साप्ताहिक पे-आउट निर्धारित — KYC, मान्य वॉलेट विवरण और लागू compliance समीक्षा के अधीन।" },
+    { icon: TrendingUp, title: "हर हफ़्ते 60% तक कमीशन", desc: "हर साप्ताहिक साइकल में योग्य सक्रिय खिलाड़ियों पर, प्राप्त टियर के अनुसार, 60% तक कमीशन कमाएँ।" },
+    { icon: Wallet, title: "हर बुधवार साप्ताहिक पे-आउट", desc: "हर बुधवार साप्ताहिक पे-आउट निर्धारित. KYC, मान्य वॉलेट विवरण और लागू compliance समीक्षा के अधीन।" },
     { icon: Megaphone, title: "रियल-टाइम परफ़ॉर्मेंस ट्रैकिंग", desc: "affiliate डैशबोर्ड से रियल टाइम में क्लिक्स, कन्वर्ज़न और कमाई देखें।" },
     { icon: HeadphonesIcon, title: "डेडिकेटेड Affiliate सपोर्ट", desc: "Telegram और ईमेल पर डेडिकेटेड affiliate manager से सीधी मदद।" },
     { icon: CheckCircle2, title: "पारदर्शी रिपोर्टिंग", desc: "Net Profit = Customer Win/Loss − Deduction − Bonus। स्पष्ट और ऑडिट-योग्य आँकड़े।" },
@@ -536,11 +536,11 @@ const CONTENT_HI: AffiliateContent = {
     "ये टेस्टिमोनियल पार्टनर फ़ीडबैक के प्रतिनिधि उदाहरण हैं; व्यक्तिगत कमाई ट्रैफ़िक और मेहनत के अनुसार भिन्न होती है।",
   eliteH2: "Affiliate Elite Club",
   eliteBody:
-    "हमारे सर्वश्रेष्ठ प्रदर्शन करने वाले affiliates के लिए एक विशेष प्रोग्राम — बेहतर कमीशन दर और प्रीमियम सुविधाओं के साथ। आपकी मेहनत सर्वोत्तम की हक़दार है — JeetBuzz Elite Club में आपका स्वागत है।",
+    "हमारे सर्वश्रेष्ठ प्रदर्शन करने वाले affiliates के लिए एक विशेष प्रोग्राम, बेहतर कमीशन दर और प्रीमियम सुविधाओं के साथ। आपकी मेहनत सर्वोत्तम की हक़दार है. JeetBuzz Elite Club में आपका स्वागत है।",
   joinH2: "शर्तें और जुड़ने का तरीक़ा",
   joinSub: "60% तक साप्ताहिक कमीशन शुरू करने के लिए छह आसान चरण।",
   joinSteps: [
-    { t: "JeetBuzz Affiliate के रूप में रजिस्टर करें", d: "ऑफ़िशियल JeetBuzz Partners पोर्टल पर रजिस्टर करें — मुफ़्त और तेज़।" },
+    { t: "JeetBuzz Affiliate के रूप में रजिस्टर करें", d: "ऑफ़िशियल JeetBuzz Partners पोर्टल पर रजिस्टर करें, मुफ़्त और तेज़।" },
     { t: "KYC सत्यापन पूरा करें", d: "कमीशन रिलीज़ से पहले KYC सत्यापन अनिवार्य है।" },
     { t: "ऑफ़िशियल JeetBuzz Affiliate Telegram चैनल जॉइन करें", d: "अपडेट, पे-आउट और प्रोमोशन की जानकारी पाते रहें।" },
     { t: "अपना affiliate लिंक प्रचारित करें", d: "अपने दर्शकों और चैनलों में अद्वितीय रेफ़रल लिंक शेयर करें।" },
@@ -565,7 +565,7 @@ const CONTENT_HI: AffiliateContent = {
     "हर हफ़्ते 60% तक कमीशन। हर बुधवार साप्ताहिक पे-आउट। पारदर्शी रिपोर्टिंग और दीर्घकालिक साझेदारी।",
   finalCta: "Affiliate बनें",
   finalDisclosure:
-    "अगर आप हमारे लिंक से साइनअप करते हैं तो हमें कमीशन मिलता है — आपके लिए कोई अतिरिक्त शुल्क नहीं।",
+    "अगर आप हमारे लिंक से साइनअप करते हैं तो हमें कमीशन मिलता है, आपके लिए कोई अतिरिक्त शुल्क नहीं।",
   starRatingAria: (n) => `${n} स्टार रेटिंग`,
 };
 
@@ -599,7 +599,7 @@ export const Route = createFileRoute("/affiliate-program")({
       { name: "twitter:image", content: imageAbsoluteUrl("affiliate") },
       ogUrl(PAGE_PATH),
     ],
-    links: [canonicalLink(PAGE_PATH), ...hreflangLinks(PAGE_PATH)],
+    links: [canonicalLink(PAGE_PATH)...hreflangLinks(PAGE_PATH)],
     scripts: [
       {
         type: "application/ld+json",
@@ -970,7 +970,7 @@ function AffiliateProgramPage() {
           <RelatedGuides
             items={[
               { to: "/jeetbuzz-review", title: "JeetBuzz Review", desc: "Pillar review of the operator you'll be promoting." },
-              { to: "/registration-guide", title: "Registration Guide", desc: "How players sign up — useful for affiliate funnels." },
+              { to: "/registration-guide", title: "Registration Guide", desc: "How players sign up, useful for affiliate funnels." },
               { to: "/payment-methods", title: "Payment Methods", desc: "Deposit options players will use after your referral." },
               { to: "/affiliate-disclosure", title: "Affiliate Disclosure", desc: "How GetJeetBuzz handles its own affiliate relationship." },
             ]}

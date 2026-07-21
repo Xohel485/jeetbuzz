@@ -6,7 +6,7 @@ const PATH = "/bkash-guide";
 const TITLE =
   "JeetBuzz bKash Deposit & Withdrawal Guide Bangladesh 2026 - Step by Step";
 const DESC =
-  "Step-by-step JeetBuzz bKash deposit and withdrawal guide for Bangladesh 2026 — Send Money flow, minimums, fees, processing times and fixes for failed transactions.";
+  "Step-by-step JeetBuzz bKash deposit and withdrawal guide for Bangladesh 2026. Send Money flow, minimums, fees, processing times and fixes for failed transactions.";
 
 export const Route = createFileRoute("/bkash-guide")({
   head: () => ({
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/bkash-guide")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
@@ -28,19 +28,19 @@ export const Route = createFileRoute("/bkash-guide")({
       titleByLocale={{
         bn: <>জিতবাজ <span className="gold-text">bKash</span> গাইড</>,
       }}
-      subtitle="Bangladesh's most popular wallet, on Bangladesh's most active sportsbook — deposits, withdrawals, common errors and pro tips."
+      subtitle="Bangladesh's most popular wallet, on Bangladesh's most active sportsbook, deposits, withdrawals, common errors and pro tips."
       subtitleByLocale={{
-        bn: "বাংলাদেশের সবচেয়ে জনপ্রিয় ওয়ালেট জিতবাজে — ডিপোজিট, উইথড্রয়াল, সাধারণ ভুল এবং প্রো টিপস।",
+        bn: "বাংলাদেশের সবচেয়ে জনপ্রিয় ওয়ালেট জিতবাজে, ডিপোজিট, উইথড্রয়াল, সাধারণ ভুল এবং প্রো টিপস।",
       }}
       breadcrumbs={[{ name: "Payments", path: "/payment-methods" }, { name: "bKash", path: PATH }]}
       articlePath={PATH}
       articleHeadline={TITLE}
       articleDescription={DESC}
       body={[
-        "> **Quick summary:** jeetbuzz bkash deposit clears in seconds — open Cashier > Deposit > bKash, copy the merchant number and JeetBuzz reference, then Send Money (not Mobile Recharge) and paste the TrxID back. Minimum 200 BDT, withdrawals 500 BDT+ to the same wallet, 0% fee from JeetBuzz.",
+        "> **Quick summary:** jeetbuzz bkash deposit clears in seconds, open Cashier > Deposit > bKash, copy the merchant number and JeetBuzz reference, then Send Money (not Mobile Recharge) and paste the TrxID back. Minimum 200 BDT, withdrawals 500 BDT+ to the same wallet, 0% fee from JeetBuzz.",
         "## Why bKash is a popular choice on JeetBuzz Bangladesh",
         "bKash is one of the most widely used mobile financial services in Bangladesh, so jeetbuzz bkash deposit is a common choice for Bangladeshi players. Deposits usually credit within a few minutes of the TrxID being verified, and bkash withdrawal from jeetbuzz typically completes within 5–30 minutes during peak hours, subject to verification and operator processing.",
-        "## jeetbuzz bkash deposit — full step-by-step",
+        "## jeetbuzz bkash deposit, full step-by-step",
         "1. Open JeetBuzz via the [official login](/login-guide) and sign in.",
         "2. From the top bar tap **Cashier**, then choose **Deposit**, then **bKash**.",
         "3. Enter the amount you want to deposit. The minimum is 200 BDT (the screen will show the live cap).",
@@ -51,26 +51,26 @@ export const Route = createFileRoute("/bkash-guide")({
         "8. Copy that TrxID, return to the JeetBuzz cashier tab, paste it into the form, and tap **Submit**.",
         "9. The balance updates within 30–60 seconds. If it does not, screenshot the SMS and open live chat.",
         "## Screenshot walkthrough (what each screen looks like)",
-        "- **Cashier screen:** dark JeetBuzz background, three large payment tiles — bKash on the left, Nagad center, Rocket right. The merchant number sits in a copy-button pill, with a yellow countdown timer that expires in 15 minutes.",
-        "- **bKash Send Money screen:** the standard pink-and-white bKash form with three fields (Receiver number, Amount, Reference). The reference field is where most failed deposits go wrong — it must contain the JeetBuzz code, nothing else.",
+        "- **Cashier screen:** dark JeetBuzz background, three large payment tiles, bKash on the left, Nagad center, Rocket right. The merchant number sits in a copy-button pill, with a yellow countdown timer that expires in 15 minutes.",
+        "- **bKash Send Money screen:** the standard pink-and-white bKash form with three fields (Receiver number, Amount, Reference). The reference field is where most failed deposits go wrong, it must contain the JeetBuzz code, nothing else.",
         "- **bKash SMS:** \"You have sent Tk X to 017XXXXXXXX. TrxID: 8K4P7Q2R. Reference: JB-9X3K.\" Only the TrxID goes into JeetBuzz.",
-        "## jeetbuzz bkash withdrawal — step by step",
+        "## jeetbuzz bkash withdrawal, step by step",
         "1. Open **Cashier > Withdraw > bKash**.",
         "2. Enter the BDT amount you want to cash out (minimum 500 BDT, maximum depends on VIP tier).",
-        "3. Enter the bKash number you deposited from — it must match. JeetBuzz blocks third-party withdrawals.",
+        "3. Enter the bKash number you deposited from, it must match. JeetBuzz blocks third-party withdrawals.",
         "4. Submit and wait 5–30 minutes. You receive a bKash \"Cash In\" SMS when it clears.",
-        "## bKash deposits and withdrawals — at a glance",
+        "## bKash deposits and withdrawals, at a glance",
         "Withdrawal limits may vary depending on your account status and the operator's current policies. Please check the cashier or contact customer support for the latest limits.",
         "Typical deposit minimum is around 200 BDT and processing usually completes within a few minutes once the TrxID is verified. Any applicable fees are shown by bKash before you confirm the transaction.",
         "## Common mistakes that delay your deposit",
-        "- Wrong TrxID pasted — double-check the last 4 characters",
+        "- Wrong TrxID pasted, double-check the last 4 characters",
         "- Sent via Mobile Recharge or Make Payment instead of Send Money",
         "- Sent without the unique reference code",
         "- Using a different person's bKash number (name must match your JeetBuzz profile)",
-        "- Amount rounded differently — 500.50 vs 500 will fail",
+        "- Amount rounded differently, 500.50 vs 500 will fail",
         "## Pro tip",
         "Screenshot the cashier merchant page **before** leaving JeetBuzz and the bKash SMS **after** sending. Both make support tickets resolve in minutes instead of hours.",
-        "## Country context — where bKash fits",
+        "## Country context, where bKash fits",
         "- **Bangladesh (primary):** bKash is one of the most common choices for JeetBuzz Bangladesh players. Use it for daily play within the limits shown in the cashier.",
         "- **Pakistan:** bKash is not available. Pakistani players should use the [JazzCash guide](/jazzcash-guide) or [EasyPaisa guide](/easypaisa-guide) instead.",
         "- **India:** bKash is not available. Indian players should default to the [UPI guide](/upi-guide).",
@@ -80,8 +80,8 @@ export const Route = createFileRoute("/bkash-guide")({
         "| Deposit | Usually within a few minutes | None shown in cashier | Standard merchant rules apply |",
         "| Withdrawal | 5–30 min, may take longer | None shown in cashier | Standard cash-out applies |",
         "## Extended FAQ",
-        "- **Can I use my wife's / husband's bKash?** No — the wallet name must match the JeetBuzz profile name. Use a wallet registered to you.",
-        "- **What if I forget the reference code?** Open live chat with the TrxID and the deposit screenshot — support manually credits within ~15 minutes.",
+        "- **Can I use my wife's / husband's bKash?** No, the wallet name must match the JeetBuzz profile name. Use a wallet registered to you.",
+        "- **What if I forget the reference code?** Open live chat with the TrxID and the deposit screenshot, support manually credits within ~15 minutes.",
         "- **bKash app not opening?** Update from the Play Store, clear cache, and confirm your device language is not blocking the keyboard.",
         "## Ready to deposit with bKash?",
         "Open the JeetBuzz cashier, follow the 9 steps above, and keep this page open for the limits table. First-time deposit? Claim the [Welcome Bonus](/welcome-bonus) and verify your account via the [Registration Guide](/registration-guide) before sending money.",
@@ -92,7 +92,7 @@ export const Route = createFileRoute("/bkash-guide")({
         bn: [
           "## কেন bKash",
           "bKash বাংলাদেশে অন্যতম বহুল ব্যবহৃত মোবাইল ওয়ালেট, তাই জিতবাজ প্লেয়ারদের জনপ্রিয় পছন্দ। ডিপোজিট সাধারণত কয়েক মিনিটে ক্লিয়ার হয়; উইথড্রয়ালে কিছুটা বেশি সময় লাগতে পারে।",
-          "## bKash ডিপোজিট — ধাপে ধাপে",
+          "## bKash ডিপোজিট, ধাপে ধাপে",
           "১. জিতবাজে লগইন করে Cashier > Deposit > bKash এ যান।",
           "২. পরিমাণ লিখুন (সাধারণত সর্বনিম্ন ২০০–৫০০ টাকা)।",
           "৩. স্ক্রিনে দেখানো মার্চেন্ট নম্বর এবং ইউনিক রেফারেন্স টুকে রাখুন।",
@@ -114,18 +114,18 @@ export const Route = createFileRoute("/bkash-guide")({
       }}
       faqs={[
         { q: "Why is my bKash deposit not credited?", a: "Most often the TrxID was mistyped or money was sent to a personal number, not the merchant. Open live chat with the SMS screenshot." },
-        { q: "Can I use Personal bKash for JeetBuzz?", a: "Yes. JeetBuzz accepts personal bKash wallets — Agent and Merchant accounts may have restrictions." },
+        { q: "Can I use Personal bKash for JeetBuzz?", a: "Yes. JeetBuzz accepts personal bKash wallets. Agent and Merchant accounts may have restrictions." },
         { q: "Are bKash deposits fast?", a: "Deposits usually credit within a few minutes of the TrxID being verified. Timing can vary with network conditions and operator processing." },
         { q: "What's the bKash withdrawal limit?", a: "Withdrawal limits may vary depending on your account status and the operator's current policies. Please check the cashier or contact customer support for the latest limits." },
         { q: "Does bKash charge a fee on JeetBuzz deposits?", a: "Any applicable fees are shown by bKash before you confirm the transaction. Send Money fees for personal-to-personal transfers follow bKash's published schedule." },
-        { q: "What if my bKash deposit times out?", a: "The reference code expires after 15 minutes. Restart the cashier flow with a fresh code — never reuse an expired one." },
+        { q: "What if my bKash deposit times out?", a: "The reference code expires after 15 minutes. Restart the cashier flow with a fresh code, never reuse an expired one." },
         { q: "Can I deposit at midnight?", a: "Yes. bKash deposits clear 24/7. Withdrawals can take slightly longer between 1 AM and 6 AM BST due to lower staffing." },
         { q: "Is bKash deposit safe?", a: "JeetBuzz uses a unique merchant reference per deposit so funds are matched to your account. Never share your bKash PIN or OTP with anyone." },
       ]}
       faqsByLocale={{
         bn: [
           { q: "আমার bKash ডিপোজিট কেন জমা হলো না?", a: "অধিকাংশ সময় TrxID ভুল টাইপ হয় বা মার্চেন্টের বদলে কোনো পার্সোনাল নম্বরে টাকা গেছে। SMS স্ক্রিনশট নিয়ে লাইভ চ্যাটে যোগাযোগ করুন।" },
-          { q: "Personal bKash কি জিতবাজে ব্যবহার করা যায়?", a: "হ্যাঁ। জিতবাজ পার্সোনাল bKash গ্রহণ করে — Agent ও Merchant অ্যাকাউন্টে কিছু সীমাবদ্ধতা থাকতে পারে।" },
+          { q: "Personal bKash কি জিতবাজে ব্যবহার করা যায়?", a: "হ্যাঁ। জিতবাজ পার্সোনাল bKash গ্রহণ করে. Agent ও Merchant অ্যাকাউন্টে কিছু সীমাবদ্ধতা থাকতে পারে।" },
           { q: "bKash ডিপোজিট কি দ্রুত?", a: "সাধারণত TrxID যাচাইয়ের কয়েক মিনিটের মধ্যে ব্যালেন্সে যোগ হয়। নেটওয়ার্ক ও অপারেটর প্রসেসিংয়ের উপর সময় কিছুটা ভিন্ন হতে পারে।" },
           { q: "bKash উইথড্রয়ালের লিমিট কত?", a: "অ্যাকাউন্টের অবস্থা ও অপারেটরের বর্তমান নীতিমালার উপর উইথড্রয়াল লিমিট নির্ভর করে। সর্বশেষ তথ্যের জন্য ক্যাশিয়ার দেখুন বা কাস্টমার সাপোর্টে যোগাযোগ করুন।" },
         ],

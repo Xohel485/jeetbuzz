@@ -33,7 +33,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
         ogUrl(path),
       ],
-      links: [canonicalLink(path), ...hreflangLinks(path)],
+      links: [canonicalLink(path)...hreflangLinks(path)],
       scripts: post
         ? [
             {
@@ -146,7 +146,7 @@ function Post() {
               <Link to="/author" className="text-primary hover:underline">
                 GetJeetBuzz Editorial Team
               </Link>{" "}
-              — a small group of Bangladeshi bettors who test JeetBuzz from
+             , a small group of Bangladeshi bettors who test JeetBuzz from
               Dhaka with real accounts and real bKash deposits. Read our{" "}
               <Link to="/editorial-policy" className="text-primary hover:underline">editorial policy</Link>{" "}
               and{" "}

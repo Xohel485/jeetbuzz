@@ -16,8 +16,8 @@ import { I18nProvider, useLocale } from "../lib/i18n";
 import { useState, useRef } from "react";
 import { AnalyticsRouterBridge } from "../components/AnalyticsRouterBridge";
 
-// GTM container — routes events to GA4 (G-KD7NELS5DS) and Microsoft
-// Clarity (xali2ra4zo). DO NOT also add gtag.js or the Clarity tag — both
+// GTM container, routes events to GA4 (G-KD7NELS5DS) and Microsoft
+// Clarity (xali2ra4zo). DO NOT also add gtag.js or the Clarity tag, both
 // are configured inside GTM and adding direct scripts here causes
 // duplicate hits in GA4 and double-session inflation in Clarity.
 const GTM_ID = "GTM-N7ZXWM9M";
@@ -90,8 +90,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
-      { name: "description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
+      { title: "GetJeetBuzz. JeetBuzz Guide for BD, PK & IN" },
+      { name: "description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India, login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
       { name: "author", content: "GetJeetBuzz" },
       { property: "og:site_name", content: "GetJeetBuzz" },
       { property: "og:locale", content: "bn_BD" },
@@ -102,10 +102,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#0c1a13" },
       { name: "msapplication-TileColor", content: "#1f9d3e" },
       { name: "msvalidate.01", content: "EDEE3FCBF42112BAF6C1A5C0C2997D3D" },
-      { property: "og:title", content: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
-      { name: "twitter:title", content: "GetJeetBuzz — JeetBuzz Guide for BD, PK & IN" },
-      { property: "og:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
-      { name: "twitter:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India — login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
+      { property: "og:title", content: "GetJeetBuzz. JeetBuzz Guide for BD, PK & IN" },
+      { name: "twitter:title", content: "GetJeetBuzz. JeetBuzz Guide for BD, PK & IN" },
+      { property: "og:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India, login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
+      { name: "twitter:description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India, login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ad111dee-bf14-4c5e-a00c-cabe06a32d9d" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ad111dee-bf14-4c5e-a00c-cabe06a32d9d" },
     ],
@@ -126,7 +126,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", sizes: "128x128", href: "/favicon-128.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.webmanifest" },
-      // Self-hosted Hind Siliguri (400/700) — declared via @font-face in styles.css.
+      // Self-hosted Hind Siliguri (400/700), declared via @font-face in styles.css.
       // Preload the Latin subsets so above-the-fold text never blocks on a network roundtrip.
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-400-latin.woff2", crossOrigin: "anonymous" },
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/hs-700-latin.woff2", crossOrigin: "anonymous" },
@@ -208,7 +208,7 @@ function RootComponent() {
 
 /**
  * Premium 150ms opacity fade on locale change. No layout animation, no
- * reload, no white flash, no skeleton — just opacity 1 → 0 → 1 on the
+ * reload, no white flash, no skeleton, just opacity 1 → 0 → 1 on the
  * already-rendered route content when the active locale changes.
  */
 function LocaleFader({ children }: { children: ReactNode }) {

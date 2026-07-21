@@ -4,8 +4,8 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-referral-code";
-const TITLE = "JeetBuzz Referral Code 2026 — How Refer-a-Friend & Affiliate Codes Work";
-const DESC = "How JeetBuzz referral codes work in 2026 — refer-a-friend rewards, where to find your code, and the difference between player referrals and the affiliate program.";
+const TITLE = "JeetBuzz Referral Code 2026. How Refer-a-Friend & Affiliate Codes Work";
+const DESC = "How JeetBuzz referral codes work in 2026, refer-a-friend rewards, where to find your code, and the difference between player referrals and the affiliate program.";
 
 export const Route = createFileRoute("/jeetbuzz-referral-code")({
   head: () => ({
@@ -17,23 +17,23 @@ export const Route = createFileRoute("/jeetbuzz-referral-code")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
     <GuidePage
       eyebrow="Affiliate"
       title={<>JeetBuzz <span className="gold-text">Referral Code</span></>}
-      subtitle="Two different codes exist — the in-app refer-a-friend code every player gets, and the affiliate tracking link. Here is when to use each."
+      subtitle="Two different codes exist, the in-app refer-a-friend code every player gets, and the affiliate tracking link. Here is when to use each."
       ctaIntent="signup"
       breadcrumbs={[{ name: "Help", path: "/help" }, { name: "Referral Code", path: PATH }]}
       articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
       body={[
         "## Two referral systems",
         "JeetBuzz has two separate referral flows. Confusing them is why most people never see their reward credited.",
-        "1. **Player refer-a-friend** — every logged-in player has a personal code inside **My account → Refer a friend**. Small one-time reward when the referred friend deposits.",
-        "2. **Affiliate tracking link** — a long-term revenue-share partnership handled by the [affiliate program](/affiliate-program). Weekly commission on NGR up to 60%.",
-        "If you plan to refer more than a handful of people, apply for the affiliate program — the earnings are an order of magnitude higher.",
+        "1. **Player refer-a-friend**, every logged-in player has a personal code inside **My account → Refer a friend**. Small one-time reward when the referred friend deposits.",
+        "2. **Affiliate tracking link**, a long-term revenue-share partnership handled by the [affiliate program](/affiliate-program). Weekly commission on NGR up to 60%.",
+        "If you plan to refer more than a handful of people, apply for the affiliate program, the earnings are an order of magnitude higher.",
         "## Where to find your referral code",
         "1. Log into your JeetBuzz player account.",
         "2. Tap the profile icon → **Refer a friend**.",
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/jeetbuzz-referral-code")({
         "Only after all four steps do both parties see the reward.",
         "## Common reasons the reward never lands",
         "- Friend forgot to enter the code at signup (the field cannot be added later).",
-        "- Friend signed up from the same IP or device as you — anti-fraud rule.",
+        "- Friend signed up from the same IP or device as you, anti-fraud rule.",
         "- Friend claimed a different welcome bonus at the same time (only one active promo).",
         "- Friend's account is still awaiting KYC.",
         "## Refer-a-friend vs affiliate program",
@@ -60,7 +60,7 @@ export const Route = createFileRoute("/jeetbuzz-referral-code")({
         "| Best for | 1–2 friends | Anyone driving 5+ signups |",
         "Ready to go bigger? Read the [Affiliate Signup guide](/jeetbuzz-affiliate-signup).",
         "## Program overview & weekly commission",
-        "For the full picture of what the partner side pays, see the [JeetBuzz affiliate program](/affiliate-program) page and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) breakdown — weekly 25%–60% revenue share instead of a fixed refer-a-friend reward.",
+        "For the full picture of what the partner side pays, see the [JeetBuzz affiliate program](/affiliate-program) page and the [JeetBuzz affiliate commission](/jeetbuzz-affiliate-commission) breakdown, weekly 25%–60% revenue share instead of a fixed refer-a-friend reward.",
       ]}
       related={siblings(AFFILIATE_CLUSTER, PATH)}
       faqs={[

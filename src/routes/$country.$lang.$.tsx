@@ -62,7 +62,7 @@ export const Route = createFileRoute("/$country/$lang/$")({
         { name: "twitter:title", content: m.title },
         { name: "twitter:description", content: m.description },
       ],
-      links: [{ rel: "canonical", href: url }, ...hreflangCluster(slug)],
+      links: [{ rel: "canonical", href: url }...hreflangCluster(slug)],
     };
   },
   component: LocalizedSplat,
