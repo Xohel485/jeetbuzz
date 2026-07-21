@@ -61,6 +61,7 @@ import { Route as JeetbuzzPartnerLoginRouteImport } from './routes/jeetbuzz-part
 import { Route as JeetbuzzOtpNotReceivedRouteImport } from './routes/jeetbuzz-otp-not-received'
 import { Route as JeetbuzzNagadWithdrawalRouteImport } from './routes/jeetbuzz-nagad-withdrawal'
 import { Route as JeetbuzzMinimumDepositRouteImport } from './routes/jeetbuzz-minimum-deposit'
+import { Route as JeetbuzzLiveCricketRouteImport } from './routes/jeetbuzz-live-cricket'
 import { Route as JeetbuzzFirstDepositBonusRouteImport } from './routes/jeetbuzz-first-deposit-bonus'
 import { Route as JeetbuzzDownloadForIosRouteImport } from './routes/jeetbuzz-download-for-ios'
 import { Route as JeetbuzzDownloadForAndroidRouteImport } from './routes/jeetbuzz-download-for-android'
@@ -380,6 +381,11 @@ const JeetbuzzNagadWithdrawalRoute = JeetbuzzNagadWithdrawalRouteImport.update({
 const JeetbuzzMinimumDepositRoute = JeetbuzzMinimumDepositRouteImport.update({
   id: '/jeetbuzz-minimum-deposit',
   path: '/jeetbuzz-minimum-deposit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzzLiveCricketRoute = JeetbuzzLiveCricketRouteImport.update({
+  id: '/jeetbuzz-live-cricket',
+  path: '/jeetbuzz-live-cricket',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JeetbuzzFirstDepositBonusRoute =
@@ -739,6 +745,7 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
   '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-live-cricket': typeof JeetbuzzLiveCricketRoute
   '/jeetbuzz-minimum-deposit': typeof JeetbuzzMinimumDepositRoute
   '/jeetbuzz-nagad-withdrawal': typeof JeetbuzzNagadWithdrawalRoute
   '/jeetbuzz-otp-not-received': typeof JeetbuzzOtpNotReceivedRoute
@@ -851,6 +858,7 @@ export interface FileRoutesByTo {
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
   '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-live-cricket': typeof JeetbuzzLiveCricketRoute
   '/jeetbuzz-minimum-deposit': typeof JeetbuzzMinimumDepositRoute
   '/jeetbuzz-nagad-withdrawal': typeof JeetbuzzNagadWithdrawalRoute
   '/jeetbuzz-otp-not-received': typeof JeetbuzzOtpNotReceivedRoute
@@ -965,6 +973,7 @@ export interface FileRoutesById {
   '/jeetbuzz-download-for-android': typeof JeetbuzzDownloadForAndroidRoute
   '/jeetbuzz-download-for-ios': typeof JeetbuzzDownloadForIosRoute
   '/jeetbuzz-first-deposit-bonus': typeof JeetbuzzFirstDepositBonusRoute
+  '/jeetbuzz-live-cricket': typeof JeetbuzzLiveCricketRoute
   '/jeetbuzz-minimum-deposit': typeof JeetbuzzMinimumDepositRoute
   '/jeetbuzz-nagad-withdrawal': typeof JeetbuzzNagadWithdrawalRoute
   '/jeetbuzz-otp-not-received': typeof JeetbuzzOtpNotReceivedRoute
@@ -1080,6 +1089,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
     | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-live-cricket'
     | '/jeetbuzz-minimum-deposit'
     | '/jeetbuzz-nagad-withdrawal'
     | '/jeetbuzz-otp-not-received'
@@ -1192,6 +1202,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
     | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-live-cricket'
     | '/jeetbuzz-minimum-deposit'
     | '/jeetbuzz-nagad-withdrawal'
     | '/jeetbuzz-otp-not-received'
@@ -1305,6 +1316,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-download-for-android'
     | '/jeetbuzz-download-for-ios'
     | '/jeetbuzz-first-deposit-bonus'
+    | '/jeetbuzz-live-cricket'
     | '/jeetbuzz-minimum-deposit'
     | '/jeetbuzz-nagad-withdrawal'
     | '/jeetbuzz-otp-not-received'
@@ -1419,6 +1431,7 @@ export interface RootRouteChildren {
   JeetbuzzDownloadForAndroidRoute: typeof JeetbuzzDownloadForAndroidRoute
   JeetbuzzDownloadForIosRoute: typeof JeetbuzzDownloadForIosRoute
   JeetbuzzFirstDepositBonusRoute: typeof JeetbuzzFirstDepositBonusRoute
+  JeetbuzzLiveCricketRoute: typeof JeetbuzzLiveCricketRoute
   JeetbuzzMinimumDepositRoute: typeof JeetbuzzMinimumDepositRoute
   JeetbuzzNagadWithdrawalRoute: typeof JeetbuzzNagadWithdrawalRoute
   JeetbuzzOtpNotReceivedRoute: typeof JeetbuzzOtpNotReceivedRoute
@@ -1843,6 +1856,13 @@ declare module '@tanstack/react-router' {
       path: '/jeetbuzz-minimum-deposit'
       fullPath: '/jeetbuzz-minimum-deposit'
       preLoaderRoute: typeof JeetbuzzMinimumDepositRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuzz-live-cricket': {
+      id: '/jeetbuzz-live-cricket'
+      path: '/jeetbuzz-live-cricket'
+      fullPath: '/jeetbuzz-live-cricket'
+      preLoaderRoute: typeof JeetbuzzLiveCricketRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jeetbuzz-first-deposit-bonus': {
@@ -2325,6 +2345,7 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzDownloadForAndroidRoute: JeetbuzzDownloadForAndroidRoute,
   JeetbuzzDownloadForIosRoute: JeetbuzzDownloadForIosRoute,
   JeetbuzzFirstDepositBonusRoute: JeetbuzzFirstDepositBonusRoute,
+  JeetbuzzLiveCricketRoute: JeetbuzzLiveCricketRoute,
   JeetbuzzMinimumDepositRoute: JeetbuzzMinimumDepositRoute,
   JeetbuzzNagadWithdrawalRoute: JeetbuzzNagadWithdrawalRoute,
   JeetbuzzOtpNotReceivedRoute: JeetbuzzOtpNotReceivedRoute,

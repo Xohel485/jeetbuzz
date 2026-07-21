@@ -4,8 +4,8 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { BONUS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-promo-code";
-const TITLE = "JeetBuzz Promo Code 2026 — Where to Find Valid Codes Today";
-const DESC = "How JeetBuzz promo codes work in 2026 — where to find today's valid codes, how to redeem, rollover rules and why some codes silently fail.";
+const TITLE = "JeetBuzz Promo Code 2026 — Valid Codes Today, How to Redeem & Rollover";
+const DESC = "JeetBuzz promo code 2026 — where today's valid codes live, how to redeem in the cashier, rollover math, region locks (BD/PK/IN), and every reason a code silently fails.";
 
 export const Route = createFileRoute("/jeetbuzz-promo-code")({
   head: () => ({
@@ -38,6 +38,9 @@ export const Route = createFileRoute("/jeetbuzz-promo-code")({
         "2. **Official email newsletter** — opt in from Account → Preferences.",
         "3. **JeetBuzz affiliate partners** — codes with an affiliate suffix that also credit the affiliate.",
         "Anything on random Telegram groups is either the same code with a different suffix or already expired.",
+        "## How JeetBuzz promo codes are structured",
+        "A JeetBuzz promo code is a short alphanumeric string (usually 6–10 characters) tied to four things at the moment it was issued: a **bonus template** (match %, free bet size, cashback %, or free spin count), a **qualifying deposit range** (minimum, sometimes maximum), a **region scope** (BD / PK / IN or global), and an **expiry** (from a single match to a full month). When you paste it in the cashier the system checks all four; failing any one returns 'invalid'.",
+        "Codes ending in an affiliate suffix (e.g. `…-AFF25`) work identically for you and additionally credit an affiliate. They are not 'better' codes — the % and cap are set at the campaign level, not on the suffix.",
         "## How to redeem a promo code",
         "1. Log in and open the **Cashier** (or Promotions page).",
         "2. Select **Deposit** and choose your amount.",
@@ -45,19 +48,48 @@ export const Route = createFileRoute("/jeetbuzz-promo-code")({
         "4. Confirm the bonus preview shown below the field.",
         "5. Complete the deposit through bKash / JazzCash / UPI / your chosen rail.",
         "The bonus credits once the deposit lands. If the field says \"invalid code\", the code has expired, is region-locked, or is one-per-account and already used.",
+        "## Redeeming on the mobile app vs desktop",
+        "The Android app and iOS web app show the promo code field in the same cashier flow, but the copy-paste behaviour differs. On Android, long-pressing to paste sometimes appends an invisible newline — if paste fails, tap the field, use the keyboard paste and delete any trailing space. On iOS, the Safari share-sheet paste is clean. On desktop, browser autofill occasionally overwrites the field — clear it, then paste.",
         "## Common promo code types",
         "- **Match deposit** — most common; +% on top of your deposit up to a cap.",
         "- **Free bet** — a token you can stake on cricket / football; only the winnings return, not the token.",
         "- **Cashback** — % refund on next-week net losses.",
         "- **Free spins** — slot spins on a specific game; winnings usually carry rollover.",
+        "- **Deposit-free code** (rare) — a token that credits without a deposit; almost always tied to a VIP tier or a re-engagement offer, never publicly circulated.",
+        "- **Event-scoped code** — attached to a specific fixture (an IPL final, a Bangladesh T20I). Expires at the toss of that match. If you see it after start, it is already dead.",
         "## Wagering — the trap",
         "Every promo code carries a rollover (see the [Bonuses Hub](/bonuses)). A 100% match with 15x rollover means 15 × your bonus in bets before withdrawal. Max-bet caps apply while the bonus is active. Read the terms shown in the cashier — they are the enforceable version.",
+        "### Worked example — the rollover math",
+        "Deposit BDT 1,000, code gives 100% up to BDT 3,000, rollover 15×. Bonus credited: BDT 1,000 (matched to your deposit). Rollover requirement: BDT 1,000 × 15 = **BDT 15,000 in qualifying wagers**. Sportsbook markets ≥ 1.60 usually count 100%; slots count 100%; live casino counts 5–20%; exchange lay bets count 0%. Clearing on ≥ 1.60 sportsbook takes roughly 15–20 bets at BDT 1,000 stake — a full weekend, not an afternoon.",
+        "## Region locks — BD, PK, IN codes are not interchangeable",
+        "Codes carry a country scope tied to the payment rail they target. A `BKASH-` code refuses a JazzCash or UPI deposit; a `UPI-` code refuses bKash. VPN switching to defeat this typically triggers an account review, not a bonus credit. If the intended rail is unavailable in your country, the code simply is not for you.",
+        "## Stacking rules",
+        "Only one active promo per deposit. If you already have an unfinished welcome bonus, the cashier greys out the promo field until wagering completes or you forfeit the bonus. Promo codes do **not** stack with the [first deposit bonus](/jeetbuzz-first-deposit-bonus) or the [refer-a-friend bonus](/jeetbuzz-refer-bonus). See the [Welcome Bonus](/welcome-bonus) page for the exact overlap rules.",
+        "## Freshness — how often codes change",
+        "- **Weekly baseline** — reload, cashback and low-value free-bet codes rotate every Monday.",
+        "- **Match-day** — event-scoped codes appear 24–48 hours before a marquee fixture and die at the toss.",
+        "- **Monthly** — one high-cap match code around the start of each calendar month.",
+        "- **Ad-hoc** — VIP and re-engagement codes issued to specific segments; not published anywhere public.",
+        "If your last cashier check was more than a week ago, whatever code you saved is likely stale — reopen the promotions tab before depositing.",
+        "## Verifying a code before you deposit",
+        "1. Paste the code in the cashier with an amount at or above the code's minimum.",
+        "2. Read the **bonus preview** line under the field — this is the enforceable summary.",
+        "3. Confirm the shown match %, cap and rollover match what you expected.",
+        "4. If the preview is absent, the code did not validate — do not deposit expecting the bonus.",
         "## Why the code silently failed",
         "- One-per-account limit already used.",
         "- Deposit method excluded (some codes are wallet-only or bank-only).",
         "- Below the minimum qualifying deposit.",
         "- Region mismatch (BD-only code from a PK IP).",
         "- Code expired the day it was issued (promo codes tied to a single match).",
+        "- Trailing space or invisible character from a copy-paste on Android.",
+        "- Active unfinished bonus already occupying the promo slot.",
+        "- Account tier does not qualify (some codes are VIP-only).",
+        "## Related",
+        "- [Welcome Bonus](/welcome-bonus) — the sign-up bonus you get without a code.",
+        "- [First Deposit Bonus](/jeetbuzz-first-deposit-bonus) — mechanics of the FDB match.",
+        "- [Refer Bonus](/jeetbuzz-refer-bonus) — code and link structure for refer-a-friend.",
+        "- [Bonuses Hub](/bonuses) — every active promo type in one map.",
       ]}
       bodyByLocale={{
         bn: [
@@ -97,6 +129,11 @@ export const Route = createFileRoute("/jeetbuzz-promo-code")({
         { q: "Do promo codes work on live cricket exchange bets?", a: "Exchange bets typically contribute 0% to wagering. Use sportsbook markets or slots to clear the rollover." },
         { q: "Why does my code say 'invalid'?", a: "Expired, region-locked, one-per-account already used, or you missed the qualifying minimum deposit. The cashier displays the specific reason on hover." },
         { q: "Are promo codes different for BD, PK and IN?", a: "Yes. Some codes are region-scoped based on the payment method they target (bKash for BD, JazzCash for PK, UPI for IN)." },
+        { q: "How often are JeetBuzz promo codes refreshed?", a: "Weekly baseline (reload/cashback), match-day for marquee fixtures, and a monthly high-cap code around the start of each calendar month. VIP codes are ad-hoc and not public." },
+        { q: "Do JeetBuzz promo codes ever require no deposit?", a: "Rarely, and only for VIP or re-engagement segments. Any publicly advertised 'no-deposit code' is almost certainly fake." },
+        { q: "Why did the promo field say 'invalid' after I pasted a fresh code?", a: "Most often a trailing space from an Android long-press paste, an unfinished bonus still occupying the promo slot, or the qualifying minimum being below the code's threshold." },
+        { q: "Do affiliate-suffixed codes give a better bonus?", a: "No — the % and cap are set at the campaign level. The suffix only credits the affiliate; your bonus is identical." },
+        { q: "Can I redeem a promo code after depositing?", a: "No. The code must be entered before you submit the deposit. Post-deposit crediting is a scam pattern; the cashier is the only valid entry point." },
       ]}
       faqsByLocale={{
         bn: [
