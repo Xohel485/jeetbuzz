@@ -80,6 +80,43 @@ const FAQS: FAQ[] = [
   },
 ];
 
+// GSC-driven additions (2026 Q2): queries like "jeetbuzz affiliate login",
+// "jeetbuzz affiliate sign up", "jeetbuzz affiliate commission rate",
+// "jeetbuzz affiliate app" and "jeetbuzz affiliate link" all impress on
+// /affiliate-login and blog pages. These FAQs cover that intent on the pillar.
+const FAQS_EXTRA: FAQ[] = [
+  {
+    q: "Where is the JeetBuzz affiliate login page?",
+    a: "The Partner dashboard sign-in lives at /jeetbuzz-partner-login — bookmark it and always reach it through the official site, never a link received via WhatsApp or Telegram DM.",
+  },
+  {
+    q: "How do I sign up for the JeetBuzz affiliate program?",
+    a: "Fill in the JeetBuzz Partners registration form with your name, email, contact number and traffic source. Verify email, complete KYC and join the official Telegram channel — full walkthrough is on the affiliate signup guide.",
+  },
+  {
+    q: "What is the JeetBuzz affiliate commission rate?",
+    a: "Weekly revenue share tiers of 50%, 55% and 60% based on the number of qualified active players, plus an extra 3.5% referral bonus for signing up another affiliate. Payouts go out every Wednesday.",
+  },
+  {
+    q: "How do I find my JeetBuzz affiliate link?",
+    a: "Inside the Partner dashboard, open Tools → Tracking Links. Each brand and language has its own unique link so you can attribute traffic per campaign. Never edit the query string manually — that voids attribution.",
+  },
+  {
+    q: "Is there a JeetBuzz affiliate app?",
+    a: "The Partner dashboard is a mobile-optimised web app rather than a separate APK. It runs full-screen on Android and iOS browsers, tracks clicks/players/commission in real time, and requires no install.",
+  },
+  {
+    q: "How is JeetBuzz affiliate withdrawal handled?",
+    a: "Payouts are pushed to your verified wallet every Wednesday once your account clears KYC and the weekly commission meets the minimum threshold. bKash, Nagad, bank transfer and USDT are all supported — see /jeetbuzz-affiliate-payment-methods.",
+  },
+  {
+    q: "Can I use a JeetBuzz referral code alongside the affiliate program?",
+    a: "Yes. Individual players can share a personal referral code from their player account; affiliates run a separate partner program with commission tiers. Both can co-exist without conflict.",
+  },
+];
+
+FAQS.push(...FAQS_EXTRA);
+
 const STEPS: Step[] = [
   {
     icon: UserPlus,

@@ -4,8 +4,8 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { BONUS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-first-deposit-bonus";
-const TITLE = "JeetBuzz First Deposit Bonus 2026 — Match %, Minimum & Rollover";
-const DESC = "JeetBuzz first deposit bonus explained for 2026 — match percentage, minimum qualifying deposit, wagering requirement and mistakes that void the bonus.";
+const TITLE = "JeetBuzz First Deposit Bonus 2026 — Match %, bKash/UPI Minimum & 15× Rollover Explained";
+const DESC = "JeetBuzz first deposit bonus 2026 — exact match percentage, bKash/Nagad/UPI qualifying minimum, 15× wagering math and the five mistakes that void your bonus.";
 
 export const Route = createFileRoute("/jeetbuzz-first-deposit-bonus")({
   head: () => ({
@@ -33,6 +33,8 @@ export const Route = createFileRoute("/jeetbuzz-first-deposit-bonus")({
       body={[
         "## What the first deposit bonus is",
         "The JeetBuzz first deposit bonus is a **percentage match** on your very first real-money transfer into a brand-new account. Typical offers land in the 100%–200% range up to a cap, credited within minutes of the deposit clearing.",
+        "## Sign-up bonus vs first deposit bonus — same offer, different name",
+        "The banner calls it the *welcome/sign-up bonus*; the promotion T&C calls it the *first deposit bonus*. Both point to the same one-time percentage match. Search queries like \"jeetbuzz sign up bonus\", \"jeetbuzz new account sign up bonus\" and \"jeetbuzz deposit bonus\" all land on this promotion.",
         "## How to claim it — the correct sequence",
         "1. **Register** a new JeetBuzz account (guide: [Registration](/registration-guide)).",
         "2. Go to **Promotions** and **opt in to the first deposit bonus** *before* transferring money. Bonuses are never applied retroactively.",
@@ -59,6 +61,18 @@ export const Route = createFileRoute("/jeetbuzz-first-deposit-bonus")({
         "Playing slots or standard sportsbook clears the requirement fastest.",
         "## Withdrawal after clearing",
         "Once turnover is met, the bonus balance converts to withdrawable cash. Then follow the standard [Withdrawal Guide](/withdrawal-guide). Expected timing per rail is in [Withdrawal Time](/jeetbuzz-withdrawal-time).",
+        "## Country-by-country minimums",
+        "- **Bangladesh (bKash / Nagad / Rocket):** 500 BDT qualifying minimum, 100%–150% typical match.",
+        "- **Pakistan (EasyPaisa / JazzCash):** 500 PKR minimum, 100%–200% match.",
+        "- **India (UPI / PhonePe / Paytm / Google Pay):** ₹500 minimum, 100%–150% match.",
+        "- **USDT (TRC20 / BEP20):** ~20 USDT minimum, same match percentages but faster credit.",
+        "Exact cap and percentage change with the active promo — always confirm on the Promotions tab.",
+        "## Deposit bonus and the promo code",
+        "A **JeetBuzz promo code** entered at signup can raise the default match percentage (e.g. from 100% to 150%) or lower the wagering multiplier. Paste today's code from [Promo Code](/jeetbuzz-promo-code) into the registration form *before* creating the account — codes never back-apply after the account exists.",
+        "## How long until the bonus counter appears",
+        "Wallet deposits: bonus and cash balance appear within 1–5 minutes of the deposit clearing. USDT: 5–15 minutes (waiting for block confirmations). Bank transfers: up to 4 hours during business days. If nothing shows after 2× the expected window, open live chat with the transaction ID.",
+        "## Combining the first deposit bonus with cashback",
+        "The first deposit bonus is stackable with rolling cashback on losses. It is *not* stackable with a second welcome-style promotion. If you're a returning player who already used the first deposit bonus once on this KYC, reload bonuses and cashback are the only remaining routes — see [Bonuses Hub](/bonuses).",
       ]}
       bodyByLocale={{
         bn: [
@@ -99,6 +113,12 @@ export const Route = createFileRoute("/jeetbuzz-first-deposit-bonus")({
         { q: "Does the bonus apply on the second deposit too?", a: "The first deposit bonus is one-time on the first transfer only. Reload bonuses and promo codes cover later deposits — see [Promo Code](/jeetbuzz-promo-code)." },
         { q: "What is the max-bet while the bonus is active?", a: "Typically 500 BDT / 500 PKR / ₹500 per stake. One bet above the cap voids the entire bonus and any winnings derived from it." },
         { q: "Can I withdraw the deposit and keep playing the bonus?", a: "No. Withdrawing before wagering is complete usually forfeits the bonus balance in full." },
+        { q: "Is the first deposit bonus the same as the sign-up bonus?", a: "Yes. The two names describe the same one-time percentage match on your very first deposit. See [Welcome Bonus](/welcome-bonus) for the marketing view and this page for the mechanics." },
+        { q: "Does bKash qualify for the JeetBuzz first deposit bonus?", a: "Yes. bKash, Nagad and Rocket are all eligible in Bangladesh. Deposit from a wallet registered in your own KYC name — third-party wallets get flagged and the bonus is voided." },
+        { q: "Does UPI qualify for the first deposit bonus in India?", a: "Yes. UPI, PhonePe, Google Pay and Paytm are eligible. Use a UPI ID linked to your PAN name to avoid AML holds on the eventual withdrawal." },
+        { q: "How long until the first deposit bonus shows in my wallet?", a: "Wallet rails credit in 1–5 minutes. USDT takes 5–15 minutes for block confirmations. Bank transfers can take a few hours during business days." },
+        { q: "Can I get a JeetBuzz deposit bonus every week?", a: "The first deposit bonus is one-time. However, weekly reload bonuses, cashback on losses and rotating promo codes give returning players ongoing value — the full list is on [Bonuses Hub](/bonuses)." },
+        { q: "Can I combine a promo code with the first deposit bonus?", a: "Only during registration. The promo code often unlocks a higher match percentage than the default banner. Paste today's code from [Promo Code](/jeetbuzz-promo-code) into the signup form before you create the account." },
       ]}
       faqsByLocale={{
         bn: [
