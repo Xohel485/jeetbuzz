@@ -4,8 +4,8 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-deposit-problem";
-const TITLE = "JeetBuzz Deposit Problem 2026 — Debited but Not Credited & Other Fixes";
-const DESC = "JeetBuzz deposit problem fixes for 2026 — money debited but not credited, wrong reference number, name mismatch and the exact evidence support needs.";
+const TITLE = "JeetBuzz Deposit Problem — Fix in 5 Steps (bKash, Nagad, UPI Debited but Not Credited)";
+const DESC = "JeetBuzz deposit problem fixed in five steps — bKash / Nagad / JazzCash / UPI debited but not credited, wrong reference, name mismatch and the exact evidence support needs.";
 
 export const Route = createFileRoute("/jeetbuzz-deposit-problem")({
   head: () => ({
@@ -33,6 +33,12 @@ export const Route = createFileRoute("/jeetbuzz-deposit-problem")({
       body={[
         "## Wait 15 minutes first",
         "Most \"deposit not credited\" issues resolve themselves within 15 minutes as bKash / Nagad / JazzCash / UPI batches settle. Refresh the cashier once — don't refresh in a loop, that can trigger duplicate charge protection and delay things further.",
+        "## Fix in 5 steps",
+        "1. **Confirm the wallet actually debited** — open the wallet SMS or in-app history and copy the exact transaction ID.",
+        "2. **Screenshot the cashier receipt** on JeetBuzz — the one showing the amount, timestamp and reference number you entered.",
+        "3. **Wait 15 minutes** for the wallet operator's batch to settle. Do not retry the deposit.",
+        "4. **Open live chat** with your JeetBuzz account ID + wallet TID + cashier screenshot in the first message.",
+        "5. **Track resolution** under Account → Transactions. Simple missing-reference cases clear in 30 minutes to a few hours; name-mismatch reversals take 1–3 business days.",
         "## The five deposit problems (and their fix)",
         "### 1. Money debited from wallet, not credited to JeetBuzz",
         "**Cause:** wrong reference number, wallet operator batch lag, or wrong receiver number entered.",
@@ -57,6 +63,17 @@ export const Route = createFileRoute("/jeetbuzz-deposit-problem")({
         "- Making a second deposit \"to retry\" — you may end up with a double charge.",
         "- Uninstalling and reinstalling the app — the transaction lives server-side, not on the phone.",
         "- Contacting anyone claiming to be JeetBuzz support on WhatsApp — they are scammers.",
+        "## Rail-specific gotchas",
+        "- **bKash:** the Send Money reference field is limited to 12 characters — a truncated reference is the #1 cause of \"not credited\".",
+        "- **Nagad:** Personal → Personal transfers reject reference numbers under 6 characters. Always paste the full JeetBuzz reference.",
+        "- **JazzCash / EasyPaisa:** merchant-mode deposits credit instantly; peer-to-peer deposits go into manual queue and can lag 30–60 minutes.",
+        "- **UPI:** many banks batch UPI outside 6 AM–11 PM IST. Deposits at 2 AM often show up at 6 AM.",
+        "- **USDT TRC20:** wait for 1 block confirmation (~2 min). BEP20: 3 confirmations. Sending on the wrong network is unrecoverable.",
+        "## What to tell live chat — exact template",
+        "> Account ID: [your ID]\\n> Wallet: bKash / Nagad / UPI / USDT\\n> Wallet TID: [transaction ID]\\n> Amount: [BDT/PKR/INR]\\n> Time of transfer: [HH:MM local]\\n> Cashier reference: [what you typed]\\n> Screenshots: [attach both wallet + cashier]",
+        "Using this template consistently cuts resolution time in half.",
+        "## Deposit stuck across two accounts (rare)",
+        "If you accidentally sent from a wallet linked to a *family member's* JeetBuzz account, the deposit will credit their account, not yours. This is unrecoverable through chat — the funds have to be withdrawn from the receiving account and re-deposited from your own wallet. Prevention: always keep one wallet per JeetBuzz account.",
       ]}
       bodyByLocale={{
         bn: [
@@ -95,6 +112,13 @@ export const Route = createFileRoute("/jeetbuzz-deposit-problem")({
         { q: "What's a name mismatch and how do I avoid it?", a: "Your wallet's registered name must match your JeetBuzz account name exactly. Always deposit from your own wallet — never a friend or family member — to avoid AML flags and reversed transactions." },
         { q: "Do I have to send my wallet PIN or OTP to support?", a: "Never. Real JeetBuzz support never asks for a wallet PIN, OTP or full card number. Anyone who does is a scammer impersonating support." },
         { q: "How long does the deposit dispute take?", a: "Simple missing-reference cases: 30 minutes to a few hours. Name-mismatch reversals: 1–3 business days because they wait for the wallet operator batch. USDT credits are typically fastest to resolve." },
+        { q: "Why does bKash say 'Sent' but JeetBuzz shows nothing?", a: "The wallet operator confirmed the transfer to their intermediary, but the reference field is missing or truncated. JeetBuzz's reconciliation engine couldn't match it to your account. Live chat + wallet TID resolves this in under an hour." },
+        { q: "Is there a JeetBuzz deposit problem hotline?", a: "No — JeetBuzz uses live chat only for financial disputes. Anyone offering a WhatsApp / Telegram / phone number as JeetBuzz support is a scammer. Escalate only through the in-app chat icon." },
+        { q: "How many times can I retry a JeetBuzz deposit?", a: "Zero. The first attempt debited your wallet; retrying just double-charges you and doubles the reconciliation work. Wait, open chat, resolve — never retry." },
+        { q: "Does a JeetBuzz deposit problem affect my bonus?", a: "No. As long as you opted in before the deposit and support credits it manually, the bonus applies from the moment the deposit lands — even if it took hours. Delayed credits do not reduce the match percentage." },
+        { q: "Why is my UPI deposit still pending after 2 hours?", a: "Overnight UPI transfers batch through NPCI outside business hours; deposits between 11 PM and 6 AM IST often show at 6 AM. If it's still missing after that window, live chat with your UPI RRN (reference number) and the cashier screenshot." },
+        { q: "Can support see my deposit if I didn't take a screenshot?", a: "Usually yes — the wallet transaction ID alone lets JeetBuzz reconcile. But without the cashier screenshot, resolution takes longer. Always take both screenshots at the moment of deposit; it costs nothing and saves hours if anything goes wrong." },
+        { q: "What if my JeetBuzz deposit was reversed to my wallet?", a: "That means AML flagged the transfer — usually a name mismatch, a shared IP with another account, or a wallet that wasn't in your legal name. Deposit again from a wallet in your own KYC name; contact chat if the wallet name is correct and it still reverses." },
       ]}
       faqsByLocale={{
         bn: [

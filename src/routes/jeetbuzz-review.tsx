@@ -16,10 +16,10 @@ import { useI18n, type Locale } from "@/lib/i18n";
 export const Route = createFileRoute("/jeetbuzz-review")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Review 2026 - Honest Verdict for Bangladesh, Pakistan & India" },
-      { name: "description", content: "Independent JeetBuzz review 2026 — odds, welcome bonus, bKash/Nagad/UPI payments, mobile app, customer support, licensing and safety for BD, PK and IN players." },
-      { property: "og:title", content: "JeetBuzz Review 2026 — Honest Bangladesh Verdict" },
-      { property: "og:description", content: "Independent JeetBuzz review for Bangladesh — odds, bonuses, payments, app and safety." },
+      { title: "JeetBuzz Review 2026 — Rated 4.6/5 on Cricket, bKash/Nagad/UPI & Support (BD, PK, IN)" },
+      { name: "description", content: "Independent JeetBuzz review 2026 — rated 4.6/5 across cricket odds, welcome bonus, bKash/Nagad/UPI payments, Android app, live chat support, licensing and safety for BD, PK and IN." },
+      { property: "og:title", content: "JeetBuzz Review 2026 — 4.6/5 Bangladesh, Pakistan, India Verdict" },
+      { property: "og:description", content: "Tested from Dhaka, Karachi and Mumbai — cricket odds, bonus terms, payments, app and safety scored 4.6/5." },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:image", content: imageAbsoluteUrl("liveCricket") },
