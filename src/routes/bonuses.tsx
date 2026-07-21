@@ -4,6 +4,9 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { BONUS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/bonuses";
+// Duplicate-intent audit (Batch 7): /bonuses is a light hub, /bonus-and-promotions
+// is the deep editorial page. Consolidate authority on the deeper URL.
+const CANONICAL_PATH = "/bonus-and-promotions";
 const TITLE = "JeetBuzz Bonuses Hub — Promo Code, Welcome & Refer Bonus 2026";
 const DESC = "Every active JeetBuzz bonus in one place — welcome bonus, promo codes, first deposit match, refer-a-friend and rollover rules explained plainly.";
 
@@ -15,9 +18,9 @@ export const Route = createFileRoute("/bonuses")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      ogUrl(PATH),
+      ogUrl(CANONICAL_PATH),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(CANONICAL_PATH), ...hreflangLinks(CANONICAL_PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
@@ -30,6 +33,10 @@ export const Route = createFileRoute("/bonuses")({
       body={[
         "## Read this first",
         "Every bonus on JeetBuzz has a **rollover** (also called wagering). If a bonus reads \"100% up to 10,000 BDT with 15x rollover\", you must place bets totalling 15 × your bonus amount before the balance can be withdrawn. Wagering is the single most-misunderstood detail — skim it and you will not be able to cash out.",
+        "## Recent updates",
+        "- **2026-07** — Re-verified [Promo Code](/jeetbuzz-promo-code) list and region locks (BD / PK / IN).",
+        "- **2026-07** — Expanded [First Deposit Bonus](/jeetbuzz-first-deposit-bonus) with rollover math and opt-in timing.",
+        "- **2026-06** — Refreshed [Welcome Bonus](/welcome-bonus) with the current cap and eligible-game contribution table.",
         "## The four bonuses that matter",
         "- **[Welcome Bonus](/welcome-bonus)** — first-time players only, opt-in *before* the first deposit.",
         "- **[First Deposit Bonus](/jeetbuzz-first-deposit-bonus)** — match percentage on your very first transfer.",

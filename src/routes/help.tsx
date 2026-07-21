@@ -30,6 +30,12 @@ export const Route = createFileRoute("/help")({
       body={[
         "## What this page solves",
         "Most JeetBuzz support tickets fall into six categories: cannot log in, forgot password, account locked or restricted, deposit debited but not credited, withdrawal pending too long, and how to formally close an account. The pages linked below walk each one end to end — no live chat wait needed for the common cases.",
+        "## Recent updates",
+        "- **2026-07** — Refreshed [Withdrawal Pending](/jeetbuzz-withdrawal-pending) with the seven real stall causes and the evidence support needs.",
+        "- **2026-07** — Rewrote [Password Reset](/password-reset) with the escalation path when both phone OTP and email link fail.",
+        "- **2026-06** — Added [OTP Not Received](/jeetbuzz-otp-not-received) fallback (carrier, DND, voice OTP).",
+        "- **2026-06** — Expanded [Deposit Problem](/jeetbuzz-deposit-problem) with wallet name-mismatch fixes for bKash / Nagad / JazzCash.",
+        "- **2026-05** — Published [Account Verification](/jeetbuzz-account-verification) KYC checklist with the six rejection reasons.",
         "## Access problems",
         "- **Cannot open the site** — [Login Problems](/login-problems) covers ISP blocks, DNS, mirror detection.",
         "- **Wrong password / no OTP** — [Password Reset](/password-reset) has phone and email flows plus what to do when both fail.",

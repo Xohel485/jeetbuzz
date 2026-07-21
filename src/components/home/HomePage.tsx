@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { PageShell } from "@/components/PageShell";
 import { Hero } from "./Hero";
+import { HubLinksStrip } from "./HubLinksStrip";
 import { LazyOnVisible } from "@/components/LazyOnVisible";
 
 /**
@@ -18,6 +19,9 @@ export function HomePage({ localExtras }: { localExtras?: ReactNode } = {}) {
           always be the first content section after the header. Never wrap
           in Suspense/LazyOnVisible. */}
       <Hero />
+
+      {/* Batch 7: eager internal-link strip → hubs (Help/Payments/Bonuses/Games). */}
+      <HubLinksStrip />
 
       {/* Locale-specific copy (payments / leagues / FAQ in native script).
           Rendered AFTER Hero so the section order never changes by locale. */}
