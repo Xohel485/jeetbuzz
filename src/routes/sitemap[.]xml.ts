@@ -5,6 +5,7 @@ import { BASE_URL, BUILD_TIME } from "@/lib/sitemap-helpers";
 const CHILD_SITEMAPS = [
   "sitemap-pages.xml",
   "sitemap-guides.xml",
+  "sitemap-solutions.xml",
   "sitemap-payments.xml",
   "sitemap-affiliate.xml",
   "sitemap-blog.xml",
