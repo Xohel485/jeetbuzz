@@ -461,7 +461,8 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   // ---- Phase A: GSC-driven solution routes with native Bangla body ----
   // Registered with countries: ["bd"] so the localized splat only serves
   // /bd/bn/{slug}. English is available at the root URL. Other locales
-  // fall back to English SEO/meta but are NOT surfaced under /pk/ur or /in/hi.  entry("jeetbuzz-affiliate-signup", AffiliateSignupRoute, {
+  // fall back to English SEO/meta but are NOT surfaced under /pk/ur or /in/hi.
+  entry("jeetbuzz-affiliate-signup", AffiliateSignupRoute, {
     en: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_EN, description: "JeetBuzz affiliate signup — application, KYC and approval timing in under 10 minutes." },
     bn: { title: "জিতবাজ অ্যাফিলিয়েট সাইনআপ ২০২৬" + BRAND_BN, description: "জিতবাজ অ্যাফিলিয়েট সাইনআপ — আবেদন, KYC এবং অনুমোদনের সময় ১০ মিনিটেরও কম।" },
     ur: { title: "JeetBuzz Affiliate Signup 2026" + BRAND_UR, description: "JeetBuzz affiliate signup — application, KYC and approval timing." },
