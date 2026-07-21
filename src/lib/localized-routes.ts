@@ -46,6 +46,7 @@ import { Route as VipProgramRoute } from "@/routes/vip-program";
 import { Route as CasinoGuideRoute } from "@/routes/casino-guide";
 import { Route as SportsBettingRoute } from "@/routes/sports-betting";
 import { Route as LiveCricketBettingRoute } from "@/routes/live-cricket-betting";
+import { Route as JeetbuzzLiveCricketRoute } from "@/routes/jeetbuzz-live-cricket";
 import { Route as DepositWithdrawalGuideRoute } from "@/routes/deposit-withdrawal-guide";
 import { Route as DepositGuideRoute } from "@/routes/deposit-guide";
 import { Route as WithdrawalGuideRoute } from "@/routes/withdrawal-guide";
