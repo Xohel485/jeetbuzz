@@ -145,13 +145,7 @@ export function GuidePage({
             return all.length > 0 ? <JsonLd data={faqSchema(all)} /> : null;
           })()}
           {related && <RelatedGuides items={related} />}
-          {breadcrumbs && breadcrumbs.length > 0 && (
-            <JsonLd
-              data={breadcrumbSchema(
-                breadcrumbs.map((b) => ({ name: b.name, path: b.path })),
-              )}
-            />
-          )}
+          {/* BreadcrumbList JSON-LD is emitted by <Breadcrumbs /> above — do not duplicate here. */}
           {articlePath && articleHeadline && articleDescription && (
             <JsonLd
               data={articleSchema({
