@@ -7,6 +7,10 @@ import { useI18n, type Locale } from "@/lib/i18n";
 
 const PATH = "/author" as const;
 const NAME = "GetJeetBuzz Editorial Team";
+const LEAD_AUTHOR = "Nahid";
+const LEAD_AUTHOR_ROLE_EN = "Author, GetJeetBuzz Editorial Team";
+const REVIEWER = "GetJeetBuzz Compliance Desk";
+const REVIEWER_ROLE_EN = "Reviewer, Compliance & Fact-check";
 const TITLE = "About the GetJeetBuzz Editorial Team";
 const DESC =
   "Who writes GetJeetBuzz: a small team of Bangladeshi bettors who test JeetBuzz with real accounts, real bKash/Nagad deposits and real withdrawals, and re-verify every guide on a published schedule.";
@@ -27,23 +31,30 @@ export const Route = createFileRoute("/author")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: NAME,
-          url: "https://getjeetbuzz.com/author",
-          jobTitle: "Editorial team",
-          worksFor: {
-            "@type": "Organization",
-            name: "GetJeetBuzz",
-            url: "https://getjeetbuzz.com",
-          },
-          knowsAbout: [
-            "JeetBuzz signup process from Bangladesh",
-            "bKash, Nagad, Rocket deposits",
-            "BPL and IPL in-play markets",
-            "Affiliate program payout cycles",
-            "Responsible gambling tooling",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://getjeetbuzz.com/author#nahid",
+              name: LEAD_AUTHOR,
+              jobTitle: LEAD_AUTHOR_ROLE_EN,
+              url: "https://getjeetbuzz.com/author",
+              worksFor: { "@type": "Organization", name: "GetJeetBuzz", url: "https://getjeetbuzz.com" },
+              knowsAbout: [
+                "JeetBuzz signup from Bangladesh",
+                "bKash, Nagad, Rocket deposits and withdrawals",
+                "BPL and IPL in-play markets",
+                "Affiliate commission structures",
+              ],
+            },
+            {
+              "@type": "Person",
+              "@id": "https://getjeetbuzz.com/author#compliance",
+              name: REVIEWER,
+              jobTitle: REVIEWER_ROLE_EN,
+              url: "https://getjeetbuzz.com/author",
+              worksFor: { "@type": "Organization", name: "GetJeetBuzz", url: "https://getjeetbuzz.com" },
+            },
           ],
-          sameAs: ["https://getjeetbuzz.com/about"],
         }),
       },
     ],
@@ -63,21 +74,51 @@ function AuthorPage() {
       />
       <section className="container-pro">
         <div className="mx-auto max-w-3xl space-y-8">
-          <div className="flex items-start gap-4">
-            <div
-              aria-hidden
-              className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-lg font-bold text-primary ring-1 ring-primary/20"
-            >
-              GJB
-            </div>
-            <div>
-              <h2 className="text-base font-semibold text-foreground">
-                {NAME}
-              </h2>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {t.lastVerified}: {LAST_VERIFIED}
+          <div className="rounded-2xl border border-border/60 bg-card/40 p-5">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">
+              {t.lastVerified}
+            </p>
+            <p className="mt-1 text-lg font-semibold text-foreground">
+              {LAST_VERIFIED}
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <article className="rounded-2xl border border-border/60 bg-card/40 p-5">
+              <div className="flex items-center gap-3">
+                <div
+                  aria-hidden
+                  className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary ring-1 ring-primary/20"
+                >
+                  N
+                </div>
+                <div>
+                  <h2 className="text-sm font-semibold text-foreground">{LEAD_AUTHOR}</h2>
+                  <p className="text-xs text-muted-foreground">{t.authorRole}</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {t.authorBio}
               </p>
-            </div>
+            </article>
+
+            <article className="rounded-2xl border border-border/60 bg-card/40 p-5">
+              <div className="flex items-center gap-3">
+                <div
+                  aria-hidden
+                  className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary ring-1 ring-primary/20"
+                >
+                  CD
+                </div>
+                <div>
+                  <h2 className="text-sm font-semibold text-foreground">{REVIEWER}</h2>
+                  <p className="text-xs text-muted-foreground">{t.reviewerRole}</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {t.reviewerBio}
+              </p>
+            </article>
           </div>
 
           <AffiliateDisclosure variant="inline" />
