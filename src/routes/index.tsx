@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HomePage } from "@/components/home/HomePage";
+import { BengaliIntroSection } from "@/components/home/BengaliIntroSection";
 import { IMAGES, imageUrl, imageAbsoluteUrl, imageObjectSchema } from "@/lib/images";
 import { faqSchema, articleSchema, hreflangLinks, canonicalLink, ogUrl } from "@/lib/schema";
 
@@ -78,5 +79,5 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return <HomePage />;
+  return <HomePage localExtras={<BengaliIntroSection />} />;
 }
