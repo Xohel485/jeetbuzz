@@ -28,6 +28,7 @@ export const Route = createFileRoute("/games")({
       breadcrumbs={[{ name: "Games", path: PATH }]}
       articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
       body={[
+        "লাইভ ক্রিকেট থেকে ক্যাসিনো, কোথায় কী পাবেন তার সহজ গাইড এই হাবে সাজানো আছে। JeetBuzz মূলত একটি ক্রিকেট-কেন্দ্রিক স্পোর্টসবুক, IPL, BPL, PSL আর আন্তর্জাতিক সিরিজে বল-বাই-বল ইন-প্লে মার্কেট পাওয়া যায়, ক্যাশআউট আর পার্শিয়াল ক্যাশআউট অপশনসহ। এর পাশাপাশি ফুটবল, টেনিস, কাবাডি এবং ই-স্পোর্টস কভারেজ আছে বড় ইভেন্টগুলোতে। লাইভ ক্যাসিনো সেকশনে Evolution, Ezugi আর Pragmatic-এর স্টুডিও থেকে রিয়েল ডিলার টেবিল, রুলেট, ব্ল্যাকজ্যাক, বাকারা আর টিন পাত্তি খেলা যায়। স্লট প্রেমীদের জন্য হাজারের বেশি গেম, RTP আর ভোলাটিলিটি ফিল্টার সহ। প্রতিটা ক্যাটাগরির নিজস্ব নিয়ম, বেট লিমিট আর বোনাস কন্ট্রিবিউশন আছে, তাই খেলার আগে সংশ্লিষ্ট গাইড পড়ে নিলে ভুল বাজি এড়ানো যায়। নিচের কার্ড থেকে আপনার পছন্দের খেলা বেছে নিন, প্রতিটার জন্য আলাদা এডিটোরিয়াল রিভিউ আর কৌশল-গাইড আছে।",
         "## Cricket first",
         "JeetBuzz is a cricket-first sportsbook. Coverage runs across IPL, BPL, PSL, international tours and domestic T20 leagues, with live in-play markets that update ball-by-ball.",
         "- [Live Cricket Betting Guide](/live-cricket-betting), full walkthrough of in-play markets, cashout and momentum reading.",

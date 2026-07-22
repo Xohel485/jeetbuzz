@@ -31,6 +31,7 @@ export const Route = createFileRoute("/bonus-and-promotions")({
       }}
       heroImage="bonus"
       body={[
+        "JeetBuzz-এর বোনাস অফারগুলো আকর্ষণীয়, কিন্তু শর্তগুলো না বুঝলে বোনাস হাতছাড়া হয় সহজেই। ওয়েলকাম বোনাস, উইকলি রিলোড, ক্যাশব্যাক আর রেফার বোনাস, প্রতিটার আলাদা ওয়েজারিং, ম্যাক্স-বেট আর সময়সীমা আছে। সবচেয়ে সাধারণ ভুল হলো ডিপোজিটের পরে বোনাস অপ্ট-ইন করার চেষ্টা, কিন্তু বোনাস কখনোই রেট্রোঅ্যাক্টিভভাবে যোগ হয় না, অপ্ট-ইন ডিপোজিটের আগে করতে হয়। আরেকটি বড় ভুল হলো ওয়েজারিং শেষ হওয়ার আগে বড় বেট রাখা, যা বোনাস বাতিল করে দেয়। ক্যাসিনো বোনাসের রোলওভার সাধারণত স্লট আর লাইভ গেমের ক্ষেত্রে ভিন্নভাবে গোনা হয়, প্রতিটা গেমের কন্ট্রিবিউশন পার্সেন্টেজ আগে দেখে নেওয়া দরকার। নিচের কার্ডগুলোতে প্রতিটা প্রোমো আলাদা করে ব্যাখ্যা করেছি শর্তসহ। প্রথম ডিপোজিটের আগে নিজের পছন্দের বোনাসটা ভালো করে পড়ে তারপরই ক্লেইম করুন, এটাই বোনাস থেকে সর্বোচ্চ ফায়দা তোলার একমাত্র উপায়।",
         "> **Quick summary:** JeetBuzz runs a deposit-match welcome (Sports OR Casino, not both), weekly reloads, cashback up to 10%, free bets and a referral bonus. Wagering is typically 15x for sports/slots and 25x for casino, with a 200–500 BDT max-bet rule while a bonus is active. Always opt in **before** depositing, bonuses are never added retroactively.",
         "## Welcome bonus",
         "JeetBuzz typically runs a deposit-match welcome bonus for sportsbook and a separate one for casino. Read the fine print, you usually pick one.",
