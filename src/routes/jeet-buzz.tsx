@@ -5,7 +5,8 @@ import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
-const PATH = "/";
+// Self-referencing canonical — each misspelling page is unique long-form content.
+const PATH = ROUTE;
 const ROUTE = "/jeet-buzz";
 const TITLE = "Jeet Buzz নাকি JeetBuzz? সঠিক বানান, অফিসিয়াল সাইট ও নিরাপদ অ্যাক্সেস";
 const DESC = "‘Jeet Buzz’ হাইফেন বা স্পেস দিয়ে সার্চ করলে যে ব্র্যান্ড আসে সেটাই JeetBuzz। এই গাইডে অফিসিয়াল অ্যাক্সেস, বোনাস, ডিপোজিট, উইথড্রয়াল ও অ্যাফিলিয়েট বিস্তারিত।";
