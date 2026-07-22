@@ -1,19 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Languages, Headphones, Trophy, ShieldCheck as ShieldIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { IMAGES, imageUrl } from "@/lib/images";
-import { MARKETS, JEETBUZZ_STATS } from "@/lib/affiliate";
+import { MARKETS } from "@/lib/affiliate";
 import { useI18n } from "@/lib/i18n";
-
-function TrustPill({ label }: { label: string }) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-muted-foreground">
-      <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
-      {label}
-    </span>
-  );
-}
 
 export function Hero() {
   const { t } = useI18n();
