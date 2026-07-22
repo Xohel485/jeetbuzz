@@ -2,10 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { LAST_VERIFIED } from "@/lib/affiliate";
 
-const PATH = "/jetbuzz";
-const TITLE = "Jetbuzz or JeetBuzz? Correct Brand Spelling & Official Access 2026";
-const DESC = "Searched 'jetbuzz'? The real brand is JeetBuzz, this page explains why the misspelling appears, how to reach the official site and avoid look-alike domains.";
+const PATH = "/";
+const ROUTE = "/jetbuzz";
+const TITLE = "Jetbuzz নাকি JeetBuzz? এক ‘e’ কম — সঠিক ব্র্যান্ড ও সম্পূর্ণ গাইড";
+const DESC = "‘Jetbuzz’ (একটি ‘e’ বাদ) সবচেয়ে সাধারণ টাইপিং ভুল। এই গাইডে আসল JeetBuzz-এর অ্যাক্সেস, লগইন, ডিপোজিট, বোনাস, ক্রিকেট বেটিং ও অ্যাফিলিয়েট বিস্তারিত।";
 
 export const Route = createFileRoute("/jetbuzz")({
   head: () => ({
@@ -15,92 +18,98 @@ export const Route = createFileRoute("/jetbuzz")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
-      ogUrl(PATH),
+      { name: "robots", content: "index,follow" },
+      ogUrl(ROUTE),
     ],
     links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
-    scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
+    scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: ROUTE }))],
   }),
   component: () => (
     <GuidePage
-      eyebrow="Brand"
-      title={<>Did you mean <span className="gold-text">JeetBuzz</span>?</>}
-      subtitle="'Jetbuzz' is a common misspelling of JeetBuzz, same brand, missing one 'e'. Here is the official spelling, why the typo happens, and how to reach the real site safely."
-      breadcrumbs={[{ name: "Brand", path: PATH }]}
-      articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
-      body={[
-        "## The correct name is JeetBuzz",
-        "If you searched **jetbuzz**, you meant **JeetBuzz**, the double-'e' spelling that matches the Bangla/Hindi word জিত (win). About 60,000 people a month across South Asia type the shorter form, so Google keeps it in autocomplete even though no separate 'Jetbuzz' company exists.",
-        "Every search result under that spelling ultimately points back to JeetBuzz, a Curaçao-licensed operator focused on BD, PK and IN players.",
-        "## Why 'jetbuzz' shows up so often",
-        "Three reasons the typo is popular:",
-        "1. **Speed typing.** Mobile keyboards frequently drop a repeated letter, 'ee' becomes 'e' during a fast swipe.",
-        "2. **English intuition.** Users who read the brand as an English word compress it to a familiar shape, similar to 'jet' or 'jetset'.",
-        "3. **Word of mouth.** People hear the name once on a stream or in a Telegram group and write it phonetically from memory.",
-        "## How to open the real site safely",
-        "- **Type the URL by hand.** Do not click links from Telegram forwards or Facebook ads for gambling, most are fake mirrors.",
-        "- **Match the domain to official socials.** Cross-check against [facebook.com/GetJeetBuzz](https://facebook.com/GetJeetBuzz), [instagram.com/getjeetbuzz](https://instagram.com/getjeetbuzz) and [youtube.com/@getjeetbuzz](https://youtube.com/@getjeetbuzz). If the domain isn't linked from any official page, close the tab.",
-        "- **Use verified affiliate links only.** A trustworthy affiliate discloses the partnership openly.",
-        "## What JeetBuzz actually offers",
-        "- **Sportsbook**, cricket, football, kabaddi, tennis, esports.",
-        "- **Live casino**. Evolution, Ezugi, Pragmatic Live dealers.",
-        "- **Slots & crash games**, over 1,000 titles including Aviator.",
-        "- **Cricket exchange**, back/lay markets for IPL, BPL, PSL.",
-        "- **Local wallets**, bKash, Nagad, Rocket (BD); EasyPaisa, JazzCash (PK); UPI (IN).",
-        "For the full breakdown, see the [JeetBuzz Review](/jeetbuzz-review).",
-        "## Safe next steps",
-        "- New player? [Registration Guide](/registration-guide) walks through signup in three minutes.",
-        "- Returning player? [Login Guide](/login-guide) covers OTP recovery and mirror detection.",
-        "- App user? [APK Download Guide](/apk-download-guide) explains the safe install path.",
-        "- Safety-focused? [Is JeetBuzz Safe](/is-jeetbuzz-safe) walks through the licence, payouts and complaints.",
-        "## Neutral disclosure",
-        "GetJeetBuzz is an editorial affiliate. This page exists because thousands of people search misspellings and end up on fake pages. Gambling carries risk, play only what you can afford to lose and use the [Delete Account / self-exclusion guide](/how-to-delete-jeetbuzz-account) if it stops being fun.",
-      ]}
+      eyebrow={`ব্র্যান্ড গাইড · শেষ আপডেট: ${LAST_VERIFIED}`}
+      title="Jetbuzz আসলে JeetBuzz — মোবাইল সোয়াইপে এক ‘e’ হারিয়ে যায়"
+      subtitle="‘Jetbuzz’ সবচেয়ে জনপ্রিয় টাইপিং ভুল — মাসে ৬০,০০০+ মানুষ এই বানানে সার্চ করেন। এই পেজে আসল ব্র্যান্ডের সম্পূর্ণ পরিচয়।"
+      breadcrumbs={[{ name: "Home", path: "/" }, { name: "Jetbuzz", path: ROUTE }]}
+      articlePath={ROUTE} articleHeadline={TITLE} articleDescription={DESC}
+      body={["'Jetbuzz' is the single most common misspelling of JeetBuzz. See the Bengali section for the complete guide."]}
       bodyByLocale={{
         bn: [
-          "## সঠিক নাম JeetBuzz",
-          "আপনি যদি **jetbuzz** সার্চ করেন, তাহলে আপনি খুঁজছেন **JeetBuzz**, দুই 'e' যুক্ত সঠিক বানান যা বাংলা 'জিত' শব্দের সাথে মেলে। প্রতি মাসে দক্ষিণ এশিয়ায় প্রায় ৬০,০০০ মানুষ ছোট বানানে সার্চ করেন।",
-          "'Jetbuzz' নামে আলাদা কোনো কোম্পানি নেই, এই বানানের ফলাফল সবসময় JeetBuzz ব্র্যান্ডেই ফিরে আসে।",
-          "## কেন এই ভুল বানান",
-          "১. **দ্রুত টাইপিং**, মোবাইল কীবোর্ডে সোয়াইপ করলে 'ee' অনেক সময় 'e' হয়ে যায়।",
-          "২. **ইংরেজি অভ্যাস**, ব্র্যান্ড নাম 'jet' বা 'jetset'-এর মতো শোনায়, তাই সংক্ষেপে লেখা হয়।",
-          "৩. **শুনে লেখা**. Telegram বা স্ট্রিম থেকে নাম শুনে ফোনেটিকভাবে টাইপ করলে ভুল হয়।",
-          "## আসল সাইট খোলার নিরাপদ উপায়",
-          "- URL হাতে টাইপ করুন, Telegram ফরওয়ার্ড বা জুয়া বিজ্ঞাপনে ক্লিক নয়।",
-          "- ডোমেইন অফিসিয়াল Facebook ([facebook.com/GetJeetBuzz](https://facebook.com/GetJeetBuzz)) ও YouTube ([youtube.com/@getjeetbuzz](https://youtube.com/@getjeetbuzz)) এর সঙ্গে মিলিয়ে নিন।",
-          "- শুধু ভেরিফাইড অ্যাফিলিয়েট লিংক ব্যবহার করুন।",
-          "## JeetBuzz আসলে কী দেয়",
-          "- **স্পোর্টসবুক**, ক্রিকেট, ফুটবল, কাবাডি, টেনিস।",
-          "- **লাইভ ক্যাসিনো**. Evolution, Ezugi, Pragmatic Live।",
-          "- **স্লট ও ক্র্যাশ**. Aviator সহ ১,০০০+ গেম।",
-          "- **ক্রিকেট এক্সচেঞ্জ**. IPL, BPL, PSL এর ব্যাক/লে মার্কেট।",
-          "- **লোকাল ওয়ালেট**, bKash, Nagad, Rocket।",
-          "বিস্তারিত: [JeetBuzz রিভিউ](/jeetbuzz-review)।",
-          "## পরবর্তী নিরাপদ পদক্ষেপ",
-          "- নতুন? [রেজিস্ট্রেশন গাইড](/registration-guide)।",
-          "- পুরনো? [লগইন গাইড](/login-guide)।",
-          "- অ্যাপ? [APK ডাউনলোড গাইড](/apk-download-guide)।",
-          "- নিরাপত্তা? [JeetBuzz কি নিরাপদ](/is-jeetbuzz-safe)।",
-          "## নিরপেক্ষ ঘোষণা",
-          "GetJeetBuzz সম্পাদকীয় অ্যাফিলিয়েট। জুয়ায় ঝুঁকি আছে, যতটুকু হারাতে পারবেন ততটুকুই খেলুন।",
+          ...BYLINE_LINES,
+          "## ১. ভূমিকা: ‘Jetbuzz’ কেন এত জনপ্রিয় ভুল",
+          "‘**Jetbuzz**’ বানানটি দক্ষিণ এশিয়ায় JeetBuzz-এর সবচেয়ে ঘন ঘন দেখা যাওয়া ভুল লেখা। প্রতি মাসে প্রায় ৬০,০০০ মানুষ Google-এ এই বানানে সার্চ করেন। কারণ সহজ — মোবাইল কীবোর্ডে দ্রুত টাইপ করার সময় দুটি ‘e’-এর একটি বাদ পড়ে; আবার অনেকে ব্র্যান্ড নামটিকে ইংরেজি ‘jet’ (উড়োজাহাজ) শব্দের সাথে মিলিয়ে সংক্ষেপে লেখেন।",
+          "কিন্তু ‘Jetbuzz’ নামে কোনো আলাদা কোম্পানি নেই — এই বানানের সব সার্চ ফলাফল ঘুরেফিরে JeetBuzz-এই ফিরে আসে। JeetBuzz-এর ‘Jeet’ শব্দটি বাংলা/হিন্দি ‘জিত’ (জয়) থেকে, এবং ‘Buzz’ ইংরেজি গুঞ্জন। ‘Jet’ (উড্ডয়ন) নয়।",
+          "getjeetbuzz.com-এর সম্পাদকীয় দল হিসেবে আমরা এই পেজটি লিখেছি যেন প্রতিটি ‘Jetbuzz’ সার্চ ব্যবহারকারী সঠিক ব্র্যান্ডে পৌঁছান, ভুয়া মিরর বা ফিশিং সাইটে গিয়ে টাকা বা পরিচয় না হারান। এই পেজে সম্পূর্ণ ব্যবহারিক গাইড — লগইন, রেজিস্ট্রেশন, পেমেন্ট, বোনাস, ক্রিকেট ও অ্যাফিলিয়েট।",
+          "মনে রাখুন: **সঠিক বানান JeetBuzz — দুই ‘e’, দুই ‘z’**।",
+          "## ২. JeetBuzz সংক্ষিপ্ত পরিচিতি",
+          "JeetBuzz একটি Curaçao লাইসেন্সপ্রাপ্ত (লাইসেন্স নং 8048/JAZ2020-013) অনলাইন গেমিং প্ল্যাটফর্ম যা ২০২১ থেকে দক্ষিণ এশিয়ায় সক্রিয়। প্রতিষ্ঠাগত ফোকাস — বাংলাদেশ, ভারত, পাকিস্তান। তিন দেশের নেটিভ কারেন্সি (BDT, INR, PKR) সরাসরি সাপোর্টেড।",
+          "বাংলাদেশ মার্কেটে চার প্রধান সুবিধা: (১) bKash/Nagad/Rocket ইন্টিগ্রেশন — মিডলম্যান ছাড়া সরাসরি; (২) মাত্র ১০০ টাকা ন্যূনতম ডিপোজিট; (৩) সম্পূর্ণ বাংলা ইন্টারফেস; (৪) BPL/IPL/PSL কমপ্লিট কভারেজ। সাইট ২৪/৭ বাংলা সাপোর্ট দেয় লাইভ চ্যাট, ইমেইল ও Telegram-এ।",
+          "গেম পোর্টফোলিও: ১০০০+ স্লট (Pragmatic Play, PG Soft, JILI, Habanero), ৫০+ লাইভ ক্যাসিনো টেবিল (Evolution, Ezugi, Pragmatic Live), ক্র্যাশ গেম (Aviator, JetX, Space XY), Cricket Exchange (Back/Lay মার্কেট)।",
+          "লাইভ ক্যাসিনো স্টুডিও থেকে HD স্ট্রিমিং, বহু-ক্যামেরা অ্যাঙ্গেল, ডিলার-চ্যাট। বাংলা-সাপোর্টেড ডিলার এখনও সীমিত, ইংরেজি সবচেয়ে বেশি।",
+          "প্ল্যাটফর্ম মোবাইল-ফার্স্ট, Android APK এবং iOS Web App। Google Play Store বা Apple App Store-এ পাওয়া যাবে না।",
+          "## ৩. লগইন গাইড",
+          "মোবাইল ব্রাউজারে: হোমপেজে ‘Login’ বাটন → ফোন নম্বর বা ইউজারনেম → পাসওয়ার্ড → Sign In। নতুন ডিভাইসে প্রথমবার লগইনে OTP পাঠানো হবে রেজিস্টার্ড নম্বরে।",
+          "বিস্তারিত লগইন গাইডের জন্য আমাদের [জেতাবাজ লগইন গাইড](/blog/jeetbuzz-login-guide) পড়ুন — সেখানে মোবাইল ও ডেস্কটপ উভয় প্ল্যাটফর্মের ধাপে ধাপে ব্যাখ্যা, ISP ব্লক এড়ানোর ৭টি পদ্ধতি এবং ২FA কনফিগারেশন বিস্তারিত।",
+          "পাসওয়ার্ড ভুলে গেলে ‘Forgot Password’ → ফোন নম্বর → OTP → নতুন পাসওয়ার্ড। বিস্তারিত [পাসওয়ার্ড রিসেট গাইড](/jeetbuzz-password-reset) দেখুন।",
+          "ISP ব্লক: বাংলাদেশে BTRC মাঝেমধ্যে বেটিং ডোমেইন ব্লক করে। সমাধান — Cloudflare 1.1.1.1 DNS, Google 8.8.8.8 DNS, মোবাইল ডেটা সুইচ, বা বিশ্বস্ত VPN।",
+          "2FA: প্রোফাইল > Security > Enable 2FA → Google Authenticator অ্যাপ কনফিগার করুন। SIM-swap আক্রমণ থেকে রক্ষা পাবেন।",
+          "সেশন ট্র্যাকিং: Account > Devices → অচেনা ডিভাইস দেখলে ‘Logout All’ + পাসওয়ার্ড পরিবর্তন।",
+          "## ৪. রেজিস্ট্রেশন গাইড",
+          "হোমপেজে ‘Sign Up’ চাপুন → +880 এর পর ১১ ডিজিটের বাংলাদেশি মোবাইল নম্বর দিন। ৩০ সেকেন্ডে OTP আসবে। এন্টার করে ‘Verify’। পাসওয়ার্ড সেট (৮+ অক্ষর, বড়/ছোট, সংখ্যা, বিশেষ চিহ্ন)। কারেন্সি BDT।",
+          "পুরো নাম NID অনুযায়ী দিন। ইমেইল ঐচ্ছিক কিন্তু recovery-র জন্য সুপারিশযোগ্য। রেফারেল কোড থাকলে দিন। T&C পড়ে টিক দিন → ‘Register’।",
+          "বিস্তারিত [রেজিস্ট্রেশন গাইড](/registration-guide) পেজে ধাপে ধাপে স্ক্রিনশটসহ ব্যাখ্যা রয়েছে।",
+          "KYC: প্রথম উইথড্রয়ালের আগে NID (সামনে-পেছন) + লাইভ সেলফি। ২৪ ঘণ্টায় অনুমোদন। রিজেকশনের সাধারণ কারণ: ছবি ঝাপসা, আলো কম, নামের বানান মিসম্যাচ, ঠিকানা অস্পষ্ট। বিস্তারিত [অ্যাকাউন্ট ভেরিফিকেশন গাইড](/jeetbuzz-account-verification) দেখুন।",
+          "প্রথম ডিপোজিট ৭ দিনের মধ্যে করুন Welcome Bonus পেতে। bKash/Nagad/Rocket-এর নাম অ্যাকাউন্টের নামের সাথে হুবহু মিলতে হবে।",
+          "একাধিক অ্যাকাউন্ট নিষিদ্ধ — এক NID, এক ফোন নম্বর, এক ডিভাইসে একটাই অ্যাকাউন্ট।",
+          "## ৫. বোনাস ও প্রমো কোড",
+          "**Welcome Bonus:** প্রথম ডিপোজিটে ১০০% ম্যাচ, সর্বোচ্চ ১০,০০০ টাকা। ওয়াগারিং ১৫x — বোনাসের ১৫ গুণ বেট করার আগে উইথড্র করা যায় না।",
+          "**Reload Bonus:** সাপ্তাহিক নির্দিষ্ট দিনে ৫০% পর্যন্ত। **Cashback:** ৫-১৫% সাপ্তাহিক লস ফেরত। **Refer Bonus:** ২০০-৫০০ প্রতি সফল রেফারে।",
+          "প্রমো কোড ব্যবহার: ডিপোজিট পেজে ‘Promo Code’ বক্সে কোড লিখে ডিপোজিট কনফার্ম। কেস-সেনসিটিভ। আজকের সক্রিয় প্রমো কোড দেখতে [প্রমো কোড পেজ](/blog/jeetbuzz-promo-code-today) ভিজিট করুন — সাপ্তাহিক আপডেট।",
+          "বোনাসের বিস্তারিত শর্ত জানতে [বোনাস হাব](/bonus-and-promotions) দেখুন। ওয়াগারিং কনট্রিবিউশন: স্লট ১০০%, লাইভ ক্যাসিনো ১০-২০%, ক্রিকেট বেটিং ৫০%।",
+          "সতর্কতা: বোনাস চলাকালীন সর্বোচ্চ বাজি ২০০-৫০০ টাকা; excluded games (কিছু জ্যাকপট স্লট) খেললে বোনাস বাতিল; মেয়াদ ৩০ দিন।",
+          "## ৬. ডিপোজিট ও উইথড্রয়াল",
+          "**bKash:** ন্যূনতম ১০০, প্রসেসিং ২-৫ মিনিট। Cashier > bKash → পরিমাণ → Merchant Number ও Reference ID → bKash অ্যাপে Send Money → Reference ID লিখুন। bKash দিয়ে ডিপোজিটের সম্পূর্ণ নিয়ম [bKash গাইড](/bkash-guide)-এ বিস্তারিত।",
+          "**Nagad:** ন্যূনতম ১০০, ২-৪ মিনিট। *167# কোডেও কাজ হয়। Nagad দিয়ে ডিপোজিট করতে চাইলে [Nagad গাইড](/nagad-guide) দেখুন।",
+          "**Rocket:** ন্যূনতম ২০০, ৩-৭ মিনিট। Merchant Payment অপশন।",
+          "**উইথড্রয়াল:** ন্যূনতম ৫০০। bKash ১৫-৩০ মিনিট, Nagad ২০-৪৫, Rocket ৩০-৬০ (গড়)। উইথড্রয়াল কত সময় লাগে তা জানতে [উইথড্রয়াল গাইড](/blog/jeetbuzz-withdrawal-time-bangladesh) পড়ুন।",
+          "ফি: JeetBuzz সরাসরি ফি নেয় না; bKash/Nagad এজেন্ট ক্যাশ-আউট ১.৮৫%।",
+          "নাম মিসম্যাচ: bKash/Nagad-এর নাম JeetBuzz অ্যাকাউন্টের সাথে হুবহু মিলতে হবে — অন্যথায় উইথড্রয়াল রিজেক্ট।",
+          "## ৭. লাইভ ক্রিকেট বেটিং",
+          "ক্রিকেট JeetBuzz-এর সবচেয়ে জনপ্রিয় সেকশন। প্রতিটি BPL/IPL/PSL ম্যাচে ৫০+ প্রি-ম্যাচ মার্কেট এবং ইন-প্লে ৩০০+ অপশন। Match Winner, Top Batsman, Top Bowler, Total Runs Over/Under, Powerplay Score, Method of Dismissal, Next Ball Outcome, Next Wicket Method।",
+          "লাইভ ক্যাশ-আউট: চলমান বাজিতে ম্যাচ শেষ হওয়ার আগেই লাভ/ক্ষতি সেটল। ঝুঁকি ব্যবস্থাপনার কার্যকর টুল।",
+          "Cricket Exchange: Back/Lay দুই দিক থেকে বাজি, আপনি বুকমেকারের ভূমিকায়। কমিশন ২.৫-৫%। লাইভ ক্রিকেট বেটিং গাইডের জন্য [ক্রিকেট বেটিং পেজ](/live-cricket-betting) দেখুন।",
+          "লাইভ স্ট্রিম: শর্তসাপেক্ষে বিল্ট-ইন, ৭২০p পর্যন্ত।",
+          "ODI ও Test cricket-এও ইন-প্লে মার্কেট থাকে — session, over, wicket ইত্যাদি।",
+          "## ৮. অ্যাফিলিয়েট প্রোগ্রাম",
+          "JeetBuzz অ্যাফিলিয়েট প্রোগ্রামে যোগ দিতে [অ্যাফিলিয়েট পেজ](/affiliate-program) দেখুন। কমিশন NGR-ভিত্তিক — শুরু ২৫% থেকে, প্লেয়ার ভলিউমের সাথে ৪০%, ৫০%, ৬০% পর্যন্ত। সাব-অ্যাফিলিয়েট ৩.৫%।",
+          "পেমেন্ট bKash, Nagad, USDT, ব্যাংক ট্রান্সফারে সাপ্তাহিক (মঙ্গলবার) প্রসেস। নেগেটিভ ক্যারিওভার নেই। রিয়েল-টাইম ড্যাশবোর্ডে ক্লিক, রেজিস্ট্রেশন, FTD, কমিশন দেখা যায়।",
+          "YouTube ও Facebook ক্রিকেট কনটেন্ট বানিয়ে অনেক অ্যাফিলিয়েট মাসে ৫০,০০০-৫,০০,০০০ টাকা আয় করেন।",
+          "## ৯. সাধারণ সমস্যা ও সমাধান",
+          "**অ্যাকাউন্ট লক হলে করণীয়** জানতে [অ্যাকাউন্ট লক গাইড](/blog/jeetbuzz-account-locked) পড়ুন। সন্দেহজনক লগইন, একাধিক অ্যাকাউন্ট, বা bonus abuse-এর কারণে হতে পারে।",
+          "**ডিপোজিট সমস্যার সমাধান পেতে** [ডিপোজিট সমস্যার গাইড](/blog/jeetbuzz-deposit-problem-fix) দেখুন — টাকা কেটে নেওয়া কিন্তু জমা না হওয়া ইত্যাদি ১৫টি কারণ।",
+          "**OTP আসছে না**: SMS ব্লক, DND, নেটওয়ার্ক ব্যস্ত। Resend, তারপর ইমেইল।",
+          "**অ্যাপ ক্র্যাশ**: পুরনো APK ডিলিট, নতুন ইনস্টল।",
+          "**উইথড্রয়াল দেরি**: পিক আওয়ার (রাত ৮-১১) স্বাভাবিক দেরি; ২৪ ঘণ্টার বেশি হলে সাপোর্টে জানান।",
+          "## শেষ কথা",
+          `শেষ আপডেট: ${LAST_VERIFIED}। ‘Jetbuzz’ একটি ‘e’ কম, সঠিক নাম JeetBuzz। বেটিংয়ে ঝুঁকি আছে, ১৮ বছরের নিচে নিষিদ্ধ।`,
+          ...RELATED_ARTICLES_BLOCK,
         ],
       }}
-      related={HUBS}
       faqs={[
-        { q: "Is Jetbuzz a different site from JeetBuzz?", a: "No. Jetbuzz is a misspelling, the correct name has two e's, spelled JeetBuzz. There is no separate operator under the shorter spelling." },
-        { q: "Why does Google autocomplete 'jetbuzz'?", a: "Autocomplete reflects what real users type. Around 60,000 people a month search the shorter spelling, so Google keeps it in the suggestion box, but every serious result routes back to JeetBuzz." },
-        { q: "How do I verify a URL is the real JeetBuzz?", a: "Cross-check the domain against the brand's official social profiles (facebook.com/GetJeetBuzz, youtube.com/@getjeetbuzz). If it's not linked from any of them, treat it as a fake mirror." },
-        { q: "Are look-alike domains dangerous?", a: "Yes. Most 'one letter off' variants ('jetbuzz', 'jeetbaz', 'jeetbuz') are phishing mirrors that harvest credentials. Type the brand directly into the address bar." },
-        { q: "Is JeetBuzz on the App Store or Google Play?", a: "No, regulations block real-money gambling apps. Install only through the official [APK guide](/apk-download-guide) or iOS Add-to-Home-Screen route." },
+        { q: "Is Jetbuzz different from JeetBuzz?", a: "No. 'Jetbuzz' is a common misspelling where one 'e' is dropped. The correct brand is JeetBuzz." },
       ]}
       faqsByLocale={{
         bn: [
-          { q: "Jetbuzz কি আলাদা সাইট?", a: "না। Jetbuzz ভুল বানান, সঠিক নাম দুই 'e' যুক্ত JeetBuzz। ছোট বানানে আলাদা কোনো অপারেটর নেই।" },
-          { q: "Google-এ 'jetbuzz' কেন সাজেস্ট হয়?", a: "প্রতি মাসে ৬০,০০০ মানুষ ছোট বানানে সার্চ করেন, তাই Google এটি রাখে। ফলাফল সবসময় JeetBuzz-এই ফিরে যায়।" },
-          { q: "আসল URL চেনার উপায়?", a: "অফিসিয়াল Facebook (facebook.com/GetJeetBuzz) ও YouTube (youtube.com/@getjeetbuzz) থেকে ডোমেইন মিলিয়ে নিন।" },
-          { q: "মিলতে না মেলা ডোমেইন কি বিপজ্জনক?", a: "হ্যাঁ। এক অক্ষর ভিন্ন বানানের বেশিরভাগ ডোমেইন ফিশিং মিরর। ব্র্যান্ড নিজে টাইপ করুন।" },
-          { q: "JeetBuzz কি Google Play/App Store-এ আছে?", a: "না। রিয়েল-মানি জুয়া অ্যাপ স্টোরে অনুমোদিত নয়। শুধু অফিসিয়াল [APK গাইড](/apk-download-guide) বা iOS Add-to-Home-Screen ব্যবহার করুন।" },
+          { q: "‘Jetbuzz’ কি JeetBuzz-এর সাথে সম্পর্কিত আলাদা সাইট?", a: "না, আলাদা কিছু নয়। ‘Jetbuzz’ একটি সাধারণ টাইপিং ভুল — মোবাইল কীবোর্ডে দ্রুত সোয়াইপ করলে দুটি ‘e’-এর একটি বাদ পড়ে। সঠিক ব্র্যান্ড JeetBuzz — দুই ‘e’, দুই ‘z’ সহ। অন্য কোনো ‘Jetbuzz’ কোম্পানি নেই।" },
+          { q: "‘Jetbuzz’ কি ‘জেট’ (উড়োজাহাজ) শব্দ থেকে এসেছে?", a: "না। ব্র্যান্ডের ‘Jeet’ শব্দটি বাংলা/হিন্দি ‘জিত’ (জয়) থেকে, ইংরেজি ‘jet’ (উড্ডয়ন) থেকে নয়। ‘Jetbuzz’ ভুল বানান কারণ ‘জিত’-এর সঠিক রোমানাইজেশন হলো ‘Jeet’, দুই ‘e’ সহ। উচ্চারণ ‘জিত-বাজ’, ‘জেট-বাজ’ নয়।" },
+          { q: "Google-এ ‘Jetbuzz’ কেন এত সাজেস্ট হয়?", a: "প্রতি মাসে ৬০,০০০+ মানুষ এই ভুল বানানে সার্চ করেন, তাই Google-এর অটোকমপ্লিট এটি রাখে। কিন্তু Google-এর স্পেল-কারেকশন অ্যালগরিদম ‘Did you mean JeetBuzz?’ সাজেশন দেখায় এবং প্রথম কয়েকটি ফলাফল সাধারণত আসল ব্র্যান্ডে চলে যায়।" },
+          { q: "‘Jetbuzz’ সার্চে যে বিজ্ঞাপন আসে সেগুলো কি অফিসিয়াল?", a: "সবসময় না। JeetBuzz অফিসিয়াল Google Ads সীমিতভাবে চালায়। ‘Jetbuzz’ কীওয়ার্ডে বিজ্ঞাপনের বেশিরভাগ অ্যাফিলিয়েট বা প্রতিদ্বন্দ্বী সাইটের। সবচেয়ে নিরাপদ — সরাসরি ডোমেইন টাইপ করে যান, বিজ্ঞাপনে ক্লিক না করুন।" },
+          { q: "যদি ভুল করে ‘Jetbuzz’ মিরর সাইটে অ্যাকাউন্ট খুলি, টাকা ফেরত পাওয়া যাবে?", a: "সাধারণত না। ফিশিং সাইট বা ভুয়া মিরর কোনো ব্যাংকিং ইনফ্রাস্ট্রাকচারে নেই, তাই টাকা ফেরানোর কোনো আইনি পথ নেই। bKash/Nagad-এ পাঠানো টাকা রিভার্স করা যায় না। শুধু সতর্কতা — ভবিষ্যতে অফিসিয়াল ডোমেইন ছাড়া কোথাও টাকা পাঠাবেন না।" },
+          { q: "‘Jetbuzz APK’ ও ‘JeetBuzz APK’ কি এক?", a: "যদি অফিসিয়াল JeetBuzz সাইট থেকে ডাউনলোড করেন তাহলে ফাইল একটাই — SHA-256 হ্যাশ মিলবে। কিন্তু ‘Jetbuzz APK’ নামে যে ফাইলগুলো তৃতীয় পক্ষের সাইটে পাওয়া যায় সেগুলো বেশিরভাগ মডিফাইড বা ম্যালওয়্যার-ইনফেক্টেড। শুধু অফিসিয়াল সাইট থেকে APK নিন।" },
+          { q: "একবার ‘Jetbuzz’ সার্চ করার পর Google কি সবসময় ভুল বানান দেখাবে?", a: "না। Google আপনার সার্চ হিস্ট্রি অনুযায়ী সাজেশন কাস্টমাইজ করে। কয়েকবার ‘JeetBuzz’ (সঠিক বানান) সার্চ করলে অটোকমপ্লিট আপডেট হবে। ব্রাউজারের সার্চ হিস্ট্রি ক্লিয়ার করলেও reset হয়।" },
+          { q: "‘Jetbuzz’ SEO দৃষ্টিকোণ থেকে কি টার্গেট কীওয়ার্ড?", a: "হ্যাঁ, high-volume misspelling হিসেবে। মাসিক সার্চ ভলিউম ৪০,০০০-৭০,০০০ (বাংলাদেশে)। এই পেজটি সেই ভুল বানান দিয়ে আসা ব্যবহারকারীদের সঠিক ব্র্যান্ডে রুট করার জন্য তৈরি — যেন কেউ ফিশিং সাইটে না যায়। এটি হোয়াইট-হ্যাট SEO প্র্যাকটিস।" },
         ],
       }}
+      related={HUBS}
     />
   ),
 });
