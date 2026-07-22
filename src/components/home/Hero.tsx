@@ -22,7 +22,8 @@ export function Hero() {
             sizes="(max-width: 768px) 100vw, 1200px"
           />
           <img
-            src={imageUrl("hero", 1125, "webp")}
+            src={imageUrl("hero", 768, "webp")}
+            srcSet={IMAGES.hero.widths.map((w) => `${imageUrl("hero", w, "webp")} ${w}w`).join(", ")}
             alt={IMAGES.hero.alt}
             title={IMAGES.hero.title}
             width={IMAGES.hero.w}
