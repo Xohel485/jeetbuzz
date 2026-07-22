@@ -11,7 +11,7 @@ import { Breadcrumbs, type Crumb } from "@/components/Breadcrumbs";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { RelatedGuides, type RelatedItem } from "@/components/RelatedGuides";
 import { JsonLd } from "@/components/JsonLd";
-import { articleSchema } from "@/lib/schema";
+import { articleSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
 import { useI18n, type Locale } from "@/lib/i18n";
 
@@ -121,6 +121,16 @@ export function GuidePage({
           </div>
           {localFaqs && <FAQAccordion faqs={localFaqs} />}
           {related && <RelatedGuides items={related} />}
+          {localFaqs && localFaqs.length > 0 && (
+            <JsonLd data={faqSchema(localFaqs.map((f) => ({ q: f.q, a: f.a })))} />
+          )}
+          {breadcrumbs && breadcrumbs.length > 0 && (
+            <JsonLd
+              data={breadcrumbSchema(
+                breadcrumbs.map((b) => ({ name: b.name, path: b.path })),
+              )}
+            />
+          )}
           {articlePath && articleHeadline && articleDescription && (
             <JsonLd
               data={articleSchema({
