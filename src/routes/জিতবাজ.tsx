@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
-import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
 const ROUTE = "/জিতবাজ";
@@ -93,6 +93,8 @@ export const Route = createFileRoute("/জিতবাজ")({
           "**অ্যাপ ওপেন হচ্ছে না**: পুরনো APK ডিলিট করুন, নতুন ভার্সন ইনস্টল।",
           "## শেষ কথা",
           `শেষ আপডেট: ${LAST_VERIFIED}। ‘জিতবাজ’ ও ‘JeetBuzz’ একই ব্র্যান্ড — বাংলা লিপি বনাম রোমান লিপি। বেটিংয়ে ঝুঁকি আছে, ১৮ বছরের নিচে নিষিদ্ধ। দায়িত্বশীলভাবে খেলুন।`,
+          ...CANONICAL_HUB_BLOCK,
+          ...siblingVariantsBlock(ROUTE),
           ...RELATED_ARTICLES_BLOCK,
         ],
       }}

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
-import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
 const ROUTE = "/jest-buzz";
@@ -90,6 +90,8 @@ export const Route = createFileRoute("/jest-buzz")({
           "**ভয়েস সার্চে ভুল সাইট**: সবসময় ডোমেইন দুবার পড়ে নিশ্চিত হন।",
           "## শেষ কথা",
           `শেষ আপডেট: ${LAST_VERIFIED}। ‘Jest Buzz’ ভয়েস সার্চের ভুল, আসল ব্র্যান্ড JeetBuzz। বেটিংয়ে ঝুঁকি আছে, ১৮ বছরের নিচে নিষিদ্ধ।`,
+          ...CANONICAL_HUB_BLOCK,
+          ...siblingVariantsBlock(ROUTE),
           ...RELATED_ARTICLES_BLOCK,
         ],
       }}

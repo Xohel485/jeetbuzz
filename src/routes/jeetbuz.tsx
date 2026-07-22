@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
-import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
 const ROUTE = "/jeetbuz";
@@ -88,6 +88,8 @@ export const Route = createFileRoute("/jeetbuz")({
           "**অ্যাপ ক্র্যাশ:** পুরনো APK ডিলিট করে নতুন ভার্সন ইনস্টল করুন।",
           "## শেষ কথা",
           `শেষ আপডেট: ${LAST_VERIFIED}। ‘Jeetbuz’ ভুল বানান, সঠিক নাম JeetBuzz। এই পেজের তথ্য getjeetbuzz.com সম্পাদকীয় দল যাচাই করেছে। বেটিংয়ে ঝুঁকি আছে, ১৮ বছরের নিচে নিষিদ্ধ।`,
+          ...CANONICAL_HUB_BLOCK,
+          ...siblingVariantsBlock(ROUTE),
           ...RELATED_ARTICLES_BLOCK,
         ],
       }}

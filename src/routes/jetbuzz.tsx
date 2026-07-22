@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
-import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
 const ROUTE = "/jetbuzz";
@@ -92,6 +92,8 @@ export const Route = createFileRoute("/jetbuzz")({
           "**উইথড্রয়াল দেরি**: পিক আওয়ার (রাত ৮-১১) স্বাভাবিক দেরি; ২৪ ঘণ্টার বেশি হলে সাপোর্টে জানান।",
           "## শেষ কথা",
           `শেষ আপডেট: ${LAST_VERIFIED}। ‘Jetbuzz’ একটি ‘e’ কম, সঠিক নাম JeetBuzz। বেটিংয়ে ঝুঁকি আছে, ১৮ বছরের নিচে নিষিদ্ধ।`,
+          ...CANONICAL_HUB_BLOCK,
+          ...siblingVariantsBlock(ROUTE),
           ...RELATED_ARTICLES_BLOCK,
         ],
       }}
