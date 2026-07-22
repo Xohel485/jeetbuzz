@@ -7,6 +7,10 @@ import { useI18n, type Locale } from "@/lib/i18n";
 
 const PATH = "/author" as const;
 const NAME = "GetJeetBuzz Editorial Team";
+const LEAD_AUTHOR = "Nahid";
+const LEAD_AUTHOR_ROLE_EN = "Author, GetJeetBuzz Editorial Team";
+const REVIEWER = "GetJeetBuzz Compliance Desk";
+const REVIEWER_ROLE_EN = "Reviewer, Compliance & Fact-check";
 const TITLE = "About the GetJeetBuzz Editorial Team";
 const DESC =
   "Who writes GetJeetBuzz: a small team of Bangladeshi bettors who test JeetBuzz with real accounts, real bKash/Nagad deposits and real withdrawals, and re-verify every guide on a published schedule.";
@@ -27,23 +31,30 @@ export const Route = createFileRoute("/author")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: NAME,
-          url: "https://getjeetbuzz.com/author",
-          jobTitle: "Editorial team",
-          worksFor: {
-            "@type": "Organization",
-            name: "GetJeetBuzz",
-            url: "https://getjeetbuzz.com",
-          },
-          knowsAbout: [
-            "JeetBuzz signup process from Bangladesh",
-            "bKash, Nagad, Rocket deposits",
-            "BPL and IPL in-play markets",
-            "Affiliate program payout cycles",
-            "Responsible gambling tooling",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://getjeetbuzz.com/author#nahid",
+              name: LEAD_AUTHOR,
+              jobTitle: LEAD_AUTHOR_ROLE_EN,
+              url: "https://getjeetbuzz.com/author",
+              worksFor: { "@type": "Organization", name: "GetJeetBuzz", url: "https://getjeetbuzz.com" },
+              knowsAbout: [
+                "JeetBuzz signup from Bangladesh",
+                "bKash, Nagad, Rocket deposits and withdrawals",
+                "BPL and IPL in-play markets",
+                "Affiliate commission structures",
+              ],
+            },
+            {
+              "@type": "Person",
+              "@id": "https://getjeetbuzz.com/author#compliance",
+              name: REVIEWER,
+              jobTitle: REVIEWER_ROLE_EN,
+              url: "https://getjeetbuzz.com/author",
+              worksFor: { "@type": "Organization", name: "GetJeetBuzz", url: "https://getjeetbuzz.com" },
+            },
           ],
-          sameAs: ["https://getjeetbuzz.com/about"],
         }),
       },
     ],
@@ -63,21 +74,51 @@ function AuthorPage() {
       />
       <section className="container-pro">
         <div className="mx-auto max-w-3xl space-y-8">
-          <div className="flex items-start gap-4">
-            <div
-              aria-hidden
-              className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-lg font-bold text-primary ring-1 ring-primary/20"
-            >
-              GJB
-            </div>
-            <div>
-              <h2 className="text-base font-semibold text-foreground">
-                {NAME}
-              </h2>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {t.lastVerified}: {LAST_VERIFIED}
+          <div className="rounded-2xl border border-border/60 bg-card/40 p-5">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">
+              {t.lastVerified}
+            </p>
+            <p className="mt-1 text-lg font-semibold text-foreground">
+              {LAST_VERIFIED}
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <article className="rounded-2xl border border-border/60 bg-card/40 p-5">
+              <div className="flex items-center gap-3">
+                <div
+                  aria-hidden
+                  className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary ring-1 ring-primary/20"
+                >
+                  N
+                </div>
+                <div>
+                  <h2 className="text-sm font-semibold text-foreground">{LEAD_AUTHOR}</h2>
+                  <p className="text-xs text-muted-foreground">{t.authorRole}</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {t.authorBio}
               </p>
-            </div>
+            </article>
+
+            <article className="rounded-2xl border border-border/60 bg-card/40 p-5">
+              <div className="flex items-center gap-3">
+                <div
+                  aria-hidden
+                  className="flex size-12 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-bold text-primary ring-1 ring-primary/20"
+                >
+                  CD
+                </div>
+                <div>
+                  <h2 className="text-sm font-semibold text-foreground">{REVIEWER}</h2>
+                  <p className="text-xs text-muted-foreground">{t.reviewerRole}</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {t.reviewerBio}
+              </p>
+            </article>
           </div>
 
           <AffiliateDisclosure variant="inline" />
@@ -150,6 +191,8 @@ function AuthorPage() {
 type Copy = {
   eyebrow: string; title1: string; title2: string; subtitle: string;
   lastVerified: string;
+  authorRole: string; authorBio: string;
+  reviewerRole: string; reviewerBio: string;
   whoH: string; whoP: string;
   testH: string; testP: string; testList: string[];
   reverifyH: string; reverifyP: string;
@@ -163,6 +206,10 @@ const COPY: Record<Locale, Copy> = {
     eyebrow: "Author profile", title1: "About the ", title2: "GetJeetBuzz Editorial Team",
     subtitle: "A small team of South Asian bettors testing JeetBuzz with real accounts, real deposits and real withdrawals, then writing it up honestly.",
     lastVerified: "Last full site re-verification",
+    authorRole: "Author, GetJeetBuzz Editorial Team",
+    authorBio: "Nahid leads editorial for GetJeetBuzz. He tests JeetBuzz signup, bKash and Nagad deposits, in-play BPL/IPL markets and withdrawals from a Bangladeshi player account, and writes the primary Bengali and English guides.",
+    reviewerRole: "Reviewer, Compliance and Fact-check",
+    reviewerBio: "The Compliance Desk fact-checks every guide before publishing: payment limits, KYC steps, bonus terms and affiliate commission figures are re-verified against JeetBuzz's live platform.",
     whoH: "Who we are",
     whoP: "GetJeetBuzz is written by a small editorial team covering Bangladesh, Pakistan and India. We are everyday cricket bettors first and writers second, most of us started betting on BPL, IPL and PSL on JeetBuzz before this site existed. We publish under the team byline rather than individual names because online betting is a sensitive topic in our markets.",
     testH: "How we test",
@@ -190,6 +237,10 @@ const COPY: Record<Locale, Copy> = {
     eyebrow: "লেখক প্রোফাইল", title1: "পরিচিতি, ", title2: "GetJeetBuzz Editorial Team",
     subtitle: "বাংলাদেশের একদল সাধারণ বেটর, প্রকৃত অ্যাকাউন্ট, প্রকৃত bKash/Nagad ডিপোজিট ও প্রকৃত উইথড্রয়াল দিয়ে JeetBuzz পরীক্ষা করি, তারপর সৎভাবে লিখি।",
     lastVerified: "সর্বশেষ সম্পূর্ণ সাইট পুনঃযাচাই",
+    authorRole: "লেখক, GetJeetBuzz Editorial Team",
+    authorBio: "নাহিদ GetJeetBuzz-এর সম্পাদকীয় দলের প্রধান লেখক। তিনি বাংলাদেশি প্লেয়ার অ্যাকাউন্ট থেকে JeetBuzz সাইনআপ, bKash ও Nagad ডিপোজিট, BPL/IPL ইন-প্লে মার্কেট এবং উইথড্রয়াল নিজে পরীক্ষা করেন, এবং প্রধান বাংলা ও ইংরেজি গাইডগুলো লিখেন।",
+    reviewerRole: "রিভিউয়ার, Compliance ও Fact-check",
+    reviewerBio: "Compliance Desk প্রকাশের আগে প্রতিটি গাইড যাচাই করে: পেমেন্ট লিমিট, KYC ধাপ, বোনাস টার্মস এবং অ্যাফিলিয়েট কমিশন সংখ্যা JeetBuzz-এর লাইভ প্ল্যাটফর্মের বিপরীতে পুনঃযাচাই করা হয়।",
     whoH: "আমরা কারা",
     whoP: "GetJeetBuzz লিখছে একটি ছোট সম্পাদকীয় দল, মূলত বাংলাদেশ ভিত্তিক, পাকিস্তান ও ভারতের জন্যও কাজ করি। আমরা প্রথমে ক্রিকেট বেটর, পরে লেখক, বেশিরভাগ আমরা এই সাইট তৈরির আগে JeetBuzz-এ BPL ও IPL-এ বাজি ধরতাম। বাংলাদেশে অনলাইন বেটিং সংবেদনশীল বিষয় বলেই আমরা ব্যক্তি নয়, টিম বাইলাইনে প্রকাশ করি।",
     testH: "আমরা কীভাবে টেস্ট করি",
@@ -217,6 +268,10 @@ const COPY: Record<Locale, Copy> = {
     eyebrow: "مصنف پروفائل", title1: "تعارف, ", title2: "GetJeetBuzz Editorial Team",
     subtitle: "جنوبی ایشیائی کھلاڑیوں کی ایک چھوٹی ٹیم, حقیقی اکاؤنٹس، حقیقی EasyPaisa/JazzCash ڈپازٹ اور حقیقی وڈرا کے ساتھ JeetBuzz کو ٹیسٹ کرتے ہیں۔",
     lastVerified: "آخری مکمل سائٹ ری ویریفکیشن",
+    authorRole: "مصنف، GetJeetBuzz Editorial Team",
+    authorBio: "ناہد GetJeetBuzz کی ادارتی ٹیم کے مرکزی مصنف ہیں۔ وہ حقیقی پلیئر اکاؤنٹ سے JeetBuzz سائن اپ، ادائیگیاں اور وڈرا کو خود ٹیسٹ کرتے ہیں۔",
+    reviewerRole: "ریویو ور، Compliance اور Fact-check",
+    reviewerBio: "Compliance Desk اشاعت سے پہلے ہر گائیڈ کو JeetBuzz کے لائیو پلیٹ فارم کے مقابلے میں دوبارہ چیک کرتی ہے۔",
     whoH: "ہم کون ہیں",
     whoP: "GetJeetBuzz ایک چھوٹی ادارتی ٹیم لکھتی ہے جو پاکستان، بنگلہ دیش اور بھارت کو کور کرتی ہے۔ ہم پہلے کرکٹ بیٹرز اور پھر لکھاری ہیں, ہم میں سے اکثر اس سائٹ سے پہلے JeetBuzz پر PSL، BPL اور IPL پر بیٹ لگاتے تھے۔",
     testH: "ہم کیسے ٹیسٹ کرتے ہیں",
@@ -244,6 +299,10 @@ const COPY: Record<Locale, Copy> = {
     eyebrow: "लेखक प्रोफ़ाइल", title1: "परिचय, ", title2: "GetJeetBuzz Editorial Team",
     subtitle: "दक्षिण एशियाई बेटर्स की एक छोटी टीम, असली अकाउंट, असली UPI/PhonePe डिपॉज़िट और असली विदड्रॉल के साथ JeetBuzz टेस्ट करते हैं।",
     lastVerified: "अंतिम पूर्ण साइट पुन: सत्यापन",
+    authorRole: "लेखक, GetJeetBuzz Editorial Team",
+    authorBio: "नाहिद GetJeetBuzz की संपादकीय टीम के मुख्य लेखक हैं। वे असली प्लेयर अकाउंट से JeetBuzz साइनअप, भुगतान और विदड्रॉल स्वयं टेस्ट करते हैं।",
+    reviewerRole: "समीक्षक, Compliance और Fact-check",
+    reviewerBio: "Compliance Desk प्रकाशन से पहले हर गाइड को JeetBuzz के लाइव प्लेटफ़ॉर्म के विरुद्ध पुनः सत्यापित करती है।",
     whoH: "हम कौन हैं",
     whoP: "GetJeetBuzz एक छोटी संपादकीय टीम लिखती है जो भारत, बांग्लादेश और पाकिस्तान को कवर करती है। हम पहले क्रिकेट बेटर्स हैं, फिर लेखक, हम में से अधिकांश इस साइट से पहले JeetBuzz पर IPL, BPL और PSL पर दांव लगाते थे।",
     testH: "हम कैसे टेस्ट करते हैं",
