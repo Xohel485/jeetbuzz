@@ -191,6 +191,8 @@ function AuthorPage() {
 type Copy = {
   eyebrow: string; title1: string; title2: string; subtitle: string;
   lastVerified: string;
+  authorRole: string; authorBio: string;
+  reviewerRole: string; reviewerBio: string;
   whoH: string; whoP: string;
   testH: string; testP: string; testList: string[];
   reverifyH: string; reverifyP: string;
