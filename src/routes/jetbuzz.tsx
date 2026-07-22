@@ -8,8 +8,8 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 const ROUTE = "/jetbuzz";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const TITLE = "Jetbuzz নাকি JeetBuzz? এক ‘e’ কম — সঠিক ব্র্যান্ড ও সম্পূর্ণ গাইড";
-const DESC = "‘Jetbuzz’ (একটি ‘e’ বাদ) সবচেয়ে সাধারণ টাইপিং ভুল। এই গাইডে আসল JeetBuzz-এর অ্যাক্সেস, লগইন, ডিপোজিট, বোনাস, ক্রিকেট বেটিং ও অ্যাফিলিয়েট বিস্তারিত।";
+const TITLE = "Jetbuzz Login বাংলাদেশ ২০২৬ — আসল JeetBuzz সাইট, বোনাস ও bKash ডিপোজিট";
+const DESC = "Jetbuzz আসলে JeetBuzz — এক ‘e’ কম বানান। অফিসিয়াল লগইন লিংক, ১০০৳ ন্যূনতম bKash/Nagad ডিপোজিট, ২০০% ওয়েলকাম বোনাস ও ক্রিকেট বেটিং গাইড।";
 
 export const Route = createFileRoute("/jetbuzz")({
   head: () => ({
