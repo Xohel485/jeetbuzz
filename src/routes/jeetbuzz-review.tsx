@@ -12,6 +12,7 @@ import { Star } from "lucide-react";
 import { articleSchema, reviewSchema, jsonLdScript, canonicalLink, hreflangLinks } from "@/lib/schema";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { useI18n, type Locale } from "@/lib/i18n";
+import { VARIANT_LINKS } from "@/lib/misspelling-shared";
 
 export const Route = createFileRoute("/jeetbuzz-review")({
   head: () => ({
@@ -309,6 +310,24 @@ function Page() {
             <AffiliateCTA size="lg" variant="hero" label={ctaLabel} />
           </div>
           <FAQAccordion faqs={faqs} />
+          <div className="mt-10 rounded-xl border border-border/40 bg-card/40 p-6">
+            <h2 className="text-lg font-semibold">Searched a different spelling?</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              JeetBuzz is often typed as JetBuzz, JitBuzz, Jeet Buzz or জিতবাজ.
+              Each variant has its own long-form Bengali guide covering the same
+              official brand — pick the spelling you searched:
+            </p>
+            <ul className="mt-3 space-y-1 text-sm">
+              {VARIANT_LINKS.map((v) => (
+                <li key={v.path}>
+                  <a href={v.path} className="text-primary underline-offset-4 hover:underline">
+                    {v.anchor}
+                  </a>
+                  <span className="text-muted-foreground"> — {v.note}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <RelatedGuides
             items={[
               { to: "/registration-guide", title: "Registration Guide", desc: "Open an account before claiming any offer." },

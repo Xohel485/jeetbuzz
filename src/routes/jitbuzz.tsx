@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
-import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
 const ROUTE = "/jitbuzz";
@@ -94,6 +94,8 @@ export const Route = createFileRoute("/jitbuzz")({
           "**নাম মিসম্যাচ**: KYC-তে নাম এবং bKash/UPI-এর নাম হুবহু মিলতে হবে।",
           "## শেষ কথা",
           `শেষ আপডেট: ${LAST_VERIFIED}। ‘Jitbuzz’ হিন্দি ট্রান্সলিটারেশনের ভুল, আসল ব্র্যান্ড JeetBuzz। ১৮ বছরের নিচে নিষিদ্ধ।`,
+          ...CANONICAL_HUB_BLOCK,
+          ...siblingVariantsBlock(ROUTE),
           ...RELATED_ARTICLES_BLOCK,
         ],
       }}

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
-import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
+import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
 const ROUTE = "/jeet-buzz";
@@ -90,6 +90,8 @@ export const Route = createFileRoute("/jeet-buzz")({
           "**অ্যাপ ওপেন হচ্ছে না:** APK আপডেট থাকা জরুরি। পুরনো APK ডিলিট করে নতুনটা ইনস্টল করুন।",
           "## শেষ কথা",
           `শেষ আপডেট: ${LAST_VERIFIED}। এই পেজের সমস্ত তথ্য getjeetbuzz.com সম্পাদকীয় দল দ্বারা যাচাইকৃত। বেটিংয়ে ঝুঁকি আছে — যতটুকু হারাতে পারবেন ততটুকুই খেলুন। ১৮ বছরের নিচে খেলা নিষিদ্ধ।`,
+          ...CANONICAL_HUB_BLOCK,
+          ...siblingVariantsBlock(ROUTE),
           ...RELATED_ARTICLES_BLOCK,
         ],
       }}
