@@ -5,9 +5,9 @@ import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
+const ROUTE = "/জিতবাজ";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const ROUTE = "/জিতবাজ";
 const TITLE = "জিতবাজ — বাংলা লিপিতে JeetBuzz-এর সম্পূর্ণ গাইড";
 const DESC = "‘জিতবাজ’ (বাংলা লিপিতে JeetBuzz) — যারা বাংলা কীবোর্ডে সার্চ করেন তাদের জন্য সঠিক ব্র্যান্ড, অ্যাক্সেস, বোনাস, পেমেন্ট ও ক্রিকেট বেটিং এর গাইড।";
 

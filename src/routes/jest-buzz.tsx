@@ -5,9 +5,9 @@ import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
+const ROUTE = "/jest-buzz";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const ROUTE = "/jest-buzz";
 const TITLE = "Jest Buzz নাকি JeetBuzz? উচ্চারণ থেকে জন্ম নেওয়া ভুল বানানের ব্যাখ্যা";
 const DESC = "‘Jest Buzz’ ভয়েস সার্চ ও উচ্চারণজনিত একটি সাধারণ ভুল বানান। আসল JeetBuzz-এ পৌঁছানোর নিরাপদ গাইড, লগইন, ডিপোজিট, বোনাস ও অ্যাফিলিয়েট।";
 

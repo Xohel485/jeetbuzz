@@ -5,9 +5,9 @@ import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
+const ROUTE = "/jeetbuz";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const ROUTE = "/jeetbuz";
 const TITLE = "Jeetbuz নাকি JeetBuzz? সঠিক বানান, ফিশিং সতর্কতা ও নিরাপদ প্রবেশ";
 const DESC = "‘Jeetbuz’ (শেষে একটি ‘z’) একটি সাধারণ ভুল বানান। আসল সাইট JeetBuzz-এ কীভাবে নিরাপদে প্রবেশ করবেন, ভুয়া মিরর চিনবেন এবং সম্পূর্ণ গাইড পাবেন এখানে।";
 
