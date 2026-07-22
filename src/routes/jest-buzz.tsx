@@ -8,8 +8,8 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 const ROUTE = "/jest-buzz";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const TITLE = "Jest Buzz নাকি JeetBuzz? উচ্চারণ থেকে জন্ম নেওয়া ভুল বানানের ব্যাখ্যা";
-const DESC = "‘Jest Buzz’ ভয়েস সার্চ ও উচ্চারণজনিত একটি সাধারণ ভুল বানান। আসল JeetBuzz-এ পৌঁছানোর নিরাপদ গাইড, লগইন, ডিপোজিট, বোনাস ও অ্যাফিলিয়েট।";
+const TITLE = "Jest Buzz আসলে JeetBuzz — ভয়েস সার্চ গাইড, লগইন ও বোনাস ২০২৬";
+const DESC = "Jest Buzz Google ভয়েস সার্চের ভুল ট্রান্সক্রিপশন — আসল ব্র্যান্ড JeetBuzz। অফিসিয়াল লগইন, bKash/Nagad ডিপোজিট, ২০০% ওয়েলকাম বোনাস ও ক্রিকেট গাইড।";
 
 export const Route = createFileRoute("/jest-buzz")({
   head: () => ({
