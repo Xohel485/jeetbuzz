@@ -27,7 +27,7 @@ export const Route = createFileRoute("/jeetbuzz-review")({
       { property: "og:image:height", content: String(IMAGES.liveCricket.h) },
       { name: "twitter:image", content: imageAbsoluteUrl("liveCricket") },
     ],
-    links: [canonicalLink("/jeetbuzz-review")...hreflangLinks("/jeetbuzz-review")],
+    links: [canonicalLink("/jeetbuzz-review"), ...hreflangLinks("/jeetbuzz-review")],
     scripts: [
       jsonLdScript(
         articleSchema({

@@ -145,7 +145,7 @@ export const Route = createFileRoute("/faq")({
       { property: "og:type", content: "article" },
       ogUrl("/faq"),
     ],
-    links: [canonicalLink("/faq")...hreflangLinks("/faq")],
+    links: [canonicalLink("/faq"), ...hreflangLinks("/faq")],
     scripts: [jsonLdScript(faqSchema(FAQS))],
   }),
   component: () => (

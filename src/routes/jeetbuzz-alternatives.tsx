@@ -167,7 +167,7 @@ export const Route = createFileRoute("/jeetbuzz-alternatives")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: HERO_IMG },
     ],
-    links: [canonicalLink(ROUTE_PATH)...hreflangLinks(ROUTE_PATH)],
+    links: [canonicalLink(ROUTE_PATH), ...hreflangLinks(ROUTE_PATH)],
     scripts: [
       jsonLdScript(organizationSchema()),
       jsonLdScript(

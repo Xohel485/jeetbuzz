@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
         imageSizes: "(max-width: 768px) 100vw, 1200px",
         fetchPriority: "high",
       },
-      canonicalLink("/")...hreflangLinks(""),
+      canonicalLink("/"), ...hreflangLinks(""),
     ],
     scripts: [
       {

@@ -37,7 +37,7 @@ export const Route = createFileRoute("/download")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("androidApp") },
     ],
-    links: [canonicalLink("/download")...hreflangLinks("/download")],
+    links: [canonicalLink("/download"), ...hreflangLinks("/download")],
     scripts: [
       jsonLdScript(organizationSchema()),
       jsonLdScript(softwareApplicationSchema()),

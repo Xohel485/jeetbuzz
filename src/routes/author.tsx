@@ -21,7 +21,7 @@ export const Route = createFileRoute("/author")({
       { property: "og:type", content: "profile" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
     scripts: [
       {
         type: "application/ld+json",
