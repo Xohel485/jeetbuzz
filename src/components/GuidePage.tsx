@@ -120,6 +120,9 @@ export function GuidePage({
             <AffiliateCTA size="lg" variant="hero" intent={ctaIntent} label={localCtaLabel} />
           </div>
           {localFaqs && <FAQAccordion faqs={localFaqs} />}
+          {localFaqs && localFaqs.length > 0 && (
+            <JsonLd data={faqSchema(localFaqs.map((f) => ({ q: f.q, a: f.a })))} />
+          )}
           {related && <RelatedGuides items={related} />}
           {breadcrumbs && breadcrumbs.length > 0 && (
             <JsonLd
