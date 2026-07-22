@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as Char2460Char2495Char2468Char2476Char2494Char2460RouteImport } from './routes/জিতবাজ'
 import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
 import { Route as WelcomeBonusRouteImport } from './routes/welcome-bonus'
 import { Route as VipProgramRouteImport } from './routes/vip-program'
@@ -49,6 +50,7 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as LiveCricketBettingRouteImport } from './routes/live-cricket-betting'
 import { Route as JitbuzzRouteImport } from './routes/jitbuzz'
 import { Route as JetbuzzRouteImport } from './routes/jetbuzz'
+import { Route as JestBuzzRouteImport } from './routes/jest-buzz'
 import { Route as JeetbuzzWithdrawalTimeRouteImport } from './routes/jeetbuzz-withdrawal-time'
 import { Route as JeetbuzzWithdrawalPendingRouteImport } from './routes/jeetbuzz-withdrawal-pending'
 import { Route as JeetbuzzSignUpRouteImport } from './routes/jeetbuzz-sign-up'
@@ -82,6 +84,8 @@ import { Route as JeetbuzzAffiliateCommissionRouteImport } from './routes/jeetbu
 import { Route as JeetbuzzAffiliateAppRouteImport } from './routes/jeetbuzz-affiliate-app'
 import { Route as JeetbuzzAccountVerificationRouteImport } from './routes/jeetbuzz-account-verification'
 import { Route as JeetbuzzAccountLockedRouteImport } from './routes/jeetbuzz-account-locked'
+import { Route as JeetbuzRouteImport } from './routes/jeetbuz'
+import { Route as JeetBuzzRouteImport } from './routes/jeet-buzz'
 import { Route as JazzcashGuideRouteImport } from './routes/jazzcash-guide'
 import { Route as IsJeetbuzzSafeRouteImport } from './routes/is-jeetbuzz-safe'
 import { Route as IosAppGuideRouteImport } from './routes/ios-app-guide'
@@ -122,6 +126,12 @@ import { Route as AppLaunchRouteImport } from './routes/app.launch'
 import { Route as CountryLangIndexRouteImport } from './routes/$country.$lang.index'
 import { Route as CountryLangSplatRouteImport } from './routes/$country.$lang.$'
 
+const Char2460Char2495Char2468Char2476Char2494Char2460Route =
+  Char2460Char2495Char2468Char2476Char2494Char2460RouteImport.update({
+    id: '/জিতবাজ',
+    path: '/জিতবাজ',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WithdrawalGuideRoute = WithdrawalGuideRouteImport.update({
   id: '/withdrawal-guide',
   path: '/withdrawal-guide',
@@ -322,6 +332,11 @@ const JetbuzzRoute = JetbuzzRouteImport.update({
   path: '/jetbuzz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JestBuzzRoute = JestBuzzRouteImport.update({
+  id: '/jest-buzz',
+  path: '/jest-buzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JeetbuzzWithdrawalTimeRoute = JeetbuzzWithdrawalTimeRouteImport.update({
   id: '/jeetbuzz-withdrawal-time',
   path: '/jeetbuzz-withdrawal-time',
@@ -494,6 +509,16 @@ const JeetbuzzAccountVerificationRoute =
 const JeetbuzzAccountLockedRoute = JeetbuzzAccountLockedRouteImport.update({
   id: '/jeetbuzz-account-locked',
   path: '/jeetbuzz-account-locked',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetbuzRoute = JeetbuzRouteImport.update({
+  id: '/jeetbuz',
+  path: '/jeetbuz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JeetBuzzRoute = JeetBuzzRouteImport.update({
+  id: '/jeet-buzz',
+  path: '/jeet-buzz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JazzcashGuideRoute = JazzcashGuideRouteImport.update({
@@ -725,6 +750,8 @@ export interface FileRoutesByFullPath {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeet-buzz': typeof JeetBuzzRoute
+  '/jeetbuz': typeof JeetbuzRoute
   '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
   '/jeetbuzz-account-verification': typeof JeetbuzzAccountVerificationRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
@@ -758,6 +785,7 @@ export interface FileRoutesByFullPath {
   '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-pending': typeof JeetbuzzWithdrawalPendingRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jest-buzz': typeof JestBuzzRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -798,6 +826,7 @@ export interface FileRoutesByFullPath {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/জিতবাজ': typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -838,6 +867,8 @@ export interface FileRoutesByTo {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeet-buzz': typeof JeetBuzzRoute
+  '/jeetbuz': typeof JeetbuzRoute
   '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
   '/jeetbuzz-account-verification': typeof JeetbuzzAccountVerificationRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
@@ -871,6 +902,7 @@ export interface FileRoutesByTo {
   '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-pending': typeof JeetbuzzWithdrawalPendingRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jest-buzz': typeof JestBuzzRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -911,6 +943,7 @@ export interface FileRoutesByTo {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/জিতবাজ': typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -953,6 +986,8 @@ export interface FileRoutesById {
   '/ios-app-guide': typeof IosAppGuideRoute
   '/is-jeetbuzz-safe': typeof IsJeetbuzzSafeRoute
   '/jazzcash-guide': typeof JazzcashGuideRoute
+  '/jeet-buzz': typeof JeetBuzzRoute
+  '/jeetbuz': typeof JeetbuzRoute
   '/jeetbuzz-account-locked': typeof JeetbuzzAccountLockedRoute
   '/jeetbuzz-account-verification': typeof JeetbuzzAccountVerificationRoute
   '/jeetbuzz-affiliate-app': typeof JeetbuzzAffiliateAppRoute
@@ -986,6 +1021,7 @@ export interface FileRoutesById {
   '/jeetbuzz-sign-up': typeof JeetbuzzSignUpRoute
   '/jeetbuzz-withdrawal-pending': typeof JeetbuzzWithdrawalPendingRoute
   '/jeetbuzz-withdrawal-time': typeof JeetbuzzWithdrawalTimeRoute
+  '/jest-buzz': typeof JestBuzzRoute
   '/jetbuzz': typeof JetbuzzRoute
   '/jitbuzz': typeof JitbuzzRoute
   '/live-cricket-betting': typeof LiveCricketBettingRoute
@@ -1026,6 +1062,7 @@ export interface FileRoutesById {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/জিতবাজ': typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -1069,6 +1106,8 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeet-buzz'
+    | '/jeetbuz'
     | '/jeetbuzz-account-locked'
     | '/jeetbuzz-account-verification'
     | '/jeetbuzz-affiliate-app'
@@ -1102,6 +1141,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-pending'
     | '/jeetbuzz-withdrawal-time'
+    | '/jest-buzz'
     | '/jetbuzz'
     | '/jitbuzz'
     | '/live-cricket-betting'
@@ -1142,6 +1182,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/জিতবাজ'
     | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -1182,6 +1223,8 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeet-buzz'
+    | '/jeetbuz'
     | '/jeetbuzz-account-locked'
     | '/jeetbuzz-account-verification'
     | '/jeetbuzz-affiliate-app'
@@ -1215,6 +1258,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-pending'
     | '/jeetbuzz-withdrawal-time'
+    | '/jest-buzz'
     | '/jetbuzz'
     | '/jitbuzz'
     | '/live-cricket-betting'
@@ -1255,6 +1299,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/জিতবাজ'
     | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -1296,6 +1341,8 @@ export interface FileRouteTypes {
     | '/ios-app-guide'
     | '/is-jeetbuzz-safe'
     | '/jazzcash-guide'
+    | '/jeet-buzz'
+    | '/jeetbuz'
     | '/jeetbuzz-account-locked'
     | '/jeetbuzz-account-verification'
     | '/jeetbuzz-affiliate-app'
@@ -1329,6 +1376,7 @@ export interface FileRouteTypes {
     | '/jeetbuzz-sign-up'
     | '/jeetbuzz-withdrawal-pending'
     | '/jeetbuzz-withdrawal-time'
+    | '/jest-buzz'
     | '/jetbuzz'
     | '/jitbuzz'
     | '/live-cricket-betting'
@@ -1369,6 +1417,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/জিতবাজ'
     | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -1411,6 +1460,8 @@ export interface RootRouteChildren {
   IosAppGuideRoute: typeof IosAppGuideRoute
   IsJeetbuzzSafeRoute: typeof IsJeetbuzzSafeRoute
   JazzcashGuideRoute: typeof JazzcashGuideRoute
+  JeetBuzzRoute: typeof JeetBuzzRoute
+  JeetbuzRoute: typeof JeetbuzRoute
   JeetbuzzAccountLockedRoute: typeof JeetbuzzAccountLockedRoute
   JeetbuzzAccountVerificationRoute: typeof JeetbuzzAccountVerificationRoute
   JeetbuzzAffiliateAppRoute: typeof JeetbuzzAffiliateAppRoute
@@ -1444,6 +1495,7 @@ export interface RootRouteChildren {
   JeetbuzzSignUpRoute: typeof JeetbuzzSignUpRoute
   JeetbuzzWithdrawalPendingRoute: typeof JeetbuzzWithdrawalPendingRoute
   JeetbuzzWithdrawalTimeRoute: typeof JeetbuzzWithdrawalTimeRoute
+  JestBuzzRoute: typeof JestBuzzRoute
   JetbuzzRoute: typeof JetbuzzRoute
   JitbuzzRoute: typeof JitbuzzRoute
   LiveCricketBettingRoute: typeof LiveCricketBettingRoute
@@ -1484,6 +1536,7 @@ export interface RootRouteChildren {
   VipProgramRoute: typeof VipProgramRoute
   WelcomeBonusRoute: typeof WelcomeBonusRoute
   WithdrawalGuideRoute: typeof WithdrawalGuideRoute
+  Char2460Char2495Char2468Char2476Char2494Char2460Route: typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   AppLaunchRoute: typeof AppLaunchRoute
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
@@ -1494,6 +1547,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/জিতবাজ': {
+      id: '/জিতবাজ'
+      path: '/জিতবাজ'
+      fullPath: '/জিতবাজ'
+      preLoaderRoute: typeof Char2460Char2495Char2468Char2476Char2494Char2460RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/withdrawal-guide': {
       id: '/withdrawal-guide'
       path: '/withdrawal-guide'
@@ -1774,6 +1834,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JetbuzzRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/jest-buzz': {
+      id: '/jest-buzz'
+      path: '/jest-buzz'
+      fullPath: '/jest-buzz'
+      preLoaderRoute: typeof JestBuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/jeetbuzz-withdrawal-time': {
       id: '/jeetbuzz-withdrawal-time'
       path: '/jeetbuzz-withdrawal-time'
@@ -2003,6 +2070,20 @@ declare module '@tanstack/react-router' {
       path: '/jeetbuzz-account-locked'
       fullPath: '/jeetbuzz-account-locked'
       preLoaderRoute: typeof JeetbuzzAccountLockedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeetbuz': {
+      id: '/jeetbuz'
+      path: '/jeetbuz'
+      fullPath: '/jeetbuz'
+      preLoaderRoute: typeof JeetbuzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jeet-buzz': {
+      id: '/jeet-buzz'
+      path: '/jeet-buzz'
+      fullPath: '/jeet-buzz'
+      preLoaderRoute: typeof JeetBuzzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/jazzcash-guide': {
@@ -2325,6 +2406,8 @@ const rootRouteChildren: RootRouteChildren = {
   IosAppGuideRoute: IosAppGuideRoute,
   IsJeetbuzzSafeRoute: IsJeetbuzzSafeRoute,
   JazzcashGuideRoute: JazzcashGuideRoute,
+  JeetBuzzRoute: JeetBuzzRoute,
+  JeetbuzRoute: JeetbuzRoute,
   JeetbuzzAccountLockedRoute: JeetbuzzAccountLockedRoute,
   JeetbuzzAccountVerificationRoute: JeetbuzzAccountVerificationRoute,
   JeetbuzzAffiliateAppRoute: JeetbuzzAffiliateAppRoute,
@@ -2358,6 +2441,7 @@ const rootRouteChildren: RootRouteChildren = {
   JeetbuzzSignUpRoute: JeetbuzzSignUpRoute,
   JeetbuzzWithdrawalPendingRoute: JeetbuzzWithdrawalPendingRoute,
   JeetbuzzWithdrawalTimeRoute: JeetbuzzWithdrawalTimeRoute,
+  JestBuzzRoute: JestBuzzRoute,
   JetbuzzRoute: JetbuzzRoute,
   JitbuzzRoute: JitbuzzRoute,
   LiveCricketBettingRoute: LiveCricketBettingRoute,
@@ -2398,6 +2482,8 @@ const rootRouteChildren: RootRouteChildren = {
   VipProgramRoute: VipProgramRoute,
   WelcomeBonusRoute: WelcomeBonusRoute,
   WithdrawalGuideRoute: WithdrawalGuideRoute,
+  Char2460Char2495Char2468Char2476Char2494Char2460Route:
+    Char2460Char2495Char2468Char2476Char2494Char2460Route,
   AppLaunchRoute: AppLaunchRoute,
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,

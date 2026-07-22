@@ -45,9 +45,6 @@
     { "source": "/jeetbuzz-affiliate-commission-rate", "destination": "/jeetbuzz-affiliate-commission", "permanent": true },
     { "source": "/jeetbuzz-apk-download", "destination": "/download", "permanent": true },
     { "source": "/jeetbuzz-download-for-android", "destination": "/download", "permanent": true },
-    { "source": "/jeetbuz", "destination": "/", "permanent": true },
-    { "source": "/jeet-buzz", "destination": "/", "permanent": true },
-    { "source": "/jest-buzz", "destination": "/", "permanent": true },
     { "source": "/jutt-buzz", "destination": "/", "permanent": true }
   ]
 }
