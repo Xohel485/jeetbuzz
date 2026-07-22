@@ -93,6 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "GetJeetBuzz. JeetBuzz Guide for BD, PK & IN" },
       { name: "description", content: "Partner guide to JeetBuzz for Bangladesh, Pakistan & India, login, signup, bonuses, app, bKash/Nagad payments and live cricket." },
       { name: "author", content: "GetJeetBuzz" },
+      { name: "keywords", content: "jeetbuzz, jeet buzz, jetbuzz, jeetbuz, jest buzz, jutt buzz, jitbuzz, জিতবাজ, জেতবাজ, জিত বাজ" },
       { property: "og:site_name", content: "GetJeetBuzz" },
       { property: "og:locale", content: "bn_BD" },
       { property: "og:locale:alternate", content: "en_US" },
