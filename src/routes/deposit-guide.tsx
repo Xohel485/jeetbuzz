@@ -285,7 +285,7 @@ export const Route = createFileRoute("/deposit-guide")({
         { to: "/bkash-guide", title: "bKash on JeetBuzz" },
         { to: "/nagad-guide", title: "Nagad on JeetBuzz" },
         { to: "/rocket-guide", title: "Rocket on JeetBuzz" },
-        { to: "/payment-methods", title: "All Payment Methods" }...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
+        { to: "/payment-methods", title: "All Payment Methods" }, ...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
       ]}
     />
   ),
