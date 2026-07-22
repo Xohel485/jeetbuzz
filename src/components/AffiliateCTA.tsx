@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GO, REL } from "@/lib/affiliate";
 import { track } from "@/lib/analytics";
-import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 type Props = {
@@ -60,7 +59,6 @@ export function AffiliateCTA({
         }}
       >
         {text}
-        <ArrowUpRight className="size-4" />
       </a>
     </Button>
   );
