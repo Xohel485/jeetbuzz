@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as Char2460Char2495Char2468Char2476Char2494Char2460RouteImport } from './routes/জিতবাজ'
 import { Route as WithdrawalGuideRouteImport } from './routes/withdrawal-guide'
 import { Route as WelcomeBonusRouteImport } from './routes/welcome-bonus'
 import { Route as VipProgramRouteImport } from './routes/vip-program'
@@ -125,6 +126,12 @@ import { Route as AppLaunchRouteImport } from './routes/app.launch'
 import { Route as CountryLangIndexRouteImport } from './routes/$country.$lang.index'
 import { Route as CountryLangSplatRouteImport } from './routes/$country.$lang.$'
 
+const Char2460Char2495Char2468Char2476Char2494Char2460Route =
+  Char2460Char2495Char2468Char2476Char2494Char2460RouteImport.update({
+    id: '/জিতবাজ',
+    path: '/জিতবাজ',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WithdrawalGuideRoute = WithdrawalGuideRouteImport.update({
   id: '/withdrawal-guide',
   path: '/withdrawal-guide',
@@ -819,6 +826,7 @@ export interface FileRoutesByFullPath {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/জিতবাজ': typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -935,6 +943,7 @@ export interface FileRoutesByTo {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/জিতবাজ': typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -1053,6 +1062,7 @@ export interface FileRoutesById {
   '/vip-program': typeof VipProgramRoute
   '/welcome-bonus': typeof WelcomeBonusRoute
   '/withdrawal-guide': typeof WithdrawalGuideRoute
+  '/জিতবাজ': typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   '/app/launch': typeof AppLaunchRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/go/affiliate': typeof GoAffiliateRoute
@@ -1172,6 +1182,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/জিতবাজ'
     | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -1288,6 +1299,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/জিতবাজ'
     | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -1405,6 +1417,7 @@ export interface FileRouteTypes {
     | '/vip-program'
     | '/welcome-bonus'
     | '/withdrawal-guide'
+    | '/জিতবাজ'
     | '/app/launch'
     | '/blog/$slug'
     | '/go/affiliate'
@@ -1523,6 +1536,7 @@ export interface RootRouteChildren {
   VipProgramRoute: typeof VipProgramRoute
   WelcomeBonusRoute: typeof WelcomeBonusRoute
   WithdrawalGuideRoute: typeof WithdrawalGuideRoute
+  Char2460Char2495Char2468Char2476Char2494Char2460Route: typeof Char2460Char2495Char2468Char2476Char2494Char2460Route
   AppLaunchRoute: typeof AppLaunchRoute
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
@@ -1533,6 +1547,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/জিতবাজ': {
+      id: '/জিতবাজ'
+      path: '/জিতবাজ'
+      fullPath: '/জিতবাজ'
+      preLoaderRoute: typeof Char2460Char2495Char2468Char2476Char2494Char2460RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/withdrawal-guide': {
       id: '/withdrawal-guide'
       path: '/withdrawal-guide'
@@ -2461,6 +2482,8 @@ const rootRouteChildren: RootRouteChildren = {
   VipProgramRoute: VipProgramRoute,
   WelcomeBonusRoute: WelcomeBonusRoute,
   WithdrawalGuideRoute: WithdrawalGuideRoute,
+  Char2460Char2495Char2468Char2476Char2494Char2460Route:
+    Char2460Char2495Char2468Char2476Char2494Char2460Route,
   AppLaunchRoute: AppLaunchRoute,
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,

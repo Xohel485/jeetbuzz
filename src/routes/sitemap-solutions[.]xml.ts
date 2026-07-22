@@ -48,6 +48,11 @@ const SOLUTIONS = [
   "/jeetbuzz-minimum-deposit",
   // Phase B batch 5: cricket + brand consolidation
   "/jeetbuzz-live-cricket",
+  // Phase C: expanded misspelling landing pages
+  "/jeet-buzz",
+  "/jeetbuz",
+  "/jest-buzz",
+  "/জিতবাজ",
 ];
 
 export const Route = createFileRoute("/sitemap-solutions.xml")({
