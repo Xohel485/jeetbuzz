@@ -26,7 +26,7 @@ export const GO_DESTINATIONS: Record<GoIntent, string> = {
   affiliate: AFFILIATE.partners,
 };
 
-export const LAST_VERIFIED = "20 June 2026";
+export const LAST_VERIFIED = "22 July 2026";
 export const SITE_NAME = "GetJeetBuzz";
 export const SITE_URL = "https://getjeetbuzz.com";
 export const SITE_TAGLINE =

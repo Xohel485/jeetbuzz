@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { IMAGES, imageUrl } from "@/lib/images";
@@ -69,7 +68,7 @@ export function Hero() {
               className="min-h-[60px] px-10 text-base md:min-h-[68px] md:px-12 md:text-lg"
             >
               <Link to="/login-guide">
-                {t("hero.cta.login")} <ArrowRight className="size-4" />
+                {t("hero.cta.login")}
               </Link>
             </Button>
           </div>

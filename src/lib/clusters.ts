@@ -66,10 +66,10 @@ export const PROBLEMS_CLUSTER: RelatedItem[] = [
 ];
 
 export const HUBS: RelatedItem[] = [
-  { to: "/help", title: "Help Center", desc: "Support pillar, login, KYC, deposits, withdrawals, appeals." },
-  { to: "/payments", title: "Payments Hub", desc: "Every deposit and withdrawal method across BD, PK, IN." },
-  { to: "/bonuses", title: "Bonuses Hub", desc: "All active promos, promo codes, refer bonus and rollover." },
-  { to: "/games", title: "Games Hub", desc: "Live cricket, casino, crash and slots, one map." },
+  { to: "/help", title: "সমস্যার সমাধান", desc: "লগইন আটকে গেছে, OTP আসছে না, KYC pending — real ticket templates দিয়ে fix।" },
+  { to: "/payments", title: "ডিপোজিট ও উইথড্র", desc: "bKash, Nagad, Rocket, UPI, EasyPaisa — কোনটায় কত মিনিটে টাকা আসে, actual limits।" },
+  { to: "/bonuses", title: "বোনাস ও প্রোমো", desc: "কোন welcome bonus real, rollover কত, refer কোড কীভাবে কাজ করে — সৎ ব্যাখ্যা।" },
+  { to: "/games", title: "কী খেলা যায়", desc: "Live cricket exchange, Aviator, slot, casino — কোথায় edge, কোথায় house-heavy।" },
 ];
 
 export const BRAND_CLUSTER: RelatedItem[] = [
