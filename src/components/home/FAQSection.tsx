@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { CheckCircle2 } from "lucide-react";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { SectionHeader } from "./SectionHeader";
 
@@ -30,11 +29,8 @@ export default function FAQSection() {
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {FAQ.map((f) => (
             <div key={f.q} className="glass p-6">
-              <h3 className="flex items-start gap-2.5 text-base font-semibold leading-snug">
-                <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" />
-                {f.q}
-              </h3>
-              <p className="mt-3 pl-[30px] text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+              <h3 className="text-base font-semibold leading-snug">{f.q}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
             </div>
           ))}
         </div>

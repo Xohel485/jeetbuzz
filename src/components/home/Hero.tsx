@@ -1,19 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Languages, Headphones, Trophy, ShieldCheck as ShieldIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { Button } from "@/components/ui/button";
 import { IMAGES, imageUrl } from "@/lib/images";
-import { MARKETS, JEETBUZZ_STATS } from "@/lib/affiliate";
+import { MARKETS } from "@/lib/affiliate";
 import { useI18n } from "@/lib/i18n";
-
-function TrustPill({ label }: { label: string }) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-muted-foreground">
-      <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
-      {label}
-    </span>
-  );
-}
 
 export function Hero() {
   const { t } = useI18n();
@@ -93,40 +84,6 @@ export function Hero() {
               </span>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="container-pro -mt-10 md:-mt-16">
-        <div className="grid grid-cols-1 gap-3 min-[340px]:grid-cols-2 sm:gap-4 md:gap-5">
-          {JEETBUZZ_STATS.map((s, i) => {
-            const Icon = [ShieldIcon, Languages, Headphones, Trophy][i] ?? ShieldIcon;
-            return (
-              <div
-                key={s.label}
-                className="glass group relative flex h-full flex-col items-start justify-center gap-3 rounded-2xl border border-white/8 bg-background/70 p-5 transition-colors hover:border-primary/30 md:gap-4 md:p-6"
-              >
-                <span className="inline-flex size-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
-                  <Icon className="size-5 text-primary" strokeWidth={1.75} />
-                </span>
-                <div className="space-y-1.5">
-                  <p className="gold-text text-[28px] font-bold leading-[1.05] tracking-tight md:text-[34px]">
-                    {s.value}
-                  </p>
-                  <p className="text-[15px] leading-[1.4] text-muted-foreground md:text-base">
-                    {s.label}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="container-pro mt-12 md:mt-16">
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
-          <TrustPill label="Verified JeetBuzz links" />
-          <TrustPill label="Transparent affiliate disclosure" />
-          <TrustPill label="Bengali · English · Hindi · Urdu" />
         </div>
       </section>
     </>
