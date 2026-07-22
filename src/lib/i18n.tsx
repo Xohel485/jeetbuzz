@@ -90,14 +90,14 @@ const en: Dict = {
   "header.lang.aria": "Change language",
 
   // Hero
-  "hero.eyebrow": "JeetBuzz · Bangladesh · Pakistan · India",
-  "hero.title.lead": "JeetBuzz Login, Signup & Bonus Guide —",
-  "hero.title.highlight": "Bangladesh, Pakistan & India",
+  "hero.eyebrow": "JeetBuzz · বাংলাদেশ · পাকিস্তান · ভারত",
+  "hero.title.lead": "জিতবাজে অ্যাকাউন্ট খুলুন,",
+  "hero.title.highlight": "বাংলায় লাইভ ক্রিকেট বেটিং",
   "hero.subtitle":
-    "JeetBuzz makes it simple, open a JeetBuzz account in 3 minutes, deposit from 200 BDT via bKash, Nagad or UPI, and bet live on BPL, IPL and PSL. Step-by-step JeetBuzz login, JeetBuzz APK and JeetBuzz withdrawal guides written by South-Asian punters. Curaçao-licensed JeetBuzz partner with 24/7 Bengali support.",
-  "hero.cta.join": "Join JeetBuzz Now",
-  "hero.cta.login": "JeetBuzz Login",
-  "hero.markets.label": "Available in:",
+    "bKash, Nagad বা UPI দিয়ে ২০০ টাকা থেকে ডিপোজিট করে BPL, IPL, PSL-এ লাইভ বেট। JeetBuzz-এর official signup ও login লিংক, APK download, withdrawal timing, bonus rollover — সব একটাই জায়গায়। Curaçao-licensed, বাংলা সাপোর্ট।",
+  "hero.cta.join": "এখনই যোগ দিন",
+  "hero.cta.login": "লগইন করুন",
+  "hero.markets.label": "উপলব্ধ:",
 
   // Footer
   "footer.markets": "JeetBuzz markets:",
