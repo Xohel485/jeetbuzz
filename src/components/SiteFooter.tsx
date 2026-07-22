@@ -294,6 +294,14 @@ export function SiteFooter() {
             .
           </p>
         </div>
+        <div className="mt-6 border-t border-white/5 pt-6 text-center text-xs leading-relaxed text-muted-foreground md:text-left">
+          <p>
+            getjeetbuzz.com JeetBuzz-এর verified affiliate partner। আমরা signup ও deposit থেকে commission আয় করি, কিন্তু এই সাইটটি JeetBuzz-এর official website নয়। আমরা কখনো JeetBuzz account credentials, password বা OTP জিজ্ঞেস করি না।
+          </p>
+          <p className="mt-2 opacity-80">
+            getjeetbuzz.com is a verified affiliate partner of JeetBuzz. We earn a commission on referrals, but this site is not the official JeetBuzz website. We never ask for JeetBuzz account credentials, passwords or OTPs.
+          </p>
+        </div>
       </div>
     </footer>
   );
