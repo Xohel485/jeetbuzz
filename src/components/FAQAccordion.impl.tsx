@@ -4,8 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { JsonLd } from "./JsonLd";
-import { faqSchema } from "@/lib/schema";
 import { track } from "@/lib/analytics";
 import { useI18n } from "@/lib/i18n";
 
@@ -46,7 +44,6 @@ export default function FAQAccordionImpl({
           </AccordionItem>
         ))}
       </Accordion>
-      <JsonLd data={faqSchema(faqs)} />
     </section>
   );
 }

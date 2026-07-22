@@ -120,6 +120,30 @@ export function GuidePage({
             <AffiliateCTA size="lg" variant="hero" intent={ctaIntent} label={localCtaLabel} />
           </div>
           {localFaqs && <FAQAccordion faqs={localFaqs} />}
+          {(() => {
+            // Emit a single FAQPage JSON-LD that unions every locale's FAQs
+            // (deduped by question text). Rich Results Test then sees every
+            // Q&A the page can render, not just the SSR-default locale.
+            const all: FAQItem[] = [];
+            const seen = new Set<string>();
+            const push = (list?: FAQItem[]) => {
+              if (!list) return;
+              for (const f of list) {
+                const key = f.q.trim();
+                if (!key || seen.has(key)) continue;
+                if (!f.a || !f.a.trim()) continue;
+                seen.add(key);
+                all.push({ q: key, a: f.a.trim() });
+              }
+            };
+            push(faqs);
+            if (faqsByLocale) {
+              for (const k of Object.keys(faqsByLocale) as Locale[]) {
+                push(faqsByLocale[k]);
+              }
+            }
+            return all.length > 0 ? <JsonLd data={faqSchema(all)} /> : null;
+          })()}
           {related && <RelatedGuides items={related} />}
           {breadcrumbs && breadcrumbs.length > 0 && (
             <JsonLd
