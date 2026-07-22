@@ -34,6 +34,7 @@ const FAQS = [
   { q: "Is USDT supported?", a: "Yes, both TRC20 and BEP20 networks." },
   { q: "How do I claim the welcome bonus?", a: "Opt in BEFORE depositing, then make a qualifying deposit. Read the bonus terms in the cashier." },
   { q: "Why was my bonus voided?", a: "Most common reasons: max bet exceeded, betting on excluded games, or withdrawing before wagering completed." },
+  { q: "Is 'JetBuzz' the same as 'JeetBuzz'?", a: "Yes. Many users search JetBuzz, Jeet Buzz, JeetBuz, JitBuzz or Jutt Buzz. These are all common misspellings or phonetic variants of the same JeetBuzz brand. There is no separate operator under those spellings, and getjeetbuzz.com covers the correct information regardless of which variant you searched." },
 ];
 
 const FAQS_BN: FAQItem[] = [
