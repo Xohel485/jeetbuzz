@@ -121,9 +121,6 @@ export function GuidePage({
           </div>
           {localFaqs && <FAQAccordion faqs={localFaqs} />}
           {related && <RelatedGuides items={related} />}
-          {localFaqs && localFaqs.length > 0 && (
-            <JsonLd data={faqSchema(localFaqs.map((f) => ({ q: f.q, a: f.a })))} />
-          )}
           {breadcrumbs && breadcrumbs.length > 0 && (
             <JsonLd
               data={breadcrumbSchema(
