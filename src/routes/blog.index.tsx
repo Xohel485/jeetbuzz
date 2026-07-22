@@ -58,6 +58,9 @@ function BlogIndex() {
                 <span className="inline-flex items-center gap-1">
                   <Clock className="size-3" /> {p.readTime}
                 </span>
+                <span className="ml-auto rounded-full border border-primary/30 px-2 py-0.5 text-[10px] uppercase tracking-wider text-primary/80">
+                  {p.category}
+                </span>
               </div>
               <h2 className="mt-3 text-lg font-semibold leading-snug">{p.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
