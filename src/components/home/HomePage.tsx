@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { PageShell } from "@/components/PageShell";
 import { Hero } from "./Hero";
 import { HubLinksStrip } from "./HubLinksStrip";
+import { AuthorByline } from "@/components/AuthorByline";
 import { LazyOnVisible } from "@/components/LazyOnVisible";
 
 /**
@@ -19,6 +20,13 @@ export function HomePage({ localExtras }: { localExtras?: ReactNode } = {}) {
           always be the first content section after the header. Never wrap
           in Suspense/LazyOnVisible. */}
       <Hero />
+
+      {/* Editorial provenance: author, reviewer, last-updated, policy links.
+          Rendered eagerly in initial HTML so Google sees the E-E-A-T signals
+          without waiting for lazy chunks. */}
+      <section className="container-pro mt-6">
+        <AuthorByline />
+      </section>
 
       {/* Batch 7: eager internal-link strip → hubs (Help/Payments/Bonuses/Games). */}
       <HubLinksStrip />
