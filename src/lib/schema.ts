@@ -76,13 +76,19 @@ export const articleSchema = (a: {
   headline: a.headline,
   description: a.description,
   mainEntityOfPage: url(a.path),
-  image: a.image,
+  image: a.image ?? `${SITE_ORIGIN}/img/jeetbuzz-affiliate-program-1200.webp`,
+  inLanguage: "bn-BD",
   datePublished: a.datePublished ?? "2026-06-01",
   dateModified: a.dateModified ?? "2026-06-20",
-  author: { "@type": "Organization", name: a.author ?? SITE_NAME },
+  author: {
+    "@type": "Organization",
+    name: a.author ?? SITE_NAME,
+    url: SITE_ORIGIN,
+  },
   publisher: {
     "@type": "Organization",
     name: SITE_NAME,
+    url: SITE_ORIGIN,
     logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/img/jeetbuzz-affiliate-program-224.webp` },
   },
 });
