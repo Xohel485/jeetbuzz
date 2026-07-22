@@ -28,6 +28,7 @@ export const Route = createFileRoute("/help")({
       breadcrumbs={[{ name: "Help", path: PATH }]}
       articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
       body={[
+        "বাংলাদেশে JeetBuzz ব্যবহার করতে গিয়ে লগইন সমস্যা, KYC জটিলতা বা উইথড্র আটকে যাওয়ার অভিজ্ঞতা অনেকেরই হয়। কেউ পাসওয়ার্ড রিসেট করতে গিয়ে OTP পান না, কেউ bKash দিয়ে ডিপোজিট করেছেন কিন্তু ব্যালেন্স আপডেট হয়নি, আবার কারও অ্যাকাউন্ট হঠাৎ লক হয়ে গেছে নাম-মিসম্যাচের কারণে। এই হেল্প সেন্টারে আমরা এই বাস্তব সমস্যাগুলোকেই কেন্দ্রে রেখেছি, প্রতিটি ইস্যুর জন্য আলাদা গাইড লিখেছি যেখানে সমস্যার আসল কারণ, ধাপে ধাপে সমাধান, এবং সাপোর্টে যাওয়ার আগে যে প্রমাণগুলো হাতে রাখা দরকার সব বলা আছে। লাইভ চ্যাটে অপেক্ষা না করে নিজেই বেশিরভাগ সমস্যা মিটিয়ে ফেলা যায় যদি সঠিক গাইড অনুসরণ করেন। নিচের কার্ড থেকে আপনার সমস্যার সবচেয়ে কাছের বিষয়টি বেছে নিন, প্রয়োজন হলে পেমেন্টস বা বোনাস হাব-এ চলে যান।",
         "## What this page solves",
         "Most JeetBuzz support tickets fall into six categories: cannot log in, forgot password, account locked or restricted, deposit debited but not credited, withdrawal pending too long, and how to formally close an account. The pages linked below walk each one end to end, no live chat wait needed for the common cases.",
         "## Recent updates",
