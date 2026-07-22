@@ -28,6 +28,7 @@ export const Route = createFileRoute("/payments")({
       breadcrumbs={[{ name: "Payments", path: PATH }]}
       articlePath={PATH} articleHeadline={TITLE} articleDescription={DESC}
       body={[
+        "bKash, Nagad বা Rocket দিয়ে ডিপোজিট করার সময় যে সমস্যাগুলো সবচেয়ে বেশি হয় তার বেশিরভাগই আসলে কোনো বাগ নয়, ছোট একটা ভুল ধাপ বা নাম-মিসম্যাচ। ওয়ালেটে যে নাম রেজিস্টার করা আছে সেটার সঙ্গে JeetBuzz প্রোফাইলের নাম না মিললে টাকা কেটে নিলেও ব্যালেন্স ঢোকে না, আবার ভুল রেফারেন্স নম্বর দিলে ট্রানজ্যাকশন ম্যানুয়াল রিভিউতে চলে যায়। উইথড্রয়ের ক্ষেত্রেও প্রথম কেওয়াইসি সম্পন্ন না থাকলে সময় বেড়ে যায় স্বাভাবিকের চেয়ে অনেক বেশি। এই হাবে বাংলাদেশ, পাকিস্তান আর ভারতের প্রতিটি লোকাল রেল ধরে ধরে গাইড দিয়েছি, মিনিমাম-ম্যাক্সিমাম লিমিট, সাধারণ কোন সমস্যা কেন হয় এবং সাপোর্টে কী কী প্রমাণ পাঠাতে হবে সব একই জায়গায়। ডিপোজিটের আগে নিজের ওয়ালেট, নাম আর কেওয়াইসি স্ট্যাটাস মিলিয়ে নিলে ৯০ শতাংশ সমস্যা এমনিতেই এড়ানো যায়।",
         "## Choose by country",
         "JeetBuzz supports the dominant local rail in each market. Pick your country below and jump to the guide with screenshots.",
         "### Bangladesh",
