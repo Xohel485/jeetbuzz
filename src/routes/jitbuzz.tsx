@@ -5,8 +5,9 @@ import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 
-const PATH = "/";
 const ROUTE = "/jitbuzz";
+// Self-referencing canonical — each misspelling page is unique long-form content.
+const PATH = ROUTE;
 const TITLE = "Jitbuzz নাকি JeetBuzz? হিন্দি ট্রান্সলিটারেশন ও সঠিক ব্র্যান্ড";
 const DESC = "‘Jitbuzz’ হিন্দি/উর্দু উচ্চারণ থেকে আসা ভুল বানান। আসল ব্র্যান্ড JeetBuzz — এই গাইডে সম্পূর্ণ অ্যাক্সেস, বোনাস, পেমেন্ট ও ক্রিকেট বেটিং তথ্য।";
 
