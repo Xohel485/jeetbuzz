@@ -43,6 +43,17 @@ export const Route = createFileRoute("/")({
         imageSizes: "(max-width: 768px) 100vw, 1200px",
         fetchPriority: "high",
       },
+      // Mobile-specific WebP preload fallback for browsers that skip AVIF
+      // imageSrcSet preloads (older Safari, some Chromium builds). Ensures the
+      // 480w hero variant reaches the mobile LCP path even without AVIF.
+      {
+        rel: "preload",
+        as: "image",
+        href: imageUrl("hero", 480, "webp"),
+        type: "image/webp",
+        media: "(max-width: 640px)",
+        fetchPriority: "high",
+      },
       canonicalLink("/"), ...hreflangLinks(""),
     ],
     scripts: [
