@@ -34,6 +34,7 @@ const FAQS = [
   { q: "Is USDT supported?", a: "Yes, both TRC20 and BEP20 networks." },
   { q: "How do I claim the welcome bonus?", a: "Opt in BEFORE depositing, then make a qualifying deposit. Read the bonus terms in the cashier." },
   { q: "Why was my bonus voided?", a: "Most common reasons: max bet exceeded, betting on excluded games, or withdrawing before wagering completed." },
+  { q: "Is 'JetBuzz' the same as 'JeetBuzz'?", a: "Yes. Many users search JetBuzz, Jeet Buzz, JeetBuz, JitBuzz or Jutt Buzz. These are all common misspellings or phonetic variants of the same JeetBuzz brand. There is no separate operator under those spellings, and getjeetbuzz.com covers the correct information regardless of which variant you searched." },
 ];
 
 const FAQS_BN: FAQItem[] = [
@@ -67,6 +68,8 @@ const FAQS_BN: FAQItem[] = [
   { q: "USDT কি সমর্থিত?", a: "হ্যাঁ. TRC20 ও BEP20 উভয় নেটওয়ার্কে।" },
   { q: "ওয়েলকাম বোনাস কীভাবে নেব?", a: "ডিপোজিটের আগে অপ্ট-ইন করুন, তারপর যোগ্য ডিপোজিট করুন। ক্যাশিয়ারের বোনাস শর্ত পড়ুন।" },
   { q: "আমার বোনাস কেন বাতিল হলো?", a: "সাধারণ কারণ: max bet সীমা অতিক্রম, exclude করা গেমে বাজি, বা wagering শেষ হওয়ার আগেই উইথড্র।" },
+  { q: "\"JetBuzz\" কি \"JeetBuzz\"-এর মতোই?", a: "হ্যাঁ, অনেকে JetBuzz, Jeet Buzz বা JeetBuz লিখে সার্চ করেন — এগুলো সবই JeetBuzz-এর ভিন্ন বানান। getjeetbuzz.com-এ সঠিক তথ্য পাবেন।" },
+  { q: "\"জিত বাজ\" বা \"জেত বাজ\" কি একই?", a: "হ্যাঁ, বাংলায় JeetBuzz-কে অনেকে জিতবাজ, জেতবাজ বা জিত বাজ লেখেন। এগুলো একই ব্র্যান্ডের ভিন্ন বানান, আলাদা কোনো সাইট নয়।" },
 ];
 
 const FAQS_UR: FAQItem[] = [
