@@ -16,7 +16,7 @@ export const Route = createFileRoute("/registration-guide")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("registration") },
     ],
-    links: [canonicalLink("/registration-guide")...hreflangLinks("/registration-guide")],
+    links: [canonicalLink("/registration-guide"), ...hreflangLinks("/registration-guide")],
     scripts: [
       jsonLdScript(
         articleSchema({

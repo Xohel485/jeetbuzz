@@ -17,7 +17,7 @@ export const Route = createFileRoute("/help")({
       { property: "og:type", content: "website" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/help")({
         "- [Review Policy](/review-policy), how our editorial reviews are produced.",
         "- [Update Policy](/update-policy), how and when guides are refreshed.",
       ]}
-      related={[...PROBLEMS_CLUSTER...HELP_CLUSTER]}
+      related={[...PROBLEMS_CLUSTER, ...HELP_CLUSTER]}
       faqs={[
         { q: "Where is JeetBuzz customer support?", a: "24/7 live chat on the official site is the primary channel. There is no publicly listed support phone number, and no support agent will ever ask for your password, wallet PIN or OTP." },
         { q: "How long does JeetBuzz take to reply?", a: "Live chat is usually answered within a few minutes during peak hours. Complex disputes (KYC appeals, name mismatches) can take longer because they are escalated to a payments or risk team." },

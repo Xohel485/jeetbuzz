@@ -33,7 +33,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "twitter:card", content: "summary_large_image" },
         ogUrl(path),
       ],
-      links: [canonicalLink(path)...hreflangLinks(path)],
+      links: [canonicalLink(path), ...hreflangLinks(path)],
       scripts: post
         ? [
             {

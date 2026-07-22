@@ -15,7 +15,7 @@ export const Route = createFileRoute("/apk-download-guide")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("androidApp") },
     ],
-    links: [canonicalLink("/apk-download-guide")...hreflangLinks("/apk-download-guide")],
+    links: [canonicalLink("/apk-download-guide"), ...hreflangLinks("/apk-download-guide")],
     scripts: [
       jsonLdScript(softwareApplicationSchema()),
       jsonLdScript(

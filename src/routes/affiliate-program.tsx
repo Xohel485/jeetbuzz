@@ -599,7 +599,7 @@ export const Route = createFileRoute("/affiliate-program")({
       { name: "twitter:image", content: imageAbsoluteUrl("affiliate") },
       ogUrl(PAGE_PATH),
     ],
-    links: [canonicalLink(PAGE_PATH)...hreflangLinks(PAGE_PATH)],
+    links: [canonicalLink(PAGE_PATH), ...hreflangLinks(PAGE_PATH)],
     scripts: [
       {
         type: "application/ld+json",

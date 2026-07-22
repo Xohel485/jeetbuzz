@@ -18,7 +18,7 @@ export const Route = createFileRoute("/cricket-exchange-guide")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (

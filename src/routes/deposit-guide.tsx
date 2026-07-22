@@ -19,7 +19,7 @@ export const Route = createFileRoute("/deposit-guide")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
@@ -285,7 +285,7 @@ export const Route = createFileRoute("/deposit-guide")({
         { to: "/bkash-guide", title: "bKash on JeetBuzz" },
         { to: "/nagad-guide", title: "Nagad on JeetBuzz" },
         { to: "/rocket-guide", title: "Rocket on JeetBuzz" },
-        { to: "/payment-methods", title: "All Payment Methods" }...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
+        { to: "/payment-methods", title: "All Payment Methods" }, ...siblings(SIGNUP_CLUSTER, "/deposit-guide"),
       ]}
     />
   ),

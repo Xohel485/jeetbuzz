@@ -20,7 +20,7 @@ export const Route = createFileRoute("/bonuses")({
       { property: "og:type", content: "website" },
       ogUrl(CANONICAL_PATH),
     ],
-    links: [canonicalLink(CANONICAL_PATH)...hreflangLinks(CANONICAL_PATH)],
+    links: [canonicalLink(CANONICAL_PATH), ...hreflangLinks(CANONICAL_PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (

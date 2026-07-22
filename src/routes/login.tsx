@@ -31,7 +31,7 @@ export const Route = createFileRoute("/login")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("loginInterface") },
     ],
-    links: [canonicalLink("/login")...hreflangLinks("/login")],
+    links: [canonicalLink("/login"), ...hreflangLinks("/login")],
     scripts: [
       jsonLdScript(organizationSchema()),
       jsonLdScript(

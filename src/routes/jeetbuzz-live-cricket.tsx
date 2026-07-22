@@ -17,7 +17,7 @@ export const Route = createFileRoute("/jeetbuzz-live-cricket")({
       { property: "og:type", content: "article" },
       ogUrl(PATH),
     ],
-    links: [canonicalLink(PATH)...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
     scripts: [jsonLdScript(articleSchema({ headline: TITLE, description: DESC, path: PATH }))],
   }),
   component: () => (
@@ -117,7 +117,7 @@ export const Route = createFileRoute("/jeetbuzz-live-cricket")({
       related={[
         { to: "/live-cricket-betting", title: "Live Cricket Betting Guide", desc: "Deeper walkthrough of markets and league schedules." },
         { to: "/cricket-exchange-guide", title: "Cricket Exchange", desc: "Peer-to-peer exchange pricing." },
-        { to: "/sports-betting", title: "Sports Betting", desc: "Pre-match and non-cricket coverage." }...HUBS,
+        { to: "/sports-betting", title: "Sports Betting", desc: "Pre-match and non-cricket coverage." }, ...HUBS,
       ]}
       faqs={[
         { q: "Which JeetBuzz live cricket market has the tightest odds?", a: "Match Winner, deepest liquidity, lowest commission, updates every ball. Pre-toss and inside the first 3 overs give the fairest price." },

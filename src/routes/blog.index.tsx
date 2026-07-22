@@ -14,7 +14,7 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:type", content: "website" },
       ogUrl("/blog"),
     ],
-    links: [canonicalLink("/blog")...hreflangLinks("/blog")],
+    links: [canonicalLink("/blog"), ...hreflangLinks("/blog")],
     scripts: [
       jsonLdScript({
         "@context": "https://schema.org",
