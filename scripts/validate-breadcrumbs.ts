@@ -33,41 +33,69 @@ async function extractBreadcrumbJsonLd(tab: Page): Promise<BreadcrumbItem[]> {
     const scripts = document.querySelectorAll<HTMLScriptElement>(
       'script[type="application/ld+json"]',
     );
-    const pick = (node: unknown): unknown => {
-      if (!node || typeof node !== "object") return null;
-      const obj = node as Record<string, unknown>;
-      if (obj["@type"] === "BreadcrumbList") return obj;
-      const graph = obj["@graph"];
-      if (Array.isArray(graph)) {
-        const bc = graph.find(
-          (i) => i && typeof i === "object" && (i as Record<string, unknown>)["@type"] === "BreadcrumbList",
-        );
-        if (bc) return bc;
+    // Recursively walk any JSON-LD shape and collect every BreadcrumbList
+    // node. Handles: top-level object, top-level array, nested @graph,
+    // deeply nested arrays/objects, and mixed shapes across multiple
+    // <script type="application/ld+json"> tags.
+    const collectBreadcrumbLists = (node: unknown, out: Record<string, unknown>[]) => {
+      if (!node) return;
+      if (Array.isArray(node)) {
+        for (const child of node) collectBreadcrumbLists(child, out);
+        return;
       }
-      return null;
-    };
-    for (const script of Array.from(scripts)) {
-      try {
-        const parsed = JSON.parse(script.textContent ?? "null");
-        const list = Array.isArray(parsed)
-          ? parsed.map(pick).find(Boolean)
-          : pick(parsed);
-        if (list) {
-          const items = (list as { itemListElement?: unknown[] }).itemListElement ?? [];
-          return items.map((raw) => {
-            const el = raw as Record<string, unknown>;
-            const item = (el.item ?? {}) as Record<string, unknown>;
-            return {
-              name: String(el.name ?? item.name ?? "").trim(),
-              url: String(item["@id"] ?? item.url ?? el.url ?? "").trim(),
-            };
-          });
+      if (typeof node !== "object") return;
+      const obj = node as Record<string, unknown>;
+      const type = obj["@type"];
+      const isBreadcrumb =
+        type === "BreadcrumbList" ||
+        (Array.isArray(type) && type.includes("BreadcrumbList"));
+      if (isBreadcrumb && Array.isArray(obj.itemListElement)) {
+        out.push(obj);
+      }
+      // Recurse into @graph and any other object/array values so we don't
+      // miss BreadcrumbList nodes buried under custom wrappers.
+      for (const value of Object.values(obj)) {
+        if (value && (typeof value === "object" || Array.isArray(value))) {
+          collectBreadcrumbLists(value, out);
         }
+      }
+    };
+
+    const lists: Record<string, unknown>[] = [];
+    for (const script of Array.from(scripts)) {
+      const raw = (script.textContent ?? "").trim();
+      if (!raw) continue;
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(raw);
       } catch {
-        /* ignore malformed blocks */
+        // Malformed or non-JSON text (comments, HTML fragments) — skip.
+        continue;
+      }
+      try {
+        collectBreadcrumbLists(parsed, lists);
+      } catch {
+        /* defensive: ignore any traversal error on hostile shapes */
       }
     }
-    return [];
+
+    // Prefer the first BreadcrumbList that actually has items.
+    const chosen = lists.find(
+      (l) => Array.isArray(l.itemListElement) && (l.itemListElement as unknown[]).length > 0,
+    );
+    if (!chosen) return [];
+
+    const items = (chosen.itemListElement as unknown[]) ?? [];
+    return items.map((raw) => {
+      const el = (raw ?? {}) as Record<string, unknown>;
+      const item = (el.item ?? {}) as Record<string, unknown> | string;
+      const itemObj = typeof item === "object" && item !== null ? (item as Record<string, unknown>) : {};
+      const itemStr = typeof item === "string" ? item : "";
+      return {
+        name: String(el.name ?? itemObj.name ?? "").trim(),
+        url: String(itemObj["@id"] ?? itemObj.url ?? el.url ?? itemStr ?? "").trim(),
+      };
+    });
   });
 }
 
