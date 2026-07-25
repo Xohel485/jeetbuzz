@@ -134,6 +134,20 @@ async function validateBreadcrumbs(): Promise<void> {
       try {
         await tab.goto(url, { waitUntil: "networkidle0", timeout: 45_000 });
 
+        // tsx/esbuild wraps functions with a `__name(...)` helper via
+        // --keep-names. When Puppeteer serializes the callback we pass to
+        // page.evaluate(), those `__name` calls travel into the browser
+        // context where the helper is undefined. Define a no-op shim so
+        // the evaluated code runs.
+        await tab.evaluateOnNewDocument(() => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (window as unknown as { __name: (fn: any) => any }).__name = (fn) => fn;
+        });
+        await tab.evaluate(() => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (window as unknown as { __name: (fn: any) => any }).__name = (fn) => fn;
+        });
+
         const jsonLD = await extractBreadcrumbJsonLd(tab);
         const onPage = await extractOnPageBreadcrumbs(tab);
         const mismatches: string[] = [];
