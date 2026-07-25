@@ -121,7 +121,10 @@ async function extractOnPageBreadcrumbs(tab: Page): Promise<BreadcrumbItem[]> {
 }
 
 async function validateBreadcrumbs(): Promise<void> {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
   const results: PageResult[] = [];
 
   try {
