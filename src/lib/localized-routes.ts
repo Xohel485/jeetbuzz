@@ -88,6 +88,10 @@ import { Route as DepositProblemRoute } from "@/routes/jeetbuzz-deposit-problem"
 // Phase B batch 1: brand variants
 import { Route as JitbuzzRoute } from "@/routes/jitbuzz";
 import { Route as JetbuzzRoute } from "@/routes/jetbuzz";
+import { Route as JeetBuzzHyphenRoute } from "@/routes/jeet-buzz";
+import { Route as JeetbuzRoute } from "@/routes/jeetbuz";
+import { Route as JestBuzzRoute } from "@/routes/jest-buzz";
+import { Route as JitobajBnRoute } from "@/routes/জিতবাজ";
 import { Route as JeetbuzzComLoginRoute } from "@/routes/jeetbuzz-com-login";
 import { Route as JeetbuzzSignUpRoute } from "@/routes/jeetbuzz-sign-up";
 // Phase B batch 2: problems cluster
