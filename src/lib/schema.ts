@@ -155,6 +155,21 @@ export function hreflangLinks(slug = "") {
   ] as const;
 }
 
+/**
+ * Single-locale hreflang cluster for pages that only exist in one language
+ * (e.g. Bengali-only misspelling landing pages). Emits `x-default` and the
+ * given locale, both pointing at the page's own URL. Avoids broken
+ * reciprocal links to non-existent locale variants, which would otherwise
+ * cause Google to drop the whole hreflang cluster.
+ */
+export function hreflangSelfOnly(path: string, hrefLang = "bn-BD") {
+  const self = url(path);
+  return [
+    { rel: "alternate", hrefLang: "x-default", href: self },
+    { rel: "alternate", hrefLang, href: self },
+  ] as const;
+}
+
 export function ogUrl(path: string) {
   return { property: "og:url", content: url(path) } as const;
 }
