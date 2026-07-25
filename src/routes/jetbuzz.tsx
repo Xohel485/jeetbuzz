@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangSelfOnly, ogUrl } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/jetbuzz")({
       { name: "robots", content: "index,follow" },
       ogUrl(ROUTE),
     ],
-    links: [canonicalLink(PATH), ...hreflangLinks(PATH)],
+    links: [canonicalLink(PATH), ...hreflangSelfOnly(PATH)],
   }),
   component: () => (
     <GuidePage
