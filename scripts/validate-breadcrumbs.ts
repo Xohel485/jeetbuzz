@@ -121,7 +121,10 @@ async function extractOnPageBreadcrumbs(tab: Page): Promise<BreadcrumbItem[]> {
 }
 
 async function validateBreadcrumbs(): Promise<void> {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
   const results: PageResult[] = [];
 
   try {
@@ -130,6 +133,14 @@ async function validateBreadcrumbs(): Promise<void> {
       const url = `${BASE_URL}${path}`;
       try {
         await tab.goto(url, { waitUntil: "networkidle0", timeout: 45_000 });
+
+        // tsx/esbuild wraps every function with a `__name(...)` helper via
+        // --keep-names. Puppeteer serializes the callbacks we pass to
+        // page.evaluate(), so those `__name` calls travel into the browser
+        // context where the helper is undefined. Install a no-op shim in
+        // the page context via a string expression (strings are not
+        // transpiled and don't reference `__name`).
+        await tab.evaluate("window.__name = window.__name || ((fn) => fn);");
 
         const jsonLD = await extractBreadcrumbJsonLd(tab);
         const onPage = await extractOnPageBreadcrumbs(tab);
