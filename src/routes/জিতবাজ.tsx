@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangSelfOnly, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangXDefaultOnly, ogUrl } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/জিতবাজ")({
       { name: "robots", content: "index,follow" },
       ogUrl(ROUTE),
     ],
-    links: [canonicalLink(PATH), ...hreflangSelfOnly(PATH)],
+    links: [canonicalLink(PATH), ...hreflangXDefaultOnly(PATH)],
   }),
   component: () => (
     <GuidePage
