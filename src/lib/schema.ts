@@ -156,18 +156,26 @@ export function hreflangLinks(slug = "") {
 }
 
 /**
- * Single-locale hreflang cluster for pages that only exist in one language
- * (e.g. Bengali-only misspelling landing pages). Emits `x-default` and the
- * given locale, both pointing at the page's own URL. Avoids broken
- * reciprocal links to non-existent locale variants, which would otherwise
- * cause Google to drop the whole hreflang cluster.
+ * Bengali-only hreflang cluster for pages that have an English variant on
+ * the misspelling URL and a Bengali variant under `/bd/bn/<slug>`. Emits
+ * `x-default` pointing to the misspelling URL and `bn-BD` pointing to the
+ * Bengali variant. Use only when the `/bd/bn/<slug>` target actually
+ * returns 200 — otherwise use x-default only to avoid broken reciprocals.
  */
-export function hreflangSelfOnly(path: string, hrefLang = "bn-BD") {
-  const self = url(path);
+export function hreflangBengaliOnly(slug: string) {
+  const s = slug.replace(/^\//, "");
   return [
-    { rel: "alternate", hrefLang: "x-default", href: self },
-    { rel: "alternate", hrefLang, href: self },
+    { rel: "alternate", hrefLang: "x-default", href: `${SITE_ORIGIN}/${s}` },
+    { rel: "alternate", hrefLang: "bn-BD", href: `${SITE_ORIGIN}/bd/bn/${s}` },
   ] as const;
+}
+
+/**
+ * x-default only. Use for Bengali-script or slug variants that have no
+ * corresponding `/bd/bn/<slug>` reciprocal.
+ */
+export function hreflangXDefaultOnly(path: string) {
+  return [{ rel: "alternate", hrefLang: "x-default", href: url(path) }] as const;
 }
 
 export function ogUrl(path: string) {
