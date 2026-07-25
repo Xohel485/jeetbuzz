@@ -635,6 +635,34 @@ LOCALIZED_ROUTES.push(
   }, ["bd"]),
 );
 
+// ---- Misspelling brand variants (BD-only native BN) ----
+LOCALIZED_ROUTES.push(
+  entry("jeet-buzz", JeetBuzzHyphenRoute, {
+    en: { title: "Jeet Buzz or JeetBuzz? Correct Brand Spelling 2026" + BRAND_EN, description: "'Jeet Buzz' with a space or hyphen is the same brand as JeetBuzz, official spelling and safe access." },
+    bn: { title: "Jeet Buzz নাকি JeetBuzz? সঠিক বানান ২০২৬" + BRAND_BN, description: "'Jeet Buzz' (স্পেস/হাইফেন) মানেই JeetBuzz, অফিসিয়াল লগইন, রেজিস্ট্রেশন ও পেমেন্ট গাইড।" },
+    ur: { title: "Jeet Buzz or JeetBuzz? Correct Spelling 2026" + BRAND_UR, description: "'Jeet Buzz' is the same brand as JeetBuzz." },
+    hi: { title: "Jeet Buzz or JeetBuzz? Correct Spelling 2026" + BRAND_HI, description: "'Jeet Buzz' is the same brand as JeetBuzz." },
+  }, ["bd"]),
+  entry("jeetbuz", JeetbuzRoute, {
+    en: { title: "Jeetbuz or JeetBuzz? Correct Brand Spelling 2026" + BRAND_EN, description: "'Jeetbuz' is a misspelling of JeetBuzz, official spelling and how to reach the real site safely." },
+    bn: { title: "Jeetbuz নাকি JeetBuzz? সঠিক বানান ২০২৬" + BRAND_BN, description: "Jeetbuz হচ্ছে JeetBuzz-এর ভুল বানান, আসল সাইটে যাওয়ার নিরাপদ পথ।" },
+    ur: { title: "Jeetbuz or JeetBuzz? Correct Spelling 2026" + BRAND_UR, description: "'Jeetbuz' is a misspelling of JeetBuzz." },
+    hi: { title: "Jeetbuz or JeetBuzz? Correct Spelling 2026" + BRAND_HI, description: "'Jeetbuz' is a misspelling of JeetBuzz." },
+  }, ["bd"]),
+  entry("jest-buzz", JestBuzzRoute, {
+    en: { title: "Jest Buzz or JeetBuzz? Correct Brand Spelling 2026" + BRAND_EN, description: "'Jest Buzz' is a common misspelling of JeetBuzz, official spelling and safe access." },
+    bn: { title: "Jest Buzz নাকি JeetBuzz? সঠিক বানান ২০২৬" + BRAND_BN, description: "'Jest Buzz' হচ্ছে JeetBuzz-এর ভুল বানান, অফিসিয়াল সাইটে যাওয়ার নিরাপদ পথ।" },
+    ur: { title: "Jest Buzz or JeetBuzz? Correct Spelling 2026" + BRAND_UR, description: "'Jest Buzz' is a misspelling of JeetBuzz." },
+    hi: { title: "Jest Buzz or JeetBuzz? Correct Spelling 2026" + BRAND_HI, description: "'Jest Buzz' is a misspelling of JeetBuzz." },
+  }, ["bd"]),
+  entry("জিতবাজ", JitobajBnRoute, {
+    en: { title: "জিতবাজ (JeetBuzz in Bengali) Guide 2026" + BRAND_EN, description: "জিতবাজ is the Bengali spelling of JeetBuzz. Official login, signup, bonuses and payments for Bangladeshi players." },
+    bn: { title: "জিতবাজ (JeetBuzz) সম্পূর্ণ বাংলা গাইড ২০২৬" + BRAND_BN, description: "জিতবাজ মানেই JeetBuzz, অফিসিয়াল লগইন, রেজিস্ট্রেশন, bKash-Nagad-Rocket ডিপোজিট ও বোনাসের পূর্ণাঙ্গ বাংলা গাইড।" },
+    ur: { title: "জিতবাজ (JeetBuzz) Bengali Guide 2026" + BRAND_UR, description: "'জিতবাজ' is the Bengali spelling of JeetBuzz." },
+    hi: { title: "জিতবাজ (JeetBuzz) Bengali Guide 2026" + BRAND_HI, description: "'জিতবাজ' is the Bengali spelling of JeetBuzz." },
+  }, ["bd"]),
+);
+
 /** Build a lookup map by slug for fast splat-route resolution. */
 export const LOCALIZED_ROUTE_BY_SLUG: Record<string, LocalizedRoute> = Object.fromEntries(
   LOCALIZED_ROUTES.map((r) => [r.slug, r]),
