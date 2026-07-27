@@ -117,7 +117,13 @@ import { Route as AffiliateLoginRouteImport } from './routes/affiliate-login'
 import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as NetworkIndexRouteImport } from './routes/network.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as NetworkTekkabuzz88RouteImport } from './routes/network.tekkabuzz88'
+import { Route as NetworkTekkabuzzRouteImport } from './routes/network.tekkabuzz'
+import { Route as NetworkMcwcasinoRouteImport } from './routes/network.mcwcasino'
+import { Route as NetworkBettekkaRouteImport } from './routes/network.bettekka'
+import { Route as NetworkBajiliveRouteImport } from './routes/network.bajilive'
 import { Route as GoSignupRouteImport } from './routes/go.signup'
 import { Route as GoLoginRouteImport } from './routes/go.login'
 import { Route as GoAffiliateRouteImport } from './routes/go.affiliate'
@@ -677,10 +683,40 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NetworkIndexRoute = NetworkIndexRouteImport.update({
+  id: '/network/',
+  path: '/network/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => BlogRoute,
+} as any)
+const NetworkTekkabuzz88Route = NetworkTekkabuzz88RouteImport.update({
+  id: '/network/tekkabuzz88',
+  path: '/network/tekkabuzz88',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkTekkabuzzRoute = NetworkTekkabuzzRouteImport.update({
+  id: '/network/tekkabuzz',
+  path: '/network/tekkabuzz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkMcwcasinoRoute = NetworkMcwcasinoRouteImport.update({
+  id: '/network/mcwcasino',
+  path: '/network/mcwcasino',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkBettekkaRoute = NetworkBettekkaRouteImport.update({
+  id: '/network/bettekka',
+  path: '/network/bettekka',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkBajiliveRoute = NetworkBajiliveRouteImport.update({
+  id: '/network/bajilive',
+  path: '/network/bajilive',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const GoSignupRoute = GoSignupRouteImport.update({
   id: '/go/signup',
@@ -832,7 +868,13 @@ export interface FileRoutesByFullPath {
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
+  '/network/bajilive': typeof NetworkBajiliveRoute
+  '/network/bettekka': typeof NetworkBettekkaRoute
+  '/network/mcwcasino': typeof NetworkMcwcasinoRoute
+  '/network/tekkabuzz': typeof NetworkTekkabuzzRoute
+  '/network/tekkabuzz88': typeof NetworkTekkabuzz88Route
   '/blog/': typeof BlogIndexRoute
+  '/network/': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
   '/$country/$lang/': typeof CountryLangIndexRoute
 }
@@ -949,7 +991,13 @@ export interface FileRoutesByTo {
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
+  '/network/bajilive': typeof NetworkBajiliveRoute
+  '/network/bettekka': typeof NetworkBettekkaRoute
+  '/network/mcwcasino': typeof NetworkMcwcasinoRoute
+  '/network/tekkabuzz': typeof NetworkTekkabuzzRoute
+  '/network/tekkabuzz88': typeof NetworkTekkabuzz88Route
   '/blog': typeof BlogIndexRoute
+  '/network': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
   '/$country/$lang': typeof CountryLangIndexRoute
 }
@@ -1068,7 +1116,13 @@ export interface FileRoutesById {
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
+  '/network/bajilive': typeof NetworkBajiliveRoute
+  '/network/bettekka': typeof NetworkBettekkaRoute
+  '/network/mcwcasino': typeof NetworkMcwcasinoRoute
+  '/network/tekkabuzz': typeof NetworkTekkabuzzRoute
+  '/network/tekkabuzz88': typeof NetworkTekkabuzz88Route
   '/blog/': typeof BlogIndexRoute
+  '/network/': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
   '/$country/$lang/': typeof CountryLangIndexRoute
 }
@@ -1188,7 +1242,13 @@ export interface FileRouteTypes {
     | '/go/affiliate'
     | '/go/login'
     | '/go/signup'
+    | '/network/bajilive'
+    | '/network/bettekka'
+    | '/network/mcwcasino'
+    | '/network/tekkabuzz'
+    | '/network/tekkabuzz88'
     | '/blog/'
+    | '/network/'
     | '/$country/$lang/$'
     | '/$country/$lang/'
   fileRoutesByTo: FileRoutesByTo
@@ -1305,7 +1365,13 @@ export interface FileRouteTypes {
     | '/go/affiliate'
     | '/go/login'
     | '/go/signup'
+    | '/network/bajilive'
+    | '/network/bettekka'
+    | '/network/mcwcasino'
+    | '/network/tekkabuzz'
+    | '/network/tekkabuzz88'
     | '/blog'
+    | '/network'
     | '/$country/$lang/$'
     | '/$country/$lang'
   id:
@@ -1423,7 +1489,13 @@ export interface FileRouteTypes {
     | '/go/affiliate'
     | '/go/login'
     | '/go/signup'
+    | '/network/bajilive'
+    | '/network/bettekka'
+    | '/network/mcwcasino'
+    | '/network/tekkabuzz'
+    | '/network/tekkabuzz88'
     | '/blog/'
+    | '/network/'
     | '/$country/$lang/$'
     | '/$country/$lang/'
   fileRoutesById: FileRoutesById
@@ -1541,6 +1613,12 @@ export interface RootRouteChildren {
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
   GoSignupRoute: typeof GoSignupRoute
+  NetworkBajiliveRoute: typeof NetworkBajiliveRoute
+  NetworkBettekkaRoute: typeof NetworkBettekkaRoute
+  NetworkMcwcasinoRoute: typeof NetworkMcwcasinoRoute
+  NetworkTekkabuzzRoute: typeof NetworkTekkabuzzRoute
+  NetworkTekkabuzz88Route: typeof NetworkTekkabuzz88Route
+  NetworkIndexRoute: typeof NetworkIndexRoute
   CountryLangSplatRoute: typeof CountryLangSplatRoute
   CountryLangIndexRoute: typeof CountryLangIndexRoute
 }
@@ -2303,12 +2381,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/network/': {
+      id: '/network/'
+      path: '/network'
+      fullPath: '/network/'
+      preLoaderRoute: typeof NetworkIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
+    }
+    '/network/tekkabuzz88': {
+      id: '/network/tekkabuzz88'
+      path: '/network/tekkabuzz88'
+      fullPath: '/network/tekkabuzz88'
+      preLoaderRoute: typeof NetworkTekkabuzz88RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network/tekkabuzz': {
+      id: '/network/tekkabuzz'
+      path: '/network/tekkabuzz'
+      fullPath: '/network/tekkabuzz'
+      preLoaderRoute: typeof NetworkTekkabuzzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network/mcwcasino': {
+      id: '/network/mcwcasino'
+      path: '/network/mcwcasino'
+      fullPath: '/network/mcwcasino'
+      preLoaderRoute: typeof NetworkMcwcasinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network/bettekka': {
+      id: '/network/bettekka'
+      path: '/network/bettekka'
+      fullPath: '/network/bettekka'
+      preLoaderRoute: typeof NetworkBettekkaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network/bajilive': {
+      id: '/network/bajilive'
+      path: '/network/bajilive'
+      fullPath: '/network/bajilive'
+      preLoaderRoute: typeof NetworkBajiliveRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/go/signup': {
       id: '/go/signup'
@@ -2488,6 +2608,12 @@ const rootRouteChildren: RootRouteChildren = {
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,
   GoSignupRoute: GoSignupRoute,
+  NetworkBajiliveRoute: NetworkBajiliveRoute,
+  NetworkBettekkaRoute: NetworkBettekkaRoute,
+  NetworkMcwcasinoRoute: NetworkMcwcasinoRoute,
+  NetworkTekkabuzzRoute: NetworkTekkabuzzRoute,
+  NetworkTekkabuzz88Route: NetworkTekkabuzz88Route,
+  NetworkIndexRoute: NetworkIndexRoute,
   CountryLangSplatRoute: CountryLangSplatRoute,
   CountryLangIndexRoute: CountryLangIndexRoute,
 }
