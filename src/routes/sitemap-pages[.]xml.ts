@@ -17,6 +17,12 @@ const PAGES = [
   "/fact-checking",
   "/update-policy",
   "/affiliate-disclosure",
+  "/network",
+  "/network/mcwcasino",
+  "/network/bajilive",
+  "/network/tekkabuzz",
+  "/network/tekkabuzz88",
+  "/network/bettekka",
 ];
 
 export const Route = createFileRoute("/sitemap-pages.xml")({
