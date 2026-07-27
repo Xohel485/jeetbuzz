@@ -119,6 +119,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NetworkIndexRouteImport } from './routes/network.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as NetworkMcwcasinoRouteImport } from './routes/network.mcwcasino'
 import { Route as GoSignupRouteImport } from './routes/go.signup'
 import { Route as GoLoginRouteImport } from './routes/go.login'
 import { Route as GoAffiliateRouteImport } from './routes/go.affiliate'
@@ -688,6 +689,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const NetworkMcwcasinoRoute = NetworkMcwcasinoRouteImport.update({
+  id: '/network/mcwcasino',
+  path: '/network/mcwcasino',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GoSignupRoute = GoSignupRouteImport.update({
   id: '/go/signup',
   path: '/go/signup',
@@ -838,6 +844,7 @@ export interface FileRoutesByFullPath {
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
+  '/network/mcwcasino': typeof NetworkMcwcasinoRoute
   '/blog/': typeof BlogIndexRoute
   '/network/': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
@@ -956,6 +963,7 @@ export interface FileRoutesByTo {
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
+  '/network/mcwcasino': typeof NetworkMcwcasinoRoute
   '/blog': typeof BlogIndexRoute
   '/network': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
@@ -1076,6 +1084,7 @@ export interface FileRoutesById {
   '/go/affiliate': typeof GoAffiliateRoute
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
+  '/network/mcwcasino': typeof NetworkMcwcasinoRoute
   '/blog/': typeof BlogIndexRoute
   '/network/': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
@@ -1197,6 +1206,7 @@ export interface FileRouteTypes {
     | '/go/affiliate'
     | '/go/login'
     | '/go/signup'
+    | '/network/mcwcasino'
     | '/blog/'
     | '/network/'
     | '/$country/$lang/$'
@@ -1315,6 +1325,7 @@ export interface FileRouteTypes {
     | '/go/affiliate'
     | '/go/login'
     | '/go/signup'
+    | '/network/mcwcasino'
     | '/blog'
     | '/network'
     | '/$country/$lang/$'
@@ -1434,6 +1445,7 @@ export interface FileRouteTypes {
     | '/go/affiliate'
     | '/go/login'
     | '/go/signup'
+    | '/network/mcwcasino'
     | '/blog/'
     | '/network/'
     | '/$country/$lang/$'
@@ -1553,6 +1565,7 @@ export interface RootRouteChildren {
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
   GoSignupRoute: typeof GoSignupRoute
+  NetworkMcwcasinoRoute: typeof NetworkMcwcasinoRoute
   NetworkIndexRoute: typeof NetworkIndexRoute
   CountryLangSplatRoute: typeof CountryLangSplatRoute
   CountryLangIndexRoute: typeof CountryLangIndexRoute
@@ -2330,6 +2343,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/network/mcwcasino': {
+      id: '/network/mcwcasino'
+      path: '/network/mcwcasino'
+      fullPath: '/network/mcwcasino'
+      preLoaderRoute: typeof NetworkMcwcasinoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/go/signup': {
       id: '/go/signup'
       path: '/go/signup'
@@ -2508,6 +2528,7 @@ const rootRouteChildren: RootRouteChildren = {
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,
   GoSignupRoute: GoSignupRoute,
+  NetworkMcwcasinoRoute: NetworkMcwcasinoRoute,
   NetworkIndexRoute: NetworkIndexRoute,
   CountryLangSplatRoute: CountryLangSplatRoute,
   CountryLangIndexRoute: CountryLangIndexRoute,
