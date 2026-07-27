@@ -158,6 +158,18 @@ const SOCIALS = [
   { key: "telegram", href: "https://t.me/GetJeetBuzz", labelKey: "footer.social.telegram", Icon: TelegramIcon },
 ];
 
+/**
+ * Our own network of Bangladesh-facing betting guide sites. Anchors are
+ * keyword-led (brand + intent) based on live BD search demand.
+ */
+const PARTNER_SITES = [
+  { href: "https://tekkabuzz.win", anchor: "TekkaBuzz login", note: "TekkaBuzz বাংলাদেশ গাইড" },
+  { href: "https://tekkabuzz88.online", anchor: "TekkaBuzz 88 app download", note: "TekkaBuzz app ও বোনাস" },
+  { href: "https://mcwcasino.guru", anchor: "MCW Casino login", note: "Mega Casino World বাংলা গাইড" },
+  { href: "https://bajilive.world", anchor: "Baji Live login", note: "Baji live ক্রিকেট বেটিং গাইড" },
+  { href: "https://bettekka.pro", anchor: "BetTekka registration", note: "BetTekka সাইন আপ ও ডিপোজিট" },
+];
+
 export function SiteFooter() {
   const latestPosts = FOOTER_POSTS;
   const { t } = useI18n();
@@ -277,6 +289,31 @@ export function SiteFooter() {
               </a>
             ))}
           </div>
+        </div>
+
+        <div className="mt-12 border-t border-white/5 pt-8 text-left">
+          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
+            আমাদের অন্যান্য গাইড সাইট
+          </p>
+          <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted-foreground">
+            GetJeetBuzz টিম বাংলাদেশের খেলোয়াড়দের জন্য আরও কয়েকটি স্বাধীন গাইড সাইট পরিচালনা করে। একই
+            সম্পাদকীয় নীতিতে সেখানে লগইন, রেজিস্ট্রেশন, bKash-Nagad ডিপোজিট ও বোনাস শর্ত ব্যাখ্যা করা হয়।
+          </p>
+          <ul className="mt-4 grid gap-x-8 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            {PARTNER_SITES.map((s) => (
+              <li key={s.href} className="text-sm">
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+                >
+                  {s.anchor}
+                </a>
+                <span className="ml-2 text-xs text-muted-foreground/70">{s.note}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-3 border-t border-white/5 pt-8 text-center text-xs text-muted-foreground md:flex-row md:items-center md:justify-between md:text-left">
