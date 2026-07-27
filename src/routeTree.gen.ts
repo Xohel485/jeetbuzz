@@ -117,6 +117,7 @@ import { Route as AffiliateLoginRouteImport } from './routes/affiliate-login'
 import { Route as AffiliateDisclosureRouteImport } from './routes/affiliate-disclosure'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as NetworkIndexRouteImport } from './routes/network.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as GoSignupRouteImport } from './routes/go.signup'
 import { Route as GoLoginRouteImport } from './routes/go.login'
@@ -677,6 +678,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NetworkIndexRoute = NetworkIndexRouteImport.update({
+  id: '/network/',
+  path: '/network/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -833,6 +839,7 @@ export interface FileRoutesByFullPath {
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
   '/blog/': typeof BlogIndexRoute
+  '/network/': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
   '/$country/$lang/': typeof CountryLangIndexRoute
 }
@@ -950,6 +957,7 @@ export interface FileRoutesByTo {
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
   '/blog': typeof BlogIndexRoute
+  '/network': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
   '/$country/$lang': typeof CountryLangIndexRoute
 }
@@ -1069,6 +1077,7 @@ export interface FileRoutesById {
   '/go/login': typeof GoLoginRoute
   '/go/signup': typeof GoSignupRoute
   '/blog/': typeof BlogIndexRoute
+  '/network/': typeof NetworkIndexRoute
   '/$country/$lang/$': typeof CountryLangSplatRoute
   '/$country/$lang/': typeof CountryLangIndexRoute
 }
@@ -1189,6 +1198,7 @@ export interface FileRouteTypes {
     | '/go/login'
     | '/go/signup'
     | '/blog/'
+    | '/network/'
     | '/$country/$lang/$'
     | '/$country/$lang/'
   fileRoutesByTo: FileRoutesByTo
@@ -1306,6 +1316,7 @@ export interface FileRouteTypes {
     | '/go/login'
     | '/go/signup'
     | '/blog'
+    | '/network'
     | '/$country/$lang/$'
     | '/$country/$lang'
   id:
@@ -1424,6 +1435,7 @@ export interface FileRouteTypes {
     | '/go/login'
     | '/go/signup'
     | '/blog/'
+    | '/network/'
     | '/$country/$lang/$'
     | '/$country/$lang/'
   fileRoutesById: FileRoutesById
@@ -1541,6 +1553,7 @@ export interface RootRouteChildren {
   GoAffiliateRoute: typeof GoAffiliateRoute
   GoLoginRoute: typeof GoLoginRoute
   GoSignupRoute: typeof GoSignupRoute
+  NetworkIndexRoute: typeof NetworkIndexRoute
   CountryLangSplatRoute: typeof CountryLangSplatRoute
   CountryLangIndexRoute: typeof CountryLangIndexRoute
 }
@@ -2303,6 +2316,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/network/': {
+      id: '/network/'
+      path: '/network'
+      fullPath: '/network/'
+      preLoaderRoute: typeof NetworkIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
@@ -2488,6 +2508,7 @@ const rootRouteChildren: RootRouteChildren = {
   GoAffiliateRoute: GoAffiliateRoute,
   GoLoginRoute: GoLoginRoute,
   GoSignupRoute: GoSignupRoute,
+  NetworkIndexRoute: NetworkIndexRoute,
   CountryLangSplatRoute: CountryLangSplatRoute,
   CountryLangIndexRoute: CountryLangIndexRoute,
 }
