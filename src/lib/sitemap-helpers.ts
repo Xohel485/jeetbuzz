@@ -1,4 +1,5 @@
 import { IMAGES, type ImageKey } from "@/lib/images";
+import { LOCALIZED_ROUTES } from "@/lib/localized-routes";
 import {
   BUILD_FALLBACK,
   LASTMOD_MAP,
@@ -50,6 +51,37 @@ export function esc(s: string) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+/** Slugs that have a published Bengali variant under /bd/bn/. */
+const BD_SLUGS = new Set(
+  LOCALIZED_ROUTES.filter((r) => !r.countries || r.countries.includes("bd")).map((r) => r.slug),
+);
+
+/** URL-encode non-ASCII path segments (e.g. Bengali script slugs). */
+export function encPath(path: string) {
+  return path
+    .split("/")
+    .map((seg) => (seg ? encodeURIComponent(decodeURIComponent(seg)) : seg))
+    .join("/");
+}
+
+/**
+ * xhtml:link hreflang annotations for a URL that belongs to an
+ * English ↔ Bengali (bn-BD) pair. Returns "" when the page has no
+ * Bengali counterpart, so no broken reciprocals are emitted.
+ */
+export function alternateBlock(path: string): string {
+  const isBn = path === "/bd/bn" || path.startsWith("/bd/bn/");
+  const slug = isBn ? path.replace(/^\/bd\/bn\/?/, "") : path.replace(/^\//, "");
+  if (!BD_SLUGS.has(slug)) return "";
+  const en = `${BASE_URL}${slug ? `/${encPath(slug)}` : "/"}`;
+  const bn = `${BASE_URL}/bd/bn${slug ? `/${encPath(slug)}` : ""}`;
+  return [
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${en}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="en" href="${en}"/>`,
+    `    <xhtml:link rel="alternate" hreflang="bn-BD" href="${bn}"/>`,
+  ].join("\n");
+}
+
 export function imageBlock(path: string): string {
   const keys = ROUTE_IMAGES[path];
   if (!keys) return "";
@@ -79,19 +111,21 @@ export type SitemapEntry = {
 export function renderUrlset(entries: SitemapEntry[]): Response {
   const urls = entries.map((e) => {
     const imgs = imageBlock(e.path);
+    const alts = alternateBlock(e.path);
     return [
       `  <url>`,
-      `    <loc>${BASE_URL}${e.path}</loc>`,
+      `    <loc>${BASE_URL}${encPath(e.path)}</loc>`,
       `    <lastmod>${e.lastmod}</lastmod>`,
       `    <changefreq>${e.changefreq}</changefreq>`,
       `    <priority>${e.priority}</priority>`,
+      alts,
       imgs,
       `  </url>`,
     ]
       .filter(Boolean)
       .join("\n");
   });
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">\n${urls.join("\n")}\n</urlset>`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join("\n")}\n</urlset>`;
   return new Response(xml, {
     headers: {
       "Content-Type": "application/xml",
