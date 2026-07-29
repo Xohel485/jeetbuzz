@@ -1,5 +1,6 @@
 import { SITE_NAME } from "./affiliate";
 import { BRAND } from "./entity-map";
+import { NETWORK_URLS } from "./network-sites";
 
 export const SITE_ORIGIN = "https://getjeetbuzz.com";
 
@@ -22,6 +23,7 @@ export const organizationSchema = () => ({
     "https://tiktok.com/@getjeetbuzz",
     "https://x.com/GetJeetBuzz",
     "https://t.me/GetJeetBuzz",
+    ...NETWORK_URLS,
   ] as string[],
   description:
     "GetJeetBuzz is the JeetBuzz partner guide for Bangladesh, Pakistan and India — login, registration, bonuses, app, payments and live cricket.",
