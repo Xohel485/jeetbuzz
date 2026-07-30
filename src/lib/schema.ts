@@ -141,20 +141,32 @@ export function canonicalLink(path: string) {
 
 /**
  * Standard hreflang cluster for a given slug (slug = "" → homepage).
- * Always emits x-default, en, bn-BD, ur-PK, hi-IN pointing to the
- * locale-equivalent URL on getjeetbuzz.com.
+ * Emits x-default + en for the English URL, and a localized alternate
+ * only when the localized splat route actually serves that slug for the
+ * country (see LOCALIZED_SLUG_COUNTRIES). Emitting an alternate for a
+ * URL that 404s invalidates the whole cluster in Search Console.
  */
 export function hreflangLinks(slug = "") {
   const s = slug.replace(/^\//, "");
   const tail = s ? `/${s}` : "";
   const en = `${SITE_ORIGIN}${tail || "/"}`;
-  return [
+  const allowed = LOCALIZED_SLUG_COUNTRIES[s] ?? [];
+  const links: { rel: string; hrefLang: string; href: string }[] = [
     { rel: "alternate", hrefLang: "x-default", href: en },
     { rel: "alternate", hrefLang: "en", href: en },
-    { rel: "alternate", hrefLang: "bn-BD", href: `${SITE_ORIGIN}/bd/bn${tail}` },
-    { rel: "alternate", hrefLang: "ur-PK", href: `${SITE_ORIGIN}/pk/ur${tail}` },
-    { rel: "alternate", hrefLang: "hi-IN", href: `${SITE_ORIGIN}/in/hi${tail}` },
-  ] as const;
+  ];
+  if (allowed.includes("bd"))
+    links.push({ rel: "alternate", hrefLang: "bn-BD", href: `${SITE_ORIGIN}/bd/bn${tail}` });
+  if (allowed.includes("pk"))
+    links.push({ rel: "alternate", hrefLang: "ur-PK", href: `${SITE_ORIGIN}/pk/ur${tail}` });
+  if (allowed.includes("in"))
+    links.push({ rel: "alternate", hrefLang: "hi-IN", href: `${SITE_ORIGIN}/in/hi${tail}` });
+  return links;
+}
+
+/** True when `/{country}/{locale}/{slug}` is served (used by the splat route). */
+export function localizedSlugCountries(slug = ""): readonly LocalizedCountry[] {
+  return LOCALIZED_SLUG_COUNTRIES[slug.replace(/^\//, "")] ?? [];
 }
 
 /**
@@ -166,10 +178,11 @@ export function hreflangLinks(slug = "") {
  */
 export function hreflangBengaliOnly(slug: string) {
   const s = slug.replace(/^\//, "");
-  return [
-    { rel: "alternate", hrefLang: "x-default", href: `${SITE_ORIGIN}/${s}` },
-    { rel: "alternate", hrefLang: "bn-BD", href: `${SITE_ORIGIN}/bd/bn/${s}` },
-  ] as const;
+  const links = [{ rel: "alternate", hrefLang: "x-default", href: `${SITE_ORIGIN}/${s}` }];
+  if ((LOCALIZED_SLUG_COUNTRIES[s] ?? []).includes("bd")) {
+    links.push({ rel: "alternate", hrefLang: "bn-BD", href: `${SITE_ORIGIN}/bd/bn/${s}` });
+  }
+  return links;
 }
 
 /**
