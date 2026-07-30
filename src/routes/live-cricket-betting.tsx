@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 import { imageAbsoluteUrl } from "@/lib/images";
 
@@ -14,6 +15,7 @@ export const Route = createFileRoute("/live-cricket-betting")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("liveCricket") },
     ],
+    links: [canonicalLink("/live-cricket-betting"), ...hreflangLinks("live-cricket-betting")],
   }),
   component: () => (
     <GuidePage

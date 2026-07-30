@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 
 export const Route = createFileRoute("/responsible-gaming")({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/responsible-gaming")({
       { property: "og:description", content: "Set limits and find help." },
       { property: "og:type", content: "article" },
     ],
+    links: [canonicalLink("/responsible-gaming"), ...hreflangLinks("responsible-gaming")],
   }),
   component: () => (
     <GuidePage

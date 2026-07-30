@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 
 export const Route = createFileRoute("/terms")({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/terms")({
       { property: "og:description", content: "Terms of use for GetJeetBuzz." },
       { property: "og:type", content: "article" },
     ],
+    links: [canonicalLink("/terms"), ...hreflangLinks("terms")],
   }),
   component: () => (
     <GuidePage

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 import { imageAbsoluteUrl } from "@/lib/images";
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/login-guide")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: imageAbsoluteUrl("loginInterface") },
     ],
+    links: [canonicalLink("/login-guide"), ...hreflangLinks("login-guide")],
   }),
   component: () => (
     <GuidePage

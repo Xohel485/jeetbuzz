@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { Mail, MessageSquare, AlertTriangle } from "lucide-react";
@@ -68,6 +69,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:description", content: "Editorial corrections, partnerships and feedback." },
       { property: "og:type", content: "website" },
     ],
+    links: [canonicalLink("/contact"), ...hreflangLinks("contact")],
   }),
   component: ContactPage,
 });
