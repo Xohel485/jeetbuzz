@@ -17,7 +17,7 @@ export const Route = createFileRoute("/signup")({
       {
         name: "description",
         content:
-          "Complete your JeetBuzz Signup in minutes with our step-by-step registration guide. Learn account creation, verification, security tips, welcome offers and responsible gaming information.",
+          "JeetBuzz signup in 6 steps and under 3 minutes: phone or email registration, OTP verification, KYC documents, first deposit from BDT 100 and how to claim the welcome offer. Updated 2026.",
       },
       { property: "og:title", content: "JeetBuzz Signup. Open a Verified Account" },
       {

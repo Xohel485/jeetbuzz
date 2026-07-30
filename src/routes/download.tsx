@@ -23,7 +23,7 @@ export const Route = createFileRoute("/download")({
       {
         name: "description",
         content:
-          "Download the JeetBuzz Web App or install it directly from your browser. Learn how to add the app to your home screen, enjoy fast loading, secure access and a smooth mobile experience.",
+          "Install the JeetBuzz app in under 60 seconds: one-tap Android install, iPhone Safari steps, no APK needed, plus fixes for install and update errors. Verified 2026.",
       },
       { property: "og:title", content: "JeetBuzz Download. Android APK & iOS Web App" },
       {
