@@ -91,7 +91,7 @@ const en: Dict = {
 
   // Hero
   "hero.eyebrow": "JeetBuzz · বাংলাদেশ · পাকিস্তান · ভারত",
-  "hero.title.lead": "জিতবাজে অ্যাকাউন্ট খুলুন,",
+  "hero.title.lead": "JeetBuzz (জিতবাজ) অ্যাকাউন্ট খুলুন,",
   "hero.title.highlight": "বাংলায় লাইভ ক্রিকেট বেটিং",
   "hero.subtitle":
     "bKash, Nagad বা UPI দিয়ে ২০০ টাকা থেকে ডিপোজিট করে BPL, IPL, PSL-এ লাইভ বেট। JeetBuzz-এর official signup ও login লিংক, APK download, withdrawal timing, bonus rollover — সব একটাই জায়গায়। Curaçao-licensed, বাংলা সাপোর্ট।",
@@ -200,7 +200,7 @@ const bn: Dict = {
   "header.lang.aria": "ভাষা পরিবর্তন",
 
   "hero.eyebrow": "JeetBuzz · বাংলাদেশ · পাকিস্তান · ভারত",
-  "hero.title.lead": "জিতবাজ লগইন, সাইন আপ ও বোনাস গাইড —",
+  "hero.title.lead": "JeetBuzz (জিতবাজ) লগইন, সাইন আপ ও বোনাস গাইড —",
   "hero.title.highlight": "বাংলাদেশ · পাকিস্তান · ভারত",
   "hero.subtitle":
     "জিতবাজে ৩ মিনিটে অ্যাকাউন্ট খুলুন, ২০০ টাকা থেকে bKash/Nagad/Rocket-এ জিতবাজ ডিপোজিট করুন এবং BPL, IPL ও PSL-এ লাইভ বেট করুন। ধাপে ধাপে জিতবাজ লগইন, জিতবাজ APK ও জিতবাজ উইথড্রয়াল গাইড. Curaçao লাইসেন্সপ্রাপ্ত জিতবাজ পার্টনার, ২৪/৭ বাংলা সাপোর্ট।",
