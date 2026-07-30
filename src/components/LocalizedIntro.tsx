@@ -8,7 +8,13 @@ import { LOCALIZED_INTROS } from "@/lib/localized-intros";
  * page component pushed the sticky header down because it became the first
  * child of `<body>`.
  */
-type LocalizedIntroSlot = { slug: string; country: Country; lang: Locale } | null;
+type LocalizedIntroSlot = {
+  slug: string;
+  country: Country;
+  lang: Locale;
+  /** Localized H1 for this URL, so /bd/bn/x does not repeat the English H1. */
+  h1?: string;
+} | null;
 const LocalizedIntroContext = createContext<LocalizedIntroSlot>(null);
 
 export function LocalizedIntroProvider({
@@ -27,6 +33,11 @@ export function LocalizedIntroSlotRenderer() {
   const v = useContext(LocalizedIntroContext);
   if (!v) return null;
   return <LocalizedIntro slug={v.slug} country={v.country} lang={v.lang} />;
+}
+
+/** Localized H1 string for the current /{country}/{lang}/{slug} URL, if any. */
+export function useLocalizedH1(): string | undefined {
+  return useContext(LocalizedIntroContext)?.h1;
 }
 
 /**
