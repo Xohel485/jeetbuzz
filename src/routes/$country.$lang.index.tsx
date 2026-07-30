@@ -30,6 +30,9 @@ export const Route = createFileRoute("/$country/$lang/")({
     const meta = LOCALE_META[lang];
     const cm = COUNTRY_META[country];
     const path = `/${country}/${lang}`;
+    // `/{country}/en` duplicates the English homepage.
+    const isEnglishDuplicate = lang === "en";
+    const canonical = isEnglishDuplicate ? `${SITE}/` : `${SITE}${path}`;
     const titles: Record<Locale, string> = {
       en: `JeetBuzz ${cm.label}. Login, Signup, Bonus & App Guide`,
       bn: `জিতবাজ ${cm.label}, লগইন, সাইনআপ, বোনাস ও অ্যাপ গাইড`,
@@ -46,14 +49,17 @@ export const Route = createFileRoute("/$country/$lang/")({
       meta: [
         { title: titles[lang] },
         { name: "description", content: descs[lang] },
+        ...(isEnglishDuplicate
+          ? [{ name: "robots", content: "noindex, follow" }]
+          : []),
         { property: "og:title", content: titles[lang] },
         { property: "og:description", content: descs[lang] },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: `${SITE}${path}` },
+        { property: "og:url", content: canonical },
         { property: "og:locale", content: meta.htmlLang.replace("-", "_") },
       ],
       links: [
-        { rel: "canonical", href: `${SITE}${path}` },
+        { rel: "canonical", href: canonical },
         { rel: "alternate", hrefLang: "en", href: `${SITE}/` },
         { rel: "alternate", hrefLang: "bn-BD", href: `${SITE}/bd/bn` },
         { rel: "alternate", hrefLang: "ur-PK", href: `${SITE}/pk/ur` },
