@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 
 export const Route = createFileRoute("/sports-betting")({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/sports-betting")({
       { property: "og:description", content: "Sports markets, odds and tips on JeetBuzz." },
       { property: "og:type", content: "article" },
     ],
+    links: [canonicalLink("/sports-betting"), ...hreflangLinks("sports-betting")],
   }),
   component: () => (
     <GuidePage

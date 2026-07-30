@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 
 export const Route = createFileRoute("/deposit-withdrawal-guide")({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/deposit-withdrawal-guide")({
       { property: "og:description", content: "bKash, Nagad and Rocket on JeetBuzz, minimums, fees and processing times." },
       { property: "og:type", content: "article" },
     ],
+    links: [canonicalLink("/deposit-withdrawal-guide"), ...hreflangLinks("deposit-withdrawal-guide")],
   }),
   component: () => (
     <GuidePage

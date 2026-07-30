@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 
 export const Route = createFileRoute("/affiliate-disclosure")({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/affiliate-disclosure")({
       { property: "og:description", content: "How GetJeetBuzz earns from affiliate links." },
       { property: "og:type", content: "article" },
     ],
+    links: [canonicalLink("/affiliate-disclosure"), ...hreflangLinks("affiliate-disclosure")],
   }),
   component: () => (
     <GuidePage

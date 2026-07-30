@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonicalLink, hreflangLinks } from "@/lib/schema";
 import { GuidePage } from "@/components/GuidePage";
 
 export const Route = createFileRoute("/about")({
@@ -10,6 +11,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: "A verified JeetBuzz affiliate partner. Independent editorial, real Bangladesh testing." },
       { property: "og:type", content: "website" },
     ],
+    links: [canonicalLink("/about"), ...hreflangLinks("about")],
   }),
   component: () => (
     <GuidePage

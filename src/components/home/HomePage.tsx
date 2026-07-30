@@ -4,6 +4,10 @@ import { Hero } from "./Hero";
 import { HubLinksStrip } from "./HubLinksStrip";
 import { AuthorByline } from "@/components/AuthorByline";
 import { LazyOnVisible } from "@/components/LazyOnVisible";
+import GuideCards from "./GuideCards";
+import BlogSection from "./BlogSection";
+import FAQSection from "./FAQSection";
+import FooterSection from "./FooterSection";
 
 /**
  * Single shared homepage layout used by ALL locales (en root and
@@ -35,17 +39,22 @@ export function HomePage({ localExtras }: { localExtras?: ReactNode } = {}) {
           Rendered AFTER Hero so the section order never changes by locale. */}
       {localExtras}
 
-      {/* Everything below is split into separate JS chunks and is only fetched
-          when its placeholder scrolls into (or near) the viewport. */}
-      <LazyOnVisible load={() => import("./GuideCards")} minHeight={520} />
+      {/* T2: text + internal-link sections render eagerly so crawlers get the
+          full content and link graph (including footer navigation) in the
+          initial HTML response. */}
+      <GuideCards />
+
+      {/* Heavy visual sections stay split into separate JS chunks and are only
+          fetched when their placeholder scrolls into (or near) the viewport. */}
       <LazyOnVisible load={() => import("./PopularGamesSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./AmbassadorsSection")} minHeight={520} />
       <LazyOnVisible load={() => import("./SponsorsSection")} minHeight={620} />
       <LazyOnVisible load={() => import("./PaymentSection")} minHeight={1200} />
       <LazyOnVisible load={() => import("./ProvidersSection")} minHeight={520} />
-      <LazyOnVisible load={() => import("./BlogSection")} minHeight={700} />
-      <LazyOnVisible load={() => import("./FAQSection")} minHeight={900} />
-      <LazyOnVisible load={() => import("./FooterSection")} minHeight={800} />
+
+      <BlogSection />
+      <FAQSection />
+      <FooterSection />
     </PageShell>
   );
 }

@@ -15,6 +15,43 @@ import { articleSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
 import { useI18n, type Locale } from "@/lib/i18n";
 
+function wordsOf(lines?: string[]): number {
+  if (!lines?.length) return 0;
+  return lines.join(" ").trim().split(/\s+/).filter(Boolean).length;
+}
+
+/**
+ * Return the richest body available for the current locale. The current
+ * locale wins unless its copy is less than 40% the length of the longest
+ * variant (i.e. it is a placeholder stub), in which case the longest variant
+ * is rendered so SSR HTML always contains the full article.
+ */
+function resolveBody(
+  locale: Locale,
+  body: string[],
+  byLocale?: Partial<Record<Locale, string[]>>,
+): string[] {
+  const current = byLocale?.[locale] ?? body;
+  if (!byLocale) return current;
+  const candidates: string[][] = [body, ...Object.values(byLocale).filter(Boolean) as string[][]];
+  let richest = current;
+  for (const c of candidates) if (wordsOf(c) > wordsOf(richest)) richest = c;
+  return wordsOf(current) < wordsOf(richest) * 0.4 ? richest : current;
+}
+
+function resolveFaqs(
+  locale: Locale,
+  faqs?: FAQItem[],
+  byLocale?: Partial<Record<Locale, FAQItem[]>>,
+): FAQItem[] | undefined {
+  const current = byLocale?.[locale] ?? faqs;
+  if (!byLocale) return current;
+  const candidates = [faqs, ...Object.values(byLocale)].filter(Boolean) as FAQItem[][];
+  let richest = current ?? [];
+  for (const c of candidates) if (c.length > richest.length) richest = c;
+  return (current?.length ?? 0) < richest.length * 0.5 ? richest : current;
+}
+
 export function GuidePage({
   eyebrow,
   title,
@@ -63,11 +100,18 @@ export function GuidePage({
   articleDescription?: string;
 }) {
   const { locale } = useI18n();
-  const localBody = bodyByLocale?.[locale] ?? body;
+  // SSR content resolution (T1).
+  // The server renders every non-localized URL with locale "en". Many pages
+  // ship a one-line English stub in `body` and the real 2,000+ word article in
+  // `bodyByLocale.bn`, which meant crawlers only ever saw the stub. Pick the
+  // richest available variant whenever the current locale's copy is
+  // substantially thinner than the longest one, so the full article is in the
+  // initial HTML regardless of which locale SSR resolves.
+  const localBody = resolveBody(locale, body, bodyByLocale);
   const localTitle = titleByLocale?.[locale] ?? title;
   const localSubtitle = subtitleByLocale?.[locale] ?? subtitle;
   const localCtaLabel = ctaLabelByLocale?.[locale] ?? ctaLabel;
-  const localFaqs = faqsByLocale?.[locale] ?? faqs;
+  const localFaqs = resolveFaqs(locale, faqs, faqsByLocale);
   const wordCount = localBody.join(" ").split(/\s+/).length;
   const minutes = Math.max(2, Math.round(wordCount / 200));
   return (
