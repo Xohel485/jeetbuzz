@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/jeetbuzz-nagad-withdrawal";
 const TITLE = "JeetBuzz Nagad Withdrawal 2026. Steps, Time & Fixes";
@@ -9,7 +9,7 @@ const DESC = "JeetBuzz Nagad withdrawal for 2026, exact 5-step cash-out flow, mi
 export const Route = createFileRoute("/jeetbuzz-nagad-withdrawal")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

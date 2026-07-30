@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, softwareApplicationSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, softwareApplicationSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/mobile-app-guide";
 const TITLE =
@@ -11,7 +11,7 @@ const DESC =
 export const Route = createFileRoute("/mobile-app-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

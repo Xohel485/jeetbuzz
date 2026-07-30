@@ -200,3 +200,11 @@ export function hreflangXDefaultOnly(path: string) {
 export function ogUrl(path: string) {
   return { property: "og:url", content: url(path) } as const;
 }
+/**
+ * SERP-safe title. Appends the brand suffix only when the result stays
+ * within ~60 characters, so Google never truncates the keyword-bearing part.
+ */
+export function seoTitle(base: string, brand = "GetJeetBuzz") {
+  const withBrand = `${base} | ${brand}`;
+  return withBrand.length <= 60 ? withBrand : base;
+}

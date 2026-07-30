@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangBengaliOnly, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangBengaliOnly, ogUrl, seoTitle } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
@@ -14,7 +14,7 @@ const DESC = "Jest Buzz Google ভয়েস সার্চের ভুল �
 export const Route = createFileRoute("/jest-buzz")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

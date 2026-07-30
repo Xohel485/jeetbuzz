@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/content-policy";
 const TITLE = "GetJeetBuzz Content Policy";
@@ -9,7 +9,7 @@ const DESC = "What GetJeetBuzz publishes and what it does not, age gating, respo
 export const Route = createFileRoute("/content-policy")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

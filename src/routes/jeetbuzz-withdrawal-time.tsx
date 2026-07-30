@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-withdrawal-time";
@@ -10,7 +10,7 @@ const DESC = "JeetBuzz withdrawal time by rail, bKash ~15 min, Nagad ~30 min, Ja
 export const Route = createFileRoute("/jeetbuzz-withdrawal-time")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

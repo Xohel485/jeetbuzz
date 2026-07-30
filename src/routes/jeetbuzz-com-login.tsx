@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-com-login";
@@ -10,7 +10,7 @@ const DESC = "JeetBuzz.com login walkthrough for 2026, how to reach the real log
 export const Route = createFileRoute("/jeetbuzz-com-login")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

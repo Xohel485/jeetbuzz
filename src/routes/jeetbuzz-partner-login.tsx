@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-partner-login";
@@ -10,7 +10,7 @@ const DESC = "JeetBuzz affiliate / partner login 2026, forgot password recovery,
 export const Route = createFileRoute("/jeetbuzz-partner-login")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

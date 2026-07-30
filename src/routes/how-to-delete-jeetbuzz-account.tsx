@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/how-to-delete-jeetbuzz-account";
@@ -10,7 +10,7 @@ const DESC = "How to delete a JeetBuzz account in 2026, the difference between a
 export const Route = createFileRoute("/how-to-delete-jeetbuzz-account")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

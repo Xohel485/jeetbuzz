@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/jeetbuzz-minimum-deposit";
 const TITLE = "JeetBuzz Minimum Deposit 2026. BDT 100 to Start";
@@ -9,7 +9,7 @@ const DESC = "JeetBuzz minimum deposit in 2026. BDT 100 first deposit, BDT 200 r
 export const Route = createFileRoute("/jeetbuzz-minimum-deposit")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

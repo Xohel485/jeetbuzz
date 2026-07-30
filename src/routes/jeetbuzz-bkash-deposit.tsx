@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/jeetbuzz-bkash-deposit";
 const TITLE = "JeetBuzz bKash Deposit 2026. Steps, Limits & Fixes";
@@ -9,7 +9,7 @@ const DESC = "JeetBuzz bKash deposit for 2026, the exact 5-step Personal / Merch
 export const Route = createFileRoute("/jeetbuzz-bkash-deposit")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

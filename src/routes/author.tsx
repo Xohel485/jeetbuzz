@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { LAST_VERIFIED } from "@/lib/affiliate";
-import { canonicalLink, hreflangLinks, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, seoTitle } from "@/lib/schema";
 import { useI18n, type Locale } from "@/lib/i18n";
 
 const PATH = "/author" as const;
@@ -18,7 +18,7 @@ const DESC =
 export const Route = createFileRoute("/author")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
