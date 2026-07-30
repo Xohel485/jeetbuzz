@@ -15,6 +15,43 @@ import { articleSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
 import { useI18n, type Locale } from "@/lib/i18n";
 
+function wordsOf(lines?: string[]): number {
+  if (!lines?.length) return 0;
+  return lines.join(" ").trim().split(/\s+/).filter(Boolean).length;
+}
+
+/**
+ * Return the richest body available for the current locale. The current
+ * locale wins unless its copy is less than 40% the length of the longest
+ * variant (i.e. it is a placeholder stub), in which case the longest variant
+ * is rendered so SSR HTML always contains the full article.
+ */
+function resolveBody(
+  locale: Locale,
+  body: string[],
+  byLocale?: Partial<Record<Locale, string[]>>,
+): string[] {
+  const current = byLocale?.[locale] ?? body;
+  if (!byLocale) return current;
+  const candidates: string[][] = [body, ...Object.values(byLocale).filter(Boolean) as string[][]];
+  let richest = current;
+  for (const c of candidates) if (wordsOf(c) > wordsOf(richest)) richest = c;
+  return wordsOf(current) < wordsOf(richest) * 0.4 ? richest : current;
+}
+
+function resolveFaqs(
+  locale: Locale,
+  faqs?: FAQItem[],
+  byLocale?: Partial<Record<Locale, FAQItem[]>>,
+): FAQItem[] | undefined {
+  const current = byLocale?.[locale] ?? faqs;
+  if (!byLocale) return current;
+  const candidates = [faqs, ...Object.values(byLocale)].filter(Boolean) as FAQItem[][];
+  let richest = current ?? [];
+  for (const c of candidates) if (c.length > richest.length) richest = c;
+  return (current?.length ?? 0) < richest.length * 0.5 ? richest : current;
+}
+
 export function GuidePage({
   eyebrow,
   title,
