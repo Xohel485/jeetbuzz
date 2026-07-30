@@ -63,11 +63,18 @@ export function GuidePage({
   articleDescription?: string;
 }) {
   const { locale } = useI18n();
-  const localBody = bodyByLocale?.[locale] ?? body;
+  // SSR content resolution (T1).
+  // The server renders every non-localized URL with locale "en". Many pages
+  // ship a one-line English stub in `body` and the real 2,000+ word article in
+  // `bodyByLocale.bn`, which meant crawlers only ever saw the stub. Pick the
+  // richest available variant whenever the current locale's copy is
+  // substantially thinner than the longest one, so the full article is in the
+  // initial HTML regardless of which locale SSR resolves.
+  const localBody = resolveBody(locale, body, bodyByLocale);
   const localTitle = titleByLocale?.[locale] ?? title;
   const localSubtitle = subtitleByLocale?.[locale] ?? subtitle;
   const localCtaLabel = ctaLabelByLocale?.[locale] ?? ctaLabel;
-  const localFaqs = faqsByLocale?.[locale] ?? faqs;
+  const localFaqs = resolveFaqs(locale, faqs, faqsByLocale);
   const wordCount = localBody.join(" ").split(/\s+/).length;
   const minutes = Math.max(2, Math.round(wordCount / 200));
   return (
