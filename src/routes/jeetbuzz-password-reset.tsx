@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-password-reset";
-const TITLE = "JeetBuzz Password Reset 2026. Recover Access in 3 Minutes";
+const TITLE = "JeetBuzz Password Reset 2026. Recover in 3 Minutes";
 const DESC = "JeetBuzz password reset for 2026, recover via phone OTP or email link, what to do when both channels fail, and how to set a password that never gets brute-forced.";
 
 export const Route = createFileRoute("/jeetbuzz-password-reset")({

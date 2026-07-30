@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-withdrawal-pending";
-const TITLE = "JeetBuzz Withdrawal Pending 2026. Why It's Stuck & How to Fix";
+const TITLE = "JeetBuzz Withdrawal Pending 2026. Why & How to Fix";
 const DESC = "JeetBuzz withdrawal pending in 2026, the seven real reasons cash-outs get stuck (KYC, name mismatch, wallet limits, weekend cycles) and the exact live-chat script that unblocks each one.";
 
 export const Route = createFileRoute("/jeetbuzz-withdrawal-pending")({

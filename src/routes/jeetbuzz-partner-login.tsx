@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-partner-login";
-const TITLE = "JeetBuzz Affiliate Login & Password Recovery 2026. Partner Dashboard";
+const TITLE = "JeetBuzz Affiliate Login 2026. Partner Dashboard";
 const DESC = "JeetBuzz affiliate / partner login 2026, forgot password recovery, password reset via email link, 2FA reset, account recovery, Telegram support escalation and phishing guardrails.";
 
 export const Route = createFileRoute("/jeetbuzz-partner-login")({

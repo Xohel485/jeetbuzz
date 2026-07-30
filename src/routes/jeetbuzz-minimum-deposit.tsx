@@ -3,7 +3,7 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/jeetbuzz-minimum-deposit";
-const TITLE = "JeetBuzz Minimum Deposit 2026. BDT 100 First, BDT 200 Recurring";
+const TITLE = "JeetBuzz Minimum Deposit 2026. BDT 100 to Start";
 const DESC = "JeetBuzz minimum deposit in 2026. BDT 100 first deposit, BDT 200 recurring, per-rail thresholds across bKash, Nagad, Rocket, USDT, and how bonuses shift the minimum.";
 
 export const Route = createFileRoute("/jeetbuzz-minimum-deposit")({

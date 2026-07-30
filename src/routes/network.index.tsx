@@ -5,7 +5,7 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 import { NETWORK_SITES, NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK } from "@/lib/network-sites";
 
 const ROUTE = "/network";
-const TITLE = "আমাদের গাইড নেটওয়ার্ক — MCW Casino, Baji Live, TekkaBuzz ও BetTekka";
+const TITLE = "আমাদের গাইড নেটওয়ার্ক — MCW, Baji Live ও TekkaBuzz";
 const DESC =
   "GetJeetBuzz টিমের পাঁচটি স্বাধীন বাংলা গাইড সাইট এক পাতায়: MCW Casino login, Baji Live login, TekkaBuzz login, TekkaBuzz 88 app download ও BetTekka registration — মালিকানা, সম্পাদকীয় মান ও যাচাই পদ্ধতিসহ।";
 

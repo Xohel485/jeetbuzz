@@ -6,7 +6,7 @@ import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetw
 
 const SITE = networkSite("bettekka");
 const ROUTE = SITE.path;
-const TITLE = "BetTekka বাংলা গাইড — সাইন আপ, ভেরিফিকেশন ও উইথড্রয়াল";
+const TITLE = "BetTekka বাংলা গাইড — সাইন আপ ও উইথড্রয়াল";
 const DESC =
   "BetTekka registration, KYC ভেরিফিকেশন, ডিপোজিট পদ্ধতি ও উইথড্রয়ালের ধাপ — bettekka.pro গাইড সাইটে কী কী কভার করা হয় তার সম্পূর্ণ পরিচিতি।";
 

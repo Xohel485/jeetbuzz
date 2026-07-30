@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 
 const PATH = "/android-web-app-guide";
 const TITLE =
-  "JeetBuzz Android Web App Guide 2026 - Chrome Install Without APK";
+  "JeetBuzz Android Web App 2026. Install Without APK";
 const DESC =
   "Run JeetBuzz on Android without installing the APK in 2026. Chrome Add to Home Screen, PWA install, push notifications and when the web app is actually better than the APK.";
 

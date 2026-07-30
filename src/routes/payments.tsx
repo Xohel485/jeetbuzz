@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PAYMENTS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/payments";
-const TITLE = "JeetBuzz Payments Hub. Deposit & Withdraw in BD, PK, India 2026";
+const TITLE = "JeetBuzz Payments Hub 2026. Deposit & Withdraw Guide";
 const DESC = "One JeetBuzz payments hub for Bangladesh, Pakistan and India, pick bKash, Nagad, JazzCash, EasyPaisa, UPI or USDT with clear minimums and timing.";
 
 export const Route = createFileRoute("/payments")({

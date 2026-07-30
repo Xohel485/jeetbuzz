@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { BONUS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-refer-bonus";
-const TITLE = "JeetBuzz Refer Bonus 2026. Refer-a-Friend Reward Explained";
+const TITLE = "JeetBuzz Refer Bonus 2026. Refer-a-Friend Reward";
 const DESC = "How the JeetBuzz refer bonus works in 2026, refer-a-friend reward, qualifying steps, why some referrals never credit and the affiliate upgrade path.";
 
 export const Route = createFileRoute("/jeetbuzz-refer-bonus")({

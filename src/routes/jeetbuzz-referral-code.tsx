@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-referral-code";
-const TITLE = "JeetBuzz Referral Code 2026. How Refer-a-Friend & Affiliate Codes Work";
+const TITLE = "JeetBuzz Referral Code 2026. How Refer Codes Work";
 const DESC = "How JeetBuzz referral codes work in 2026, refer-a-friend rewards, where to find your code, and the difference between player referrals and the affiliate program.";
 
 export const Route = createFileRoute("/jeetbuzz-referral-code")({

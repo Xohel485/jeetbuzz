@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-affiliate-withdrawal";
-const TITLE = "JeetBuzz Affiliate Withdrawal 2026. Weekly Payout, Methods & Minimums";
+const TITLE = "JeetBuzz Affiliate Withdrawal 2026. Payouts & Limits";
 const DESC = "JeetBuzz affiliate withdrawal explained for 2026, weekly payout cycle, supported methods (USDT, bKash, JazzCash, bank), minimum threshold and payment timing.";
 
 export const Route = createFileRoute("/jeetbuzz-affiliate-withdrawal")({

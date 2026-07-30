@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { GAMES_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/games";
-const TITLE = "JeetBuzz Games Hub. Live Cricket, Casino, Aviator & Slots 2026";
+const TITLE = "JeetBuzz Games Hub 2026. Cricket, Casino & Aviator";
 const DESC = "Every JeetBuzz game category in one map, live cricket, sportsbook, live casino, Aviator crash game, slots and Teen Patti with the right strategy guide.";
 
 export const Route = createFileRoute("/games")({

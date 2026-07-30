@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { APP_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-app-update";
-const TITLE = "JeetBuzz App Update 2026. Safe Update Steps for Android & iOS";
+const TITLE = "JeetBuzz App Update 2026. Safe Android & iOS Steps";
 const DESC = "How to update the JeetBuzz app safely in 2026. Android APK over-the-top install, iOS PWA refresh, fixing old-version bugs and 'App not installed' errors.";
 
 export const Route = createFileRoute("/jeetbuzz-app-update")({

@@ -6,7 +6,7 @@ import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetw
 
 const SITE = networkSite("tekkabuzz");
 const ROUTE = SITE.path;
-const TITLE = "TekkaBuzz বাংলা গাইড — রেজিস্ট্রেশন, লগইন ও বোনাস শর্ত";
+const TITLE = "TekkaBuzz বাংলা গাইড — লগইন ও বোনাস শর্ত";
 const DESC =
   "TekkaBuzz login, নতুন অ্যাকাউন্ট রেজিস্ট্রেশন, প্রথম ডিপোজিট বোনাসের টার্নওভার শর্ত এবং সাপোর্ট চ্যানেল — tekkabuzz.win গাইড সাইটের পূর্ণ পরিচিতি।";
 

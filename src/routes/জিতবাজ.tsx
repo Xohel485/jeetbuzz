@@ -8,7 +8,7 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 const ROUTE = "/জিতবাজ";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const TITLE = "জিতবাজ লগইন ২০২৬ — অফিসিয়াল JeetBuzz সাইট, bKash বোনাস ও ক্রিকেট";
+const TITLE = "জিতবাজ লগইন ২০২৬ — অফিসিয়াল JeetBuzz সাইট ও বোনাস";
 const DESC = "জিতবাজ মানেই JeetBuzz — বাংলা লিপিতে অফিসিয়াল লগইন লিংক, ১০০৳ ন্যূনতম bKash/Nagad ডিপোজিট, ২০০% ওয়েলকাম বোনাস ও BPL-IPL লাইভ বেটিং গাইড।";
 
 export const Route = createFileRoute("/জিতবাজ")({

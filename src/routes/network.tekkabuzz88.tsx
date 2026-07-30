@@ -6,7 +6,7 @@ import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetw
 
 const SITE = networkSite("tekkabuzz88");
 const ROUTE = SITE.path;
-const TITLE = "TekkaBuzz 88 অ্যাপ গাইড — APK ডাউনলোড, ইনস্টল ও আপডেট";
+const TITLE = "TekkaBuzz 88 অ্যাপ গাইড — APK ডাউনলোড ও ইনস্টল";
 const DESC =
   "TekkaBuzz 88 app download, APK ইনস্টল পারমিশন, Play Protect সতর্কতা, অ্যাপ আপডেট ও প্রোমো কোড — tekkabuzz88.online গাইড সাইটের সম্পূর্ণ পরিচিতি।";
 

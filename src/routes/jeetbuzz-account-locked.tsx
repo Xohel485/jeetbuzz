@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-account-locked";
-const TITLE = "JeetBuzz Account Locked 2026. Reasons & How to Recover Access";
+const TITLE = "JeetBuzz Account Locked 2026. How to Recover Access";
 const DESC = "Why a JeetBuzz account gets locked in 2026 and how to recover it, password lockout, KYC hold, bonus abuse, multi-accounting appeals and the exact live-chat script.";
 
 export const Route = createFileRoute("/jeetbuzz-account-locked")({

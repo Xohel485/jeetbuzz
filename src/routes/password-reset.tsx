@@ -7,7 +7,7 @@ import { LOGIN_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/password-reset")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Password Reset Guide 2026 - Phone OTP & Email Recovery Steps" },
+      { title: "JeetBuzz Password Reset 2026. OTP & Email Recovery" },
       { name: "description", content: "Step-by-step JeetBuzz password reset guide for 2026, phone OTP, email reset link, common errors and what to do if account recovery fails in BD, PK and IN." },
       { property: "og:title", content: "JeetBuzz Password Reset. Step by Step" },
       { property: "og:description", content: "Step-by-step JeetBuzz password recovery for BD, PK and IN players." },

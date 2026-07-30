@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-deposit-failed";
-const TITLE = "JeetBuzz Deposit Failed 2026. Debited But Not Credited? Fix It Fast";
+const TITLE = "JeetBuzz Deposit Failed 2026. Debited? Fix It Fast";
 const DESC = "JeetBuzz deposit failed in 2026, money debited but not credited, wrong reference, name mismatch, expired session, every cause with the exact evidence support needs.";
 
 export const Route = createFileRoute("/jeetbuzz-deposit-failed")({

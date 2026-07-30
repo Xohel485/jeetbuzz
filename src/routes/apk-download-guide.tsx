@@ -6,7 +6,7 @@ import { softwareApplicationSchema, articleSchema, jsonLdScript, canonicalLink, 
 export const Route = createFileRoute("/apk-download-guide")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz APK Download Guide 2026 - Safe Android Install (BD/PK/IN)" },
+      { title: "JeetBuzz APK Download 2026. Safe Android Install" },
       { name: "description", content: "JeetBuzz APK download guide for 2026, install the official Android app safely from the operator, enable Unknown Sources, verify the package and avoid fake mirror APKs." },
       { property: "og:title", content: "JeetBuzz APK Download Guide. Safe Android Install" },
       { property: "og:description", content: "How to install the JeetBuzz Android app safely from the official site." },

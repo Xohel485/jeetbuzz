@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-account-verification";
-const TITLE = "JeetBuzz Account Verification 2026. KYC Checklist & Fast Approval";
+const TITLE = "JeetBuzz Account Verification 2026. KYC Checklist";
 const DESC = "JeetBuzz account verification for 2026, the exact ID, address and selfie requirements, why documents get rejected and how to clear KYC on the first try.";
 
 export const Route = createFileRoute("/jeetbuzz-account-verification")({

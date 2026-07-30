@@ -7,7 +7,7 @@ const PATH = "/bonuses";
 // Duplicate-intent audit (Batch 7): /bonuses is a light hub, /bonus-and-promotions
 // is the deep editorial page. Consolidate authority on the deeper URL.
 const CANONICAL_PATH = "/bonus-and-promotions";
-const TITLE = "JeetBuzz Bonuses Hub. Promo Code, Welcome & Refer Bonus 2026";
+const TITLE = "JeetBuzz Bonuses Hub 2026. Promo & Welcome Bonus";
 const DESC = "Every active JeetBuzz bonus in one place, welcome bonus, promo codes, first deposit match, refer-a-friend and rollover rules explained plainly.";
 
 export const Route = createFileRoute("/bonuses")({

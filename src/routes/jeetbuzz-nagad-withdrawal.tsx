@@ -3,7 +3,7 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/jeetbuzz-nagad-withdrawal";
-const TITLE = "JeetBuzz Nagad Withdrawal 2026. Steps, Minimum, Time & Fixes";
+const TITLE = "JeetBuzz Nagad Withdrawal 2026. Steps, Time & Fixes";
 const DESC = "JeetBuzz Nagad withdrawal for 2026, exact 5-step cash-out flow, minimum amount, real credit timing, KYC requirements and how to fix a Pending or rejected withdrawal.";
 
 export const Route = createFileRoute("/jeetbuzz-nagad-withdrawal")({

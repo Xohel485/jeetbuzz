@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "JeetBuzz Bangladesh Pakistan India 2026 - Login, Signup, Bonus & APK Guide",
+          "JeetBuzz 2026. Login, Signup, Bonus & App Guide (জিতবাজ)",
       },
       {
         name: "description",
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "JeetBuzz Bangladesh Pakistan India 2026 - Login, Signup, Bonus & APK Guide",
+        content: "JeetBuzz 2026. Login, Signup, Bonus & App Guide (জিতবাজ)",
       },
       {
         property: "og:description",

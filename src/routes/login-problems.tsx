@@ -7,7 +7,7 @@ import { LOGIN_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/login-problems")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Login Problems 2026 - Site Not Opening, OTP, Blocked Access Fixes" },
+      { title: "JeetBuzz Login Problems 2026. OTP & Access Fixes" },
       { name: "description", content: "Fix JeetBuzz login problems in 2026, site not opening, OTP not arriving, login button greyed out, ISP blocking and account locked errors for BD, PK and IN players." },
       { property: "og:title", content: "JeetBuzz Login Problems. Fix Access Issues" },
       { property: "og:description", content: "Common JeetBuzz login problems and step-by-step fixes for Bangladesh, Pakistan and India." },

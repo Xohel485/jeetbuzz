@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, HELP_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/help";
-const TITLE = "JeetBuzz Help Center. Login, KYC, Deposit & Withdrawal Fixes 2026";
+const TITLE = "JeetBuzz Help Center 2026. Login, KYC & Payment Fixes";
 const DESC = "Central JeetBuzz help center for BD, PK and IN players, recover a locked account, fix deposit and withdrawal issues, reset your password and appeal decisions.";
 
 export const Route = createFileRoute("/help")({

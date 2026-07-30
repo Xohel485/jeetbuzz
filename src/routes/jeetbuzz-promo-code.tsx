@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { BONUS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-promo-code";
-const TITLE = "JeetBuzz Promo Code 2026. Valid Codes Today, How to Redeem & Rollover";
+const TITLE = "JeetBuzz Promo Code 2026. Valid Codes & Redeem Steps";
 const DESC = "JeetBuzz promo code 2026, where today's valid codes live, how to redeem in the cashier, rollover math, region locks (BD/PK/IN), and every reason a code silently fails.";
 
 export const Route = createFileRoute("/jeetbuzz-promo-code")({

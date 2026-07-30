@@ -8,7 +8,7 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 const ROUTE = "/jest-buzz";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const TITLE = "Jest Buzz আসলে JeetBuzz — ভয়েস সার্চ গাইড, লগইন ও বোনাস ২০২৬";
+const TITLE = "Jest Buzz আসলে JeetBuzz — লগইন ও বোনাস গাইড ২০২৬";
 const DESC = "Jest Buzz Google ভয়েস সার্চের ভুল ট্রান্সক্রিপশন — আসল ব্র্যান্ড JeetBuzz। অফিসিয়াল লগইন, bKash/Nagad ডিপোজিট, ২০০% ওয়েলকাম বোনাস ও ক্রিকেট গাইড।";
 
 export const Route = createFileRoute("/jest-buzz")({

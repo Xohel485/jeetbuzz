@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-affiliate-signup";
-const TITLE = "JeetBuzz Affiliate Signup 2026. Apply for the Partner Program";
+const TITLE = "JeetBuzz Affiliate Signup 2026. Join the Program";
 const DESC = "Step-by-step JeetBuzz affiliate signup for 2026, application form, approval timing, KYC documents and what to do if your application is rejected.";
 
 export const Route = createFileRoute("/jeetbuzz-affiliate-signup")({

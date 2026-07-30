@@ -3,7 +3,7 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
 
 const PATH = "/jeetbuzz-bkash-deposit";
-const TITLE = "JeetBuzz bKash Deposit 2026. Steps, Minimum, Time & Fixes";
+const TITLE = "JeetBuzz bKash Deposit 2026. Steps, Limits & Fixes";
 const DESC = "JeetBuzz bKash deposit for 2026, the exact 5-step Personal / Merchant flow, minimum amount, expected credit time, name-mismatch fixes and how to reverse a wrong deposit.";
 
 export const Route = createFileRoute("/jeetbuzz-bkash-deposit")({

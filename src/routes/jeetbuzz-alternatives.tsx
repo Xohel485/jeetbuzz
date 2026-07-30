@@ -13,7 +13,7 @@ import {
 import { imageAbsoluteUrl } from "@/lib/images";
 
 const ROUTE_PATH = "/jeetbuzz-alternatives";
-const TITLE = "JeetBuzz Alternatives & Platform Comparison 2026 | GetJeetBuzz";
+const TITLE = "JeetBuzz Alternatives 2026. Platform Comparison | GetJeetBuzz";
 const DESCRIPTION =
   "Compare JeetBuzz with other well-known online gaming platforms including Baji, Crickex, Krikya, 1xBet, Melbet and more. Learn features, mobile experience, account access and payment options.";
 const HEADLINE = "JeetBuzz Alternatives & Platform Comparison";

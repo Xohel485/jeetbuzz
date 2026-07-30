@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-app-not-opening";
-const TITLE = "JeetBuzz App Not Opening 2026. Every Crash Fix in One Place";
+const TITLE = "JeetBuzz App Not Opening 2026. Every Crash Fix";
 const DESC = "JeetBuzz app not opening in 2026, outdated APK, cache corruption, blocked URL, Play Protect, storage full and network issues fixed with clear step-by-step recovery.";
 
 export const Route = createFileRoute("/jeetbuzz-app-not-opening")({

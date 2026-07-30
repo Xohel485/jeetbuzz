@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 import { APP_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-download-for-ios";
-const TITLE = "JeetBuzz Download for iOS 2026, iPhone & iPad Web App Install";
+const TITLE = "JeetBuzz Download for iOS 2026. iPhone Install";
 const DESC = "Install JeetBuzz on iPhone or iPad in 2026, no App Store needed. Safari web app install steps, notifications setup and iOS-specific troubleshooting.";
 
 export const Route = createFileRoute("/jeetbuzz-download-for-ios")({

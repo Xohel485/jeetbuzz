@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 
 const PATH = "/phonepe-guide";
 const TITLE =
-  "JeetBuzz PhonePe Deposit Guide India 2026 - UPI VPA, Step by Step";
+  "JeetBuzz PhonePe Deposit India 2026. UPI Steps";
 const DESC =
   "Step-by-step JeetBuzz PhonePe deposit guide for India 2026. UPI VPA flow, what PhonePe actually does, transaction limits and how to avoid success-but-pending cashier states.";
 

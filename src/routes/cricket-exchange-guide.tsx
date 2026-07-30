@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from
 
 const PATH = "/cricket-exchange-guide";
 const TITLE =
-  "JeetBuzz Cricket Exchange Guide 2026 - Back, Lay & IPL/BPL/PSL Markets";
+  "JeetBuzz Cricket Exchange 2026. Back & Lay Guide";
 const DESC =
   "JeetBuzz cricket exchange explained for 2026, back vs lay bets, commission, in-play liability and how IPL, BPL and PSL markets work for players in Bangladesh, India and Pakistan.";
 
