@@ -376,7 +376,7 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     en: { title: "JeetBuzz FAQ" + BRAND_EN, description: "Common JeetBuzz questions, accounts, payments, bonuses and app." },
     bn: { title: "জিতবাজ FAQ, অ্যাকাউন্ট, পেমেন্ট ও বোনাস" + BRAND_BN, description: "জিতবাজের সাধারণ প্রশ্ন, অ্যাকাউন্ট, পেমেন্ট, বোনাস ও অ্যাপ।" },
     ur: { title: "JeetBuzz عمومی سوالات" + BRAND_UR, description: "JeetBuzz کے عام سوالات, اکاؤنٹس، ادائیگیاں، بونس اور ایپ۔" },
-    hi: { title: "JeetBuzz FAQ" + BRAND_HI, description: "JeetBuzz के सामान्य प्रश्न, खाते, पेमेंट, बोनस और ऐप।" },
+    hi: { title: "JeetBuzz FAQ, खाता, पेमेंट और बोनस सवाल" + BRAND_HI, description: "JeetBuzz के सामान्य प्रश्न, खाते, पेमेंट, बोनस और ऐप।" },
   }),
   entry("privacy-policy", PrivacyPolicyRoute, {
     en: { title: "Privacy Policy" + BRAND_EN, description: "How GetJeetBuzz handles data, cookies and analytics." },
@@ -399,20 +399,20 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   entry("editorial-policy", EditorialPolicyRoute, {
     en: { title: "Editorial Policy" + BRAND_EN, description: "How GetJeetBuzz produces, reviews and updates content." },
     bn: { title: "সম্পাদকীয় নীতি" + BRAND_BN, description: "GetJeetBuzz কন্টেন্ট তৈরি ও আপডেট পদ্ধতি।" },
-    ur: { title: "ادارتی پالیسی" + BRAND_UR, description: "GetJeetBuzz مواد بنانے اور اپڈیٹ کرنے کا طریقہ۔" },
-    hi: { title: "संपादकीय नीति" + BRAND_HI, description: "GetJeetBuzz कंटेंट तैयार और अपडेट करने का तरीका।" },
+    ur: { title: "GetJeetBuzz ادارتی پالیسی اور معیار" + BRAND_UR, description: "GetJeetBuzz مواد بنانے اور اپڈیٹ کرنے کا طریقہ۔" },
+    hi: { title: "GetJeetBuzz संपादकीय नीति और मानक" + BRAND_HI, description: "GetJeetBuzz कंटेंट तैयार और अपडेट करने का तरीका।" },
   }),
   entry("review-policy", ReviewPolicyRoute, {
     en: { title: "Review Policy" + BRAND_EN, description: "How we test, score and update reviews." },
-    bn: { title: "রিভিউ পলিসি" + BRAND_BN, description: "আমরা কীভাবে রিভিউ যাচাই ও আপডেট করি।" },
-    ur: { title: "جائزہ پالیسی" + BRAND_UR, description: "ہم جائزے کیسے جانچتے اور اپڈیٹ کرتے ہیں۔" },
-    hi: { title: "रिव्यू नीति" + BRAND_HI, description: "हम रिव्यू कैसे जाँचते और अपडेट करते हैं।" },
+    bn: { title: "GetJeetBuzz রিভিউ পলিসি, যাচাই ও স্কোরিং" + BRAND_BN, description: "আমরা কীভাবে রিভিউ যাচাই ও আপডেট করি।" },
+    ur: { title: "GetJeetBuzz جائزہ پالیسی، جانچ کا طریقہ" + BRAND_UR, description: "ہم جائزے کیسے جانچتے اور اپڈیٹ کرتے ہیں۔" },
+    hi: { title: "GetJeetBuzz रिव्यू नीति, जाँच और स्कोरिंग" + BRAND_HI, description: "हम रिव्यू कैसे जाँचते और अपडेट करते हैं।" },
   }),
   entry("content-policy", ContentPolicyRoute, {
     en: { title: "Content Policy" + BRAND_EN, description: "Editorial standards and content rules." },
     bn: { title: "কন্টেন্ট পলিসি" + BRAND_BN, description: "সম্পাদকীয় মান ও কন্টেন্ট নিয়ম।" },
     ur: { title: "مواد کی پالیسی" + BRAND_UR, description: "ادارتی معیار اور مواد کے اصول۔" },
-    hi: { title: "कंटेंट पॉलिसी" + BRAND_HI, description: "संपादकीय मानक और कंटेंट नियम।" },
+    hi: { title: "GetJeetBuzz कंटेंट पॉलिसी और नियम" + BRAND_HI, description: "संपादकीय मानक और कंटेंट नियम।" },
   }),
   entry("fact-checking", FactCheckingRoute, {
     en: { title: "Fact-Checking Policy" + BRAND_EN, description: "How GetJeetBuzz verifies facts and corrects errors." },
@@ -422,8 +422,8 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   }),
   entry("update-policy", UpdatePolicyRoute, {
     en: { title: "Update Policy" + BRAND_EN, description: "How often GetJeetBuzz revisits and refreshes its content." },
-    bn: { title: "আপডেট পলিসি" + BRAND_BN, description: "GetJeetBuzz কত ঘন কন্টেন্ট রিভিউ ও আপডেট করে।" },
-    ur: { title: "اپڈیٹ پالیسی" + BRAND_UR, description: "GetJeetBuzz کتنی بار مواد کا جائزہ اور اپڈیٹ کرتا ہے۔" },
+    bn: { title: "GetJeetBuzz আপডেট পলিসি, কত ঘন রিভিউ" + BRAND_BN, description: "GetJeetBuzz কত ঘন কন্টেন্ট রিভিউ ও আপডেট করে।" },
+    ur: { title: "GetJeetBuzz اپڈیٹ پالیسی، مواد کی تازگی" + BRAND_UR, description: "GetJeetBuzz کتنی بار مواد کا جائزہ اور اپڈیٹ کرتا ہے۔" },
     hi: { title: "JeetBuzz अपडेट नीति, समीक्षा और ताज़गी" + BRAND_HI, description: "GetJeetBuzz कितनी बार कंटेंट की समीक्षा और अपडेट करता है।" },
   }),
   entry("aviator-guide", AviatorGuideRoute, {
