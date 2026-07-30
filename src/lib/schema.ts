@@ -1,6 +1,10 @@
 import { SITE_NAME } from "./affiliate";
 import { BRAND } from "./entity-map";
 import { NETWORK_URLS } from "./network-sites";
+import {
+  LOCALIZED_SLUG_COUNTRIES,
+  type LocalizedCountry,
+} from "./localized-slugs";
 
 export const SITE_ORIGIN = "https://getjeetbuzz.com";
 
