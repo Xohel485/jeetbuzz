@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/phonepe-guide";
 const TITLE =
-  "JeetBuzz PhonePe Deposit Guide India 2026 - UPI VPA, Step by Step";
+  "JeetBuzz PhonePe Deposit India 2026. UPI Steps";
 const DESC =
   "Step-by-step JeetBuzz PhonePe deposit guide for India 2026. UPI VPA flow, what PhonePe actually does, transaction limits and how to avoid success-but-pending cashier states.";
 
 export const Route = createFileRoute("/phonepe-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

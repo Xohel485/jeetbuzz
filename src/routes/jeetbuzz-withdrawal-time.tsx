@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-withdrawal-time";
-const TITLE = "JeetBuzz Withdrawal Time 2026, bKash 15 min, Nagad 30 min, UPI 30 min, USDT 10 min";
+const TITLE = "JeetBuzz Withdrawal Time 2026. bKash, Nagad & UPI";
 const DESC = "JeetBuzz withdrawal time by rail, bKash ~15 min, Nagad ~30 min, JazzCash/EasyPaisa ~60 min, UPI ~30 min, USDT ~10 min. Why the first cash-out is slower and how to fix a pending withdrawal.";
 
 export const Route = createFileRoute("/jeetbuzz-withdrawal-time")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

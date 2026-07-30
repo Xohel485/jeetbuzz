@@ -6,7 +6,7 @@ import { imageAbsoluteUrl } from "@/lib/images";
 export const Route = createFileRoute("/live-cricket-betting")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Live Cricket Betting Guide 2026 - BPL, IPL, PSL & Internationals" },
+      { title: "JeetBuzz Live Cricket Betting 2026. BPL, IPL & PSL" },
       { name: "description", content: "JeetBuzz live cricket betting guide 2026, in-play markets, over-by-over odds, BPL, IPL, PSL and international fixtures plus bankroll tips for BD, PK and IN punters." },
       { property: "og:title", content: "JeetBuzz Live Cricket Betting Guide" },
       { property: "og:description", content: "Markets, in-play tips and bankroll management for JeetBuzz cricket." },

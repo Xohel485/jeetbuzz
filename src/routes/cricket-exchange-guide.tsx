@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/cricket-exchange-guide";
 const TITLE =
-  "JeetBuzz Cricket Exchange Guide 2026 - Back, Lay & IPL/BPL/PSL Markets";
+  "JeetBuzz Cricket Exchange 2026. Back & Lay Guide";
 const DESC =
   "JeetBuzz cricket exchange explained for 2026, back vs lay bets, commission, in-play liability and how IPL, BPL and PSL markets work for players in Bangladesh, India and Pakistan.";
 
 export const Route = createFileRoute("/cricket-exchange-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

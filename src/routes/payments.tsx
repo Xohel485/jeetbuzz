@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PAYMENTS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/payments";
-const TITLE = "JeetBuzz Payments Hub. Deposit & Withdraw in BD, PK, India 2026";
+const TITLE = "JeetBuzz Payments Hub 2026. Deposit & Withdraw Guide";
 const DESC = "One JeetBuzz payments hub for Bangladesh, Pakistan and India, pick bKash, Nagad, JazzCash, EasyPaisa, UPI or USDT with clear minimums and timing.";
 
 export const Route = createFileRoute("/payments")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

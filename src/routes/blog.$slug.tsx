@@ -20,7 +20,10 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ loaderData, params }) => {
     const post = loaderData?.post;
-    const title = post ? `${post.title} | GetJeetBuzz` : "Article | GetJeetBuzz";
+    // Keep SERP titles under ~60 characters: the brand suffix is only added
+    // when the post title alone leaves room for it.
+    const base = post?.title ?? "Article";
+    const title = base.length > 45 ? base : `${base} | GetJeetBuzz`;
     const desc = post?.description ?? "JeetBuzz partner guide article.";
     const path = `/blog/${params.slug}`;
     return {

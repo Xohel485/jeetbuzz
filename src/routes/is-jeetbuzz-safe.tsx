@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/is-jeetbuzz-safe";
 const TITLE =
-  "Is JeetBuzz Safe? 2026 Trust, License, Security & Responsible Gaming Guide";
+  "Is JeetBuzz Safe in 2026? License & Security Check";
 const DESC =
   "Is JeetBuzz safe in 2026? Dedicated trust page. Curacao license verification, account security controls, data handling, responsible gaming tools and dispute escalation. For the full editorial verdict, see the JeetBuzz Review.";
 
 export const Route = createFileRoute("/is-jeetbuzz-safe")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

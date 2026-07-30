@@ -7,7 +7,7 @@ import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/verification")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Verification Guide 2026 - Phone OTP, Email & KYC (NID/CNIC/Aadhaar)" },
+      { title: "JeetBuzz Verification 2026. OTP, Email & KYC Steps" },
       { name: "description", content: "JeetBuzz account verification guide 2026, phone OTP, email confirmation and KYC with NID (BD), CNIC (PK) or Aadhaar (IN), documents to send and approval timing." },
       { property: "og:title", content: "JeetBuzz Account Verification" },
       { property: "og:description", content: "Step-by-step JeetBuzz verification, phone, email and KYC for BD, PK and IN." },

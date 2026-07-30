@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/bkash-guide";
 const TITLE =
-  "JeetBuzz bKash Deposit & Withdrawal Guide Bangladesh 2026 - Step by Step";
+  "JeetBuzz bKash Deposit & Withdrawal Guide 2026";
 const DESC =
   "Step-by-step JeetBuzz bKash deposit and withdrawal guide for Bangladesh 2026. Send Money flow, minimums, fees, processing times and fixes for failed transactions.";
 
 export const Route = createFileRoute("/bkash-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

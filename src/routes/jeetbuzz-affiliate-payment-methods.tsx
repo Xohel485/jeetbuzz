@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-affiliate-payment-methods";
-const TITLE = "JeetBuzz Affiliate Payment Methods 2026, bKash, Nagad, USDT, Bank";
+const TITLE = "JeetBuzz Affiliate Payments 2026. bKash, USDT, Bank";
 const DESC = "Every JeetBuzz affiliate payout method for 2026, bKash, Nagad, Rocket, bank transfer and USDT (TRC-20), with minimums, fees, timing and KYC requirements.";
 
 export const Route = createFileRoute("/jeetbuzz-affiliate-payment-methods")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

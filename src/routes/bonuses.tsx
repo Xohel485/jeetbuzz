@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { BONUS_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/bonuses";
 // Duplicate-intent audit (Batch 7): /bonuses is a light hub, /bonus-and-promotions
 // is the deep editorial page. Consolidate authority on the deeper URL.
 const CANONICAL_PATH = "/bonus-and-promotions";
-const TITLE = "JeetBuzz Bonuses Hub. Promo Code, Welcome & Refer Bonus 2026";
+const TITLE = "JeetBuzz Bonuses Hub 2026. Promo & Welcome Bonus";
 const DESC = "Every active JeetBuzz bonus in one place, welcome bonus, promo codes, first deposit match, refer-a-friend and rollover rules explained plainly.";
 
 export const Route = createFileRoute("/bonuses")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

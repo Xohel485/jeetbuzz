@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-account-locked";
-const TITLE = "JeetBuzz Account Locked 2026. Reasons & How to Recover Access";
+const TITLE = "JeetBuzz Account Locked 2026. How to Recover Access";
 const DESC = "Why a JeetBuzz account gets locked in 2026 and how to recover it, password lockout, KYC hold, bonus abuse, multi-accounting appeals and the exact live-chat script.";
 
 export const Route = createFileRoute("/jeetbuzz-account-locked")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

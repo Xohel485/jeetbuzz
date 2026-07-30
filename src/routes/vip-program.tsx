@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/vip-program";
 const TITLE =
-  "JeetBuzz VIP Program 2026 - Tiers, Cashback, Faster Withdrawals (BD/PK/IN)";
+  "JeetBuzz VIP Program 2026. Tiers, Cashback & Limits";
 const DESC =
   "JeetBuzz VIP program 2026, tier requirements, cashback rates, faster withdrawal limits and dedicated managers for Bangladesh, Pakistan and India high rollers.";
 
 export const Route = createFileRoute("/vip-program")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

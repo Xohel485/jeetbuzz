@@ -13,11 +13,11 @@ import {
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Register 2026 | Safe Account Registration Guide | GetJeetBuzz" },
+      { title: "JeetBuzz Register 2026 | Safe Account Registration Guide" },
       {
         name: "description",
         content:
-          "Register a JeetBuzz account safely using our complete 2026 guide. Find registration requirements, account verification, security recommendations and helpful FAQs for new users.",
+          "Register on JeetBuzz in 4 steps: what documents KYC needs, how long approval takes, common rejection reasons and the settings to fix before your first deposit. Updated for 2026.",
       },
       { property: "og:title", content: "JeetBuzz Registration. Full Account Setup" },
       {

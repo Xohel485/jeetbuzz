@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, softwareApplicationSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, softwareApplicationSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/mobile-app-guide";
 const TITLE =
-  "JeetBuzz Mobile App Guide Bangladesh 2026 - Android & iOS Install, Login";
+  "JeetBuzz Mobile App Guide 2026. Android & iOS Install";
 const DESC =
   "JeetBuzz mobile app guide for Bangladesh 2026. Android APK and iOS install, login, biometric security, push notifications and live cricket in-play tips on the go.";
 
 export const Route = createFileRoute("/mobile-app-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

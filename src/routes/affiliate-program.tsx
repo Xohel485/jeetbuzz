@@ -577,7 +577,7 @@ const CONTENT: Record<Locale, AffiliateContent> = {
 };
 
 const PAGE_PATH = "/affiliate-program";
-const PAGE_TITLE = "JeetBuzz Affiliate Program | Earn Up to 60% Weekly Commission";
+const PAGE_TITLE = "JeetBuzz Affiliate Program. Up to 60% Commission";
 const PAGE_DESC =
   "Join the JeetBuzz Affiliate Program and earn up to 60% weekly commission. Complete KYC, invite active players, receive weekly payouts and build long-term affiliate income.";
 

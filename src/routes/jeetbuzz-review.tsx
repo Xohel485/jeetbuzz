@@ -17,7 +17,7 @@ import { VARIANT_LINKS } from "@/lib/misspelling-shared";
 export const Route = createFileRoute("/jeetbuzz-review")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Review 2026. Rated 4.6/5 on Cricket, bKash/Nagad/UPI & Support (BD, PK, IN)" },
+      { title: "JeetBuzz Review 2026. Rated 4.6/5 by Our Editors" },
       { name: "description", content: "Independent JeetBuzz review 2026, rated 4.6/5 across cricket odds, welcome bonus, bKash/Nagad/UPI payments, Android app, live chat support, licensing and safety for BD, PK and IN." },
       { property: "og:title", content: "JeetBuzz Review 2026, 4.6/5 Bangladesh, Pakistan, India Verdict" },
       { property: "og:description", content: "Tested from Dhaka, Karachi and Mumbai, cricket odds, bonus terms, payments, app and safety scored 4.6/5." },

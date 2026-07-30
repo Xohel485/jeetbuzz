@@ -7,7 +7,7 @@ import { LOGIN_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/login-security")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Login Security 2026 - 2FA, Anti-Phishing & Mirror Check (BD/PK/IN)" },
+      { title: "JeetBuzz Login Security 2026. 2FA & Anti-Phishing" },
       { name: "description", content: "JeetBuzz login security 2026, enable 2FA, recognise fake mirror pages, harden your password and lock down your account against phishing in Bangladesh, Pakistan and India." },
       { property: "og:title", content: "JeetBuzz Login Security, 2FA & Anti-Phishing" },
       { property: "og:description", content: "Account security best practices for JeetBuzz login." },

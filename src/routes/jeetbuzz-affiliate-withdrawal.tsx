@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-affiliate-withdrawal";
-const TITLE = "JeetBuzz Affiliate Withdrawal 2026. Weekly Payout, Methods & Minimums";
+const TITLE = "JeetBuzz Affiliate Withdrawal 2026. Payouts & Limits";
 const DESC = "JeetBuzz affiliate withdrawal explained for 2026, weekly payout cycle, supported methods (USDT, bKash, JazzCash, bank), minimum threshold and payment timing.";
 
 export const Route = createFileRoute("/jeetbuzz-affiliate-withdrawal")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

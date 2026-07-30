@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-affiliate-dashboard";
-const TITLE = "JeetBuzz Affiliate Dashboard 2026. Reports, Metrics & Payouts";
+const TITLE = "JeetBuzz Affiliate Dashboard 2026. Reports & Payouts";
 const DESC = "Complete walkthrough of the JeetBuzz affiliate dashboard for 2026, clicks, registrations, FTDs, active players, weekly NGR, commission tier and payout history.";
 
 export const Route = createFileRoute("/jeetbuzz-affiliate-dashboard")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

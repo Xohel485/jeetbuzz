@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-account-verification";
-const TITLE = "JeetBuzz Account Verification 2026. KYC Checklist & Fast Approval";
+const TITLE = "JeetBuzz Account Verification 2026. KYC Checklist";
 const DESC = "JeetBuzz account verification for 2026, the exact ID, address and selfie requirements, why documents get rejected and how to clear KYC on the first try.";
 
 export const Route = createFileRoute("/jeetbuzz-account-verification")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

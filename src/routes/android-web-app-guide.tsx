@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/android-web-app-guide";
 const TITLE =
-  "JeetBuzz Android Web App Guide 2026 - Chrome Install Without APK";
+  "JeetBuzz Android Web App 2026. Install Without APK";
 const DESC =
   "Run JeetBuzz on Android without installing the APK in 2026. Chrome Add to Home Screen, PWA install, push notifications and when the web app is actually better than the APK.";
 
 export const Route = createFileRoute("/android-web-app-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

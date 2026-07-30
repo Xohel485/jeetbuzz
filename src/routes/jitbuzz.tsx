@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangBengaliOnly, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangBengaliOnly, ogUrl, seoTitle } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 import { RELATED_ARTICLES_BLOCK, BYLINE_LINES, CANONICAL_HUB_BLOCK, siblingVariantsBlock } from "@/lib/misspelling-shared";
 import { LAST_VERIFIED } from "@/lib/affiliate";
@@ -8,13 +8,13 @@ import { LAST_VERIFIED } from "@/lib/affiliate";
 const ROUTE = "/jitbuzz";
 // Self-referencing canonical — each misspelling page is unique long-form content.
 const PATH = ROUTE;
-const TITLE = "Jitbuzz Login ২০২৬ — আসল JeetBuzz সাইট, IPL বেটিং ও UPI ডিপোজিট";
+const TITLE = "Jitbuzz লগইন ২০২৬ — আসল JeetBuzz সাইট ও ডিপোজিট";
 const DESC = "Jitbuzz হিন্দি/উর্দু ট্রান্সলিটারেশন — সঠিক ব্র্যান্ড JeetBuzz। অফিসিয়াল লগইন, UPI/bKash ডিপোজিট, IPL-BPL লাইভ বেটিং ও ২০০% ওয়েলকাম বোনাসের গাইড।";
 
 export const Route = createFileRoute("/jitbuzz")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

@@ -10,6 +10,7 @@ import {
   type Locale,
 } from "@/lib/i18n";
 import { findLocalizedRoute } from "@/lib/localized-routes";
+import { localizedSlugCountries } from "@/lib/schema";
 import { LocalizedIntroProvider } from "@/components/LocalizedIntro";
 
 const SITE = "https://getjeetbuzz.com";
@@ -22,16 +23,20 @@ function isValidCountryLang(country: string, lang: string): boolean {
 
 function hreflangCluster(slug: string) {
   const tail = slug ? `/${slug}` : "";
-  return [
-    { rel: "alternate", hrefLang: "en", href: `${SITE}${tail || "/"}` },
-    { rel: "alternate", hrefLang: "bn-BD", href: `${SITE}/bd/bn${tail}` },
-    { rel: "alternate", hrefLang: "en-BD", href: `${SITE}/bd/en${tail}` },
-    { rel: "alternate", hrefLang: "ur-PK", href: `${SITE}/pk/ur${tail}` },
-    { rel: "alternate", hrefLang: "en-PK", href: `${SITE}/pk/en${tail}` },
-    { rel: "alternate", hrefLang: "hi-IN", href: `${SITE}/in/hi${tail}` },
-    { rel: "alternate", hrefLang: "en-IN", href: `${SITE}/in/en${tail}` },
+  const allowed = localizedSlugCountries(slug);
+  // Only reciprocate URLs that actually resolve. `/{country}/en/*` pages are
+  // deliberately excluded from indexing, so they get no alternate either.
+  const links = [
     { rel: "alternate", hrefLang: "x-default", href: `${SITE}${tail || "/"}` },
+    { rel: "alternate", hrefLang: "en", href: `${SITE}${tail || "/"}` },
   ];
+  if (allowed.includes("bd"))
+    links.push({ rel: "alternate", hrefLang: "bn-BD", href: `${SITE}/bd/bn${tail}` });
+  if (allowed.includes("pk"))
+    links.push({ rel: "alternate", hrefLang: "ur-PK", href: `${SITE}/pk/ur${tail}` });
+  if (allowed.includes("in"))
+    links.push({ rel: "alternate", hrefLang: "hi-IN", href: `${SITE}/in/hi${tail}` });
+  return links;
 }
 
 export const Route = createFileRoute("/$country/$lang/$")({

@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/jazzcash-guide";
 const TITLE =
-  "JeetBuzz JazzCash Deposit & Withdrawal Guide Pakistan 2026 - Step by Step";
+  "JeetBuzz JazzCash Deposit & Withdrawal 2026 (PK)";
 const DESC =
   "Step-by-step JeetBuzz JazzCash deposit and withdrawal guide for Pakistan 2026. Mobile Account flow, MPIN tips, daily limits and fixes when a transfer stays processing.";
 
 export const Route = createFileRoute("/jazzcash-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

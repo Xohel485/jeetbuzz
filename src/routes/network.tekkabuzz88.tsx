@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangXDefaultOnly, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangXDefaultOnly, ogUrl, seoTitle } from "@/lib/schema";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetworkBlock, networkSite } from "@/lib/network-sites";
 
 const SITE = networkSite("tekkabuzz88");
 const ROUTE = SITE.path;
-const TITLE = "TekkaBuzz 88 অ্যাপ গাইড — APK ডাউনলোড, ইনস্টল ও আপডেট";
+const TITLE = "TekkaBuzz 88 অ্যাপ গাইড — APK ডাউনলোড ও ইনস্টল";
 const DESC =
   "TekkaBuzz 88 app download, APK ইনস্টল পারমিশন, Play Protect সতর্কতা, অ্যাপ আপডেট ও প্রোমো কোড — tekkabuzz88.online গাইড সাইটের সম্পূর্ণ পরিচিতি।";
 
 export const Route = createFileRoute("/network/tekkabuzz88")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

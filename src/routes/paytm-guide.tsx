@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/paytm-guide";
 const TITLE =
-  "JeetBuzz Paytm Deposit Guide India 2026 - UPI Path, Step by Step";
+  "JeetBuzz Paytm Deposit India 2026. UPI Steps";
 const DESC =
   "Step-by-step JeetBuzz Paytm deposit guide for India 2026. UPI path (recommended), what changed after Paytm Payments Bank restrictions and how it differs from PhonePe.";
 
 export const Route = createFileRoute("/paytm-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

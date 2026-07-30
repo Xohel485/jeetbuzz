@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { GAMES_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/games";
-const TITLE = "JeetBuzz Games Hub. Live Cricket, Casino, Aviator & Slots 2026";
+const TITLE = "JeetBuzz Games Hub 2026. Cricket, Casino & Aviator";
 const DESC = "Every JeetBuzz game category in one map, live cricket, sportsbook, live casino, Aviator crash game, slots and Teen Patti with the right strategy guide.";
 
 export const Route = createFileRoute("/games")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

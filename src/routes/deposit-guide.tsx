@@ -1,18 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/deposit-guide";
 const TITLE =
-  "JeetBuzz Deposit Guide Bangladesh Pakistan India 2026 - bKash, Nagad, UPI";
+  "JeetBuzz Deposit Guide 2026. bKash, Nagad & UPI";
 const DESC =
   "How to deposit on JeetBuzz in 2026 from Bangladesh, Pakistan and India, bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
 
 export const Route = createFileRoute("/deposit-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

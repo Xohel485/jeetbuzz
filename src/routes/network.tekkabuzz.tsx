@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangXDefaultOnly, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangXDefaultOnly, ogUrl, seoTitle } from "@/lib/schema";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetworkBlock, networkSite } from "@/lib/network-sites";
 
 const SITE = networkSite("tekkabuzz");
 const ROUTE = SITE.path;
-const TITLE = "TekkaBuzz বাংলা গাইড — রেজিস্ট্রেশন, লগইন ও বোনাস শর্ত";
+const TITLE = "TekkaBuzz বাংলা গাইড — লগইন ও বোনাস শর্ত";
 const DESC =
   "TekkaBuzz login, নতুন অ্যাকাউন্ট রেজিস্ট্রেশন, প্রথম ডিপোজিট বোনাসের টার্নওভার শর্ত এবং সাপোর্ট চ্যানেল — tekkabuzz.win গাইড সাইটের পূর্ণ পরিচিতি।";
 
 export const Route = createFileRoute("/network/tekkabuzz")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

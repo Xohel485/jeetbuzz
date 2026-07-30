@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-sign-up";
-const TITLE = "JeetBuzz Sign Up 2026, 3-Minute Registration + New Account Sign Up Bonus";
+const TITLE = "JeetBuzz Sign Up 2026. 3-Minute Registration & Bonus";
 const DESC = "JeetBuzz sign up 2026, phone/email registration in three minutes, claim the new-account sign-up bonus, KYC, promo code entry and safe first-deposit tips for BD, PK and IN.";
 
 export const Route = createFileRoute("/jeetbuzz-sign-up")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

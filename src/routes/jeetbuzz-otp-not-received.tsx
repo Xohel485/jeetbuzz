@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-otp-not-received";
-const TITLE = "JeetBuzz OTP Not Received 2026. Every Cause & Fast Fix";
+const TITLE = "JeetBuzz OTP Not Received 2026. Causes & Fast Fix";
 const DESC = "JeetBuzz OTP not arriving in 2026. DND, SMS filter, wrong country code, carrier block, mistyped number and full support-escalation script that gets an OTP delivered.";
 
 export const Route = createFileRoute("/jeetbuzz-otp-not-received")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

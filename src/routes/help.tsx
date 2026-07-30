@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { PROBLEMS_CLUSTER, HELP_CLUSTER } from "@/lib/clusters";
 
 const PATH = "/help";
-const TITLE = "JeetBuzz Help Center. Login, KYC, Deposit & Withdrawal Fixes 2026";
+const TITLE = "JeetBuzz Help Center 2026. Login, KYC & Payment Fixes";
 const DESC = "Central JeetBuzz help center for BD, PK and IN players, recover a locked account, fix deposit and withdrawal issues, reset your password and appeal decisions.";
 
 export const Route = createFileRoute("/help")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

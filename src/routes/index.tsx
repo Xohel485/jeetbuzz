@@ -2,14 +2,21 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HomePage } from "@/components/home/HomePage";
 import { BengaliIntroSection } from "@/components/home/BengaliIntroSection";
 import { IMAGES, imageUrl, imageAbsoluteUrl, imageObjectSchema } from "@/lib/images";
-import { faqSchema, articleSchema, hreflangLinks, canonicalLink, ogUrl } from "@/lib/schema";
+import {
+  faqSchema,
+  articleSchema,
+  breadcrumbSchema,
+  hreflangLinks,
+  canonicalLink,
+  ogUrl,
+} from "@/lib/schema";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
         title:
-          "JeetBuzz Bangladesh Pakistan India 2026 - Login, Signup, Bonus & APK Guide",
+          "JeetBuzz 2026. Login, Signup, Bonus & App Guide (জিতবাজ)",
       },
       {
         name: "description",
@@ -18,7 +25,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "JeetBuzz Bangladesh Pakistan India 2026 - Login, Signup, Bonus & APK Guide",
+        content: "JeetBuzz 2026. Login, Signup, Bonus & App Guide (জিতবাজ)",
       },
       {
         property: "og:description",
@@ -57,6 +64,12 @@ export const Route = createFileRoute("/")({
       canonicalLink("/"), ...hreflangLinks(""),
     ],
     scripts: [
+      // Single-item BreadcrumbList so the homepage participates in the same
+      // breadcrumb graph as every inner page (all of which point back to it).
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }])),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify(imageObjectSchema("hero")),

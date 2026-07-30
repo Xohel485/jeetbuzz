@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/security-guide";
 const TITLE =
-  "JeetBuzz Security Guide 2026 - 2FA, Phishing Defence & Account Recovery";
+  "JeetBuzz Security Guide 2026. 2FA & Account Recovery";
 const DESC =
   "JeetBuzz account security guide for 2026, strong passwords, 2FA setup, biometric login, phishing defence and recovery steps if your JeetBuzz account is compromised.";
 
 export const Route = createFileRoute("/security-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

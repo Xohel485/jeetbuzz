@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { HUBS } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-live-cricket";
-const TITLE = "JeetBuzz Live Cricket 2026. BPL, IPL, PSL In-Play Markets & Odds";
+const TITLE = "JeetBuzz Live Cricket 2026. BPL, IPL & PSL Markets";
 const DESC = "JeetBuzz live cricket 2026, in-play markets for BPL, IPL, PSL and internationals, over-by-over odds, cash-out timing, ball-by-ball settlement and market-by-market strategy for BD, PK and IN.";
 
 export const Route = createFileRoute("/jeetbuzz-live-cricket")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

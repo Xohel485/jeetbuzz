@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/ios-app-guide";
 const TITLE =
-  "JeetBuzz iOS App Guide 2026 - Safari Web App Install for iPhone & iPad";
+  "JeetBuzz iOS App 2026. iPhone & iPad Install Guide";
 const DESC =
   "Use JeetBuzz on iPhone and iPad in 2026. Safari Add to Home Screen web-app install, push notifications, login persistence and what to do when the App Store route isn't available.";
 
 export const Route = createFileRoute("/ios-app-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

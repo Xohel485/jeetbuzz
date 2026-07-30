@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/agent-earning-guide";
 const TITLE =
-  "JeetBuzz Agent & Affiliate Earning Guide 2026 - Commission, Payouts & Tools";
+  "JeetBuzz Agent Earning Guide 2026. Commission & Payouts";
 const DESC =
   "How to earn as a JeetBuzz agent or affiliate in 2026, commission models, sub-affiliate tiers, payout rails for BD/PK/IN, marketing rules and what gets a partner account suspended.";
 
 export const Route = createFileRoute("/agent-earning-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

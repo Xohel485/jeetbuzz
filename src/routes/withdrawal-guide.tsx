@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/withdrawal-guide";
 const TITLE =
-  "JeetBuzz Withdrawal Guide Bangladesh 2026 - bKash, Nagad, Rocket Cash Out";
+  "JeetBuzz Withdrawal Guide 2026. bKash, Nagad, Rocket";
 const DESC =
   "JeetBuzz withdrawal guide for Bangladesh 2026, cash out to bKash, Nagad and Rocket, KYC checklist, daily limits, processing times and what to do if withdrawal is delayed.";
 
 export const Route = createFileRoute("/withdrawal-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

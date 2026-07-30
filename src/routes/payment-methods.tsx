@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/payment-methods";
 const TITLE =
-  "JeetBuzz Payment Methods Bangladesh Pakistan India - bKash, Nagad, JazzCash, UPI 2026";
+  "JeetBuzz Payment Methods 2026. bKash, Nagad & UPI";
 const DESC =
   "Every JeetBuzz payment method for Bangladesh, Pakistan and India in 2026, bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
 
 export const Route = createFileRoute("/payment-methods")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

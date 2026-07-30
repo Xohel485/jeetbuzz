@@ -7,7 +7,7 @@ import { imageAbsoluteUrl } from "@/lib/images";
 export const Route = createFileRoute("/login-guide")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Login 2026 - Working Links, Access Help & Mirror Check (BD/PK/IN)" },
+      { title: "JeetBuzz Login 2026. Working Links & Access Help" },
       { name: "description", content: "JeetBuzz login guide 2026, working alternative links, fix site-not-opening issues, recover your password, enable 2FA and spot fake mirrors in Bangladesh, Pakistan and India." },
       { property: "og:title", content: "JeetBuzz Login. Working Links & Access Help" },
       { property: "og:description", content: "Official JeetBuzz login plus working alternative links and fixes for blocked-access issues." },

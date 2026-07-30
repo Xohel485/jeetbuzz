@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { BONUS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-refer-bonus";
-const TITLE = "JeetBuzz Refer Bonus 2026. Refer-a-Friend Reward Explained";
+const TITLE = "JeetBuzz Refer Bonus 2026. Refer-a-Friend Reward";
 const DESC = "How the JeetBuzz refer bonus works in 2026, refer-a-friend reward, qualifying steps, why some referrals never credit and the affiliate upgrade path.";
 
 export const Route = createFileRoute("/jeetbuzz-refer-bonus")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

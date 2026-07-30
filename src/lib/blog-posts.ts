@@ -175,7 +175,7 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "is-jeetbuzz-safe-bangladesh",
-    title: "Is JeetBuzz Safe for Bangladeshi Players? An Independent Look",
+    title: "Is JeetBuzz Safe for Bangladeshi Players?",
     description:
       "Licensing, payments, withdrawals, support and red flags, our honest take on JeetBuzz safety for Bangladesh users.",
     date: "2026-05-22",
@@ -681,7 +681,7 @@ POSTS.push(...EXTRA);
 const BENGALI_LONGFORM: BlogPost[] = [
   {
     slug: "jeetbuzz-promo-code-today",
-    title: "জেতাবাজ প্রোমো কোড টুডে ২০২৬ — কোথায় পাবেন, কীভাবে ব্যবহার করবেন",
+    title: "জেতাবাজ প্রোমো কোড ২০২৬ — কোথায় পাবেন ও কীভাবে দেবেন",
     category: "Bonus",
     description:
       "আজকের বৈধ JeetBuzz প্রোমো কোড কোথা থেকে আসে, কীভাবে ক্যাশিয়ারে ব্যবহার করবেন, রোলওভার হিসাব, রিজিয়ন লক এবং কেন কোড 'invalid' দেখায় — সম্পূর্ণ বাংলা গাইড।",
@@ -746,7 +746,7 @@ const BENGALI_LONGFORM: BlogPost[] = [
   },
   {
     slug: "jeetbuzz-withdrawal-time-bangladesh",
-    title: "জেতাবাজ উইথড্রয়াল টাইম বাংলাদেশ ২০২৬ — bKash, Nagad, Rocket কত সময় লাগে",
+    title: "জেতাবাজ উইথড্রয়াল টাইম ২০২৬ — কত সময় লাগে",
     category: "Payments",
     description:
       "JeetBuzz থেকে bKash, Nagad, Rocket-এ টাকা তোলার প্রকৃত সময়, KYC review কেন প্রথমবার ধীর, atc withdrawal pending থাকলে কী করবেন — বাংলাদেশি প্লেয়ারদের জন্য বাস্তব গাইড।",
@@ -807,7 +807,7 @@ const BENGALI_LONGFORM: BlogPost[] = [
   },
   {
     slug: "jeetbuzz-deposit-problem-fix",
-    title: "জেতাবাজ ডিপোজিট সমস্যা সমাধান ২০২৬ — bKash, Nagad, Rocket ফেইলড হলে করণীয়",
+    title: "জেতাবাজ ডিপোজিট সমস্যা সমাধান ২০২৬ — bKash ও Nagad",
     category: "Payments",
     description:
       "JeetBuzz-এ bKash, Nagad, Rocket দিয়ে ডিপোজিট ফেইল হচ্ছে? টাকা কেটে গেলেও credit হচ্ছে না? প্রতিটি সমস্যার কারণ এবং সমাধান — ১২টি সাধারণ ভুল এবং তাদের ফিক্স।",

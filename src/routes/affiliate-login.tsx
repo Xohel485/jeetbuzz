@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/affiliate-login" as const;
-const TITLE = "JeetBuzz Affiliate Login 2026. Partner Portal, Password Reset & Dashboard";
+const TITLE = "JeetBuzz Affiliate Login 2026. Portal & Password Reset";
 const DESC =
   "JeetBuzz affiliate login 2026, official partner portal link, password reset walkthrough, 2FA, sub-ID tracking and payout dashboard tour for BD, PK and IN affiliates.";
 
 export const Route = createFileRoute("/affiliate-login")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

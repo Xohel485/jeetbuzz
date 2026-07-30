@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 import { AFFILIATE_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-affiliate-commission";
-const TITLE = "JeetBuzz Affiliate Commission 2026, 25% to 60% Weekly Revenue Share";
+const TITLE = "JeetBuzz Affiliate Commission 2026. 25% to 60%";
 const DESC = "How JeetBuzz affiliate commission actually works in 2026, tier structure, weekly NGR calculation, negative carryover, sub-affiliate 3.5% override and how to hit the 60% Elite tier.";
 
 export const Route = createFileRoute("/jeetbuzz-affiliate-commission")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

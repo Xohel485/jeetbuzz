@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema } from "@/lib/schema";
+import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/upi-guide";
 const TITLE =
-  "JeetBuzz UPI Deposit & Withdrawal Guide India 2026 - VPA, UTR, Step by Step";
+  "JeetBuzz UPI Deposit & Withdrawal India 2026";
 const DESC =
   "Step-by-step JeetBuzz UPI deposit and withdrawal guide for India 2026. VPA flow, UTR submission, NPCI limits and why UPI success can still show pending on the cashier.";
 
 export const Route = createFileRoute("/upi-guide")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },

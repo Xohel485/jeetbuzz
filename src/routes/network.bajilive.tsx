@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GuidePage } from "@/components/GuidePage";
-import { canonicalLink, hreflangXDefaultOnly, ogUrl } from "@/lib/schema";
+import { canonicalLink, hreflangXDefaultOnly, ogUrl, seoTitle } from "@/lib/schema";
 import { LAST_VERIFIED } from "@/lib/affiliate";
 import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetworkBlock, networkSite } from "@/lib/network-sites";
 
 const SITE = networkSite("bajilive");
 const ROUTE = SITE.path;
-const TITLE = "Baji Live বাংলা গাইড — লগইন, ক্রিকেট এক্সচেঞ্জ ও অ্যাপ";
+const TITLE = "Baji Live বাংলা গাইড — লগইন ও ক্রিকেট এক্সচেঞ্জ";
 const DESC =
   "Baji Live login, বাজি লাইভ অ্যাপ ইনস্টল, ক্রিকেট এক্সচেঞ্জ Back/Lay মার্কেট, bKash ডিপোজিট ও উইথড্রয়াল সময় — bajilive.world গাইড সাইটের সম্পূর্ণ পরিচিতি।";
 
 export const Route = createFileRoute("/network/bajilive")({
   head: () => ({
     meta: [
-      { title: TITLE + " | GetJeetBuzz" },
+      { title: seoTitle(TITLE) },
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
