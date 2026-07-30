@@ -45,6 +45,11 @@
     { "source": "/jeetbuzz-affiliate-commission-rate", "destination": "/jeetbuzz-affiliate-commission", "permanent": true },
     { "source": "/jeetbuzz-apk-download", "destination": "/download", "permanent": true },
     { "source": "/jeetbuzz-download-for-android", "destination": "/download", "permanent": true },
-    { "source": "/jutt-buzz", "destination": "/", "permanent": true }
+    { "source": "/jutt-buzz", "destination": "/", "permanent": true },
+    { "source": "/sitemap-compare.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/:slug(.*)-vs-getjeetbuzz", "destination": "/jeetbuzz-alternatives", "permanent": true },
+    { "source": "/bd/bn/:slug(.*)-vs-getjeetbuzz", "destination": "/jeetbuzz-alternatives", "permanent": true },
+    { "source": "/pk/ur/:slug(.*)-vs-getjeetbuzz", "destination": "/jeetbuzz-alternatives", "permanent": true },
+    { "source": "/in/hi/:slug(.*)-vs-getjeetbuzz", "destination": "/jeetbuzz-alternatives", "permanent": true }
   ]
 }
