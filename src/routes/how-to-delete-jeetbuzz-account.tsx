@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/how-to-delete-jeetbuzz-account";
-const TITLE = "How to Delete JeetBuzz Account 2026. Deletion, Self-Exclusion & Cool-Off";
+const TITLE = "How to Delete a JeetBuzz Account 2026. Full Steps";
 const DESC = "How to delete a JeetBuzz account in 2026, the difference between account deletion, self-exclusion and cool-off, plus the exact request the operator needs.";
 
 export const Route = createFileRoute("/how-to-delete-jeetbuzz-account")({

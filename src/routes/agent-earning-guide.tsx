@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/agent-earning-guide";
 const TITLE =
-  "JeetBuzz Agent & Affiliate Earning Guide 2026 - Commission, Payouts & Tools";
+  "JeetBuzz Agent Earning Guide 2026. Commission & Payouts";
 const DESC =
   "How to earn as a JeetBuzz agent or affiliate in 2026, commission models, sub-affiliate tiers, payout rails for BD/PK/IN, marketing rules and what gets a partner account suspended.";
 

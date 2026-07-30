@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/easypaisa-guide";
 const TITLE =
-  "JeetBuzz EasyPaisa Deposit & Withdrawal Guide Pakistan 2026 - Step by Step";
+  "JeetBuzz EasyPaisa Deposit & Withdrawal 2026 (PK)";
 const DESC =
   "Step-by-step JeetBuzz EasyPaisa deposit and withdrawal guide for Pakistan 2026. Mobile Account flow (not Retailer), MPIN tips, limits and fixes for failed transfers.";
 

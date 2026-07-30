@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/rocket-guide";
 const TITLE =
-  "JeetBuzz Rocket Deposit & Withdrawal Guide Bangladesh 2026 - DBBL Mobile Banking";
+  "JeetBuzz Rocket Deposit & Withdrawal 2026 (DBBL)";
 const DESC =
   "Step-by-step JeetBuzz Rocket (DBBL Mobile Banking) deposit and withdrawal guide for Bangladesh 2026, biller ID, PIN tips, minimums, processing times and error fixes.";
 

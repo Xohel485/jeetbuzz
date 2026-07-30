@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, softw
 
 const PATH = "/mobile-app-guide";
 const TITLE =
-  "JeetBuzz Mobile App Guide Bangladesh 2026 - Android & iOS Install, Login";
+  "JeetBuzz Mobile App Guide 2026. Android & iOS Install";
 const DESC =
   "JeetBuzz mobile app guide for Bangladesh 2026. Android APK and iOS install, login, biometric security, push notifications and live cricket in-play tips on the go.";
 

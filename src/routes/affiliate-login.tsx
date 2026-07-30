@@ -3,7 +3,7 @@ import { GuidePage } from "@/components/GuidePage";
 import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTitle } from "@/lib/schema";
 
 const PATH = "/affiliate-login" as const;
-const TITLE = "JeetBuzz Affiliate Login 2026. Partner Portal, Password Reset & Dashboard";
+const TITLE = "JeetBuzz Affiliate Login 2026. Portal & Password Reset";
 const DESC =
   "JeetBuzz affiliate login 2026, official partner portal link, password reset walkthrough, 2FA, sub-ID tracking and payout dashboard tour for BD, PK and IN affiliates.";
 

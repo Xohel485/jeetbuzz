@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/security-guide";
 const TITLE =
-  "JeetBuzz Security Guide 2026 - 2FA, Phishing Defence & Account Recovery";
+  "JeetBuzz Security Guide 2026. 2FA & Account Recovery";
 const DESC =
   "JeetBuzz account security guide for 2026, strong passwords, 2FA setup, biometric login, phishing defence and recovery steps if your JeetBuzz account is compromised.";
 

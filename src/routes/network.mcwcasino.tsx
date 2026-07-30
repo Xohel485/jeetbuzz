@@ -6,7 +6,7 @@ import { NETWORK_BYLINE, NETWORK_DISCLOSURE, NETWORK_INTERNAL_BLOCK, siblingNetw
 
 const SITE = networkSite("mcwcasino");
 const ROUTE = SITE.path;
-const TITLE = "MCW Casino (Mega Casino World) বাংলা গাইড — লগইন, লাইভ ক্যাসিনো ও ডিপোজিট";
+const TITLE = "MCW Casino বাংলা গাইড — লগইন ও লাইভ ক্যাসিনো";
 const DESC =
   "MCW Casino login, Mega Casino World অ্যাকাউন্ট রিকভারি, লাইভ ক্যাসিনো টেবিল, bKash-Nagad ডিপোজিট ও উইথড্রয়াল সময় — mcwcasino.guru গাইড সাইটের সম্পূর্ণ পরিচিতি।";
 

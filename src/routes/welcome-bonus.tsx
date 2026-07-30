@@ -7,7 +7,7 @@ import { SIGNUP_CLUSTER, siblings } from "@/lib/clusters";
 export const Route = createFileRoute("/welcome-bonus")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Welcome Bonus 2026. Sign Up Bonus, Promo Code & First Deposit Match (BD/PK/IN)" },
+      { title: "JeetBuzz Welcome Bonus 2026. Promo Code & Deposit Match" },
       { name: "description", content: "JeetBuzz welcome bonus 2026, new-account sign-up bonus, current promo codes, first-deposit match up to the cap, wagering, max-bet rule and safe claim steps for BD, PK, IN." },
       { property: "og:title", content: "JeetBuzz Welcome Bonus. Sign Up Bonus + Promo Code 2026" },
       { property: "og:description", content: "How to claim the JeetBuzz sign-up welcome bonus, apply today's promo code and clear wagering without voiding it." },

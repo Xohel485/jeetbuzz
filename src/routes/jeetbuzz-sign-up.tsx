@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 import { HUBS } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-sign-up";
-const TITLE = "JeetBuzz Sign Up 2026, 3-Minute Registration + New Account Sign Up Bonus";
+const TITLE = "JeetBuzz Sign Up 2026. 3-Minute Registration & Bonus";
 const DESC = "JeetBuzz sign up 2026, phone/email registration in three minutes, claim the new-account sign-up bonus, KYC, promo code entry and safe first-deposit tips for BD, PK and IN.";
 
 export const Route = createFileRoute("/jeetbuzz-sign-up")({

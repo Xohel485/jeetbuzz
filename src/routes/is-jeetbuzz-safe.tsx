@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/is-jeetbuzz-safe";
 const TITLE =
-  "Is JeetBuzz Safe? 2026 Trust, License, Security & Responsible Gaming Guide";
+  "Is JeetBuzz Safe in 2026? License & Security Check";
 const DESC =
   "Is JeetBuzz safe in 2026? Dedicated trust page. Curacao license verification, account security controls, data handling, responsible gaming tools and dispute escalation. For the full editorial verdict, see the JeetBuzz Review.";
 

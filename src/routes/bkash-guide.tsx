@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/bkash-guide";
 const TITLE =
-  "JeetBuzz bKash Deposit & Withdrawal Guide Bangladesh 2026 - Step by Step";
+  "JeetBuzz bKash Deposit & Withdrawal Guide 2026";
 const DESC =
   "Step-by-step JeetBuzz bKash deposit and withdrawal guide for Bangladesh 2026. Send Money flow, minimums, fees, processing times and fixes for failed transactions.";
 

@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 import { BONUS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-first-deposit-bonus";
-const TITLE = "JeetBuzz First Deposit Bonus 2026. Match %, bKash/UPI Minimum & 15× Rollover Explained";
+const TITLE = "JeetBuzz First Deposit Bonus 2026. Match & Rollover";
 const DESC = "JeetBuzz first deposit bonus 2026, exact match percentage, bKash/Nagad/UPI qualifying minimum, 15× wagering math and the five mistakes that void your bonus.";
 
 export const Route = createFileRoute("/jeetbuzz-first-deposit-bonus")({

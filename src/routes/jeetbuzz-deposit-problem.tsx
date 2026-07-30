@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 import { PROBLEMS_CLUSTER, siblings } from "@/lib/clusters";
 
 const PATH = "/jeetbuzz-deposit-problem";
-const TITLE = "JeetBuzz Deposit Problem. Fix in 5 Steps (bKash, Nagad, UPI Debited but Not Credited)";
+const TITLE = "JeetBuzz Deposit Problem 2026. Fix It in 5 Steps";
 const DESC = "JeetBuzz deposit problem fixed in five steps, bKash / Nagad / JazzCash / UPI debited but not credited, wrong reference, name mismatch and the exact evidence support needs.";
 
 export const Route = createFileRoute("/jeetbuzz-deposit-problem")({

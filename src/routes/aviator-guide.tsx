@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/aviator-guide";
 const TITLE =
-  "JeetBuzz Aviator & Crash Games Guide 2026 - Strategy, Auto Cash-Out & RTP";
+  "JeetBuzz Aviator Guide 2026. Strategy, Cash-Out & RTP";
 const DESC =
   "JeetBuzz Aviator and crash games guide for 2026, how the multiplier works, auto cash-out setup, bankroll sizing and honest myth-busting for BD, PK and IN players.";
 

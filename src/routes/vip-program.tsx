@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/vip-program";
 const TITLE =
-  "JeetBuzz VIP Program 2026 - Tiers, Cashback, Faster Withdrawals (BD/PK/IN)";
+  "JeetBuzz VIP Program 2026. Tiers, Cashback & Limits";
 const DESC =
   "JeetBuzz VIP program 2026, tier requirements, cashback rates, faster withdrawal limits and dedicated managers for Bangladesh, Pakistan and India high rollers.";
 

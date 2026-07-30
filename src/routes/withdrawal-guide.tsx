@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/withdrawal-guide";
 const TITLE =
-  "JeetBuzz Withdrawal Guide Bangladesh 2026 - bKash, Nagad, Rocket Cash Out";
+  "JeetBuzz Withdrawal Guide 2026. bKash, Nagad, Rocket";
 const DESC =
   "JeetBuzz withdrawal guide for Bangladesh 2026, cash out to bKash, Nagad and Rocket, KYC checklist, daily limits, processing times and what to do if withdrawal is delayed.";
 

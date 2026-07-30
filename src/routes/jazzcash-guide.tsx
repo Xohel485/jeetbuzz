@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/jazzcash-guide";
 const TITLE =
-  "JeetBuzz JazzCash Deposit & Withdrawal Guide Pakistan 2026 - Step by Step";
+  "JeetBuzz JazzCash Deposit & Withdrawal 2026 (PK)";
 const DESC =
   "Step-by-step JeetBuzz JazzCash deposit and withdrawal guide for Pakistan 2026. Mobile Account flow, MPIN tips, daily limits and fixes when a transfer stays processing.";
 

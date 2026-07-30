@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/upi-guide";
 const TITLE =
-  "JeetBuzz UPI Deposit & Withdrawal Guide India 2026 - VPA, UTR, Step by Step";
+  "JeetBuzz UPI Deposit & Withdrawal India 2026";
 const DESC =
   "Step-by-step JeetBuzz UPI deposit and withdrawal guide for India 2026. VPA flow, UTR submission, NPCI limits and why UPI success can still show pending on the cashier.";
 

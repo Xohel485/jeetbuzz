@@ -4,7 +4,7 @@ import { canonicalLink, hreflangLinks, ogUrl, jsonLdScript, articleSchema, seoTi
 
 const PATH = "/payment-methods";
 const TITLE =
-  "JeetBuzz Payment Methods Bangladesh Pakistan India - bKash, Nagad, JazzCash, UPI 2026";
+  "JeetBuzz Payment Methods 2026. bKash, Nagad & UPI";
 const DESC =
   "Every JeetBuzz payment method for Bangladesh, Pakistan and India in 2026, bKash, Nagad, Rocket, EasyPaisa, JazzCash, UPI and USDT with minimums, fees and timing.";
 
