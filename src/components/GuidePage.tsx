@@ -14,6 +14,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { articleSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { imageAbsoluteUrl } from "@/lib/images";
 import { useI18n, type Locale } from "@/lib/i18n";
+import { useLocalizedH1 } from "@/components/LocalizedIntro";
 
 function wordsOf(lines?: string[]): number {
   if (!lines?.length) return 0;
@@ -108,7 +109,10 @@ export function GuidePage({
   // substantially thinner than the longest one, so the full article is in the
   // initial HTML regardless of which locale SSR resolves.
   const localBody = resolveBody(locale, body, bodyByLocale);
-  const localTitle = titleByLocale?.[locale] ?? title;
+  // On /{country}/{lang}/{slug} URLs the registry supplies a native-language
+  // heading, so the localized page never repeats the English H1.
+  const localizedH1 = useLocalizedH1();
+  const localTitle = titleByLocale?.[locale] ?? localizedH1 ?? title;
   const localSubtitle = subtitleByLocale?.[locale] ?? subtitle;
   const localCtaLabel = ctaLabelByLocale?.[locale] ?? ctaLabel;
   const localFaqs = resolveFaqs(locale, faqs, faqsByLocale);
