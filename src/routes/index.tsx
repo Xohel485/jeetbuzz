@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HomePage } from "@/components/home/HomePage";
 import { BengaliIntroSection } from "@/components/home/BengaliIntroSection";
 import { IMAGES, imageUrl, imageAbsoluteUrl, imageObjectSchema } from "@/lib/images";
-import { faqSchema, articleSchema, hreflangLinks, canonicalLink, ogUrl } from "@/lib/schema";
+import {
+  faqSchema,
+  articleSchema,
+  breadcrumbSchema,
+  hreflangLinks,
+  canonicalLink,
+  ogUrl,
+} from "@/lib/schema";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,6 +64,12 @@ export const Route = createFileRoute("/")({
       canonicalLink("/"), ...hreflangLinks(""),
     ],
     scripts: [
+      // Single-item BreadcrumbList so the homepage participates in the same
+      // breadcrumb graph as every inner page (all of which point back to it).
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbSchema([{ name: "Home", path: "/" }])),
+      },
       {
         type: "application/ld+json",
         children: JSON.stringify(imageObjectSchema("hero")),
