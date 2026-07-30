@@ -82,8 +82,12 @@ function LocalizedSplat() {
     setLocale(lang as Locale);
   }, [lang, setLocale]);
   const Comp = reg.component;
+  const m = reg.meta[lang as Locale] ?? reg.meta.en;
+  const h1 = m.title.replace(/\s*[|·]\s*GetJeetBuzz\s*$/u, "").trim();
   return (
-    <LocalizedIntroProvider value={{ slug, country: country as Country, lang: lang as Locale }}>
+    <LocalizedIntroProvider
+      value={{ slug, country: country as Country, lang: lang as Locale, h1 }}
+    >
       <Comp />
     </LocalizedIntroProvider>
   );

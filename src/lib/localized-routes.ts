@@ -208,7 +208,7 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
     en: { title: "JeetBuzz Login Security, 2FA & Anti-Phishing" + BRAND_EN, description: "Enable 2FA, recognise fake mirrors and lock down your JeetBuzz login." },
     bn: { title: "জিতবাজ লগইন সিকিউরিটি, 2FA ও ফিশিং প্রতিরোধ" + BRAND_BN, description: "2FA চালু করুন, ফেক মিরর চিনুন এবং জিতবাজ লগইন সুরক্ষিত করুন।" },
     ur: { title: "JeetBuzz لاگ ان سیکیورٹی, 2FA اور فشنگ سے بچاؤ" + BRAND_UR, description: "2FA فعال کریں، جعلی مرر پہچانیں اور اپنا JeetBuzz لاگ ان محفوظ بنائیں۔" },
-    hi: { title: "JeetBuzz लॉगिन सिक्योरिटी, 2FA और फ़िशिंग से बचाव" + BRAND_HI, description: "2FA चालू करें, नकली मिरर पहचानें और अपना JeetBuzz लॉगिन सुरक्षित करें।" },
+    hi: { title: "JeetBuzz लॉगिन सुरक्षा, 2FA और फ़िशिंग बचाव" + BRAND_HI, description: "2FA चालू करें, नकली मिरर पहचानें और अपना JeetBuzz लॉगिन सुरक्षित करें।" },
   }),
   entry("verification", VerificationRoute, {
     en: { title: "JeetBuzz Account Verification. Phone, Email & KYC" + BRAND_EN, description: "Phone OTP, email confirmation and KYC walkthrough for JeetBuzz." },
@@ -374,9 +374,9 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   }),
   entry("faq", FaqRoute, {
     en: { title: "JeetBuzz FAQ" + BRAND_EN, description: "Common JeetBuzz questions, accounts, payments, bonuses and app." },
-    bn: { title: "জিতবাজ FAQ" + BRAND_BN, description: "জিতবাজের সাধারণ প্রশ্ন, অ্যাকাউন্ট, পেমেন্ট, বোনাস ও অ্যাপ।" },
+    bn: { title: "জিতবাজ FAQ, অ্যাকাউন্ট, পেমেন্ট ও বোনাস" + BRAND_BN, description: "জিতবাজের সাধারণ প্রশ্ন, অ্যাকাউন্ট, পেমেন্ট, বোনাস ও অ্যাপ।" },
     ur: { title: "JeetBuzz عمومی سوالات" + BRAND_UR, description: "JeetBuzz کے عام سوالات, اکاؤنٹس، ادائیگیاں، بونس اور ایپ۔" },
-    hi: { title: "JeetBuzz FAQ" + BRAND_HI, description: "JeetBuzz के सामान्य प्रश्न, खाते, पेमेंट, बोनस और ऐप।" },
+    hi: { title: "JeetBuzz FAQ, खाता, पेमेंट और बोनस सवाल" + BRAND_HI, description: "JeetBuzz के सामान्य प्रश्न, खाते, पेमेंट, बोनस और ऐप।" },
   }),
   entry("privacy-policy", PrivacyPolicyRoute, {
     en: { title: "Privacy Policy" + BRAND_EN, description: "How GetJeetBuzz handles data, cookies and analytics." },
@@ -399,20 +399,20 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   entry("editorial-policy", EditorialPolicyRoute, {
     en: { title: "Editorial Policy" + BRAND_EN, description: "How GetJeetBuzz produces, reviews and updates content." },
     bn: { title: "সম্পাদকীয় নীতি" + BRAND_BN, description: "GetJeetBuzz কন্টেন্ট তৈরি ও আপডেট পদ্ধতি।" },
-    ur: { title: "ادارتی پالیسی" + BRAND_UR, description: "GetJeetBuzz مواد بنانے اور اپڈیٹ کرنے کا طریقہ۔" },
-    hi: { title: "संपादकीय नीति" + BRAND_HI, description: "GetJeetBuzz कंटेंट तैयार और अपडेट करने का तरीका।" },
+    ur: { title: "GetJeetBuzz ادارتی پالیسی اور معیار" + BRAND_UR, description: "GetJeetBuzz مواد بنانے اور اپڈیٹ کرنے کا طریقہ۔" },
+    hi: { title: "GetJeetBuzz संपादकीय नीति और मानक" + BRAND_HI, description: "GetJeetBuzz कंटेंट तैयार और अपडेट करने का तरीका।" },
   }),
   entry("review-policy", ReviewPolicyRoute, {
     en: { title: "Review Policy" + BRAND_EN, description: "How we test, score and update reviews." },
-    bn: { title: "রিভিউ পলিসি" + BRAND_BN, description: "আমরা কীভাবে রিভিউ যাচাই ও আপডেট করি।" },
-    ur: { title: "جائزہ پالیسی" + BRAND_UR, description: "ہم جائزے کیسے جانچتے اور اپڈیٹ کرتے ہیں۔" },
-    hi: { title: "रिव्यू नीति" + BRAND_HI, description: "हम रिव्यू कैसे जाँचते और अपडेट करते हैं।" },
+    bn: { title: "GetJeetBuzz রিভিউ পলিসি, যাচাই ও স্কোরিং" + BRAND_BN, description: "আমরা কীভাবে রিভিউ যাচাই ও আপডেট করি।" },
+    ur: { title: "GetJeetBuzz جائزہ پالیسی، جانچ کا طریقہ" + BRAND_UR, description: "ہم جائزے کیسے جانچتے اور اپڈیٹ کرتے ہیں۔" },
+    hi: { title: "GetJeetBuzz रिव्यू नीति, जाँच और स्कोरिंग" + BRAND_HI, description: "हम रिव्यू कैसे जाँचते और अपडेट करते हैं।" },
   }),
   entry("content-policy", ContentPolicyRoute, {
     en: { title: "Content Policy" + BRAND_EN, description: "Editorial standards and content rules." },
     bn: { title: "কন্টেন্ট পলিসি" + BRAND_BN, description: "সম্পাদকীয় মান ও কন্টেন্ট নিয়ম।" },
     ur: { title: "مواد کی پالیسی" + BRAND_UR, description: "ادارتی معیار اور مواد کے اصول۔" },
-    hi: { title: "कंटेंट पॉलिसी" + BRAND_HI, description: "संपादकीय मानक और कंटेंट नियम।" },
+    hi: { title: "GetJeetBuzz कंटेंट पॉलिसी और नियम" + BRAND_HI, description: "संपादकीय मानक और कंटेंट नियम।" },
   }),
   entry("fact-checking", FactCheckingRoute, {
     en: { title: "Fact-Checking Policy" + BRAND_EN, description: "How GetJeetBuzz verifies facts and corrects errors." },
@@ -422,9 +422,9 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   }),
   entry("update-policy", UpdatePolicyRoute, {
     en: { title: "Update Policy" + BRAND_EN, description: "How often GetJeetBuzz revisits and refreshes its content." },
-    bn: { title: "আপডেট পলিসি" + BRAND_BN, description: "GetJeetBuzz কত ঘন কন্টেন্ট রিভিউ ও আপডেট করে।" },
-    ur: { title: "اپڈیٹ پالیسی" + BRAND_UR, description: "GetJeetBuzz کتنی بار مواد کا جائزہ اور اپڈیٹ کرتا ہے۔" },
-    hi: { title: "अपडेट नीति" + BRAND_HI, description: "GetJeetBuzz कितनी बार कंटेंट की समीक्षा और अपडेट करता है।" },
+    bn: { title: "GetJeetBuzz আপডেট পলিসি, কত ঘন রিভিউ" + BRAND_BN, description: "GetJeetBuzz কত ঘন কন্টেন্ট রিভিউ ও আপডেট করে।" },
+    ur: { title: "GetJeetBuzz اپڈیٹ پالیسی، مواد کی تازگی" + BRAND_UR, description: "GetJeetBuzz کتنی بار مواد کا جائزہ اور اپڈیٹ کرتا ہے۔" },
+    hi: { title: "JeetBuzz अपडेट नीति, समीक्षा और ताज़गी" + BRAND_HI, description: "GetJeetBuzz कितनी बार कंटेंट की समीक्षा और अपडेट करता है।" },
   }),
   entry("aviator-guide", AviatorGuideRoute, {
     en: { title: "JeetBuzz Aviator & Crash Games Guide 2026" + BRAND_EN, description: "How Aviator works on JeetBuzz, auto cash-out, bankroll sizing, RTP and provable fairness explained for BD/PK/IN players." },
@@ -440,7 +440,7 @@ export const LOCALIZED_ROUTES: LocalizedRoute[] = [
   }),
   entry("agent-earning-guide", AgentEarningGuideRoute, {
     en: { title: "JeetBuzz Agent & Affiliate Earning Guide 2026" + BRAND_EN, description: "Commission models, payout rails for BD/PK/IN, marketing rules and what gets a JeetBuzz partner account suspended." },
-    bn: { title: "JeetBuzz এজেন্ট ও অ্যাফিলিয়েট আর্নিং গাইড ২০২৬" + BRAND_BN, description: "কমিশন মডেল, BD পেআউট রেইল, মার্কেটিং নিয়ম এবং কী কারণে পার্টনার অ্যাকাউন্ট সাসপেন্ড হয়।" },
+    bn: { title: "JeetBuzz এজেন্ট ও অ্যাফিলিয়েট আর্নিং গাইড" + BRAND_BN, description: "কমিশন মডেল, BD পেআউট রেইল, মার্কেটিং নিয়ম এবং কী কারণে পার্টনার অ্যাকাউন্ট সাসপেন্ড হয়।" },
     ur: { title: "JeetBuzz ایجنٹ اور ایفیلیئٹ کمائی گائیڈ 2026" + BRAND_UR, description: "کمیشن ماڈلز، PK پے آؤٹ ریلز، مارکیٹنگ اصول اور پارٹنر اکاؤنٹ معطل ہونے کی وجوہات۔" },
     hi: { title: "JeetBuzz एजेंट और एफिलिएट कमाई गाइड 2026" + BRAND_HI, description: "कमीशन मॉडल, IN पेआउट रेल, मार्केटिंग नियम और पार्टनर अकाउंट सस्पेंड होने की वजहें।" },
   }),
@@ -559,7 +559,7 @@ LOCALIZED_ROUTES.push(
   }, ["bd"]),
   entry("jeetbuzz-account-verification", AccountVerificationRoute, {
     en: { title: "JeetBuzz Account Verification 2026. KYC Checklist" + BRAND_EN, description: "Clear JeetBuzz KYC on the first try, required docs, rejection reasons and how to speed up review." },
-    bn: { title: "JeetBuzz অ্যাকাউন্ট Verification ২০২৬. KYC চেকলিস্ট" + BRAND_BN, description: "প্রথম বারেই JeetBuzz KYC clear করুন, প্রয়োজনীয় document এবং rejection কারণ।" },
+    bn: { title: "JeetBuzz অ্যাকাউন্ট Verification, KYC গাইড" + BRAND_BN, description: "প্রথম বারেই JeetBuzz KYC clear করুন, প্রয়োজনীয় document এবং rejection কারণ।" },
     ur: { title: "JeetBuzz Account Verification 2026" + BRAND_UR, description: "Clear JeetBuzz KYC on the first try." },
     hi: { title: "JeetBuzz Account Verification 2026" + BRAND_HI, description: "Clear JeetBuzz KYC on the first try." },
   }, ["bd"]),
@@ -571,13 +571,13 @@ LOCALIZED_ROUTES.push(
   }, ["bd"]),
   entry("jeetbuzz-deposit-failed", DepositFailedRoute, {
     en: { title: "JeetBuzz Deposit Failed 2026. Debited But Not Credited" + BRAND_EN, description: "Money debited but not credited to JeetBuzz, every cause with the four evidence items support needs to recover it." },
-    bn: { title: "JeetBuzz Deposit Failed ২০২৬, টাকা কেটেছে কিন্তু credit হয়নি" + BRAND_BN, description: "টাকা কেটেছে কিন্তু credit হয়নি, সব কারণ ও সাপোর্টে যা দরকার।" },
+    bn: { title: "JeetBuzz Deposit Failed, টাকা কাটলে করণীয়" + BRAND_BN, description: "টাকা কেটেছে কিন্তু credit হয়নি, সব কারণ ও সাপোর্টে যা দরকার।" },
     ur: { title: "JeetBuzz Deposit Failed 2026" + BRAND_UR, description: "Debited but not credited, every cause and recovery." },
     hi: { title: "JeetBuzz Deposit Failed 2026" + BRAND_HI, description: "Debited but not credited, every cause and recovery." },
   }, ["bd"]),
   entry("jeetbuzz-password-reset", PasswordResetBrandedRoute, {
     en: { title: "JeetBuzz Password Reset 2026. Recover in 3 Minutes" + BRAND_EN, description: "Reset your JeetBuzz password via phone OTP or email link in three minutes, plus support escalation when both fail." },
-    bn: { title: "JeetBuzz পাসওয়ার্ড রিসেট ২০২৬, ৩ মিনিটে recovery" + BRAND_BN, description: "ফোন OTP বা ইমেইল link দিয়ে ৩ মিনিটে JeetBuzz পাসওয়ার্ড reset এবং fallback flow।" },
+    bn: { title: "JeetBuzz পাসওয়ার্ড রিসেট, ৩ মিনিটে recovery" + BRAND_BN, description: "ফোন OTP বা ইমেইল link দিয়ে ৩ মিনিটে JeetBuzz পাসওয়ার্ড reset এবং fallback flow।" },
     ur: { title: "JeetBuzz Password Reset 2026" + BRAND_UR, description: "Reset your JeetBuzz password via phone OTP or email link." },
     hi: { title: "JeetBuzz Password Reset 2026" + BRAND_HI, description: "Reset your JeetBuzz password via phone OTP or email link." },
   }, ["bd"]),
@@ -587,7 +587,7 @@ LOCALIZED_ROUTES.push(
 LOCALIZED_ROUTES.push(
   entry("jeetbuzz-affiliate-dashboard", AffiliateDashboardRoute, {
     en: { title: "JeetBuzz Affiliate Dashboard 2026. Reports & Metrics" + BRAND_EN, description: "Walkthrough of the JeetBuzz affiliate dashboard, clicks, FTDs, NGR, tier progress and payout history." },
-    bn: { title: "JeetBuzz Affiliate Dashboard ২০২৬, রিপোর্ট ও মেট্রিক" + BRAND_BN, description: "JeetBuzz affiliate dashboard-এর প্রতিটি metric, click, FTD, NGR, tier, payout history।" },
+    bn: { title: "JeetBuzz Affiliate Dashboard, রিপোর্ট গাইড" + BRAND_BN, description: "JeetBuzz affiliate dashboard-এর প্রতিটি metric, click, FTD, NGR, tier, payout history।" },
     ur: { title: "JeetBuzz Affiliate Dashboard 2026" + BRAND_UR, description: "Walkthrough of the JeetBuzz affiliate dashboard." },
     hi: { title: "JeetBuzz Affiliate Dashboard 2026" + BRAND_HI, description: "Walkthrough of the JeetBuzz affiliate dashboard." },
   }, ["bd"]),
@@ -599,7 +599,7 @@ LOCALIZED_ROUTES.push(
   }, ["bd"]),
   entry("jeetbuzz-affiliate-commission", AffiliateCommissionRoute, {
     en: { title: "JeetBuzz Affiliate Commission 2026, 25% to 60%" + BRAND_EN, description: "Full JeetBuzz affiliate commission structure, tiers, weekly NGR calculation and carryover." },
-    bn: { title: "JeetBuzz Affiliate Commission ২০২৬, ২৫% থেকে ৬০%" + BRAND_BN, description: "সাপ্তাহিক NGR অনুযায়ী tier, carryover ও ৩.৫% sub-affiliate override।" },
+    bn: { title: "JeetBuzz Affiliate Commission ২৫% থেকে ৬০%" + BRAND_BN, description: "সাপ্তাহিক NGR অনুযায়ী tier, carryover ও ৩.৫% sub-affiliate override।" },
     ur: { title: "JeetBuzz Affiliate Commission 2026" + BRAND_UR, description: "Full JeetBuzz affiliate commission structure." },
     hi: { title: "JeetBuzz Affiliate Commission 2026" + BRAND_HI, description: "Full JeetBuzz affiliate commission structure." },
   }, ["bd"]),
@@ -611,7 +611,7 @@ LOCALIZED_ROUTES.push(
   }, ["bd"]),
   entry("jeetbuzz-bkash-deposit", BkashDepositRoute, {
     en: { title: "JeetBuzz bKash Deposit 2026. Steps, Minimum & Fixes" + BRAND_EN, description: "5-step bKash deposit on JeetBuzz, minimum, credit timing, name-mismatch fixes and reference recovery." },
-    bn: { title: "JeetBuzz bKash Deposit ২০২৬, ধাপ, minimum ও সমাধান" + BRAND_BN, description: "৫-ধাপ bKash deposit, minimum, credit সময় ও reference recovery।" },
+    bn: { title: "JeetBuzz bKash Deposit, ধাপ ও minimum" + BRAND_BN, description: "৫-ধাপ bKash deposit, minimum, credit সময় ও reference recovery।" },
     ur: { title: "JeetBuzz bKash Deposit 2026" + BRAND_UR, description: "Complete bKash deposit walkthrough for JeetBuzz." },
     hi: { title: "JeetBuzz bKash Deposit 2026" + BRAND_HI, description: "Complete bKash deposit walkthrough for JeetBuzz." },
   }, ["bd"]),
@@ -623,13 +623,13 @@ LOCALIZED_ROUTES.push(
   }, ["bd"]),
   entry("jeetbuzz-minimum-deposit", MinimumDepositRoute, {
     en: { title: "JeetBuzz Minimum Deposit 2026. BDT 100 First, 200 Recurring" + BRAND_EN, description: "JeetBuzz minimum deposit. BDT 100 first, BDT 200 recurring, per-rail thresholds and bonus minimums." },
-    bn: { title: "JeetBuzz Minimum Deposit ২০২৬, প্রথম ১০০, পরের ২০০" + BRAND_BN, description: "প্রথম BDT ১০০, পরের ২০০, per-rail threshold ও bonus minimum।" },
+    bn: { title: "JeetBuzz Minimum Deposit, প্রথম ১০০ টাকা" + BRAND_BN, description: "প্রথম BDT ১০০, পরের ২০০, per-rail threshold ও bonus minimum।" },
     ur: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_UR, description: "JeetBuzz minimum deposit, per-rail and bonus thresholds." },
     hi: { title: "JeetBuzz Minimum Deposit 2026" + BRAND_HI, description: "JeetBuzz minimum deposit, per-rail and bonus thresholds." },
   }, ["bd"]),
   entry("jeetbuzz-live-cricket", JeetbuzzLiveCricketRoute, {
     en: { title: "JeetBuzz Live Cricket 2026. BPL, IPL, PSL In-Play Markets" + BRAND_EN, description: "JeetBuzz live cricket in-play markets. BPL, IPL, PSL, cash-out timing, ball-by-ball settlement and market strategy." },
-    bn: { title: "JeetBuzz Live Cricket ২০২৬. BPL, IPL, PSL In-Play" + BRAND_BN, description: "JeetBuzz লাইভ ক্রিকেট in-play market, cash-out timing ও কৌশল।" },
+    bn: { title: "JeetBuzz Live Cricket, BPL, IPL, PSL In-Play" + BRAND_BN, description: "JeetBuzz লাইভ ক্রিকেট in-play market, cash-out timing ও কৌশল।" },
     ur: { title: "JeetBuzz Live Cricket 2026" + BRAND_UR, description: "JeetBuzz live cricket in-play markets and strategy." },
     hi: { title: "JeetBuzz Live Cricket 2026" + BRAND_HI, description: "JeetBuzz live cricket in-play markets and strategy." },
   }, ["bd"]),
