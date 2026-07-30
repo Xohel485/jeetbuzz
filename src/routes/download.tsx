@@ -19,7 +19,7 @@ const PWAInstallPrompt = lazy(() =>
 export const Route = createFileRoute("/download")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz APK Download & Web App Install 2026 | Fast & Secure | GetJeetBuzz" },
+      { title: "JeetBuzz APK Download & Web App Install 2026 | Fast & Secure" },
       {
         name: "description",
         content:

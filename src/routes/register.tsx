@@ -13,7 +13,7 @@ import {
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "JeetBuzz Register 2026 | Safe Account Registration Guide | GetJeetBuzz" },
+      { title: "JeetBuzz Register 2026 | Safe Account Registration Guide" },
       {
         name: "description",
         content:
