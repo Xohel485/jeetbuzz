@@ -20,7 +20,7 @@ export const Route = createFileRoute("/password-reset")({
   }),
   component: () => (
     <GuidePage
-      title={<>JeetBuzz <span className="gold-text">Password Reset</span></>}
+      title={<>JeetBuzz <span className="gold-text">Password Recovery by OTP or Email</span></>}
       titleByLocale={{
         bn: <>জিতবাজ <span className="gold-text">পাসওয়ার্ড রিসেট</span></>,
         ur: <>JeetBuzz <span className="gold-text">پاس ورڈ ری سیٹ</span></>,

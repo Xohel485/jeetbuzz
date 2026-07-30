@@ -5,9 +5,9 @@ import { GuidePage } from "@/components/GuidePage";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Use | GetJeetBuzz" },
+      { title: "Terms of Use, GetJeetBuzz Site Rules & Disclaimer" },
       { name: "description", content: "Terms of use for GetJeetBuzz, a verified affiliate partner site of JeetBuzz." },
-      { property: "og:title", content: "Terms of Use | GetJeetBuzz" },
+      { property: "og:title", content: "Terms of Use, GetJeetBuzz Site Rules & Disclaimer" },
       { property: "og:description", content: "Terms of use for GetJeetBuzz." },
       { property: "og:type", content: "article" },
     ],

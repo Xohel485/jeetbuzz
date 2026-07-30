@@ -20,7 +20,7 @@ export const Route = createFileRoute("/verification")({
   }),
   component: () => (
     <GuidePage
-      title={<>JeetBuzz <span className="gold-text">Account Verification</span></>}
+      title={<>JeetBuzz <span className="gold-text">OTP, Email &amp; KYC Verification Steps</span></>}
       titleByLocale={{
         bn: <>জিতবাজ <span className="gold-text">অ্যাকাউন্ট ভেরিফিকেশন</span></>,
         ur: <>JeetBuzz <span className="gold-text">اکاؤنٹ تصدیق</span></>,
