@@ -55,19 +55,27 @@ export const Route = createFileRoute("/$country/$lang/$")({
     const localeMeta = LOCALE_META[lang];
     const path = `/${country}/${lang}${slug ? `/${slug}` : ""}`;
     const url = `${SITE}${path}`;
+    // `/{country}/en/*` duplicates the root English page. Point the canonical at
+    // the root URL and keep it out of the index so Google stops reporting
+    // "Duplicate, Google chose different canonical than user".
+    const isEnglishDuplicate = lang === "en";
+    const canonical = isEnglishDuplicate ? `${SITE}${slug ? `/${slug}` : "/"}` : url;
     return {
       meta: [
         { title: m.title },
         { name: "description", content: m.description },
+        ...(isEnglishDuplicate
+          ? [{ name: "robots", content: "noindex, follow" }]
+          : []),
         { property: "og:title", content: m.title },
         { property: "og:description", content: m.description },
-        { property: "og:url", content: url },
+        { property: "og:url", content: canonical },
         { property: "og:locale", content: localeMeta.htmlLang.replace("-", "_") },
         { property: "og:type", content: slug === "" ? "website" : "article" },
         { name: "twitter:title", content: m.title },
         { name: "twitter:description", content: m.description },
       ],
-      links: [{ rel: "canonical", href: url }, ...hreflangCluster(slug)],
+      links: [{ rel: "canonical", href: canonical }, ...hreflangCluster(slug)],
     };
   },
   component: LocalizedSplat,
